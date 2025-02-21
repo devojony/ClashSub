@@ -16,7 +16,7 @@ def main():
     with open("clash-template.yaml", "r", encoding="utf-8") as file:
         config = yaml.safe_load(file)
 
-    remote_url = "https://gitea.devo.top:66/OpenSource/collectSub/raw/branch/main/sub/sub_all_clash.txt"
+    remote_url = "https://raw.githubusercontent.com/devojony/collectSub/refs/heads/main/sub/sub_all_clash.txt"
     content = fetch_remote_txt(remote_url)
     proxy_providers = [p for p in content.split("\n") if p.strip()]
 
