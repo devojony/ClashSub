@@ -1,0 +1,43 @@
+name: Post Fetch Actions
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '5 */1 * * *'
+  watch:
+    types: started
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: 安装Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: 安装依赖
+        run: |
+          pip install -r ./requirements.txt
+
+      - name: 执行任务
+        run: |
+          python ./convert.py
+
+      - name: Commit
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+          git add . 
+          git commit -m "🚀️ Clash 订阅生成 $(date '+%Y-%m-%d %H:%M:%S')"
+        
+      - name: 推送更改
+        uses:  ad-m/github-push-action@master
+        with:
+          # github_token: ${{ secrets.TOKEN }}
+          branch: main
