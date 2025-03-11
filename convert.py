@@ -58,6 +58,7 @@ async def main():
                 "interval": 600,
                 "url": "http://www.gstatic.com/generate_204",
             },
+            "exclude-filter": "套餐|流量|群组|邀请|官网|重置|剩余|订阅"
         }
         for i, pp in enumerate(proxy_providers)
     }
