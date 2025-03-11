@@ -81,7 +81,7 @@ async def fetch_sub_info(session, url) -> SubInfo | None:
             response.raise_for_status()
             sub_info = response.headers.get("subscription-userinfo")
             if not sub_info:
-                logger.debug(f"未找到订阅信息: {url}")
+                logger.warning(f"未找到订阅信息: {url}")
                 return None
             logger.debug(f"成功获取订阅信息: {url}")
 
@@ -101,7 +101,7 @@ async def fetch_sub_info(session, url) -> SubInfo | None:
                         return sys.maxsize
                     return Decimal(value)
                 except ValueError:
-                    logger.debug(f"数据解析失败: <{value}>")
+                    logger.error(f"数据解析失败: <{value}>")
                     return -1
 
             return SubInfo(
