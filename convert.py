@@ -23,8 +23,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-GITHUB_RAW_BASE = "https://raw.githubusercontent.com/devojony/collectSub/main"
-GITHUB_API_BASE = "https://api.github.com/repos/devojony/collectSub"
+GITHUB_RAW_BASE = "https://raw.githubusercontent.com/gooooooooooooogle/collectSub/main"
+GITHUB_API_BASE = "https://api.github.com/repos/gooooooooooooogle/collectSub"
 
 
 async def fetch_remote_txt(url):
