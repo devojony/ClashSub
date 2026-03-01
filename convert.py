@@ -5,6 +5,8 @@ import asyncio
 from datetime import datetime
 import sys
 import re
+import base64
+import json
 
 import aiohttp
 import yaml
@@ -95,7 +97,8 @@ async def get_latest_sub_file(session, proxy: str | None = None) -> str | None:
 
 async def fetch_clash_subscriptions(
     session, url, proxy: str | None = None
-) -> list[str]:
+) -> tuple[list[str], list[str]]:
+    """返回 (clash_urls, v2ray_urls)"""
     logger.info(f"获取订阅配置: {url}")
     timeout = aiohttp.ClientTimeout(total=60)
     try:
@@ -105,33 +108,186 @@ async def fetch_clash_subscriptions(
             data = yaml.safe_load(content)
             if not data:
                 logger.warning("解析yaml失败")
-                return []
+                return [], []
 
-            all_urls = []
+            clash_urls = []
+            v2ray_urls = []
 
             if "clash订阅" in data:
                 urls = [u.strip() for u in data["clash订阅"] if u.strip()]
                 logger.info(f"clash订阅: {len(urls)} 个")
-                all_urls.extend(urls)
+                clash_urls.extend(urls)
 
             if "机场订阅" in data:
                 urls = [u.strip() for u in data["机场订阅"] if u.strip()]
                 logger.info(f"机场订阅: {len(urls)} 个")
-                all_urls.extend(urls)
+                clash_urls.extend(urls)
 
             if "开心玩耍" in data:
                 pattern = re.compile(r"https?://\S+")
                 for item in data["开心玩耍"]:
                     match = pattern.search(str(item))
                     if match:
-                        all_urls.append(match.group())
+                        clash_urls.append(match.group())
                 logger.info(f"开心玩耍: {len([u for u in data['开心玩耍'] if u])} 个")
 
-            logger.info(f"总计获取到 {len(all_urls)} 个订阅URL")
-            return all_urls
+            if "v2订阅" in data:
+                urls = [u.strip() for u in data["v2订阅"] if u.strip()]
+                logger.info(f"v2订阅: {len(urls)} 个")
+                v2ray_urls.extend(urls)
+
+            logger.info(
+                f"总计获取到 {len(clash_urls)} 个clash订阅URL, {len(v2ray_urls)} 个v2ray订阅URL"
+            )
+            return clash_urls, v2ray_urls
     except Exception as e:
         logger.error(f"解析订阅配置失败: {e}")
+        return [], []
+
+
+async def fetch_v2ray_proxies(session, url, proxy: str | None = None) -> list[dict]:
+    """获取 v2ray 订阅并转换为 clash proxy 格式"""
+    logger.info(f"获取v2ray订阅: {url}")
+    timeout = aiohttp.ClientTimeout(total=60)
+    try:
+        async with session.get(url, timeout=timeout, proxy=proxy) as response:
+            response.raise_for_status()
+            content = await response.text()
+
+            # base64 解码
+            try:
+                decoded = base64.b64decode(content).decode("utf-8")
+            except Exception:
+                logger.warning(f"base64解码失败，尝试直接解析: {url}")
+                decoded = content
+
+            proxies = []
+            for line in decoded.split("\n"):
+                line = line.strip()
+                if not line:
+                    continue
+
+                try:
+                    if line.startswith("vmess://"):
+                        proxy_config = parse_vmess(line)
+                        if proxy_config:
+                            proxies.append(proxy_config)
+                    elif line.startswith("vless://"):
+                        proxy_config = parse_vless(line)
+                        if proxy_config:
+                            proxies.append(proxy_config)
+                    elif line.startswith("ss://"):
+                        proxy_config = parse_ss(line)
+                        if proxy_config:
+                            proxies.append(proxy_config)
+                    elif line.startswith("trojan://"):
+                        proxy_config = parse_trojan(line)
+                        if proxy_config:
+                            proxies.append(proxy_config)
+                except Exception as e:
+                    logger.debug(f"解析代理失败: {line[:50]}... 错误: {e}")
+                    continue
+
+            logger.info(f"从 {url} 解析到 {len(proxies)} 个代理")
+            return proxies
+    except Exception as e:
+        logger.error(f"获取v2ray订阅失败: {url}, 错误: {e}")
         return []
+
+
+def parse_vmess(uri: str) -> dict | None:
+    """解析 vmess:// URI 为 clash 格式"""
+    try:
+        data = json.loads(base64.b64decode(uri[8:]).decode("utf-8"))
+        return {
+            "name": data.get("ps", "vmess"),
+            "type": "vmess",
+            "server": data.get("add"),
+            "port": int(data.get("port", 443)),
+            "uuid": data.get("id"),
+            "alterId": int(data.get("aid", 0)),
+            "cipher": data.get("scy", "auto"),
+            "network": data.get("net", "tcp"),
+            "tls": data.get("tls") == "tls",
+            "skip-cert-verify": True,
+        }
+    except Exception as e:
+        logger.debug(f"vmess解析失败: {e}")
+        return None
+
+
+def parse_vless(uri: str) -> dict | None:
+    """解析 vless:// URI 为 clash 格式"""
+    try:
+        from urllib.parse import urlparse, parse_qs
+
+        parsed = urlparse(uri)
+        params = parse_qs(parsed.query)
+
+        return {
+            "name": params.get("remarks", ["vless"])[0]
+            if "remarks" in params
+            else "vless",
+            "type": "vless",
+            "server": parsed.hostname,
+            "port": parsed.port or 443,
+            "uuid": parsed.username,
+            "network": params.get("type", ["tcp"])[0],
+            "tls": params.get("security", [""])[0] == "tls",
+            "skip-cert-verify": True,
+        }
+    except Exception as e:
+        logger.debug(f"vless解析失败: {e}")
+        return None
+
+
+def parse_ss(uri: str) -> dict | None:
+    """解析 ss:// URI 为 clash 格式"""
+    try:
+        from urllib.parse import urlparse
+
+        parsed = urlparse(uri)
+
+        if not parsed.username:
+            return None
+
+        # 解码 userinfo
+        userinfo = base64.b64decode(parsed.username).decode("utf-8")
+        method, password = userinfo.split(":", 1)
+
+        return {
+            "name": parsed.fragment or "ss",
+            "type": "ss",
+            "server": parsed.hostname,
+            "port": parsed.port or 443,
+            "cipher": method,
+            "password": password,
+        }
+    except Exception as e:
+        logger.debug(f"ss解析失败: {e}")
+        return None
+
+
+def parse_trojan(uri: str) -> dict | None:
+    """解析 trojan:// URI 为 clash 格式"""
+    try:
+        from urllib.parse import urlparse, parse_qs
+
+        parsed = urlparse(uri)
+        params = parse_qs(parsed.query)
+
+        return {
+            "name": parsed.fragment or "trojan",
+            "type": "trojan",
+            "server": parsed.hostname,
+            "port": parsed.port or 443,
+            "password": parsed.username,
+            "sni": params.get("sni", [parsed.hostname])[0],
+            "skip-cert-verify": True,
+        }
+    except Exception as e:
+        logger.debug(f"trojan解析失败: {e}")
+        return None
 
 
 async def main():
@@ -150,14 +306,27 @@ async def main():
             logger.error("无法获取订阅文件")
             return
 
-        proxy_providers = await fetch_clash_subscriptions(session, sub_file_url, proxy)
-        if not proxy_providers:
+        clash_urls, v2ray_urls = await fetch_clash_subscriptions(
+            session, sub_file_url, proxy
+        )
+        if not clash_urls and not v2ray_urls:
             logger.error("未获取到任何订阅URL")
             return
 
-    logger.info("开始过滤有效URL")
-    proxy_providers = await filter_valid_urls(proxy_providers)
+        # 处理 clash 订阅
+        logger.info("开始过滤有效clash订阅URL")
+        valid_clash_urls = await filter_valid_urls(clash_urls) if clash_urls else []
 
+        # 处理 v2ray 订阅
+        all_v2ray_proxies = []
+        if v2ray_urls:
+            logger.info(f"开始获取v2ray订阅，共 {len(v2ray_urls)} 个")
+            for v2_url in v2ray_urls:
+                proxies = await fetch_v2ray_proxies(session, v2_url, proxy)
+                all_v2ray_proxies.extend(proxies)
+            logger.info(f"v2ray订阅共获取到 {len(all_v2ray_proxies)} 个代理")
+
+    # 配置 proxy-providers
     config["proxy-providers"] = {
         f"provider#{i}": {
             "type": "http",
@@ -170,8 +339,15 @@ async def main():
             },
             "exclude-filter": "套餐|流量|群组|邀请|官网|重置|剩余|订阅",
         }
-        for i, pp in enumerate(proxy_providers)
+        for i, pp in enumerate(valid_clash_urls)
     }
+
+    # 添加 v2ray proxies
+    if all_v2ray_proxies:
+        if "proxies" not in config:
+            config["proxies"] = []
+        config["proxies"].extend(all_v2ray_proxies)
+        logger.info(f"添加 {len(all_v2ray_proxies)} 个v2ray代理到配置")
 
     logger.info("创建输出目录")
     os.makedirs("clash", exist_ok=True)
