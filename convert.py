@@ -42,38 +42,55 @@ async def get_latest_sub_file(session, proxy: str | None = None) -> str | None:
     year = now.year
     month = now.month
     day = now.day
-
-    sub_dir_url = f"{GITHUB_API_BASE}/contents/sub/{year}/{month}"
-    logger.info(f"检查目录: {sub_dir_url}")
     timeout = aiohttp.ClientTimeout(total=30)
 
-    try:
-        async with session.get(sub_dir_url, timeout=timeout, proxy=proxy) as response:
-            if response.status == 404:
-                logger.warning(f"目录不存在: sub/{year}/{month}")
-                return None
-            response.raise_for_status()
-            files = await response.json()
+    # 尝试当前月份和上个月
+    for attempt in range(2):
+        if attempt == 1:
+            # 回退到上个月
+            month -= 1
+            if month == 0:
+                month = 12
+                year -= 1
+            logger.info(f"当前月份目录不存在，尝试上个月: {year}/{month}")
 
-        available_files = [f for f in files if f["name"].endswith(".yaml")]
-        if not available_files:
-            logger.warning("未找到yaml文件")
-            return None
+        sub_dir_url = f"{GITHUB_API_BASE}/contents/sub/{year}/{month}"
+        logger.info(f"检查目录: {sub_dir_url}")
 
-        target_file = f"{month}-{day}.yaml"
-        for f in available_files:
-            if f["name"] == target_file:
-                logger.info(f"找到今日订阅文件: {f['name']}")
-                return f["download_url"]
+        try:
+            async with session.get(
+                sub_dir_url, timeout=timeout, proxy=proxy
+            ) as response:
+                if response.status == 404:
+                    logger.warning(f"目录不存在: sub/{year}/{month}")
+                    continue
+                response.raise_for_status()
+                files = await response.json()
 
-        available_files.sort(key=lambda x: x["name"], reverse=True)
-        latest = available_files[0]
-        logger.info(f"使用最新订阅文件: {latest['name']}")
-        return latest["download_url"]
+            available_files = [f for f in files if f["name"].endswith(".yaml")]
+            if not available_files:
+                logger.warning("未找到yaml文件")
+                continue
 
-    except Exception as e:
-        logger.error(f"获取订阅文件列表失败: {e}")
-        return None
+            # 如果是当前月份，尝试找今天的文件
+            if attempt == 0:
+                target_file = f"{month}-{day}.yaml"
+                for f in available_files:
+                    if f["name"] == target_file:
+                        logger.info(f"找到今日订阅文件: {f['name']}")
+                        return f["download_url"]
+
+            # 否则使用最新的文件
+            available_files.sort(key=lambda x: x["name"], reverse=True)
+            latest = available_files[0]
+            logger.info(f"使用最新订阅文件: {latest['name']}")
+            return latest["download_url"]
+
+        except Exception as e:
+            logger.error(f"获取订阅文件列表失败: {e}")
+            continue
+
+    return None
 
 
 async def fetch_clash_subscriptions(
@@ -160,9 +177,28 @@ async def main():
     os.makedirs("clash", exist_ok=True)
 
     output_path = os.path.join("clash", "subs.yaml")
+
+    # 检查文件是否有变更
+    old_content = None
+    if os.path.exists(output_path):
+        with open(output_path, "r", encoding="utf-8") as file:
+            old_content = file.read()
+
+    # 生成新内容
+    import io
+
+    new_content_io = io.StringIO()
+    yaml.dump(config, new_content_io, allow_unicode=True, sort_keys=False)
+    new_content = new_content_io.getvalue()
+
+    # 比较内容
+    if old_content == new_content:
+        logger.info("配置文件无变更，跳过写入")
+        return
+
     logger.info(f"开始写入配置文件: {output_path}")
     with open(output_path, "w", encoding="utf-8") as file:
-        yaml.dump(config, file, allow_unicode=True, sort_keys=False)
+        file.write(new_content)
     logger.info(f"配置文件写入完成: {output_path}")
 
 
