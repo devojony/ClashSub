@@ -300,6 +300,25 @@ def parse_trojan(uri: str) -> dict | None:
         return None
 
 
+async def generate_provider_file_from_proxies(proxies: list[dict]):
+    """从代理列表生成 provider 文件"""
+    if not proxies:
+        logger.warning("没有可用节点，跳过生成 provider 文件")
+        return
+
+    logger.info(f"生成 provider 文件，共 {len(proxies)} 个节点")
+
+    # 生成 provider 格式的配置
+    provider_config = {"proxies": proxies}
+
+    output_path = os.path.join("clash", "proxies.yaml")
+
+    with open(output_path, "w", encoding="utf-8") as file:
+        yaml.dump(provider_config, file, allow_unicode=True, sort_keys=False)
+
+    logger.info(f"Provider 文件生成完成: {output_path}")
+
+
 async def generate_provider_file(
     session, provider_urls: list[str], v2ray_proxies: list[dict], proxy: str | None
 ):
@@ -378,9 +397,34 @@ async def main():
             logger.error("未获取到任何订阅URL")
             return
 
-        # 处理 clash 订阅
-        logger.info("开始过滤有效clash订阅URL")
-        valid_clash_urls = await filter_valid_urls(clash_urls) if clash_urls else []
+        # 处理 clash 订阅 - 直接获取所有节点
+        all_clash_proxies = []
+        if clash_urls:
+            logger.info(f"开始获取clash订阅节点，共 {len(clash_urls)} 个")
+            for clash_url in clash_urls:
+                try:
+                    timeout = aiohttp.ClientTimeout(total=30)  # 缩短超时时间
+                    headers = {"User-Agent": "clash.meta"}
+                    async with session.get(
+                        clash_url, timeout=timeout, proxy=proxy, headers=headers
+                    ) as response:
+                        response.raise_for_status()
+                        content = await response.text()
+                        data = yaml.safe_load(content)
+
+                        # 提取 proxies
+                        proxies = data.get("proxies", [])
+                        if proxies:
+                            all_clash_proxies.extend(proxies)
+                            logger.info(
+                                f"从 {clash_url[:60]}... 获取 {len(proxies)} 个节点"
+                            )
+                except asyncio.TimeoutError:
+                    logger.warning(f"获取 clash 订阅超时: {clash_url[:60]}...")
+                except Exception as e:
+                    logger.error(f"获取 clash 订阅失败: {clash_url[:60]}... 错误: {e}")
+
+            logger.info(f"clash订阅共获取到 {len(all_clash_proxies)} 个代理")
 
         # 处理 v2ray 订阅
         all_v2ray_proxies = []
@@ -392,61 +436,27 @@ async def main():
             logger.info(f"v2ray订阅共获取到 {len(all_v2ray_proxies)} 个代理")
 
         # 生成 provider 专用文件（在 session 关闭前）
-        if valid_clash_urls or all_v2ray_proxies:
-            await generate_provider_file(
-                session, valid_clash_urls, all_v2ray_proxies, proxy
-            )
+        all_proxies = all_clash_proxies + all_v2ray_proxies
+        if all_proxies:
+            await generate_provider_file_from_proxies(all_proxies)
 
-    # 配置 proxy-providers
-    config["proxy-providers"] = {
-        f"provider#{i}": {
-            "type": "http",
-            "url": pp.strip(),
-            "interval": 3600,
-            "health-check": {
-                "enable": True,
-                "interval": 600,
-                "url": "http://www.gstatic.com/generate_204",
-            },
-            "exclude-filter": "套餐|流量|群组|邀请|官网|重置|剩余|订阅",
-        }
-        for i, pp in enumerate(valid_clash_urls)
-    }
+    # 合并所有代理到配置
+    all_proxies = all_clash_proxies + all_v2ray_proxies
+    if all_proxies:
+        config["proxies"] = all_proxies
+        logger.info(f"总计添加 {len(all_proxies)} 个代理到配置")
 
-    # 添加 v2ray proxies
-    if all_v2ray_proxies:
-        if "proxies" not in config:
-            config["proxies"] = []
-        config["proxies"].extend(all_v2ray_proxies)
-        logger.info(f"添加 {len(all_v2ray_proxies)} 个v2ray代理到配置")
+    # 清空 proxy-providers（不再使用）
+    config["proxy-providers"] = {}
 
-    # 更新 proxy-groups 以使用 include-all 或 include-all-providers
-    has_proxies = all_v2ray_proxies and len(all_v2ray_proxies) > 0
-    has_providers = len(config.get("proxy-providers", {})) > 0
-
-    if has_proxies or has_providers:
-        logger.info(
-            f"更新 proxy-groups 配置 (proxies: {has_proxies}, providers: {has_providers})"
-        )
+    # 更新 proxy-groups 以使用 include-all-proxies
+    if all_proxies:
+        logger.info(f"更新 proxy-groups 配置")
         for group in config.get("proxy-groups", []):
-            # 为需要代理节点的组添加 include-all 字段
+            # 为需要代理节点的组添加 include-all-proxies 字段
             if group.get("type") in ["select", "url-test", "fallback", "load-balance"]:
-                # 如果同时有 proxies 和 providers，使用 include-all
-                if has_proxies and has_providers:
-                    group["include-all"] = True
-                    logger.debug(f"为 {group.get('name')} 设置 include-all: true")
-                # 如果只有 providers，使用 include-all-providers
-                elif has_providers:
-                    group["include-all-providers"] = True
-                    logger.debug(
-                        f"为 {group.get('name')} 设置 include-all-providers: true"
-                    )
-                # 如果只有 proxies，使用 include-all-proxies
-                elif has_proxies:
-                    group["include-all-proxies"] = True
-                    logger.debug(
-                        f"为 {group.get('name')} 设置 include-all-proxies: true"
-                    )
+                group["include-all-proxies"] = True
+                logger.debug(f"为 {group.get('name')} 设置 include-all-proxies: true")
 
     logger.info("创建输出目录")
     os.makedirs("clash", exist_ok=True)
