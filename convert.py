@@ -458,23 +458,47 @@ async def main():
         # 生成 provider 专用文件（在 session 关闭前）
         all_proxies = all_clash_proxies + all_v2ray_proxies
 
-        # 去重：根据节点名称去重
+        # 去重：根据服务器地址+端口+类型去重，并处理名称冲突
         if all_proxies:
+            seen_keys = set()
             seen_names = set()
             unique_proxies = []
             duplicate_count = 0
+            renamed_count = 0
 
             for proxy in all_proxies:
-                name = proxy.get("name", "")
-                if name and name not in seen_names:
-                    seen_names.add(name)
+                # 生成唯一标识：类型+服务器+端口
+                proxy_type = proxy.get("type", "")
+                server = proxy.get("server", "")
+                port = proxy.get("port", "")
+
+                # 使用服务器信息作为唯一标识
+                unique_key = f"{proxy_type}://{server}:{port}"
+
+                if unique_key and unique_key not in seen_keys:
+                    seen_keys.add(unique_key)
+
+                    # 处理名称冲突
+                    name = proxy.get("name", "")
+                    if name in seen_names:
+                        # 名称重复，添加后缀
+                        counter = 1
+                        new_name = f"{name}_{counter}"
+                        while new_name in seen_names:
+                            counter += 1
+                            new_name = f"{name}_{counter}"
+                        proxy["name"] = new_name
+                        renamed_count += 1
+                        logger.debug(f"重命名节点: {name} -> {new_name}")
+
+                    seen_names.add(proxy.get("name"))
                     unique_proxies.append(proxy)
                 else:
                     duplicate_count += 1
 
             if duplicate_count > 0:
                 logger.info(
-                    f"去重：移除 {duplicate_count} 个重复节点，保留 {len(unique_proxies)} 个"
+                    f"去重：移除 {duplicate_count} 个重复节点，重命名 {renamed_count} 个名称冲突，保留 {len(unique_proxies)} 个"
                 )
 
             all_proxies = unique_proxies
