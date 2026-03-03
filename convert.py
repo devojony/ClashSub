@@ -27,6 +27,14 @@ logger = logging.getLogger(__name__)
 
 GITHUB_RAW_BASE = "https://raw.githubusercontent.com/gooooooooooooogle/collectSub/main"
 GITHUB_API_BASE = "https://api.github.com/repos/gooooooooooooogle/collectSub"
+GITHUB_PROXY = "https://gh-proxy.org/"  # GitHub 代理
+
+
+def use_github_proxy(url: str) -> str:
+    """为 GitHub raw 文件 URL 添加代理"""
+    if "raw.githubusercontent.com" in url:
+        return f"{GITHUB_PROXY}{url}"
+    return url
 
 
 async def fetch_remote_txt(url):
@@ -99,10 +107,12 @@ async def fetch_clash_subscriptions(
     session, url, proxy: str | None = None
 ) -> tuple[list[str], list[str]]:
     """返回 (clash_urls, v2ray_urls)"""
+    # 使用 GitHub 代理
+    proxied_url = use_github_proxy(url)
     logger.info(f"获取订阅配置: {url}")
     timeout = aiohttp.ClientTimeout(total=60)
     try:
-        async with session.get(url, timeout=timeout, proxy=proxy) as response:
+        async with session.get(proxied_url, timeout=timeout, proxy=proxy) as response:
             response.raise_for_status()
             content = await response.text()
             data = yaml.safe_load(content)
@@ -381,6 +391,12 @@ async def main():
                 all_v2ray_proxies.extend(proxies)
             logger.info(f"v2ray订阅共获取到 {len(all_v2ray_proxies)} 个代理")
 
+        # 生成 provider 专用文件（在 session 关闭前）
+        if valid_clash_urls or all_v2ray_proxies:
+            await generate_provider_file(
+                session, valid_clash_urls, all_v2ray_proxies, proxy
+            )
+
     # 配置 proxy-providers
     config["proxy-providers"] = {
         f"provider#{i}": {
@@ -458,12 +474,6 @@ async def main():
         with open(output_path, "w", encoding="utf-8") as file:
             file.write(new_content)
         logger.info(f"配置文件写入完成: {output_path}")
-
-    # 生成 provider 专用文件（只包含 proxies）
-    if has_proxies or has_providers:
-        await generate_provider_file(
-            session, valid_clash_urls, all_v2ray_proxies, proxy
-        )
 
 
 # subscription-userinfo: upload=1234; download=2234; total=1024000; expire=2218532293
