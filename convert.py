@@ -349,6 +349,34 @@ async def main():
         config["proxies"].extend(all_v2ray_proxies)
         logger.info(f"添加 {len(all_v2ray_proxies)} 个v2ray代理到配置")
 
+    # 更新 proxy-groups 以使用 include-all 或 include-all-providers
+    has_proxies = all_v2ray_proxies and len(all_v2ray_proxies) > 0
+    has_providers = len(config.get("proxy-providers", {})) > 0
+
+    if has_proxies or has_providers:
+        logger.info(
+            f"更新 proxy-groups 配置 (proxies: {has_proxies}, providers: {has_providers})"
+        )
+        for group in config.get("proxy-groups", []):
+            # 为需要代理节点的组添加 include-all 字段
+            if group.get("type") in ["select", "url-test", "fallback", "load-balance"]:
+                # 如果同时有 proxies 和 providers，使用 include-all
+                if has_proxies and has_providers:
+                    group["include-all"] = True
+                    logger.debug(f"为 {group.get('name')} 设置 include-all: true")
+                # 如果只有 providers，使用 include-all-providers
+                elif has_providers:
+                    group["include-all-providers"] = True
+                    logger.debug(
+                        f"为 {group.get('name')} 设置 include-all-providers: true"
+                    )
+                # 如果只有 proxies，使用 include-all-proxies
+                elif has_proxies:
+                    group["include-all-proxies"] = True
+                    logger.debug(
+                        f"为 {group.get('name')} 设置 include-all-proxies: true"
+                    )
+
     logger.info("创建输出目录")
     os.makedirs("clash", exist_ok=True)
 
