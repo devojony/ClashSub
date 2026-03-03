@@ -450,17 +450,44 @@ async def main():
 
         # 去重：根据服务器地址+端口+类型去重，并处理名称冲突
         if all_proxies:
+            # Mihomo 支持的代理类型
+            supported_types = {
+                "ss",
+                "ssr",
+                "vmess",
+                "vless",
+                "trojan",
+                "snell",
+                "http",
+                "https",
+                "socks5",
+                "hysteria",
+                "hysteria2",
+                "tuic",
+                "wireguard",
+                "ssh",
+            }
+
             seen_keys = set()
             seen_names = set()
             unique_proxies = []
             duplicate_count = 0
             renamed_count = 0
+            unsupported_count = 0
 
             for proxy in all_proxies:
                 # 生成唯一标识：类型+服务器+端口
-                proxy_type = proxy.get("type", "")
+                proxy_type = proxy.get("type", "").lower()
                 server = proxy.get("server", "")
                 port = proxy.get("port", "")
+
+                # 过滤不支持的代理类型
+                if proxy_type not in supported_types:
+                    unsupported_count += 1
+                    logger.debug(
+                        f"跳过不支持的代理类型: {proxy_type} - {proxy.get('name', 'unknown')}"
+                    )
+                    continue
 
                 # 使用服务器信息作为唯一标识
                 unique_key = f"{proxy_type}://{server}:{port}"
@@ -486,10 +513,11 @@ async def main():
                 else:
                     duplicate_count += 1
 
-            if duplicate_count > 0:
-                logger.info(
-                    f"去重：移除 {duplicate_count} 个重复节点，重命名 {renamed_count} 个名称冲突，保留 {len(unique_proxies)} 个"
-                )
+            log_msg = f"去重：移除 {duplicate_count} 个重复节点，重命名 {renamed_count} 个名称冲突"
+            if unsupported_count > 0:
+                log_msg += f"，过滤 {unsupported_count} 个不支持的类型"
+            log_msg += f"，保留 {len(unique_proxies)} 个"
+            logger.info(log_msg)
 
             all_proxies = unique_proxies
 
