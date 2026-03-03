@@ -290,6 +290,61 @@ def parse_trojan(uri: str) -> dict | None:
         return None
 
 
+async def generate_provider_file(
+    session, provider_urls: list[str], v2ray_proxies: list[dict], proxy: str | None
+):
+    """生成只包含 proxies 的 provider 文件"""
+    logger.info("开始生成 provider 专用文件")
+
+    all_proxies = []
+
+    # 从 provider URLs 获取节点
+    if provider_urls:
+        logger.info(f"从 {len(provider_urls)} 个 provider 获取节点")
+        for provider_url in provider_urls:
+            try:
+                timeout = aiohttp.ClientTimeout(total=60)
+                headers = {"User-Agent": "clash.meta"}
+                async with session.get(
+                    provider_url, timeout=timeout, proxy=proxy, headers=headers
+                ) as response:
+                    response.raise_for_status()
+                    content = await response.text()
+                    data = yaml.safe_load(content)
+
+                    # 提取 proxies
+                    proxies = data.get("proxies", [])
+                    if proxies:
+                        all_proxies.extend(proxies)
+                        logger.info(
+                            f"从 {provider_url[:50]}... 获取 {len(proxies)} 个节点"
+                        )
+            except Exception as e:
+                logger.error(
+                    f"获取 provider 节点失败: {provider_url[:50]}... 错误: {e}"
+                )
+
+    # 添加 v2ray 节点
+    if v2ray_proxies:
+        all_proxies.extend(v2ray_proxies)
+        logger.info(f"添加 {len(v2ray_proxies)} 个 v2ray 节点")
+
+    if not all_proxies:
+        logger.warning("没有可用节点，跳过生成 provider 文件")
+        return
+
+    # 生成 provider 格式的配置
+    provider_config = {"proxies": all_proxies}
+
+    output_path = os.path.join("clash", "proxies.yaml")
+    logger.info(f"写入 provider 文件: {output_path} (共 {len(all_proxies)} 个节点)")
+
+    with open(output_path, "w", encoding="utf-8") as file:
+        yaml.dump(provider_config, file, allow_unicode=True, sort_keys=False)
+
+    logger.info(f"Provider 文件生成完成: {output_path}")
+
+
 async def main():
     logger.info("开始加载配置文件")
     with open("clash-template.yaml", "r", encoding="utf-8") as file:
@@ -398,12 +453,17 @@ async def main():
     # 比较内容
     if old_content == new_content:
         logger.info("配置文件无变更，跳过写入")
-        return
+    else:
+        logger.info(f"开始写入配置文件: {output_path}")
+        with open(output_path, "w", encoding="utf-8") as file:
+            file.write(new_content)
+        logger.info(f"配置文件写入完成: {output_path}")
 
-    logger.info(f"开始写入配置文件: {output_path}")
-    with open(output_path, "w", encoding="utf-8") as file:
-        file.write(new_content)
-    logger.info(f"配置文件写入完成: {output_path}")
+    # 生成 provider 专用文件（只包含 proxies）
+    if has_proxies or has_providers:
+        await generate_provider_file(
+            session, valid_clash_urls, all_v2ray_proxies, proxy
+        )
 
 
 # subscription-userinfo: upload=1234; download=2234; total=1024000; expire=2218532293
