@@ -397,51 +397,93 @@ async def main():
             logger.error("未获取到任何订阅URL")
             return
 
-        # 处理 clash 订阅 - 直接获取所有节点
+        # 处理 clash 订阅 - 并发获取所有节点
         all_clash_proxies = []
         if clash_urls:
-            logger.info(f"开始获取clash订阅节点，共 {len(clash_urls)} 个")
-            for clash_url in clash_urls:
+            logger.info(f"开始并发获取clash订阅节点，共 {len(clash_urls)} 个")
+
+            async def fetch_clash_sub(url):
+                """获取单个 clash 订阅"""
                 try:
-                    timeout = aiohttp.ClientTimeout(total=30)  # 缩短超时时间
+                    timeout = aiohttp.ClientTimeout(total=30)
                     headers = {"User-Agent": "clash.meta"}
                     async with session.get(
-                        clash_url, timeout=timeout, proxy=proxy, headers=headers
+                        url, timeout=timeout, proxy=proxy, headers=headers
                     ) as response:
                         response.raise_for_status()
                         content = await response.text()
                         data = yaml.safe_load(content)
 
-                        # 提取 proxies
                         proxies = data.get("proxies", [])
                         if proxies:
-                            all_clash_proxies.extend(proxies)
-                            logger.info(
-                                f"从 {clash_url[:60]}... 获取 {len(proxies)} 个节点"
-                            )
+                            logger.info(f"从 {url[:60]}... 获取 {len(proxies)} 个节点")
+                            return proxies
+                        return []
                 except asyncio.TimeoutError:
-                    logger.warning(f"获取 clash 订阅超时: {clash_url[:60]}...")
+                    logger.warning(f"获取 clash 订阅超时: {url[:60]}...")
+                    return []
                 except Exception as e:
-                    logger.error(f"获取 clash 订阅失败: {clash_url[:60]}... 错误: {e}")
+                    logger.error(f"获取 clash 订阅失败: {url[:60]}... 错误: {e}")
+                    return []
+
+            # 并发获取所有订阅
+            tasks = [fetch_clash_sub(url) for url in clash_urls]
+            results = await asyncio.gather(*tasks)
+
+            # 合并所有结果
+            for proxies in results:
+                all_clash_proxies.extend(proxies)
 
             logger.info(f"clash订阅共获取到 {len(all_clash_proxies)} 个代理")
 
-        # 处理 v2ray 订阅
+        # 处理 v2ray 订阅 - 并发获取
         all_v2ray_proxies = []
         if v2ray_urls:
-            logger.info(f"开始获取v2ray订阅，共 {len(v2ray_urls)} 个")
-            for v2_url in v2ray_urls:
-                proxies = await fetch_v2ray_proxies(session, v2_url, proxy)
+            logger.info(f"开始并发获取v2ray订阅，共 {len(v2ray_urls)} 个")
+
+            async def fetch_v2_sub(url):
+                """获取单个 v2ray 订阅"""
+                return await fetch_v2ray_proxies(session, url, proxy)
+
+            # 并发获取所有 v2ray 订阅
+            tasks = [fetch_v2_sub(url) for url in v2ray_urls]
+            results = await asyncio.gather(*tasks)
+
+            # 合并所有结果
+            for proxies in results:
                 all_v2ray_proxies.extend(proxies)
+
             logger.info(f"v2ray订阅共获取到 {len(all_v2ray_proxies)} 个代理")
 
         # 生成 provider 专用文件（在 session 关闭前）
         all_proxies = all_clash_proxies + all_v2ray_proxies
+
+        # 去重：根据节点名称去重
+        if all_proxies:
+            seen_names = set()
+            unique_proxies = []
+            duplicate_count = 0
+
+            for proxy in all_proxies:
+                name = proxy.get("name", "")
+                if name and name not in seen_names:
+                    seen_names.add(name)
+                    unique_proxies.append(proxy)
+                else:
+                    duplicate_count += 1
+
+            if duplicate_count > 0:
+                logger.info(
+                    f"去重：移除 {duplicate_count} 个重复节点，保留 {len(unique_proxies)} 个"
+                )
+
+            all_proxies = unique_proxies
+
+        # 生成 provider 专用文件
         if all_proxies:
             await generate_provider_file_from_proxies(all_proxies)
 
-    # 合并所有代理到配置
-    all_proxies = all_clash_proxies + all_v2ray_proxies
+    # 合并所有代理到配置（使用去重后的结果）
     if all_proxies:
         config["proxies"] = all_proxies
         logger.info(f"总计添加 {len(all_proxies)} 个代理到配置")
