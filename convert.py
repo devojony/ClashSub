@@ -27,14 +27,6 @@ logger = logging.getLogger(__name__)
 
 GITHUB_RAW_BASE = "https://raw.githubusercontent.com/gooooooooooooogle/collectSub/main"
 GITHUB_API_BASE = "https://api.github.com/repos/gooooooooooooogle/collectSub"
-GITHUB_PROXY = "https://gh-proxy.org/"  # GitHub 代理
-
-
-def use_github_proxy(url: str) -> str:
-    """为 GitHub raw 文件 URL 添加代理"""
-    if "raw.githubusercontent.com" in url:
-        return f"{GITHUB_PROXY}{url}"
-    return url
 
 
 async def fetch_remote_txt(url):
@@ -107,12 +99,10 @@ async def fetch_clash_subscriptions(
     session, url, proxy: str | None = None
 ) -> tuple[list[str], list[str]]:
     """返回 (clash_urls, v2ray_urls)"""
-    # 使用 GitHub 代理
-    proxied_url = use_github_proxy(url)
     logger.info(f"获取订阅配置: {url}")
     timeout = aiohttp.ClientTimeout(total=60)
     try:
-        async with session.get(proxied_url, timeout=timeout, proxy=proxy) as response:
+        async with session.get(url, timeout=timeout, proxy=proxy) as response:
             response.raise_for_status()
             content = await response.text()
             data = yaml.safe_load(content)
