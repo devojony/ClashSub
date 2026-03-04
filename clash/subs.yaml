@@ -710,19 +710,28 @@ proxies:
 - name: Relay_-🇯🇵JP_01
   server: jp.sanmaojichang.com
   type: hysteria2
+  port: 21669
+  udp: true
+  password: b08c8325-c2d7-4028-80fd-62a76100a110
+  auth: b08c8325-c2d7-4028-80fd-62a76100a110
+  skip-cert-verify: false
+  ports: 21001-21999
+- name: Relay_-🇯🇵JP_02
+  server: jp.sanmaojichang.com
+  type: hysteria2
   port: 21911
   udp: true
   password: ad44ddd0-8642-4c19-8d15-182fc310112b
   auth: ad44ddd0-8642-4c19-8d15-182fc310112b
   skip-cert-verify: false
   ports: 21001-21999
-- name: Relay_-🇯🇵JP_02
+- name: Relay_-🇯🇵JP_03
   server: jp.sanmaojichang.com
   type: hysteria2
-  port: 21669
+  port: 21929
   udp: true
-  password: b08c8325-c2d7-4028-80fd-62a76100a110
-  auth: b08c8325-c2d7-4028-80fd-62a76100a110
+  password: ad44ddd0-8642-4c19-8d15-182fc310112b
+  auth: ad44ddd0-8642-4c19-8d15-182fc310112b
   skip-cert-verify: false
   ports: 21001-21999
 - name: Relay_-🇯🇵JP_04
@@ -734,20 +743,17 @@ proxies:
   auth: 946bbc43-9652-453e-af55-fa190e150c98
   skip-cert-verify: false
   ports: 21001-21999
-- name: Relay_-🇯🇵JP_05
-  server: jp.sanmaojichang.com
-  type: hysteria2
-  port: 21929
-  udp: true
-  password: ad44ddd0-8642-4c19-8d15-182fc310112b
-  auth: ad44ddd0-8642-4c19-8d15-182fc310112b
-  skip-cert-verify: false
-  ports: 21001-21999
-- name: Relay_🇸🇬SG-🇮🇩ID_21
-  server: 43.163.6.135
+- name: Relay_-🇸🇬SG_14 | 7.17Mb
+  server: 153.121.45.139
+  type: trojan
+  port: 4674
+  password: f7dbed8b1ca85124e793ba6c0bcfd0db
+  sni: www.nintendogames.net
+- name: Relay_🇸🇬SG-🇮🇩ID_22 |66.76Mb
+  server: 43.134.167.135
   type: vmess
   country: 🇸🇬SG
-  port: 41079
+  port: 9952
   uuid: 462d9694-62b5-4781-a287-61a422b920e8
   alterId: 0
   cipher: auto
@@ -761,6 +767,39 @@ proxies:
     path: /vvip
     headers:
       HOST: mn1ray.jagoanvip.xyz
+- name: Relay_🇺🇸US-🇯🇵JP_25 |35.00Mb
+  server: t1.620720.xyz
+  type: vmess
+  country: 🇺🇸US
+  port: 8443
+  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+- name: Relay_🏁ZZ-🇰🇷KR_30
+  server: c7.620720.xyz
+  type: vmess
+  country: 🏁ZZ
+  port: 8443
+  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: c7.620720.xyz
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: c7.620720.xyz
 - cipher: aes-256-cfb
   name: United States_None_ss_101
   password: amazonskr05
@@ -828,15 +867,6 @@ proxies:
   password: f7dbed8b1ca85124e793ba6c0bcfd0db
   port: 34818
   server: 13.115.155.105
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  tfo: false
-  type: trojan
-- name: Japan_Tokyo_trojan_109
-  network: tcp
-  password: f7dbed8b1ca85124e793ba6c0bcfd0db
-  port: 4674
-  server: 153.121.45.139
   skip-cert-verify: false
   sni: www.nintendogames.net
   tfo: false
@@ -1041,20 +1071,6 @@ proxies:
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alterId: 0
   cipher: auto
-  name: United States_None_vmess_1118
-  network: ws
-  port: '8443'
-  server: t1.620720.xyz
-  servername: t1.620720.xyz
-  tls: true
-  type: vmess
-  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
-  ws-opts:
-    headers:
-      Host: t1.620720.xyz
-    path: /
-- alterId: 0
-  cipher: auto
   name: China_Shenzhen_vmess_1119
   network: ws
   port: '80'
@@ -1066,17 +1082,28 @@ proxies:
     headers:
       Host: tms.dingtalk.com
     path: /
-- name: Relay_ |63.02Mb
-  server: admin.c1.havij.co
-  type: ss
+- name: 🇺🇸US_28 |28.86Mb
+  server: 130.250.137.199
+  type: vmess
+  country: 🇺🇸US
   port: 443
-  udp: true
-  password: 1kVr0KATIJI7mwOF
-  cipher: chacha20-ietf-poly1305
-- name: disney_DE
-  server: 136.244.95.103
+  uuid: f08369d1-5ee7-4b16-d786-30bce12fc33c
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: ous3.dean52.top
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /f08369d1-5ee7-4b16-d786-30bce12fc33c
+    headers:
+      HOST: ous3.dean52.top
+- name: disney_netflix_US
+  server: 67.209.183.236
   type: vless
-  port: 8443
+  port: 443
   udp: true
   uuid: 26524cce-d514-4014-a426-365fb266a14d
   network: ws
@@ -1088,6 +1115,13 @@ proxies:
     headers:
       Host: lirpeuijr.chinav.indevs.in
   packet-encoding: ''
+- name: netflix_GB |63.02Mb
+  server: admin.c1.havij.co
+  type: ss
+  port: 443
+  udp: true
+  password: 1kVr0KATIJI7mwOF
+  cipher: chacha20-ietf-poly1305
 - name: netflix_NL |172.60Mb
   server: 82.38.31.194
   type: ss
@@ -1107,6 +1141,24 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
+- name: disney_netflix_US |27.87Mb
+  server: 94.247.142.199
+  type: vmess
+  country: 🇬🇧GB
+  port: 443
+  uuid: f08369d1-5ee7-4b16-d786-30bce12fc33c
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: ous3.dean52.top
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /f08369d1-5ee7-4b16-d786-30bce12fc33c
+    headers:
+      HOST: ous3.dean52.top
 - name: disney_netflix_ID |45.87Mb
   server: 38.55.193.78
   type: vmess
@@ -1143,11 +1195,11 @@ proxies:
     path: /vvip
     headers:
       HOST: mn1ray.jagoanvip.xyz
-- name: disney_netflix_ID |66.76Mb
-  server: 43.134.167.135
+- name: disney_netflix_ID |84.05Mb
+  server: 43.163.6.135
   type: vmess
   country: 🇸🇬SG
-  port: 9952
+  port: 41079
   uuid: 462d9694-62b5-4781-a287-61a422b920e8
   alterId: 0
   cipher: auto
@@ -1179,6 +1231,24 @@ proxies:
     path: /vvip
     headers:
       HOST: mn1ray.jagoanvip.xyz
+- name: disney_netflix_US |31.56Mb
+  server: 198.62.62.199
+  type: vmess
+  country: 🇺🇸US
+  port: 443
+  uuid: f08369d1-5ee7-4b16-d786-30bce12fc33c
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: ous3.dean52.top
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /f08369d1-5ee7-4b16-d786-30bce12fc33c
+    headers:
+      HOST: ous3.dean52.top
 - name: Shadowsocks
   type: socks5
   server: 127.0.0.1
