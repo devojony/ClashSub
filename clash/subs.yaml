@@ -466,34 +466,10 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
-- name: Relay_-🇺🇸US_01
-  server: 67.209.183.236
-  type: vless
-  port: 443
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: lirpeuijr.chinav.indevs.in
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: lirpeuijr.chinav.indevs.in
-  packet-encoding: ''
-- name: Relay_-🇯🇵JP_02
+- name: Relay_-🇯🇵JP_01
   server: jp.sanmaojichang.com
   type: hysteria2
-  port: 21515
-  udp: true
-  password: 946bbc43-9652-453e-af55-fa190e150c98
-  auth: 946bbc43-9652-453e-af55-fa190e150c98
-  skip-cert-verify: false
-  ports: 21001-21999
-- name: Relay_-🇯🇵JP_03
-  server: jp.sanmaojichang.com
-  type: hysteria2
-  port: 21929
+  port: 21911
   udp: true
   password: ad44ddd0-8642-4c19-8d15-182fc310112b
   auth: ad44ddd0-8642-4c19-8d15-182fc310112b
@@ -514,7 +490,7 @@ proxies:
     headers:
       Host: lirpeuijr.chinav.indevs.in
   packet-encoding: ''
-- name: Relay_-🇯🇵JP_05
+- name: Relay_-🇯🇵JP_03
   server: jp.sanmaojichang.com
   type: hysteria2
   port: 21807
@@ -523,13 +499,31 @@ proxies:
   auth: 8338e9d1-5878-467e-b6ec-a8370a3218ed
   skip-cert-verify: false
   ports: 21001-21999
-- name: Relay_-🇯🇵JP_06
+- name: Relay_-🇯🇵JP_04
+  server: jp.sanmaojichang.com
+  type: hysteria2
+  port: 21929
+  udp: true
+  password: ad44ddd0-8642-4c19-8d15-182fc310112b
+  auth: ad44ddd0-8642-4c19-8d15-182fc310112b
+  skip-cert-verify: false
+  ports: 21001-21999
+- name: Relay_-🇯🇵JP_05
   server: jp.sanmaojichang.com
   type: hysteria2
   port: 21482
   udp: true
   password: 8c4dbd29-c793-4ed9-abb6-9fd96535f0b8
   auth: 8c4dbd29-c793-4ed9-abb6-9fd96535f0b8
+  skip-cert-verify: false
+  ports: 21001-21999
+- name: Relay_-🇯🇵JP_06
+  server: jp.sanmaojichang.com
+  type: hysteria2
+  port: 21669
+  udp: true
+  password: b08c8325-c2d7-4028-80fd-62a76100a110
+  auth: b08c8325-c2d7-4028-80fd-62a76100a110
   skip-cert-verify: false
   ports: 21001-21999
 - name: Relay_-🇯🇵JP_07
@@ -543,22 +537,13 @@ proxies:
 - name: Relay_-🇯🇵JP_08
   server: jp.sanmaojichang.com
   type: hysteria2
-  port: 21911
+  port: 21515
   udp: true
-  password: ad44ddd0-8642-4c19-8d15-182fc310112b
-  auth: ad44ddd0-8642-4c19-8d15-182fc310112b
+  password: 946bbc43-9652-453e-af55-fa190e150c98
+  auth: 946bbc43-9652-453e-af55-fa190e150c98
   skip-cert-verify: false
   ports: 21001-21999
 - name: Relay_-🇯🇵JP_09
-  server: jp.sanmaojichang.com
-  type: hysteria2
-  port: 21669
-  udp: true
-  password: b08c8325-c2d7-4028-80fd-62a76100a110
-  auth: b08c8325-c2d7-4028-80fd-62a76100a110
-  skip-cert-verify: false
-  ports: 21001-21999
-- name: Relay_-🇯🇵JP_10
   server: jp.sanmaojichang.com
   type: hysteria2
   port: 21377
@@ -566,122 +551,47 @@ proxies:
   password: 73e5204d-9543-4cc7-938b-d44cffd63317
   auth: 73e5204d-9543-4cc7-938b-d44cffd63317
   skip-cert-verify: false
-- name: ' |60.26Mb'
-  server: 140.174.186.5
-  type: ss
-  port: 41632
-  udp: true
-  password: qwerREWQ@@
-  cipher: aes-256-cfb
-- name: disney_JP | 8.71Mb
-  server: 167.17.179.197
-  type: ss
-  port: 60129
-  udp: true
-  password: 0690659746980c46
-  cipher: aes-256-gcm
-- name: Relay_ |172.72Mb
+- name: netflix_NL |192.33Mb
   server: 82.38.31.194
   type: ss
   port: 8080
   udp: true
   password: k1dBOmOB4oqi7Ump37a1bQ
   cipher: chacha20-ietf-poly1305
-- name: disney_US |406.63Mb
+- name: disney_netflix_US | 8.64Mb
   server: tinkered-pennies-puppies.freesocks.work
   type: ss
   port: 443
   udp: true
   password: hbGrpfvNrJsUmKmPbR3iY2
   cipher: chacha20-ietf-poly1305
-- name: ' | 2.49Mb'
-  server: 45.140.169.225
+- name: disney_netflix_US |123.20Mb
+  server: 140.174.186.5
   type: ss
-  port: 60129
+  port: 41632
   udp: true
-  password: c5fcdf7829112cb4
-  cipher: aes-256-gcm
-- name: Relay_ |18.37Mb
+  password: qwerREWQ@@
+  cipher: aes-256-cfb
+- name: netflix_GB |13.04Mb
   server: admin.c1.havij.co
   type: ss
   port: 443
   udp: true
   password: 1kVr0KATIJI7mwOF
   cipher: chacha20-ietf-poly1305
-- name: Relay_-🇭🇰HK_17
-  server: b598b29e-tbdts0-tmynyz-1s3mx.hkt.gotochinatown.net
-  type: vmess
-  port: 80
-  udp: true
-  uuid: b58095f0-52dc-11ef-bc74-f23c91cfbbc9
-  alterId: 2
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  ws-opts:
-    path: /
-    headers:
-      Host: broadcastlv.chat.bilibili.com
-- name: Relay_-🇭🇰HK_18
-  server: cd5a4e76-t70f40-t7dv8l-1szgv.hkt.gotochinatown.net
-  type: vmess
-  port: 80
-  udp: true
-  uuid: 448aff24-b2e6-11ef-97e0-f23c9164ca5d
-  alterId: 2
-  cipher: auto
-  network: ws
-  servername: broadcastlv.chat.bilibili.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      Host: cd5a4e76-t70f40-t7dv8l-1szgv.hkt.gotochinatown.net
-- name: Relay_-🇭🇰HK_19
-  server: 451e6242-t70f40-t8kgw8-jjv2.hkt.gotochinatown.net
-  type: vmess
-  port: 80
-  udp: true
-  uuid: 31676725-b0fd-fed2-c857-2da8ce5a6e4f
-  alterId: 2
-  cipher: auto
-  network: ws
-  servername: broadcastlv.chat.bilibili.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      Host: 451e6242-t70f40-t8kgw8-jjv2.hkt.gotochinatown.net
-- name: Relay_-🇸🇬SG_20 | 5.63Mb
-  server: 153.121.45.139
-  type: trojan
-  port: 4674
-  password: f7dbed8b1ca85124e793ba6c0bcfd0db
-  sni: www.nintendogames.net
-- name: Relay_-🇺🇸US_21 |51.81Mb
+- name: disney_netflix_US |21.88Mb
   server: 153.121.45.139
   type: trojan
   port: 4920
   password: f7dbed8b1ca85124e793ba6c0bcfd0db
   sni: www.nintendogames.net
-- name: 🇩🇪DE_23 |193.41Mb
-  server: 92.246.87.170
-  type: vmess
-  country: 🇩🇪DE
-  port: 18355
-  uuid: caf921c7-ac63-40bc-faa1-cda097fd7e42
-  alterId: 0
-  cipher: auto
-  network: none
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: Relay_🇬🇧GB |164.17Mb
+- name: netflix_NL | 9.77Mb
+  server: 153.121.45.139
+  type: trojan
+  port: 4674
+  password: f7dbed8b1ca85124e793ba6c0bcfd0db
+  sni: www.nintendogames.net
+- name: disney_netflix_US |164.17Mb
   server: 82.198.246.97
   type: vmess
   country: 🇬🇧GB
@@ -693,7 +603,7 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: Relay_🇭🇰HK |23.07Mb
+- name: disney_netflix_ID |22.61Mb
   server: 38.55.193.78
   type: vmess
   country: 🇭🇰HK
@@ -711,25 +621,19 @@ proxies:
     path: /vvip
     headers:
       HOST: mn1ray.jagoanvip.xyz
-- name: disney_netflix_ID | 7.55Mb
-  server: 43.134.167.135
+- name: 🇮🇷IR_19 | 1.47Mb
+  server: 31.58.223.134
   type: vmess
-  country: 🇸🇬SG
-  port: 9952
-  uuid: 462d9694-62b5-4781-a287-61a422b920e8
+  country: 🇮🇷IR
+  port: 8443
+  uuid: 78cdc6b7-8b14-47d6-bf09-3167bc5124fb
   alterId: 0
   cipher: auto
-  network: ws
-  servername: mn1ray.jagoanvip.xyz
+  network: tcp
   http-opts: {}
   h2-opts: {}
-  tls: true
   skip-cert-verify: true
-  ws-opts:
-    path: /vvip
-    headers:
-      HOST: mn1ray.jagoanvip.xyz
-- name: disney_netflix_ID |15.79Mb
+- name: disney_netflix_ID | 9.94Mb
   server: 43.156.6.226
   type: vmess
   country: 🇸🇬SG
@@ -747,7 +651,41 @@ proxies:
     path: /vvip
     headers:
       HOST: mn1ray.jagoanvip.xyz
-- name: Relay_🇺🇸US |24.42Mb
+- name: disney_netflix_ID |21.82Mb
+  server: 43.134.167.135
+  type: vmess
+  country: 🇸🇬SG
+  port: 9952
+  uuid: 462d9694-62b5-4781-a287-61a422b920e8
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: mn1ray.jagoanvip.xyz
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vvip
+    headers:
+      HOST: mn1ray.jagoanvip.xyz
+- name: 🇹🇼TW_22
+  server: hinet-home1.xn--9kqp42aims.top
+  type: hysteria2
+  country: 🇹🇼TW
+  port: 65500
+  udp: true
+  password: 07043942-12a4-4f28-b4a8-f7509bad7931
+  sni: gw.alicdn.com
+  skip-cert-verify: true
+- name: netflix_PL |44.30Mb
+  server: 144.31.131.32
+  type: ss
+  country: 🇺🇸US
+  port: 9443
+  password: yoNzQ7Q6qbC1Mx5QpGvdPsHpRsqkvQxk
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_ID |24.42Mb
   server: 38.207.177.148
   type: vmess
   country: 🇺🇸US
@@ -765,7 +703,22 @@ proxies:
     path: /vvip
     headers:
       HOST: mn1ray.jagoanvip.xyz
-- name: Relay_🇺🇸US | 3.32Mb
+- name: Relay_🇺🇸US-🇯🇵JP_25 | 1.31Mb
+  server: t1.620720.xyz
+  type: vmess
+  country: 🇺🇸US
+  port: 8443
+  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+- name: Relay_🇺🇸US-🇦🇺AU_26 | 2.39Mb
   server: sy4.620720.xyz
   type: vmess
   country: 🇺🇸US
@@ -780,7 +733,7 @@ proxies:
   skip-cert-verify: true
   ws-opts:
     path: /
-- name: Relay_🏁ZZ-🇰🇷KR_32
+- name: Relay_🏁ZZ-🇰🇷KR_27
   server: c7.620720.xyz
   type: vmess
   country: 🏁ZZ
@@ -798,14 +751,6 @@ proxies:
     path: /
     headers:
       HOST: c7.620720.xyz
-- name: 阿尔巴尼亚 - 地拉那 - H2nexus LTD - 1
-  server: 144.31.131.32
-  type: ss
-  country: 🇺🇸US
-  port: 9443
-  password: yoNzQ7Q6qbC1Mx5QpGvdPsHpRsqkvQxk
-  cipher: chacha20-ietf-poly1305
-  delay: 2315
 - name: 保加利亚 - 索菲亞 - G-Core Labs S.A. - 1
   server: 89.44.197.181
   type: ss
@@ -814,6 +759,14 @@ proxies:
   password: zDLmeWRsfcFdKT1Tpy02xodEToqCldTxvZcRoPIZZtBdnIEL
   cipher: chacha20-ietf-poly1305
   delay: 950
+- name: 俄罗斯 - 莫斯科 - LLC Baxet - 1
+  server: 45.140.169.225
+  port: 60129
+  type: ss
+  cipher: aes-256-gcm
+  password: c5fcdf7829112cb4
+  udp: true
+  delay: 702
 - name: 法国 - 巴黎 - Amazon Technologies Inc. - 1
   server: 13.39.100.172
   type: trojan
@@ -839,19 +792,14 @@ proxies:
   password: c6d61cd1-d3dc-405e-afb2-d67815f4e4da
   cipher: chacha20-ietf-poly1305
   delay: 2996
-- name: 日本 - 东京 - ISIF OU - 2
-  server: 31.58.223.134
-  type: vmess
-  country: 🇮🇷IR
-  port: 8443
-  uuid: 78cdc6b7-8b14-47d6-bf09-3167bc5124fb
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  delay: 703
+- name: 日本 - 东京 - Baxet Group Inc. - 1
+  server: 167.17.179.197
+  port: 60129
+  type: ss
+  cipher: aes-256-gcm
+  password: 0690659746980c46
+  udp: true
+  delay: 722
 - name: 新加坡 - 新加坡 - Aceville Pte.ltd - 1
   server: vpn.qinfen180.cn
   port: 443
@@ -1010,107 +958,111 @@ proxies:
   password: amazonskr05
   port: 443
   server: 63.180.254.10
-  tfo: false
   type: ss
 - alterId: 2
   cipher: auto
-  name: Hong Kong_Sham Shui Po_vmess_102
+  name: Hong Kong_Central_vmess_102
   port: 30807
   server: v10.hdacd.com
   skip-cert-verify: false
-  tfo: false
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: United States_None_trojan_103
+- name: Japan_Tokyo_trojan_103
   network: tcp
   password: f7dbed8b1ca85124e793ba6c0bcfd0db
   port: 331
-  server: 13.192.169.190
+  server: 3.112.130.96
   skip-cert-verify: false
   sni: www.nintendogames.net
-  tfo: false
   type: trojan
 - name: Japan_Tokyo_trojan_104
   network: tcp
   password: BxceQaOe
-  port: 1359
-  server: 3.112.227.13
+  port: 388
+  server: 3.112.203.220
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
-  tfo: true
   type: trojan
-- name: Japan_Tokyo_trojan_105
+- name: Hong Kong_None_trojan_105
   network: tcp
   password: BxceQaOe
-  port: 1359
-  server: 43.206.218.105
+  port: 17255
+  server: 16.162.45.33
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
-  tfo: true
   type: trojan
 - name: Japan_Tokyo_trojan_106
   network: tcp
   password: BxceQaOe
-  port: 16919
-  server: 52.195.2.120
+  port: 21508
+  server: 52.195.220.53
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
-  tfo: true
   type: trojan
 - name: Japan_Tokyo_trojan_107
   network: tcp
   password: f7dbed8b1ca85124e793ba6c0bcfd0db
   port: 4937
-  server: 57.180.36.84
+  server: 13.230.112.99
   skip-cert-verify: false
   sni: www.nintendogames.net
-  tfo: false
   type: trojan
 - name: Japan_Tokyo_trojan_108
   network: tcp
   password: f7dbed8b1ca85124e793ba6c0bcfd0db
   port: 34818
-  server: 13.115.155.105
+  server: 18.181.193.208
   skip-cert-verify: false
   sni: www.nintendogames.net
-  tfo: false
+  type: trojan
+- name: Japan_Tokyo_trojan_109
+  network: tcp
+  password: f7dbed8b1ca85124e793ba6c0bcfd0db
+  port: 4674
+  server: 13.230.112.99
+  skip-cert-verify: false
+  sni: www.nintendogames.net
   type: trojan
 - name: Japan_Tokyo_trojan_1010
   network: tcp
   password: f7dbed8b1ca85124e793ba6c0bcfd0db
-  port: 4674
-  server: 13.115.155.105
+  port: 3419
+  server: 13.230.112.99
   skip-cert-verify: true
   sni: www.nintendogames.net
-  tfo: false
   type: trojan
-- name: Hong Kong_None_trojan_1011
+- name: Japan_Tokyo_trojan_1011
   network: tcp
   password: BxceQaOe
-  port: 25343
-  server: 43.199.64.100
+  port: 38312
+  server: 43.207.117.112
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
-  tfo: true
   type: trojan
 - name: Japan_Tokyo_trojan_1012
   network: tcp
   password: f7dbed8b1ca85124e793ba6c0bcfd0db
-  port: 4019
-  server: 54.178.70.68
+  port: 3057
+  server: 18.181.193.208
   skip-cert-verify: false
   sni: www.nintendogames.net
-  tfo: false
   type: trojan
-- name: Hong Kong_None_trojan_1014
+- name: Japan_Tokyo_trojan_1013
+  network: tcp
+  password: f7dbed8b1ca85124e793ba6c0bcfd0db
+  port: 4920
+  server: 13.230.112.99
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: Japan_Tokyo_trojan_1014
   network: tcp
   password: BxceQaOe
-  port: 4864
-  server: 18.166.249.43
+  port: 50446
+  server: 54.250.253.77
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
-  tfo: true
   type: trojan
 - alterId: 0
   cipher: auto
@@ -1258,20 +1210,6 @@ proxies:
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alterId: 0
   cipher: auto
-  name: United States_None_vmess_1118
-  network: ws
-  port: '8443'
-  server: t1.620720.xyz
-  servername: t1.620720.xyz
-  tls: true
-  type: vmess
-  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
-  ws-opts:
-    headers:
-      Host: t1.620720.xyz
-    path: /
-- alterId: 0
-  cipher: auto
   name: China_Shenzhen_vmess_1119
   network: ws
   port: '80'
@@ -1283,1611 +1221,10 @@ proxies:
     headers:
       Host: tms.dingtalk.com
     path: /
-- name: Japan_Tokyo_trojan_1123
-  network: tcp
-  password: f7dbed8b1ca85124e793ba6c0bcfd0db
-  port: 331
-  server: 3.112.130.96
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- name: Japan_Tokyo_trojan_1124
-  network: tcp
-  password: BxceQaOe
-  port: 388
-  server: 3.112.203.220
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-- name: Hong Kong_None_trojan_1125
-  network: tcp
-  password: BxceQaOe
-  port: 17255
-  server: 16.162.45.33
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-- name: Japan_Tokyo_trojan_1126
-  network: tcp
-  password: BxceQaOe
-  port: 21508
-  server: 52.195.220.53
-  skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-  type: trojan
-- name: Japan_Tokyo_trojan_1127
-  network: tcp
-  password: f7dbed8b1ca85124e793ba6c0bcfd0db
-  port: 4937
-  server: 13.230.112.99
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- name: Japan_Tokyo_trojan_1128
-  network: tcp
-  password: f7dbed8b1ca85124e793ba6c0bcfd0db
-  port: 34818
-  server: 18.181.193.208
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- name: Japan_Tokyo_trojan_1129
-  network: tcp
-  password: f7dbed8b1ca85124e793ba6c0bcfd0db
-  port: 4674
-  server: 13.230.112.99
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- name: Japan_Tokyo_trojan_1130
-  network: tcp
-  password: f7dbed8b1ca85124e793ba6c0bcfd0db
-  port: 3419
-  server: 13.230.112.99
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Japan_Tokyo_trojan_1131
-  network: tcp
-  password: BxceQaOe
-  port: 38312
-  server: 43.207.117.112
-  skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-  type: trojan
-- name: Japan_Tokyo_trojan_1132
-  network: tcp
-  password: f7dbed8b1ca85124e793ba6c0bcfd0db
-  port: 3057
-  server: 18.181.193.208
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- name: Japan_Tokyo_trojan_1133
-  network: tcp
-  password: f7dbed8b1ca85124e793ba6c0bcfd0db
-  port: 4920
-  server: 13.230.112.99
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  type: trojan
-- name: Japan_Tokyo_trojan_1134
-  network: tcp
-  password: BxceQaOe
-  port: 50446
-  server: 54.250.253.77
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
 - name: Shadowsocks
   type: socks5
   server: 127.0.0.1
   port: 1080
-- name: vvvbbnhj.191266.xyz tls_h2 grpc CDN trojan § 443 4
-  type: trojan
-  server: vvvbbnhj.191266.xyz
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: vvvbbnhj.191266.xyz
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: vvvbbnhj.191266.xyz tls_h2 grpc CDN vmess § 443 4
-  type: vmess
-  server: vvvbbnhj.191266.xyz
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: vvvbbnhj.191266.xyz
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: vvvbbnhj.191266.xyz http WS CDN vmess § 80 4
-  type: vmess
-  server: vvvbbnhj.191266.xyz
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: vvvbbnhj.191266.xyz
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: vvvbbnhj.191266.xyz
-- name: hhhhhhhhj.191266.xyz tls_h2 grpc direct trojan § 443 5
-  type: trojan
-  server: hhhhhhhhj.191266.xyz
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: hhhhhhhhj.191266.xyz
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: hhhhhhhhj.191266.xyz tls WS direct vmess § 443 5
-  type: vmess
-  server: hhhhhhhhj.191266.xyz
-  port: 443
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: hhhhhhhhj.191266.xyz
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: hhhhhhhhj.191266.xyz
-- name: hhhhhhhhj.191266.xyz http WS direct vmess § 80 5
-  type: vmess
-  server: hhhhhhhhj.191266.xyz
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: hhhhhhhhj.191266.xyz
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: hhhhhhhhj.191266.xyz
-- name: vvvbbbnhj.taipei102.indevs.in tls_h2 grpc CDN trojan § 443 6
-  type: trojan
-  server: vvvbbbnhj.taipei102.indevs.in
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: vvvbbbnhj.taipei102.indevs.in
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: vvvbbbnhj.taipei102.indevs.in tls_h2 grpc CDN vmess § 443 6
-  type: vmess
-  server: vvvbbbnhj.taipei102.indevs.in
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: vvvbbbnhj.taipei102.indevs.in
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: vvvbbbnhj.taipei102.indevs.in http WS CDN vmess § 80 6
-  type: vmess
-  server: vvvbbbnhj.taipei102.indevs.in
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: vvvbbbnhj.taipei102.indevs.in
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: vvvbbbnhj.taipei102.indevs.in
-- name: fffbnhju.taipei102.indevs.in tls_h2 grpc CDN trojan § 443 7
-  type: trojan
-  server: fffbnhju.taipei102.indevs.in
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: fffbnhju.taipei102.indevs.in
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: fffbnhju.taipei102.indevs.in tls_h2 grpc CDN vmess § 443 7
-  type: vmess
-  server: fffbnhju.taipei102.indevs.in
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: fffbnhju.taipei102.indevs.in
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: fffbnhju.taipei102.indevs.in http WS CDN vmess § 80 7
-  type: vmess
-  server: fffbnhju.taipei102.indevs.in
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: fffbnhju.taipei102.indevs.in
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: fffbnhju.taipei102.indevs.in
-- name: vvvbnh.taipei102.indevs.in tls_h2 grpc CDN trojan § 443 8
-  type: trojan
-  server: vvvbnh.taipei102.indevs.in
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: vvvbnh.taipei102.indevs.in
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: vvvbnh.taipei102.indevs.in tls_h2 grpc CDN vmess § 443 8
-  type: vmess
-  server: vvvbnh.taipei102.indevs.in
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: vvvbnh.taipei102.indevs.in
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: vvvbnh.taipei102.indevs.in http WS CDN vmess § 80 8
-  type: vmess
-  server: vvvbnh.taipei102.indevs.in
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: vvvbnh.taipei102.indevs.in
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: vvvbnh.taipei102.indevs.in
-- name: nnnmghju.taipei102.indevs.in tls_h2 grpc CDN trojan § 443 9
-  type: trojan
-  server: nnnmghju.taipei102.indevs.in
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: nnnmghju.taipei102.indevs.in
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: nnnmghju.taipei102.indevs.in tls_h2 grpc CDN vmess § 443 9
-  type: vmess
-  server: nnnmghju.taipei102.indevs.in
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: nnnmghju.taipei102.indevs.in
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: nnnmghju.taipei102.indevs.in http WS CDN vmess § 80 9
-  type: vmess
-  server: nnnmghju.taipei102.indevs.in
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: nnnmghju.taipei102.indevs.in
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: nnnmghju.taipei102.indevs.in
-- name: dddfghyju.taipei102.indevs.in tls_h2 grpc CDN trojan § 443 10
-  type: trojan
-  server: dddfghyju.taipei102.indevs.in
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: dddfghyju.taipei102.indevs.in
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: dddfghyju.taipei102.indevs.in tls_h2 grpc CDN vmess § 443 10
-  type: vmess
-  server: dddfghyju.taipei102.indevs.in
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: dddfghyju.taipei102.indevs.in
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: dddfghyju.taipei102.indevs.in http WS CDN vmess § 80 10
-  type: vmess
-  server: dddfghyju.taipei102.indevs.in
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: dddfghyju.taipei102.indevs.in
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: dddfghyju.taipei102.indevs.in
-- name: hhhnju.taipei102.indevs.in tls_h2 grpc CDN trojan § 443 11
-  type: trojan
-  server: hhhnju.taipei102.indevs.in
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: hhhnju.taipei102.indevs.in
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: hhhnju.taipei102.indevs.in tls_h2 grpc CDN vmess § 443 11
-  type: vmess
-  server: hhhnju.taipei102.indevs.in
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: hhhnju.taipei102.indevs.in
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: hhhnju.taipei102.indevs.in http WS CDN vmess § 80 11
-  type: vmess
-  server: hhhnju.taipei102.indevs.in
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: hhhnju.taipei102.indevs.in
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: hhhnju.taipei102.indevs.in
-- name: vvvbnj.taipei102.indevs.in tls_h2 grpc CDN trojan § 443 12
-  type: trojan
-  server: vvvbnj.taipei102.indevs.in
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: vvvbnj.taipei102.indevs.in
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: vvvbnj.taipei102.indevs.in tls_h2 grpc CDN vmess § 443 12
-  type: vmess
-  server: vvvbnj.taipei102.indevs.in
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: vvvbnj.taipei102.indevs.in
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: vvvbnj.taipei102.indevs.in http WS CDN vmess § 80 12
-  type: vmess
-  server: vvvbnj.taipei102.indevs.in
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: vvvbnj.taipei102.indevs.in
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: vvvbnj.taipei102.indevs.in
-- name: gggbnh.www890604.dpdns.org tls_h2 grpc CDN trojan § 443 13
-  type: trojan
-  server: gggbnh.www890604.dpdns.org
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: gggbnh.www890604.dpdns.org
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: gggbnh.www890604.dpdns.org tls_h2 grpc CDN vmess § 443 13
-  type: vmess
-  server: gggbnh.www890604.dpdns.org
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: gggbnh.www890604.dpdns.org
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: gggbnh.www890604.dpdns.org http WS CDN vmess § 80 13
-  type: vmess
-  server: gggbnh.www890604.dpdns.org
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: gggbnh.www890604.dpdns.org
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: gggbnh.www890604.dpdns.org
-- name: gggnhju.www890604.dpdns.org tls_h2 grpc CDN trojan § 443 14
-  type: trojan
-  server: gggnhju.www890604.dpdns.org
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: gggnhju.www890604.dpdns.org
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: gggnhju.www890604.dpdns.org tls_h2 grpc CDN vmess § 443 14
-  type: vmess
-  server: gggnhju.www890604.dpdns.org
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: gggnhju.www890604.dpdns.org
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: gggnhju.www890604.dpdns.org http WS CDN vmess § 80 14
-  type: vmess
-  server: gggnhju.www890604.dpdns.org
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: gggnhju.www890604.dpdns.org
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: gggnhju.www890604.dpdns.org
-- name: nnnmjkiu.www890604.dpdns.org tls_h2 grpc CDN trojan § 443 15
-  type: trojan
-  server: nnnmjkiu.www890604.dpdns.org
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: nnnmjkiu.www890604.dpdns.org
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: nnnmjkiu.www890604.dpdns.org tls_h2 grpc CDN vmess § 443 15
-  type: vmess
-  server: nnnmjkiu.www890604.dpdns.org
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: nnnmjkiu.www890604.dpdns.org
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: nnnmjkiu.www890604.dpdns.org http WS CDN vmess § 80 15
-  type: vmess
-  server: nnnmjkiu.www890604.dpdns.org
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: nnnmjkiu.www890604.dpdns.org
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: nnnmjkiu.www890604.dpdns.org
-- name: nnnmjk.www890604.dpdns.org tls_h2 grpc CDN trojan § 443 16
-  type: trojan
-  server: nnnmjk.www890604.dpdns.org
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: nnnmjk.www890604.dpdns.org
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: nnnmjk.www890604.dpdns.org tls_h2 grpc CDN vmess § 443 16
-  type: vmess
-  server: nnnmjk.www890604.dpdns.org
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: nnnmjk.www890604.dpdns.org
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: nnnmjk.www890604.dpdns.org http WS CDN vmess § 80 16
-  type: vmess
-  server: nnnmjk.www890604.dpdns.org
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: nnnmjk.www890604.dpdns.org
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: nnnmjk.www890604.dpdns.org
-- name: hhynnmki.www890604.dpdns.org tls_h2 grpc direct trojan § 443 17
-  type: trojan
-  server: hhynnmki.www890604.dpdns.org
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: hhynnmki.www890604.dpdns.org
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: hhynnmki.www890604.dpdns.org tls WS direct vmess § 443 17
-  type: vmess
-  server: hhynnmki.www890604.dpdns.org
-  port: 443
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: hhynnmki.www890604.dpdns.org
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: hhynnmki.www890604.dpdns.org
-- name: hhynnmki.www890604.dpdns.org http WS direct vmess § 80 17
-  type: vmess
-  server: hhynnmki.www890604.dpdns.org
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: hhynnmki.www890604.dpdns.org
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: hhynnmki.www890604.dpdns.org
-- name: gggbnh7.www890604.dpdns.org tls_h2 grpc CDN trojan § 443 18
-  type: trojan
-  server: gggbnh7.www890604.dpdns.org
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: gggbnh7.www890604.dpdns.org
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: gggbnh7.www890604.dpdns.org tls_h2 grpc CDN vmess § 443 18
-  type: vmess
-  server: gggbnh7.www890604.dpdns.org
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: gggbnh7.www890604.dpdns.org
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: gggbnh7.www890604.dpdns.org http WS CDN vmess § 80 18
-  type: vmess
-  server: gggbnh7.www890604.dpdns.org
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: gggbnh7.www890604.dpdns.org
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: gggbnh7.www890604.dpdns.org
-- name: uuujki.7777112.xyz tls_h2 grpc CDN trojan § 443 19
-  type: trojan
-  server: uuujki.7777112.xyz
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: uuujki.7777112.xyz
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: uuujki.7777112.xyz tls_h2 grpc CDN vmess § 443 19
-  type: vmess
-  server: uuujki.7777112.xyz
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: uuujki.7777112.xyz
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: uuujki.7777112.xyz http WS CDN vmess § 80 19
-  type: vmess
-  server: uuujki.7777112.xyz
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: uuujki.7777112.xyz
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: uuujki.7777112.xyz
-- name: bbnnhyt.7777112.xyz tls_h2 grpc CDN trojan § 443 20
-  type: trojan
-  server: bbnnhyt.7777112.xyz
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: bbnnhyt.7777112.xyz
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: bbnnhyt.7777112.xyz tls_h2 grpc CDN vmess § 443 20
-  type: vmess
-  server: bbnnhyt.7777112.xyz
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: bbnnhyt.7777112.xyz
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: bbnnhyt.7777112.xyz http WS CDN vmess § 80 20
-  type: vmess
-  server: bbnnhyt.7777112.xyz
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: bbnnhyt.7777112.xyz
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: bbnnhyt.7777112.xyz
-- name: ujjjmkkk.7777112.xyz tls_h2 grpc CDN trojan § 443 21
-  type: trojan
-  server: ujjjmkkk.7777112.xyz
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: ujjjmkkk.7777112.xyz
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: ujjjmkkk.7777112.xyz tls_h2 grpc CDN vmess § 443 21
-  type: vmess
-  server: ujjjmkkk.7777112.xyz
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: ujjjmkkk.7777112.xyz
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: ujjjmkkk.7777112.xyz http WS CDN vmess § 80 21
-  type: vmess
-  server: ujjjmkkk.7777112.xyz
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: ujjjmkkk.7777112.xyz
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: ujjjmkkk.7777112.xyz
-- name: gbnh.7777112.xyz tls_h2 grpc CDN trojan § 443 22
-  type: trojan
-  server: gbnh.7777112.xyz
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: gbnh.7777112.xyz
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: gbnh.7777112.xyz tls_h2 grpc CDN vmess § 443 22
-  type: vmess
-  server: gbnh.7777112.xyz
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: gbnh.7777112.xyz
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: gbnh.7777112.xyz http WS CDN vmess § 80 22
-  type: vmess
-  server: gbnh.7777112.xyz
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: gbnh.7777112.xyz
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: gbnh.7777112.xyz
-- name: ggbnhj.932.pp.ua tls_h2 grpc CDN trojan § 443 23
-  type: trojan
-  server: ggbnhj.932.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: ggbnhj.932.pp.ua
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: ggbnhj.932.pp.ua tls_h2 grpc CDN vmess § 443 23
-  type: vmess
-  server: ggbnhj.932.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: ggbnhj.932.pp.ua
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: ggbnhj.932.pp.ua http WS CDN vmess § 80 23
-  type: vmess
-  server: ggbnhj.932.pp.ua
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: ggbnhj.932.pp.ua
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: ggbnhj.932.pp.ua
-- name: bbbnmjki.932.pp.ua tls_h2 grpc CDN trojan § 443 24
-  type: trojan
-  server: bbbnmjki.932.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: bbbnmjki.932.pp.ua
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: bbbnmjki.932.pp.ua tls_h2 grpc CDN vmess § 443 24
-  type: vmess
-  server: bbbnmjki.932.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: bbbnmjki.932.pp.ua
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: bbbnmjki.932.pp.ua http WS CDN vmess § 80 24
-  type: vmess
-  server: bbbnmjki.932.pp.ua
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: bbbnmjki.932.pp.ua
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: bbbnmjki.932.pp.ua
-- name: vvvbnhju.932.pp.ua tls_h2 grpc CDN trojan § 443 25
-  type: trojan
-  server: vvvbnhju.932.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: vvvbnhju.932.pp.ua
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: vvvbnhju.932.pp.ua tls_h2 grpc CDN vmess § 443 25
-  type: vmess
-  server: vvvbnhju.932.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: vvvbnhju.932.pp.ua
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: vvvbnhju.932.pp.ua http WS CDN vmess § 80 25
-  type: vmess
-  server: vvvbnhju.932.pp.ua
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: vvvbnhju.932.pp.ua
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: vvvbnhju.932.pp.ua
-- name: bbbnmju.932.pp.ua tls_h2 grpc CDN trojan § 443 26
-  type: trojan
-  server: bbbnmju.932.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: bbbnmju.932.pp.ua
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: bbbnmju.932.pp.ua tls_h2 grpc CDN vmess § 443 26
-  type: vmess
-  server: bbbnmju.932.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: bbbnmju.932.pp.ua
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: bbbnmju.932.pp.ua http WS CDN vmess § 80 26
-  type: vmess
-  server: bbbnmju.932.pp.ua
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: bbbnmju.932.pp.ua
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: bbbnmju.932.pp.ua
-- name: nnnmjku.932.pp.ua tls_h2 grpc CDN trojan § 443 27
-  type: trojan
-  server: nnnmjku.932.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: nnnmjku.932.pp.ua
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: nnnmjku.932.pp.ua tls_h2 grpc CDN vmess § 443 27
-  type: vmess
-  server: nnnmjku.932.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: nnnmjku.932.pp.ua
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: nnnmjku.932.pp.ua http WS CDN vmess § 80 27
-  type: vmess
-  server: nnnmjku.932.pp.ua
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: nnnmjku.932.pp.ua
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: nnnmjku.932.pp.ua
-- name: nnmjku.932.pp.ua tls_h2 grpc CDN trojan § 443 28
-  type: trojan
-  server: nnmjku.932.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: nnmjku.932.pp.ua
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: nnmjku.932.pp.ua tls_h2 grpc CDN vmess § 443 28
-  type: vmess
-  server: nnmjku.932.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: nnmjku.932.pp.ua
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: nnmjku.932.pp.ua http WS CDN vmess § 80 28
-  type: vmess
-  server: nnmjku.932.pp.ua
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: nnmjku.932.pp.ua
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: nnmjku.932.pp.ua
-- name: hhhnmjki.932.pp.ua tls_h2 grpc CDN trojan § 443 29
-  type: trojan
-  server: hhhnmjki.932.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: hhhnmjki.932.pp.ua
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: hhhnmjki.932.pp.ua tls_h2 grpc CDN vmess § 443 29
-  type: vmess
-  server: hhhnmjki.932.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: hhhnmjki.932.pp.ua
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: hhhnmjki.932.pp.ua http WS CDN vmess § 80 29
-  type: vmess
-  server: hhhnmjki.932.pp.ua
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: hhhnmjki.932.pp.ua
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: hhhnmjki.932.pp.ua
-- name: ffvvbnhju.2030.pp.ua tls_h2 grpc CDN trojan § 443 30
-  type: trojan
-  server: ffvvbnhju.2030.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: ffvvbnhju.2030.pp.ua
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: ffvvbnhju.2030.pp.ua tls_h2 grpc CDN vmess § 443 30
-  type: vmess
-  server: ffvvbnhju.2030.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: ffvvbnhju.2030.pp.ua
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: ffvvbnhju.2030.pp.ua http WS CDN vmess § 80 30
-  type: vmess
-  server: ffvvbnhju.2030.pp.ua
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: ffvvbnhju.2030.pp.ua
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: ffvvbnhju.2030.pp.ua
-- name: jjjkkk.2030.pp.ua tls_h2 grpc CDN trojan § 443 31
-  type: trojan
-  server: jjjkkk.2030.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: jjjkkk.2030.pp.ua
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: jjjkkk.2030.pp.ua tls_h2 grpc CDN vmess § 443 31
-  type: vmess
-  server: jjjkkk.2030.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: jjjkkk.2030.pp.ua
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: jjjkkk.2030.pp.ua http WS CDN vmess § 80 31
-  type: vmess
-  server: jjjkkk.2030.pp.ua
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: jjjkkk.2030.pp.ua
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: jjjkkk.2030.pp.ua
-- name: hhhnmju.932.pp.ua tls_h2 grpc CDN trojan § 443 32
-  type: trojan
-  server: hhhnmju.932.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  password: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  sni: hhhnmju.932.pp.ua
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 2cO5FH0xUmT9oqnC0dBqi9g
-- name: hhhnmju.932.pp.ua tls_h2 grpc CDN vmess § 443 32
-  type: vmess
-  server: hhhnmju.932.pp.ua
-  port: 443
-  udp: true
-  alpn:
-  - h2
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: hhhnmju.932.pp.ua
-  tls: true
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: grpc
-  grpc-opts:
-    grpc-service-name: t1UV4HSrzbWGmJtC0dBqi9g
-- name: hhhnmju.932.pp.ua http WS CDN vmess § 80 32
-  type: vmess
-  server: hhhnmju.932.pp.ua
-  port: 80
-  udp: true
-  alpn:
-  - http/1.1
-  skip-cert-verify: false
-  uuid: 2bfe58f7-da1d-45df-ab43-7c665b20ee29
-  servername: hhhnmju.932.pp.ua
-  tls: false
-  packet-encoding: xudp
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /t1UV4HSrzbWGmJtbBhmKb8nOkg
-    headers:
-      Host: hhhnmju.932.pp.ua
-- name: 使用前更新订阅
-  type: trojan
-  server: xiaozhu1.kkieo555.cn
-  port: 49213
-  password: c0242f91-9f5c-45bb-b721-12edbdac7d51
-  udp: true
-  sni: douyin.com
-  skip-cert-verify: true
-- name: 🇯🇵日本1
-  type: trojan
-  server: xiaozhu1.kkieo555.cn
-  port: 41273
-  password: c0242f91-9f5c-45bb-b721-12edbdac7d51
-  udp: true
-  sni: douyin.com
-  skip-cert-verify: true
-- name: 🇨🇳台湾1
-  type: trojan
-  server: xiaozhu1.kkieo555.cn
-  port: 41274
-  password: c0242f91-9f5c-45bb-b721-12edbdac7d51
-  udp: true
-  sni: douyin.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国纽约
-  type: trojan
-  server: xiaozhu1.kkieo555.cn
-  port: 41275
-  password: c0242f91-9f5c-45bb-b721-12edbdac7d51
-  udp: true
-  sni: douyin.com
-  skip-cert-verify: true
-- name: 🇻🇳越南1
-  type: trojan
-  server: xiaozhu1.kkieo555.cn
-  port: 11276
-  password: c0242f91-9f5c-45bb-b721-12edbdac7d51
-  udp: true
-  sni: douyin.com
-  skip-cert-verify: true
-- name: 🇸🇬 新加坡1
-  type: trojan
-  server: xiaozhu1.kkieo555.cn
-  port: 41277
-  password: c0242f91-9f5c-45bb-b721-12edbdac7d51
-  udp: true
-  sni: douyin.com
-  skip-cert-verify: true
-- name: 🇬🇧 英国1
-  type: trojan
-  server: xiaozhu1.kkieo555.cn
-  port: 11278
-  password: c0242f91-9f5c-45bb-b721-12edbdac7d51
-  udp: true
-  sni: douyin.com
-  skip-cert-verify: true
-- name: 🇰🇷 韩国01
-  type: trojan
-  server: xiaozhu1.kkieo555.cn
-  port: 49214
-  password: c0242f91-9f5c-45bb-b721-12edbdac7d51
-  udp: true
-  sni: douyin.com
-  skip-cert-verify: true
-- name: 🇺🇸美国西雅图原生
-  type: trojan
-  server: xiaozhu1.kkieo555.cn
-  port: 30210
-  password: c0242f91-9f5c-45bb-b721-12edbdac7d51
-  udp: true
-  sni: douyin.com
-  skip-cert-verify: true
-- name: 🇺🇸美国洛杉矶原生
-  type: trojan
-  server: xiaozhu1.kkieo555.cn
-  port: 19216
-  password: c0242f91-9f5c-45bb-b721-12edbdac7d51
-  udp: true
-  sni: douyin.com
-  skip-cert-verify: true
 - name: 邀请新用户60%返利
   type: vmess
   server: 127.0.0.1
@@ -3020,7 +1357,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: douyin
-- name: 剩余流量：446.38 GB
+- name: 剩余流量：404.37 GB
   type: vless
   server: aws.xn--9kqp42aims.top
   port: 1314
@@ -3106,14 +1443,6 @@ proxies:
     path: /dogvl
     headers:
       Host: dog-hk2.lxy1015.top
-- name: 🇨🇳台湾-01 | 住宅
-  server: hinet-home1.xn--9kqp42aims.top
-  port: 65500
-  udp: true
-  skip-cert-verify: true
-  sni: gw.alicdn.com
-  type: hysteria2
-  password: 07043942-12a4-4f28-b4a8-f7509bad7931
 - name: 🇨🇳台湾-04 | 住宅
   type: vless
   server: hinet3.xn--9kqp42aims.top
