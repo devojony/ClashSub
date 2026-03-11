@@ -467,9 +467,9 @@ rules:
 - MATCH,漏网之鱼
 proxies:
 - name: disney_netflix_US
-  server: 142.171.233.93
+  server: 35.212.188.55
   type: vless
-  port: 587
+  port: 8005
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
@@ -483,25 +483,8 @@ proxies:
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: disney_netflix_TW | 7.47Mb
-  server: 220.130.160.137
-  type: vless
-  port: 20880
-  udp: true
-  uuid: 69af4778-e5ca-c8a7-7892-4ea888e5201b
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: 55aa1844.mfree.ccwu.cc
-  ws-opts:
-    path: /socks5=4b2c7676:6f0f4cbba5bb@38.111.30.111:26433
-    headers:
-      Host: 55aa1844.mfree.ccwu.cc
-  alpn:
-  - h3
-  packet-encoding: ''
 - name: disney_netflix_GB
-  server: 192.0.54.24
+  server: 192.0.54.136
   type: vless
   port: 443
   udp: true
@@ -517,86 +500,53 @@ proxies:
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: disney_netflix_GB_1
-  server: 45.202.113.137
+- name: Relay_-🇰🇷KR_03
+  server: 218.154.216.119
   type: vless
-  port: 2096
+  port: 12616
+  udp: true
+  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: ylnhh.cc.cd
+  ws-opts:
+    path: /TelegramU0001F1E8U0001F1F3@WangCai2
+    headers:
+      Host: ylnhh.cc.cd
+  packet-encoding: ''
+- name: disney_KR
+  server: 119.195.168.105
+  type: vless
+  port: 12417
+  udp: true
+  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
+  network: ws
+  tls: true
+  servername: ylnhh.cc.cd
+  ws-opts:
+    path: /Telegram🇨🇳@WangCai2
+    headers:
+      Host: ylnhh.cc.cd
+  packet-encoding: ''
+- name: disney_netflix_GB_1
+  server: 192.0.63.24
+  type: vless
+  port: 443
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
   client-fingerprint: random
-  servername: snippet.gfw.nn.kg
+  servername: snippet.fgfw.ccwu.cc
   ws-opts:
     path: /danfeng
     headers:
-      Host: snippet.gfw.nn.kg
+      Host: snippet.fgfw.ccwu.cc
   alpn:
   - http/1.1
   packet-encoding: ''
 - name: disney_netflix_GB_2
-  server: 192.0.63.208
-  type: vless
-  port: 443
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: snippet.fgfw.indevs.in
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.fgfw.indevs.in
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: disney_netflix_KR
-  server: 210.105.224.42
-  type: vless
-  port: 10840
-  udp: true
-  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
-  network: ws
-  tls: true
-  servername: ylnhh.cc.cd
-  ws-opts:
-    path: /Telegram🇨🇳@WangCai2
-    headers:
-      Host: ylnhh.cc.cd
-  packet-encoding: ''
-- name: Relay_-🇰🇷KR_07
-  server: 121.166.253.13
-  type: vless
-  port: 30038
-  udp: true
-  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
-  network: ws
-  tls: true
-  servername: ylnhh.cc.cd
-  ws-opts:
-    path: /Telegram🇨🇳@WangCai2
-    headers:
-      Host: ylnhh.cc.cd
-  packet-encoding: ''
-- name: disney_netflix_GB_3
-  server: 45.202.113.79
-  type: vless
-  port: 2096
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: snippet.fgfw.ndjp.net
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.fgfw.ndjp.net
-  alpn:
-  - http%2F1.1
-  packet-encoding: ''
-- name: disney_netflix_GB_4
   server: 192.0.54.251
   type: vless
   port: 443
@@ -613,8 +563,8 @@ proxies:
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: disney_netflix_GB_5
-  server: 192.0.63.188
+- name: disney_netflix_GB_3
+  server: 193.32.176.44
   type: vless
   port: 443
   udp: true
@@ -622,28 +572,48 @@ proxies:
   network: ws
   tls: true
   client-fingerprint: random
-  servername: snippet.fgfw.de5.net
+  servername: snippet.fgfw.ndjp.net
   ws-opts:
     path: /danfeng
     headers:
-      Host: snippet.fgfw.de5.net
+      Host: snippet.fgfw.ndjp.net
+  alpn:
+  - http%2F1.1
+  packet-encoding: ''
+- name: disney_netflix_GB_4
+  server: cf.cloudflare.182682.xyz
+  type: vless
+  port: 443
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: xei0vyob6y0o.chinat.indevs.in
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: xei0vyob6y0o.chinat.indevs.in
+  packet-encoding: ''
+- name: disney_netflix_GB_5
+  server: 192.0.54.24
+  type: vless
+  port: 443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: random
+  servername: snippet.fgfw.indevs.in
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.fgfw.indevs.in
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: netflix_NL | 3.54Mb
-  server: mx2.tehrantolidi.ir
-  type: vless
-  port: 80
-  udp: true
-  uuid: dfe13f5a-9ce4-44fc-be96-1067bbf9202d
-  network: ws
-  ws-opts:
-    path: /site
-    headers:
-      Host: cdn123.global.ssl.fastly.net
-  packet-encoding: ''
 - name: disney_netflix_GB_6
-  server: 192.0.63.24
+  server: 192.0.54.217
   type: vless
   port: 443
   udp: true
@@ -651,11 +621,11 @@ proxies:
   network: ws
   tls: true
   client-fingerprint: random
-  servername: snippet.fgfw.ccwu.cc
+  servername: snippet.gfw.nn.kg
   ws-opts:
     path: /danfeng
     headers:
-      Host: snippet.fgfw.ccwu.cc
+      Host: snippet.gfw.nn.kg
   alpn:
   - http/1.1
   packet-encoding: ''
@@ -677,9 +647,26 @@ proxies:
   - http/1.1
   packet-encoding: ''
 - name: disney_netflix_GB_8
-  server: 193.32.176.44
+  server: 192.0.63.208
   type: vless
   port: 443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: random
+  servername: snippet.fgfw.indevs.in
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.fgfw.indevs.in
+  alpn:
+  - http/1.1
+  packet-encoding: ''
+- name: disney_netflix_GB_9
+  server: 45.202.113.79
+  type: vless
+  port: 2096
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
@@ -692,67 +679,6 @@ proxies:
       Host: snippet.fgfw.ndjp.net
   alpn:
   - http%2F1.1
-  packet-encoding: ''
-- name: disney_netflix_GB_9
-  server: cf.cloudflare.182682.xyz
-  type: vless
-  port: 443
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: xei0vyob6y0o.chinat.indevs.in
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: xei0vyob6y0o.chinat.indevs.in
-  packet-encoding: ''
-- name: disney_netflix_GB_10
-  server: 192.0.54.217
-  type: vless
-  port: 443
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: snippet.gfw.nn.kg
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.gfw.nn.kg
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: disney_netflix_SE
-  server: 45.153.187.209
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: snippet.fgfw.ccwu.cc
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.fgfw.ccwu.cc
-  packet-encoding: ''
-- name: disney_netflix_DE
-  server: 89.208.113.120
-  type: vless
-  port: 8082
-  udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
-  network: ws
-  tls: true
-  servername: sub.mot.ip-ddns.com
-  ws-opts:
-    path: /
-    headers:
-      Host: sub.mot.ip-ddns.com
   packet-encoding: ''
 - name: disney_netflix_IE
   server: 204.44.125.34
@@ -786,8 +712,39 @@ proxies:
     headers:
       Host: snippet.fgfw.ccwu.cc
   packet-encoding: ''
-- name: disney_netflix_GB_11
-  server: 192.0.54.136
+- name: disney_netflix_DE
+  server: 89.208.113.120
+  type: vless
+  port: 8082
+  udp: true
+  uuid: 00000000-0000-4000-8000-000000000000
+  network: ws
+  tls: true
+  servername: sub.mot.ip-ddns.com
+  ws-opts:
+    path: /
+    headers:
+      Host: sub.mot.ip-ddns.com
+  packet-encoding: ''
+- name: disney_netflix_GB_10
+  server: 45.202.113.137
+  type: vless
+  port: 2096
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: random
+  servername: snippet.gfw.nn.kg
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.gfw.nn.kg
+  alpn:
+  - http/1.1
+  packet-encoding: ''
+- name: disney_netflix_IE_1
+  server: 166.1.221.169
   type: vless
   port: 443
   udp: true
@@ -795,11 +752,11 @@ proxies:
   network: ws
   tls: true
   client-fingerprint: random
-  servername: snippet.fgfw.indevs.in
+  servername: snippet.fgfw.ndjp.net
   ws-opts:
     path: /danfeng
     headers:
-      Host: snippet.fgfw.indevs.in
+      Host: snippet.fgfw.ndjp.net
   alpn:
   - http/1.1
   packet-encoding: ''
@@ -820,22 +777,8 @@ proxies:
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: disney_netflix_GB |186.04Mb
-  server: 198.62.62.124
-  type: vless
-  port: 443
-  udp: true
-  uuid: 5a4abb78-ecd7-4d68-ab2a-c11a3842f261
-  network: ws
-  tls: true
-  servername: war.connecticut-haloo.info
-  ws-opts:
-    path: /love
-    headers:
-      Host: war.connecticut-haloo.info
-  packet-encoding: ''
-- name: disney_netflix_IE_1
-  server: 166.1.221.169
+- name: disney_netflix_GB_11
+  server: 192.0.63.188
   type: vless
   port: 443
   udp: true
@@ -843,13 +786,28 @@ proxies:
   network: ws
   tls: true
   client-fingerprint: random
-  servername: snippet.fgfw.ndjp.net
+  servername: snippet.fgfw.de5.net
   ws-opts:
     path: /danfeng
     headers:
-      Host: snippet.fgfw.ndjp.net
+      Host: snippet.fgfw.de5.net
   alpn:
   - http/1.1
+  packet-encoding: ''
+- name: disney_netflix_SE
+  server: 45.153.187.209
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: random
+  servername: snippet.fgfw.ccwu.cc
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.fgfw.ccwu.cc
   packet-encoding: ''
 - name: disney_netflix_DE_2
   server: 45.145.42.170
@@ -865,35 +823,89 @@ proxies:
     headers:
       Host: sub.mot.ip-ddns.com
   packet-encoding: ''
-- name: disney_netflix_US |46.51Mb
-  server: 198.62.62.248
+- name: Relay_-🇰🇷KR_23
+  server: 121.166.253.13
+  type: vless
+  port: 30038
+  udp: true
+  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
+  network: ws
+  tls: true
+  servername: ylnhh.cc.cd
+  ws-opts:
+    path: /Telegram🇨🇳@WangCai2
+    headers:
+      Host: ylnhh.cc.cd
+  packet-encoding: ''
+- name: disney_netflix_DE |42.14Mb
+  server: ip1.758733.xyz
+  type: tuic
+  port: 10088
+  password: dongtaiwang.com
+  uuid: 9bbd1f42-7ae7-4239-bd10-a68de95e3295
+  alpn:
+  - h3
+  sni: apple.com
+  skip-cert-verify: true
+  udp-relay-mode: native
+  congestion-controller: bbr
+- name: disney_netflix_GB |186.04Mb
+  server: 198.62.62.124
   type: vless
   port: 443
   udp: true
   uuid: 5a4abb78-ecd7-4d68-ab2a-c11a3842f261
   network: ws
   tls: true
-  client-fingerprint: chrome
-  servername: tar.alabama-tigr.info
+  servername: war.connecticut-haloo.info
   ws-opts:
     path: /love
     headers:
-      Host: tar.alabama-tigr.info
+      Host: war.connecticut-haloo.info
   packet-encoding: ''
-- name: disney_netflix_LT
-  server: 103.231.72.6
+- name: netflix_NL | 3.54Mb
+  server: mx2.tehrantolidi.ir
   type: vless
-  port: 2053
+  port: 80
+  udp: true
+  uuid: dfe13f5a-9ce4-44fc-be96-1067bbf9202d
+  network: ws
+  ws-opts:
+    path: /site
+    headers:
+      Host: cdn123.global.ssl.fastly.net
+  packet-encoding: ''
+- name: disney_netflix_US_1
+  server: 143.20.207.149
+  type: vless
+  port: 8443
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
   client-fingerprint: random
-  servername: snippet.fgfw.indevs.in
+  servername: snippet.fgfw.de5.net
   ws-opts:
     path: /danfeng
     headers:
-      Host: snippet.fgfw.indevs.in
+      Host: snippet.fgfw.de5.net
+  alpn:
+  - http/1.1
+  packet-encoding: ''
+- name: disney_netflix_US_2
+  server: 5.161.20.169
+  type: vless
+  port: 449
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: random
+  servername: snippet.gfw.nn.kg
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.gfw.nn.kg
   alpn:
   - http/1.1
   packet-encoding: ''
@@ -914,42 +926,25 @@ proxies:
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: disney_netflix_US_1
-  server: 192.210.143.111
+- name: disney_netflix_US |42.61Mb
+  server: 198.62.62.248
   type: vless
-  port: 28425
+  port: 443
   udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  uuid: 5a4abb78-ecd7-4d68-ab2a-c11a3842f261
   network: ws
   tls: true
-  client-fingerprint: random
-  servername: snippet.fgfw.ccwu.cc
+  client-fingerprint: chrome
+  servername: tar.alabama-tigr.info
   ws-opts:
-    path: /danfeng
+    path: /love
     headers:
-      Host: snippet.fgfw.ccwu.cc
+      Host: tar.alabama-tigr.info
   packet-encoding: ''
-- name: disney_netflix_US_2
-  server: 5.161.20.169
+- name: Relay_-🇩🇪DE_31
+  server: 68.64.179.243
   type: vless
-  port: 449
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: snippet.gfw.nn.kg
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.gfw.nn.kg
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: Relay_-🇰🇷KR_31
-  server: 59.29.89.197
-  type: vless
-  port: 20114
+  port: 443
   udp: true
   uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
   network: ws
@@ -960,22 +955,19 @@ proxies:
     headers:
       Host: ylnhh.cc.cd
   packet-encoding: ''
-- name: disney_netflix_US_3
-  server: 172.245.232.173
+- name: Relay_-🇩🇪DE_32
+  server: 210.105.224.42
   type: vless
-  port: 443
+  port: 10840
   udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
   network: ws
   tls: true
-  client-fingerprint: random
-  servername: snippet.fgfw.de5.net
+  servername: ylnhh.cc.cd
   ws-opts:
-    path: /danfeng
+    path: /Telegram🇨🇳@WangCai2
     headers:
-      Host: snippet.fgfw.de5.net
-  alpn:
-  - http/1.1
+      Host: ylnhh.cc.cd
   packet-encoding: ''
 - name: disney_netflix_CA
   server: 192.210.133.140
@@ -994,8 +986,25 @@ proxies:
   alpn:
   - http/1.1
   packet-encoding: ''
+- name: disney_netflix_US_3
+  server: 172.245.232.173
+  type: vless
+  port: 443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: random
+  servername: snippet.fgfw.de5.net
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.fgfw.de5.net
+  alpn:
+  - http/1.1
+  packet-encoding: ''
 - name: disney_netflix_US_4
-  server: 163.192.47.170
+  server: 194.113.37.213
   type: vless
   port: 443
   udp: true
@@ -1010,34 +1019,6 @@ proxies:
       Host: snippet.fgfw.indevs.in
   alpn:
   - http/1.1
-  packet-encoding: ''
-- name: Relay_-🇰🇷KR_36
-  server: 59.29.89.197
-  type: vless
-  port: 18765
-  udp: true
-  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
-  network: ws
-  tls: true
-  servername: ylnhh.cc.cd
-  ws-opts:
-    path: /Telegram🇨🇳@WangCai2
-    headers:
-      Host: ylnhh.cc.cd
-  packet-encoding: ''
-- name: Relay_-🇰🇷KR_37
-  server: 211.238.83.146
-  type: vless
-  port: 32641
-  udp: true
-  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
-  network: ws
-  tls: true
-  servername: ylnhh.cc.cd
-  ws-opts:
-    path: /Telegram🇨🇳@WangCai2
-    headers:
-      Host: ylnhh.cc.cd
   packet-encoding: ''
 - name: disney_netflix_US_5
   server: 104.238.180.123
@@ -1056,22 +1037,37 @@ proxies:
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: disney_netflix_US_6
-  server: 194.113.37.213
+- name: disney_US
+  server: 38.244.5.230
   type: vless
-  port: 443
+  port: 39738
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
   client-fingerprint: random
-  servername: snippet.fgfw.indevs.in
+  servername: snippet.fgfw.ccwu.cc
   ws-opts:
     path: /danfeng
     headers:
-      Host: snippet.fgfw.indevs.in
+      Host: snippet.fgfw.ccwu.cc
   alpn:
   - http/1.1
+  packet-encoding: ''
+- name: disney_netflix_US_6
+  server: 192.210.143.111
+  type: vless
+  port: 28425
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: random
+  servername: snippet.fgfw.ccwu.cc
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.fgfw.ccwu.cc
   packet-encoding: ''
 - name: disney_netflix_US_7
   server: 107.173.147.235
@@ -1090,55 +1086,24 @@ proxies:
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: disney_netflix_US |39.96Mb
-  server: 208.87.243.151
-  type: hysteria
-  port: 38845
-  udp: true
-  auth_str: dongtaiwang.com
-  auth-str: dongtaiwang.com
-  alpn:
-  - h3
-  sni: www.bing.com
-  skip-cert-verify: true
-  up: 11 Mbps
-  down: 55 Mbps
-  protocol: udp
 - name: disney_netflix_US_8
-  server: 107.174.183.178
+  server: 163.192.47.170
   type: vless
-  port: 2087
+  port: 443
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
   client-fingerprint: random
-  servername: snippet.fgfw.ccwu.cc
+  servername: snippet.fgfw.indevs.in
   ws-opts:
     path: /danfeng
     headers:
-      Host: snippet.fgfw.ccwu.cc
+      Host: snippet.fgfw.indevs.in
   alpn:
   - http/1.1
   packet-encoding: ''
 - name: disney_netflix_US_9
-  server: 38.75.220.66
-  type: vless
-  port: 39738
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: snippet.fgfw.ccwu.cc
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.fgfw.ccwu.cc
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: disney_netflix_US_10
   server: 35.94.126.150
   type: vless
   port: 39738
@@ -1155,37 +1120,37 @@ proxies:
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: disney_netflix_US_11
-  server: 143.20.207.149
+- name: disney_netflix_US_10
+  server: 107.174.183.178
   type: vless
-  port: 8443
+  port: 2087
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
   client-fingerprint: random
-  servername: snippet.fgfw.de5.net
+  servername: snippet.fgfw.ccwu.cc
   ws-opts:
     path: /danfeng
     headers:
-      Host: snippet.fgfw.de5.net
+      Host: snippet.fgfw.ccwu.cc
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: disney_netflix_KR_1
-  server: 203.170.125.48
+- name: disney_netflix_US_11
+  server: 38.75.220.66
   type: vless
-  port: 32920
+  port: 39738
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
   client-fingerprint: random
-  servername: snippet.gfw.nn.kg
+  servername: snippet.fgfw.ccwu.cc
   ws-opts:
     path: /danfeng
     headers:
-      Host: snippet.gfw.nn.kg
+      Host: snippet.fgfw.ccwu.cc
   alpn:
   - http/1.1
   packet-encoding: ''
@@ -1206,20 +1171,81 @@ proxies:
   alpn:
   - http%2F1.1
   packet-encoding: ''
-- name: disney_netflix_SG
-  server: 51.79.158.58
+- name: Relay_-🇰🇷KR_45
+  server: 211.238.83.146
   type: vless
-  port: 8443
+  port: 32641
+  udp: true
+  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
+  network: ws
+  tls: true
+  servername: ylnhh.cc.cd
+  ws-opts:
+    path: /Telegram🇨🇳@WangCai2
+    headers:
+      Host: ylnhh.cc.cd
+  packet-encoding: ''
+- name: disney_netflix_US |35.97Mb
+  server: 208.87.243.151
+  type: hysteria
+  port: 38845
+  udp: true
+  auth_str: dongtaiwang.com
+  auth-str: dongtaiwang.com
+  alpn:
+  - h3
+  sni: www.bing.com
+  skip-cert-verify: true
+  up: 11 Mbps
+  down: 55 Mbps
+  protocol: udp
+- name: disney_netflix_LT
+  server: 103.231.72.6
+  type: vless
+  port: 2053
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
   client-fingerprint: random
-  servername: snippet.fgfw.ccwu.cc
+  servername: snippet.fgfw.indevs.in
   ws-opts:
     path: /danfeng
     headers:
-      Host: snippet.fgfw.ccwu.cc
+      Host: snippet.fgfw.indevs.in
+  alpn:
+  - http/1.1
+  packet-encoding: ''
+- name: Relay_-🇰🇷KR_48
+  server: 183.97.71.221
+  type: vless
+  port: 12125
+  udp: true
+  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
+  network: ws
+  tls: true
+  servername: ylnhh.cc.cd
+  ws-opts:
+    path: /Telegram🇨🇳@WangCai2
+    headers:
+      Host: ylnhh.cc.cd
+  packet-encoding: ''
+- name: disney_netflix_US_13
+  server: 142.171.233.93
+  type: vless
+  port: 587
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: random
+  servername: snippet.fgfw.ndjp.net
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.fgfw.ndjp.net
+  alpn:
+  - http/1.1
   packet-encoding: ''
 - name: disney_netflix_HK
   server: 103.69.129.71
@@ -1238,37 +1264,6 @@ proxies:
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: disney_netflix_US_13
-  server: 35.212.188.55
-  type: vless
-  port: 8005
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: snippet.fgfw.ndjp.net
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.fgfw.ndjp.net
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: Relay_-🇰🇷KR_51
-  server: 220.71.102.124
-  type: vless
-  port: 16691
-  udp: true
-  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
-  network: ws
-  tls: true
-  servername: ylnhh.cc.cd
-  ws-opts:
-    path: /Telegram🇨🇳@WangCai2
-    headers:
-      Host: ylnhh.cc.cd
-  packet-encoding: ''
 - name: disney_netflix_HK_1
   server: 154.64.246.165
   type: vless
@@ -1283,55 +1278,6 @@ proxies:
     path: /danfeng
     headers:
       Host: snippet.fgfw.de5.net
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: disney_netflix_JP
-  server: 103.214.168.247
-  type: vless
-  port: 39738
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: snippet.fgfw.de5.net
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.fgfw.de5.net
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: disney_netflix_JP_1
-  server: 64.110.104.30
-  type: vless
-  port: 443
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: snippet.fgfw.ccwu.cc
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.fgfw.ccwu.cc
-  packet-encoding: ''
-- name: disney_netflix_JP_2
-  server: 152.69.201.80
-  type: vless
-  port: 39738
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: snippet.fgfw.ccwu.cc
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.fgfw.ccwu.cc
   alpn:
   - http/1.1
   packet-encoding: ''
@@ -1350,21 +1296,88 @@ proxies:
     headers:
       Host: snippet.fgfw.ye.gs
   packet-encoding: ''
-- name: Relay_-🇰🇷KR_57
-  server: 118.42.204.220
+- name: disney_netflix_JP
+  server: 64.49.44.104
   type: vless
-  port: 12281
+  port: 20475
   udp: true
-  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
-  servername: ylnhh.cc.cd
+  client-fingerprint: random
+  servername: snippet.fgfw.indevs.in
   ws-opts:
-    path: /Telegram🇨🇳@WangCai2
+    path: /danfeng
     headers:
-      Host: ylnhh.cc.cd
+      Host: snippet.fgfw.indevs.in
+  alpn:
+  - http/1.1
   packet-encoding: ''
-- name: Relay_-🇰🇷KR_58
+- name: disney_netflix_SG
+  server: 51.79.158.58
+  type: vless
+  port: 8443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: random
+  servername: snippet.fgfw.ccwu.cc
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.fgfw.ccwu.cc
+  packet-encoding: ''
+- name: disney_netflix_JP_1
+  server: 152.69.201.80
+  type: vless
+  port: 39738
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: random
+  servername: snippet.fgfw.ccwu.cc
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.fgfw.ccwu.cc
+  alpn:
+  - http/1.1
+  packet-encoding: ''
+- name: disney_netflix_JP_2
+  server: 64.110.104.30
+  type: vless
+  port: 443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: random
+  servername: snippet.fgfw.ccwu.cc
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.fgfw.ccwu.cc
+  packet-encoding: ''
+- name: disney_netflix_JP_3
+  server: 103.214.168.247
+  type: vless
+  port: 39738
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: random
+  servername: snippet.fgfw.de5.net
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.fgfw.de5.net
+  alpn:
+  - http/1.1
+  packet-encoding: ''
+- name: Relay_-🇰🇷KR_59
   server: 220.78.129.86
   type: vless
   port: 11937
@@ -1379,7 +1392,7 @@ proxies:
     headers:
       Host: ylnhh.cc.cd
   packet-encoding: ''
-- name: Relay_-🇰🇷KR_59
+- name: Relay_-🇩🇪DE_60
   server: 119.192.158.53
   type: vless
   port: 25095
@@ -1393,94 +1406,7 @@ proxies:
     headers:
       Host: ylnhh.cc.cd
   packet-encoding: ''
-- name: Relay_-🇰🇷KR_60
-  server: 119.192.158.53
-  type: vless
-  port: 16628
-  udp: true
-  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
-  network: ws
-  tls: true
-  servername: ylnhh.cc.cd
-  ws-opts:
-    path: /Telegram🇨🇳@WangCai2
-    headers:
-      Host: ylnhh.cc.cd
-  packet-encoding: ''
-- name: Relay_-🇰🇷KR_61
-  server: 211.48.77.114
-  type: vless
-  port: 11265
-  udp: true
-  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
-  network: ws
-  tls: true
-  servername: ylnhh.cc.cd
-  ws-opts:
-    path: /Telegram🇨🇳@WangCai2
-    headers:
-      Host: ylnhh.cc.cd
-  packet-encoding: ''
-- name: disney_netflix_KR_2
-  server: 121.181.223.216
-  type: vless
-  port: 29090
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: snippet.fgfw.ndjp.net
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.fgfw.ndjp.net
-  alpn:
-  - http%2F1.1
-  packet-encoding: ''
-- name: Relay_-🇰🇷KR_63
-  server: 119.195.168.105
-  type: vless
-  port: 12417
-  udp: true
-  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
-  network: ws
-  tls: true
-  servername: ylnhh.cc.cd
-  ws-opts:
-    path: /Telegram🇨🇳@WangCai2
-    headers:
-      Host: ylnhh.cc.cd
-  packet-encoding: ''
-- name: Relay_-🇰🇷KR_65
-  server: 183.97.71.221
-  type: vless
-  port: 12125
-  udp: true
-  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
-  network: ws
-  tls: true
-  servername: ylnhh.cc.cd
-  ws-opts:
-    path: /Telegram🇨🇳@WangCai2
-    headers:
-      Host: ylnhh.cc.cd
-  packet-encoding: ''
-- name: disney_netflix_KR_3
-  server: 121.187.96.157
-  type: vless
-  port: 20201
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  servername: snippet.gfw.nn.kg
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.gfw.nn.kg
-  packet-encoding: ''
-- name: disney_netflix_KR_4
+- name: disney_netflix_KR
   server: 121.146.206.172
   type: vless
   port: 35342
@@ -1497,7 +1423,108 @@ proxies:
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: disney_netflix_KR_5
+- name: Relay_-🇰🇷KR_62
+  server: 59.29.89.197
+  type: vless
+  port: 18765
+  udp: true
+  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
+  network: ws
+  tls: true
+  servername: ylnhh.cc.cd
+  ws-opts:
+    path: /Telegram🇨🇳@WangCai2
+    headers:
+      Host: ylnhh.cc.cd
+  packet-encoding: ''
+- name: disney_netflix_KR_1
+  server: 121.181.223.216
+  type: vless
+  port: 29090
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: random
+  servername: snippet.fgfw.ndjp.net
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.fgfw.ndjp.net
+  alpn:
+  - http%2F1.1
+  packet-encoding: ''
+- name: Relay_-🇩🇪DE_64
+  server: 59.29.89.197
+  type: vless
+  port: 20114
+  udp: true
+  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
+  network: ws
+  tls: true
+  servername: ylnhh.cc.cd
+  ws-opts:
+    path: /Telegram🇨🇳@WangCai2
+    headers:
+      Host: ylnhh.cc.cd
+  packet-encoding: ''
+- name: disney_netflix_KR_2
+  server: 121.187.96.157
+  type: vless
+  port: 20201
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  servername: snippet.gfw.nn.kg
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.gfw.nn.kg
+  packet-encoding: ''
+- name: Relay_-🇰🇷KR_68
+  server: 118.42.204.220
+  type: vless
+  port: 12281
+  udp: true
+  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
+  network: ws
+  tls: true
+  servername: ylnhh.cc.cd
+  ws-opts:
+    path: /Telegram🇨🇳@WangCai2
+    headers:
+      Host: ylnhh.cc.cd
+  packet-encoding: ''
+- name: Relay_-🇰🇷KR_69
+  server: 119.192.158.53
+  type: vless
+  port: 16628
+  udp: true
+  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
+  network: ws
+  tls: true
+  servername: ylnhh.cc.cd
+  ws-opts:
+    path: /Telegram🇨🇳@WangCai2
+    headers:
+      Host: ylnhh.cc.cd
+  packet-encoding: ''
+- name: Relay_-🇰🇷KR_70
+  server: 220.71.102.124
+  type: vless
+  port: 16691
+  udp: true
+  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
+  network: ws
+  tls: true
+  servername: ylnhh.cc.cd
+  ws-opts:
+    path: /Telegram🇨🇳@WangCai2
+    headers:
+      Host: ylnhh.cc.cd
+  packet-encoding: ''
+- name: disney_netflix_KR_3
   server: 124.111.208.233
   type: vless
   port: 18987
@@ -1514,7 +1541,7 @@ proxies:
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: disney_netflix_KR_6
+- name: disney_netflix_KR_4
   server: 61.83.8.8
   type: vless
   port: 11965
@@ -1531,98 +1558,97 @@ proxies:
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: Relay_-🇩🇪DE_70
-  server: 218.154.216.119
-  type: vless
-  port: 12616
-  udp: true
-  uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: ylnhh.cc.cd
-  ws-opts:
-    path: /TelegramU0001F1E8U0001F1F3@WangCai2
-    headers:
-      Host: ylnhh.cc.cd
-  packet-encoding: ''
-- name: Relay_-🇬🇧GB_71 |167.16Mb
-  server: admin.c1.havij.co
-  type: ss
-  port: 443
-  udp: true
-  password: 1kVr0KATIJI7mwOF
-  cipher: chacha20-ietf-poly1305
-- name: Relay_-🇬🇧GB_72 |164.55Mb
-  server: series-a2.samanehha.co
-  type: ss
-  port: 443
-  udp: true
-  password: W74XFALLLuw6m5IA
-  cipher: chacha20-ietf-poly1305
-- name: Relay_-🇬🇧GB_73 |138.16Mb
+- name: Relay_ | 4.54Mb
   server: series-a1.samanehha.co
   type: ss
   port: 443
   udp: true
   password: W74XFALLLuw6m5IA
   cipher: chacha20-ietf-poly1305
-- name: Relay_-🇬🇧GB_74 |90.86Mb
+- name: Relay_ | 4.57Mb
+  server: admin.c1.havij.co
+  type: ss
+  port: 443
+  udp: true
+  password: 1kVr0KATIJI7mwOF
+  cipher: chacha20-ietf-poly1305
+- name: Relay_ | 4.02Mb
+  server: series-a2.samanehha.co
+  type: ss
+  port: 443
+  udp: true
+  password: W74XFALLLuw6m5IA
+  cipher: chacha20-ietf-poly1305
+- name: Relay_ | 4.53Mb
   server: admin.c1.webramz.co
   type: ss
   port: 443
   udp: true
   password: W74XFALLLuw6m5IA
   cipher: chacha20-ietf-poly1305
-- name: disney_netflix_US | 1.64Mb
-  server: 160.16.214.104
-  type: trojan
-  port: 3057
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: disney_netflix_HK |86.60Mb
-  server: 58.152.18.2
-  type: trojan
-  port: 443
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_-🇸🇬SG_78 | 1.67Mb
-  server: 160.16.214.104
-  type: trojan
-  port: 4674
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_79 | 2.82Mb
-  server: 160.16.214.104
-  type: trojan
-  port: 2001
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: disney_netflix_HK |74.52Mb
+- name: disney_netflix_HK |10.84Mb
   server: 175.41.228.177
   type: trojan
   port: 921
   password: f389ed926e512e15f382dc3804029474
   sni: www.nintendogames.net
-- name: disney_netflix_JP | 2.00Mb
-  server: 160.16.214.104
-  type: trojan
-  port: 4937
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_-🇳🇱NL_82 |47.42Mb
-  server: 160.16.106.99
-  type: trojan
-  port: 3057
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_84 | 3.48Mb
+- name: Relay_ | 3.56Mb
   server: 160.16.106.99
   type: trojan
   port: 34818
   password: f389ed926e512e15f382dc3804029474
   sni: www.nintendogames.net
-- name: disney_netflix_SG | 5.84Mb
+- name: Relay_ | 1.74Mb
+  server: 160.16.214.104
+  type: trojan
+  port: 3057
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_ |13.53Mb
+  server: 160.16.106.99
+  type: trojan
+  port: 3057
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_ | 1.64Mb
+  server: 160.16.214.104
+  type: trojan
+  port: 4674
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: disney_netflix_US | 4.13Mb
+  server: 8443.golden-cards.me
+  type: trojan
+  port: 443
+  udp: true
+  password: q2GRUM1-odJBWq_KV6xv2fuNvu8ed-
+  sni: 8443.golden-cards.me
+  skip-cert-verify: true
+- name: disney_netflix_US | 5.46Mb
+  server: 160.16.72.205
+  type: trojan
+  port: 3057
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_ | 2.04Mb
+  server: 160.16.214.104
+  type: trojan
+  port: 2001
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: Relay_ | 2.19Mb
+  server: 160.16.214.104
+  type: trojan
+  port: 4937
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: disney_netflix_HK |28.19Mb
+  server: 58.152.18.2
+  type: trojan
+  port: 443
+  password: f389ed926e512e15f382dc3804029474
+  sni: www.nintendogames.net
+- name: disney_netflix_SG | 8.82Mb
   server: 104.18.185.26
   type: trojan
   port: 443
@@ -1634,27 +1660,20 @@ proxies:
     headers:
       Host: null.us1234567891.xyz
   network: ws
-- name: disney_netflix_US |10.83Mb
-  server: 160.16.72.205
-  type: trojan
-  port: 3057
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: disney_netflix_US | 9.14Mb
-  server: 8443.golden-cards.me
-  type: trojan
-  port: 443
-  udp: true
-  password: q2GRUM1-odJBWq_KV6xv2fuNvu8ed-
-  sni: 8443.golden-cards.me
+- name: 🇫🇷FR_90 |194.77Mb
+  server: 141.11.21.219
+  type: vmess
+  country: 🇫🇷FR
+  port: 50521
+  uuid: 7b4c6795-3be5-4a4e-b234-07a46f580c45
+  alterId: 0
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  tls: true
   skip-cert-verify: true
-- name: Relay_-🇯🇵JP_88 | 1.86Mb
-  server: 160.16.106.99
-  type: trojan
-  port: 4937
-  password: f389ed926e512e15f382dc3804029474
-  sni: www.nintendogames.net
-- name: Relay_🇭🇰HK-🇮🇩ID_89 |21.61Mb
+- name: disney_ID | 9.75Mb
   server: 38.55.193.78
   type: vmess
   country: 🇭🇰HK
@@ -1672,11 +1691,29 @@ proxies:
     path: /vvip
     headers:
       HOST: mn1ray.jagoanvip.xyz
-- name: disney_netflix_ID | 9.44Mb
+- name: disney_ID | 5.82Mb
   server: 43.156.6.226
   type: vmess
   country: 🇸🇬SG
   port: 443
+  uuid: 462d9694-62b5-4781-a287-61a422b920e8
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: mn1ray.jagoanvip.xyz
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vvip
+    headers:
+      HOST: mn1ray.jagoanvip.xyz
+- name: disney_ID |19.38Mb
+  server: 43.134.167.135
+  type: vmess
+  country: 🇸🇬SG
+  port: 9952
   uuid: 462d9694-62b5-4781-a287-61a422b920e8
   alterId: 0
   cipher: auto
@@ -3435,6 +3472,14 @@ proxies:
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
+- name: Japan_Tokyo_trojan_108
+  network: tcp
+  password: f389ed926e512e15f382dc3804029474
+  port: 4937
+  server: 160.16.106.99
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
 - name: Japan_Tokyo_trojan_109
   network: tcp
   password: f7dbed8b1ca85124e793ba6c0bcfd0db
@@ -3725,20 +3770,6 @@ proxies:
   password: RFK38Cg7APneSB5cWDcpbm
   cipher: chacha20-ietf-poly1305
   delay: 1539
-- name: 荷兰 - Amsterdam - 2
-  server: 141.11.21.219
-  type: vmess
-  country: 🇫🇷FR
-  port: 50521
-  uuid: 7b4c6795-3be5-4a4e-b234-07a46f580c45
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  delay: 2856
 - name: 葡萄牙 - Lisbon - 1
   server: 185.231.233.112
   port: 989
