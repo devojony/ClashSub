@@ -5643,8 +5643,23 @@ proxies:
   ech-opts:
     enable: true
     query-server-name: cloudflare-ech.com
+- name: disney_netflix_DE
+  server: 185.94.29.156
+  type: vless
+  port: 4001
+  udp: true
+  uuid: 00000000-0000-4000-8000-000000000000
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: sub.mot.ip-ddns.com
+  ws-opts:
+    path: /
+    headers:
+      Host: sub.mot.ip-ddns.com
+  packet-encoding: ''
 - name: disney_netflix_GB
-  server: 192.0.63.56
+  server: 192.0.63.230
   type: vless
   port: 443
   udp: true
@@ -5657,50 +5672,7 @@ proxies:
     headers:
       Host: snippet.danfeng.kozow.com
   packet-encoding: ''
-- name: netflix_BE |122.18Mb
-  server: 192.200.160.20
-  type: vless
-  port: 443
-  udp: true
-  uuid: c1a5ecfa-8a01-4070-91e0-0328b82388ad
-  network: ws
-  tls: true
-  servername: 639073677243396643.camry-perma.info
-  ws-opts:
-    path: /phnkfhws?ed=2560
-    headers:
-      Host: 639073677243396643.camry-perma.info
-  packet-encoding: ''
-- name: Relay_-🇩🇪DE_04
-  server: 138.226.240.199
-  type: vless
-  port: 4433
-  udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: sub.mot.ip-ddns.com
-  ws-opts:
-    path: /
-    headers:
-      Host: sub.mot.ip-ddns.com
-  packet-encoding: ''
 - name: disney_netflix_GB_1
-  server: 192.0.54.225
-  type: vless
-  port: 443
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  servername: snippet.danfeng.kozow.com
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: snippet.danfeng.kozow.com
-  packet-encoding: ''
-- name: disney_netflix_GB_2
   server: 192.0.63.134
   type: vless
   port: 443
@@ -5714,8 +5686,8 @@ proxies:
     headers:
       Host: snippet.danfeng.kozow.com
   packet-encoding: ''
-- name: disney_netflix_GB_3
-  server: 192.0.54.188
+- name: disney_netflix_GB_2
+  server: 192.0.54.131
   type: vless
   port: 443
   udp: true
@@ -5724,11 +5696,79 @@ proxies:
   tls: true
   servername: snippet.danfeng.kozow.com
   ws-opts:
-    path: /danfeng
+    path: /danfeng?ed=2560
+    headers:
+      Host: snippet.danfeng.kozow.com
+  packet-encoding: ''
+- name: disney_netflix_GB_3
+  server: 192.0.54.225
+  type: vless
+  port: 443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  servername: snippet.danfeng.kozow.com
+  ws-opts:
+    path: /danfeng?ed=2560
     headers:
       Host: snippet.danfeng.kozow.com
   packet-encoding: ''
 - name: disney_netflix_GB_4
+  server: 192.0.63.56
+  type: vless
+  port: 443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  servername: snippet.danfeng.kozow.com
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: snippet.danfeng.kozow.com
+  packet-encoding: ''
+- name: disney_netflix_IE
+  server: 194.87.245.253
+  type: vless
+  port: 443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  servername: snippet.danfeng.kozow.com
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: snippet.danfeng.kozow.com
+  packet-encoding: ''
+- name: disney_netflix_NL |112.57Mb
+  server: ip1.758733.xyz
+  type: tuic
+  port: 10088
+  password: dongtaiwang.com
+  uuid: 9bbd1f42-7ae7-4239-bd10-a68de95e3295
+  alpn:
+  - h3
+  sni: apple.com
+  skip-cert-verify: true
+  udp-relay-mode: native
+  congestion-controller: bbr
+- name: netflix_BE |67.01Mb
+  server: 192.200.160.20
+  type: vless
+  port: 443
+  udp: true
+  uuid: c1a5ecfa-8a01-4070-91e0-0328b82388ad
+  network: ws
+  tls: true
+  servername: 639073677243396643.camry-perma.info
+  ws-opts:
+    path: /phnkfhws?ed=2560
+    headers:
+      Host: 639073677243396643.camry-perma.info
+  packet-encoding: ''
+- name: disney_netflix_GB_5
   server: 104.17.155.101
   type: vless
   port: 443
@@ -5743,39 +5783,8 @@ proxies:
     headers:
       Host: wu.090881.xyz
   packet-encoding: ''
-- name: Relay_-🇰🇷KR_10
-  server: 121.174.43.148
-  type: vless
-  port: 12345
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: snippet.chinat.eu.cc
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.chinat.eu.cc
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: disney_netflix_GB_5
-  server: 192.0.63.230
-  type: vless
-  port: 443
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  servername: snippet.danfeng.kozow.com
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.danfeng.kozow.com
-  packet-encoding: ''
 - name: disney_netflix_GB_6
-  server: 192.0.54.131
+  server: 192.0.54.188
   type: vless
   port: 443
   udp: true
@@ -5788,37 +5797,77 @@ proxies:
     headers:
       Host: snippet.danfeng.kozow.com
   packet-encoding: ''
-- name: netflix_FI |25.37Mb
-  server: 188.114.98.0
+- name: disney_netflix_NL
+  server: 138.226.240.199
+  type: vless
+  port: 4433
+  udp: true
+  uuid: 00000000-0000-4000-8000-000000000000
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: sub.mot.ip-ddns.com
+  ws-opts:
+    path: /
+    headers:
+      Host: sub.mot.ip-ddns.com
+  packet-encoding: xudp
+- name: disney_HK
+  server: 172.64.146.125
   type: vless
   port: 443
   udp: true
-  uuid: 42b32d2f-42c1-4f63-a005-22ffbddcda53
+  uuid: 19d38874-94cb-4a82-a6db-c32c7872e712
   network: ws
   tls: true
-  servername: 639073677236045352.mustang-perma.info
+  servername: i1.nzjlerhb.icu
   ws-opts:
-    path: /xxfzrfws
+    path: /app/hk9
     headers:
-      Host: 639073677236045352.mustang-perma.info
-  alpn:
-  - http/1.1
+      Host: i1.nzjlerhb.icu
   packet-encoding: ''
 - name: disney_netflix_GB_7
-  server: 45.131.209.191
+  server: 88.218.0.184
   type: vless
-  port: 2096
+  port: 8085
   udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  uuid: 00000000-0000-4000-8000-000000000000
   network: ws
   tls: true
-  servername: sni.my111000.tech
+  servername: sub.mot.ip-ddns.com
   ws-opts:
-    path: /Telegram🇨🇳@WangCai2/
+    path: /
     headers:
-      Host: sni.my111000.tech
+      Host: sub.mot.ip-ddns.com
   packet-encoding: ''
-- name: disney_netflix_IE
+- name: disney_netflix_GB_8
+  server: 104.17.152.254
+  type: vless
+  port: 80
+  udp: true
+  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vip.yaml7.ggff.net
+  packet-encoding: ''
+- name: disney_netflix_GB_9
+  server: www.charteredaccountantsanz.com
+  type: vless
+  port: 443
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: qt2cte0z61.gfw.hidns.co
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: qt2cte0z61.gfw.hidns.co
+  packet-encoding: ''
+- name: disney_netflix_IE_1
   server: 20.67.254.104
   type: vless
   port: 443
@@ -5835,75 +5884,19 @@ proxies:
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: disney_HK |11.30Mb
-  server: 162.159.45.48
-  type: vless
-  port: 443
-  udp: true
-  uuid: 19d38874-94cb-4a82-a6db-c32c7872e712
-  network: ws
-  tls: true
-  servername: d1.nzjlerhb.icu
-  ws-opts:
-    path: /app/hk4
-    headers:
-      Host: d1.nzjlerhb.icu
-  packet-encoding: ''
-- name: disney_netflix_DE |112.57Mb
-  server: ip1.758733.xyz
-  type: tuic
-  port: 10088
-  password: dongtaiwang.com
-  uuid: 9bbd1f42-7ae7-4239-bd10-a68de95e3295
-  alpn:
-  - h3
-  sni: apple.com
-  skip-cert-verify: true
-  udp-relay-mode: native
-  congestion-controller: bbr
-- name: disney_netflix_GB_8
-  server: 88.218.0.184
-  type: vless
-  port: 8085
-  udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
-  network: ws
-  tls: true
-  servername: sub.mot.ip-ddns.com
-  ws-opts:
-    path: /
-    headers:
-      Host: sub.mot.ip-ddns.com
-  packet-encoding: ''
-- name: disney_netflix_GB_9
-  server: 104.19.73.126
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: wbsnthrtc.chinav.indevs.in
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: wbsnthrtc.chinav.indevs.in
-  packet-encoding: ''
 - name: disney_netflix_GB_10
-  server: cfxr.eu.org
+  server: 45.131.209.191
   type: vless
-  port: 2053
+  port: 2096
   udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   network: ws
   tls: true
-  client-fingerprint: chrome
-  servername: qt2cte0z61.gfw.hidns.co
+  servername: sni.my111000.tech
   ws-opts:
-    path: /danfeng?ed=2560
+    path: /Telegram🇨🇳@WangCai2/
     headers:
-      Host: qt2cte0z61.gfw.hidns.co
+      Host: sni.my111000.tech
   packet-encoding: ''
 - name: disney_netflix_GB_11
   server: 104.18.32.47
@@ -5920,10 +5913,24 @@ proxies:
     headers:
       Host: ed6geslk00b6rndj55k65gj8mbdjuoxi.pages.dev
   packet-encoding: ''
-- name: disney_netflix_GB_12
-  server: newsroom.paypal-corp.com
+- name: disney_netflix_HK |10.86Mb
+  server: 162.159.45.48
   type: vless
   port: 443
+  udp: true
+  uuid: 19d38874-94cb-4a82-a6db-c32c7872e712
+  network: ws
+  tls: true
+  servername: d1.nzjlerhb.icu
+  ws-opts:
+    path: /app/hk4
+    headers:
+      Host: d1.nzjlerhb.icu
+  packet-encoding: ''
+- name: disney_netflix_GB_12
+  server: cfxr.eu.org
+  type: vless
+  port: 2053
   udp: true
   uuid: 26524cce-d514-4014-a426-365fb266a14d
   network: ws
@@ -5966,6 +5973,21 @@ proxies:
       Host: qt2cte0z61.gfw.hidns.co
   packet-encoding: ''
 - name: disney_netflix_GB_15
+  server: newsroom.paypal-corp.com
+  type: vless
+  port: 443
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: qt2cte0z61.gfw.hidns.co
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: qt2cte0z61.gfw.hidns.co
+  packet-encoding: ''
+- name: disney_netflix_GB_16
   server: cloudflare.seeck.cn
   type: vless
   port: 2053
@@ -5980,7 +6002,22 @@ proxies:
     headers:
       Host: qt2cte0z61.gfw.hidns.co
   packet-encoding: ''
-- name: disney_netflix_GB_16
+- name: disney_netflix_GB_17
+  server: 104.19.73.126
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: wbsnthrtc.chinav.indevs.in
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: wbsnthrtc.chinav.indevs.in
+  packet-encoding: ''
+- name: disney_netflix_GB_18
   server: 162.159.254.137
   type: vless
   port: 2053
@@ -5995,34 +6032,7 @@ proxies:
     headers:
       Host: qt2cte0z61.gfw.hidns.co
   packet-encoding: ''
-- name: disney_netflix_GB_17
-  server: www.charteredaccountantsanz.com
-  type: vless
-  port: 443
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: qt2cte0z61.gfw.hidns.co
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: qt2cte0z61.gfw.hidns.co
-  packet-encoding: ''
-- name: netflix_IT |792.00Mb
-  server: itsea.osaip.net
-  type: vless
-  port: 443
-  udp: true
-  uuid: b2a196d2-a696-4be7-b440-7e9825f7ac5d
-  network: grpc
-  tls: true
-  client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: violet
-  packet-encoding: ''
-- name: disney_netflix_GB_18
+- name: disney_netflix_GB_19
   server: b3.cfyx.20237737.xyz
   type: vless
   port: 2053
@@ -6037,7 +6047,7 @@ proxies:
     headers:
       Host: abxxswoudcjz.chinav.eu.org
   packet-encoding: ''
-- name: disney_netflix_DE
+- name: disney_netflix_DE_1
   server: 37.114.50.157
   type: vless
   port: 4002
@@ -6052,97 +6062,37 @@ proxies:
     headers:
       Host: sub.mot.ip-ddns.com
   packet-encoding: ''
-- name: netflix_HR |12.81Mb
-  server: 46.183.184.60
-  type: ss
-  port: 989
+- name: netflix_FI |106.53Mb
+  server: 188.114.98.0
+  type: vless
+  port: 443
   udp: true
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
-- name: disney_TW | 8.25Mb
-  server: r3mrcg007147vhp.cybervena.com
-  type: ss
-  port: 50099
+  uuid: 42b32d2f-42c1-4f63-a005-22ffbddcda53
+  network: ws
+  tls: true
+  servername: 639073677236045352.mustang-perma.info
+  ws-opts:
+    path: /xxfzrfws
+    headers:
+      Host: 639073677236045352.mustang-perma.info
+  alpn:
+  - http/1.1
+  packet-encoding: ''
+- name: disney_netflix_NL |143.95Mb
+  server: cdn.7zz.cn
+  type: vless
+  port: 443
   udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 5.44Mb
-  server: namrcg001666y2h.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 5.66Mb
-  server: r3mrcg001188p8v.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 7.46Mb
-  server: r3mrcg0011499tl.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_US |36.05Mb
-  server: uss.sudao888.xyz
-  type: ss
-  port: 51110
-  udp: true
-  password: b4e92f5c-80d5-4c00-b028-168f7493c197
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 7.11Mb
-  server: n8mrcg005972g7w.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW |10.60Mb
-  server: n8mrcg0059867fh.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 6.60Mb
-  server: n8mrcg004740fsy.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 7.41Mb
-  server: namrcg001640lrm.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 6.59Mb
-  server: n8mrcg004751vh5.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 6.77Mb
-  server: n8mrcg005998s6m.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 7.82Mb
-  server: n8mrcg005977h4d.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
+  uuid: e9254fe9-dd7e-4f90-ab06-4c96c5cd7362
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: 639073677243704890.camry-perma.info
+  ws-opts:
+    path: /qszxrsws?ed=2560
+    headers:
+      Host: 639073677243704890.camry-perma.info
+  packet-encoding: ''
 - name: disney_netflix_TW | 9.87Mb
   server: n8mrcg004732fk8.cybervena.com
   type: ss
@@ -6150,78 +6100,43 @@ proxies:
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 6.71Mb
-  server: r3mrcg007150y7y.cybervena.com
+- name: disney_netflix_HK | 5.75Mb
+  server: 103.149.182.105
   type: ss
-  port: 50099
+  port: 8388
   udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 7.53Mb
+  password: asd123456
+  cipher: chacha20-ietf
+- name: disney_TW | 7.53Mb
   server: r3mrcg007116sfa.cybervena.com
   type: ss
   port: 50099
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: _66 |28.17Mb
-  server: 103.47.225.69
-  type: ss
-  port: 443
-  udp: true
-  password: 899c7e30-50c7-4b63-a0a0-f26ac572d4f9
-  cipher: aes-256-gcm
-- name: disney_netflix_TW | 5.15Mb
-  server: ncmrcg000138e7b.cybervena.com
+- name: disney_TW | 8.25Mb
+  server: r3mrcg007147vhp.cybervena.com
   type: ss
   port: 50099
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_netflix_VN | 4.25Mb
-  server: 103.238.214.82
+- name: disney_netflix_TW | 9.56Mb
+  server: r3mrcg007175dsk.cybervena.com
   type: ss
-  port: 41632
+  port: 50099
   udp: true
-  password: qwerREWQ@@
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: netflix_HR |12.81Mb
+  server: 46.183.184.60
+  type: ss
+  port: 989
+  udp: true
+  password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: disney_netflix_SG |20.22Mb
-  server: 68.183.227.4
-  type: ss
-  port: 8080
-  udp: true
-  password: 14fFPrbezE3HDZzsMOr6
-  cipher: rc4-md5
-- name: Relay_-🇹🇼TW_71 | 7.81Mb
+- name: disney_TW | 7.81Mb
   server: nbmrcg0034458by.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: netflix_ES |17.57Mb
-  server: 5.188.181.201
-  type: ss
-  port: 9054
-  udp: true
-  password: VcFuyXvND2yQWSFY
-  cipher: aes-256-cfb
-- name: disney_netflix_TW | 7.22Mb
-  server: nbmrcg0034686rw.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 9.45Mb
-  server: namrcg001655hvm.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 6.79Mb
-  server: r3mrcg001162ctc.cybervena.com
   type: ss
   port: 50099
   udp: true
@@ -6234,6 +6149,174 @@ proxies:
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
+- name: disney_netflix_SG |28.17Mb
+  server: 103.47.225.69
+  type: ss
+  port: 443
+  udp: true
+  password: 899c7e30-50c7-4b63-a0a0-f26ac572d4f9
+  cipher: aes-256-gcm
+- name: disney_netflix_TW | 6.59Mb
+  server: n8mrcg004751vh5.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW | 4.37Mb
+  server: r3mrcg007117fb8.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW | 9.58Mb
+  server: r3mrcg0011993za.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW | 5.44Mb
+  server: namrcg001666y2h.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW | 7.82Mb
+  server: n8mrcg005977h4d.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW | 6.60Mb
+  server: n8mrcg004740fsy.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW |11.43Mb
+  server: n8mrcg005988a7z.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_VN | 4.25Mb
+  server: 103.238.214.82
+  type: ss
+  port: 41632
+  udp: true
+  password: qwerREWQ@@
+  cipher: aes-256-cfb
+- name: disney_netflix_TW | 6.77Mb
+  server: n8mrcg005998s6m.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW |10.68Mb
+  server: r3mrcg00129437x.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW | 5.15Mb
+  server: ncmrcg000138e7b.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW | 7.46Mb
+  server: r3mrcg0011499tl.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 5.66Mb
+  server: r3mrcg001188p8v.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW | 7.41Mb
+  server: namrcg001640lrm.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW | 6.71Mb
+  server: r3mrcg007150y7y.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW |11.87Mb
+  server: n8mrcg006015jsm.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW |10.60Mb
+  server: n8mrcg0059867fh.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW | 7.11Mb
+  server: n8mrcg005972g7w.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW | 7.22Mb
+  server: nbmrcg0034686rw.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW | 6.79Mb
+  server: r3mrcg001162ctc.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_US |36.05Mb
+  server: uss.sudao888.xyz
+  type: ss
+  port: 51110
+  udp: true
+  password: b4e92f5c-80d5-4c00-b028-168f7493c197
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW | 6.96Mb
+  server: r3mrcg007153btm.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW | 6.31Mb
+  server: n8mrcg005961xa6.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
 - name: disney_netflix_TW |11.03Mb
   server: n8mrcg004676x9e.cybervena.com
   type: ss
@@ -6241,8 +6324,36 @@ proxies:
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 6.96Mb
-  server: r3mrcg007153btm.cybervena.com
+- name: netflix_ES |17.57Mb
+  server: 5.188.181.201
+  type: ss
+  port: 9054
+  udp: true
+  password: VcFuyXvND2yQWSFY
+  cipher: aes-256-cfb
+- name: disney_netflix_TW | 9.07Mb
+  server: r3mrcg001257bhv.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW | 9.35Mb
+  server: r3mrcg001168e8p.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_SG |20.22Mb
+  server: 68.183.227.4
+  type: ss
+  port: 8080
+  udp: true
+  password: 14fFPrbezE3HDZzsMOr6
+  cipher: rc4-md5
+- name: disney_netflix_TW | 9.45Mb
+  server: namrcg001655hvm.cybervena.com
   type: ss
   port: 50099
   udp: true
@@ -6258,17 +6369,16 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: netflix_ES |191.31Mb
-  server: 85.90.217.42
+- name: disney_netflix_HK | 9.18Mb
+  server: 156.238.250.91
   type: vmess
-  port: 22324
+  port: 18811
   udp: true
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  uuid: 4a1b829b-8394-42c1-a068-04cd8e6bcb3c
   alterId: 0
   cipher: auto
   http-opts: {}
   h2-opts: {}
-  skip-cert-verify: true
 - name: disney_netflix_PL | 3.91Mb
   server: 146.59.118.182
   type: vmess
@@ -6286,6 +6396,72 @@ proxies:
       Host:
       - 146.59.118.182
   h2-opts: {}
+- name: disney_netflix_DE | 6.31Mb
+  server: 51.89.11.94
+  type: vmess
+  port: 443
+  udp: true
+  uuid: e5408561-3874-4d41-a744-0cd0dfdb86c8
+  alterId: 0
+  cipher: auto
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+    headers:
+      Host:
+      - 51.89.11.94
+  h2-opts: {}
+- name: netflix_ES |191.31Mb
+  server: 85.90.217.42
+  type: vmess
+  port: 22324
+  udp: true
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_KR | 8.19Mb
+  server: amused-peacock.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: amused-peacock.rooster465.autos
+- name: disney_KR |13.73Mb
+  server: ready-lion.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: ready-lion.rooster465.autos
+- name: disney_KR |13.78Mb
+  server: powerful-squid.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: powerful-squid.rooster465.autos
+- name: disney_netflix_SG | 8.19Mb
+  server: 160.16.124.17
+  type: trojan
+  port: 1524
+  password: 6d29eb2f74293cb01a19b32cf08ad2e9
+  sni: www.nintendogames.net
+- name: disney_KR |10.40Mb
+  server: sterling-fowl.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: sterling-fowl.rooster465.autos
+- name: disney_netflix_NL |510.00Mb
+  server: nl-4.tr202512.com
+  type: trojan
+  port: 443
+  udp: true
+  password: M08tvzYWtUEJNtbpHp
+  sni: nl-4.tr202512.com
+  skip-cert-verify: true
 - name: disney_netflix_GB |147.45Mb
   server: 172.66.44.230
   type: trojan
@@ -6298,63 +6474,13 @@ proxies:
     headers:
       Host: Koma-YT.PAGeS.Dev
   network: ws
-- name: disney_KR |10.40Mb
-  server: sterling-fowl.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: sterling-fowl.rooster465.autos
-- name: disney_KR |13.73Mb
-  server: ready-lion.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: ready-lion.rooster465.autos
-- name: disney_KR | 8.19Mb
-  server: amused-peacock.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: amused-peacock.rooster465.autos
-- name: disney_KR |13.78Mb
-  server: powerful-squid.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: powerful-squid.rooster465.autos
-- name: disney_netflix_US |39.00Mb
-  server: n3.chateditimage.com
+- name: disney_netflix_JP |10.43Mb
+  server: jp.co2.vn
   type: trojan
   port: 443
   udp: true
-  password: de7d6444-a7a8-4b3a-bf26-bc6939bb0279
-  sni: n3.chateditimage.com
-  skip-cert-verify: true
-- name: disney_SG | 8.19Mb
-  server: 160.16.124.17
-  type: trojan
-  port: 1524
-  password: 6d29eb2f74293cb01a19b32cf08ad2e9
-  sni: www.nintendogames.net
-- name: netflix_JP |11.78Mb
-  server: 160.16.124.17
-  type: trojan
-  port: 34818
-  password: 6d29eb2f74293cb01a19b32cf08ad2e9
-  sni: www.nintendogames.net
-- name: disney_netflix_US | 8.02Mb
-  server: 160.16.70.180
-  type: trojan
-  port: 3700
-  password: 6d29eb2f74293cb01a19b32cf08ad2e9
-  sni: www.nintendogames.net
-- name: disney_netflix_NL |510.00Mb
-  server: nl-4.tr202512.com
-  type: trojan
-  port: 443
-  udp: true
-  password: M08tvzYWtUEJNtbpHp
-  sni: nl-4.tr202512.com
+  password: ee6194f4-cdf3-4623-a4aa-0f8ad838d86b
+  sni: www.linemo.jp
   skip-cert-verify: true
 - name: disney_netflix_US |12.47Mb
   server: n2.chateditimage.com
@@ -6370,30 +6496,79 @@ proxies:
   port: 1524
   password: 6d29eb2f74293cb01a19b32cf08ad2e9
   sni: www.nintendogames.net
+- name: disney_netflix_NL |13.62Mb
+  server: fun-seagull.rooster465.autos
+  type: trojan
+  port: 443
+  udp: true
+  password: WF42809561
+  sni: fun-seagull.rooster465.autos
 - name: netflix_FR
   server: still-mastodon.rooster465.autos
   type: trojan
   port: 443
   password: WF42809561
   sni: still-mastodon.rooster465.autos
+- name: disney_netflix_US |39.00Mb
+  server: n3.chateditimage.com
+  type: trojan
+  port: 443
+  udp: true
+  password: de7d6444-a7a8-4b3a-bf26-bc6939bb0279
+  sni: n3.chateditimage.com
+  skip-cert-verify: true
+- name: disney_netflix_JP |11.78Mb
+  server: 160.16.124.17
+  type: trojan
+  port: 34818
+  password: 6d29eb2f74293cb01a19b32cf08ad2e9
+  sni: www.nintendogames.net
 - name: disney_netflix_DE |239.24Mb
   server: dynamic-tiger.crayfish192.xyz
   type: trojan
   port: 443
   password: WF42809561
   sni: dynamic-tiger.crayfish192.xyz
-- name: netflix_FR_1
-  server: prompt-duckling.rooster465.autos
+- name: disney_netflix_US |37.92Mb
+  server: n1.chateditimage.com
   type: trojan
   port: 443
-  password: WF42809561
-  sni: prompt-duckling.rooster465.autos
-- name: netflix_FR_2
+  udp: true
+  password: 4123ae62-0999-4984-8ead-091630e594a9
+  sni: n1.chateditimage.com
+  skip-cert-verify: true
+- name: netflix_FR_1
   server: sterling-dinosaur.rooster465.autos
   type: trojan
   port: 443
   password: WF42809561
   sni: sterling-dinosaur.rooster465.autos
+- name: disney_netflix_US | 8.02Mb
+  server: 160.16.70.180
+  type: trojan
+  port: 3700
+  password: 6d29eb2f74293cb01a19b32cf08ad2e9
+  sni: www.nintendogames.net
+- name: netflix_FR_2
+  server: prompt-duckling.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: prompt-duckling.rooster465.autos
+- name: disney_netflix_HK |26.15Mb
+  server: ready-monarch.rooster465.autos
+  type: trojan
+  port: 443
+  udp: true
+  password: WF42809561
+  sni: ready-monarch.rooster465.autos
+- name: disney_HK | 5.10Mb
+  server: 103.141.221.124
+  type: ss
+  country: 🇭🇰 HK
+  port: 8388
+  password: asd123456
+  cipher: chacha20-ietf
 - name: disney_netflix_HK | 9.01Mb
   server: 103.143.238.196
   type: vmess
@@ -6460,21 +6635,6 @@ proxies:
     path: /564dfa20/
     headers:
       HOST: aflzzul.meiquankongjian.com
-- name: Relay_🇺🇸US-🇯🇵JP_157 | 4.17Mb
-  server: t1.620720.xyz
-  type: vmess
-  country: 🇺🇸US
-  port: 8443
-  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /
 - name: disney_KR |10.46Mb
   server: positive-bear.rooster465.autos
   type: trojan
@@ -6484,122 +6644,6 @@ proxies:
   password: IL37892054
   sni: positive-bear.rooster465.autos
   skip-cert-verify: true
-- name: disney_HK
-  server: 172.64.146.125
-  type: vless
-  port: 443
-  udp: true
-  uuid: 19d38874-94cb-4a82-a6db-c32c7872e712
-  network: ws
-  tls: true
-  servername: i1.nzjlerhb.icu
-  ws-opts:
-    path: /app/hk9
-    headers:
-      Host: i1.nzjlerhb.icu
-  packet-encoding: ''
-- name: disney_netflix_HK | 5.75Mb
-  server: 103.149.182.105
-  type: ss
-  port: 8388
-  udp: true
-  password: asd123456
-  cipher: chacha20-ietf
-- name: disney_netflix_TW | 9.56Mb
-  server: r3mrcg007175dsk.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 4.37Mb
-  server: r3mrcg007117fb8.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW
-  server: r3mrcg0011993za.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW_1
-  server: n8mrcg005988a7z.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW
-  server: r3mrcg00129437x.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW_2
-  server: n8mrcg006015jsm.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW_3
-  server: n8mrcg005961xa6.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW_4
-  server: r3mrcg001257bhv.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW_5
-  server: r3mrcg001168e8p.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_HK | 9.18Mb
-  server: 156.238.250.91
-  type: vmess
-  port: 18811
-  udp: true
-  uuid: 4a1b829b-8394-42c1-a068-04cd8e6bcb3c
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-- name: disney_netflix_JP
-  server: jp.co2.vn
-  type: trojan
-  port: 443
-  udp: true
-  password: ee6194f4-cdf3-4623-a4aa-0f8ad838d86b
-  sni: www.linemo.jp
-  skip-cert-verify: true
-- name: disney_netflix_HK
-  server: ready-monarch.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: WF42809561
-  sni: ready-monarch.rooster465.autos
-- name: disney_HK | 5.10Mb
-  server: 103.141.221.124
-  type: ss
-  country: 🇭🇰 HK
-  port: 8388
-  password: asd123456
-  cipher: chacha20-ietf
 - name: SCP%7CCA
   type: trojan
   server: 209.200.246.105
