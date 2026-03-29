@@ -466,7 +466,194 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
-- name: Relay_-🇹🇼TW_07 | 7.83Mb
+- name: 00-Trojan-jp-AI
+  server: jp.111000.cc.cd
+  port: 443
+  type: trojan
+  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  sni: sni.111000.dynv6.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560&proxyip=ip.111000.de5.net:443
+    headers:
+      Host: sni.111000.dynv6.net
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: 00-WS-jp-AI
+  server: jp.111000.cc.cd
+  port: 443
+  client-fingerprint: firefox
+  type: vless
+  UUID: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  tls: true
+  servername: sni.111000.dynv6.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560&proxyip=ip.111000.de5.net:443
+    headers:
+      Host: sni.111000.dynv6.net
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: 01-Trojan-030101.xyz
+  server: bestcf.030101.xyz
+  port: 443
+  type: trojan
+  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  sni: sni.111000.dynv6.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560&proxyip=ip.111000.de5.net:443
+    headers:
+      Host: sni.111000.dynv6.net
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: 01-WS-030101.xyz
+  server: bestcf.030101.xyz
+  port: 443
+  client-fingerprint: firefox
+  type: vless
+  UUID: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  tls: true
+  servername: sni.111000.dynv6.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560&proxyip=ip.111000.de5.net:443
+    headers:
+      Host: sni.111000.dynv6.net
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: 02-Trojan-saas.sin.fan
+  server: saas.sin.fan
+  port: 443
+  type: trojan
+  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  sni: sni.111000.dynv6.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560&proxyip=ip.111000.de5.net:443
+    headers:
+      Host: sni.111000.dynv6.net
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: 02-WS-saas.sin.fan
+  server: saas.sin.fan
+  port: 443
+  client-fingerprint: firefox
+  type: vless
+  UUID: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  tls: true
+  servername: sni.111000.dynv6.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560&proxyip=ip.111000.de5.net:443
+    headers:
+      Host: sni.111000.dynv6.net
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: 03-Trojan-cloudflare88
+  server: freeyx.cloudflare88.eu.org
+  port: 443
+  type: trojan
+  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  sni: sni.111000.dynv6.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560&proxyip=ip.111000.de5.net:443
+    headers:
+      Host: sni.111000.dynv6.net
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: 03-WS-cloudflare88
+  server: freeyx.cloudflare88.eu.org
+  port: 443
+  client-fingerprint: firefox
+  type: vless
+  UUID: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  tls: true
+  servername: sni.111000.dynv6.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560&proxyip=ip.111000.de5.net:443
+    headers:
+      Host: sni.111000.dynv6.net
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: Relay_-🇮🇳IN_01 |50.78Mb
+  server: yindu.iptk123.com
+  type: hysteria2
+  port: 443
+  udp: true
+  password: 0c644921-c01d-4835-9e9a-3c2c6dedf9fb
+  auth: 0c644921-c01d-4835-9e9a-3c2c6dedf9fb
+  sni: yindu.iptk123.com
+  skip-cert-verify: true
+- name: netflix_HU |139.95Mb
+  server: 192.200.160.20
+  type: vless
+  port: 443
+  udp: true
+  uuid: 92b82d0f-d2f8-4f6f-b177-08f681a337e6
+  network: ws
+  tls: true
+  servername: 639073677243791121.camry-perma.info
+  ws-opts:
+    path: /njvqoews?ed=2560
+    headers:
+      Host: 639073677243791121.camry-perma.info
+  packet-encoding: ''
+- name: Relay_-🇩🇪DE_03 | 2.44Mb
+  server: 47.76.218.163
+  type: vless
+  port: 443
+  udp: true
+  uuid: 69c70236-6d7f-a785-2d3a-5332b1c91e99
+  network: ws
+  tls: true
+  client-fingerprint: random
+  servername: bab1c79b.soos.bbroot.com
+  ws-opts:
+    path: /socks5=4b2c7676:6f0f4cbba5bb@38.111.30.111:26433
+    headers:
+      Host: bab1c79b.soos.bbroot.com
+  alpn:
+  - h3
+  packet-encoding: ''
+- name: disney_netflix_NL
+  server: 138.226.240.199
+  type: vless
+  port: 4433
+  udp: true
+  uuid: 00000000-0000-4000-8000-000000000000
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: sub.mot.ip-ddns.com
+  ws-opts:
+    path: /
+    headers:
+      Host: sub.mot.ip-ddns.com
+  packet-encoding: xudp
+- name: disney_DE |57.93Mb
+  server: ip1.758733.xyz
+  type: tuic
+  port: 10088
+  password: dongtaiwang.com
+  uuid: 9bbd1f42-7ae7-4239-bd10-a68de95e3295
+  alpn:
+  - h3
+  sni: apple.com
+  skip-cert-verify: true
+  udp-relay-mode: native
+  congestion-controller: bbr
+- name: Relay_-🇹🇼TW_07 | 4.58Mb
   server: 122.116.105.15
   type: vless
   port: 995
@@ -483,7 +670,21 @@ proxies:
   alpn:
   - h3
   packet-encoding: ''
-- name: Relay_-🇹🇼TW_08 | 5.77Mb
+- name: disney_netflix_NL_1
+  server: 185.243.112.61
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: Relay_-🇹🇼TW_09 | 6.63Mb
   server: 114.32.9.249
   type: vless
   port: 16443
@@ -500,7 +701,24 @@ proxies:
   alpn:
   - h3
   packet-encoding: ''
-- name: disney_netflix_HK | 9.44Mb
+- name: Relay_-🇭🇰HK_10
+  server: 8.217.180.234
+  type: vless
+  port: 443
+  udp: true
+  uuid: 69c70236-6d7f-a785-2d3a-5332b1c91e99
+  network: ws
+  tls: true
+  client-fingerprint: random
+  servername: bab1c79b.soos.bbroot.com
+  ws-opts:
+    path: /socks5=4b2c7676:6f0f4cbba5bb@38.111.30.111:26433
+    headers:
+      Host: bab1c79b.soos.bbroot.com
+  alpn:
+  - h3
+  packet-encoding: ''
+- name: disney_HK |10.84Mb
   server: 95.40.61.115
   type: vless
   port: 443
@@ -517,320 +735,1111 @@ proxies:
   alpn:
   - h3
   packet-encoding: ''
-- name: disney_HK
-  server: s298.okgg.top
+- name: netflix_FR
+  server: 217.60.252.232
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_US
+  server: 94.131.101.135
+  type: vless
+  port: 443
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_GB
+  server: www.gco.gov.qa
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: pujd1crfzx5.chinam.indevs.in
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: pujd1crfzx5.chinam.indevs.in
+  packet-encoding: ''
+- name: netflix_FI |110.02Mb
+  server: 185.93.105.107
+  type: vless
+  port: 443
+  udp: true
+  uuid: c4f2dee2-14e3-4c02-91e9-31c7917e239c
+  network: tcp
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: qq
+  servername: sub.sbrf-cdn342.ru
+  packet-encoding: ''
+- name: disney_netflix_DE
+  server: 88.198.152.85
+  type: vless
+  port: 443
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_GB_1
+  server: china.embassy.gov.au
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: okbhq9o4867.gfw.hidns.co
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: okbhq9o4867.gfw.hidns.co
+  packet-encoding: ''
+- name: disney_netflix_DE_1
+  server: 89.58.32.115
+  type: vless
+  port: 12001
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_NL |324.66Mb
+  server: 195.181.173.199
+  type: vless
+  port: 8443
+  udp: true
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  network: tcp
+  tls: true
+  servername: ams1.fromblancwithlove.com
+  alpn:
+  - h2
+  packet-encoding: ''
+- name: disney_netflix_GB_2
+  server: 135.84.74.155
+  type: vless
+  port: 443
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?Telegram🇨🇳 @WangCai2=
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_GB_3
+  server: 104.19.73.126
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: wbsnthrtc.chinav.indevs.in
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: wbsnthrtc.chinav.indevs.in
+  packet-encoding: ''
+- name: disney_netflix_GB_4
+  server: cf.cloudflare.182682.xyz
+  type: vless
+  port: 443
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: wbsnthrtc.chinav.indevs.in
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: wbsnthrtc.chinav.indevs.in
+  packet-encoding: ''
+- name: disney_netflix_GB_5
+  server: b3.cfyx.20237737.xyz
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: abxxswoudcjz.chinav.eu.org
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: abxxswoudcjz.chinav.eu.org
+  packet-encoding: ''
+- name: Relay_-🇬🇧GB_26
+  server: one.dash.cloudflare.com
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: wbsnthrtc.chinav.indevs.in
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: wbsnthrtc.chinav.indevs.in
+  packet-encoding: ''
+- name: disney_netflix_GB_6
+  server: 57.129.137.87
+  type: vless
+  port: 8443
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: netflix_CA |97.57Mb
+  server: hjnd.0101.pw
+  type: hysteria2
+  port: 8444
+  udp: true
+  password: 14c738cf-cac3-4faf-a760-b1d2a25a3eef
+  auth: 14c738cf-cac3-4faf-a760-b1d2a25a3eef
+  sni: hjnd.0101.pw
+  skip-cert-verify: true
+- name: disney_netflix_LV
+  server: 45.43.76.184
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: Relay_-🇩🇪DE_31
+  server: www.charteredaccountantsanz.com
+  type: vless
+  port: 443
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: qt2cte0z61.gfw.hidns.co
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: qt2cte0z61.gfw.hidns.co
+  packet-encoding: ''
+- name: Relay_-🇬🇧GB_32
+  server: go2.lenovo.com
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: wbsnthrtc.chinav.indevs.in
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: wbsnthrtc.chinav.indevs.in
+  packet-encoding: ''
+- name: disney_netflix_GB_7
+  server: 162.159.254.137
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: qt2cte0z61.gfw.hidns.co
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: qt2cte0z61.gfw.hidns.co
+  packet-encoding: ''
+- name: disney_netflix_GB_8
+  server: docker.1panel.live
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: qt2cte0z61.gfw.hidns.co
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: qt2cte0z61.gfw.hidns.co
+  packet-encoding: ''
+- name: disney_netflix_GB_9
+  server: cloudflare.seeck.cn
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: qt2cte0z61.gfw.hidns.co
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: qt2cte0z61.gfw.hidns.co
+  packet-encoding: ''
+- name: disney_netflix_GB_10
+  server: static.shopify.com
+  type: vless
+  port: 443
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: qt2cte0z61.gfw.hidns.co
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: qt2cte0z61.gfw.hidns.co
+  packet-encoding: ''
+- name: disney_netflix_GB_11
+  server: newsroom.paypal-corp.com
+  type: vless
+  port: 443
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: qt2cte0z61.gfw.hidns.co
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: qt2cte0z61.gfw.hidns.co
+  packet-encoding: ''
+- name: disney_netflix_GB_12
+  server: unpkg.com
+  type: vless
+  port: 443
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: qt2cte0z61.gfw.hidns.co
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: qt2cte0z61.gfw.hidns.co
+  packet-encoding: ''
+- name: disney_netflix_GB_13
+  server: cfxr.eu.org
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: qt2cte0z61.gfw.hidns.co
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: qt2cte0z61.gfw.hidns.co
+  packet-encoding: ''
+- name: disney_netflix_GB_14
+  server: 104.18.32.47
+  type: vless
+  port: 2087
+  udp: true
+  uuid: 68ee25ac-514e-4e00-81ed-67a0ba23954a
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: ed6geslk00b6rndj55k65gj8mbdjuoxi.pages.dev
+  ws-opts:
+    path: /eyJqdW5rIjoiS0ZJaGhSaG14Z0NMeCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjE0Ni4xMDMuMTE0LjEzNCJdfQ==?ed=2560
+    headers:
+      Host: ed6geslk00b6rndj55k65gj8mbdjuoxi.pages.dev
+  packet-encoding: ''
+- name: disney_netflix_GB_15
+  server: 45.131.209.191
+  type: vless
+  port: 2096
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.my111000.tech
+  ws-opts:
+    path: /Telegram🇨🇳@WangCai2/
+    headers:
+      Host: sni.my111000.tech
+  packet-encoding: ''
+- name: disney_netflix_GB_16
+  server: pages.cloudflare.com
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: wbsnthrtc.chinav.indevs.in
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: wbsnthrtc.chinav.indevs.in
+  packet-encoding: ''
+- name: disney_netflix_DE_2
+  server: 188.34.160.97
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: Relay_-🇳🇱NL_47 |24.62Mb
+  server: cdn.7zz.cn
+  type: vless
+  port: 443
+  udp: true
+  uuid: e9254fe9-dd7e-4f90-ab06-4c96c5cd7362
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: 639073677243704890.camry-perma.info
+  ws-opts:
+    path: /qszxrsws?ed=2560
+    headers:
+      Host: 639073677243704890.camry-perma.info
+  packet-encoding: ''
+- name: disney_netflix_GB_17
+  server: 135.84.74.43
+  type: vless
+  port: 443
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  skip-cert-verify: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_GB_18
+  server: notability.com
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: qt2cte0z61.gfw.hidns.co
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: qt2cte0z61.gfw.hidns.co
+  packet-encoding: ''
+- name: disney_netflix_GB_19
+  server: 104.26.12.27
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: qt2cte0z61.gfw.hidns.co
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: qt2cte0z61.gfw.hidns.co
+  packet-encoding: ''
+- name: disney_netflix_GB_20
+  server: www.gov.se
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: qt2cte0z61.gfw.hidns.co
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: qt2cte0z61.gfw.hidns.co
+  packet-encoding: ''
+- name: disney_netflix_US |289.70Mb
+  server: gby5e0a.accccggggdns.top
+  type: hysteria2
+  port: 41234
+  udp: true
+  password: c37281a0-d156-4548-b3ab-786d74dc5b42
+  auth: c37281a0-d156-4548-b3ab-786d74dc5b42
+  sni: bing.com
+  skip-cert-verify: true
+- name: disney_netflix_GB_21
+  server: 104.17.152.254
+  type: vless
+  port: 80
+  udp: true
+  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vip.yaml7.ggff.net
+  packet-encoding: ''
+- name: disney_netflix_DE_3
+  server: 185.94.29.156
+  type: vless
+  port: 4001
+  udp: true
+  uuid: 00000000-0000-4000-8000-000000000000
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: sub.mot.ip-ddns.com
+  ws-opts:
+    path: /
+    headers:
+      Host: sub.mot.ip-ddns.com
+  packet-encoding: ''
+- name: disney_netflix_GB_22
+  server: legion.lenovo.com
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: pujd1crfzx5.chinam.indevs.in
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: pujd1crfzx5.chinam.indevs.in
+  packet-encoding: ''
+- name: disney_netflix_GB_23
+  server: 104.17.156.229
+  type: vless
+  port: 80
+  udp: true
+  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vip.yaml7.ggff.net
+  packet-encoding: ''
+- name: disney_netflix_GB_24
+  server: www.sofi.com
+  type: vless
+  port: 443
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: pujd1crfzx5.chinam.indevs.in
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: pujd1crfzx5.chinam.indevs.in
+  packet-encoding: ''
+- name: disney_netflix_NL_2
+  server: 185.198.167.93
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_GB_25
+  server: 209.102.207.120
+  type: vless
+  port: 443
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  skip-cert-verify: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_GB_26
+  server: 45.131.208.191
+  type: vless
+  port: 2096
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: sni.my111000.tech
+  ws-opts:
+    path: /Telegram🇨🇳@WangCai2/
+    headers:
+      Host: sni.my111000.tech
+  packet-encoding: ''
+- name: disney_netflix_NL_3
+  server: 212.34.144.154
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_SE
+  server: 31.128.32.98
+  type: vless
+  port: 443
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_GB_27
+  server: 1357900.xyz
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: ksgyus8a.chinav.indevs.in
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: ksgyus8a.chinav.indevs.in
+  packet-encoding: ''
+- name: disney_netflix_GB_28
+  server: www.investec.com
+  type: vless
+  port: 443
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: ksgyus8a.chinav.indevs.in
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: ksgyus8a.chinav.indevs.in
+  packet-encoding: ''
+- name: disney_netflix_DE |63.01Mb
+  server: www.lightenq.buzz
+  type: hysteria2
+  port: 12152
+  udp: true
+  password: aYIRTa8rLh9qRDIrcUakSfzpWUhPcCKD
+  auth: aYIRTa8rLh9qRDIrcUakSfzpWUhPcCKD
+  sni: bing.com
+  skip-cert-verify: true
+- name: disney_netflix_NL_4
+  server: s678.ccgfw.top
   type: vless
   port: 443
   udp: true
   uuid: 424e7cc4-df34-3518-9c7b-401db4ece90a
-  network: tcp
+  network: grpc
   tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: random
-  servername: u710947u9d8cs298.okgg.top
+  client-fingerprint: ios
+  servername: u710947u2968s678.ccgfw.top
+  grpc-opts:
+    grpc-service-name: ssp
   packet-encoding: ''
-- name: disney_netflix_TW | 7.80Mb
-  server: r3mrcg007116sfa.cybervena.com
-  type: ss
-  port: 50099
+- name: disney_netflix_GB_29
+  server: testingcf.jsdelivr.net
+  type: vless
+  port: 443
   udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 9.88Mb
-  server: r3mrcg001162ctc.cybervena.com
-  type: ss
-  port: 50099
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: okbhq9o4867.gfw.hidns.co
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: okbhq9o4867.gfw.hidns.co
+  packet-encoding: ''
+- name: disney_netflix_GB_30
+  server: 104.17.155.101
+  type: vless
+  port: 443
   udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 9.64Mb
-  server: namrcg001655hvm.cybervena.com
-  type: ss
-  port: 50099
+  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: wu.090881.xyz
+  ws-opts:
+    path: /products/proxyip=ProxyIP.SG.CMLiussss.net/proxyip=ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: wu.090881.xyz
+  packet-encoding: ''
+- name: disney_DE
+  server: 82.117.245.125
+  type: vless
+  port: 2053
   udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW |10.08Mb
-  server: n8mrcg004676x9e.cybervena.com
-  type: ss
-  port: 50099
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_GB_31
+  server: www.visa.cn
+  type: vless
+  port: 2053
   udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 9.29Mb
-  server: n8mrcg004697zw5.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW |10.26Mb
-  server: n8mrcg0059867fh.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 5.36Mb
-  server: 111.248.112.83
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 9.98Mb
-  server: nbmrcg003466pb9.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: netflix_SG |15.11Mb
-  server: 68.183.227.4
-  type: ss
-  port: 8080
-  udp: true
-  password: 14fFPrbezE3HDZzsMOr6
-  cipher: rc4-md5
-- name: disney_netflix_TW |10.17Mb
-  server: n8mrcg005972g7w.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: Relay_-🇹🇼TW_88 | 5.25Mb
-  server: nbmrcg003507ck6.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 6.51Mb
-  server: r3mrcg007117fb8.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 76fd2910-8f2d-4f0f-883a-8da226f52000
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW |12.05Mb
-  server: r3mrcg007168e8p.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 8.56Mb
-  server: r3mrcg007153btm.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: Relay_-🇹🇼TW_93 | 4.31Mb
-  server: r3mrcg0011606bh.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 8.68Mb
-  server: n8mrcg004767yf3.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 6.02Mb
-  server: n8mrcg0059595fa.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 9.02Mb
-  server: r3mrcg0011499tl.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 8.57Mb
-  server: namrcg001666y2h.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 7.86Mb
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: rk13hiap.gfw.hidns.co
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: rk13hiap.gfw.hidns.co
+  packet-encoding: ''
+- name: disney_TW | 5.69Mb
   server: n8mrcg004740fsy.cybervena.com
   type: ss
   port: 50099
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 5.54Mb
-  server: n8mrcg005998s6m.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 5.91Mb
-  server: ncmrcg000138e7b.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW |41.58Mb
-  server: n8mrcg005977h4d.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 4.29Mb
-  server: r3mrcg007147vhp.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW |10.26Mb_1
-  server: n8mrcg004732fk8.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW |11.34Mb
-  server: n8mrcg005938lsz.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 5.46Mb
-  server: r3mrcg007150y7y.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 7.17Mb
-  server: nbmrcg0034458by.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 9.63Mb
-  server: namrcg001611cy4.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: Relay_-🇹🇼TW_113 |83.29Mb
-  server: r3mrcg001233myh.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 5.80Mb
-  server: r3mrcg001286ek2.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 9.99Mb
-  server: n8mrcg006016ehj.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: Relay_-🇹🇼TW_117 | 8.59Mb
-  server: r3mrcg001287h3p.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 9.79Mb
-  server: r3mrcg007175dsk.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW |18.97Mb
-  server: r3mrcg001168e8p.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW |11.60Mb
-  server: n8mrcg005988a7z.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 9.53Mb
-  server: r3mrcg0011993za.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW |10.61Mb
-  server: namrcg001662wgh.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 7.44Mb
+- name: disney_TW | 7.71Mb
   server: r3mrcg001257bhv.cybervena.com
   type: ss
   port: 50099
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_VN | 2.74Mb
-  server: 103.238.214.82
+- name: disney_netflix_US | 1.61Mb
+  server: 38.60.223.8
+  type: ss
+  port: 989
+  udp: true
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
+- name: Relay_ | 8.35Mb
+  server: n8mrcg004697zw5.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 9.37Mb
+  server: r3mrcg007153btm.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 8.40Mb
+  server: r3mrcg001286ek2.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 9.72Mb
+  server: n8mrcg005998s6m.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 5.68Mb
+  server: ncmrcg000138e7b.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: Relay_-🇹🇼TW_88 |87.21Mb
+  server: r3mrcg007134n4g.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 9.72Mb_1
+  server: r3mrcg0011499tl.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: ' |11.58Mb'
+  server: 68.183.227.4
+  type: ss
+  port: 8080
+  udp: true
+  password: 14fFPrbezE3HDZzsMOr6
+  cipher: rc4-md5
+- name: disney_TW |19.26Mb
+  server: n8mrcg005977h4d.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 9.18Mb
+  server: namrcg001666y2h.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_ES | 9.27Mb
+  server: 5.188.181.201
+  type: ss
+  port: 9025
+  udp: true
+  password: XPtzA9sCug3SPR4c
+  cipher: aes-256-cfb
+- name: disney_TW |13.96Mb
+  server: r3mrcg007168e8p.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 7.55Mb
+  server: r3mrcg001233myh.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW |10.14Mb
+  server: namrcg001611cy4.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: netflix_HR | 7.31Mb
+  server: 46.183.184.60
+  type: ss
+  port: 989
+  udp: true
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
+- name: disney_TW |12.29Mb
+  server: r3mrcg007116sfa.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_SE |52.38Mb
+  server: 13.63.166.122
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: Relay_ | 7.73Mb
+  server: r3mrcg007150y7y.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: Relay_ | 6.67Mb
+  server: r3mrcg007147vhp.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: ' |19.47Mb'
+  server: 185.189.160.105
   type: ss
   port: 41632
   udp: true
   password: qwerREWQ@@
   cipher: aes-256-cfb
-- name: disney_TW | 8.92Mb
+- name: netflix_FR_1
+  server: 13.37.222.70
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: Relay_-🇭🇰HK_104 | 2.50Mb
+  server: 103.149.182.105
+  type: ss
+  port: 8388
+  udp: true
+  password: asd123456
+  cipher: chacha20-ietf
+- name: Relay_ | 7.17Mb
+  server: nbmrcg0034458by.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW |11.00Mb
+  server: n8mrcg005972g7w.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 7.53Mb
+  server: nbmrcg003507ck6.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 9.60Mb
+  server: r3mrcg001287h3p.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW | 9.64Mb
+  server: n8mrcg0059867fh.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_SE |152.99Mb
+  server: 13.61.195.4
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: disney_TW | 9.59Mb
+  server: r3mrcg001162ctc.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW |10.41Mb
+  server: namrcg001655hvm.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: Relay_ | 7.08Mb
+  server: n8mrcg005938lsz.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 7.76Mb
+  server: r3mrcg001142988.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW |42.51Mb
+  server: n8mrcg004767yf3.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 6.77Mb
+  server: n8mrcg004732fk8.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: ' | 6.60Mb'
+  server: 154.223.16.212
+  type: ss
+  port: 989
+  udp: true
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
+- name: disney_TW | 9.48Mb
   server: r3mrcg007144ll4.cybervena.com
   type: ss
   port: 50099
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_TW |12.13Mb
+- name: disney_netflix_TW |10.48Mb
+  server: n8mrcg005988a7z.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: ' | 2.03Mb'
+  server: 103.238.214.82
+  type: ss
+  port: 41632
+  udp: true
+  password: qwerREWQ@@
+  cipher: aes-256-cfb
+- name: disney_TW | 5.94Mb
+  server: n8mrcg006016ehj.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW |10.87Mb
   server: n8mrcg006015jsm.cybervena.com
   type: ss
   port: 50099
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 9.51Mb
+- name: disney_TW | 6.54Mb
+  server: r3mrcg0011993za.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW |11.67Mb
+  server: n8mrcg0059595fa.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 6.22Mb
+  server: r3mrcg00129437x.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: Relay_ | 9.51Mb
   server: nbmrcg003449jp6.cybervena.com
   type: ss
   port: 50099
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_netflix_HK | 8.26Mb
+- name: disney_TW | 8.64Mb
+  server: namrcg001662wgh.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 8.26Mb
+  server: r3mrcg007175dsk.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: _129 |27.60Mb
+  server: 20.6.128.4
+  type: vmess
+  port: 6788
+  udp: true
+  uuid: bfff8306-6102-4fde-8a7f-f025e94f7a53
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+- name: disney_netflix_HK |25.20Mb
   server: 156.238.250.91
   type: vmess
   port: 18811
@@ -840,10 +1849,140 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: Relay_-🇰🇷KR_145
-  server: 221.146.116.77
+- name: disney_netflix_PL | 3.40Mb
+  server: 146.59.118.182
+  type: vmess
+  port: 443
+  udp: true
+  uuid: 0b72f4f7-55f3-4d83-92ae-e391f6523f44
+  alterId: 0
+  cipher: auto
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+    headers:
+      Host:
+      - 146.59.118.182
+  h2-opts: {}
+- name: Pool__132 |75.83Mb
+  server: 15.204.50.250
+  type: vmess
+  port: 443
+  udp: true
+  uuid: 64c58857-f224-4011-aaf3-5f7915a526b6
+  alterId: 0
+  cipher: auto
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+    headers:
+      Host:
+      - 15.204.50.250
+  h2-opts: {}
+- name: disney_US | 2.26Mb
+  server: 38.76.206.31
+  type: vmess
+  port: 443
+  udp: true
+  uuid: 0c31416e-f2dc-4fdd-9a1e-2eaa403e2e6e
+  alterId: 0
+  cipher: auto
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+  h2-opts: {}
+- name: disney_US | 1.71Mb
+  server: 38.76.206.31
+  type: vmess
+  port: 8080
+  udp: true
+  uuid: 912f1899-c436-4b35-ef7f-134795329e01
+  alterId: 0
+  cipher: auto
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+  h2-opts: {}
+- name: _135
+  server: 51.68.240.35
+  type: vmess
+  port: 443
+  udp: true
+  uuid: 491ce522-7923-41ad-869f-df74539af6e0
+  alterId: 0
+  cipher: auto
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+    headers:
+      Host:
+      - 51.68.240.35
+  h2-opts: {}
+- name: disney_netflix_ES |97.07Mb
+  server: 85.90.217.42
+  type: vmess
+  port: 22324
+  udp: true
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: Relay_-🇯🇵JP_137 |56.13Mb
+  server: v6.hdacd.com
+  type: vmess
+  port: 30806
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+- name: disney_netflix_DE |673.98Mb
+  server: 51.89.11.94
+  type: vmess
+  port: 443
+  udp: true
+  uuid: e5408561-3874-4d41-a744-0cd0dfdb86c8
+  alterId: 0
+  cipher: auto
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+    headers:
+      Host:
+      - 51.89.11.94
+  h2-opts: {}
+- name: _140 | 9.18Mb
+  server: 58.152.25.253
   type: trojan
-  port: 10003
+  port: 443
+  udp: true
+  password: BxceQaOe
+  skip-cert-verify: true
+- name: Relay_-🇮🇪IE_141 |391.75Mb
+  server: grown-goldfish.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: grown-goldfish.rooster465.autos
+- name: disney_netflix_AT
+  server: 152.53.45.251
+  type: trojan
+  port: 8888
   udp: true
   password: trojan
   sni: jflsjlaf.pages.dev
@@ -853,19 +1992,214 @@ proxies:
     headers:
       Host: jflsjlaf.pages.dev
   network: ws
-- name: netflix_SG |11.11Mb
-  server: 160.16.214.104
+- name: Relay_-🇺🇸US_143 |39.43Mb
+  server: alert-sunbird.crayfish192.xyz
   type: trojan
-  port: 4674
-  password: 6d29eb2f74293cb01a19b32cf08ad2e9
-  sni: www.nintendogames.net
-- name: disney_KR |11.31Mb
+  port: 443
+  password: WF42809561
+  sni: alert-sunbird.crayfish192.xyz
+- name: _144 | 5.99Mb
+  server: 103.231.73.181
+  type: trojan
+  port: 4443
+  udp: true
+  password: strong-secret-pass-777
+  skip-cert-verify: true
+- name: disney_netflix_GB |147.45Mb
+  server: 172.66.44.230
+  type: trojan
+  port: 8443
+  udp: true
+  password: 8r<[9'l6hAO#8ZQi
+  sni: Koma-YT.PAGeS.Dev
+  ws-opts:
+    path: /tro8sFW1S91B6sZrM1?ed=2560
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+  network: ws
+- name: Relay_-🇦🇺AU_147 |11.31Mb
+  server: premium-lab.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: premium-lab.rooster465.autos
+- name: disney_netflix_PL |135.75Mb
+  server: outgoing-ladybird.rooster465.autos
+  type: trojan
+  port: 443
+  udp: true
+  password: IL37892054
+  sni: outgoing-ladybird.rooster465.autos
+- name: disney_netflix_NL |478.33Mb
+  server: model-stingray.crayfish192.xyz
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: model-stingray.crayfish192.xyz
+- name: disney_KR |10.56Mb
   server: sterling-fowl.rooster465.autos
   type: trojan
   port: 443
   password: WF42809561
   sni: sterling-fowl.rooster465.autos
-- name: disney_netflix_HK
+- name: disney_netflix_PL |133.27Mb
+  server: funky-platypus.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: funky-platypus.rooster465.autos
+- name: disney_netflix_US |40.75Mb
+  server: 160.16.70.180
+  type: trojan
+  port: 3700
+  password: 6d29eb2f74293cb01a19b32cf08ad2e9
+  sni: www.nintendogames.net
+- name: disney_netflix_NL_5
+  server: 152.53.200.98
+  type: trojan
+  port: 8444
+  udp: true
+  password: trojan
+  sni: jflsjlaf.pages.dev
+  skip-cert-verify: true
+  ws-opts:
+    path: '%2F'
+    headers:
+      Host: jflsjlaf.pages.dev
+  network: ws
+- name: Relay_-🇸🇬SG_154 |11.26Mb
+  server: 160.16.214.104
+  type: trojan
+  port: 4674
+  password: 6d29eb2f74293cb01a19b32cf08ad2e9
+  sni: www.nintendogames.net
+- name: disney_KR |11.69Mb
+  server: powerful-squid.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: powerful-squid.rooster465.autos
+- name: Relay_-🇦🇺AU_156 |11.39Mb
+  server: evolving-kangaroo.rooster465.autos
+  type: trojan
+  port: 443
+  udp: true
+  password: WF42809561
+  sni: evolving-kangaroo.rooster465.autos
+- name: netflix_JP |22.48Mb
+  server: 153.121.38.213
+  type: trojan
+  port: 4937
+  password: 6d29eb2f74293cb01a19b32cf08ad2e9
+  sni: www.nintendogames.net
+- name: disney_KR |10.82Mb
+  server: amused-peacock.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: amused-peacock.rooster465.autos
+- name: Relay_-🇮🇪IE_159 |312.72Mb
+  server: eternal-serval.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: eternal-serval.rooster465.autos
+- name: disney_netflix_NL | 3.89Mb
+  server: 104.18.11.110
+  type: trojan
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.multiplydose.com
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.multiplydose.com
+  network: ws
+- name: disney_NL |48.52Mb
+  server: touching-pigeon.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: touching-pigeon.rooster465.autos
+- name: disney_netflix_NL |926.19Mb
+  server: 94.131.105.125
+  type: trojan
+  port: 4443
+  udp: true
+  password: strong-secret-pass-777
+  skip-cert-verify: true
+- name: disney_netflix_NL_6
+  server: 136.244.105.89
+  type: trojan
+  port: 82
+  udp: true
+  password: trojan
+  sni: jflsjlaf.pages.dev
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: jflsjlaf.pages.dev
+  network: ws
+- name: Relay_-🇮🇪IE_164 |317.27Mb
+  server: optimal-dane.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: optimal-dane.rooster465.autos
+- name: disney_netflix_US_1
+  server: 38.83.41.89
+  type: trojan
+  port: 28080
+  udp: true
+  password: trojan
+  sni: jflsjlaf.pages.dev
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: jflsjlaf.pages.dev
+  network: ws
+- name: Relay_-🇮🇪IE_166 |312.15Mb
+  server: saving-anemone.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: saving-anemone.rooster465.autos
+- name: netflix_JP |21.51Mb
+  server: 160.16.124.17
+  type: trojan
+  port: 34818
+  password: 6d29eb2f74293cb01a19b32cf08ad2e9
+  sni: www.nintendogames.net
+- name: disney_netflix_US |34.27Mb
+  server: n1.chateditimage.com
+  type: trojan
+  port: 443
+  udp: true
+  password: 4123ae62-0999-4984-8ead-091630e594a9
+  sni: n1.chateditimage.com
+  skip-cert-verify: true
+- name: disney_PL |21.93Mb
+  server: top-goshawk.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: top-goshawk.rooster465.autos
+- name: netflix_JP |23.10Mb
+  server: 160.16.106.99
+  type: trojan
+  port: 4937
+  password: 6d29eb2f74293cb01a19b32cf08ad2e9
+  sni: www.nintendogames.net
+- name: disney_KR | 8.57Mb
+  server: ready-lion.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: ready-lion.rooster465.autos
+- name: disney_HK
   server: 54.46.72.234
   type: trojan
   port: 8025
@@ -878,44 +2212,62 @@ proxies:
     headers:
       Host: jflsjlaf.pages.dev
   network: ws
-- name: netflix_JP |19.63Mb
-  server: 153.121.38.213
-  type: trojan
-  port: 4937
-  password: 6d29eb2f74293cb01a19b32cf08ad2e9
-  sni: www.nintendogames.net
-- name: disney_KR |10.42Mb
-  server: ready-lion.rooster465.autos
+- name: Relay_-🇫🇷FR_173
+  server: prompt-duckling.rooster465.autos
   type: trojan
   port: 443
   password: WF42809561
-  sni: ready-lion.rooster465.autos
-- name: disney_KR |11.14Mb
-  server: amused-peacock.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: amused-peacock.rooster465.autos
-- name: disney_KR |15.20Mb
-  server: powerful-squid.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: powerful-squid.rooster465.autos
-- name: netflix_JP |21.87Mb
-  server: 160.16.106.99
-  type: trojan
-  port: 4937
-  password: 6d29eb2f74293cb01a19b32cf08ad2e9
-  sni: www.nintendogames.net
-- name: disney_netflix_HK |26.42Mb
+  sni: prompt-duckling.rooster465.autos
+- name: Relay_-🇭🇰HK_174 |26.55Mb
   server: ready-monarch.rooster465.autos
   type: trojan
   port: 443
   udp: true
   password: WF42809561
   sni: ready-monarch.rooster465.autos
-- name: Relay_🇨🇳 CN-🇺🇸US_182
+- name: Relay_-🇩🇪DE_175 |699.12Mb
+  server: dynamic-tiger.crayfish192.xyz
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: dynamic-tiger.crayfish192.xyz
+- name: Relay_-🇫🇷FR_176
+  server: sterling-dinosaur.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: sterling-dinosaur.rooster465.autos
+- name: Relay_-🇫🇷FR_177
+  server: still-mastodon.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: still-mastodon.rooster465.autos
+- name: 🇧🇪BE_178 | 2.11Mb
+  server: 57.129.130.23
+  type: vmess
+  country: 🇧🇪BE
+  port: 443
+  uuid: 34faa20a-7597-444c-81a3-a92042e3cd95
+  alterId: 0
+  cipher: auto
+  network: http
+  servername: 57.129.130.23
+  http-opts:
+    method: GET
+    path:
+    - /
+  h2-opts: {}
+  skip-cert-verify: true
+- name: Relay_🇧🇬 BG-🇦🇺AU_179 |11.48Mb
+  server: enhanced-crayfish.rooster465.autos
+  type: trojan
+  country: 🇧🇬 BG
+  port: 443
+  udp: true
+  password: IL37892054
+  skip-cert-verify: true
+- name: Relay_🇨🇳 CN-🇺🇸US_180
   server: v35.hdacd.com
   type: vmess
   country: 🇨🇳 CN
@@ -927,19 +2279,7 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: Relay_🇨🇳CN-🇸🇬SG_183 | 1.84Mb
-  server: v12.hdacd.com
-  type: vmess
-  country: 🇨🇳CN
-  port: 30812
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: Relay_🇨🇳CN-🇺🇸US_184 |31.71Mb
+- name: Relay_🇨🇳CN-🇺🇸US_181 | 8.81Mb
   server: v36.hdacd.com
   type: vmess
   country: 🇨🇳CN
@@ -952,7 +2292,35 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: Relay_🇭🇰 HK-🇺🇸US_187 |33.83Mb
+- name: disney_netflix_US |168.74Mb
+  server: 82.198.246.97
+  type: vmess
+  country: 🇬🇧GB
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_netflix_NL |998.04Mb
+  server: 85.234.65.58
+  type: trojan
+  country: 🇬🇧GB
+  port: 443
+  udp: true
+  password: WF42809561
+  sni: touching-pigeon.rooster465.autos
+  skip-cert-verify: true
+- name: Pool_🇭🇰 HK_185 | 5.10Mb
+  server: 103.141.221.124
+  type: ss
+  country: 🇭🇰 HK
+  port: 8388
+  password: asd123456
+  cipher: chacha20-ietf
+- name: Relay_🇭🇰 HK-🇺🇸US_186 |50.99Mb
   server: v4.hdacd.com
   type: vmess
   country: 🇭🇰 HK
@@ -964,7 +2332,43 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_netflix_HK | 7.20Mb
+- name: Relay_🇭🇰HK-🇮🇩ID_187 |14.12Mb
+  server: 47.57.182.141
+  type: vmess
+  country: 🇭🇰HK
+  port: 443
+  uuid: 462d9694-62b5-4781-a287-61a422b920e8
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: mn1ray.jagoanvip.xyz
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vvip
+    headers:
+      HOST: mn1ray.jagoanvip.xyz
+- name: Relay_🇭🇰HK-🇭🇰HK_188 | 2.05Mb
+  server: n1761296878.4u9ma.icu
+  type: vmess
+  country: 🇭🇰HK
+  port: 443
+  uuid: 78f61544-3393-4e6b-9c77-5deaa0c7471d
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: n1761296878.4u9ma.icu
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: n1761296878.4u9ma.icu
+- name: disney_netflix_HK | 7.08Mb
   server: 103.143.238.196
   type: vmess
   country: 🇭🇰HK
@@ -982,14 +2386,42 @@ proxies:
     path: /vmesswss
     headers:
       HOST: www.cloudflare.com
-- name: netflix_KR |57.94Mb
+- name: 🇭🇺HU |28.34Mb
+  server: 194.71.130.26
+  type: ss
+  country: 🇭🇺HU
+  port: 2949
+  password: v8NKiSxilGVslodFPWWLR8
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_PL |138.11Mb
+  server: fluent-stingray.crayfish192.xyz
+  type: trojan
+  country: 🇭🇺HU
+  port: 443
+  udp: true
+  password: IL37892054
+  sni: fluent-stingray.crayfish192.xyz
+  skip-cert-verify: true
+- name: Relay_🇮🇷IR-🇳🇱NL_192 | 1.87Mb
+  server: v30.hdacd.com
+  type: vmess
+  country: 🇮🇷IR
+  port: 30830
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 0
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: 🇰🇷KR |73.48Mb
   server: 141.164.45.187
   type: ss
   country: 🇰🇷KR
   port: 5498
   password: lGqs95QkFHo2NV
   cipher: aes-256-gcm
-- name: netflix_KR |23.17Mb
+- name: Relay_🇰🇷KR-🇰🇷KR_194 |50.53Mb
   server: chuncheon03.zgjok.com
   type: vmess
   country: 🇰🇷KR
@@ -1007,7 +2439,7 @@ proxies:
     path: /
     headers:
       HOST: chuncheon03.zgjok.com
-- name: netflix_JP | 6.47Mb
+- name: netflix_JP | 6.36Mb
   server: 45.12.134.57
   type: trojan
   country: 🇳🇱NL
@@ -1015,77 +2447,104 @@ proxies:
   udp: true
   password: strong-secret-pass-777
   skip-cert-verify: true
-- name: disney_netflix_TW | 9.17Mb
-  server: nbmrcg003437cgb.cybervena.com
+- name: netflix_DK |24.82Mb
+  server: 192.36.27.94
   type: ss
-  country: 🇹🇼 TW
-  port: 50099
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 9.36Mb
+  country: 🇸🇪 SE
+  port: 989
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
+- name: disney_TW | 5.95Mb
   server: n8mrcg005958sxh.cybervena.com
   type: ss
   country: 🇹🇼 TW
   port: 50099
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_TW | 6.96Mb
-  server: nbmrcg0034305hx.cybervena.com
-  type: ss
-  country: 🇹🇼 TW
-  port: 50099
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 8.29Mb
-  server: r3mrcg0071643p7.cybervena.com
-  type: ss
-  country: 🇹🇼 TW
-  port: 50099
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 9.60Mb
-  server: r3mrcg001222869.cybervena.com
-  type: ss
-  country: 🇹🇼 TW
-  port: 50099
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW | 8.21Mb
+- name: Relay_🇹🇼 TW | 8.21Mb
   server: r3mrcg00121233v.cybervena.com
   type: ss
   country: 🇹🇼 TW
   port: 50099
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW |10.04Mb
-  server: r3mrcg001296egb.cybervena.com
+- name: disney_TW | 9.82Mb
+  server: nbmrcg003437cgb.cybervena.com
   type: ss
-  country: 🇹🇼TW
+  country: 🇹🇼 TW
   port: 50099
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_TW | 8.72Mb
-  server: r3mrcg001121x36.cybervena.com
+- name: disney_TW | 7.58Mb
+  server: nbmrcg0034305hx.cybervena.com
   type: ss
-  country: 🇹🇼TW
+  country: 🇹🇼 TW
   port: 50099
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW |11.79Mb
+- name: disney_TW | 9.37Mb_1
+  server: r3mrcg0071643p7.cybervena.com
+  type: ss
+  country: 🇹🇼 TW
+  port: 50099
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 8.71Mb
   server: r3mrcg0011778me.cybervena.com
   type: ss
   country: 🇹🇼TW
   port: 50099
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_TW | 7.05Mb
+- name: disney_TW | 8.74Mb
+  server: r3mrcg001121x36.cybervena.com
+  type: ss
+  country: 🇹🇼TW
+  port: 50099
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 9.65Mb
+  server: r3mrcg001296egb.cybervena.com
+  type: ss
+  country: 🇹🇼TW
+  port: 50099
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 1.41Mb
   server: nbmrcg003494xuj.cybervena.com
   type: ss
   country: 🇹🇼TW
   port: 50099
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_KR |11.07Mb
+- name: Relay_🇺🇸US-🇮🇩ID_207 | 8.86Mb
+  server: 47.130.9.238
+  type: vmess
+  country: 🇺🇸US
+  port: 443
+  uuid: 462d9694-62b5-4781-a287-61a422b920e8
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: mn1ray.jagoanvip.xyz
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vvip
+    headers:
+      HOST: mn1ray.jagoanvip.xyz
+- name: Relay_🇺🇸US-🇺🇸US_208 |40.50Mb
+  server: healthy-ewe.rooster465.autos
+  type: trojan
+  country: 🇺🇸US
+  port: 443
+  udp: true
+  password: IL37892054
+  sni: healthy-ewe.rooster465.autos
+  skip-cert-verify: true
+- name: disney_KR |10.55Mb
   server: positive-bear.rooster465.autos
   type: trojan
   country: 🇺🇸US
@@ -1094,20 +2553,32 @@ proxies:
   password: IL37892054
   sni: positive-bear.rooster465.autos
   skip-cert-verify: true
-- name: disney_TW | 5.91Mb_1
-  server: n8mrcg0060292s3.cybervena.com
-  type: ss
-  country: 🏁 ZZ
-  port: 50099
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: Relay_🏁 ZZ-🇹🇼TW_210 | 2.89Mb
+- name: disney_TW | 4.97Mb
   server: nbmrcg003505rnd.cybervena.com
   type: ss
   country: 🏁 ZZ
   port: 50099
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
+- name: disney_TW | 8.29Mb
+  server: n8mrcg0060292s3.cybervena.com
+  type: ss
+  country: 🏁 ZZ
+  port: 50099
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: Relay_🏁 ZZ-🇺🇸US_212 | 0.37Mb
+  server: v24.hdacd.com
+  type: vmess
+  country: 🏁 ZZ
+  port: 30824
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
 - name: 爱尔兰 - 都柏林 - 1
   server: 194.4.51.171
   port: '8444'
@@ -1121,19 +2592,6 @@ proxies:
     headers:
       Host: jflsjlaf.pages.dev
   delay: 1832
-- name: 奥地利 - 萊塔河畔布魯克 - 1
-  server: 152.53.45.251
-  port: '8888'
-  type: trojan
-  password: trojan
-  sni: jflsjlaf.pages.dev
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: jflsjlaf.pages.dev
-  delay: 2911
 - name: 澳大利亚 - 悉尼 - 1
   server: 52.64.121.20
   port: '12580'
@@ -1667,6 +3125,19 @@ proxies:
     headers:
       Host: jflsjlaf.pages.dev
   delay: 2068
+- name: 韩国 - Yeongdong-gun - 2
+  server: 221.146.116.77
+  port: '10003'
+  type: trojan
+  password: trojan
+  sni: jflsjlaf.pages.dev
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: jflsjlaf.pages.dev
+  delay: 1112
 - name: 韩国 - Yeongdong-gun - 20
   server: 59.20.121.139
   port: '29999'
@@ -1953,19 +3424,6 @@ proxies:
     headers:
       Host: jflsjlaf.pages.dev
   delay: 1546
-- name: 荷兰 - 阿姆斯特丹 - 21
-  server: 136.244.105.89
-  port: '82'
-  type: trojan
-  password: trojan
-  sni: jflsjlaf.pages.dev
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: jflsjlaf.pages.dev
-  delay: 2321
 - name: 荷兰 - 阿姆斯特丹 - 22
   server: 152.53.105.238
   port: '8444'
@@ -2148,19 +3606,6 @@ proxies:
     headers:
       Host: jflsjlaf.pages.dev
   delay: 2067
-- name: 荷兰 - 阿姆斯特丹 - 9
-  server: 152.53.200.98
-  port: '8444'
-  type: trojan
-  password: trojan
-  sni: jflsjlaf.pages.dev
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: jflsjlaf.pages.dev
-  delay: 2071
 - name: 加拿大 - 蒙特利尔 - 1
   server: 158.69.192.34
   port: '8989'
@@ -2330,19 +3775,6 @@ proxies:
     headers:
       Host: jflsjlaf.pages.dev
   delay: 1344
-- name: 美国 - 东洛杉矶 - 9
-  server: 38.83.41.89
-  port: '28080'
-  type: trojan
-  password: trojan
-  sni: jflsjlaf.pages.dev
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: jflsjlaf.pages.dev
-  delay: 2362
 - name: 美国 - 聖荷西 - 1
   server: 128.241.251.81
   port: '40001'
@@ -2668,60 +4100,10 @@ proxies:
     headers:
       Host: jflsjlaf.pages.dev
   delay: 1340
-- name: 波兰 - 华沙 - 1
-  server: 146.59.118.182
-  port: 443
-  type: vmess
-  uuid: 0b72f4f7-55f3-4d83-92ae-e391f6523f44
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: http
-  http-opts:
-    method: GET
-    path:
-    - /
-    headers:
-      Host:
-      - 146.59.118.182
-  udp: true
-  delay: 702
-- name: 德国 - 法兰克福 - 1
-  server: 51.89.11.94
-  port: 443
-  type: vmess
-  uuid: e5408561-3874-4d41-a744-0cd0dfdb86c8
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: http
-  http-opts:
-    method: GET
-    path:
-    - /
-    headers:
-      Host:
-      - 51.89.11.94
-  udp: true
-  delay: 802
-- name: 俄罗斯 - 莫斯科 - 1
-  server: 38.60.223.8
-  port: 989
-  type: ss
-  cipher: aes-256-cfb
-  password: f8f7aCzcPKbsF8p3
-  udp: true
-  delay: 1414
-- name: 法国 - 巴黎 - 1
-  server: 13.37.222.70
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 501
+- name: Shadowsocks
+  type: socks5
+  server: 127.0.0.1
+  port: 1080
 - name: 法国 - 巴黎 - 2
   server: 13.36.242.117
   type: trojan
@@ -2760,31 +4142,6 @@ proxies:
   skip-cert-verify: true
   udp: true
   delay: 2593
-- name: 法国 - 格拉沃利讷 - 6
-  server: 51.68.240.35
-  type: vmess
-  country: 🇫🇷FR
-  port: 443
-  uuid: 491ce522-7923-41ad-869f-df74539af6e0
-  alterId: 0
-  cipher: auto
-  network: http
-  servername: 51.68.240.35
-  http-opts:
-    method: GET
-    path:
-    - /
-  h2-opts: {}
-  skip-cert-verify: true
-  delay: 477
-- name: 哥伦比亚 - 波哥大 - 1
-  server: 154.223.16.212
-  port: 989
-  type: ss
-  cipher: aes-256-cfb
-  password: f8f7aCzcPKbsF8p3
-  udp: true
-  delay: 688
 - name: 韩国 - 春川市 - 3
   server: testkr3.ssv.vc
   port: 30446
@@ -2802,38 +4159,6 @@ proxies:
   skip-cert-verify: true
   udp: true
   delay: 1882
-- name: 荷兰 - 莱顿 - 1
-  server: v30.hdacd.com
-  type: vmess
-  country: 🇮🇷IR
-  port: 30830
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  delay: 2083
-- name: 拉脱维亚 - 里加 - 1_1
-  server: 103.231.73.181
-  port: 4443
-  type: trojan
-  password: strong-secret-pass-777
-  skip-cert-verify: true
-  udp: true
-  delay: 2544
-- name: 美国 - 北伯根 - 1
-  server: v24.hdacd.com
-  port: 30824
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-  delay: 2010
 - name: 美国 - 坦帕 - 4
   server: 38.180.141.48
   port: 443
@@ -2843,25 +4168,6 @@ proxies:
   skip-cert-verify: true
   udp: true
   delay: 2839
-- name: 美国 - 希尔斯伯勒 - 2
-  server: 15.204.50.250
-  port: 443
-  type: vmess
-  uuid: 64c58857-f224-4011-aaf3-5f7915a526b6
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: http
-  http-opts:
-    method: GET
-    path:
-    - /
-    headers:
-      Host:
-      - 15.204.50.250
-  udp: true
-  delay: 913
 - name: 葡萄牙 - 里斯本 - 1
   server: 185.231.233.112
   port: 989
@@ -2870,19 +4176,6 @@ proxies:
   password: f8f7aCzcPKbsF8p3
   udp: true
   delay: 1020
-- name: 日本 - 大阪市 - 1
-  server: v6.hdacd.com
-  port: 30806
-  type: vmess
-  country: 🏁 ZZ
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  ws-path: /
-  skip-cert-verify: true
-  delay: 642
 - name: 瑞典 - 斯德哥尔摩 - 1
   server: 51.15.23.63
   port: 989
@@ -2899,6 +4192,17 @@ proxies:
   password: ZET59LF6DvCC8KVt
   cipher: aes-256-cfb
   delay: 619
+- name: 新加坡 - 新加坡 - 1_1
+  server: v12.hdacd.com
+  port: 30812
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
+  delay: 2396
 - name: 印度尼西亚 - Kresek - 1
   server: 8.223.63.150
   type: vmess
@@ -2918,22 +4222,6 @@ proxies:
     headers:
       HOST: mn1ray.jagoanvip.xyz
   delay: 1535
-- name: 英国 - Bexley - 1
-  server: 57.129.130.23
-  port: 443
-  type: vmess
-  uuid: 34faa20a-7597-444c-81a3-a92042e3cd95
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: http
-  http-opts:
-    method: GET
-    path:
-    - /
-  udp: true
-  delay: 846
 - name: 越南 - Hải Dương - 1
   server: 103.186.155.84
   port: 38388
@@ -3086,14 +4374,14 @@ proxies:
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
   delay: 521
-- name: 中国 - 台湾 - 4_1
-  server: r3mrcg007134n4g.cybervena.com
+- name: 中国 - 台湾 - 11
+  server: r3mrcg007117fb8.cybervena.com
   type: ss
+  country: 🇹🇼TW
   port: 50099
-  udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-  delay: 281
+  delay: 278
 - name: 中国 - 香港 - 13
   server: e3c7f60e-t8pj40-t9b2j8-11p9g.hkt.gotochinatown.net
   type: vmess
@@ -3177,1263 +4465,6 @@ proxies:
   skip-cert-verify: true
   udp: true
   delay: 571
-- name: 00-Trojan-jp-AI
-  server: jp.111000.cc.cd
-  port: 443
-  type: trojan
-  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  sni: sni.111000.dynv6.net
-  network: ws
-  ws-opts:
-    path: /?ed=2560&proxyip=ip.111000.de5.net:443
-    headers:
-      Host: sni.111000.dynv6.net
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: 00-WS-jp-AI
-  server: jp.111000.cc.cd
-  port: 443
-  client-fingerprint: firefox
-  type: vless
-  UUID: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  tls: true
-  servername: sni.111000.dynv6.net
-  network: ws
-  ws-opts:
-    path: /?ed=2560&proxyip=ip.111000.de5.net:443
-    headers:
-      Host: sni.111000.dynv6.net
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: 01-Trojan-030101.xyz
-  server: bestcf.030101.xyz
-  port: 443
-  type: trojan
-  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  sni: sni.111000.dynv6.net
-  network: ws
-  ws-opts:
-    path: /?ed=2560&proxyip=ip.111000.de5.net:443
-    headers:
-      Host: sni.111000.dynv6.net
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: 01-WS-030101.xyz
-  server: bestcf.030101.xyz
-  port: 443
-  client-fingerprint: firefox
-  type: vless
-  UUID: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  tls: true
-  servername: sni.111000.dynv6.net
-  network: ws
-  ws-opts:
-    path: /?ed=2560&proxyip=ip.111000.de5.net:443
-    headers:
-      Host: sni.111000.dynv6.net
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: 02-Trojan-saas.sin.fan
-  server: saas.sin.fan
-  port: 443
-  type: trojan
-  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  sni: sni.111000.dynv6.net
-  network: ws
-  ws-opts:
-    path: /?ed=2560&proxyip=ip.111000.de5.net:443
-    headers:
-      Host: sni.111000.dynv6.net
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: 02-WS-saas.sin.fan
-  server: saas.sin.fan
-  port: 443
-  client-fingerprint: firefox
-  type: vless
-  UUID: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  tls: true
-  servername: sni.111000.dynv6.net
-  network: ws
-  ws-opts:
-    path: /?ed=2560&proxyip=ip.111000.de5.net:443
-    headers:
-      Host: sni.111000.dynv6.net
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: 03-Trojan-cloudflare88
-  server: freeyx.cloudflare88.eu.org
-  port: 443
-  type: trojan
-  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  sni: sni.111000.dynv6.net
-  network: ws
-  ws-opts:
-    path: /?ed=2560&proxyip=ip.111000.de5.net:443
-    headers:
-      Host: sni.111000.dynv6.net
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: 03-WS-cloudflare88
-  server: freeyx.cloudflare88.eu.org
-  port: 443
-  client-fingerprint: firefox
-  type: vless
-  UUID: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  tls: true
-  servername: sni.111000.dynv6.net
-  network: ws
-  ws-opts:
-    path: /?ed=2560&proxyip=ip.111000.de5.net:443
-    headers:
-      Host: sni.111000.dynv6.net
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: Shadowsocks
-  type: socks5
-  server: 127.0.0.1
-  port: 1080
-- name: disney_netflix_GB
-  server: 45.131.208.191
-  type: vless
-  port: 2096
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: sni.my111000.tech
-  ws-opts:
-    path: /Telegram🇨🇳@WangCai2/
-    headers:
-      Host: sni.my111000.tech
-  packet-encoding: ''
-- name: disney_netflix_GB_1
-  server: 104.17.155.101
-  type: vless
-  port: 443
-  udp: true
-  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: wu.090881.xyz
-  ws-opts:
-    path: /products/proxyip=ProxyIP.SG.CMLiussss.net/proxyip=ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: wu.090881.xyz
-  packet-encoding: ''
-- name: Relay_-🇩🇪DE_03 | 2.45Mb
-  server: 47.76.218.163
-  type: vless
-  port: 443
-  udp: true
-  uuid: 69c70236-6d7f-a785-2d3a-5332b1c91e99
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: bab1c79b.soos.bbroot.com
-  ws-opts:
-    path: /socks5=4b2c7676:6f0f4cbba5bb@38.111.30.111:26433
-    headers:
-      Host: bab1c79b.soos.bbroot.com
-  alpn:
-  - h3
-  packet-encoding: ''
-- name: netflix_BE |122.18Mb
-  server: 192.200.160.20
-  type: vless
-  port: 443
-  udp: true
-  uuid: c1a5ecfa-8a01-4070-91e0-0328b82388ad
-  network: ws
-  tls: true
-  servername: 639073677243396643.camry-perma.info
-  ws-opts:
-    path: /phnkfhws?ed=2560
-    headers:
-      Host: 639073677243396643.camry-perma.info
-  packet-encoding: ''
-- name: disney_netflix_SE
-  server: 185.82.126.185
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: Relay_-🇩🇪DE_10 | 6.84Mb
-  server: 8.217.180.234
-  type: vless
-  port: 443
-  udp: true
-  uuid: 69c70236-6d7f-a785-2d3a-5332b1c91e99
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: bab1c79b.soos.bbroot.com
-  ws-opts:
-    path: /socks5=4b2c7676:6f0f4cbba5bb@38.111.30.111:26433
-    headers:
-      Host: bab1c79b.soos.bbroot.com
-  alpn:
-  - h3
-  packet-encoding: ''
-- name: disney_netflix_US
-  server: 94.131.101.135
-  type: vless
-  port: 443
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: netflix_FI |49.50Mb
-  server: 185.93.105.107
-  type: vless
-  port: 443
-  udp: true
-  uuid: c4f2dee2-14e3-4c02-91e9-31c7917e239c
-  network: tcp
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: qq
-  servername: sub.sbrf-cdn342.ru
-  packet-encoding: ''
-- name: disney_netflix_DE
-  server: 88.198.152.85
-  type: vless
-  port: 443
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_DE_1
-  server: 89.58.32.115
-  type: vless
-  port: 12001
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_GB_2
-  server: china.embassy.gov.au
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: okbhq9o4867.gfw.hidns.co
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: okbhq9o4867.gfw.hidns.co
-  packet-encoding: ''
-- name: disney_netflix_NL |265.37Mb
-  server: 195.181.173.199
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  network: tcp
-  tls: true
-  servername: ams1.fromblancwithlove.com
-  alpn:
-  - h2
-  packet-encoding: ''
-- name: disney_netflix_GB_3
-  server: 135.84.74.155
-  type: vless
-  port: 443
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?Telegram🇨🇳 @WangCai2=
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_GB_4
-  server: 57.129.137.87
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: netflix_CA |92.47Mb
-  server: hjnd.0101.pw
-  type: hysteria2
-  port: 8444
-  udp: true
-  password: ed538a91-5853-4b6e-bf2f-47831747c9d2
-  auth: ed538a91-5853-4b6e-bf2f-47831747c9d2
-  sni: hjnd.0101.pw
-  skip-cert-verify: true
-- name: Relay_-🇮🇳IN_23 |45.78Mb
-  server: yindu.iptk123.com
-  type: hysteria2
-  port: 443
-  udp: true
-  password: 78449a5d-6cf2-4fd4-bf4f-9c9d8ede2cd3
-  auth: 78449a5d-6cf2-4fd4-bf4f-9c9d8ede2cd3
-  sni: yindu.iptk123.com
-  skip-cert-verify: true
-- name: disney_netflix_LV
-  server: 45.43.76.184
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_GB_5
-  server: one.dash.cloudflare.com
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: wbsnthrtc.chinav.indevs.in
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: wbsnthrtc.chinav.indevs.in
-  packet-encoding: ''
-- name: disney_netflix_GB_6
-  server: 104.19.73.126
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: wbsnthrtc.chinav.indevs.in
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: wbsnthrtc.chinav.indevs.in
-  packet-encoding: ''
-- name: disney_netflix_GB_7
-  server: cf.cloudflare.182682.xyz
-  type: vless
-  port: 443
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: wbsnthrtc.chinav.indevs.in
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: wbsnthrtc.chinav.indevs.in
-  packet-encoding: ''
-- name: disney_netflix_GB_8
-  server: b3.cfyx.20237737.xyz
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: abxxswoudcjz.chinav.eu.org
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: abxxswoudcjz.chinav.eu.org
-  packet-encoding: ''
-- name: disney_netflix_DE_2
-  server: 188.34.160.97
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_GB_9
-  server: 209.102.207.120
-  type: vless
-  port: 443
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  skip-cert-verify: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_NL
-  server: 185.198.167.93
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_GB_10
-  server: go2.lenovo.com
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: wbsnthrtc.chinav.indevs.in
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: wbsnthrtc.chinav.indevs.in
-  packet-encoding: ''
-- name: disney_netflix_GB_11
-  server: docker.1panel.live
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: qt2cte0z61.gfw.hidns.co
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: qt2cte0z61.gfw.hidns.co
-  packet-encoding: ''
-- name: disney_netflix_GB_12
-  server: cloudflare.seeck.cn
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: qt2cte0z61.gfw.hidns.co
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: qt2cte0z61.gfw.hidns.co
-  packet-encoding: ''
-- name: disney_netflix_GB_13
-  server: 104.26.12.27
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: qt2cte0z61.gfw.hidns.co
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: qt2cte0z61.gfw.hidns.co
-  packet-encoding: ''
-- name: disney_netflix_GB_14
-  server: 162.159.254.137
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: qt2cte0z61.gfw.hidns.co
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: qt2cte0z61.gfw.hidns.co
-  packet-encoding: ''
-- name: disney_netflix_GB_15
-  server: newsroom.paypal-corp.com
-  type: vless
-  port: 443
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: qt2cte0z61.gfw.hidns.co
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: qt2cte0z61.gfw.hidns.co
-  packet-encoding: ''
-- name: disney_netflix_GB_16
-  server: static.shopify.com
-  type: vless
-  port: 443
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: qt2cte0z61.gfw.hidns.co
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: qt2cte0z61.gfw.hidns.co
-  packet-encoding: ''
-- name: disney_netflix_GB_17
-  server: 135.84.74.43
-  type: vless
-  port: 443
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  skip-cert-verify: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_GB_18
-  server: cfxr.eu.org
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: qt2cte0z61.gfw.hidns.co
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: qt2cte0z61.gfw.hidns.co
-  packet-encoding: ''
-- name: disney_netflix_GB_19
-  server: unpkg.com
-  type: vless
-  port: 443
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: qt2cte0z61.gfw.hidns.co
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: qt2cte0z61.gfw.hidns.co
-  packet-encoding: ''
-- name: disney_netflix_GB_20
-  server: 104.18.32.47
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 68ee25ac-514e-4e00-81ed-67a0ba23954a
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: ed6geslk00b6rndj55k65gj8mbdjuoxi.pages.dev
-  ws-opts:
-    path: /eyJqdW5rIjoiS0ZJaGhSaG14Z0NMeCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjE0Ni4xMDMuMTE0LjEzNCJdfQ==?ed=2560
-    headers:
-      Host: ed6geslk00b6rndj55k65gj8mbdjuoxi.pages.dev
-  packet-encoding: ''
-- name: disney_netflix_NL_1
-  server: 212.34.144.154
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_DE_3
-  server: 185.94.29.156
-  type: vless
-  port: 4001
-  udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
-  network: ws
-  tls: true
-  skip-cert-verify: true
-  servername: sub.mot.ip-ddns.com
-  ws-opts:
-    path: /
-    headers:
-      Host: sub.mot.ip-ddns.com
-  packet-encoding: ''
-- name: disney_netflix_US |87.48Mb
-  server: gby5e0a.accccggggdns.top
-  type: hysteria2
-  port: 41234
-  udp: true
-  password: c37281a0-d156-4548-b3ab-786d74dc5b42
-  auth: c37281a0-d156-4548-b3ab-786d74dc5b42
-  sni: bing.com
-  skip-cert-verify: true
-- name: disney_netflix_GB_21
-  server: pages.cloudflare.com
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: wbsnthrtc.chinav.indevs.in
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: wbsnthrtc.chinav.indevs.in
-  packet-encoding: ''
-- name: disney_netflix_GB_22
-  server: 45.131.209.191
-  type: vless
-  port: 2096
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.my111000.tech
-  ws-opts:
-    path: /Telegram🇨🇳@WangCai2/
-    headers:
-      Host: sni.my111000.tech
-  packet-encoding: ''
-- name: disney_netflix_SE_1
-  server: 31.128.32.98
-  type: vless
-  port: 443
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_NL_2
-  server: 138.226.240.199
-  type: vless
-  port: 4433
-  udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: sub.mot.ip-ddns.com
-  ws-opts:
-    path: /
-    headers:
-      Host: sub.mot.ip-ddns.com
-  packet-encoding: ''
-- name: disney_netflix_DE |63.01Mb
-  server: www.lightenq.buzz
-  type: hysteria2
-  port: 12152
-  udp: true
-  password: aYIRTa8rLh9qRDIrcUakSfzpWUhPcCKD
-  auth: aYIRTa8rLh9qRDIrcUakSfzpWUhPcCKD
-  sni: bing.com
-  skip-cert-verify: true
-- name: disney_netflix_GB_23
-  server: www.gov.se
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: qt2cte0z61.gfw.hidns.co
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: qt2cte0z61.gfw.hidns.co
-  packet-encoding: ''
-- name: disney_DE
-  server: 82.117.245.125
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_GB_24
-  server: notability.com
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: qt2cte0z61.gfw.hidns.co
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: qt2cte0z61.gfw.hidns.co
-  packet-encoding: ''
-- name: disney_netflix_GB_25
-  server: 104.17.152.254
-  type: vless
-  port: 80
-  udp: true
-  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vip.yaml7.ggff.net
-  packet-encoding: ''
-- name: disney_netflix_GB_26
-  server: www.charteredaccountantsanz.com
-  type: vless
-  port: 443
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: qt2cte0z61.gfw.hidns.co
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: qt2cte0z61.gfw.hidns.co
-  packet-encoding: ''
-- name: disney_netflix_NL |143.95Mb
-  server: cdn.7zz.cn
-  type: vless
-  port: 443
-  udp: true
-  uuid: e9254fe9-dd7e-4f90-ab06-4c96c5cd7362
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: 639073677243704890.camry-perma.info
-  ws-opts:
-    path: /qszxrsws?ed=2560
-    headers:
-      Host: 639073677243704890.camry-perma.info
-  packet-encoding: ''
-- name: disney_netflix_GB_27
-  server: testingcf.jsdelivr.net
-  type: vless
-  port: 443
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: okbhq9o4867.gfw.hidns.co
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: okbhq9o4867.gfw.hidns.co
-  packet-encoding: ''
-- name: disney_netflix_NL_3
-  server: 185.243.112.61
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_GB_28
-  server: 104.17.156.229
-  type: vless
-  port: 80
-  udp: true
-  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vip.yaml7.ggff.net
-  packet-encoding: ''
-- name: disney_netflix_GB_29
-  server: www.sofi.com
-  type: vless
-  port: 443
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: pujd1crfzx5.chinam.indevs.in
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: pujd1crfzx5.chinam.indevs.in
-  packet-encoding: ''
-- name: disney_netflix_GB_30
-  server: www.visa.cn
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: rk13hiap.gfw.hidns.co
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: rk13hiap.gfw.hidns.co
-  packet-encoding: ''
-- name: disney_netflix_GB_31
-  server: legion.lenovo.com
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: pujd1crfzx5.chinam.indevs.in
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: pujd1crfzx5.chinam.indevs.in
-  packet-encoding: ''
-- name: disney_netflix_GB_32
-  server: www.gco.gov.qa
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: pujd1crfzx5.chinam.indevs.in
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: pujd1crfzx5.chinam.indevs.in
-  packet-encoding: ''
-- name: disney_netflix_GB_33
-  server: www.investec.com
-  type: vless
-  port: 443
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: ksgyus8a.chinav.indevs.in
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: ksgyus8a.chinav.indevs.in
-  packet-encoding: ''
-- name: disney_netflix_GB_34
-  server: 1357900.xyz
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: ksgyus8a.chinav.indevs.in
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: ksgyus8a.chinav.indevs.in
-  packet-encoding: ''
-- name: _78 | 8.76Mb
-  server: 103.36.91.32
-  type: ss
-  port: 8388
-  udp: true
-  password: asd123456
-  cipher: chacha20-ietf
-- name: _91 |17.80Mb
-  server: 185.189.160.105
-  type: ss
-  port: 41632
-  udp: true
-  password: qwerREWQ@@
-  cipher: aes-256-cfb
-- name: disney_netflix_SE |156.16Mb
-  server: 13.63.166.122
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: disney_netflix_SE |149.85Mb
-  server: 13.61.195.4
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: netflix_ES |10.05Mb
-  server: 5.188.181.201
-  type: ss
-  port: 9025
-  udp: true
-  password: XPtzA9sCug3SPR4c
-  cipher: aes-256-cfb
-- name: netflix_HR | 7.43Mb
-  server: 46.183.184.60
-  type: ss
-  port: 989
-  udp: true
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
-- name: disney_US | 0.38Mb
-  server: 38.76.206.31
-  type: vmess
-  port: 8080
-  udp: true
-  uuid: 912f1899-c436-4b35-ef7f-134795329e01
-  alterId: 0
-  cipher: auto
-  network: http
-  http-opts:
-    method: GET
-    path:
-    - /
-  h2-opts: {}
-- name: disney_US | 2.78Mb
-  server: 38.76.206.31
-  type: vmess
-  port: 443
-  udp: true
-  uuid: 0c31416e-f2dc-4fdd-9a1e-2eaa403e2e6e
-  alterId: 0
-  cipher: auto
-  network: http
-  http-opts:
-    method: GET
-    path:
-    - /
-  h2-opts: {}
-- name: _140 |25.54Mb
-  server: 20.6.128.4
-  type: vmess
-  port: 6788
-  udp: true
-  uuid: bfff8306-6102-4fde-8a7f-f025e94f7a53
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-- name: netflix_ES |195.05Mb
-  server: 85.90.217.42
-  type: vmess
-  port: 22324
-  udp: true
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: Relay_-🇦🇺AU_142 |11.44Mb
-  server: evolving-kangaroo.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: WF42809561
-  sni: evolving-kangaroo.rooster465.autos
-- name: disney_netflix_NL |23.43Mb
-  server: touching-pigeon.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: touching-pigeon.rooster465.autos
-- name: disney_netflix_NL |60.07Mb
-  server: 94.131.105.125
-  type: trojan
-  port: 4443
-  udp: true
-  password: strong-secret-pass-777
-  skip-cert-verify: true
-- name: _148 |12.53Mb
-  server: 58.152.25.253
-  type: trojan
-  port: 443
-  udp: true
-  password: BxceQaOe
-  skip-cert-verify: true
-- name: disney_netflix_NL |115.58Mb
-  server: model-stingray.crayfish192.xyz
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: model-stingray.crayfish192.xyz
-- name: disney_netflix_PL |91.52Mb
-  server: top-goshawk.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: top-goshawk.rooster465.autos
-- name: disney_netflix_PL |101.76Mb
-  server: funky-platypus.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: funky-platypus.rooster465.autos
-- name: disney_netflix_GB |147.45Mb
-  server: 172.66.44.230
-  type: trojan
-  port: 8443
-  udp: true
-  password: 8r<[9'l6hAO#8ZQi
-  sni: Koma-YT.PAGeS.Dev
-  ws-opts:
-    path: /tro8sFW1S91B6sZrM1?ed=2560
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-  network: ws
-- name: disney_netflix_PL |126.66Mb
-  server: outgoing-ladybird.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: IL37892054
-  sni: outgoing-ladybird.rooster465.autos
-- name: disney_netflix_NL |323.56Mb
-  server: 104.18.11.110
-  type: trojan
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.multiplydose.com
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.multiplydose.com
-  network: ws
-- name: Relay_-🇦🇺AU_160 |11.24Mb
-  server: premium-lab.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: premium-lab.rooster465.autos
-- name: disney_netflix_US |36.88Mb
-  server: n3.chateditimage.com
-  type: trojan
-  port: 443
-  udp: true
-  password: 4123ae62-0999-4984-8ead-091630e594a9
-  sni: n3.chateditimage.com
-  skip-cert-verify: true
-- name: disney_netflix_US |11.67Mb
-  server: 160.16.70.180
-  type: trojan
-  port: 3700
-  password: 6d29eb2f74293cb01a19b32cf08ad2e9
-  sni: www.nintendogames.net
-- name: Relay_-🇺🇸US_167 |39.11Mb
-  server: alert-sunbird.crayfish192.xyz
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: alert-sunbird.crayfish192.xyz
-- name: disney_netflix_NL |354.61Mb
-  server: fun-seagull.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: WF42809561
-  sni: fun-seagull.rooster465.autos
-- name: Relay_-🇮🇪IE_171 |151.27Mb
-  server: eternal-serval.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: eternal-serval.rooster465.autos
-- name: Relay_-🇫🇷FR_172
-  server: still-mastodon.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: still-mastodon.rooster465.autos
-- name: Relay_-🇫🇷FR_174
-  server: sterling-dinosaur.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: sterling-dinosaur.rooster465.autos
-- name: Relay_-🇩🇪DE_175 |282.63Mb
-  server: dynamic-tiger.crayfish192.xyz
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: dynamic-tiger.crayfish192.xyz
-- name: Relay_-🇮🇪IE_176 |204.51Mb
-  server: saving-anemone.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: saving-anemone.rooster465.autos
-- name: Relay_-🇮🇪IE_177 |155.59Mb
-  server: optimal-dane.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: optimal-dane.rooster465.autos
-- name: Relay_-🇫🇷FR_178
-  server: prompt-duckling.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: prompt-duckling.rooster465.autos
-- name: Relay_-🇮🇪IE_179 |168.59Mb
-  server: grown-goldfish.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: grown-goldfish.rooster465.autos
-- name: Relay_🇧🇬 BG-🇦🇺AU_181 |11.51Mb
-  server: enhanced-crayfish.rooster465.autos
-  type: trojan
-  country: 🇧🇬 BG
-  port: 443
-  udp: true
-  password: IL37892054
-  skip-cert-verify: true
-- name: disney_netflix_US |18.59Mb
-  server: 82.198.246.97
-  type: vmess
-  country: 🇬🇧GB
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: disney_netflix_NL |16.81Mb
-  server: 85.234.65.58
-  type: trojan
-  country: 🇬🇧GB
-  port: 443
-  udp: true
-  password: WF42809561
-  sni: touching-pigeon.rooster465.autos
-  skip-cert-verify: true
-- name: 🇭🇺HU_189 |28.34Mb
-  server: 194.71.130.26
-  type: ss
-  country: 🇭🇺HU
-  port: 2949
-  password: v8NKiSxilGVslodFPWWLR8
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_PL |124.22Mb
-  server: fluent-stingray.crayfish192.xyz
-  type: trojan
-  country: 🇭🇺HU
-  port: 443
-  udp: true
-  password: IL37892054
-  sni: fluent-stingray.crayfish192.xyz
-  skip-cert-verify: true
-- name: netflix_DK |23.76Mb
-  server: 192.36.27.94
-  type: ss
-  country: 🇸🇪 SE
-  port: 989
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
-- name: Relay_🇺🇸US-🇺🇸US_206 |39.15Mb
-  server: healthy-ewe.rooster465.autos
-  type: trojan
-  country: 🇺🇸US
-  port: 443
-  udp: true
-  password: IL37892054
-  sni: healthy-ewe.rooster465.autos
-  skip-cert-verify: true
 - cipher: aes-256-cfb
   name: United States_None_ss_101
   password: amazonskr05
@@ -4666,7 +4697,7 @@ proxies:
   reality-opts:
     public-key: ywCBFcdCxDrYLeYLHiknqZ72_57XVXpZXQj9Yy3Up3Q
     short-id: null
-  client-fingerprint: chrome
+  client-fingerprint: safari
 - name: 测试-新加坡
   type: vless
   server: 666.vless.cac.cab
@@ -4698,7 +4729,7 @@ proxies:
   reality-opts:
     public-key: ywCBFcdCxDrYLeYLHiknqZ72_57XVXpZXQj9Yy3Up3Q
     short-id: null
-  client-fingerprint: safari
+  client-fingerprint: edge
 - name: 测试-美国
   type: vless
   server: 666.vless.cac.cab
@@ -4714,9 +4745,9 @@ proxies:
   reality-opts:
     public-key: ywCBFcdCxDrYLeYLHiknqZ72_57XVXpZXQj9Yy3Up3Q
     short-id: null
-  client-fingerprint: chrome
+  client-fingerprint: qq
 - name: V2-香港-01
-  server: c6420aab0a6c1f900178386ea6046ed4.hy2.node-is.green
+  server: ae900a6dd0e901452e0c10bac8f4b8b0.hy2.node-is.green
   port: 62001
   sni: www.iq.com
   up: null
@@ -4727,7 +4758,7 @@ proxies:
   obfs: salamander
   obfs-password: salamander
 - name: V2-台湾-01
-  server: d0e5d21e72c525747b9b69145013188c.hy2.node-is.green
+  server: 809458a29844ab76b4704a0b57d6db89.hy2.node-is.green
   port: 62002
   sni: www.iq.com
   up: null
@@ -4738,7 +4769,7 @@ proxies:
   obfs: salamander
   obfs-password: salamander
 - name: V2-新加坡-01
-  server: d633a567e7923ffcc68cbd2f635a831f.hy2.node-is.green
+  server: 0fa2a8aef84d00a931ad2a4d6ce6e6f4.hy2.node-is.green
   port: 62003
   sni: www.iq.com
   up: null
@@ -4749,7 +4780,7 @@ proxies:
   obfs: salamander
   obfs-password: salamander
 - name: V2-日本-01
-  server: 9e2e5cc6c4458642826d8b05b9d7afcb.hy2.node-is.green
+  server: d99f007a6406cdf018029f56f2073683.hy2.node-is.green
   port: 62004
   sni: www.iq.com
   up: null
@@ -4760,7 +4791,7 @@ proxies:
   obfs: salamander
   obfs-password: salamander
 - name: V2-美国-01
-  server: befc80c8f30e7bdcb245597a35511e46.hy2.node-is.green
+  server: a79a20f7ff09b8e1b59d55c2b6fe2eb7.hy2.node-is.green
   port: 62005
   sni: www.iq.com
   up: null
@@ -4772,8 +4803,8 @@ proxies:
   obfs-password: salamander
 - name: V1-香港-02
   type: trojan
-  server: b1baab36493a580fe0dac528d6064a70.v1.cac.cac.cab
-  port: 45802
+  server: 40e2c40cde6f54ef90c4bbdb3d251a3f.v1.cac.cac.cab
+  port: 48916
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4781,8 +4812,8 @@ proxies:
   network: tcp
 - name: V1-台湾-02
   type: trojan
-  server: 9c0a89a93c17e223346ee43bc8fccced.v1.cac.cac.cab
-  port: 44778
+  server: 0312f2b164f50d59a712979cb285aa14.v1.cac.cac.cab
+  port: 40620
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4790,8 +4821,8 @@ proxies:
   network: tcp
 - name: V1-新加坡-02
   type: trojan
-  server: 60c90c611cce233341e2dcd2a3673b95.v1.cac.cac.cab
-  port: 46532
+  server: 842b5d782e62aee0638bf2d83278f15c.v1.cac.cac.cab
+  port: 49850
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4799,8 +4830,8 @@ proxies:
   network: tcp
 - name: V1-日本-02
   type: trojan
-  server: 30354215eed3e16f453d2952d405ea8b.v1.cac.cac.cab
-  port: 45936
+  server: f4be012c5896cb6af393db6be2f9ef1a.v1.cac.cac.cab
+  port: 46744
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4808,8 +4839,8 @@ proxies:
   network: tcp
 - name: V1-美国-02
   type: trojan
-  server: 226e67ba5ce57d64c7fe4477ac8656a3.v1.cac.cac.cab
-  port: 45996
+  server: dcf4956aebabc67b00d8c08d32356711.v1.cac.cac.cab
+  port: 43591
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4817,8 +4848,8 @@ proxies:
   network: tcp
 - name: V1-韩国
   type: trojan
-  server: c247b2c379f9a4ad2c244d57e8a4f34f.v1.cac.cac.cab
-  port: 47836
+  server: d68d12cd9d831f29742ab5c4ecd6cbc8.v1.cac.cac.cab
+  port: 42942
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4826,8 +4857,8 @@ proxies:
   network: tcp
 - name: V1-英国
   type: trojan
-  server: 4541d026d1ee7217537b755cafc6a2de.v1.cac.cac.cab
-  port: 41906
+  server: e86c4b73f242c77708de4abf793864ff.v1.cac.cac.cab
+  port: 40090
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4835,8 +4866,8 @@ proxies:
   network: tcp
 - name: V1-马来西亚
   type: trojan
-  server: 83d4e9e12ac3f67f2c17348ac2b0d5d7.v1.cac.cac.cab
-  port: 46635
+  server: af6c44912e7e2538e19aff30e44d2438.v1.cac.cac.cab
+  port: 46324
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4844,8 +4875,8 @@ proxies:
   network: tcp
 - name: V1-菲律宾
   type: trojan
-  server: 4e9986a70a3c8136b868b42cfbe67a2c.v1.cac.cac.cab
-  port: 47775
+  server: 1a28437cdc19c03746b80a85c900e515.v1.cac.cac.cab
+  port: 49786
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4853,8 +4884,8 @@ proxies:
   network: tcp
 - name: V1-加拿大
   type: trojan
-  server: cd87f5b0485c1cf2aac9896d5faca24a.v1.cac.cac.cab
-  port: 47919
+  server: 550b618e1468221105d0d7f5c07402b8.v1.cac.cac.cab
+  port: 43164
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4862,8 +4893,8 @@ proxies:
   network: tcp
 - name: V1-阿根廷
   type: trojan
-  server: 2b07f28447d0ce21a706e9f0344fc0d8.v1.cac.cac.cab
-  port: 43501
+  server: e023c73f445253097154d5d706233f0e.v1.cac.cac.cab
+  port: 46217
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4871,8 +4902,8 @@ proxies:
   network: tcp
 - name: V1-印度
   type: trojan
-  server: 3752319dcab39c1af31c742d52e73b39.v1.cac.cac.cab
-  port: 49918
+  server: b6f3afba7b042a37cddb603c596fc296.v1.cac.cac.cab
+  port: 43294
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4880,8 +4911,8 @@ proxies:
   network: tcp
 - name: V1-墨西哥
   type: trojan
-  server: b52194573909c292207ce4acd42d02b5.v1.cac.cac.cab
-  port: 47586
+  server: 76267a371a850b86ce9c3a6d5c03801f.v1.cac.cac.cab
+  port: 41631
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4889,8 +4920,8 @@ proxies:
   network: tcp
 - name: V1-澳大利亚
   type: trojan
-  server: 3b5a4fb1de269b31175566f47aadff41.v1.cac.cac.cab
-  port: 45342
+  server: 16e3cc77de065c6e2efa1e4f5e9daf1a.v1.cac.cac.cab
+  port: 47881
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4898,8 +4929,8 @@ proxies:
   network: tcp
 - name: V1-土耳其
   type: trojan
-  server: 76e1c1cc3a7c9df3b5123de5c1c9255a.v1.cac.cac.cab
-  port: 41650
+  server: 18309068e3051b006e8855615da7bce7.v1.cac.cac.cab
+  port: 48841
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4907,8 +4938,8 @@ proxies:
   network: tcp
 - name: V1-尼日利亚
   type: trojan
-  server: b659b8b7e44d96f5b8d30a3ddfcd0a50.v1.cac.cac.cab
-  port: 49004
+  server: f73b527b91ae338bb80bc739bb44442b.v1.cac.cac.cab
+  port: 49929
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4916,8 +4947,8 @@ proxies:
   network: tcp
 - name: V1-越南
   type: trojan
-  server: 5e452ae98355459665f1374c665d7c44.v1.cac.cac.cab
-  port: 46372
+  server: ff43094b3574ee5a7841133d83100939.v1.cac.cac.cab
+  port: 48224
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4925,8 +4956,8 @@ proxies:
   network: tcp
 - name: V1-巴西
   type: trojan
-  server: 666591ac8dcb1195b09c1f29685614c0.v1.cac.cac.cab
-  port: 48796
+  server: 744eb86f4275b9ff226170eba27fce5a.v1.cac.cac.cab
+  port: 42516
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4934,8 +4965,8 @@ proxies:
   network: tcp
 - name: V1-南非
   type: trojan
-  server: b3df15678896ba45dac3b9b5dd5e147c.v1.cac.cac.cab
-  port: 47949
+  server: b94777bc94eca574d8951db339c0a0d6.v1.cac.cac.cab
+  port: 48939
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4943,8 +4974,8 @@ proxies:
   network: tcp
 - name: V1-阿拉伯联合酋长国
   type: trojan
-  server: fe1dfe4a9e672eca4d616e6a3f311ded.v1.cac.cac.cab
-  port: 45095
+  server: 794b59ba5ebf3c1b06c29457ae651a7e.v1.cac.cac.cab
+  port: 47953
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4952,8 +4983,8 @@ proxies:
   network: tcp
 - name: V1-缅甸
   type: trojan
-  server: 714154eb8c792c1dd1aa7923907f9fc0.v1.cac.cac.cab
-  port: 43201
+  server: a6a0d1ffc8d51e42f149fced94ac660e.v1.cac.cac.cab
+  port: 48026
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4961,8 +4992,8 @@ proxies:
   network: tcp
 - name: V1-希腊
   type: trojan
-  server: 2edca236d92a05b3daa8f4a2cb63db83.v1.cac.cac.cab
-  port: 50000
+  server: 620ce2d9c1e3a1e7e56f260cb7e6ac28.v1.cac.cac.cab
+  port: 47338
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4970,8 +5001,8 @@ proxies:
   network: tcp
 - name: V1-老挝
   type: trojan
-  server: 353de82e5421f3a0dbff90af593925c4.v1.cac.cac.cab
-  port: 41636
+  server: f873fbb08cc93046a56402377def1908.v1.cac.cac.cab
+  port: 48466
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4979,8 +5010,8 @@ proxies:
   network: tcp
 - name: V1-乌克兰
   type: trojan
-  server: a1e0669ac03cbbe62353eec72e5d1be8.v1.cac.cac.cab
-  port: 41582
+  server: 4c4ffaf1bd8d389f5e90411da03a40f3.v1.cac.cac.cab
+  port: 40130
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4988,8 +5019,8 @@ proxies:
   network: tcp
 - name: V1-巴基斯坦
   type: trojan
-  server: 3c9a5fd37b9d0081b97d2d78d390ce38.v1.cac.cac.cab
-  port: 41751
+  server: 6f11d0ddd02a3740a42e7edbfe832b46.v1.cac.cac.cab
+  port: 46417
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -4997,8 +5028,8 @@ proxies:
   network: tcp
 - name: V1-斯里兰卡
   type: trojan
-  server: be01d2b6e69561f29b42b8911816bf13.v1.cac.cac.cab
-  port: 45188
+  server: 4561213e3baf7efe02fb1cdf636192a5.v1.cac.cac.cab
+  port: 49772
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5006,8 +5037,8 @@ proxies:
   network: tcp
 - name: V1-新西兰
   type: trojan
-  server: 1f77759b21f177dd701b18fb64545272.v1.cac.cac.cab
-  port: 47147
+  server: d43264cbb72a3aba6c84333a147340d8.v1.cac.cac.cab
+  port: 44530
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5015,8 +5046,8 @@ proxies:
   network: tcp
 - name: V1-尼泊尔
   type: trojan
-  server: d70f227ae22a13a1c14f1ff792ea75e2.v1.cac.cac.cab
-  port: 47704
+  server: 876e1f499b14fe186d272d074e5f8cae.v1.cac.cac.cab
+  port: 45025
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5024,8 +5055,8 @@ proxies:
   network: tcp
 - name: V1-塞内加尔
   type: trojan
-  server: fe438dc3d475b2588ba6a966f05e15dd.v1.cac.cac.cab
-  port: 45228
+  server: 9ef4040d996dcf705afc0996aeac4126.v1.cac.cac.cab
+  port: 42643
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5033,8 +5064,8 @@ proxies:
   network: tcp
 - name: V1-莫桑比克
   type: trojan
-  server: 83d7665799f78f98064fbd7459af5065.v1.cac.cac.cab
-  port: 41042
+  server: 092457fed5ecbf0e061b0dcf843e81f7.v1.cac.cac.cab
+  port: 47473
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5042,8 +5073,8 @@ proxies:
   network: tcp
 - name: V1-肯尼亚
   type: trojan
-  server: 7967ccfb808c22faa45af9b283f16872.v1.cac.cac.cab
-  port: 42115
+  server: a7294a85f34c117e51322bd197ec06f3.v1.cac.cac.cab
+  port: 48113
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5051,8 +5082,8 @@ proxies:
   network: tcp
 - name: V1-约旦
   type: trojan
-  server: cef713364268d59d7af60e7a6542af09.v1.cac.cac.cab
-  port: 40958
+  server: 17246bfb87ef948bf7df0bba81afce8f.v1.cac.cac.cab
+  port: 46343
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5060,8 +5091,8 @@ proxies:
   network: tcp
 - name: V1-蒙古
   type: trojan
-  server: c4b8244406daae35fda069cfc267c9ec.v1.cac.cac.cab
-  port: 41674
+  server: c707cde31afc6b814f07d891167cf5c6.v1.cac.cac.cab
+  port: 43198
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5069,8 +5100,8 @@ proxies:
   network: tcp
 - name: V1-以色列
   type: trojan
-  server: 51f4973a9c52ebc1758f3b28aa76a4be.v1.cac.cac.cab
-  port: 40974
+  server: 58b98369d717355b987f6368b01623f3.v1.cac.cac.cab
+  port: 42269
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5078,8 +5109,8 @@ proxies:
   network: tcp
 - name: V1-哈萨克斯坦
   type: trojan
-  server: 1a4df81e5d282707c90a8259aa4a45c2.v1.cac.cac.cab
-  port: 44571
+  server: f5d1c83f743123552606a6dc9b489e9f.v1.cac.cac.cab
+  port: 40991
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5087,8 +5118,8 @@ proxies:
   network: tcp
 - name: V1-印度尼西亚
   type: trojan
-  server: a627a1cdd6ab79eae99e2c1b2e0f5248.v1.cac.cac.cab
-  port: 43094
+  server: 9eedb585ce4a48cc3225b369bcb3220b.v1.cac.cac.cab
+  port: 46151
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5096,8 +5127,8 @@ proxies:
   network: tcp
 - name: V1-格陵兰岛
   type: trojan
-  server: 8498ac77a7eaaad11726988705acf384.v1.cac.cac.cab
-  port: 42272
+  server: e37d83b6b61a477be2f1c7fa31f211d4.v1.cac.cac.cab
+  port: 43763
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5105,8 +5136,8 @@ proxies:
   network: tcp
 - name: V1-意大利
   type: trojan
-  server: d52afe4f0e3a7f61302e4d56a162d26e.v1.cac.cac.cab
-  port: 45888
+  server: 8841f2b179b5402b69b0471974361fd9.v1.cac.cac.cab
+  port: 42541
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5114,8 +5145,8 @@ proxies:
   network: tcp
 - name: V1-挪威
   type: trojan
-  server: e45302e7e37f43b2703941bcde937885.v1.cac.cac.cab
-  port: 42156
+  server: 0cd6afd70e631cb6fd8805105593f5b8.v1.cac.cac.cab
+  port: 45308
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5123,8 +5154,8 @@ proxies:
   network: tcp
 - name: V1-瑞典
   type: trojan
-  server: 12e32edcee7d2bd5b612df0c25f14c62.v1.cac.cac.cab
-  port: 43994
+  server: c1ca0272c09c6e57e8a54eaaf2252afb.v1.cac.cac.cab
+  port: 42131
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5132,8 +5163,8 @@ proxies:
   network: tcp
 - name: V1-埃及
   type: trojan
-  server: 1a48b803509d8b4240c5c1190f1245bc.v1.cac.cac.cab
-  port: 45721
+  server: 9c03add36dfd4e0f90ae24665d236ec5.v1.cac.cac.cab
+  port: 49774
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5141,8 +5172,8 @@ proxies:
   network: tcp
 - name: V1-智利
   type: trojan
-  server: f6ecc50e9f748c1c37eafcc235b6dde7.v1.cac.cac.cab
-  port: 43021
+  server: 08180aeabcd1eba71a731777a02072b1.v1.cac.cac.cab
+  port: 48898
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5150,8 +5181,8 @@ proxies:
   network: tcp
 - name: V1-柬埔寨
   type: trojan
-  server: 324208c26426a0644086d77b09e7d703.v1.cac.cac.cab
-  port: 43055
+  server: 782f0ce90b13161c8a75605ecee2e6f4.v1.cac.cac.cab
+  port: 42867
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5159,8 +5190,8 @@ proxies:
   network: tcp
 - name: V1-百慕大
   type: trojan
-  server: 139aeadc7c0c825b4e800c532cbd2c9e.v1.cac.cac.cab
-  port: 44427
+  server: 9155c49cdf764160155dab735f50918c.v1.cac.cac.cab
+  port: 47989
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5168,8 +5199,8 @@ proxies:
   network: tcp
 - name: V1-孟加拉国
   type: trojan
-  server: 519b45d9861635b859007436d71ff4c0.v1.cac.cac.cab
-  port: 45880
+  server: 1cc29e6269d3efe459f92b7b56259b4d.v1.cac.cac.cab
+  port: 48208
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5177,8 +5208,8 @@ proxies:
   network: tcp
 - name: V1-葡萄牙
   type: trojan
-  server: 1ee65a679095819a7fa8aa067b18ac2f.v1.cac.cac.cab
-  port: 48782
+  server: 9a2baf550867ed9ab84b4740f663df86.v1.cac.cac.cab
+  port: 44103
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5186,8 +5217,8 @@ proxies:
   network: tcp
 - name: V1-西班牙
   type: trojan
-  server: e5b38b90bf932b7d965113598c64e8c0.v1.cac.cac.cab
-  port: 46764
+  server: 314f57ed46aa89803b51a3499349a3a7.v1.cac.cac.cab
+  port: 43301
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5195,8 +5226,8 @@ proxies:
   network: tcp
 - name: V1-秘鲁
   type: trojan
-  server: 2cae9589fb126121d5818c64c36bf365.v1.cac.cac.cab
-  port: 49324
+  server: 2e20401bc3071bff0ec130451f83c275.v1.cac.cac.cab
+  port: 44055
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5204,8 +5235,8 @@ proxies:
   network: tcp
 - name: V1-巴拉圭
   type: trojan
-  server: e1d00101d3ff21b3ba7310767245b6e0.v1.cac.cac.cab
-  port: 41548
+  server: eae2298399b36bf4dfc23800495ee9d5.v1.cac.cac.cab
+  port: 45719
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5213,8 +5244,8 @@ proxies:
   network: tcp
 - name: V1-巴拿马
   type: trojan
-  server: 6494a17be039ec8314020304b407533e.v1.cac.cac.cab
-  port: 42250
+  server: ae70f3f10be26ccb1f236cf1e3a8f8ce.v1.cac.cac.cab
+  port: 49738
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5222,8 +5253,8 @@ proxies:
   network: tcp
 - name: V1-波多黎各
   type: trojan
-  server: c90c3536e5a9fa203be18778bd00b308.v1.cac.cac.cab
-  port: 43598
+  server: bb9a117963cf840e0141dd7471149dff.v1.cac.cac.cab
+  port: 46272
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5231,8 +5262,8 @@ proxies:
   network: tcp
 - name: V1-巴布亚新几内亚
   type: trojan
-  server: 01b1b05d8eb64a3887c4b80f755936fc.v1.cac.cac.cab
-  port: 42660
+  server: 760a7f1511269bc80b7e1ee9647fcc0c.v1.cac.cac.cab
+  port: 48276
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5240,8 +5271,8 @@ proxies:
   network: tcp
 - name: V1-摩洛哥
   type: trojan
-  server: 369a5ea83234d050e82ee90ef985efa1.v1.cac.cac.cab
-  port: 43027
+  server: bb24ebe4096e280cb14d4808be815707.v1.cac.cac.cab
+  port: 43343
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5249,8 +5280,8 @@ proxies:
   network: tcp
 - name: V1-摩纳哥
   type: trojan
-  server: 700dddcf2c9c7a2eeb0c3747660e54b8.v1.cac.cac.cab
-  port: 42043
+  server: 47a13b3e05d193b8c5d704c492ffb94d.v1.cac.cac.cab
+  port: 45228
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5258,8 +5289,8 @@ proxies:
   network: tcp
 - name: V1-黑山
   type: trojan
-  server: ad4ee162980cd9f70a2b5ad6bc180c91.v1.cac.cac.cab
-  port: 47916
+  server: 69e5021065fbb50c2f31aedc6f9b1dec.v1.cac.cac.cab
+  port: 48272
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5267,8 +5298,8 @@ proxies:
   network: tcp
 - name: V1-马耳他
   type: trojan
-  server: 28ef81c2104c31ce088b2dfe10fa2a77.v1.cac.cac.cab
-  port: 43041
+  server: 2968631d23aab56dc487c652c36b86a8.v1.cac.cac.cab
+  port: 45259
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5276,8 +5307,8 @@ proxies:
   network: tcp
 - name: V1-黎巴嫩
   type: trojan
-  server: 371c2002d9a60da5d854cc16f05d9589.v1.cac.cac.cab
-  port: 40145
+  server: c33162f190c9d967dd74f379e56d7e29.v1.cac.cac.cab
+  port: 47682
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5285,8 +5316,8 @@ proxies:
   network: tcp
 - name: V1-拉脱维亚
   type: trojan
-  server: 14f0d6b56d271b09665b19989f1a27b3.v1.cac.cac.cab
-  port: 43001
+  server: cd7b6a687dc96788222517daff7c7200.v1.cac.cac.cab
+  port: 44496
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5294,8 +5325,8 @@ proxies:
   network: tcp
 - name: V1-立陶宛
   type: trojan
-  server: 7d9e77a989fc81930b2fd7af75d0353c.v1.cac.cac.cab
-  port: 43137
+  server: 2b706eba03a3a8705447dfb62cf1c33e.v1.cac.cac.cab
+  port: 49172
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5303,8 +5334,8 @@ proxies:
   network: tcp
 - name: V1-科威特
   type: trojan
-  server: b2af62ce992287983abcec67f0ed3c61.v1.cac.cac.cab
-  port: 45380
+  server: b876b8910267134ad25339297fbf2ad3.v1.cac.cac.cab
+  port: 45860
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5312,8 +5343,8 @@ proxies:
   network: tcp
 - name: V1-塞尔维亚
   type: trojan
-  server: a9584d5247f82a7776f8ae36467895d4.v1.cac.cac.cab
-  port: 49660
+  server: 4abd261fd77242da4c08959db03390e6.v1.cac.cac.cab
+  port: 41405
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5321,8 +5352,8 @@ proxies:
   network: tcp
 - name: V1-泽西岛
   type: trojan
-  server: 9a2543ff4f67da1899a814f5dc7fc5a0.v1.cac.cac.cab
-  port: 42936
+  server: dd82c85a87c40c9703c3d3174f14baac.v1.cac.cac.cab
+  port: 44216
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5330,8 +5361,8 @@ proxies:
   network: tcp
 - name: V1-牙买加
   type: trojan
-  server: 309cfa5d610df3e276d94be65e7285a8.v1.cac.cac.cab
-  port: 44124
+  server: 371ab74a52b7274ba940819bfa714ad5.v1.cac.cac.cab
+  port: 45957
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5339,8 +5370,8 @@ proxies:
   network: tcp
 - name: V1-爱尔兰
   type: trojan
-  server: 69c08c5b263bf1b4f55d884b0a65772e.v1.cac.cac.cab
-  port: 44754
+  server: f2e6fb068543e2fd724923f53e5b31c9.v1.cac.cac.cab
+  port: 40450
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5348,8 +5379,8 @@ proxies:
   network: tcp
 - name: V1-冰岛
   type: trojan
-  server: b0bc6a0d544573d07202da27ee0f06d5.v1.cac.cac.cab
-  port: 46634
+  server: 00e8e897953360b0991fe790c934eec7.v1.cac.cac.cab
+  port: 42138
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5357,8 +5388,8 @@ proxies:
   network: tcp
 - name: V1-匈牙利
   type: trojan
-  server: 9e186dda12af33d03028db0a5301a08c.v1.cac.cac.cab
-  port: 41110
+  server: 2d87924c38138ef02e61825b7f27935d.v1.cac.cac.cab
+  port: 46263
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5366,8 +5397,8 @@ proxies:
   network: tcp
 - name: V1-关岛
   type: trojan
-  server: d7b74dcce83475c80ae75584358f8a0d.v1.cac.cac.cab
-  port: 40814
+  server: c4bbf12af4698254b135e0f43b1f2eeb.v1.cac.cac.cab
+  port: 43130
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5375,8 +5406,8 @@ proxies:
   network: tcp
 - name: V1-加纳
   type: trojan
-  server: 0be9e3b69dbd47359d2ce1f03635d10b.v1.cac.cac.cab
-  port: 40048
+  server: 349eafc5fd764b53433009ac37972b57.v1.cac.cac.cab
+  port: 41391
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5384,8 +5415,8 @@ proxies:
   network: tcp
 - name: V1-格鲁吉亚
   type: trojan
-  server: a588a1fc1d660c825d76be57c6ab27a8.v1.cac.cac.cab
-  port: 48441
+  server: 6274acdcf9ac9f420422ac8933caf94a.v1.cac.cac.cab
+  port: 45385
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5393,8 +5424,8 @@ proxies:
   network: tcp
 - name: V1-芬兰
   type: trojan
-  server: 6ce30f1dd49dc59bfa76256769593f62.v1.cac.cac.cab
-  port: 43846
+  server: c6441f7ef375af7859f3cd8f8279e75b.v1.cac.cac.cab
+  port: 41924
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5402,8 +5433,8 @@ proxies:
   network: tcp
 - name: V1-爱沙尼亚
   type: trojan
-  server: cf6490de2c424fbfc9fb2e1b06a62bcb.v1.cac.cac.cab
-  port: 43284
+  server: 9b168226ac9ad063e53145f747c0f42a.v1.cac.cac.cab
+  port: 47454
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5411,8 +5442,8 @@ proxies:
   network: tcp
 - name: V1-多米尼加共和国
   type: trojan
-  server: 9fa3381d134b839ff772f1394585952e.v1.cac.cac.cab
-  port: 45914
+  server: 2ee0dc72dda5fe9ed32deeb9f1dfc3fd.v1.cac.cac.cab
+  port: 49022
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5420,8 +5451,8 @@ proxies:
   network: tcp
 - name: V1-丹麦
   type: trojan
-  server: c7738bf7b6e1cbc6e2d8b20fbf56796d.v1.cac.cac.cab
-  port: 47405
+  server: 87a24babe4d40ac86dba297a7fa08fab.v1.cac.cac.cab
+  port: 42421
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5429,8 +5460,8 @@ proxies:
   network: tcp
 - name: V1-捷克
   type: trojan
-  server: 0cab0359d0d491abee85eddc8f37c2d1.v1.cac.cac.cab
-  port: 44787
+  server: dfa6438b0922a9c5c4decd6b45d443b4.v1.cac.cac.cab
+  port: 42040
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5438,8 +5469,8 @@ proxies:
   network: tcp
 - name: V1-塞浦路斯
   type: trojan
-  server: 7ed0f3d422a34b7efcc037e218c1c695.v1.cac.cac.cab
-  port: 43335
+  server: e6d00ba7e774ed156da2778b9515103c.v1.cac.cac.cab
+  port: 41453
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5447,8 +5478,8 @@ proxies:
   network: tcp
 - name: V1-哥伦比亚
   type: trojan
-  server: 46579dfdccc31bb88f2e0b9815cd6e00.v1.cac.cac.cab
-  port: 40321
+  server: 3a44e1f231d36bf0a97cd5980b07c931.v1.cac.cac.cab
+  port: 44840
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5456,8 +5487,8 @@ proxies:
   network: tcp
 - name: V1-开曼群岛
   type: trojan
-  server: 9d62f4e69db9720a3a483b11a0ebe396.v1.cac.cac.cab
-  port: 46458
+  server: e655070ce7076a70c53127ed3f77e2f9.v1.cac.cac.cab
+  port: 46530
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5465,8 +5496,8 @@ proxies:
   network: tcp
 - name: V1-保加利亚
   type: trojan
-  server: 79ac2b2ec0c2d4cbf35d305e532914c4.v1.cac.cac.cab
-  port: 46605
+  server: b45ec2ba71485ab03c44a75f75f24635.v1.cac.cac.cab
+  port: 43237
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5474,8 +5505,8 @@ proxies:
   network: tcp
 - name: V1-文莱
   type: trojan
-  server: 5c22f74efd61b7734cde51ab5ecf807b.v1.cac.cac.cab
-  port: 41383
+  server: 5c1756d00aad41de3645b8578416c964.v1.cac.cac.cab
+  port: 43064
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5483,8 +5514,8 @@ proxies:
   network: tcp
 - name: V1-波斯尼亚和黑塞哥维纳
   type: trojan
-  server: 980d50af427156ad618b79adbabd1b79.v1.cac.cac.cab
-  port: 46158
+  server: c680dc7800e5455d2f34fa3e60bf0e82.v1.cac.cac.cab
+  port: 49505
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5492,8 +5523,8 @@ proxies:
   network: tcp
 - name: V1-玻利维亚
   type: trojan
-  server: 4abd2085a2e80f620577ed989f239377.v1.cac.cac.cab
-  port: 45704
+  server: 1faceb0598a847f294dbd602a769969e.v1.cac.cac.cab
+  port: 43381
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5501,8 +5532,8 @@ proxies:
   network: tcp
 - name: V1-不丹
   type: trojan
-  server: 8aaed119101c744455a607620c8da063.v1.cac.cac.cab
-  port: 46084
+  server: 867f5dfcfe6b3e1608989e9948469b82.v1.cac.cac.cab
+  port: 43649
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5510,8 +5541,8 @@ proxies:
   network: tcp
 - name: V1-巴林
   type: trojan
-  server: 363509f1650bfcecafb0207c7201864e.v1.cac.cac.cab
-  port: 49128
+  server: 2e3e5dacdb5fe6f243185b7ec0fc8d18.v1.cac.cac.cab
+  port: 49347
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5519,8 +5550,8 @@ proxies:
   network: tcp
 - name: V1-巴哈马
   type: trojan
-  server: 9230f1053dbfefebd1f8bf4ec65eb7c8.v1.cac.cac.cab
-  port: 41937
+  server: 63fa95dee16ed27f76500dafc81a2353.v1.cac.cac.cab
+  port: 47669
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5528,8 +5559,8 @@ proxies:
   network: tcp
 - name: V1-阿塞拜疆
   type: trojan
-  server: 4d6c4231ca83d349b0fe767ece90694a.v1.cac.cac.cab
-  port: 45091
+  server: 2262dba7241fb25ca170ec9404566848.v1.cac.cac.cab
+  port: 46332
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5537,8 +5568,8 @@ proxies:
   network: tcp
 - name: V1-奥地利
   type: trojan
-  server: eb7a9a9b3ad056cb931832e7923fec57.v1.cac.cac.cab
-  port: 46126
+  server: 8554e57d0eb13b6640f9eada1037cec2.v1.cac.cac.cab
+  port: 41787
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5546,8 +5577,8 @@ proxies:
   network: tcp
 - name: V1-亚美尼亚
   type: trojan
-  server: c6f6cdc2a6811e3de58d63528b3940e4.v1.cac.cac.cab
-  port: 44619
+  server: 9193d82dd74c29365a6ecc497ed8101c.v1.cac.cac.cab
+  port: 48556
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5555,8 +5586,8 @@ proxies:
   network: tcp
 - name: V1-安哥拉
   type: trojan
-  server: 3eedda8596b9211d829c3d351ac6e448.v1.cac.cac.cab
-  port: 40112
+  server: 06e4d44bd055fe48d11b61f4bcc33a7d.v1.cac.cac.cab
+  port: 41007
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5564,8 +5595,8 @@ proxies:
   network: tcp
 - name: V1-安道尔
   type: trojan
-  server: e627218aae3dd4d416cc8faae2fc3a95.v1.cac.cac.cab
-  port: 48109
+  server: f7768ef1678c061b694bb47d0f81b855.v1.cac.cac.cab
+  port: 40746
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5573,8 +5604,8 @@ proxies:
   network: tcp
 - name: V1-阿尔及利亚
   type: trojan
-  server: a81b82c2680c2d121e2459c8cffdb9e4.v1.cac.cac.cab
-  port: 42114
+  server: 1b69ec2d3f151f732fbc1827f1b15983.v1.cac.cac.cab
+  port: 41625
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5582,8 +5613,8 @@ proxies:
   network: tcp
 - name: V1-阿尔巴尼亚
   type: trojan
-  server: 8da7e9e9249b2df69469cdf576cb00ef.v1.cac.cac.cab
-  port: 45191
+  server: 198df93530c46861e2b04ae6ce46a012.v1.cac.cac.cab
+  port: 47384
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5591,8 +5622,8 @@ proxies:
   network: tcp
 - name: V1-特立尼达和多巴哥
   type: trojan
-  server: c4f9779f0d61e884691c47d46419ed4d.v1.cac.cac.cab
-  port: 40621
+  server: 55aeb1d5ed2a561d852952e945504fc6.v1.cac.cac.cab
+  port: 48975
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5600,8 +5631,8 @@ proxies:
   network: tcp
 - name: V1-突尼斯
   type: trojan
-  server: 6fa479314de9a327806c62ec835d29e3.v1.cac.cac.cab
-  port: 49733
+  server: 315fe9cc29713416995265ade2ed36e9.v1.cac.cac.cab
+  port: 46407
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5609,8 +5640,8 @@ proxies:
   network: tcp
 - name: V1-瑞士
   type: trojan
-  server: 86ff88e7fad9af8666c9b61db9f8fbe9.v1.cac.cac.cab
-  port: 49137
+  server: c1ee6e9506ca4e2c64ed6cbfe7e90b9d.v1.cac.cac.cab
+  port: 48172
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5618,8 +5649,8 @@ proxies:
   network: tcp
 - name: V1-德国
   type: trojan
-  server: d615d337c1c7eb4d2447f515aae764c2.v1.cac.cac.cab
-  port: 49334
+  server: 7f737126a0b2b689d0aca95f5ed6b227.v1.cac.cac.cab
+  port: 44329
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5627,8 +5658,8 @@ proxies:
   network: tcp
 - name: V1-波兰
   type: trojan
-  server: d6879b8afe64430d431e9421fe98e61d.v1.cac.cac.cab
-  port: 42172
+  server: 0693054b2e86ebbcfb26a29b019573f4.v1.cac.cac.cab
+  port: 40238
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5636,8 +5667,8 @@ proxies:
   network: tcp
 - name: V1-法国
   type: trojan
-  server: b10c80228dccf0ff2d4c2c7e1af3259b.v1.cac.cac.cab
-  port: 44855
+  server: eb942cf3f3298e37d64612f3f9d908c1.v1.cac.cac.cab
+  port: 42251
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5645,8 +5676,8 @@ proxies:
   network: tcp
 - name: V1-荷兰
   type: trojan
-  server: 62419935d9b2d2832786f4f7661e917d.v1.cac.cac.cab
-  port: 46146
+  server: 710b3966cdf40ae3ed48822811c58476.v1.cac.cac.cab
+  port: 48727
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5654,8 +5685,8 @@ proxies:
   network: tcp
 - name: V1-斯洛文尼亚
   type: trojan
-  server: 49c06a5319c9d662118c36258fd8e3fe.v1.cac.cac.cab
-  port: 49441
+  server: 664ffb6c1aac99775f7c484451629558.v1.cac.cac.cab
+  port: 42074
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5663,8 +5694,8 @@ proxies:
   network: tcp
 - name: V1-斯洛伐克
   type: trojan
-  server: 220c389eb2199407e75b3f7f208fe5ae.v1.cac.cac.cab
-  port: 47909
+  server: 6962545f16ff50a01cef349f522474d1.v1.cac.cac.cab
+  port: 45873
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5672,8 +5703,8 @@ proxies:
   network: tcp
 - name: V1-罗马尼亚
   type: trojan
-  server: ed67d37f5b0aa03b333f56625fb41b23.v1.cac.cac.cab
-  port: 49353
+  server: 1dd5e23cee841425caae650ecd0b4a4b.v1.cac.cac.cab
+  port: 40695
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5681,8 +5712,8 @@ proxies:
   network: tcp
 - name: V1-北马其顿
   type: trojan
-  server: 581f87a3859149d0218d7ebaf655fb28.v1.cac.cac.cab
-  port: 46618
+  server: 6dc2938b11350c14711e4998a809b3db.v1.cac.cac.cab
+  port: 43769
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5690,8 +5721,8 @@ proxies:
   network: tcp
 - name: V1-摩尔多瓦
   type: trojan
-  server: e4259ba605fc4a63975754c40d9b0510.v1.cac.cac.cab
-  port: 45687
+  server: df1de056a71e5a77faf54927d3b54537.v1.cac.cac.cab
+  port: 45365
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5699,8 +5730,8 @@ proxies:
   network: tcp
 - name: V1-卢森堡
   type: trojan
-  server: b9bf08cf66b505ab95d3c45890d79691.v1.cac.cac.cab
-  port: 49002
+  server: 498964ac73047ff4e782a62848fa20fb.v1.cac.cac.cab
+  port: 47173
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5708,8 +5739,8 @@ proxies:
   network: tcp
 - name: V1-列支敦士登
   type: trojan
-  server: 7f438cec6654fa55aa862c3e0fc7d6f4.v1.cac.cac.cab
-  port: 45522
+  server: b5e46c23aef59ce8e293f868b2cbad72.v1.cac.cac.cab
+  port: 48105
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5717,8 +5748,8 @@ proxies:
   network: tcp
 - name: V1-哥斯达黎加
   type: trojan
-  server: 42eb8f0767d0bcc84a16678b8408dd34.v1.cac.cac.cab
-  port: 47079
+  server: 3751111262f494169dbbc1ef7f1a05c9.v1.cac.cac.cab
+  port: 41839
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5726,8 +5757,8 @@ proxies:
   network: tcp
 - name: V1-厄瓜多尔
   type: trojan
-  server: 12d6f74b54e94e5c6e97f59155254597.v1.cac.cac.cab
-  port: 49321
+  server: 1d029ac8b5f3f2c4fcf689682ac01676.v1.cac.cac.cab
+  port: 40693
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5735,8 +5766,8 @@ proxies:
   network: tcp
 - name: V1-克罗地亚
   type: trojan
-  server: 5ba00b7486fc7ee3a0c799c6db166938.v1.cac.cac.cab
-  port: 41695
+  server: 5929dcff273dba1d19f32ce036a3ba40.v1.cac.cac.cab
+  port: 48091
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5744,8 +5775,8 @@ proxies:
   network: tcp
 - name: V1-马恩岛
   type: trojan
-  server: 01114fb496649f011f5c30fcab5c25a0.v1.cac.cac.cab
-  port: 47658
+  server: c684fc141df511956fec8a121b161bb9.v1.cac.cac.cab
+  port: 49828
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5753,8 +5784,8 @@ proxies:
   network: tcp
 - name: V1-委内瑞拉
   type: trojan
-  server: 4b672a801c811db2be41915021ed6f00.v1.cac.cac.cab
-  port: 40509
+  server: 73f4f8544d3e898a41ef6b16912959eb.v1.cac.cac.cab
+  port: 42909
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5762,8 +5793,8 @@ proxies:
   network: tcp
 - name: V1-洪都拉斯
   type: trojan
-  server: d90c092881fab232a77b98c5cfcf2925.v1.cac.cac.cab
-  port: 45076
+  server: ce111934d123106d06f8c5b8d435e9fa.v1.cac.cac.cab
+  port: 43584
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5771,8 +5802,8 @@ proxies:
   network: tcp
 - name: V1-危地马拉
   type: trojan
-  server: 5c5a135786a2a010f034b86329a17cca.v1.cac.cac.cab
-  port: 45759
+  server: a909cfeb80c27ee62fbc9a2526975120.v1.cac.cac.cab
+  port: 46640
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5780,8 +5811,8 @@ proxies:
   network: tcp
 - name: V1-萨尔瓦多
   type: trojan
-  server: c5ac26eab5dda51ae2edffc985801405.v1.cac.cac.cab
-  port: 45182
+  server: 3e1ee77a75abd2267fb2f6b190b8925e.v1.cac.cac.cab
+  port: 44308
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5789,8 +5820,8 @@ proxies:
   network: tcp
 - name: V1-乌兹别克斯坦
   type: trojan
-  server: c6f140bee9adff3a82fb30c46438b77f.v1.cac.cac.cab
-  port: 46526
+  server: 2f624ed004efbc9b1ceddf216b3fb8b8.v1.cac.cac.cab
+  port: 40581
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5798,8 +5829,8 @@ proxies:
   network: tcp
 - name: V1-乌拉圭
   type: trojan
-  server: 5357a6cb4a630d81db25bfa670d51ccc.v1.cac.cac.cab
-  port: 42796
+  server: 519d872e0d01224a7194727752c23920.v1.cac.cac.cab
+  port: 41149
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5807,8 +5838,8 @@ proxies:
   network: tcp
 - name: V1-伯利兹
   type: trojan
-  server: 8a466caee2702cb41e06d466438772a9.v1.cac.cac.cab
-  port: 45812
+  server: 0a9812dfb9ea1510bc872fbe29c8bc1d.v1.cac.cac.cab
+  port: 40864
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5816,8 +5847,8 @@ proxies:
   network: tcp
 - name: V1-比利时
   type: trojan
-  server: 3eeed05ce7defb765f7622396441e0b5.v1.cac.cac.cab
-  port: 44786
+  server: 17e8cd263d987e23af04db18b61be565.v1.cac.cac.cab
+  port: 46013
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5825,8 +5856,8 @@ proxies:
   network: tcp
 - name: V1-泰国
   type: trojan
-  server: 8f4e7c9e57659a78fb5b609ee2ff8bf8.v1.cac.cac.cab
-  port: 40037
+  server: 16e33a683e8e68bf0c8c487e7bf25fd5.v1.cac.cac.cab
+  port: 46890
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5834,8 +5865,8 @@ proxies:
   network: tcp
 - name: V1-阿富汗
   type: trojan
-  server: c694319b155c66c44c4e941e95da76e9.v1.cac.cac.cab
-  port: 45467
+  server: ace9860ba4ec3756aad291208bb319f4.v1.cac.cac.cab
+  port: 47574
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5843,8 +5874,8 @@ proxies:
   network: tcp
 - name: V1-伊拉克
   type: trojan
-  server: d7bb7a18b3ed2ea98225d8be8b16eead.v1.cac.cac.cab
-  port: 42477
+  server: 4231c5d139950c8b853533493e7a71b3.v1.cac.cac.cab
+  port: 45454
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5852,8 +5883,8 @@ proxies:
   network: tcp
 - name: V1-科摩罗
   type: trojan
-  server: 526d79ad4c3758c2af3d6b3a4e3ab634.v1.cac.cac.cab
-  port: 44765
+  server: 1d46281af95299215b909f1f614a2112.v1.cac.cac.cab
+  port: 45031
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5861,8 +5892,8 @@ proxies:
   network: tcp
 - name: V1-利比亚
   type: trojan
-  server: 82b916dfaa2d964b5df25145b9d0a037.v1.cac.cac.cab
-  port: 47344
+  server: 8f2e7ec56f5d58e8636cab33b8256747.v1.cac.cac.cab
+  port: 41396
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5870,8 +5901,8 @@ proxies:
   network: tcp
 - name: V1-卡塔尔
   type: trojan
-  server: fcbb764287dbba7936f8eb1d467be092.v1.cac.cac.cab
-  port: 49595
+  server: 2e28a5272ee170ff13a5b05c8b54187d.v1.cac.cac.cab
+  port: 41621
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5879,8 +5910,8 @@ proxies:
   network: tcp
 - name: V1-卢旺达
   type: trojan
-  server: 9460a146b5d435504b6a14014b09ea74.v1.cac.cac.cab
-  port: 48275
+  server: 3f9444481bdc1a9ce28a2e5ddf5a7be7.v1.cac.cac.cab
+  port: 48516
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5888,8 +5919,8 @@ proxies:
   network: tcp
 - name: V1-索马里
   type: trojan
-  server: 5d2ff536340708ab7e5cbd57bdd02e80.v1.cac.cac.cab
-  port: 46464
+  server: 344ab47ec6e98b7f6da2360dcf35c761.v1.cac.cac.cab
+  port: 43233
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5897,8 +5928,8 @@ proxies:
   network: tcp
 - name: V1-毛里塔尼亚
   type: trojan
-  server: e4385a18d4717e39cdfa47fff07d57e8.v1.cac.cac.cab
-  port: 42703
+  server: 098f48799a2f11f50cbfb6433ee7b356.v1.cac.cac.cab
+  port: 41567
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5906,8 +5937,8 @@ proxies:
   network: tcp
 - name: V1-塔吉克斯坦
   type: trojan
-  server: 136c2c388c4468c2beef322e3a1bc3ae.v1.cac.cac.cab
-  port: 40930
+  server: 40d6ba16249a576d97a51ff1cec70918.v1.cac.cac.cab
+  port: 43685
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5915,8 +5946,8 @@ proxies:
   network: tcp
 - name: V1-埃塞俄比亚
   type: trojan
-  server: afe72e246512459e69da1cabbb00b0bc.v1.cac.cac.cab
-  port: 46251
+  server: 06799388dcaf71df36dbf8adfe418ed7.v1.cac.cac.cab
+  port: 44405
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5924,8 +5955,8 @@ proxies:
   network: tcp
 - name: V1-毛里求斯
   type: trojan
-  server: cb61dd52d736fb067d38094d6dd58557.v1.cac.cac.cab
-  port: 45205
+  server: 346e78d04a4046bb609bde4ddd8f783c.v1.cac.cac.cab
+  port: 40066
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -5933,8 +5964,8 @@ proxies:
   network: tcp
 - name: V1-苏里南
   type: trojan
-  server: e4a1cf264e518d115d72c917dc3390d6.v1.cac.cac.cab
-  port: 44436
+  server: c433a13f0dc1e015f5b85aac841ec7e1.v1.cac.cac.cab
+  port: 43406
   password: 3e5cc9c4-903d-47ee-9699-7e6574086d0e
   udp: true
   skip-cert-verify: true
@@ -6144,9 +6175,33 @@ proxies:
     short-id: 2c99027a814692
   client-fingerprint: chrome
   network: tcp
+- name: 🇯🇵Japan 05
+  server: jp5.miyazono-kaori.com
+  port: 47538
+  sni: jp5.miyazono-kaori.com
+  up: null
+  down: null
+  skip-cert-verify: false
+  ports: 40000-50000
+  type: hysteria2
+  password: 292dc9ea-1bac-48e4-97b3-07b6cdba886d
+  obfs: salamander
+  obfs-password: nXF1UvAL6er3GAQ0
+- name: 🇯🇵Japan 06
+  server: jp6.miyazono-kaori.com
+  port: 44631
+  sni: jp6.miyazono-kaori.com
+  up: null
+  down: null
+  skip-cert-verify: false
+  ports: 40000-50000
+  type: hysteria2
+  password: 292dc9ea-1bac-48e4-97b3-07b6cdba886d
+  obfs: salamander
+  obfs-password: mBPdh6xeZmU42scZ
 - name: 🇰🇷Korea 01
   server: kr1.miyazono-kaori.com
-  port: 42300
+  port: 40656
   sni: kr1.miyazono-kaori.com
   up: null
   down: null
@@ -6158,7 +6213,7 @@ proxies:
   obfs-password: MKsqfibVxwhZ3pCf
 - name: 🇰🇷Korea 02
   server: kr2.miyazono-kaori.com
-  port: 48600
+  port: 40456
   sni: kr2.miyazono-kaori.com
   up: 1000
   down: 1000
