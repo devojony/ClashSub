@@ -800,35 +800,51 @@ proxies:
   ech-opts:
     enable: true
     query-server-name: cloudflare-ech.com
-- name: Relay_-🇩🇪DE_05
-  server: 192.0.63.230
+- name: Relay_-🇻🇳VN_02
+  server: s228.okgg.top
   type: vless
   port: 443
+  udp: true
+  uuid: 424e7cc4-df34-3518-9c7b-401db4ece90a
+  network: tcp
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: random
+  servername: u710947u6deds228.okgg.top
+  packet-encoding: ''
+- name: Relay_-🇩🇪DE_13
+  server: 45.145.42.170
+  type: vless
+  port: 8005
+  udp: true
+  uuid: 00000000-0000-4000-8000-000000000000
+  network: ws
+  tls: true
+  skip-cert-verify: true
+  servername: sub.mot.ip-ddns.com
+  ws-opts:
+    path: /
+    headers:
+      Host: sub.mot.ip-ddns.com
+  packet-encoding: ''
+- name: Relay_-🇰🇷KR_20
+  server: 106.242.64.238
+  type: vless
+  port: 50000
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
-  servername: snippet.danfeng.kozow.com
+  client-fingerprint: random
+  servername: snippet.fgfw.ndjp.net
   ws-opts:
-    path: /danfeng?ed=2560
+    path: /danfeng
     headers:
-      Host: snippet.danfeng.kozow.com
+      Host: snippet.fgfw.ndjp.net
+  alpn:
+  - http%2f1.1
   packet-encoding: ''
-- name: Relay_-🇬🇧GB_06
-  server: 192.0.54.131
-  type: vless
-  port: 443
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  servername: snippet.danfeng.kozow.com
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: snippet.danfeng.kozow.com
-  packet-encoding: ''
-- name: Relay_-🇩🇪DE_09
+- name: Relay_-🇺🇸US_21
   server: 185.197.30.6
   type: vless
   port: 443
@@ -847,50 +863,62 @@ proxies:
 
     '
   packet-encoding: ''
-- name: Relay_-🇩🇪DE_10
-  server: 192.0.54.188
+- name: Relay_-🇰🇷KR_23
+  server: 222.120.14.223
+  type: vless
+  port: 19888
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: snippet.danfeng.gleeze.com
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.danfeng.gleeze.com
+  alpn:
+  - 'http/1.1
+
+    '
+  packet-encoding: ''
+- name: Relay_-🇩🇪DE_25
+  server: 98.158.29.42
   type: vless
   port: 443
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
-  servername: snippet.danfeng.kozow.com
+  client-fingerprint: chrome
+  servername: snippet.danfeng.dedyn.io
   ws-opts:
     path: /danfeng
     headers:
-      Host: snippet.danfeng.kozow.com
+      Host: snippet.danfeng.dedyn.io
+  alpn:
+  - 'http/1.1
+
+    '
   packet-encoding: ''
-- name: Relay_-🇰🇷KR_20
-  server: 118.40.112.188
-  type: vless
-  port: 22222
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: snippet.danfeng.casacam.net
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.danfeng.casacam.net
-  packet-encoding: ''
-- name: Relay_-🇨🇦CA_21
+- name: Relay_-🇺🇸US_26 |38.02Mb
   server: 192.200.160.20
   type: vless
   port: 443
   udp: true
-  uuid: 92b82d0f-d2f8-4f6f-b177-08f681a337e6
+  uuid: 3b034275-27f8-437d-9ac0-5982708ae143
   network: ws
   tls: true
-  servername: 639073677243791121.camry-perma.info
+  client-fingerprint: chrome
+  servername: 639073677243249982.camry-perma.info
   ws-opts:
-    path: /njvqoews?ed=2560
+    path: /ferhbiws?ed=2560
     headers:
-      Host: 639073677243791121.camry-perma.info
+      Host: 639073677243249982.camry-perma.info
+  alpn:
+  - http/1.1
   packet-encoding: ''
-- name: Relay_-🇩🇪DE_28
+- name: Relay_-🇩🇪DE_30
   server: 203.168.131.110
   type: vless
   port: 3389
@@ -901,60 +929,67 @@ proxies:
   client-fingerprint: random
   servername: snippet.chinav.eu.cc
   ws-opts:
-    path: /danfeng
+    path: /danfengfp=random
     headers:
       Host: snippet.chinav.eu.cc
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: Relay_-🇻🇳VN_33
-  server: s228.okgg.top
+- name: Relay_-🇰🇷KR_33
+  server: 210.111.173.152
   type: vless
-  port: 443
-  udp: true
-  uuid: 424e7cc4-df34-3518-9c7b-401db4ece90a
-  network: tcp
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: random
-  servername: u710947u6deds228.okgg.top
-  packet-encoding: ''
-- name: Relay_-🇰🇷KR_37
-  server: 121.157.243.134
-  type: vless
-  port: 37020
+  port: 30050
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
   client-fingerprint: chrome
-  servername: snippet.danfeng.loc.cc
+  servername: snippet.danfeng.theworkpc.com
   ws-opts:
     path: /danfeng?ed=2560
     headers:
-      Host: snippet.danfeng.loc.cc
+      Host: snippet.danfeng.theworkpc.com
   packet-encoding: ''
-- name: Relay_-🇰🇷KR_45
-  server: 106.251.70.75
+- name: Relay_-🇰🇷KR_35
+  server: 211.193.169.223
   type: vless
-  port: 10162
+  port: 37810
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
   client-fingerprint: random
-  servername: snippet.chinav.eu.cc
+  servername: snippet.fgfw.de5.net
   ws-opts:
     path: /danfeng
     headers:
-      Host: snippet.chinav.eu.cc
+      Host: snippet.fgfw.de5.net
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: Relay_-🇰🇷KR_47
-  server: 222.113.18.207
+- name: Relay_-🇺🇸US_36
+  server: 38.244.5.86
   type: vless
-  port: 16993
+  port: 39738
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: snippet.danfeng.dedyn.io
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.danfeng.dedyn.io
+  alpn:
+  - 'http/1.1
+
+    '
+  packet-encoding: ''
+- name: Relay_-🇰🇷KR_39
+  server: 27.119.233.26
+  type: vless
+  port: 32768
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
@@ -966,10 +1001,10 @@ proxies:
     headers:
       Host: snippet.fgfw.de5.net
   packet-encoding: ''
-- name: _63
-  server: www.charteredaccountantsanz.com
+- name: _51
+  server: cfxr.eu.org
   type: vless
-  port: 443
+  port: 2053
   udp: true
   uuid: 26524cce-d514-4014-a426-365fb266a14d
   network: ws
@@ -981,7 +1016,7 @@ proxies:
     headers:
       Host: ui4waovxqh.chinav.eu.org
   packet-encoding: ''
-- name: _65
+- name: _60
   server: cf.cloudflare.182682.xyz
   type: vless
   port: 443
@@ -996,24 +1031,131 @@ proxies:
     headers:
       Host: ui4waovxqh.chinav.eu.org
   packet-encoding: ''
-- name: Relay_-🇺🇸US_73
-  server: 166.117.33.104
+- name: Relay_-🇳🇱NL_61 |228.52Mb
+  server: cdn.7zz.cn
+  type: vless
+  port: 443
+  udp: true
+  uuid: e9254fe9-dd7e-4f90-ab06-4c96c5cd7362
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: 639073677243704890.camry-perma.info
+  ws-opts:
+    path: /qszxrsws?ed=2560
+    headers:
+      Host: 639073677243704890.camry-perma.info
+  packet-encoding: ''
+- name: Relay_-🇩🇪DE_62
+  server: 192.0.63.175
   type: vless
   port: 443
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
-  servername: snippet.danfeng.theworkpc.com
+  client-fingerprint: chrome
+  servername: snippet.danfeng.gleeze.com
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.danfeng.gleeze.com
+  alpn:
+  - 'http/1.1
+
+    '
+  packet-encoding: ''
+- name: _67
+  server: www.charteredaccountantsanz.com
+  type: vless
+  port: 443
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: ui4waovxqh.chinav.eu.org
   ws-opts:
     path: /danfeng?ed=2560
     headers:
-      Host: snippet.danfeng.theworkpc.com
+      Host: ui4waovxqh.chinav.eu.org
   packet-encoding: ''
-- name: Relay_-🇩🇪DE_80
-  server: cf.danfeng.eu.org
+- name: Relay_-🇺🇸US_69
+  server: 38.244.5.207
   type: vless
-  port: 443
+  port: 39738
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: snippet.danfeng.dedyn.io
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.danfeng.dedyn.io
+  alpn:
+  - 'http/1.1
+
+    '
+  packet-encoding: ''
+- name: Relay_-🇩🇪DE_70
+  server: blog.646474.xyz
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: ypsg7e0wvt.chinam.indevs.in
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: ypsg7e0wvt.chinam.indevs.in
+  packet-encoding: ''
+- name: Relay_-🇩🇪DE_86
+  server: www.lightenq.buzz
+  type: hysteria2
+  port: 12152
+  udp: true
+  password: aYIRTa8rLh9qRDIrcUakSfzpWUhPcCKD
+  auth: aYIRTa8rLh9qRDIrcUakSfzpWUhPcCKD
+  sni: bing.com
+  skip-cert-verify: true
+- name: Relay_-🇩🇪DE_88
+  server: quick-edit.devprod.cloudflare.dev
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: jrr8jjznm.chinam.indevs.in
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: jrr8jjznm.chinam.indevs.in
+  packet-encoding: ''
+- name: Relay_-🇩🇪DE_98
+  server: 185.94.29.156
+  type: vless
+  port: 4001
+  udp: true
+  uuid: 00000000-0000-4000-8000-000000000000
+  network: ws
+  tls: true
+  servername: sub.mot.ip-ddns.com
+  ws-opts:
+    path: /
+    headers:
+      Host: sub.mot.ip-ddns.com
+  packet-encoding: ''
+- name: Relay_-🇺🇸US_102
+  server: 198.23.184.10
+  type: vless
+  port: 587
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
@@ -1029,7 +1171,108 @@ proxies:
 
     '
   packet-encoding: ''
-- name: Relay_-🇩🇪DE_82
+- name: Relay_-🇩🇪DE_105
+  server: 154.92.9.190
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: snippet.danfeng.gleeze.com
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.danfeng.gleeze.com
+  alpn:
+  - 'http/1.1
+
+    '
+  packet-encoding: ''
+- name: Relay_-🇺🇸US_107
+  server: 94.131.101.135
+  type: vless
+  port: 443
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: Relay_-🇩🇪DE_113
+  server: 192.0.54.131
+  type: vless
+  port: 443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  servername: snippet.danfeng.kozow.com
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: snippet.danfeng.kozow.com
+  packet-encoding: ''
+- name: Pool__115
+  server: 195.154.54.131
+  type: hysteria2
+  port: 40022
+  udp: true
+  password: dongtaiwang.com
+  auth: dongtaiwang.com
+  sni: www.microsoft.com
+  skip-cert-verify: true
+- name: Relay_-🇰🇷KR_129
+  server: 175.208.111.195
+  type: vless
+  port: 50001
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: snippet.danfeng.theworkpc.com
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: snippet.danfeng.theworkpc.com
+  packet-encoding: ''
+- name: Relay_-🇩🇪DE_133
+  server: www.gov.se
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: bh0070x2.danfeng.gv.uy
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: bh0070x2.danfeng.gv.uy
+  packet-encoding: ''
+- name: Relay_-🇩🇪DE_142
+  server: www.gco.gov.qa
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: bh0070x2.danfeng.gv.uy
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: bh0070x2.danfeng.gv.uy
+  packet-encoding: ''
+- name: Relay_-🇩🇪DE_143
   server: cf7.danfeng.eu.org
   type: vless
   port: 2087
@@ -1048,22 +1291,34 @@ proxies:
 
     '
   packet-encoding: ''
-- name: Relay_-🇩🇪DE_84
-  server: static.shopify.com
+- name: _144 |117.15Mb
+  server: 185.93.105.107
   type: vless
   port: 443
   udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  uuid: c4f2dee2-14e3-4c02-91e9-31c7917e239c
+  network: tcp
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: qq
+  servername: sub.sbrf-cdn342.ru
+  packet-encoding: ''
+- name: Relay_-🇰🇷KR_145
+  server: 59.21.203.65
+  type: vless
+  port: 10443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
-  client-fingerprint: chrome
-  servername: bh0070x2.danfeng.gv.uy
+  client-fingerprint: random
+  servername: snippet.fgfw.ccwu.cc
   ws-opts:
-    path: /danfeng?ed=2560
+    path: /danfeng
     headers:
-      Host: bh0070x2.danfeng.gv.uy
+      Host: snippet.fgfw.ccwu.cc
   packet-encoding: ''
-- name: Relay_-🇬🇧GB_85
+- name: Relay_-🇬🇧GB_147
   server: cf3.danfeng.eu.org
   type: vless
   port: 8443
@@ -1082,161 +1337,7 @@ proxies:
 
     '
   packet-encoding: ''
-- name: Relay_-🇩🇪DE_86
-  server: 23.165.200.252
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: snippet.danfeng.gleeze.com
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.danfeng.gleeze.com
-  alpn:
-  - 'http/1.1
-
-    '
-  packet-encoding: ''
-- name: Relay_-🇩🇪DE_88
-  server: newsroom.paypal-corp.com
-  type: vless
-  port: 443
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: bh0070x2.danfeng.gv.uy
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: bh0070x2.danfeng.gv.uy
-  packet-encoding: ''
-- name: Relay_-🇩🇪DE_90
-  server: convera.com
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: bh0070x2.danfeng.gv.uy
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: bh0070x2.danfeng.gv.uy
-  packet-encoding: ''
-- name: Relay_-🇩🇪DE_95
-  server: www.gco.gov.qa
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: bh0070x2.danfeng.gv.uy
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: bh0070x2.danfeng.gv.uy
-  packet-encoding: ''
-- name: Relay_-🇩🇪DE_99
-  server: 192.0.54.225
-  type: vless
-  port: 443
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  servername: snippet.danfeng.kozow.com
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: snippet.danfeng.kozow.com
-  packet-encoding: ''
-- name: Pool__101
-  server: 195.154.54.131
-  type: hysteria2
-  port: 40022
-  udp: true
-  password: dongtaiwang.com
-  auth: dongtaiwang.com
-  sni: www.microsoft.com
-  skip-cert-verify: true
-- name: Relay_-🇩🇪DE_104
-  server: 192.0.63.227
-  type: vless
-  port: 443
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  servername: snippet.fgfw.ndjp.net
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.fgfw.ndjp.net
-  packet-encoding: ''
-- name: Relay_-🇩🇪DE_108
-  server: blog.646474.xyz
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: ypsg7e0wvt.chinam.indevs.in
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: ypsg7e0wvt.chinam.indevs.in
-  packet-encoding: ''
-- name: Relay_-🇩🇪DE_110
-  server: 192.0.63.124
-  type: vless
-  port: 443
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  servername: snippet.chinat.eu.cc
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.chinat.eu.cc
-  packet-encoding: ''
-- name: Relay_-🇬🇧GB_114 |334.20Mb
-  server: 195.181.173.199
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  tls: true
-  servername: ams1.fromblancwithlove.com
-  packet-encoding: ''
-- name: Relay_-🇰🇷KR_127
-  server: 59.21.203.65
-  type: vless
-  port: 10443
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: snippet.fgfw.ccwu.cc
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.fgfw.ccwu.cc
-  packet-encoding: ''
-- name: Relay_-🇰🇷KR_147
+- name: Relay_-🇰🇷KR_149
   server: 211.48.77.114
   type: vless
   port: 12312
@@ -1251,144 +1352,109 @@ proxies:
     headers:
       Host: snippet.fgfw.ye.gs
   packet-encoding: ''
-- name: _148 |105.36Mb
-  server: 185.93.105.107
+- name: Relay_-🇩🇪DE_154
+  server: newsroom.paypal-corp.com
   type: vless
   port: 443
   udp: true
-  uuid: c4f2dee2-14e3-4c02-91e9-31c7917e239c
-  network: tcp
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  network: ws
   tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: qq
-  servername: sub.sbrf-cdn342.ru
+  client-fingerprint: chrome
+  servername: bh0070x2.danfeng.gv.uy
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: bh0070x2.danfeng.gv.uy
   packet-encoding: ''
-- name: Relay_-🇰🇷KR_153
-  server: 222.113.26.172
+- name: Relay_-🇩🇪DE_156
+  server: 185.82.126.185
   type: vless
-  port: 10000
+  port: 2053
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: Relay_-🇩🇪DE_158
+  server: 192.0.63.7
+  type: vless
+  port: 443
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
-  client-fingerprint: random
-  servername: snippet.fgfw.indevs.in
+  client-fingerprint: chrome
+  servername: snippet.sh21.eu.org
   ws-opts:
     path: /danfeng
     headers:
-      Host: snippet.fgfw.indevs.in
+      Host: snippet.sh21.eu.org
+  alpn:
+  - 'http/1.1
+
+    '
   packet-encoding: ''
-- name: _157 | 9.56Mb
-  server: 154.223.16.212
+- name: _163 |286.30Mb
+  server: 108.131.224.21
   type: ss
-  port: 989
+  port: 443
   udp: true
-  password: f8f7aCzcPKbsF8p3
+  password: amazonskr05
   cipher: aes-256-cfb
-- name: _163 |13.08Mb
+- name: _169 |13.08Mb
   server: 185.189.160.105
   type: ss
   port: 41632
   udp: true
   password: qwerREWQ@@
   cipher: aes-256-cfb
-- name: _165 |143.35Mb
+- name: _178 |143.35Mb
   server: 13.61.195.4
   type: ss
   port: 443
   udp: true
   password: amazonskr05
   cipher: aes-256-cfb
-- name: _166 |12.71Mb
-  server: 13.214.211.132
-  type: ss
-  port: 12345
-  udp: true
-  password: dfa9412e-4c5d-4af3-86c5-734f3f36cc0e
-  cipher: aes-128-gcm
-- name: Relay_-🇹🇼TW_170 | 9.59Mb
-  server: namrcg001611cy4.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: Relay_-🇹🇼TW_177 | 9.87Mb
-  server: n8mrcg005938lsz.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: Relay_-🇹🇼TW_179 |11.10Mb
-  server: r3mrcg0011606bh.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: Relay_-🇩🇪DE_187 |12.83Mb
-  server: 51.15.23.63
-  type: ss
-  port: 989
-  udp: true
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
-- name: Relay_-🇹🇼TW_191 | 9.30Mb
-  server: r3mrcg001168e8p.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: Relay_-🇹🇼TW_192 |10.88Mb
-  server: n8mrcg004676x9e.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: Relay_-🇹🇼TW_195 | 2.77Mb
+- name: Relay_-🇹🇼TW_182 | 2.77Mb
   server: r3mrcg001257bhv.cybervena.com
   type: ss
   port: 50099
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: Relay_-🇿🇦ZA_196 |33.23Mb
+- name: _191 | 9.56Mb
+  server: 154.223.16.212
+  type: ss
+  port: 989
+  udp: true
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
+- name: Relay_-🇹🇼TW_193 | 5.74Mb
+  server: nbmrcg003449jp6.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: Relay_-🇿🇦ZA_200 |33.23Mb
   server: 102.133.165.160
   type: ss
   port: 16233
   udp: true
   password: Xsy8Ox4yOV3xLlpxtjzs3X
   cipher: chacha20-ietf-poly1305
-- name: Relay_-🇹🇼TW_198 |12.37Mb
-  server: n8mrcg005977h4d.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: _201 | 4.33Mb
-  server: 103.238.214.82
-  type: ss
-  port: 41632
-  udp: true
-  password: qwerREWQ@@
-  cipher: aes-256-cfb
-- name: Relay_-🇹🇼TW_208 | 7.03Mb
-  server: r3mrcg001213klw.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: _215 |53.09Mb
-  server: 38.76.206.31
+- name: _215 | 7.17Mb
+  server: 51.89.11.94
   type: vmess
-  port: 8080
+  port: 443
   udp: true
-  uuid: 912f1899-c436-4b35-ef7f-134795329e01
+  uuid: e5408561-3874-4d41-a744-0cd0dfdb86c8
   alterId: 0
   cipher: auto
   network: http
@@ -1396,11 +1462,75 @@ proxies:
     method: GET
     path:
     - /
+    headers:
+      Host:
+      - 51.89.11.94
   h2-opts: {}
-- name: Relay_-🇰🇷KR_224
-  server: 221.146.116.77
+- name: _216 |23.90Mb
+  server: 20.6.128.4
+  type: vmess
+  port: 6788
+  udp: true
+  uuid: bfff8306-6102-4fde-8a7f-f025e94f7a53
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+- name: Relay_-🇺🇸US_217 |171.16Mb
+  server: 82.198.246.46
+  type: vmess
+  port: 180
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+- name: Relay_-🇺🇸US_219 | 3.38Mb
+  server: v29.hdacd.com
+  type: vmess
+  port: 30829
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: Relay_-🇯🇵JP_220 | 1.15Mb
+  server: v6.hdacd.com
+  type: vmess
+  port: 30806
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+- name: _224 | 2.17Mb
+  server: 103.231.73.181
   type: trojan
-  port: 10003
+  port: 4443
+  udp: true
+  password: strong-secret-pass-777
+  skip-cert-verify: true
+- name: Relay_-🇫🇷FR_225
+  server: still-mastodon.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: still-mastodon.rooster465.autos
+- name: _227 | 6.06Mb
+  server: 58.152.25.253
+  type: trojan
+  port: 443
+  udp: true
+  password: BxceQaOe
+  skip-cert-verify: true
+- name: Relay_-🇩🇪DE_229
+  server: 152.53.200.98
+  type: trojan
+  port: 8444
   udp: true
   password: trojan
   sni: jflsjlaf.pages.dev
@@ -1410,46 +1540,88 @@ proxies:
     headers:
       Host: jflsjlaf.pages.dev
   network: ws
-- name: Relay_-🇦🇺AU_225 |11.45Mb
-  server: evolving-kangaroo.rooster465.autos
+- name: Relay_-🇮🇪IE_237 |345.14Mb
+  server: saving-anemone.rooster465.autos
   type: trojan
   port: 443
+  password: WF42809561
+  sni: saving-anemone.rooster465.autos
+- name: Relay_-🇫🇷FR_242
+  server: prompt-duckling.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: prompt-duckling.rooster465.autos
+- name: _244 | 7.26Mb
+  server: 94.131.105.125
+  type: trojan
+  port: 4443
   udp: true
-  password: WF42809561
-  sni: evolving-kangaroo.rooster465.autos
-- name: Relay_-🇦🇺AU_226 |11.23Mb
-  server: premium-lab.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: premium-lab.rooster465.autos
-- name: Relay_-🇭🇰HK_230 |28.02Mb
+  password: strong-secret-pass-777
+  skip-cert-verify: true
+- name: Relay_-🇭🇰HK_247 |28.02Mb
   server: ready-monarch.rooster465.autos
   type: trojan
   port: 443
   udp: true
   password: WF42809561
   sni: ready-monarch.rooster465.autos
-- name: _231 | 2.17Mb
-  server: 103.231.73.181
+- name: Relay_-🇺🇸US_249 |114.52Mb
+  server: n3.chateditimage.com
   type: trojan
-  port: 4443
+  port: 443
   udp: true
-  password: strong-secret-pass-777
+  password: 4123ae62-0999-4984-8ead-091630e594a9
+  sni: n3.chateditimage.com
   skip-cert-verify: true
-- name: Relay_-🇮🇪IE_255 |345.14Mb
-  server: saving-anemone.rooster465.autos
+- name: Relay_-🇺🇸US_250 |38.76Mb
+  server: n1.chateditimage.com
+  type: trojan
+  port: 443
+  udp: true
+  password: 4123ae62-0999-4984-8ead-091630e594a9
+  sni: n1.chateditimage.com
+  skip-cert-verify: true
+- name: Relay_-🇺🇸US_252 |39.98Mb
+  server: alert-sunbird.crayfish192.xyz
   type: trojan
   port: 443
   password: WF42809561
-  sni: saving-anemone.rooster465.autos
-- name: Relay_-🇮🇪IE_257 |331.23Mb
-  server: eternal-serval.rooster465.autos
+  sni: alert-sunbird.crayfish192.xyz
+- name: Relay_-🇺🇸US_255 |36.68Mb
+  server: n2.chateditimage.com
+  type: trojan
+  port: 443
+  udp: true
+  password: de7d6444-a7a8-4b3a-bf26-bc6939bb0279
+  sni: n2.chateditimage.com
+  skip-cert-verify: true
+- name: Relay_-🇦🇺AU_257 |11.45Mb
+  server: evolving-kangaroo.rooster465.autos
+  type: trojan
+  port: 443
+  udp: true
+  password: WF42809561
+  sni: evolving-kangaroo.rooster465.autos
+- name: Relay_-🇩🇪DE_258 |280.66Mb
+  server: dynamic-tiger.crayfish192.xyz
   type: trojan
   port: 443
   password: WF42809561
-  sni: eternal-serval.rooster465.autos
-- name: Relay_🇧🇬 BG-🇦🇺AU_258 |11.48Mb
+  sni: dynamic-tiger.crayfish192.xyz
+- name: Relay_-🇰🇷KR_262 |66.89Mb
+  server: amused-peacock.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: amused-peacock.rooster465.autos
+- name: Relay_-🇦🇺AU_263 |11.23Mb
+  server: premium-lab.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: premium-lab.rooster465.autos
+- name: Relay_🇧🇬 BG-🇦🇺AU_265 |11.48Mb
   server: enhanced-crayfish.rooster465.autos
   type: trojan
   country: 🇧🇬 BG
@@ -1457,7 +1629,45 @@ proxies:
   udp: true
   password: IL37892054
   skip-cert-verify: true
-- name: Relay_🇬🇧GB-🇺🇸US_259 | 9.27Mb
+- name: Relay_🇨🇳 CN-🇺🇸US_266
+  server: v35.hdacd.com
+  type: vmess
+  country: 🇨🇳 CN
+  port: 30835
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: Relay_🇨🇳CN-🇸🇬SG_267 | 7.58Mb
+  server: v45.hdacd.com
+  type: vmess
+  country: 🇨🇳CN
+  port: 30845
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  network: tcp
+  servername: v45.hdacd.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: Relay_🇨🇳CN-🇺🇸US_268 |65.82Mb
+  server: v36.hdacd.com
+  type: vmess
+  country: 🇨🇳CN
+  port: 30836
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  network: tcp
+  servername: v36.hdacd.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: Relay_🇬🇧GB-🇺🇸US_269 | 9.27Mb
   server: 82.198.246.97
   type: vmess
   country: 🇬🇧GB
@@ -1469,7 +1679,19 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: Relay_🇭🇰HK-🇭🇰HK_261 |23.19Mb
+- name: Relay_🇭🇰 HK-🇺🇸US_271 |46.17Mb
+  server: v4.hdacd.com
+  type: vmess
+  country: 🇭🇰 HK
+  port: 30804
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: Relay_🇭🇰HK-🇭🇰HK_273 |23.19Mb
   server: n1761296878.4u9ma.icu
   type: vmess
   country: 🇭🇰HK
@@ -1487,14 +1709,32 @@ proxies:
     path: /
     headers:
       HOST: n1761296878.4u9ma.icu
-- name: 🇰🇷KR_265 | 4.15Mb
+- name: 🇰🇷KR_276 | 4.15Mb
   server: 141.164.45.187
   type: ss
   country: 🇰🇷KR
   port: 5498
   password: lGqs95QkFHo2NV
   cipher: aes-256-gcm
-- name: 🇳🇱NL_266 |97.14Mb
+- name: Relay_🇰🇷KR-🇰🇷KR_277 |40.74Mb
+  server: chuncheon03.zgjok.com
+  type: vmess
+  country: 🇰🇷KR
+  port: 443
+  uuid: 81d5cac4-d039-4874-9a20-c391f580012d
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: chuncheon03.zgjok.com
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: chuncheon03.zgjok.com
+- name: 🇳🇱NL_278 |97.14Mb
   server: 45.12.134.57
   type: trojan
   country: 🇳🇱NL
@@ -1502,44 +1742,7 @@ proxies:
   udp: true
   password: strong-secret-pass-777
   skip-cert-verify: true
-- name: 🇸🇪 SE_267 | 3.54Mb
-  server: 192.36.27.94
-  type: ss
-  country: 🇸🇪 SE
-  port: 989
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
-- name: Relay_🇹🇼 TW-🇹🇼TW_272 |10.09Mb
-  server: r3mrcg0071643p7.cybervena.com
-  type: ss
-  country: 🇹🇼 TW
-  port: 50099
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: Relay_🇹🇼TW-🇹🇼TW_274 | 5.81Mb
-  server: r3mrcg001121x36.cybervena.com
-  type: ss
-  country: 🇹🇼TW
-  port: 50099
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: Relay_🇺🇸 US-🇺🇸US_277 |39.43Mb
-  server: n2.chateditimage.com
-  type: trojan
-  country: 🇺🇸 US
-  port: 443
-  udp: true
-  password: 4123ae62-0999-4984-8ead-091630e594a9
-  skip-cert-verify: true
-- name: Relay_🇺🇸 US-🇺🇸US_278 |39.53Mb
-  server: n1.chateditimage.com
-  type: trojan
-  country: 🇺🇸 US
-  port: 443
-  udp: true
-  password: de7d6444-a7a8-4b3a-bf26-bc6939bb0279
-  skip-cert-verify: true
-- name: Relay_🇺🇸US-🇺🇸US_280 |39.40Mb
+- name: Relay_🇺🇸US-🇺🇸US_292 |39.40Mb
   server: healthy-ewe.rooster465.autos
   type: trojan
   country: 🇺🇸US
@@ -1548,7 +1751,7 @@ proxies:
   password: IL37892054
   sni: healthy-ewe.rooster465.autos
   skip-cert-verify: true
-- name: 🏁 ZZ_281 |43.41Mb
+- name: 🏁 ZZ_294 |43.41Mb
   server: 185.231.233.112
   type: ss
   country: 🏁 ZZ
@@ -1556,9 +1759,9 @@ proxies:
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
 - name: disney_KR
-  server: 222.120.14.223
+  server: 222.113.18.205
   type: vless
-  port: 19888
+  port: 11001
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
@@ -1593,25 +1796,6 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_KR_2
-  server: 222.113.18.205
-  type: vless
-  port: 11001
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: snippet.danfeng.gleeze.com
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.danfeng.gleeze.com
-  alpn:
-  - 'http/1.1
-
-    '
-  packet-encoding: ''
 - name: disney_HK |56.71Mb
   server: 216.236.26.19
   type: hysteria2
@@ -1620,6 +1804,21 @@ proxies:
   password: bb7d8763-4afa-465f-b066-35786781ced2
   auth: bb7d8763-4afa-465f-b066-35786781ced2
   skip-cert-verify: true
+- name: disney_KR_2
+  server: 222.113.18.207
+  type: vless
+  port: 16993
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: snippet.fgfw.de5.net
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.fgfw.de5.net
+  packet-encoding: ''
 - name: disney_SG
   server: 18.140.179.70
   type: vless
@@ -1639,62 +1838,23 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_HK
-  server: s298.okgg.top
+- name: disney_KR_3
+  server: 222.113.26.172
   type: vless
-  port: 443
+  port: 10000
   udp: true
-  uuid: 424e7cc4-df34-3518-9c7b-401db4ece90a
-  network: tcp
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
   tls: true
-  flow: xtls-rprx-vision
   client-fingerprint: random
-  servername: u710947u9d8cs298.okgg.top
+  servername: snippet.fgfw.indevs.in
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.fgfw.indevs.in
   packet-encoding: ''
-- name: disney_TW | 9.13Mb
-  server: r3mrcg0011993za.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 9.71Mb
-  server: n8mrcg004767yf3.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 7.39Mb
-  server: n8mrcg004740fsy.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW |39.71Mb
-  server: ncmrcg000138e7b.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW |12.08Mb
-  server: namrcg002801sc5.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW |10.13Mb
-  server: n8mrcg0059595fa.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 7.51Mb
-  server: r3mrcg001188p8v.cybervena.com
+- name: disney_TW |86.15Mb
+  server: r3mrcg007150y7y.cybervena.com
   type: ss
   port: 50099
   udp: true
@@ -1707,22 +1867,29 @@ proxies:
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_TW | 8.97Mb
-  server: r3mrcg007117fb8.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 76fd2910-8f2d-4f0f-883a-8da226f52000
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 8.95Mb
-  server: r3mrcg001233myh.cybervena.com
+- name: disney_TW | 7.39Mb
+  server: n8mrcg004740fsy.cybervena.com
   type: ss
   port: 50099
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_TW |11.13Mb
-  server: n8mrcg006016ehj.cybervena.com
+- name: disney_TW |10.13Mb
+  server: n8mrcg0059595fa.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 9.59Mb
+  server: namrcg001611cy4.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 8.95Mb
+  server: r3mrcg001233myh.cybervena.com
   type: ss
   port: 50099
   udp: true
@@ -1735,57 +1902,8 @@ proxies:
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_TW | 9.70Mb
-  server: namrcg001655hvm.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW |81.64Mb
-  server: r3mrcg001142988.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 8.55Mb
-  server: nbmrcg003466pb9.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 9.96Mb
-  server: r3mrcg001162ctc.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW |86.15Mb
-  server: r3mrcg007150y7y.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW |11.38Mb
-  server: n8mrcg0059867fh.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 5.74Mb
-  server: nbmrcg003449jp6.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 9.39Mb
-  server: namrcg001666y2h.cybervena.com
+- name: disney_TW |11.13Mb
+  server: n8mrcg006016ehj.cybervena.com
   type: ss
   port: 50099
   udp: true
@@ -1798,8 +1916,15 @@ proxies:
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_TW | 8.40Mb
-  server: n8mrcg005988a7z.cybervena.com
+- name: disney_TW | 8.87Mb
+  server: r3mrcg007144ll4.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 7.51Mb
+  server: r3mrcg001188p8v.cybervena.com
   type: ss
   port: 50099
   udp: true
@@ -1812,6 +1937,20 @@ proxies:
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
+- name: disney_TW | 8.97Mb
+  server: r3mrcg007117fb8.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 76fd2910-8f2d-4f0f-883a-8da226f52000
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW |12.08Mb
+  server: namrcg002801sc5.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
 - name: disney_TW |46.17Mb
   server: n8mrcg006015jsm.cybervena.com
   type: ss
@@ -1819,15 +1958,15 @@ proxies:
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_TW | 8.20Mb
-  server: ncmrcg000116egb.cybervena.com
+- name: disney_TW | 9.13Mb
+  server: r3mrcg0011993za.cybervena.com
   type: ss
   port: 50099
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_TW | 7.59Mb
-  server: nbmrcg003507ck6.cybervena.com
+- name: disney_TW | 8.40Mb
+  server: n8mrcg005988a7z.cybervena.com
   type: ss
   port: 50099
   udp: true
@@ -1847,8 +1986,8 @@ proxies:
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_TW | 9.88Mb
-  server: n8mrcg004697zw5.cybervena.com
+- name: disney_TW | 8.20Mb
+  server: ncmrcg000116egb.cybervena.com
   type: ss
   port: 50099
   udp: true
@@ -1861,15 +2000,8 @@ proxies:
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_TW | 8.87Mb
-  server: r3mrcg007144ll4.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 9.67Mb
-  server: r3mrcg007116sfa.cybervena.com
+- name: disney_TW | 9.71Mb
+  server: n8mrcg004767yf3.cybervena.com
   type: ss
   port: 50099
   udp: true
@@ -1884,6 +2016,111 @@ proxies:
   cipher: chacha20-ietf-poly1305
 - name: disney_TW | 6.43Mb
   server: r3mrcg007147vhp.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW |39.71Mb
+  server: ncmrcg000138e7b.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 9.39Mb
+  server: namrcg001666y2h.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 9.67Mb
+  server: r3mrcg007116sfa.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_VN | 4.33Mb
+  server: 103.238.214.82
+  type: ss
+  port: 41632
+  udp: true
+  password: qwerREWQ@@
+  cipher: aes-256-cfb
+- name: disney_TW | 5.89Mb
+  server: n8mrcg005972g7w.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW |81.64Mb
+  server: r3mrcg001142988.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 9.96Mb
+  server: r3mrcg001162ctc.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW |10.88Mb
+  server: n8mrcg004676x9e.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 9.70Mb
+  server: namrcg001655hvm.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW |11.38Mb
+  server: n8mrcg0059867fh.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 8.55Mb
+  server: nbmrcg003466pb9.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW |12.43Mb
+  server: namrcg001662wgh.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 9.87Mb
+  server: n8mrcg005938lsz.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 9.88Mb
+  server: n8mrcg004697zw5.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW |11.10Mb
+  server: r3mrcg0011606bh.cybervena.com
   type: ss
   port: 50099
   udp: true
@@ -1912,31 +2149,7 @@ proxies:
   h2-opts: {}
   ws-opts:
     path: /arki
-- name: disney_KR |62.63Mb
-  server: powerful-squid.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: powerful-squid.rooster465.autos
-- name: disney_KR |66.89Mb
-  server: amused-peacock.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: amused-peacock.rooster465.autos
-- name: disney_KR |61.15Mb
-  server: sterling-fowl.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: sterling-fowl.rooster465.autos
-- name: disney_KR |56.70Mb
-  server: ready-lion.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: ready-lion.rooster465.autos
-- name: disney_HK_1
+- name: disney_HK
   server: 54.46.72.234
   type: trojan
   port: 8025
@@ -1949,6 +2162,24 @@ proxies:
     headers:
       Host: jflsjlaf.pages.dev
   network: ws
+- name: disney_KR |56.70Mb
+  server: ready-lion.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: ready-lion.rooster465.autos
+- name: disney_KR |62.63Mb
+  server: powerful-squid.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: powerful-squid.rooster465.autos
+- name: disney_KR |61.15Mb
+  server: sterling-fowl.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: sterling-fowl.rooster465.autos
 - name: disney_HK | 6.96Mb
   server: 103.143.238.196
   type: vmess
@@ -1967,22 +2198,8 @@ proxies:
     path: /vmesswss
     headers:
       HOST: www.cloudflare.com
-- name: disney_TW | 9.84Mb
-  server: n8mrcg005958sxh.cybervena.com
-  type: ss
-  country: 🇹🇼 TW
-  port: 50099
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 5.48Mb
-  server: r3mrcg001222869.cybervena.com
-  type: ss
-  country: 🇹🇼 TW
-  port: 50099
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: disney_TW | 9.15Mb
-  server: r3mrcg00121233v.cybervena.com
+- name: disney_TW |10.09Mb
+  server: r3mrcg0071643p7.cybervena.com
   type: ss
   country: 🇹🇼 TW
   port: 50099
@@ -1995,15 +2212,36 @@ proxies:
   port: 50099
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_TW | 6.46Mb
-  server: nbmrcg003494xuj.cybervena.com
+- name: disney_TW | 9.84Mb
+  server: n8mrcg005958sxh.cybervena.com
   type: ss
-  country: 🇹🇼TW
+  country: 🇹🇼 TW
+  port: 50099
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 9.15Mb
+  server: r3mrcg00121233v.cybervena.com
+  type: ss
+  country: 🇹🇼 TW
+  port: 50099
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW |10.06Mb
+  server: nbmrcg003437cgb.cybervena.com
+  type: ss
+  country: 🇹🇼 TW
   port: 50099
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
 - name: disney_TW | 9.77Mb
   server: r3mrcg001296egb.cybervena.com
+  type: ss
+  country: 🇹🇼TW
+  port: 50099
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_TW | 6.46Mb
+  server: nbmrcg003494xuj.cybervena.com
   type: ss
   country: 🇹🇼TW
   port: 50099
@@ -2016,6 +2254,13 @@ proxies:
   port: 50099
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
+- name: disney_TW | 8.29Mb
+  server: n8mrcg00602689c.cybervena.com
+  type: ss
+  country: 🇹🇼TW
+  port: 50099
+  password: 76fd2910-8f2d-4f0f-883a-8da226f52000
+  cipher: chacha20-ietf-poly1305
 - name: disney_KR |63.28Mb
   server: positive-bear.rooster465.autos
   type: trojan
@@ -2025,13 +2270,6 @@ proxies:
   password: IL37892054
   sni: positive-bear.rooster465.autos
   skip-cert-verify: true
-- name: disney_TW | 3.50Mb
-  server: nbmrcg003505rnd.cybervena.com
-  type: ss
-  country: 🏁 ZZ
-  port: 50099
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
 - name: disney_TW |10.30Mb_1
   server: n8mrcg0060292s3.cybervena.com
   type: ss
@@ -2039,36 +2277,34 @@ proxies:
   port: 50099
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_netflix_GB
-  server: 192.0.63.115
+- name: disney_TW | 3.50Mb
+  server: nbmrcg003505rnd.cybervena.com
+  type: ss
+  country: 🏁 ZZ
+  port: 50099
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_NL
+  server: 80.240.141.242
   type: vless
-  port: 443
+  port: 2096
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
-  servername: snippet.danfeng.theworkpc.com
+  client-fingerprint: chrome
+  servername: snippet.sh21.eu.org
   ws-opts:
-    path: /danfeng?ed=2560
+    path: /danfeng
     headers:
-      Host: snippet.danfeng.theworkpc.com
+      Host: snippet.sh21.eu.org
+  alpn:
+  - 'http/1.1
+
+    '
   packet-encoding: ''
-- name: disney_netflix_DE
-  server: 37.114.50.157
-  type: vless
-  port: 4002
-  udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
-  network: ws
-  tls: true
-  servername: sub.mot.ip-ddns.com
-  ws-opts:
-    path: /
-    headers:
-      Host: sub.mot.ip-ddns.com
-  packet-encoding: ''
-- name: disney_netflix_GB_1
-  server: 192.0.63.56
+- name: disney_netflix_GB
+  server: 192.0.54.225
   type: vless
   port: 443
   udp: true
@@ -2077,42 +2313,12 @@ proxies:
   tls: true
   servername: snippet.danfeng.kozow.com
   ws-opts:
-    path: /danfeng
+    path: /danfeng?ed=2560
     headers:
       Host: snippet.danfeng.kozow.com
   packet-encoding: ''
-- name: disney_DE
-  server: 45.145.42.170
-  type: vless
-  port: 8005
-  udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
-  network: ws
-  tls: true
-  skip-cert-verify: true
-  servername: sub.mot.ip-ddns.com
-  ws-opts:
-    path: /
-    headers:
-      Host: sub.mot.ip-ddns.com
-  packet-encoding: ''
-- name: disney_NL
-  server: 138.226.240.199
-  type: vless
-  port: 4433
-  udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: sub.mot.ip-ddns.com
-  ws-opts:
-    path: /
-    headers:
-      Host: sub.mot.ip-ddns.com
-  packet-encoding: xudp
-- name: disney_netflix_IE
-  server: 194.87.245.253
+- name: disney_netflix_GB_1
+  server: 192.0.63.56
   type: vless
   port: 443
   udp: true
@@ -2135,11 +2341,80 @@ proxies:
   tls: true
   servername: snippet.danfeng.kozow.com
   ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: snippet.danfeng.kozow.com
+  packet-encoding: ''
+- name: disney_netflix_GB_3
+  server: 192.0.54.188
+  type: vless
+  port: 443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  servername: snippet.danfeng.kozow.com
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: snippet.danfeng.kozow.com
+  packet-encoding: ''
+- name: disney_netflix_GB_4
+  server: 192.0.63.230
+  type: vless
+  port: 443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  servername: snippet.danfeng.kozow.com
+  ws-opts:
     path: /danfeng
     headers:
       Host: snippet.danfeng.kozow.com
   packet-encoding: ''
-- name: disney_netflix_IE_1
+- name: disney_netflix_NL_1
+  server: 138.226.240.199
+  type: vless
+  port: 4433
+  udp: true
+  uuid: 00000000-0000-4000-8000-000000000000
+  network: ws
+  tls: true
+  skip-cert-verify: true
+  servername: sub.mot.ip-ddns.com
+  ws-opts:
+    path: /
+    headers:
+      Host: sub.mot.ip-ddns.com
+  packet-encoding: ''
+- name: disney_DE |17.48Mb
+  server: ip1.758733.xyz
+  type: tuic
+  port: 10088
+  password: dongtaiwang.com
+  uuid: 9bbd1f42-7ae7-4239-bd10-a68de95e3295
+  alpn:
+  - h3
+  sni: apple.com
+  skip-cert-verify: true
+  udp-relay-mode: native
+  congestion-controller: bbr
+- name: netflix_IE
+  server: 194.87.245.253
+  type: vless
+  port: 443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  servername: snippet.danfeng.kozow.com
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: snippet.danfeng.kozow.com
+  packet-encoding: ''
+- name: netflix_IE_1
   server: 20.67.254.104
   type: vless
   port: 443
@@ -2156,52 +2431,33 @@ proxies:
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: disney_DE |17.48Mb
-  server: ip1.758733.xyz
-  type: tuic
-  port: 10088
-  password: dongtaiwang.com
-  uuid: 9bbd1f42-7ae7-4239-bd10-a68de95e3295
-  alpn:
-  - h3
-  sni: apple.com
-  skip-cert-verify: true
-  udp-relay-mode: native
-  congestion-controller: bbr
-- name: disney_SE
-  server: 185.82.126.185
+- name: disney_US |40.35Mb
+  server: us-02.chunkyvpn.shop
   type: vless
-  port: 2053
+  port: 443
   udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  uuid: 6053689d-39d6-4005-b1bd-c0dce854f429
+  network: tcp
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+  servername: us-02.chunkyvpn.shop
+  packet-encoding: ''
+- name: disney_netflix_DE
+  server: 37.114.50.157
+  type: vless
+  port: 4002
+  udp: true
+  uuid: 00000000-0000-4000-8000-000000000000
   network: ws
   tls: true
-  servername: sni.111000.v6.navy
+  servername: sub.mot.ip-ddns.com
   ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    path: /
     headers:
-      Host: sni.111000.v6.navy
+      Host: sub.mot.ip-ddns.com
   packet-encoding: ''
 - name: disney_US
-  server: 38.244.5.86
-  type: vless
-  port: 39738
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: snippet.danfeng.dedyn.io
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.danfeng.dedyn.io
-  alpn:
-  - 'http/1.1
-
-    '
-  packet-encoding: ''
-- name: disney_US_1
   server: 140.84.160.202
   type: vless
   port: 20203
@@ -2220,22 +2476,45 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_US_2
-  server: 192.3.251.89
+- name: disney_NL
+  server: 104.248.80.71
   type: vless
-  port: 443
+  port: 2096
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
-  client-fingerprint: random
-  servername: snippet.danfeng.gv.uy
+  client-fingerprint: chrome
+  servername: snippet.danfeng.dedyn.io
   ws-opts:
     path: /danfeng
     headers:
-      Host: snippet.danfeng.gv.uy
+      Host: snippet.danfeng.dedyn.io
+  alpn:
+  - 'http/1.1
+
+    '
   packet-encoding: ''
-- name: disney_US_3
+- name: disney_US_1
+  server: 154.44.19.122
+  type: vless
+  port: 39738
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: snippet.danfeng.gleeze.com
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.danfeng.gleeze.com
+  alpn:
+  - 'http/1.1
+
+    '
+  packet-encoding: ''
+- name: disney_US_2
   server: 142.171.243.204
   type: vless
   port: 8443
@@ -2254,24 +2533,20 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_US_4
-  server: 154.44.19.122
+- name: disney_netflix_GB_5
+  server: b3.cfyx.20237737.xyz
   type: vless
-  port: 39738
+  port: 2053
   udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
   network: ws
   tls: true
   client-fingerprint: chrome
-  servername: snippet.danfeng.gleeze.com
+  servername: abxxswoudcjz.chinav.eu.org
   ws-opts:
-    path: /danfeng
+    path: /danfeng?ed=2560
     headers:
-      Host: snippet.danfeng.gleeze.com
-  alpn:
-  - 'http/1.1
-
-    '
+      Host: abxxswoudcjz.chinav.eu.org
   packet-encoding: ''
 - name: disney_netflix_DE_1
   server: 194.164.192.16
@@ -2292,22 +2567,7 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_netflix_GB_3
-  server: b3.cfyx.20237737.xyz
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: abxxswoudcjz.chinav.eu.org
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: abxxswoudcjz.chinav.eu.org
-  packet-encoding: ''
-- name: disney_SE_1
+- name: disney_SE
   server: 31.57.62.173
   type: vless
   port: 8443
@@ -2326,26 +2586,7 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_US_5
-  server: 69.63.201.145
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: snippet.danfeng.gleeze.com
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.danfeng.gleeze.com
-  alpn:
-  - 'http/1.1
-
-    '
-  packet-encoding: ''
-- name: disney_netflix_NL
+- name: disney_NL_1
   server: 192.81.220.113
   type: vless
   port: 2053
@@ -2364,70 +2605,22 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_US_6
-  server: 38.244.5.207
+- name: disney_netflix_GB_6
+  server: 192.0.54.49
   type: vless
-  port: 39738
+  port: 443
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
   client-fingerprint: chrome
-  servername: snippet.danfeng.dedyn.io
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.danfeng.dedyn.io
-  alpn:
-  - 'http/1.1
-
-    '
-  packet-encoding: ''
-- name: disney_IT
-  server: 222.167.202.60
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.60:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_GB_4
-  server: cfxr.eu.org
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: ui4waovxqh.chinav.eu.org
+  servername: snippet.danfeng.loc.cc
   ws-opts:
     path: /danfeng?ed=2560
     headers:
-      Host: ui4waovxqh.chinav.eu.org
+      Host: snippet.danfeng.loc.cc
   packet-encoding: ''
-- name: disney_netflix_GB_5
-  server: 45.131.209.191
-  type: vless
-  port: 2096
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.my111000.tech
-  ws-opts:
-    path: /Telegram🇨🇳@WangCai2/
-    headers:
-      Host: sni.my111000.tech
-  packet-encoding: ''
-- name: disney_netflix_GB_6
+- name: disney_GB
   server: 104.18.32.47
   type: vless
   port: 2087
@@ -2442,22 +2635,65 @@ proxies:
     headers:
       Host: ed6geslk00b6rndj55k65gj8mbdjuoxi.pages.dev
   packet-encoding: ''
-- name: disney_IT_1
-  server: 222.167.202.33
+- name: disney_US_3
+  server: 192.3.251.89
   type: vless
-  port: 7443
+  port: 443
   udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: random
+  servername: snippet.danfeng.gv.uy
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.danfeng.gv.uy
+  packet-encoding: ''
+- name: disney_GB_1
+  server: 45.131.209.191
+  type: vless
+  port: 2096
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.my111000.tech
+  ws-opts:
+    path: /Telegram🇨🇳@WangCai2/
+    headers:
+      Host: sni.my111000.tech
+  packet-encoding: ''
+- name: disney_NL_2
+  server: 194.58.68.6
+  type: vless
+  port: 443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
   client-fingerprint: chrome
-  servername: 2026.hhhhh.eu.org
+  servername: snippet.danfeng.loc.cc
   ws-opts:
-    path: /222.167.202.33:7443
+    path: /danfeng?ed=2560
     headers:
-      Host: 2026.hhhhh.eu.org
+      Host: snippet.danfeng.loc.cc
   packet-encoding: ''
 - name: disney_netflix_GB_7
+  server: 192.0.63.227
+  type: vless
+  port: 443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  servername: snippet.fgfw.ndjp.net
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.fgfw.ndjp.net
+  packet-encoding: ''
+- name: disney_netflix_GB_8
   server: 192.0.63.73
   type: vless
   port: 443
@@ -2476,7 +2712,52 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_US_7
+- name: disney_US_4
+  server: 69.63.201.145
+  type: vless
+  port: 8443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: snippet.danfeng.gleeze.com
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.danfeng.gleeze.com
+  alpn:
+  - 'http/1.1
+
+    '
+  packet-encoding: ''
+- name: disney_GB_2
+  server: 104.17.152.254
+  type: vless
+  port: 80
+  udp: true
+  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vip.yaml7.ggff.net
+  packet-encoding: ''
+- name: disney_netflix_GB_9
+  server: 192.0.54.216
+  type: vless
+  port: 443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  servername: snippet.fgfw.ndjp.net
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.fgfw.ndjp.net
+  packet-encoding: ''
+- name: disney_US_5
   server: 148.135.77.80
   type: vless
   port: 13579
@@ -2495,64 +2776,79 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_netflix_NL |261.27Mb
-  server: cdn.7zz.cn
+- name: disney_IT
+  server: 222.167.202.33
   type: vless
-  port: 443
+  port: 7443
   udp: true
-  uuid: e9254fe9-dd7e-4f90-ab06-4c96c5cd7362
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
   network: ws
   tls: true
   client-fingerprint: chrome
-  servername: 639073677243704890.camry-perma.info
+  servername: 2026.hhhhh.eu.org
   ws-opts:
-    path: /qszxrsws?ed=2560
+    path: /222.167.202.33:7443
     headers:
-      Host: 639073677243704890.camry-perma.info
+      Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_DE_2
-  server: 185.94.29.156
+- name: disney_netflix_FR
+  server: 146.59.159.111
   type: vless
-  port: 4001
+  port: 8443
   udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_GB_3
+  server: 45.131.208.191
+  type: vless
+  port: 2096
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   network: ws
   tls: true
   client-fingerprint: chrome
-  servername: sub.mot.ip-ddns.com
+  servername: sni.my111000.tech
   ws-opts:
-    path: /
+    path: /Telegram🇨🇳@WangCai2/
     headers:
-      Host: sub.mot.ip-ddns.com
+      Host: sni.my111000.tech
   packet-encoding: ''
-- name: disney_netflix_GB_8
-  server: 104.17.152.254
+- name: disney_LV
+  server: 185.135.86.217
   type: vless
-  port: 80
+  port: 8443
   udp: true
-  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   network: ws
+  tls: true
+  servername: sni.111000.v6.navy
   ws-opts:
-    path: /
+    path: /?ed=2560&Telegram🇨🇳@WangCai2
     headers:
-      Host: vip.yaml7.ggff.net
+      Host: sni.111000.v6.navy
   packet-encoding: ''
-- name: disney_NL_1
-  server: 194.58.68.6
+- name: disney_netflix_GB_10
+  server: 192.0.63.124
   type: vless
   port: 443
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
-  client-fingerprint: chrome
-  servername: snippet.danfeng.loc.cc
+  servername: snippet.chinat.eu.cc
   ws-opts:
-    path: /danfeng?ed=2560
+    path: /danfeng
     headers:
-      Host: snippet.danfeng.loc.cc
+      Host: snippet.chinat.eu.cc
   packet-encoding: ''
-- name: disney_netflix_GB_9
+- name: disney_GB_4
   server: 104.17.156.229
   type: vless
   port: 80
@@ -2564,8 +2860,96 @@ proxies:
     headers:
       Host: vip.yaml7.ggff.net
   packet-encoding: ''
-- name: disney_netflix_GB_10
-  server: 192.0.54.49
+- name: disney_netflix_GB_11
+  server: 104.16.82.241
+  type: vless
+  port: 443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  servername: snippet.sh21.eu.org
+  ws-opts:
+    path: /danfeng
+    headers:
+      Host: snippet.sh21.eu.org
+  packet-encoding: ''
+- name: disney_netflix_GB_12
+  server: mfa.gov.ua
+  type: vless
+  port: 443
+  udp: true
+  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: wt.ssdxz.cn
+  ws-opts:
+    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: wt.ssdxz.cn
+  packet-encoding: ''
+- name: disney_GB_5
+  server: www.shopify.com
+  type: vless
+  port: 443
+  udp: true
+  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: we.ssdxz.cn
+  ws-opts:
+    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: we.ssdxz.cn
+  packet-encoding: ''
+- name: disney_netflix_NL_2
+  server: 103.97.88.133
+  type: vless
+  port: 443
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_GB_13
+  server: 198.41.209.193
+  type: vless
+  port: 8443
+  udp: true
+  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: wr.ssdxz.cn
+  ws-opts:
+    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: wr.ssdxz.cn
+  packet-encoding: ''
+- name: disney_GB_6
+  server: cfyx.dnspod.20237737.xyz
+  type: vless
+  port: 443
+  udp: true
+  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: wy.ssdxz.cn
+  ws-opts:
+    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: wy.ssdxz.cn
+  packet-encoding: ''
+- name: disney_netflix_GB_14
+  server: 192.0.54.31
   type: vless
   port: 443
   udp: true
@@ -2579,7 +2963,7 @@ proxies:
     headers:
       Host: snippet.danfeng.loc.cc
   packet-encoding: ''
-- name: disney_netflix_GB_11
+- name: disney_netflix_GB_15
   server: 192.0.54.70
   type: vless
   port: 443
@@ -2598,7 +2982,7 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_IT_2
+- name: disney_IT_1
   server: 222.167.202.32
   type: vless
   port: 7443
@@ -2613,7 +2997,7 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_GB_12
+- name: disney_netflix_GB_16
   server: 192.0.63.91
   type: vless
   port: 443
@@ -2632,45 +3016,7 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_US_8
-  server: 198.23.184.10
-  type: vless
-  port: 587
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: snippet.sh21.eu.org
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.sh21.eu.org
-  alpn:
-  - 'http/1.1
-
-    '
-  packet-encoding: ''
-- name: disney_netflix_GB_13
-  server: 192.0.63.175
-  type: vless
-  port: 443
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: snippet.danfeng.gleeze.com
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.danfeng.gleeze.com
-  alpn:
-  - 'http/1.1
-
-    '
-  packet-encoding: ''
-- name: disney_netflix_GB_14
+- name: disney_netflix_GB_17
   server: 192.0.63.181
   type: vless
   port: 443
@@ -2685,23 +3031,23 @@ proxies:
     headers:
       Host: snippet.danfeng.loc.cc
   packet-encoding: ''
-- name: disney_GB
-  server: 45.131.208.191
+- name: disney_IT_2
+  server: 222.167.202.60
   type: vless
-  port: 2096
+  port: 7443
   udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
   network: ws
   tls: true
   client-fingerprint: chrome
-  servername: sni.my111000.tech
+  servername: 2026.hhhhh.eu.org
   ws-opts:
-    path: /Telegram🇨🇳@WangCai2/
+    path: /222.167.202.60:7443
     headers:
-      Host: sni.my111000.tech
+      Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_GB_15
-  server: 192.0.54.31
+- name: disney_netflix_DE_2
+  server: 213.108.20.161
   type: vless
   port: 443
   udp: true
@@ -2709,11 +3055,15 @@ proxies:
   network: ws
   tls: true
   client-fingerprint: chrome
-  servername: snippet.danfeng.loc.cc
+  servername: snippet.danfeng.dedyn.io
   ws-opts:
-    path: /danfeng?ed=2560
+    path: /danfeng
     headers:
-      Host: snippet.danfeng.loc.cc
+      Host: snippet.danfeng.dedyn.io
+  alpn:
+  - 'http/1.1
+
+    '
   packet-encoding: ''
 - name: disney_FI
   server: 185.238.189.89
@@ -2734,45 +3084,75 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_netflix_DE_3
-  server: 213.108.20.161
+- name: disney_GB_7
+  server: 135.84.74.43
+  type: vless
+  port: 443
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_GB_8
+  server: 209.102.207.120
+  type: vless
+  port: 443
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_NL |221.86Mb
+  server: 195.181.173.199
+  type: vless
+  port: 8443
+  udp: true
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  network: tcp
+  tls: true
+  servername: ams1.fromblancwithlove.com
+  packet-encoding: ''
+- name: disney_netflix_GB_18
+  server: 192.0.63.115
   type: vless
   port: 443
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
-  client-fingerprint: chrome
-  servername: snippet.danfeng.dedyn.io
+  servername: snippet.danfeng.theworkpc.com
   ws-opts:
-    path: /danfeng
+    path: /danfeng?ed=2560
     headers:
-      Host: snippet.danfeng.dedyn.io
-  alpn:
-  - 'http/1.1
-
-    '
+      Host: snippet.danfeng.theworkpc.com
   packet-encoding: ''
-- name: disney_NL_2
-  server: 178.173.248.248
+- name: disney_netflix_GB_19
+  server: 192.0.63.49
   type: vless
   port: 443
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
-  client-fingerprint: chrome
-  servername: snippet.danfeng.dedyn.io
+  servername: snippet.danfeng.theworkpc.com
   ws-opts:
-    path: /danfeng
+    path: /danfeng?ed=2560
     headers:
-      Host: snippet.danfeng.dedyn.io
-  alpn:
-  - 'http/1.1
-
-    '
+      Host: snippet.danfeng.theworkpc.com
   packet-encoding: ''
-- name: disney_US_9
+- name: disney_US_6
   server: 152.53.242.55
   type: vless
   port: 443
@@ -2791,7 +3171,21 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_DE_1
+- name: disney_netflix_NL_3
+  server: 185.243.112.61
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_DE_3
   server: 89.58.13.151
   type: vless
   port: 2010
@@ -2810,10 +3204,139 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_netflix_NL_1
-  server: 104.248.80.71
+- name: disney_DE
+  server: 82.117.245.125
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_US_7
+  server: s678.ccgfw.top
+  type: vless
+  port: 443
+  udp: true
+  uuid: 424e7cc4-df34-3518-9c7b-401db4ece90a
+  network: grpc
+  tls: true
+  client-fingerprint: ios
+  servername: u710947u2968s678.ccgfw.top
+  grpc-opts:
+    grpc-service-name: ssp
+  packet-encoding: ''
+- name: disney_GB_9
+  server: store.ubi.com
+  type: vless
+  port: 443
+  udp: true
+  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: wt.ssdxz.cn
+  ws-opts:
+    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: wt.ssdxz.cn
+  packet-encoding: ''
+- name: disney_SE_1
+  server: 31.128.32.98
+  type: vless
+  port: 443
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_GB_20
+  server: 192.0.54.238
   type: vless
   port: 2096
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: sni.jpmj.dev
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.jpmj.dev
+  packet-encoding: ''
+- name: disney_netflix_GB_21
+  server: 104.17.147.194
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: wt.ssdxz.cn
+  ws-opts:
+    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: wt.ssdxz.cn
+  packet-encoding: ''
+- name: disney_GB_10
+  server: www.visa.cn
+  type: vless
+  port: 443
+  udp: true
+  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: wy.ssdxz.cn
+  ws-opts:
+    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: wy.ssdxz.cn
+  packet-encoding: ''
+- name: disney_netflix_FR_1
+  server: 217.60.252.232
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_NL_4
+  server: 212.34.144.154
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_NL_5
+  server: 178.173.248.248
+  type: vless
+  port: 443
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
@@ -2829,10 +3352,156 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_NL_3
-  server: 80.240.141.242
+- name: disney_netflix_GB_22
+  server: 104.19.34.116
   type: vless
-  port: 2096
+  port: 8443
+  udp: true
+  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: wt.ssdxz.cn
+  ws-opts:
+    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: wt.ssdxz.cn
+  packet-encoding: ''
+- name: disney_netflix_GB_23
+  server: 135.84.74.155
+  type: vless
+  port: 443
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_NL_6
+  server: 185.198.167.93
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_GB_11
+  server: serviceshub.samsclub.com
+  type: vless
+  port: 443
+  udp: true
+  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: we.ssdxz.cn
+  ws-opts:
+    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: we.ssdxz.cn
+  packet-encoding: ''
+- name: disney_GB_12
+  server: 198.41.208.162
+  type: vless
+  port: 8443
+  udp: true
+  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: wr.ssdxz.cn
+  ws-opts:
+    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: wr.ssdxz.cn
+  packet-encoding: ''
+- name: disney_netflix_GB_24
+  server: 104.17.211.114
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: wy.ssdxz.cn
+  ws-opts:
+    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: wy.ssdxz.cn
+  packet-encoding: ''
+- name: disney_netflix_GB_25
+  server: 217.163.76.46
+  type: vless
+  port: 443
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: sni.111000.indevs.in
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳 @WangCai2
+    headers:
+      Host: sni.111000.indevs.in
+  packet-encoding: ''
+- name: disney_DE_1
+  server: 188.34.160.97
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_FR
+  server: 34.155.19.30
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_netflix_GB_26
+  server: 192.0.63.18
+  type: vless
+  port: 443
+  udp: true
+  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: snippet.danfeng.loc.cc
+  ws-opts:
+    path: /danfeng?ed=2560
+    headers:
+      Host: snippet.danfeng.loc.cc
+  packet-encoding: ''
+- name: disney_netflix_GB_27
+  server: cf.danfeng.eu.org
+  type: vless
+  port: 443
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
@@ -2848,22 +3517,50 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_netflix_GB_16
-  server: 192.0.63.18
+- name: netflix_US
+  server: 166.117.33.104
   type: vless
   port: 443
   udp: true
   uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
   network: ws
   tls: true
-  client-fingerprint: chrome
-  servername: snippet.danfeng.loc.cc
+  servername: snippet.danfeng.theworkpc.com
   ws-opts:
     path: /danfeng?ed=2560
     headers:
-      Host: snippet.danfeng.loc.cc
+      Host: snippet.danfeng.theworkpc.com
   packet-encoding: ''
-- name: disney_netflix_GB_17
+- name: disney_LV_1
+  server: 45.43.76.184
+  type: vless
+  port: 2053
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: disney_GB_13
+  server: 80.93.202.238
+  type: vless
+  port: 2096
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: sni.jpmj.dev
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳 @WangCai2
+    headers:
+      Host: sni.jpmj.dev
+  packet-encoding: ''
+- name: disney_netflix_GB_28
   server: 69.84.182.1
   type: vless
   port: 443
@@ -2882,26 +3579,22 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_netflix_GB_18
-  server: 192.0.63.7
+- name: disney_netflix_GB_29
+  server: static.shopify.com
   type: vless
   port: 443
   udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
   network: ws
   tls: true
   client-fingerprint: chrome
-  servername: snippet.sh21.eu.org
+  servername: bh0070x2.danfeng.gv.uy
   ws-opts:
-    path: /danfeng
+    path: /danfeng?ed=2560
     headers:
-      Host: snippet.sh21.eu.org
-  alpn:
-  - 'http/1.1
-
-    '
+      Host: bh0070x2.danfeng.gv.uy
   packet-encoding: ''
-- name: disney_netflix_GB_19
+- name: disney_netflix_GB_30
   server: 192.0.54.218
   type: vless
   port: 443
@@ -2920,38 +3613,23 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_netflix_GB_20
-  server: 209.102.207.120
+- name: disney_netflix_GB_31
+  server: convera.com
   type: vless
-  port: 443
+  port: 2053
   udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
   network: ws
   tls: true
   client-fingerprint: chrome
-  servername: sni.111000.v6.navy
+  servername: bh0070x2.danfeng.gv.uy
   ws-opts:
-    path: /
+    path: /danfeng?ed=2560
     headers:
-      Host: sni.111000.v6.navy
+      Host: bh0070x2.danfeng.gv.uy
   packet-encoding: ''
-- name: disney_netflix_GB_21
-  server: 135.84.74.43
-  type: vless
-  port: 443
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_GB_22
-  server: 154.92.9.190
+- name: disney_DE_2
+  server: 23.165.200.252
   type: vless
   port: 2053
   udp: true
@@ -2969,497 +3647,7 @@ proxies:
 
     '
   packet-encoding: ''
-- name: disney_netflix_GB_23
-  server: www.gov.se
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: bh0070x2.danfeng.gv.uy
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: bh0070x2.danfeng.gv.uy
-  packet-encoding: ''
-- name: disney_netflix_GB_24
-  server: 192.0.63.49
-  type: vless
-  port: 443
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  servername: snippet.danfeng.theworkpc.com
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: snippet.danfeng.theworkpc.com
-  packet-encoding: ''
-- name: disney_US |40.35Mb
-  server: us-02.chunkyvpn.shop
-  type: vless
-  port: 443
-  udp: true
-  uuid: 6053689d-39d6-4005-b1bd-c0dce854f429
-  network: tcp
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  servername: us-02.chunkyvpn.shop
-  packet-encoding: ''
-- name: disney_netflix_NL_2
-  server: 185.243.112.61
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_GB_25
-  server: 192.0.54.216
-  type: vless
-  port: 443
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  servername: snippet.fgfw.ndjp.net
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.fgfw.ndjp.net
-  packet-encoding: ''
 - name: disney_netflix_DE_4
-  server: 82.117.245.125
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_LV
-  server: 185.135.86.217
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳@WangCai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_GB_26
-  server: 104.16.82.241
-  type: vless
-  port: 443
-  udp: true
-  uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d
-  network: ws
-  tls: true
-  servername: snippet.sh21.eu.org
-  ws-opts:
-    path: /danfeng
-    headers:
-      Host: snippet.sh21.eu.org
-  packet-encoding: ''
-- name: disney_netflix_GB_27
-  server: mfa.gov.ua
-  type: vless
-  port: 443
-  udp: true
-  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: wt.ssdxz.cn
-  ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: wt.ssdxz.cn
-  packet-encoding: ''
-- name: disney_netflix_GB_28
-  server: cfyx.dnspod.20237737.xyz
-  type: vless
-  port: 443
-  udp: true
-  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: wy.ssdxz.cn
-  ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: wy.ssdxz.cn
-  packet-encoding: ''
-- name: disney_netflix_GB_29
-  server: www.shopify.com
-  type: vless
-  port: 443
-  udp: true
-  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: we.ssdxz.cn
-  ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: we.ssdxz.cn
-  packet-encoding: ''
-- name: disney_netflix_GB_30
-  server: 198.41.209.193
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: wr.ssdxz.cn
-  ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: wr.ssdxz.cn
-  packet-encoding: ''
-- name: disney_SE_2
-  server: 31.128.32.98
-  type: vless
-  port: 443
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_FR
-  server: 146.59.159.111
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_NL_3
-  server: 212.34.144.154
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_FR
-  server: 217.60.252.232
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_NL_4
-  server: 103.97.88.133
-  type: vless
-  port: 443
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_NL_4
-  server: 185.198.167.93
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_US_10
-  server: 94.131.101.135
-  type: vless
-  port: 443
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_GB_31
-  server: 192.0.54.238
-  type: vless
-  port: 2096
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: sni.jpmj.dev
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.jpmj.dev
-  packet-encoding: ''
-- name: disney_netflix_GB_32
-  server: 135.84.74.155
-  type: vless
-  port: 443
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_DE_5
-  server: 188.34.160.97
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_GB_33
-  server: 104.17.147.194
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: wt.ssdxz.cn
-  ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: wt.ssdxz.cn
-  packet-encoding: ''
-- name: disney_LV_1
-  server: 45.43.76.184
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_GB_34
-  server: www.visa.cn
-  type: vless
-  port: 443
-  udp: true
-  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: wy.ssdxz.cn
-  ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: wy.ssdxz.cn
-  packet-encoding: ''
-- name: disney_netflix_GB_35
-  server: store.ubi.com
-  type: vless
-  port: 443
-  udp: true
-  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: wt.ssdxz.cn
-  ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: wt.ssdxz.cn
-  packet-encoding: ''
-- name: disney_netflix_GB_36
-  server: serviceshub.samsclub.com
-  type: vless
-  port: 443
-  udp: true
-  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: we.ssdxz.cn
-  ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: we.ssdxz.cn
-  packet-encoding: ''
-- name: disney_netflix_GB_37
-  server: 198.41.208.162
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: wr.ssdxz.cn
-  ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: wr.ssdxz.cn
-  packet-encoding: ''
-- name: disney_netflix_GB_38
-  server: 104.19.34.116
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: wt.ssdxz.cn
-  ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: wt.ssdxz.cn
-  packet-encoding: ''
-- name: disney_netflix_GB_39
-  server: 104.17.211.114
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 29ff2954-dfea-4d20-8089-059cfa861453
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: wy.ssdxz.cn
-  ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.net/proxyip=tw.william.us.ci,ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: wy.ssdxz.cn
-  packet-encoding: ''
-- name: disney_netflix_FR_1
-  server: 34.155.19.30
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_GB_40
-  server: quick-edit.devprod.cloudflare.dev
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: jrr8jjznm.chinam.indevs.in
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: jrr8jjznm.chinam.indevs.in
-  packet-encoding: ''
-- name: disney_netflix_GB_41
-  server: 217.163.76.46
-  type: vless
-  port: 443
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: sni.111000.indevs.in
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳 @WangCai2
-    headers:
-      Host: sni.111000.indevs.in
-  packet-encoding: ''
-- name: disney_netflix_GB_42
-  server: 80.93.202.238
-  type: vless
-  port: 2096
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: sni.jpmj.dev
-  ws-opts:
-    path: /?ed=2560&Telegram🇨🇳 @WangCai2
-    headers:
-      Host: sni.jpmj.dev
-  packet-encoding: ''
-- name: disney_netflix_DE_6
   server: 88.198.152.85
   type: vless
   port: 443
@@ -3473,21 +3661,7 @@ proxies:
     headers:
       Host: sni.111000.v6.navy
   packet-encoding: ''
-- name: disney_DE_2
-  server: 89.58.32.115
-  type: vless
-  port: 12001
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳 @wangcai2
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
-- name: disney_netflix_GB_43
+- name: disney_netflix_GB_32
   server: 57.129.137.87
   type: vless
   port: 8443
@@ -3501,12 +3675,40 @@ proxies:
     headers:
       Host: sni.111000.v6.navy
   packet-encoding: ''
+- name: disney_DE_3
+  server: 89.58.32.115
+  type: vless
+  port: 12001
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  servername: sni.111000.v6.navy
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳 @wangcai2
+    headers:
+      Host: sni.111000.v6.navy
+  packet-encoding: ''
 - name: netflix_SE |150.61Mb
   server: 13.63.166.122
   type: ss
   port: 443
   udp: true
   password: amazonskr05
+  cipher: aes-256-cfb
+- name: netflix_SC |12.83Mb
+  server: 51.15.23.63
+  type: ss
+  port: 989
+  udp: true
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
+- name: disney_US |12.34Mb
+  server: 38.60.223.8
+  type: ss
+  port: 989
+  udp: true
+  password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
 - name: netflix_HR |531.17Mb
   server: 46.183.184.60
@@ -3515,15 +3717,8 @@ proxies:
   udp: true
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: disney_netflix_US |12.34Mb
-  server: 38.60.223.8
-  type: ss
-  port: 989
-  udp: true
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
-- name: disney_netflix_IE |286.30Mb
-  server: 108.131.224.21
+- name: disney_netflix_FR_2
+  server: 13.37.222.70
   type: ss
   port: 443
   udp: true
@@ -3536,19 +3731,12 @@ proxies:
   udp: true
   password: k1dBOmOB4oqi7Ump37a1bQ
   cipher: chacha20-ietf-poly1305
-- name: disney_netflix_FR_2
-  server: 13.37.222.70
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: disney_netflix_DE | 7.17Mb
-  server: 51.89.11.94
+- name: disney_US |51.03Mb
+  server: 38.76.206.31
   type: vmess
   port: 443
   udp: true
-  uuid: e5408561-3874-4d41-a744-0cd0dfdb86c8
+  uuid: 0c31416e-f2dc-4fdd-9a1e-2eaa403e2e6e
   alterId: 0
   cipher: auto
   network: http
@@ -3556,11 +3744,22 @@ proxies:
     method: GET
     path:
     - /
-    headers:
-      Host:
-      - 51.89.11.94
   h2-opts: {}
-- name: disney_netflix_ES |172.89Mb
+- name: disney_US |53.09Mb
+  server: 38.76.206.31
+  type: vmess
+  port: 8080
+  udp: true
+  uuid: 912f1899-c436-4b35-ef7f-134795329e01
+  alterId: 0
+  cipher: auto
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+  h2-opts: {}
+- name: disney_ES |172.89Mb
   server: 85.90.217.42
   type: vmess
   port: 22324
@@ -3571,6 +3770,31 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
+- name: disney_netflix_GB |147.45Mb
+  server: 172.66.44.230
+  type: trojan
+  port: 8443
+  udp: true
+  password: 8r<[9'l6hAO#8ZQi
+  sni: Koma-YT.PAGeS.Dev
+  ws-opts:
+    path: /tro8sFW1S91B6sZrM1?ed=2560
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+  network: ws
+- name: disney_US_8
+  server: 38.83.41.89
+  type: trojan
+  port: 28080
+  udp: true
+  password: trojan
+  sni: jflsjlaf.pages.dev
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      Host: jflsjlaf.pages.dev
+  network: ws
 - name: disney_netflix_AT
   server: 152.53.45.251
   type: trojan
@@ -3584,30 +3808,6 @@ proxies:
     headers:
       Host: jflsjlaf.pages.dev
   network: ws
-- name: disney_netflix_US |39.98Mb
-  server: alert-sunbird.crayfish192.xyz
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: alert-sunbird.crayfish192.xyz
-- name: disney_NL |20.70Mb
-  server: touching-pigeon.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: touching-pigeon.rooster465.autos
-- name: disney_netflix_GB |147.45Mb
-  server: 172.66.44.230
-  type: trojan
-  port: 8443
-  udp: true
-  password: 8r<[9'l6hAO#8ZQi
-  sni: Koma-YT.PAGeS.Dev
-  ws-opts:
-    path: /tro8sFW1S91B6sZrM1?ed=2560
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-  network: ws
 - name: disney_netflix_PL |111.19Mb
   server: outgoing-ladybird.rooster465.autos
   type: trojan
@@ -3615,76 +3815,31 @@ proxies:
   udp: true
   password: IL37892054
   sni: outgoing-ladybird.rooster465.autos
+- name: netflix_IE |334.47Mb
+  server: grown-goldfish.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: grown-goldfish.rooster465.autos
+- name: netflix_IE |331.23Mb
+  server: eternal-serval.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: eternal-serval.rooster465.autos
+- name: netflix_IE |412.02Mb
+  server: optimal-dane.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: optimal-dane.rooster465.autos
 - name: disney_netflix_FR_3
   server: sterling-dinosaur.rooster465.autos
   type: trojan
   port: 443
   password: WF42809561
   sni: sterling-dinosaur.rooster465.autos
-- name: disney_netflix_NL | 7.26Mb
-  server: 94.131.105.125
-  type: trojan
-  port: 4443
-  udp: true
-  password: strong-secret-pass-777
-  skip-cert-verify: true
-- name: disney_NL_5
-  server: 152.53.200.98
-  type: trojan
-  port: 8444
-  udp: true
-  password: trojan
-  sni: jflsjlaf.pages.dev
-  skip-cert-verify: true
-  ws-opts:
-    path: '%2F'
-    headers:
-      Host: jflsjlaf.pages.dev
-  network: ws
-- name: disney_netflix_FR_4
-  server: still-mastodon.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: still-mastodon.rooster465.autos
-- name: disney_netflix_IE |412.02Mb
-  server: optimal-dane.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: optimal-dane.rooster465.autos
-- name: disney_netflix_IE |334.47Mb
-  server: grown-goldfish.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: grown-goldfish.rooster465.autos
-- name: disney_US_11
-  server: 38.83.41.89
-  type: trojan
-  port: 28080
-  udp: true
-  password: trojan
-  sni: jflsjlaf.pages.dev
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      Host: jflsjlaf.pages.dev
-  network: ws
-- name: disney_netflix_NL |260.00Mb
-  server: 104.18.11.110
-  type: trojan
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.multiplydose.com
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.multiplydose.com
-  network: ws
-- name: disney_netflix_NL_5
+- name: disney_NL_3
   server: 136.244.105.89
   type: trojan
   port: 82
@@ -3697,37 +3852,43 @@ proxies:
     headers:
       Host: jflsjlaf.pages.dev
   network: ws
-- name: disney_NL |274.23Mb
-  server: fun-seagull.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: WF42809561
-  sni: fun-seagull.rooster465.autos
-- name: disney_netflix_DE |280.66Mb
-  server: dynamic-tiger.crayfish192.xyz
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: dynamic-tiger.crayfish192.xyz
-- name: disney_netflix_FR_5
-  server: prompt-duckling.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: prompt-duckling.rooster465.autos
-- name: disney_PL |10.83Mb
-  server: top-goshawk.rooster465.autos
-  type: trojan
-  port: 443
-  password: WF42809561
-  sni: top-goshawk.rooster465.autos
 - name: disney_PL |17.27Mb
   server: funky-platypus.rooster465.autos
   type: trojan
   port: 443
   password: WF42809561
   sni: funky-platypus.rooster465.autos
+- name: disney_PL |10.83Mb
+  server: top-goshawk.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: top-goshawk.rooster465.autos
+- name: disney_netflix_NL |20.70Mb
+  server: touching-pigeon.rooster465.autos
+  type: trojan
+  port: 443
+  password: WF42809561
+  sni: touching-pigeon.rooster465.autos
+- name: disney_netflix_NL |274.23Mb
+  server: fun-seagull.rooster465.autos
+  type: trojan
+  port: 443
+  udp: true
+  password: WF42809561
+  sni: fun-seagull.rooster465.autos
+- name: disney_netflix_NL |260.00Mb
+  server: 104.18.11.110
+  type: trojan
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.multiplydose.com
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.multiplydose.com
+  network: ws
 - name: disney_NL |16.95Mb
   server: 85.234.65.58
   type: trojan
@@ -3746,6 +3907,13 @@ proxies:
   password: IL37892054
   sni: fluent-stingray.crayfish192.xyz
   skip-cert-verify: true
+- name: netflix_DK | 3.54Mb
+  server: 192.36.27.94
+  type: ss
+  country: 🇸🇪 SE
+  port: 989
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
 - name: 法国 - 巴黎 - 1
   server: 15.188.43.202
   type: trojan
@@ -3780,18 +3948,6 @@ proxies:
     host: 817aa69.default.nintendo.com:112719
     mode: tls
   delay: 940
-- name: 美国 - 洛杉矶 - 3
-  server: 82.198.246.46
-  type: vmess
-  port: 180
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  delay: 585
 - name: 新加坡 - 新加坡 - 1
   server: v12.hdacd.com
   port: 30812
@@ -3979,6 +4135,14 @@ proxies:
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
   delay: 619
+- name: 中国 - 台湾 - 2
+  server: r3mrcg001213klw.cybervena.com
+  port: 50099
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  udp: true
+  delay: 479
 - name: Shadowsocks
   type: socks5
   server: 127.0.0.1
