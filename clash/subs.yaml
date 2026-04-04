@@ -466,34 +466,6 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
-- name: disney_netflix_IT
-  server: 222.167.202.60
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.60:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_IT_1
-  server: 222.167.202.10
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.10:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
 - name: disney_netflix_DE
   server: 185.94.29.156
   type: vless
@@ -509,7 +481,21 @@ proxies:
     headers:
       Host: sub.mot.ip-ddns.com
   packet-encoding: ''
-- name: disney_netflix_IT_2
+- name: disney_netflix_DE |212.53Mb
+  server: 37.114.50.157
+  type: vless
+  port: 4002
+  udp: true
+  uuid: 00000000-0000-4000-8000-000000000000
+  network: ws
+  tls: true
+  servername: sub.mot.ip-ddns.com
+  ws-opts:
+    path: /
+    headers:
+      Host: sub.mot.ip-ddns.com
+  packet-encoding: ''
+- name: disney_netflix_IT
   server: 222.167.202.23
   type: vless
   port: 7443
@@ -524,31 +510,36 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_GB
-  server: testingcf.jsdelivr.net
+- name: Relay_-🇳🇱NL_06
+  server: 138.226.240.199
   type: vless
-  port: 443
+  port: 4433
   udp: true
-  uuid: 26524cce-d514-4014-a426-365fb266a14d
+  uuid: 00000000-0000-4000-8000-000000000000
   network: ws
   tls: true
-  client-fingerprint: chrome
-  servername: kod4t259zf.fgfw.qzz.io
-  ws-opts:
-    path: /danfeng?ed=2560
-    headers:
-      Host: kod4t259zf.fgfw.qzz.io
-  packet-encoding: ''
-- name: netflix_SG | 2.32Mb
-  server: sg1.shiyuandian.shop
-  type: hysteria2
-  port: 2056
-  udp: true
-  password: ae845cbd-08fb-4346-929a-e28a6f3960a8
-  auth: ae845cbd-08fb-4346-929a-e28a6f3960a8
-  sni: sg1.shiyuandian.shop
   skip-cert-verify: true
-- name: disney_netflix_GB_1
+  servername: sub.mot.ip-ddns.com
+  ws-opts:
+    path: /
+    headers:
+      Host: sub.mot.ip-ddns.com
+  packet-encoding: ''
+- name: disney_netflix_IT_1
+  server: 222.167.202.60
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.60:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_GB
   server: newsroom.paypal-corp.com
   type: vless
   port: 443
@@ -599,23 +590,37 @@ proxies:
   alpn:
   - h2
   packet-encoding: ''
-- name: disney_netflix_NL
-  server: 138.226.240.199
+- name: disney_netflix_GB_1
+  server: testingcf.jsdelivr.net
   type: vless
-  port: 4433
+  port: 443
   udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
+  uuid: 26524cce-d514-4014-a426-365fb266a14d
   network: ws
   tls: true
-  skip-cert-verify: true
-  servername: sub.mot.ip-ddns.com
+  client-fingerprint: chrome
+  servername: kod4t259zf.fgfw.qzz.io
   ws-opts:
-    path: /
+    path: /danfeng?ed=2560
     headers:
-      Host: sub.mot.ip-ddns.com
+      Host: kod4t259zf.fgfw.qzz.io
+  packet-encoding: ''
+- name: disney_netflix_IT_2
+  server: 222.167.202.52
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.52:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
   packet-encoding: ''
 - name: disney_netflix_IT_3
-  server: 222.167.202.16
+  server: 222.167.202.6
   type: vless
   port: 7443
   udp: true
@@ -625,7 +630,7 @@ proxies:
   skip-cert-verify: true
   servername: 2026.hhhhh.eu.org
   ws-opts:
-    path: /222.167.202.16:7443
+    path: /222.167.202.6:7443
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
@@ -645,20 +650,6 @@ proxies:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
 - name: disney_netflix_IT_5
-  server: 222.167.202.52
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.52:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_IT_6
   server: 222.167.202.2
   type: vless
   port: 7443
@@ -672,63 +663,7 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_IT_7
-  server: 222.167.202.50
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.50:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_IT_8
-  server: 222.167.202.32
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.32:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_IT_9
-  server: 222.167.202.33
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.33:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_IT_10
-  server: 222.167.202.70
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.70:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_IT_11
+- name: disney_netflix_IT_6
   server: 222.167.202.14
   type: vless
   port: 7443
@@ -742,7 +677,7 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_IT_12
+- name: disney_netflix_IT_7
   server: 222.167.202.47
   type: vless
   port: 7443
@@ -756,21 +691,16 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_IT_13
-  server: 222.167.202.31
+- name: disney_netflix_NL |60.72Mb
+  server: 195.181.173.199
   type: vless
-  port: 7443
+  port: 8443
   udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.31:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
+  servername: ams1.fromblancwithlove.com
   packet-encoding: ''
-- name: disney_netflix_IT_14
+- name: disney_netflix_IT_8
   server: 222.167.202.4
   type: vless
   port: 7443
@@ -784,8 +714,8 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_IT_15
-  server: 222.167.202.22
+- name: disney_netflix_IT_9
+  server: 222.167.202.50
   type: vless
   port: 7443
   udp: true
@@ -794,63 +724,11 @@ proxies:
   tls: true
   servername: 2026.hhhhh.eu.org
   ws-opts:
-    path: /222.167.202.22:7443
+    path: /222.167.202.50:7443
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_DE |212.53Mb
-  server: 37.114.50.157
-  type: vless
-  port: 4002
-  udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
-  network: ws
-  tls: true
-  servername: sub.mot.ip-ddns.com
-  ws-opts:
-    path: /
-    headers:
-      Host: sub.mot.ip-ddns.com
-  packet-encoding: ''
-- name: disney_netflix_NL |60.72Mb
-  server: 195.181.173.199
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  tls: true
-  servername: ams1.fromblancwithlove.com
-  packet-encoding: ''
-- name: disney_netflix_IT_16
-  server: 222.167.202.35
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.35:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_IT_17
-  server: 222.167.202.6
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  skip-cert-verify: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.6:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_IT_18
+- name: disney_netflix_IT_10
   server: 222.167.202.45
   type: vless
   port: 7443
@@ -864,12 +742,148 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
+- name: disney_netflix_IT_11
+  server: 222.167.202.32
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.32:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_IT_12
+  server: 222.167.202.70
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.70:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_IT_13
+  server: 222.167.202.10
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.10:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_IT_14
+  server: 222.167.202.16
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  skip-cert-verify: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.16:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_IT_15
+  server: 222.167.202.35
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.35:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_IT_16
+  server: 222.167.202.33
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.33:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_IT_17
+  server: 222.167.202.22
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.22:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_IT_18
+  server: 222.167.202.31
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.31:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: netflix_SG | 3.92Mb
+  server: sg1.shiyuandian.shop
+  type: hysteria2
+  port: 2056
+  udp: true
+  password: ae845cbd-08fb-4346-929a-e28a6f3960a8
+  auth: ae845cbd-08fb-4346-929a-e28a6f3960a8
+  sni: sg1.shiyuandian.shop
+  skip-cert-verify: true
+- name: netflix_TW |16.22Mb
+  server: 185.189.160.105
+  type: ss
+  port: 41632
+  udp: true
+  password: qwerREWQ@@
+  cipher: aes-256-cfb
 - name: disney_netflix_VN | 4.25Mb
   server: 103.238.214.82
   type: ss
   port: 41632
   udp: true
   password: qwerREWQ@@
+  cipher: aes-256-cfb
+- name: _49 |136.00Mb
+  server: 134.209.147.198
+  type: ss
+  port: 989
+  udp: true
+  password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
 - name: netflix_MT |96.13Mb
   server: 171.22.254.17
@@ -878,32 +892,7 @@ proxies:
   udp: true
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: _46 |136.00Mb
-  server: 134.209.147.198
-  type: ss
-  port: 989
-  udp: true
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
-- name: netflix_TW |16.22Mb
-  server: 185.189.160.105
-  type: ss
-  port: 41632
-  udp: true
-  password: qwerREWQ@@
-  cipher: aes-256-cfb
-- name: disney_netflix_US |18.51Mb
-  server: 82.198.246.97
-  type: vmess
-  port: 180
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: Relay_-🇺🇸US_49 | 1.69Mb
+- name: Relay_-🇺🇸US_51 | 1.69Mb
   server: v4.hdacd.com
   type: vmess
   port: 30804
@@ -925,6 +914,17 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
+- name: disney_netflix_US |18.51Mb
+  server: 82.198.246.97
+  type: vmess
+  port: 180
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
 - name: disney_netflix_US |25.98Mb
   server: 82.198.246.46
   type: vmess
@@ -936,10 +936,42 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: netflix_JP |18.35Mb
-  server: 160.16.106.99
+- name: disney_netflix_AT
+  server: 152.53.45.251
+  type: trojan
+  port: 8888
+  udp: true
+  password: trojan
+  sni: jflsjlaf.pages.dev
+  ws-opts:
+    path: /
+    headers:
+      Host: jflsjlaf.pages.dev
+  network: ws
+- name: disney_netflix_US |24.08Mb
+  server: fbxt0765gh0pielsss.ftisthebest.com
+  type: trojan
+  port: 56251
+  udp: true
+  password: e4895ea3-7b4a-3f46-ba5a-44ac4a691635
+  sni: fbxt0765gh0pielsss.ftisthebest.com
+  skip-cert-verify: true
+- name: netflix_JP | 7.56Mb
+  server: 160.16.72.205
   type: trojan
   port: 4937
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
+- name: disney_netflix_HK | 1.94Mb
+  server: 16.162.33.118
+  type: trojan
+  port: 921
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
+- name: disney_netflix_NL | 4.31Mb
+  server: 54.168.216.209
+  type: trojan
+  port: 3057
   password: 9f7d5cb76d1645101994d9b25891e3b7
   sni: www.nintendogames.net
 - name: disney_netflix_NL |75.30Mb
@@ -949,7 +981,13 @@ proxies:
   udp: true
   password: strong-secret-pass-777
   skip-cert-verify: true
-- name: disney_netflix_NL_1
+- name: disney_netflix_NL |11.13Mb
+  server: 160.16.106.99
+  type: trojan
+  port: 3057
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
+- name: disney_netflix_NL
   server: 152.53.60.198
   type: trojan
   port: 8444
@@ -967,45 +1005,37 @@ proxies:
   port: 4674
   password: 9f7d5cb76d1645101994d9b25891e3b7
   sni: www.nintendogames.net
-- name: disney_netflix_AT
-  server: 152.53.45.251
-  type: trojan
-  port: 8888
-  udp: true
-  password: trojan
-  sni: jflsjlaf.pages.dev
-  ws-opts:
-    path: /
-    headers:
-      Host: jflsjlaf.pages.dev
-  network: ws
-- name: netflix_JP |68.70Mb
+- name: netflix_JP |18.35Mb
   server: 160.16.106.99
   type: trojan
-  port: 2001
+  port: 4937
   password: 9f7d5cb76d1645101994d9b25891e3b7
   sni: www.nintendogames.net
-- name: disney_netflix_NL |11.13Mb
-  server: 160.16.106.99
+- name: disney_netflix_US |54.96Mb
+  server: 54.168.216.209
   type: trojan
-  port: 3057
+  port: 4019
   password: 9f7d5cb76d1645101994d9b25891e3b7
   sni: www.nintendogames.net
-- name: disney_netflix_US |24.08Mb
-  server: fbxt0765gh0pielsss.ftisthebest.com
+- name: netflix_SG | 7.47Mb
+  server: 54.168.216.209
   type: trojan
-  port: 56251
-  udp: true
-  password: e4895ea3-7b4a-3f46-ba5a-44ac4a691635
-  sni: fbxt0765gh0pielsss.ftisthebest.com
-  skip-cert-verify: true
+  port: 4674
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
 - name: netflix_SG |11.40Mb
   server: 160.16.124.17
   type: trojan
   port: 4674
   password: 9f7d5cb76d1645101994d9b25891e3b7
   sni: www.nintendogames.net
-- name: Relay_🇨🇳 CN-🇺🇸US_63 | 6.17Mb
+- name: netflix_SG | 4.46Mb
+  server: 160.16.72.205
+  type: trojan
+  port: 4674
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
+- name: Relay_🇨🇳 CN-🇺🇸US_69 | 6.17Mb
   server: v46.hdacd.com
   type: vmess
   country: 🇨🇳 CN
@@ -1017,7 +1047,7 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_netflix_NL | 4.23Mb
+- name: Relay_🇨🇳CN-🇳🇱NL_70 | 4.23Mb
   server: v30.hdacd.com
   type: vmess
   country: 🇨🇳CN
@@ -1049,7 +1079,19 @@ proxies:
   port: 989
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: Relay_🇭🇰HK-🇭🇰HK_67 | 2.06Mb
+- name: Relay_🇭🇰 HK-🇺🇸US_73 |44.78Mb
+  server: v8.hdacd.com
+  type: vmess
+  country: 🇭🇰 HK
+  port: 30808
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_netflix_HK | 2.06Mb
   server: sv3.wy888.us
   type: vmess
   country: 🇭🇰HK
@@ -1063,7 +1105,7 @@ proxies:
   h2-opts: {}
   tls: true
   skip-cert-verify: true
-- name: Relay_🇮🇷 IR-🇺🇸US_68
+- name: Relay_🇮🇷 IR-🇺🇸US_75
   server: v35.hdacd.com
   type: vmess
   country: 🇮🇷 IR
@@ -1075,13 +1117,25 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: Relay_🇮🇷IR-🇺🇸US_70 | 0.01Mb
+- name: Relay_🇮🇷IR-🇺🇸US_77 | 0.01Mb
   server: v36.hdacd.com
   type: vmess
   country: 🇮🇷IR
   port: 30836
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_netflix_PE |32.20Mb
+  server: pe1.bctuo.top
+  type: vmess
+  country: 🇵🇪PE
+  port: 443
+  uuid: 31801968-9877-4ef5-be87-56503c34a69d
+  alterId: 0
   cipher: auto
   network: tcp
   http-opts: {}
@@ -1094,7 +1148,7 @@ proxies:
   port: 989
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: Relay_🏁 ZZ-🇺🇸US_73 |79.92Mb
+- name: Relay_🏁 ZZ-🇺🇸US_81 |79.92Mb
   server: v24.hdacd.com
   type: vmess
   country: 🏁 ZZ
@@ -1226,10 +1280,6 @@ proxies:
   ech-opts:
     enable: true
     query-server-name: cloudflare-ech.com
-- name: Shadowsocks
-  type: socks5
-  server: 127.0.0.1
-  port: 1080
 - cipher: aes-256-cfb
   name: United States_None_ss_101
   password: amazonskr05
@@ -1276,6 +1326,14 @@ proxies:
   server: 43.207.66.138
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
+  type: trojan
+- name: Japan_Tokyo_trojan_108
+  network: tcp
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  port: 2001
+  server: 160.16.106.99
+  skip-cert-verify: false
+  sni: www.nintendogames.net
   type: trojan
 - name: Japan_Tokyo_trojan_1010
   network: tcp
@@ -1407,6 +1465,46 @@ proxies:
   tls: false
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
+- name: Japan_Tokyo_trojan_1114
+  network: tcp
+  password: BxceQaOe
+  port: 2001
+  server: 54.168.216.209
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: Japan_Tokyo_trojan_1115
+  network: tcp
+  password: BxceQaOe
+  port: 6313
+  server: 3.112.197.74
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: Japan_Tokyo_trojan_1116
+  network: tcp
+  password: BxceQaOe
+  port: 3122
+  server: 54.238.193.143
+  skip-cert-verify: true
+  sni: t.me%252Fripaojiedian
+  type: trojan
+- name: Hong Kong_None_trojan_1121
+  network: tcp
+  password: BxceQaOe
+  port: 28033
+  server: 18.162.169.141
+  skip-cert-verify: true
+  sni: t.me%252Fripaojiedian
+  type: trojan
+- name: Japan_Tokyo_trojan_1124
+  network: tcp
+  password: BxceQaOe
+  port: 23255
+  server: 13.114.26.172
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
 - name: 法国 - 巴黎 - 1
   server: 15.188.149.87
   type: trojan
@@ -1445,33 +1543,6 @@ proxies:
   skip-cert-verify: true
   udp: true
   delay: 1864
-- name: 美国 - 達拉斯 - 3
-  server: v8.hdacd.com
-  type: vmess
-  country: 🇭🇰 HK
-  port: 30808
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  network: tcp
-  ws-path: /
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  delay: 898
-- name: 秘鲁 - Macusani - 1
-  server: pe1.bctuo.top
-  type: vmess
-  country: 🇵🇪PE
-  port: 443
-  uuid: 31801968-9877-4ef5-be87-56503c34a69d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  delay: 848
 - name: 日本 - 大阪市 - 1
   server: v6.hdacd.com
   port: 30806
@@ -1682,6 +1753,10 @@ proxies:
   ws-path: /
   skip-cert-verify: true
   delay: 508
+- name: Shadowsocks
+  type: socks5
+  server: 127.0.0.1
+  port: 1080
 - name: 公益节点 香港
   type: vmess
   server: aa.cloudflare.182682.xyz
