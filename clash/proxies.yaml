@@ -1,24 +1,14 @@
 proxies:
-- name: 法国 - 巴黎 - 1
-  server: 15.188.149.87
+- name: 德国 - 法兰克福 - 1
+  server: vde4.stableq.top
   type: trojan
-  country: 🇫🇷FR
-  port: 22223
-  password: telegram-id-directvpn
-  skip-cert-verify: true
+  port: 24446
+  password: 94b1170c-4ecc-4e39-bc28-d3da5d16cb3f
+  sni: vde4.stableq.top
   udp: true
-  delay: 1720
+  delay: 901
 - name: 法国 - 巴黎 - 2
-  server: 15.188.149.87
-  type: trojan
-  country: 🇫🇷FR
-  port: 22222
-  password: telegram-id-privatevpns
-  skip-cert-verify: true
-  udp: true
-  delay: 883
-- name: 法国 - 巴黎 - 3
-  server: 13.36.185.49
+  server: 13.36.250.59
   type: trojan
   country: 🇫🇷FR
   port: 22223
@@ -26,87 +16,90 @@ proxies:
   sni: trojan.burgerip.co.uk
   skip-cert-verify: true
   udp: true
-  delay: 745
-- name: 荷兰 - 阿姆斯特丹 - 1
-  server: v30.hdacd.com
+  delay: 1783
+- name: 法国 - 巴黎 - 3
+  server: 51.44.53.220
+  type: trojan
+  country: 🇺🇸US
+  port: 22223
+  password: telegram-id-directvpn
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+  delay: 778
+- name: 法国 - 斯特拉斯堡 - 1
+  server: v35.hdacd.com
   type: vmess
-  country: 🇨🇳CN
-  port: 30830
+  country: 🇨🇳 CN
+  port: 30835
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 0
+  alterId: 2
   cipher: auto
   network: tcp
-  servername: v30.hdacd.com
+  ws-path: /
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-  delay: 746
+  delay: 977
 - name: 荷兰 - 阿姆斯特丹 - 2
-  server: nl-4.tr202513.com
+  server: 195.93.253.240
+  type: ss
+  port: 14130
+  password: QpEgKAKfzdt5K0JbbvEEl9
+  cipher: chacha20-ietf-poly1305
+  delay: 1335
+- name: 荷兰 - 哈勒姆 - 3
+  server: 51.15.17.169
+  port: 989
+  type: ss
+  cipher: aes-256-cfb
+  password: f8f7aCzcPKbsF8p3
+  udp: true
+  delay: 1203
+- name: 荷兰 - 哈勒姆 - 4
+  server: nl-v2ray.ipracevpn.com
+  type: vmess
+  port: 80
+  uuid: 2d6c940b-ff48-4269-ba8b-5c63951de091
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  ws-opts:
+    path: /cdn-cgi/trace
+  delay: 926
+- name: 荷兰 - Meppel - 1
+  server: 94.131.105.125
+  port: 4443
   type: trojan
-  country: 🇳🇱NL
-  port: 443
-  password: s7R5MgmN6UrFWjxwYh
-  sni: nl-4.tr202513.com
+  password: strong-secret-pass-777
   skip-cert-verify: true
   udp: true
-  delay: 1864
-- name: 美国 - 北伯根 - 5
+  delay: 1799
+- name: 美国 - 北伯根 - 6
   server: v24.hdacd.com
   port: 30824
   type: vmess
-  country: 🏁 ZZ
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
   cipher: auto
-  network: tcp
-  http-opts: {}
-  ws-path: /
+  tls: false
   skip-cert-verify: true
-  delay: 1134
-- name: 美国 - 達拉斯 - 3
-  server: v8.hdacd.com
-  type: vmess
-  country: 🇭🇰 HK
-  port: 30808
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  network: tcp
-  ws-path: /
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  delay: 898
-- name: 美国 - 华盛顿特区 - 7
+  udp: true
+  delay: 1145
+- name: 美国 - 华盛顿特区 - 4
   server: v4.hdacd.com
-  type: vmess
-  country: 🇭🇰 HK
   port: 30804
+  type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
   cipher: auto
-  network: tcp
-  ws-path: /
-  http-opts: {}
-  h2-opts: {}
+  tls: false
   skip-cert-verify: true
-  delay: 973
+  udp: true
+  delay: 1262
 - name: 美国 - 洛杉矶 - 1
-  server: 82.198.246.46
-  type: vmess
-  country: 🇬🇧 GB
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  network: tcp
-  ws-path: /
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  delay: 407
-- name: 美国 - 洛杉矶 - 2
   server: 82.198.246.250
   port: 180
   type: vmess
@@ -116,320 +109,359 @@ proxies:
   tls: false
   skip-cert-verify: true
   udp: true
-  delay: 409
-- name: 美国 - 沙加緬度 - 4
-  server: fbxt0765gh0pielsss.ftisthebest.com
-  type: trojan
-  port: 56251
-  password: e4895ea3-7b4a-3f46-ba5a-44ac4a691635
-  sni: fbxt0765gh0pielsss.ftisthebest.com
-  skip-cert-verify: true
-  udp: true
-  delay: 1254
-- name: 美国 - 圣路易斯 - 6
-  server: v46.hdacd.com
+  delay: 2424
+- name: 美国 - 洛杉矶 - 2
+  server: 82.198.246.46
+  port: 180
   type: vmess
-  country: 🇨🇳 CN
-  port: 30846
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  network: tcp
-  ws-path: /
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  delay: 1015
-- name: 秘鲁 - Macusani - 1
-  server: pe1.bctuo.top
-  type: vmess
-  country: 🇵🇪PE
-  port: 443
-  uuid: 31801968-9877-4ef5-be87-56503c34a69d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  delay: 848
-- name: 日本 - 大阪市 - 1
-  server: v6.hdacd.com
-  port: 30806
-  type: vmess
-  country: 🏁 ZZ
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  ws-path: /
-  skip-cert-verify: true
-  delay: 826
-- name: 新加坡 - 新加坡 - 1
-  server: v12.hdacd.com
-  port: 30812
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
   udp: true
-  delay: 695
-- name: 印度 - 班加羅爾 - 1
-  server: 134.209.147.198
-  type: ss
-  country: 🇮🇳 IN
-  port: 989
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
-  delay: 905
-- name: 英国 - 伦敦 - 1
-  server: v36.hdacd.com
+  delay: 406
+- name: 美国 - 沙加緬度 - 3
+  server: fbxt0765gh0pielsss.ftisthebest.com
+  port: 56251
+  type: trojan
+  password: e4895ea3-7b4a-3f46-ba5a-44ac4a691635
+  sni: fbxt0765gh0pielsss.ftisthebest.com
+  skip-cert-verify: true
+  udp: true
+  delay: 2281
+- name: 美国 - 圣路易斯 - 5
+  server: v46.hdacd.com
+  port: 30846
   type: vmess
-  country: 🇮🇷IR
-  port: 30836
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
   cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
+  tls: false
   skip-cert-verify: true
-  delay: 1042
-- name: 越南 - Hải Dương - 1
-  server: 103.186.155.8
-  type: ss
-  country: 🏁 ZZ
-  port: 38388
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 456
-- name: 越南 - Hải Dương - 10
-  server: 103.186.155.45
-  type: ss
-  country: 🏁 ZZ
-  port: 38388
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 516
-- name: 越南 - Hải Dương - 11
-  server: 103.186.155.33
-  type: ss
-  country: 🏁 ZZ
-  port: 38388
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 1524
-- name: 越南 - Hải Dương - 12
-  server: 103.186.155.237
-  type: ss
-  country: 🏁 ZZ
-  port: 38388
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 535
-- name: 越南 - Hải Dương - 13
-  server: 103.186.154.192
-  type: ss
-  country: 🏁 ZZ
-  port: 38388
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 2485
-- name: 越南 - Hải Dương - 14
-  server: 103.186.155.66
-  port: 38388
-  type: ss
-  cipher: aes-256-cfb
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-  delay: 1045
-- name: 越南 - Hải Dương - 15
-  server: 103.186.154.233
+  delay: 861
+- name: 日本 - 东京 - 1
+  server: 13.230.201.208
+  port: 2377
   type: ss
-  country: 🏁 ZZ
-  port: 38388
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 2494
-- name: 越南 - Hải Dương - 16
-  server: 103.186.155.13
-  type: ss
-  country: 🏁 ZZ
-  port: 38388
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 460
-- name: 越南 - Hải Dương - 17
-  server: 103.186.155.76
-  port: 38388
-  type: ss
-  country: 🏁 ZZ
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 528
-- name: 越南 - Hải Dương - 18
-  server: 103.186.154.197
-  type: ss
-  country: 🏁 ZZ
-  port: 38388
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 549
-- name: 越南 - Hải Dương - 19
-  server: 103.186.154.17
-  type: ss
-  country: 🏁 ZZ
-  port: 38388
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 511
-- name: 越南 - Hải Dương - 2
-  server: 103.186.154.25
-  type: ss
-  country: 🏁 ZZ
-  port: 38388
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 537
-- name: 越南 - Hải Dương - 20
-  server: 103.186.154.183
-  port: 38388
-  type: ss
-  country: 🏁 ZZ
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 1158
-- name: 越南 - Hải Dương - 21
-  server: 103.186.155.122
-  port: 38388
-  type: ss
-  country: 🏁 ZZ
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 519
-- name: 越南 - Hải Dương - 22
-  server: 103.186.154.49
-  port: 38388
-  type: ss
-  country: 🏁 ZZ
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 499
-- name: 越南 - Hải Dương - 23
-  server: 103.186.154.214
-  type: ss
-  country: 🏁 ZZ
-  port: 38388
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 1146
-- name: 越南 - Hải Dương - 24
-  server: 103.186.155.130
-  type: ss
-  country: 🏁 ZZ
-  port: 38388
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 1098
-- name: 越南 - Hải Dương - 3
-  server: 103.186.154.172
-  type: ss
-  country: 🏁 ZZ
-  port: 38388
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 1206
-- name: 越南 - Hải Dương - 4
-  server: 103.186.154.53
-  type: ss
-  country: 🏁 ZZ
-  port: 38388
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 1520
-- name: 越南 - Hải Dương - 5
-  server: 103.186.154.33
-  type: ss
-  country: 🏁 ZZ
-  port: 38388
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 549
-- name: 越南 - Hải Dương - 6
-  server: 103.186.154.39
-  port: 38388
-  type: ss
-  country: 🏁 ZZ
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 514
-- name: 越南 - Hải Dương - 7
-  server: 103.186.154.14
-  type: ss
-  country: 🏁 ZZ
-  port: 38388
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 1124
-- name: 越南 - Hải Dương - 8
-  server: 103.186.154.190
-  type: ss
-  country: 🏁 ZZ
-  port: 38388
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  cipher: aes-256-cfb
-  delay: 511
-- name: 越南 - Quận Bình Thạnh - 9
-  server: 103.238.214.82
-  port: 41632
-  client-fingerprint: chrome
-  type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  tfo: true
+  cipher: chacha20-ietf-poly1305
+  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+  plugin: obfs
+  plugin-opts:
+    mode: tls
+    host: (Telegram🇨🇳 @WangCai2)7eb777f:123571
   udp: true
-  delay: 393
-- name: 中国 - 台湾 - 2
-  server: 185.189.160.105
-  port: 41632
-  client-fingerprint: chrome
-  type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  tfo: true
-  udp: true
-  delay: 964
-- name: 中国 - 香港 - 1
-  server: sv3.wy888.us
+  delay: 171
+- name: 新加坡 - 新加坡 - 1
+  server: 151.242.180.91
   type: vmess
-  country: 🇭🇰HK
-  port: 44302
-  uuid: 703fe06c-9f00-4308-8fe3-1e2f27da316b
+  country: 🇮🇷IR
+  port: 30812
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 0
   cipher: auto
   network: tcp
-  servername: sv3.wy888.us
   http-opts: {}
   h2-opts: {}
-  tls: true
   skip-cert-verify: true
-  delay: 148
-- name: 中国 - 香港 - 3
-  server: v9.hdacd.com
-  port: 30809
-  type: vmess
-  country: 🇮🇷 IR
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  ws-path: /
-  skip-cert-verify: true
-  delay: 508
+  delay: 1398
+- name: 越南 - Hải Dương - 1
+  server: 103.186.155.233
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 495
+- name: 越南 - Hải Dương - 10
+  server: 103.186.155.119
+  type: ss
+  country: 🏁 ZZ
+  port: 38388
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  cipher: aes-256-cfb
+  delay: 1383
+- name: 越南 - Hải Dương - 11
+  server: 103.186.155.231
+  type: ss
+  country: 🏁 ZZ
+  port: 38388
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  cipher: aes-256-cfb
+  delay: 686
+- name: 越南 - Hải Dương - 12
+  server: 103.186.155.28
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 550
+- name: 越南 - Hải Dương - 13
+  server: 103.186.154.219
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 505
+- name: 越南 - Hải Dương - 14
+  server: 103.186.155.209
+  type: ss
+  country: 🏁 ZZ
+  port: 38388
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  cipher: aes-256-cfb
+  delay: 1493
+- name: 越南 - Hải Dương - 15
+  server: 103.186.154.30
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 468
+- name: 越南 - Hải Dương - 16
+  server: 103.186.154.35
+  type: ss
+  country: 🏁 ZZ
+  port: 38388
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  cipher: aes-256-cfb
+  delay: 492
+- name: 越南 - Hải Dương - 17
+  server: 103.186.154.59
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 1515
+- name: 越南 - Hải Dương - 18
+  server: 103.186.155.69
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 520
+- name: 越南 - Hải Dương - 19
+  server: 103.186.155.81
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 729
+- name: 越南 - Hải Dương - 2
+  server: 103.186.155.128
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 1203
+- name: 越南 - Hải Dương - 20
+  server: 103.186.154.235
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 729
+- name: 越南 - Hải Dương - 21
+  server: 103.186.155.135
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 476
+- name: 越南 - Hải Dương - 22
+  server: 103.186.154.187
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 497
+- name: 越南 - Hải Dương - 23
+  server: 103.186.155.230
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 498
+- name: 越南 - Hải Dương - 24
+  server: 103.186.154.246
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 1513
+- name: 越南 - Hải Dương - 25
+  server: 103.186.154.224
+  type: ss
+  country: 🏁 ZZ
+  port: 38388
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  cipher: aes-256-cfb
+  delay: 498
+- name: 越南 - Hải Dương - 26
+  server: 103.186.154.12
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 1183
+- name: 越南 - Hải Dương - 27
+  server: 103.186.154.61
+  type: ss
+  country: 🏁 ZZ
+  port: 38388
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  cipher: aes-256-cfb
+  delay: 471
+- name: 越南 - Hải Dương - 28
+  server: 103.186.154.173
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 495
+- name: 越南 - Hải Dương - 29
+  server: 103.186.154.46
+  type: ss
+  country: 🏁 ZZ
+  port: 38388
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  cipher: aes-256-cfb
+  delay: 1489
+- name: 越南 - Hải Dương - 3
+  server: 103.186.154.240
+  port: 38388
+  type: ss
+  country: 🏁 ZZ
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  cipher: aes-256-cfb
+  delay: 1783
+- name: 越南 - Hải Dương - 30
+  server: 103.186.155.30
+  type: ss
+  country: 🏁 ZZ
+  port: 38388
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  cipher: aes-256-cfb
+  delay: 1182
+- name: 越南 - Hải Dương - 31
+  server: 103.186.155.224
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 506
+- name: 越南 - Hải Dương - 32
+  server: 103.186.155.71
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 1151
+- name: 越南 - Hải Dương - 33
+  server: 103.186.155.121
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 494
+- name: 越南 - Hải Dương - 34
+  server: 103.186.154.54
+  type: ss
+  country: 🏁 ZZ
+  port: 38388
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  cipher: aes-256-cfb
+  delay: 1106
+- name: 越南 - Hải Dương - 35
+  server: 103.186.155.225
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 503
+- name: 越南 - Hải Dương - 36
+  server: 103.186.154.177
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 473
+- name: 越南 - Hải Dương - 37
+  server: 103.186.155.15
+  port: 38388
+  type: ss
+  country: 🏁 ZZ
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  cipher: aes-256-cfb
+  delay: 749
+- name: 越南 - Hải Dương - 4
+  server: 103.186.155.229
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 490
+- name: 越南 - Hải Dương - 5
+  server: 103.186.154.185
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 493
+- name: 越南 - Hải Dương - 6
+  server: 103.186.154.225
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 506
+- name: 越南 - Hải Dương - 7
+  server: 103.186.154.39
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+  delay: 2162
+- name: 越南 - Hải Dương - 8
+  server: 103.186.154.178
+  type: ss
+  country: 🏁 ZZ
+  port: 38388
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  cipher: aes-256-cfb
+  delay: 719
+- name: 越南 - Hải Dương - 9
+  server: 103.186.154.245
+  type: ss
+  country: 🏁 ZZ
+  port: 38388
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  cipher: aes-256-cfb
+  delay: 710
 - name: 00-Trojan-jp-AI
   server: jp.111000.cc.cd
   port: 443
@@ -550,8 +582,22 @@ proxies:
   ech-opts:
     enable: true
     query-server-name: cloudflare-ech.com
-- name: Relay_-🇩🇪DE_01
-  server: 222.167.202.52
+- name: Relay_🇭🇰HK-🇭🇰HK_43 | 2.05Mb
+  server: sv3.wy888.us
+  type: vmess
+  country: 🇭🇰HK
+  port: 44302
+  uuid: 703fe06c-9f00-4308-8fe3-1e2f27da316b
+  alterId: 0
+  cipher: auto
+  network: tcp
+  servername: sv3.wy888.us
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+- name: disney_netflix_IT
+  server: 222.167.202.47
   type: vless
   port: 7443
   udp: true
@@ -560,12 +606,12 @@ proxies:
   tls: true
   servername: 2026.hhhhh.eu.org
   ws-opts:
-    path: /222.167.202.52:7443
+    path: /222.167.202.47:7443
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: Relay_-🇮🇹IT_04
-  server: 222.167.202.2
+- name: disney_netflix_IT_1
+  server: 222.167.202.70
   type: vless
   port: 7443
   udp: true
@@ -574,11 +620,20 @@ proxies:
   tls: true
   servername: 2026.hhhhh.eu.org
   ws-opts:
-    path: /222.167.202.2:7443
+    path: /222.167.202.70:7443
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: Relay_-🇳🇱NL_06
+- name: netflix_GB |62.92Mb
+  server: uk1.fromblancwithlove.com
+  type: vless
+  port: 8443
+  udp: true
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  skip-cert-verify: true
+  packet-encoding: ''
+- name: disney_netflix_NL
   server: 138.226.240.199
   type: vless
   port: 4433
@@ -593,103 +648,21 @@ proxies:
     headers:
       Host: sub.mot.ip-ddns.com
   packet-encoding: ''
-- name: Relay_-🇩🇪DE_18
-  server: 222.167.202.33
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.33:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: Relay_-🇮🇹IT_26
-  server: 222.167.202.47
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.47:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_IT
-  server: 222.167.202.22
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.22:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: netflix_GB |62.92Mb
-  server: uk1.fromblancwithlove.com
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  tls: true
-  skip-cert-verify: true
-  packet-encoding: ''
-- name: disney_netflix_IT_1
-  server: 222.167.202.21
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  skip-cert-verify: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.21:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_IT_2
-  server: 222.167.202.6
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  skip-cert-verify: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.6:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_IT_3
-  server: 222.167.202.23
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  skip-cert-verify: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.23:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
 - name: disney_netflix_DE
+  server: 37.114.50.157
+  type: vless
+  port: 4002
+  udp: true
+  uuid: 00000000-0000-4000-8000-000000000000
+  network: ws
+  tls: true
+  servername: sub.mot.ip-ddns.com
+  ws-opts:
+    path: /
+    headers:
+      Host: sub.mot.ip-ddns.com
+  packet-encoding: ''
+- name: disney_netflix_DE_1
   server: 185.94.29.156
   type: vless
   port: 4001
@@ -704,47 +677,7 @@ proxies:
     headers:
       Host: sub.mot.ip-ddns.com
   packet-encoding: ''
-- name: netflix_GB |62.94Mb
-  server: 152.233.28.198
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
-  tls: true
-  skip-cert-verify: true
-  servername: uk1.fromblancwithlove.com
-  alpn:
-  - h2
-  packet-encoding: ''
-- name: disney_netflix_IT_4
-  server: 222.167.202.10
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.10:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_DE_1
-  server: 37.114.50.157
-  type: vless
-  port: 4002
-  udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
-  network: ws
-  tls: true
-  servername: sub.mot.ip-ddns.com
-  ws-opts:
-    path: /
-    headers:
-      Host: sub.mot.ip-ddns.com
-  packet-encoding: ''
-- name: disney_netflix_IT_5
+- name: disney_netflix_IT_2
   server: 222.167.202.14
   type: vless
   port: 7443
@@ -758,49 +691,37 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_IT_6
-  server: 222.167.202.60
+- name: disney_netflix_IT_3
+  server: 222.167.202.21
   type: vless
   port: 7443
   udp: true
   uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
   network: ws
   tls: true
+  skip-cert-verify: true
   servername: 2026.hhhhh.eu.org
   ws-opts:
-    path: /222.167.202.60:7443
+    path: /222.167.202.21:7443
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_IT_7
-  server: 222.167.202.35
+- name: disney_netflix_IT_4
+  server: 222.167.202.23
   type: vless
   port: 7443
   udp: true
   uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
   network: ws
   tls: true
+  skip-cert-verify: true
   servername: 2026.hhhhh.eu.org
   ws-opts:
-    path: /222.167.202.35:7443
+    path: /222.167.202.23:7443
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_IT_8
-  server: 222.167.202.70
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.70:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_IT_9
+- name: disney_netflix_IT_5
   server: 222.167.202.16
   type: vless
   port: 7443
@@ -815,20 +736,74 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_NL
-  server: 165.232.89.21
+- name: disney_netflix_IT_6
+  server: 222.167.202.4
   type: vless
-  port: 443
+  port: 7443
   udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
   network: ws
   tls: true
-  client-fingerprint: chrome
-  servername: sni.111000.indevs.in
+  servername: 2026.hhhhh.eu.org
   ws-opts:
-    path: /?ed=2560
+    path: /222.167.202.4:7443
     headers:
-      Host: sni.111000.indevs.in
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_IT_7
+  server: 222.167.202.22
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.22:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: netflix_GB |62.94Mb
+  server: 152.233.28.198
+  type: vless
+  port: 8443
+  udp: true
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  skip-cert-verify: true
+  servername: uk1.fromblancwithlove.com
+  alpn:
+  - h2
+  packet-encoding: ''
+- name: disney_netflix_IT_8
+  server: 222.167.202.6
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  skip-cert-verify: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.6:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_IT_9
+  server: 222.167.202.32
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.32:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
   packet-encoding: ''
 - name: disney_netflix_IT_10
   server: 222.167.202.45
@@ -845,7 +820,7 @@ proxies:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
 - name: disney_netflix_IT_11
-  server: 222.167.202.4
+  server: 222.167.202.60
   type: vless
   port: 7443
   udp: true
@@ -854,11 +829,39 @@ proxies:
   tls: true
   servername: 2026.hhhhh.eu.org
   ws-opts:
-    path: /222.167.202.4:7443
+    path: /222.167.202.60:7443
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
 - name: disney_netflix_IT_12
+  server: 222.167.202.35
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.35:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_IT_13
+  server: 222.167.202.52
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.52:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_IT_14
   server: 222.167.202.50
   type: vless
   port: 7443
@@ -872,8 +875,8 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_IT_13
-  server: 222.167.202.32
+- name: disney_netflix_IT_15
+  server: 222.167.202.33
   type: vless
   port: 7443
   udp: true
@@ -882,35 +885,81 @@ proxies:
   tls: true
   servername: 2026.hhhhh.eu.org
   ws-opts:
-    path: /222.167.202.32:7443
+    path: /222.167.202.33:7443
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_HK |28.04Mb
-  server: 16.162.33.118
-  type: trojan
-  port: 921
-  password: 9f7d5cb76d1645101994d9b25891e3b7
-  sni: www.nintendogames.net
-- name: disney_netflix_NL | 6.55Mb
-  server: 94.131.105.125
-  type: trojan
-  port: 4443
+- name: disney_netflix_IT_16
+  server: 222.167.202.10
+  type: vless
+  port: 7443
   udp: true
-  password: strong-secret-pass-777
-  skip-cert-verify: true
-- name: netflix_SG | 8.68Mb
-  server: 160.16.72.205
-  type: trojan
-  port: 4674
-  password: 9f7d5cb76d1645101994d9b25891e3b7
-  sni: www.nintendogames.net
-- name: netflix_JP |20.55Mb
-  server: 160.16.72.205
-  type: trojan
-  port: 4937
-  password: 9f7d5cb76d1645101994d9b25891e3b7
-  sni: www.nintendogames.net
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.10:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_NL_1
+  server: 165.232.89.21
+  type: vless
+  port: 443
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: sni.111000.indevs.in
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: sni.111000.indevs.in
+  packet-encoding: ''
+- name: disney_netflix_IT_17
+  server: 222.167.202.2
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.2:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_IT_18
+  server: 222.167.202.31
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.31:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: netflix_TW |11.11Mb
+  server: 185.189.160.105
+  type: ss
+  port: 41632
+  udp: true
+  password: qwerREWQ@@
+  cipher: aes-256-cfb
+- name: netflix_VN | 3.87Mb
+  server: 103.238.214.82
+  type: ss
+  port: 41632
+  udp: true
+  password: qwerREWQ@@
+  cipher: aes-256-cfb
 - name: disney_netflix_AT
   server: 152.53.45.251
   type: trojan
@@ -923,6 +972,58 @@ proxies:
     headers:
       Host: jflsjlaf.pages.dev
   network: ws
+- name: netflix_JP |20.55Mb
+  server: 160.16.72.205
+  type: trojan
+  port: 4937
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
+- name: disney_netflix_HK |28.04Mb
+  server: 16.162.33.118
+  type: trojan
+  port: 921
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
+- name: netflix_SG | 8.68Mb
+  server: 160.16.72.205
+  type: trojan
+  port: 4674
+  password: 9f7d5cb76d1645101994d9b25891e3b7
+  sni: www.nintendogames.net
+- name: disney_netflix_NL | 3.13Mb
+  server: v30.hdacd.com
+  type: vmess
+  country: 🇨🇳CN
+  port: 30830
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 0
+  cipher: auto
+  network: tcp
+  servername: v30.hdacd.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_netflix_US | 6.96Mb
+  server: v8.hdacd.com
+  type: vmess
+  country: 🇭🇰 HK
+  port: 30808
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_netflix_NL |175.00Mb
+  server: nl-4.tr202513.com
+  type: trojan
+  country: 🇳🇱NL
+  port: 443
+  udp: true
+  password: s7R5MgmN6UrFWjxwYh
+  sni: nl-4.tr202513.com
+  skip-cert-verify: true
 - cipher: aes-256-cfb
   name: United States_None_ss_101
   password: amazonskr05
