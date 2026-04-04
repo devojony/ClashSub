@@ -783,14 +783,21 @@ proxies:
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
-- name: netflix_VN | 3.86Mb
+- name: netflix_TW | 3.55Mb
+  server: 185.189.160.105
+  type: ss
+  port: 41632
+  udp: true
+  password: qwerREWQ@@
+  cipher: aes-256-cfb
+- name: disney_netflix_VN | 2.66Mb
   server: 103.238.214.82
   type: ss
   port: 41632
   udp: true
   password: qwerREWQ@@
   cipher: aes-256-cfb
-- name: Relay_🇨🇳 CN-🇺🇸US_35 | 2.13Mb
+- name: Relay_🇨🇳 CN-🇺🇸US_36 | 2.18Mb
   server: v46.hdacd.com
   type: vmess
   country: 🇨🇳 CN
@@ -802,7 +809,19 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: Relay_🇭🇰HK-🇭🇰HK_41
+- name: Relay_🇭🇰 HK-🇺🇸US_39 | 2.10Mb
+  server: v8.hdacd.com
+  type: vmess
+  country: 🇭🇰 HK
+  port: 30808
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_HK | 2.35Mb
   server: sv3.wy888.us
   type: vmess
   country: 🇭🇰HK
@@ -816,40 +835,6 @@ proxies:
   h2-opts: {}
   tls: true
   skip-cert-verify: true
-- name: disney_netflix_HK
-  server: aflzzul.meiquankongjian.com
-  type: vmess
-  country: 🇹🇼TW
-  port: 51515
-  uuid: 342bacfd-2b8f-3f49-a16e-439db5b0b9d5
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: aflzzul.meiquankongjian.com
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /564dfa20/
-    headers:
-      HOST: aflzzul.meiquankongjian.com
-- name: Relay_🏁ZZ-🇭🇰HK_49
-  server: aa.cloudflare.182682.xyz
-  type: vmess
-  country: 🏁ZZ
-  port: 80
-  uuid: 085e671e-d9b8-4b5a-a8b8-40bbc8c34ae9
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: freehk.hkuk.xyz
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /yhjh
-    headers:
-      HOST: freehk.hkuk.xyz
 - name: 00-Trojan-jp-AI
   server: jp.111000.cc.cd
   port: 443
@@ -1035,20 +1020,6 @@ proxies:
   ws-path: /
   skip-cert-verify: true
   delay: 1134
-- name: 美国 - 達拉斯 - 3
-  server: v8.hdacd.com
-  type: vmess
-  country: 🇭🇰 HK
-  port: 30808
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  network: tcp
-  ws-path: /
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  delay: 898
 - name: 美国 - 华盛顿特区 - 7
   server: v4.hdacd.com
   type: vmess
@@ -1339,16 +1310,6 @@ proxies:
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   cipher: aes-256-cfb
   delay: 511
-- name: 中国 - 台湾 - 2
-  server: 185.189.160.105
-  port: 41632
-  client-fingerprint: chrome
-  type: ss
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  tfo: true
-  udp: true
-  delay: 964
 - name: 中国 - 香港 - 3
   server: v9.hdacd.com
   port: 30809
@@ -1367,22 +1328,21 @@ proxies:
   server: 127.0.0.1
   port: 1080
 - name: disney_netflix_IT
-  server: 222.167.202.23
+  server: 222.167.202.31
   type: vless
   port: 7443
   udp: true
   uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
   network: ws
   tls: true
-  skip-cert-verify: true
   servername: 2026.hhhhh.eu.org
   ws-opts:
-    path: /222.167.202.23:7443
+    path: /222.167.202.31:7443
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
 - name: disney_netflix_IT_1
-  server: 222.167.202.16
+  server: 222.167.202.6
   type: vless
   port: 7443
   udp: true
@@ -1392,18 +1352,50 @@ proxies:
   skip-cert-verify: true
   servername: 2026.hhhhh.eu.org
   ws-opts:
-    path: /222.167.202.16:7443
+    path: /222.167.202.6:7443
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: netflix_GB |62.92Mb
-  server: uk1.fromblancwithlove.com
+- name: netflix_GB |63.09Mb
+  server: 152.233.28.198
   type: vless
   port: 8443
   udp: true
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   tls: true
   skip-cert-verify: true
+  servername: uk1.fromblancwithlove.com
+  alpn:
+  - h2
+  packet-encoding: ''
+- name: disney_netflix_IT_2
+  server: 222.167.202.33
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.33:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_DE
+  server: 185.94.29.156
+  type: vless
+  port: 4001
+  udp: true
+  uuid: 00000000-0000-4000-8000-000000000000
+  network: ws
+  tls: true
+  skip-cert-verify: true
+  servername: sub.mot.ip-ddns.com
+  ws-opts:
+    path: /
+    headers:
+      Host: sub.mot.ip-ddns.com
   packet-encoding: ''
 - name: disney_netflix_NL
   server: 138.226.240.199
@@ -1420,7 +1412,7 @@ proxies:
     headers:
       Host: sub.mot.ip-ddns.com
   packet-encoding: ''
-- name: disney_netflix_IT_2
+- name: disney_netflix_IT_3
   server: 222.167.202.50
   type: vless
   port: 7443
@@ -1434,21 +1426,7 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_DE
-  server: 37.114.50.157
-  type: vless
-  port: 4002
-  udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
-  network: ws
-  tls: true
-  servername: sub.mot.ip-ddns.com
-  ws-opts:
-    path: /
-    headers:
-      Host: sub.mot.ip-ddns.com
-  packet-encoding: ''
-- name: disney_netflix_IT_3
+- name: disney_netflix_IT_4
   server: 222.167.202.10
   type: vless
   port: 7443
@@ -1462,77 +1440,22 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_IT_4
-  server: 222.167.202.60
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.60:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
 - name: disney_netflix_IT_5
-  server: 222.167.202.32
+  server: 222.167.202.16
   type: vless
   port: 7443
   udp: true
   uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
   network: ws
   tls: true
+  skip-cert-verify: true
   servername: 2026.hhhhh.eu.org
   ws-opts:
-    path: /222.167.202.32:7443
+    path: /222.167.202.16:7443
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
 - name: disney_netflix_IT_6
-  server: 222.167.202.31
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.31:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_IT_7
-  server: 222.167.202.70
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.70:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_IT_8
-  server: 222.167.202.52
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.52:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_IT_9
   server: 222.167.202.4
   type: vless
   port: 7443
@@ -1546,7 +1469,7 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_IT_10
+- name: disney_netflix_IT_7
   server: 222.167.202.21
   type: vless
   port: 7443
@@ -1561,65 +1484,8 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_DE_1
-  server: 185.94.29.156
-  type: vless
-  port: 4001
-  udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
-  network: ws
-  tls: true
-  skip-cert-verify: true
-  servername: sub.mot.ip-ddns.com
-  ws-opts:
-    path: /
-    headers:
-      Host: sub.mot.ip-ddns.com
-  packet-encoding: ''
-- name: disney_netflix_IT_11
-  server: 222.167.202.2
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.2:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_IT_12
-  server: 222.167.202.14
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.14:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_IT_13
-  server: 222.167.202.47
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.47:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_netflix_IT_14
-  server: 222.167.202.6
+- name: disney_netflix_IT_8
+  server: 222.167.202.23
   type: vless
   port: 7443
   udp: true
@@ -1629,11 +1495,11 @@ proxies:
   skip-cert-verify: true
   servername: 2026.hhhhh.eu.org
   ws-opts:
-    path: /222.167.202.6:7443
+    path: /222.167.202.23:7443
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_IT_15
+- name: disney_netflix_IT_9
   server: 222.167.202.35
   type: vless
   port: 7443
@@ -1647,8 +1513,8 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_IT_16
-  server: 222.167.202.33
+- name: disney_netflix_IT_10
+  server: 222.167.202.52
   type: vless
   port: 7443
   udp: true
@@ -1657,11 +1523,11 @@ proxies:
   tls: true
   servername: 2026.hhhhh.eu.org
   ws-opts:
-    path: /222.167.202.33:7443
+    path: /222.167.202.52:7443
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_IT_17
+- name: disney_netflix_IT_11
   server: 222.167.202.22
   type: vless
   port: 7443
@@ -1675,7 +1541,77 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_IT_18
+- name: disney_netflix_IT_12
+  server: 222.167.202.47
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.47:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_IT_13
+  server: 222.167.202.70
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.70:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_IT_14
+  server: 222.167.202.60
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.60:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_DE_1
+  server: 37.114.50.157
+  type: vless
+  port: 4002
+  udp: true
+  uuid: 00000000-0000-4000-8000-000000000000
+  network: ws
+  tls: true
+  servername: sub.mot.ip-ddns.com
+  ws-opts:
+    path: /
+    headers:
+      Host: sub.mot.ip-ddns.com
+  packet-encoding: ''
+- name: disney_netflix_IT_15
+  server: 222.167.202.14
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.14:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: disney_netflix_IT_16
   server: 222.167.202.45
   type: vless
   port: 7443
@@ -1689,17 +1625,42 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: netflix_GB |62.94Mb
-  server: 152.233.28.198
+- name: disney_netflix_IT_17
+  server: 222.167.202.2
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.2:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: netflix_GB |63.06Mb
+  server: uk1.fromblancwithlove.com
   type: vless
   port: 8443
   udp: true
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   tls: true
   skip-cert-verify: true
-  servername: uk1.fromblancwithlove.com
-  alpn:
-  - h2
+  packet-encoding: ''
+- name: disney_netflix_IT_18
+  server: 222.167.202.32
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.32:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
   packet-encoding: ''
 - name: disney_netflix_US | 5.88Mb
   server: 82.198.246.97
@@ -1713,278 +1674,19 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: 剩余流量：3992.11 GB
-  server: 208.87.242.105
-  port: 50000
-  ports: 50000-53000
-  mport: 50000-53000
+- name: 公益节点 香港
+  type: vmess
+  server: aa.cloudflare.182682.xyz
+  port: 80
+  uuid: 085e671e-d9b8-4b5a-a8b8-40bbc8c34ae9
+  alterId: 0
+  cipher: auto
   udp: true
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇺🇸美国洛杉矶2号
-  server: 208.87.242.109
-  port: 50000
-  ports: 50000-53000
-  mport: 50000-53000
-  udp: true
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇺🇸美国洛杉矶3号
-  server: 208.87.242.163
-  port: 50000
-  ports: 50000-53000
-  mport: 50000-53000
-  udp: true
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇺🇸美国凤凰城1号
-  server: 129.153.90.9
-  port: 50000
-  ports: 50000-53000
-  mport: 50000-53000
-  udp: true
-  skip-cert-verify: true
-  sni: www.microsoft.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇩🇪德国法兰克福2
-  server: 152.70.176.68
-  port: 1
-  udp: true
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇧🇷巴西圣保罗-1.5倍率
-  server: 144.22.129.240
-  port: 50000
-  ports: 50000-53000
-  mport: 50000-53000
-  udp: true
-  skip-cert-verify: true
-  sni: www.microsoft.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇦🇪迪拜-1.2倍率
-  server: 139.185.32.100
-  port: 50000
-  ports: 50000-53000
-  mport: 50000-53000
-  udp: true
-  skip-cert-verify: true
-  sni: www.hoyoverse.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇦🇪迪拜2-1.5倍率
-  server: 139.185.34.29
-  port: 50000
-  ports: 50000-53000
-  mport: 50000-53000
-  udp: true
-  skip-cert-verify: true
-  sni: www.hoyoverse.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇯🇵日本
-  server: 131.186.42.162
-  port: 50000
-  ports: 50000-53000
-  mport: 50000-53000
-  udp: true
-  skip-cert-verify: true
-  sni: www.microsoft.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇭🇰香港1号
-  server: 103.197.71.97
-  port: 50000
-  ports: 50000-53000
-  mport: 50000-53000
-  udp: true
-  skip-cert-verify: true
-  sni: www.hoyoverse.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇭🇰香港2号
-  server: 103.197.71.98
-  port: 50000
-  ports: 50000-53000
-  mport: 50000-53000
-  udp: true
-  skip-cert-verify: true
-  sni: www.hoyoverse.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇭🇰香港3号
-  server: 103.197.71.119
-  port: 50000
-  ports: 50000-53000
-  mport: 50000-53000
-  udp: true
-  skip-cert-verify: true
-  sni: www.hoyoverse.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇮🇳印度孟买-1.5倍率
-  server: 144.24.99.141
-  port: 53
-  udp: true
-  skip-cert-verify: true
-  sni: www.hoyoverse.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇮🇳印度海得拉巴-1.5倍率
-  server: 144.24.146.216
-  port: 53
-  udp: true
-  skip-cert-verify: true
-  sni: www.hoyoverse.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇬🇧英国伦敦-2倍率
-  server: 132.145.52.10
-  port: 65535
-  udp: true
-  skip-cert-verify: true
-  sni: www.microsoft.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇬🇧英国伦敦2-1.8倍率
-  server: 132.145.28.17
-  port: 65535
-  udp: true
-  skip-cert-verify: true
-  sni: www.microsoft.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇿🇦非洲约翰内斯堡-3.5倍率
-  server: 129.151.169.64
-  port: 65535
-  udp: true
-  skip-cert-verify: true
-  sni: www.microsoft.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇨🇦加拿大多伦多-1.5倍率
-  server: 40.233.77.86
-  port: 65535
-  udp: true
-  skip-cert-verify: true
-  sni: www.microsoft.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇸🇪瑞典斯德哥尔摩-1.5倍率
-  server: 129.151.193.163
-  port: 50000
-  ports: 50000-53000
-  mport: 50000-53000
-  udp: true
-  skip-cert-verify: true
-  sni: www.microsoft.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇲🇽墨西哥克雷塔罗
-  server: 140.84.178.54
-  port: 50000
-  ports: 50000-53000
-  mport: 50000-53000
-  udp: true
-  skip-cert-verify: true
-  sni: www.microsoft.com
-  type: hysteria2
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-- name: 🇯🇵日本1号 三网高速
-  type: vless
-  server: c8217-b2a.h2.49d2.dje11.1.b297.djjsvip.cfd
-  port: 443
-  uuid: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-  udp: true
-  tls: true
-  skip-cert-verify: false
-  flow: xtls-rprx-vision
-  client-fingerprint: ios
-  servername: iosapps.itunes.apple.com
-  reality-opts:
-    public-key: DGzXhLIUE3NQXX-IVo5YCSeANn1vECVBdnw7dtC0sTQ
-    short-id: 92388f50ce26394f
-- name: 🇺🇸美国凤凰城-0.1倍
-  type: vless
-  server: 129.153.71.226
-  port: 443
-  uuid: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-  udp: true
-  tls: true
-  skip-cert-verify: false
-  flow: xtls-rprx-vision
-  client-fingerprint: ios
-  servername: iosapps.itunes.apple.com
-  reality-opts:
-    public-key: qkP2pqQ3NHNBkyzqsC2W9wChp3OfeXdVjOhUv8vQW0o
-    short-id: aac4df9d05a5ba8f
-- name: 🇺🇸美国1号-0.1倍
-  type: vless
-  server: 63.141.128.188
-  port: 443
-  uuid: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-  udp: true
-  tls: true
-  skip-cert-verify: false
-  flow: ''
-  client-fingerprint: chrome
-  servername: d2-us1.djwstlsweb.top
   network: ws
   ws-opts:
-    path: /djjc/us1
+    path: /yhjh
     headers:
-      Host: d2-us1.djwstlsweb.top
-- name: 🇬🇧英国伦敦-1倍
-  type: vless
-  server: 132.145.62.88
-  port: 443
-  uuid: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-  udp: true
-  tls: true
-  skip-cert-verify: false
-  flow: xtls-rprx-vision
-  client-fingerprint: ios
-  servername: iosapps.itunes.apple.com
-  reality-opts:
-    public-key: qkP2pqQ3NHNBkyzqsC2W9wChp3OfeXdVjOhUv8vQW0o
-    short-id: aac4df9d05a5ba8f
-- name: 🇹🇼台湾—TK专线
-  type: vless
-  server: c8217-b2a.h1.49d2.5e11.613.b297.djjsvip.cfd
-  port: 443
-  uuid: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-  udp: true
-  tls: true
-  skip-cert-verify: false
-  flow: xtls-rprx-vision
-  client-fingerprint: safari
-  servername: www.microsoft.com
-  reality-opts:
-    public-key: -QnsFApdhq1l1d2h302qhAs7usDdWLBTAOeMH54dwmU
-    short-id: c2bdc032
-- name: 🇮🇳印度孟买
-  type: vless
-  server: 141.148.207.7
-  port: 443
-  uuid: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-  udp: true
-  tls: true
-  skip-cert-verify: false
-  flow: xtls-rprx-vision
-  client-fingerprint: safari
-  servername: musicstatus.apps.apple.com
-  reality-opts:
-    public-key: qkP2pqQ3NHNBkyzqsC2W9wChp3OfeXdVjOhUv8vQW0o
-    short-id: aac4df9d05a5ba8f
+      Host: freehk.hkuk.xyz
 - name: SCP%7CCA
   type: trojan
   server: 209.200.246.105
