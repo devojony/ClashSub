@@ -466,7 +466,59 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
-- name: Relay_-🇺🇸US_01
+- name: Relay_-🇩🇪DE_01
+  server: 222.167.202.70
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.70:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
+- name: Relay_-🇯🇵JP_25
+  server: jp.mjhy2.com
+  type: hysteria2
+  port: 1443
+  udp: true
+  password: b688ce0f-9201-4e8e-a67a-f3be2c6aa201
+  auth: b688ce0f-9201-4e8e-a67a-f3be2c6aa201
+  sni: jp.mjhy2.com
+  skip-cert-verify: true
+- name: Relay_-🇸🇬SG_31
+  server: sg.mjhy2.com
+  type: hysteria2
+  port: 1443
+  udp: true
+  password: b688ce0f-9201-4e8e-a67a-f3be2c6aa201
+  auth: b688ce0f-9201-4e8e-a67a-f3be2c6aa201
+  sni: sg.mjhy2.com
+  skip-cert-verify: true
+- name: Relay_-🇸🇬SG_40 | 7.70Mb
+  server: 37.sahanwickramasinghevip.shop
+  type: vless
+  port: 443
+  udp: true
+  uuid: c4108e57-c74e-4480-b4e2-db56a517877b
+  network: tcp
+  tls: true
+  servername: 37.sahanwickramasinghevip.shop
+  packet-encoding: ''
+- name: Relay_-🇸🇬SG_43
+  server: node1.nanonet.host
+  type: vless
+  port: 22539
+  udp: true
+  uuid: d6d7e024-0a49-483d-bcd7-048c4d30eca6
+  network: tcp
+  tls: true
+  servername: node1.nanonet.host
+  packet-encoding: ''
+- name: Relay_-🇺🇸US_58
   server: s570.okgfw.top
   type: vless
   port: 443
@@ -478,21 +530,31 @@ proxies:
   client-fingerprint: random
   servername: u711541u604fs570.okgfw.top
   packet-encoding: ''
-- name: Relay_-🇩🇪DE_12
-  server: 222.167.202.31
-  type: vless
-  port: 7443
+- name: Relay_-🇫🇷FR_61
+  server: 62.210.30.179
+  type: hysteria2
+  port: 40022
   udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  password: dongtaiwang.com
+  auth: dongtaiwang.com
+  sni: www.microsoft.com
+  skip-cert-verify: true
+  ports: 41000-42000
+- name: Relay_-🇩🇪DE_84
+  server: 188.130.207.92
+  type: vless
+  port: 8443
+  udp: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   network: ws
   tls: true
-  servername: 2026.hhhhh.eu.org
+  servername: sni.111000.v6.navy
   ws-opts:
-    path: /222.167.202.31:7443
+    path: /?ed=2560&Telegram🇨🇳 @WangCai2
     headers:
-      Host: 2026.hhhhh.eu.org
+      Host: sni.111000.v6.navy
   packet-encoding: ''
-- name: Relay_-🇩🇪DE_16
+- name: Relay_-🇩🇪DE_116
   server: 188.241.241.29
   type: vless
   port: 2053
@@ -507,140 +569,65 @@ proxies:
     headers:
       Host: sni.111000.v6.navy
   packet-encoding: ''
-- name: Relay_-🇯🇵JP_17 |11.98Mb
-  server: jp.mjhy2.com
-  type: hysteria2
-  port: 1443
-  udp: true
-  password: b688ce0f-9201-4e8e-a67a-f3be2c6aa201
-  auth: b688ce0f-9201-4e8e-a67a-f3be2c6aa201
-  sni: jp.mjhy2.com
-  skip-cert-verify: true
-- name: Relay_-🇸🇬SG_19 |71.73Mb
-  server: sg.mjhy2.com
-  type: hysteria2
-  port: 1443
-  udp: true
-  password: b688ce0f-9201-4e8e-a67a-f3be2c6aa201
-  auth: b688ce0f-9201-4e8e-a67a-f3be2c6aa201
-  sni: sg.mjhy2.com
-  skip-cert-verify: true
-- name: Relay_-🇳🇱NL_28
-  server: 138.226.240.199
-  type: vless
-  port: 4433
-  udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
-  network: ws
-  tls: true
-  skip-cert-verify: true
-  servername: sub.mot.ip-ddns.com
-  ws-opts:
-    path: /
-    headers:
-      Host: sub.mot.ip-ddns.com
-  packet-encoding: ''
-- name: Relay_-🇫🇷FR_35
-  server: 62.210.30.179
-  type: hysteria2
-  port: 40022
-  udp: true
-  password: dongtaiwang.com
-  auth: dongtaiwang.com
-  sni: www.microsoft.com
-  skip-cert-verify: true
-  ports: 41000-42000
-- name: Relay_-🇱🇻LV_66 |31.38Mb
-  server: lv89.mechvpn.online
-  type: vless
-  port: 443
-  udp: true
-  uuid: 6d916d55-fead-4ff3-a3a9-83e175ea8ad7
-  network: tcp
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  packet-encoding: ''
-- name: Relay_-🇩🇪DE_67
-  server: 222.167.202.47
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.47:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: Relay_-🇸🇬SG_110 |11.71Mb
-  server: 37.sahanwickramasinghevip.shop
-  type: vless
-  port: 443
-  udp: true
-  uuid: c4108e57-c74e-4480-b4e2-db56a517877b
-  network: tcp
-  tls: true
-  servername: 37.sahanwickramasinghevip.shop
-  packet-encoding: ''
-- name: Relay_-🇸🇬SG_116 |12.37Mb
-  server: node1.nanonet.host
-  type: vless
-  port: 22539
-  udp: true
-  uuid: d6d7e024-0a49-483d-bcd7-048c4d30eca6
-  network: tcp
-  tls: true
-  servername: node1.nanonet.host
-  packet-encoding: ''
-- name: _119 | 6.08Mb
-  server: 112.213.102.188
-  type: ss
-  port: 41632
-  udp: true
-  password: qwerREWQ@@
-  cipher: aes-256-cfb
-- name: _121 |58.23Mb
-  server: 50.19.33.104
+- name: _119 |62.52Mb
+  server: 54.246.75.250
   type: ss
   port: 443
   udp: true
   password: amazonskr05
   cipher: aes-256-cfb
-- name: Relay_-🇦🇺AU_126 | 2.43Mb
-  server: gw.lydwan.com
+- name: Relay_-🇺🇸US_121
+  server: v1.jpus.internal.jpus-db.api.bk-jpus.node.s1.jpus-master.fastcokeasdasd.com
   type: ss
-  port: 35608
+  port: 43292
   udp: true
-  password: b421832d-9964-4519-b4b3-e52a7be8b31b
+  password: a5da870c-37df-4012-8c6f-f978217aa7c4
   cipher: chacha20-ietf-poly1305
-- name: _128 |17.67Mb
-  server: 185.189.160.105
+- name: _122 |43.60Mb
+  server: 46.137.38.144
   type: ss
-  port: 41632
+  port: 443
   udp: true
-  password: qwerREWQ@@
+  password: amazonskr05
   cipher: aes-256-cfb
-- name: _129 | 2.01Mb
-  server: 103.102.4.218
+- name: Relay_-🏁ZZ_123 | 1.99Mb
+  server: 154.17.238.59
   type: ss
   port: 30011
   password: somebody
   cipher: chacha20-ietf-poly1305
   plugin: obfs
   plugin-opts:
-    host: 20xteamxa9-hkg1-a7xr.update.microsoft.com
+    host: 20xteamxa9-usa1-a7xr.update.microsoft.com
     mode: http
-- name: _130 | 8.40Mb
-  server: 95.40.66.13
+- name: _124
+  server: 38.95.121.189
   type: ss
-  port: 663
-  udp: true
-  password: daeeed82-f7df-439b-9caf-d77b4bf0b7ce
+  port: 30011
+  password: somebody
   cipher: chacha20-ietf-poly1305
-- name: _131
+  plugin: obfs
+  plugin-opts:
+    host: 20xteamxa9-usa3-a7xr.update.microsoft.com
+    mode: http
+- name: _125 | 3.36Mb
+  server: 68.168.20.112
+  type: ss
+  port: 30011
+  password: somebody
+  cipher: chacha20-ietf-poly1305
+  plugin: obfs
+  plugin-opts:
+    host: 20xteamxa9-usc2-a7xr.update.microsoft.com
+    mode: http
+- name: _126 |65.19Mb
+  server: 50.19.33.104
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: _127
   server: 195.85.19.146
   type: ss
   port: 30011
@@ -650,25 +637,65 @@ proxies:
   plugin-opts:
     host: 20xteamxa9-sg2-a7xr.update.microsoft.com
     mode: http
-- name: Relay_-🇺🇸US_135 | 5.62Mb
+- name: _128 |326.25Mb
+  server: 51.15.17.169
+  type: ss
+  port: 989
+  udp: true
+  password: f8f7aCzcPKbsF8p3
+  cipher: aes-256-cfb
+- name: _129 | 8.40Mb
+  server: 95.40.66.13
+  type: ss
+  port: 663
+  udp: true
+  password: daeeed82-f7df-439b-9caf-d77b4bf0b7ce
+  cipher: chacha20-ietf-poly1305
+- name: _130 |67.11Mb
+  server: 98.94.81.104
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: _132 |20.41Mb
+  server: 185.189.160.105
+  type: ss
+  port: 41632
+  udp: true
+  password: qwerREWQ@@
+  cipher: aes-256-cfb
+- name: Relay_-🇺🇸US_133 | 5.34Mb
   server: gw.lydwan.com
   type: ss
   port: 35601
   udp: true
   password: b421832d-9964-4519-b4b3-e52a7be8b31b
   cipher: chacha20-ietf-poly1305
-- name: Relay_-🇺🇸US_136 | 4.05Mb
-  server: v29.hdacd.com
-  type: vmess
-  port: 30829
+- name: Relay_-🇦🇺AU_137 | 4.04Mb
+  server: gw.lydwan.com
+  type: ss
+  port: 35608
   udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  password: b421832d-9964-4519-b4b3-e52a7be8b31b
+  cipher: chacha20-ietf-poly1305
+- name: Relay_-🇭🇰HK_138
+  server: hkt.gotochinatown.net
+  type: vmess
+  port: 80
+  udp: true
+  uuid: b02327ac-a49a-11ef-a673-f23c913c8d2b
   alterId: 2
   cipher: auto
+  network: ws
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: Relay_-🇹🇼TW_137 | 7.82Mb
+  ws-opts:
+    path: /
+    headers:
+      Host: hkt.gotochinatown.net
+- name: Relay_-🇹🇼TW_140 | 9.90Mb
   server: m.cnmjin.net
   type: vmess
   port: 16616
@@ -684,42 +711,57 @@ proxies:
     path: /
     headers:
       Host: 7a297964a2b31dafd3529ef4d14574b9.mobgslb.tbcache.com
-- name: _141
-  server: 47.250.196.200
+- name: Relay_-🇺🇸US_141 |18.34Mb
+  server: 82.198.246.250
   type: vmess
-  port: 43709
+  port: 180
   udp: true
-  uuid: ffe039ed-d691-45cc-91ec-429b5191e6b0
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   alterId: 0
   cipher: auto
-  network: http
-  http-opts:
-    method: GET
-    path:
-    - /
+  http-opts: {}
   h2-opts: {}
-- name: Relay_-🇺🇸US_142 | 4.93Mb
-  server: 85.211.192.237
-  type: trojan
-  port: 5784
-  udp: true
-  password: 413fdb10-a596-4e7c-b081-54243d252894
-  sni: www.baidu.com
   skip-cert-verify: true
-- name: _145 | 5.75Mb
-  server: 94.131.105.125
-  type: trojan
-  port: 4443
+- name: Relay_-🇸🇬SG_144 | 4.48Mb
+  server: v12.hdacd.com
+  type: vmess
+  port: 30812
   udp: true
-  password: strong-secret-pass-777
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
   skip-cert-verify: true
-- name: Relay_-🇸🇬SG_146 |11.39Mb
-  server: 160.16.132.38
+- name: _146 |88.35Mb
+  server: 5.188.190.252
+  type: vmess
+  port: 22324
+  udp: true
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 1
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: Relay_-🇺🇸US_153 | 4.05Mb
+  server: v29.hdacd.com
+  type: vmess
+  port: 30829
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: Relay_-🇺🇸US_161 |22.27Mb
+  server: 160.16.85.33
   type: trojan
-  port: 4674
+  port: 4019
   password: 187dda4498be9ac4f28db939d5940185
   sni: www.nintendogames.net
-- name: Relay_-🇭🇰HK_147 | 2.43Mb
+- name: Relay_-🇭🇰HK_163 | 2.43Mb
   server: khk9527.vision.jp.eu.org
   type: trojan
   port: 99
@@ -727,29 +769,69 @@ proxies:
   password: 6d00fde742644d11
   sni: khk9527.vision.jp.eu.org
   skip-cert-verify: true
-- name: Relay_-🇺🇸US_149 |51.74Mb
-  server: 160.16.85.33
+- name: Relay_-🇺🇸US_164 | 7.39Mb
+  server: 85.211.192.237
   type: trojan
-  port: 4019
-  password: 187dda4498be9ac4f28db939d5940185
-  sni: www.nintendogames.net
-- name: Relay_-🇳🇱NL_150 |11.08Mb
+  port: 5784
+  udp: true
+  password: 413fdb10-a596-4e7c-b081-54243d252894
+  sni: www.baidu.com
+  skip-cert-verify: true
+- name: Relay_-🇳🇱NL_167 |10.64Mb
   server: 160.16.132.38
   type: trojan
   port: 29370
   password: 187dda4498be9ac4f28db939d5940185
   sni: www.nintendogames.net
-- name: Relay_-🇯🇵JP_154 |22.57Mb
+- name: _168 | 8.99Mb
+  server: 94.131.105.125
+  type: trojan
+  port: 4443
+  udp: true
+  password: strong-secret-pass-777
+  skip-cert-verify: true
+- name: Relay_-🇸🇬SG_171 |11.54Mb
+  server: 160.16.132.38
+  type: trojan
+  port: 4674
+  password: 187dda4498be9ac4f28db939d5940185
+  sni: www.nintendogames.net
+- name: Relay_-🇯🇵JP_172 |12.95Mb
   server: 160.16.132.38
   type: trojan
   port: 34818
   password: 187dda4498be9ac4f28db939d5940185
   sni: www.nintendogames.net
-- name: Relay_🇨🇳 CN-🇺🇸US_155 | 3.40Mb
-  server: v46.hdacd.com
+- name: Relay_-🇫🇷FR_173 |365.43Mb
+  server: www.multiplydose.com
+  type: trojan
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.multiplydose.com
+  skip-cert-verify: true
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.multiplydose.com
+  network: ws
+- name: Relay_-🇫🇷FR_174 |280.26Mb
+  server: 104.18.11.110
+  type: trojan
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.multiplydose.com
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.multiplydose.com
+  network: ws
+- name: Relay_🇨🇳 CN-🇺🇸US_175
+  server: v35.hdacd.com
   type: vmess
   country: 🇨🇳 CN
-  port: 30846
+  port: 30835
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
   cipher: auto
@@ -757,7 +839,38 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: Relay_🇬🇧GB-🇺🇸US_160
+- name: Relay_🇬🇧 GB-🇳🇱NL_176 |155.14Mb
+  server: 82.38.31.208
+  type: ss
+  country: 🇬🇧 GB
+  port: 8080
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  cipher: chacha20-ietf-poly1305
+- name: Relay_🇬🇧 GB-🇺🇸US_177 | 2.77Mb
+  server: 82.198.246.46
+  type: vmess
+  country: 🇬🇧 GB
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: Relay_🇬🇧GB-🇺🇸US_178 | 2.76Mb
+  server: 82.198.246.97
+  type: vmess
+  country: 🇬🇧GB
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: Relay_🇬🇧GB-🇺🇸US_179
   server: 85.211.192.237
   type: trojan
   country: 🇬🇧GB
@@ -766,7 +879,7 @@ proxies:
   password: 413fdb10-a596-4e7c-b081-54243d252894
   sni: www.baidu.com
   skip-cert-verify: true
-- name: Relay_🇭🇰 HK-🇺🇸US_161 |45.44Mb
+- name: Relay_🇭🇰 HK-🇺🇸US_181 |28.60Mb
   server: v4.hdacd.com
   type: vmess
   country: 🇭🇰 HK
@@ -778,14 +891,26 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: 🇮🇳 IN_164 | 2.67Mb
+- name: Relay_🇭🇰 HK-🇺🇸US_194 | 2.43Mb
+  server: v8.hdacd.com
+  type: vmess
+  country: 🇭🇰 HK
+  port: 30808
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: 🇮🇳 IN_222 | 0.10Mb
   server: 134.209.147.198
   type: ss
   country: 🇮🇳 IN
   port: 989
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: Relay_🇮🇷 IR-🇭🇰HK_166 | 0.76Mb
+- name: Relay_🇮🇷 IR-🇭🇰HK_223 | 0.76Mb
   server: v9.hdacd.com
   type: vmess
   country: 🇮🇷 IR
@@ -797,7 +922,19 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: Relay_🇮🇷IR-🇺🇸US_167 | 4.98Mb
+- name: Relay_🇮🇷IR-🇸🇬SG_224 | 2.39Mb
+  server: 151.242.180.91
+  type: vmess
+  country: 🇮🇷IR
+  port: 30812
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 0
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: Relay_🇮🇷IR-🇺🇸US_225 | 0.79Mb
   server: v36.hdacd.com
   type: vmess
   country: 🇮🇷IR
@@ -809,25 +946,54 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: Relay_🇺🇸US-🇱🇺LU_177 | 1.27Mb
+- name: Relay_🇳🇱NL-🇳🇱NL_226 |502.80Mb
+  server: nl-4.tr202513.com
+  type: trojan
+  country: 🇳🇱NL
+  port: 443
+  udp: true
+  password: s7R5MgmN6UrFWjxwYh
+  sni: nl-4.tr202513.com
+  skip-cert-verify: true
+- name: Relay_🇺🇸US-🇱🇺LU_227 | 2.24Mb
   server: gw.lydwan.com
   type: ss
   country: 🇺🇸US
   port: 35607
   password: b421832d-9964-4519-b4b3-e52a7be8b31b
   cipher: chacha20-ietf-poly1305
-- name: Relay_🏁 ZZ-🇯🇵JP_181 | 2.25Mb
-  server: v6.hdacd.com
+- name: 🇺🇸US_228 |39.18Mb
+  server: 104.168.94.41
   type: vmess
-  country: 🏁 ZZ
-  port: 30806
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
+  country: 🇺🇸US
+  port: 32301
+  uuid: a2235b72-fd9c-404f-be5a-53b2de0cb798
+  alterId: 0
   cipher: auto
-  network: tcp
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+  h2-opts: {}
+  skip-cert-verify: true
+- name: Relay_🇺🇸US-🇫🇷FR_230
+  server: ct.877774.xyz
+  type: vmess
+  country: 🇺🇸US
+  port: 80
+  uuid: 8e34e170-13ae-4892-9d20-05962acc9f84
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: fr.eva.hidns.co
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: fr.eva.hidns.co
 - cipher: aes-256-cfb
   name: United States_None_ss_101
   password: amazonskr05
@@ -1053,7 +1219,7 @@ proxies:
     headers:
       Host: sub.mot.ip-ddns.com
   packet-encoding: ''
-- name: disney_JP |31.15Mb
+- name: disney_JP |30.29Mb
   server: vpn-jp-006.fastervpn.world
   type: hysteria2
   port: 443
@@ -1134,6 +1300,20 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
+- name: Relay_-🇩🇪DE_12
+  server: 222.167.202.31
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.31:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
 - name: disney_netflix_IT_5
   server: 222.167.202.10
   type: vless
@@ -1191,21 +1371,7 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_IT_3
-  server: 222.167.202.70
-  type: vless
-  port: 7443
-  udp: true
-  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
-  network: ws
-  tls: true
-  servername: 2026.hhhhh.eu.org
-  ws-opts:
-    path: /222.167.202.70:7443
-    headers:
-      Host: 2026.hhhhh.eu.org
-  packet-encoding: ''
-- name: disney_US | 8.56Mb
+- name: disney_US |61.23Mb
   server: vpn-us-019.fastervpn.world
   type: hysteria2
   port: 443
@@ -1256,6 +1422,21 @@ proxies:
     path: /?telegram
     headers:
       Host: sni.111000.v6.navy
+  packet-encoding: ''
+- name: Relay_-🇳🇱NL_28
+  server: 138.226.240.199
+  type: vless
+  port: 4433
+  udp: true
+  uuid: 00000000-0000-4000-8000-000000000000
+  network: ws
+  tls: true
+  skip-cert-verify: true
+  servername: sub.mot.ip-ddns.com
+  ws-opts:
+    path: /
+    headers:
+      Host: sub.mot.ip-ddns.com
   packet-encoding: ''
 - name: disney_netflix_IT_8
   server: 222.167.202.23
@@ -1358,7 +1539,7 @@ proxies:
     headers:
       Host: sni.111000.v6.navy
   packet-encoding: ''
-- name: disney_IT_4
+- name: disney_IT_3
   server: 222.167.202.35
   type: vless
   port: 7443
@@ -1459,7 +1640,7 @@ proxies:
     headers:
       Host: sni.111000.indevs.in
   packet-encoding: ''
-- name: disney_netflix_GB |108.01Mb
+- name: disney_netflix_GB |168.20Mb
   server: 152.233.28.198
   type: vless
   port: 8443
@@ -1543,7 +1724,7 @@ proxies:
     headers:
       Host: sni.111000.v6.navy
   packet-encoding: ''
-- name: disney_netflix_AT |143.98Mb
+- name: disney_netflix_AT |137.02Mb
   server: 172.64.32.75
   type: vless
   port: 443
@@ -1572,7 +1753,7 @@ proxies:
     headers:
       Host: sni.111000.v6.navy
   packet-encoding: ''
-- name: disney_netflix_GB |111.80Mb
+- name: disney_netflix_GB |145.81Mb
   server: uk1.fromblancwithlove.com
   type: vless
   port: 8443
@@ -1666,6 +1847,31 @@ proxies:
     headers:
       Host: vip.yaml7.ggff.net
   packet-encoding: ''
+- name: Relay_-🇱🇻LV_66 |29.76Mb
+  server: lv89.mechvpn.online
+  type: vless
+  port: 443
+  udp: true
+  uuid: 6d916d55-fead-4ff3-a3a9-83e175ea8ad7
+  network: tcp
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+  packet-encoding: ''
+- name: Relay_-🇩🇪DE_67
+  server: 222.167.202.47
+  type: vless
+  port: 7443
+  udp: true
+  uuid: 06ef598c-1555-4887-b3f9-08214a2f6792
+  network: ws
+  tls: true
+  servername: 2026.hhhhh.eu.org
+  ws-opts:
+    path: /222.167.202.47:7443
+    headers:
+      Host: 2026.hhhhh.eu.org
+  packet-encoding: ''
 - name: disney_netflix_IT_11
   server: 222.167.202.60
   type: vless
@@ -1680,7 +1886,7 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_AT |152.40Mb
+- name: disney_netflix_AT |133.99Mb
   server: 108.162.192.75
   type: vless
   port: 443
@@ -1695,7 +1901,7 @@ proxies:
     headers:
       Host: octopusss4.com
   packet-encoding: ''
-- name: disney_IT_5
+- name: disney_IT_4
   server: 222.167.202.52
   type: vless
   port: 7443
@@ -1709,7 +1915,7 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_NL |141.71Mb
+- name: disney_NL |116.03Mb
   server: ip1.758733.xyz
   type: tuic
   port: 10088
@@ -2118,20 +2324,6 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_FR_13
-  server: 188.130.207.92
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: true
-  servername: sni.111000.v6.navy
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: sni.111000.v6.navy
-  packet-encoding: ''
 - name: disney_netflix_DE_14
   server: 142.132.178.99
   type: vless
@@ -2189,7 +2381,7 @@ proxies:
     headers:
       Host: sni.111000.v6.navy
   packet-encoding: ''
-- name: disney_netflix_AT |141.87Mb
+- name: disney_netflix_AT |142.42Mb
   server: 173.245.58.75
   type: vless
   port: 443
@@ -2247,7 +2439,7 @@ proxies:
     headers:
       Host: 2026.hhhhh.eu.org
   packet-encoding: ''
-- name: disney_netflix_FR_14
+- name: disney_netflix_FR_13
   server: 135.125.123.246
   type: vless
   port: 5432
@@ -2261,30 +2453,20 @@ proxies:
     headers:
       Host: sni.111000.v6.navy
   packet-encoding: ''
-- name: netflix_IE |53.44Mb
-  server: 46.137.38.144
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: disney_US |77.54Mb
+- name: disney_US | 3.98Mb
   server: gw.lydwan.com
   type: ss
   port: 35604
   udp: true
   password: b421832d-9964-4519-b4b3-e52a7be8b31b
   cipher: chacha20-ietf-poly1305
-- name: disney_netflix_US | 1.99Mb
-  server: 154.17.238.59
+- name: _119 | 7.93Mb
+  server: 112.213.102.188
   type: ss
-  port: 30011
-  password: somebody
-  cipher: chacha20-ietf-poly1305
-  plugin: obfs
-  plugin-opts:
-    host: 20xteamxa9-usa1-a7xr.update.microsoft.com
-    mode: http
+  port: 41632
+  udp: true
+  password: qwerREWQ@@
+  cipher: aes-256-cfb
 - name: disney_netflix_US |36.70Mb
   server: 38.244.47.161
   type: ss
@@ -2295,7 +2477,7 @@ proxies:
   plugin-opts:
     host: 20xteamxa9-diy02-a7xr.update.microsoft.com
     mode: http
-- name: disney_US |11.15Mb
+- name: disney_US |11.70Mb
   server: 45.8.112.156
   type: ss
   port: 30011
@@ -2305,67 +2487,24 @@ proxies:
   plugin-opts:
     host: 20xteamxa9-usa5-a7xr.update.microsoft.com
     mode: http
-- name: netflix_IE |127.65Mb
-  server: 54.246.75.250
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: disney_netflix_US | 3.76Mb
-  server: 68.168.20.112
+- name: _129 |21.26Mb
+  server: 103.102.4.218
   type: ss
   port: 30011
   password: somebody
   cipher: chacha20-ietf-poly1305
   plugin: obfs
   plugin-opts:
-    host: 20xteamxa9-usc2-a7xr.update.microsoft.com
+    host: 20xteamxa9-hkg1-a7xr.update.microsoft.com
     mode: http
-- name: disney_netflix_US |73.70Mb
-  server: 98.94.81.104
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: disney_netflix_NL |153.99Mb
-  server: 51.15.17.169
-  type: ss
-  port: 989
-  udp: true
-  password: f8f7aCzcPKbsF8p3
-  cipher: aes-256-cfb
-- name: disney_JP | 2.33Mb
+- name: disney_JP | 4.72Mb
   server: gw.lydwan.com
   type: ss
   port: 35603
   udp: true
   password: b421832d-9964-4519-b4b3-e52a7be8b31b
   cipher: chacha20-ietf-poly1305
-- name: netflix_TR |85.14Mb
-  server: 5.188.190.252
-  type: vmess
-  port: 22324
-  udp: true
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 1
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: disney_netflix_US |166.91Mb
-  server: 82.198.246.250
-  type: vmess
-  port: 180
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: disney_netflix_US |15.90Mb
+- name: disney_netflix_US | 6.12Mb
   server: 216.167.37.53
   type: vmess
   port: 55004
@@ -2380,19 +2519,20 @@ proxies:
     - /ABCDE
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_netflix_NL |315.78Mb
-  server: www.multiplydose.com
-  type: trojan
-  port: 443
+- name: _141
+  server: 47.250.196.200
+  type: vmess
+  port: 43709
   udp: true
-  password: humanity
-  sni: www.multiplydose.com
-  skip-cert-verify: true
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.multiplydose.com
-  network: ws
+  uuid: ffe039ed-d691-45cc-91ec-429b5191e6b0
+  alterId: 0
+  cipher: auto
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+  h2-opts: {}
 - name: disney_netflix_GB |354.82Mb
   server: 172.66.44.230
   type: trojan
@@ -2417,54 +2557,11 @@ proxies:
     headers:
       Host: jflsjlaf.pages.dev
   network: ws
-- name: disney_netflix_NL |250.02Mb
-  server: 104.18.11.110
-  type: trojan
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.multiplydose.com
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.multiplydose.com
-  network: ws
-- name: disney_netflix_NL |105.28Mb
-  server: 82.38.31.208
-  type: ss
-  country: 🇬🇧 GB
-  port: 8080
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_US |222.36Mb
-  server: 82.198.246.46
+- name: Relay_🇨🇳 CN-🇺🇸US_155 | 3.40Mb
+  server: v46.hdacd.com
   type: vmess
-  country: 🇬🇧 GB
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: disney_netflix_US |138.72Mb
-  server: 82.198.246.97
-  type: vmess
-  country: 🇬🇧GB
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: disney_netflix_US | 2.43Mb
-  server: v8.hdacd.com
-  type: vmess
-  country: 🇭🇰 HK
-  port: 30808
+  country: 🇨🇳 CN
+  port: 30846
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
   cipher: auto
@@ -2472,7 +2569,7 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_HK | 5.13Mb
+- name: disney_HK | 3.44Mb
   server: sv3.wy888.us
   type: vmess
   country: 🇭🇰HK
@@ -2486,31 +2583,7 @@ proxies:
   h2-opts: {}
   tls: true
   skip-cert-verify: true
-- name: disney_netflix_NL |196.22Mb
-  server: nl-4.tr202513.com
-  type: trojan
-  country: 🇳🇱NL
-  port: 443
-  udp: true
-  password: s7R5MgmN6UrFWjxwYh
-  sni: nl-4.tr202513.com
-  skip-cert-verify: true
-- name: disney_netflix_US |38.78Mb
-  server: 104.168.94.41
-  type: vmess
-  country: 🇺🇸US
-  port: 32301
-  uuid: a2235b72-fd9c-404f-be5a-53b2de0cb798
-  alterId: 0
-  cipher: auto
-  network: http
-  http-opts:
-    method: GET
-    path:
-    - /
-  h2-opts: {}
-  skip-cert-verify: true
-- name: disney_netflix_FR_15
+- name: disney_netflix_FR_14
   server: yg6.ygkkk.dpdns.org
   type: vmess
   country: 🇺🇸US
@@ -2527,24 +2600,19 @@ proxies:
     path: /
     headers:
       HOST: fr.eva.hidns.co
-- name: disney_netflix_FR_16
-  server: ct.877774.xyz
+- name: Relay_🏁 ZZ-🇯🇵JP_181 | 2.25Mb
+  server: v6.hdacd.com
   type: vmess
-  country: 🇺🇸US
-  port: 80
-  uuid: 8e34e170-13ae-4892-9d20-05962acc9f84
-  alterId: 0
+  country: 🏁 ZZ
+  port: 30806
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
   cipher: auto
-  network: ws
-  servername: fr.eva.hidns.co
+  network: tcp
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: fr.eva.hidns.co
-- name: disney_netflix_FR_17
+- name: disney_netflix_FR_15
   server: ct.090227.xyz
   type: vmess
   country: 🏁ZZ
@@ -2561,7 +2629,7 @@ proxies:
     path: /
     headers:
       HOST: fr.eva.hidns.co
-- name: disney_netflix_FR_18
+- name: disney_netflix_FR_16
   server: support.cloudflare.com
   type: vmess
   country: 🏁ZZ
@@ -2578,7 +2646,7 @@ proxies:
     path: /
     headers:
       HOST: fr.eva.hidns.co
-- name: disney_netflix_FR_19
+- name: disney_netflix_FR_17
   server: yidong.19931101.xyz
   type: vmess
   country: 🏁ZZ
@@ -2595,7 +2663,7 @@ proxies:
     path: /
     headers:
       HOST: fr.eva.hidns.co
-- name: disney_netflix_FR_20
+- name: disney_netflix_FR_18
   server: www.cloudflareworkers.com
   type: vmess
   country: 🏁ZZ
@@ -2612,7 +2680,7 @@ proxies:
     path: /
     headers:
       HOST: fr.eva.hidns.co
-- name: disney_netflix_FR_21
+- name: disney_netflix_FR_19
   server: www.cloudflareinsights.com
   type: vmess
   country: 🏁ZZ
@@ -2629,7 +2697,7 @@ proxies:
     path: /
     headers:
       HOST: fr.eva.hidns.co
-- name: disney_netflix_FR_22
+- name: disney_netflix_FR_20
   server: www.cloudflarestream.com
   type: vmess
   country: 🏁ZZ
@@ -2646,7 +2714,7 @@ proxies:
     path: /
     headers:
       HOST: fr.eva.hidns.co
-- name: disney_netflix_FR_23
+- name: disney_netflix_FR_21
   server: update.argotunnel.com
   type: vmess
   country: 🏁ZZ
@@ -2663,7 +2731,7 @@ proxies:
     path: /
     headers:
       HOST: fr.eva.hidns.co
-- name: disney_netflix_FR_24
+- name: disney_netflix_FR_22
   server: cmcc.877774.xyz
   type: vmess
   country: 🏁ZZ
@@ -2680,7 +2748,7 @@ proxies:
     path: /
     headers:
       HOST: fr.eva.hidns.co
-- name: disney_netflix_FR_25
+- name: disney_netflix_FR_23
   server: cloudflare-dns.com
   type: vmess
   country: 🏁ZZ
@@ -2697,7 +2765,7 @@ proxies:
     path: /
     headers:
       HOST: fr.eva.hidns.co
-- name: disney_netflix_FR_26
+- name: disney_netflix_FR_24
   server: cf.090227.xyz
   type: vmess
   country: 🏁ZZ
@@ -2714,7 +2782,7 @@ proxies:
     path: /
     headers:
       HOST: fr.eva.hidns.co
-- name: disney_netflix_FR_27
+- name: disney_netflix_FR_25
   server: www.shopify.com
   type: vmess
   country: 🏁ZZ
@@ -2731,7 +2799,7 @@ proxies:
     path: /
     headers:
       HOST: fr.eva.hidns.co
-- name: disney_netflix_FR_28
+- name: disney_netflix_FR_26
   server: static.cloudflareinsights.com
   type: vmess
   country: 🏁ZZ
@@ -2748,7 +2816,7 @@ proxies:
     path: /
     headers:
       HOST: fr.eva.hidns.co
-- name: disney_netflix_FR_29
+- name: disney_netflix_FR_27
   server: pages.dev
   type: vmess
   country: 🏁ZZ
@@ -2765,7 +2833,7 @@ proxies:
     path: /
     headers:
       HOST: fr.eva.hidns.co
-- name: disney_netflix_FR_30
+- name: disney_netflix_FR_28
   server: developers.cloudflare.com
   type: vmess
   country: 🏁ZZ
@@ -2782,7 +2850,7 @@ proxies:
     path: /
     headers:
       HOST: fr.eva.hidns.co
-- name: disney_netflix_FR_31
+- name: disney_netflix_FR_29
   server: www.cloudflare.net
   type: vmess
   country: 🏁ZZ
@@ -2803,17 +2871,6 @@ proxies:
   type: socks5
   server: 127.0.0.1
   port: 1080
-- name: 美国 - 洛杉矶 - 4
-  server: 38.95.121.189
-  type: ss
-  port: 30011
-  password: somebody
-  cipher: chacha20-ietf-poly1305
-  plugin: obfs
-  plugin-opts:
-    host: 20xteamxa9-usa3-a7xr.update.microsoft.com
-    mode: http
-  delay: 596
 - name: 日本 - 东京 - 1
   server: v1.jpus.internal.jpus-db.api.bk-jpus.node.s1.jpus-master.fastcokeasdasd.com
   type: ss
@@ -2822,25 +2879,6 @@ proxies:
   password: a5da870c-37df-4012-8c6f-f978217aa7c4
   cipher: chacha20-ietf-poly1305
   delay: 601
-- name: 日本 - 东京 - 3
-  server: v1.jpus.internal.jpus-db.api.bk-jpus.node.s1.jpus-master.fastcokeasdasd.com
-  type: ss
-  port: 43292
-  udp: true
-  password: a5da870c-37df-4012-8c6f-f978217aa7c4
-  cipher: chacha20-ietf-poly1305
-  delay: 1877
-- name: 新加坡 - 新加坡 - 1
-  server: v12.hdacd.com
-  port: 30812
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-  delay: 423
 - name: 新加坡 - 新加坡 - 5
   server: store.ubi.com
   port: 443
@@ -3019,126 +3057,28 @@ proxies:
   skip-cert-verify: true
   udp: true
   delay: 676
-- name: 00-Trojan-jp-AI
-  server: jp.111000.cc.cd
-  port: 443
-  type: trojan
-  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  sni: sni.111000.dynv6.net
-  network: ws
-  ws-opts:
-    path: /?ed=2560&proxyip=ip.111000.de5.net:443
-    headers:
-      Host: sni.111000.dynv6.net
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: 00-WS-jp-AI
-  server: jp.111000.cc.cd
-  port: 443
-  client-fingerprint: firefox
+- name: disney_SG |71.80Mb
+  server: webmail.eclass.lk
   type: vless
-  UUID: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  port: 2096
+  udp: true
+  uuid: b8ae3c37-37d6-4d4d-93fc-1ce0bc329ba0
+  network: ws
   tls: true
-  servername: sni.111000.dynv6.net
-  network: ws
+  client-fingerprint: chrome
+  servername: free-server.techsonic.ggff.net
   ws-opts:
-    path: /?ed=2560&proxyip=ip.111000.de5.net:443
+    path: /@Tech_Sonic
     headers:
-      Host: sni.111000.dynv6.net
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: 01-Trojan-030101.xyz
-  server: bestcf.030101.xyz
-  port: 443
-  type: trojan
-  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  sni: sni.111000.dynv6.net
-  network: ws
-  ws-opts:
-    path: /?ed=2560&proxyip=ip.111000.de5.net:443
-    headers:
-      Host: sni.111000.dynv6.net
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: 01-WS-030101.xyz
-  server: bestcf.030101.xyz
-  port: 443
-  client-fingerprint: firefox
-  type: vless
-  UUID: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  tls: true
-  servername: sni.111000.dynv6.net
-  network: ws
-  ws-opts:
-    path: /?ed=2560&proxyip=ip.111000.de5.net:443
-    headers:
-      Host: sni.111000.dynv6.net
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: 02-Trojan-saas.sin.fan
-  server: saas.sin.fan
-  port: 443
-  type: trojan
-  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  sni: sni.111000.dynv6.net
-  network: ws
-  ws-opts:
-    path: /?ed=2560&proxyip=ip.111000.de5.net:443
-    headers:
-      Host: sni.111000.dynv6.net
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: 02-WS-saas.sin.fan
-  server: saas.sin.fan
-  port: 443
-  client-fingerprint: firefox
-  type: vless
-  UUID: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  tls: true
-  servername: sni.111000.dynv6.net
-  network: ws
-  ws-opts:
-    path: /?ed=2560&proxyip=ip.111000.de5.net:443
-    headers:
-      Host: sni.111000.dynv6.net
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: 03-Trojan-cloudflare88
-  server: freeyx.cloudflare88.eu.org
-  port: 443
-  type: trojan
-  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  sni: sni.111000.dynv6.net
-  network: ws
-  ws-opts:
-    path: /?ed=2560&proxyip=ip.111000.de5.net:443
-    headers:
-      Host: sni.111000.dynv6.net
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: 03-WS-cloudflare88
-  server: freeyx.cloudflare88.eu.org
-  port: 443
-  client-fingerprint: firefox
-  type: vless
-  UUID: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  tls: true
-  servername: sni.111000.dynv6.net
-  network: ws
-  ws-opts:
-    path: /?ed=2560&proxyip=ip.111000.de5.net:443
-    headers:
-      Host: sni.111000.dynv6.net
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
+      Host: free-server.techsonic.ggff.net
+  packet-encoding: ''
+- name: disney_HK
+  server: 103.149.182.105
+  type: ss
+  country: 🇭🇰HK
+  port: 8388
+  password: asd123456
+  cipher: chacha20-ietf
 - name: 高速-荷兰2|x2
   type: tuic
   server: 185.34.144.18
@@ -3224,7 +3164,7 @@ proxies:
   reality-opts:
     public-key: fkYgwfNecyj-oPtmIvYy_KJp9EmTI4rW5MGOwVMrZCU
     short-id: 67f026556706
-  client-fingerprint: safari
+  client-fingerprint: edge
   network: grpc
   grpc-opts:
     grpc-service-name: jss
