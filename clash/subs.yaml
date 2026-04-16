@@ -606,7 +606,7 @@ proxies:
   auth: qQe1z5kU8kN6SlKnDt9Ru3Qp
   sni: vpn-jp-018.fastervpn.world
   skip-cert-verify: true
-- name: disney_JP |235.60Mb
+- name: disney_JP |30.12Mb
   server: vpn-jp-016.fastervpn.world
   type: hysteria2
   port: 443
@@ -624,7 +624,7 @@ proxies:
   auth: qQe1z5kU8kN6SlKnDt9Ru3Qp
   sni: vpn-jp-001.fastervpn.world
   skip-cert-verify: true
-- name: disney_HK |62.28Mb
+- name: disney_HK |10.47Mb
   server: 156.226.173.8
   type: hysteria2
   port: 8443
@@ -732,7 +732,7 @@ proxies:
     path: /vmesswss
     headers:
       HOST: www.cloudflare.com
-- name: disney_SG |138.57Mb
+- name: disney_SG |819.62Mb
   server: 129.153.25.59
   type: hysteria2
   country: 🇺🇸US
@@ -741,7 +741,7 @@ proxies:
   password: fadab0a4-861d-4ebf-89ac-c9b34aef631a
   sni: www.lamer.com.hk
   skip-cert-verify: true
-- name: disney_SG |494.18Mb
+- name: disney_SG |109.60Mb
   server: 208.87.242.77
   type: hysteria2
   country: 🇺🇸US
@@ -3406,6 +3406,7 @@ proxies:
   password: test.+
   port: 30446
   server: testkr3.ssv.vc
+  skip-cert-verify: true
   tls: true
   type: http
   username: test
@@ -3419,7 +3420,19 @@ proxies:
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- name: 'B - 🇰🇷 South Korea 03 TG: @nodpai'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 'B - 🇰🇷 South Korea 03 TG: @nodpai'
+  port: 19001
+  reality-opts:
+    public-key: UtL7E0Gmxj3X5JdcPAutpTRKo7K2hugkR0vwk2XroUM
+  server: krp01.jumperservice.com
+  servername: addons.mozilla.org
+  tls: true
+  type: vless
+  uuid: 6eeb820e-89ef-4b60-9060-ddcaea0580f0
+- client-fingerprint: randomized
+  name: 'B - 🇰🇷 South Korea 04 TG: @nodpai'
   network: ws
   port: 2096
   server: 104.17.128.1
@@ -3430,55 +3443,62 @@ proxies:
   ws-opts:
     headers:
       Host: azadnet-1ml.pages.dev
-    path: /azadnet-1ml.pages.dev/
-- client-fingerprint: chrome
-  name: 'C - 🇰🇷 South Korea 04 TG: @nodpai'
+    path: /azadnet-1ml.pages.dev/?ed=2560&PROT_TYPE=vless
+- name: 'C - 🇰🇷 South Korea 06 TG: @nodpai'
   port: 443
-  reality-opts:
-    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
   server: 47.80.13.96
   servername: api.company-target.com
-  skip-cert-verify: true
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
-  name: 'C - 🇰🇷 South Korea 05 TG: @nodpai'
+  name: 'C - 🇰🇷 South Korea 07 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
   server: 47.80.13.250
   servername: api.company-target.com
-  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- client-fingerprint: chrome
+  name: 'C - 🇰🇷 South Korea 08 TG: @nodpai'
+  port: 443
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  server: 47.80.11.87
+  servername: api.company-target.com
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
   flow: xtls-rprx-vision-udp443
-  name: 'D - 🇰🇷 South Korea 06 TG: @nodpai'
+  name: 'D - 🇰🇷 South Korea 09 TG: @nodpai'
   port: 443
   server: ako.pagate.top
   servername: ako.pagate.top
   tls: true
   type: vless
   uuid: e6d8d743-a9bc-48c9-be99-8f3cc94d16e1
-- client-fingerprint: chrome
-  name: 'B - 🇩🇪 Germany 01 TG: @nodpai'
+- name: 'B - 🇩🇪 Germany 01 TG: @nodpai'
   network: ws
   port: 443
   server: 18.245.54.3
-  servername: d2241b25w3zftf.cloudfront.net
+  servername: d23iuljn5k9z1j.cloudfront.net
+  skip-cert-verify: false
   tls: true
   type: vless
   uuid: 97b2cd5b-b98d-494f-8f97-3a06e8c1bbd2
   ws-opts:
     headers:
-      Host: d2241b25w3zftf.cloudfront.net
+      host: d23iuljn5k9z1j.cloudfront.net
     path: /
-- name: 'B - 🇩🇪 Germany 03 TG: @nodpai'
+- client-fingerprint: chrome
+  name: 'B - 🇩🇪 Germany 03 TG: @nodpai'
   network: ws
   port: 443
   server: 43.165.3.87
+  servername: falankefu1.zqjsqapi.com
   tls: true
   type: vless
   uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19
@@ -3486,17 +3506,18 @@ proxies:
     headers:
       Host: falankefu1.zqjsqapi.com
     path: /proxy
-- client-fingerprint: chrome
-  name: 'B - 🇩🇪 Germany 04 TG: @nodpai'
+- name: 'B - 🇩🇪 Germany 04 TG: @nodpai'
   network: ws
-  port: 2082
-  server: 104.17.109.71
-  type: vless
-  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
+  password: bpb-trojan
+  port: 443
+  server: vless.herogoing.top
+  sni: vless.herogoing.top
+  tls: true
+  type: trojan
   ws-opts:
     headers:
-      Host: index.arcane509.workers.dev
-    path: /jeyk7gbxzfe1
+      Host: vless.herogoing.top
+    path: /tr?ed=2560
 - client-fingerprint: chrome
   name: 'B - 🇩🇪 Germany 05 TG: @nodpai'
   port: 443
@@ -3518,45 +3539,29 @@ proxies:
     headers:
       Host: falankefu1.zqjsqapi.com
     path: /proxy
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: 'C - 🇩🇪 Germany 07 TG: @nodpai'
+- name: 'C - 🇩🇪 Germany 07 TG: @nodpai'
   network: ws
   port: 8443
   server: go.inmobi.com
-  servername: nginx-f.pages.dev
   tls: true
   type: vless
   uuid: 0905460d-6edc-4a82-8ec8-6b76090b41c8
   ws-opts:
     headers:
       Host: nginx-f.pages.dev
-    path: /?ed=2560
+    path: /
 - alpn:
   - h3
   auth-str: dongtaiwang.com
-  down: 1000 Mbps
+  down: '1000'
   name: 'C - 🇩🇪 Germany 08 TG: @nodpai'
   port: 20088
+  protocol: udp
   server: 5.83.129.153
   skip-cert-verify: true
   sni: apple.com
   type: hysteria
-  up: 500 Mbps
-- name: 'C - 🇩🇪 Germany 09 TG: @nodpai'
-  network: ws
-  port: 2053
-  server: 185.146.173.20
-  servername: qyi.fqjd663.ggff.net
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: 8c4604ef-749c-4b56-adf1-7da405002a21
-  ws-opts:
-    headers:
-      Host: qyi.fqjd663.ggff.net
-    path: /
+  up: '500'
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 'B - 🇫🇷 France 01 TG: @nodpai'
@@ -3569,24 +3574,11 @@ proxies:
   tls: true
   type: vless
   uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-- name: 'B - 🇫🇷 France 02 TG: @nodpai'
-  network: ws
-  password: bpb-trojan
-  port: 443
-  server: vless.herogoing.top
-  sni: vless.herogoing.top
-  tls: true
-  type: trojan
-  ws-opts:
-    headers:
-      Host: vless.herogoing.top
-    path: /tr?ed=2560
-- name: 'C - 🇫🇷 France 03 TG: @nodpai'
+- name: 'C - 🇫🇷 France 02 TG: @nodpai'
   network: ws
   port: 2053
   server: cd4.baguvix.xyz
   servername: app3.phonepanel.ir
-  skip-cert-verify: true
   tls: true
   type: vless
   uuid: aea708eb-d27f-453b-8eca-fb4f509c2562
@@ -3594,19 +3586,6 @@ proxies:
     headers:
       Host: app3.phonepanel.ir
     path: /ws
-- name: 'C - 🇫🇷 France 04 TG: @nodpai'
-  network: ws
-  password: humanity
-  port: 443
-  server: 185.18.250.245
-  skip-cert-verify: true
-  sni: www.calmlunch.com
-  tls: true
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.calmlunch.com
-    path: /assignment
 - name: 'B - 🇳🇱 Netherlands 01 TG: @nodpai'
   network: ws
   password: 8r<[9'l6hAO#8ZQi
@@ -3614,7 +3593,6 @@ proxies:
   server: 172.64.147.106
   skip-cert-verify: true
   sni: Koma-YT.PAGeS.Dev
-  tls: true
   type: trojan
   ws-opts:
     headers:
@@ -3629,20 +3607,35 @@ proxies:
   tls: true
   type: vless
   uuid: 9f7a44b8-617c-46de-bbe0-152e52570d69
-- client-fingerprint: chrome
-  name: 'C - 🇳🇱 Netherlands 03 TG: @nodpai'
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: randomized
+  name: 'B - 🇳🇱 Netherlands 03 TG: @nodpai'
+  network: ws
+  password: 8r<[9'l6hAO#8ZQi
+  port: 8443
+  server: koma-yt.pages.dev
+  sni: Koma-YT.PAGeS.Dev
+  type: trojan
+  ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
+    headers:
+      Host: koma-yt.pages.dev
+    max-early-data: 2560
+    path: /tro8sFW1S91B6sZrM1
+- name: 'C - 🇳🇱 Netherlands 04 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: A1OvYDljz8ZJr7_1xe4j2H1AHsMuYEKifyjdWhdybzk
     short-id: 11e2
   server: 216.57.105.74
-  servername: yahoo.com
   tls: true
   type: vless
   uuid: 73c0a723-c0ab-4ad8-8f25-799b9bd54e36
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 'C - 🇳🇱 Netherlands 04 TG: @nodpai'
+  name: 'C - 🇳🇱 Netherlands 05 TG: @nodpai'
   port: 52000
   reality-opts:
     public-key: QxNM7Wad1AT-erPr2JpacYeluAAASMT5yHU_ANpWD1Q
@@ -3652,11 +3645,12 @@ proxies:
   tls: true
   type: vless
   uuid: fd2bfdd2-68eb-49b0-98ad-ed82f901edde
-- name: 'C - 🇳🇱 Netherlands 05 TG: @nodpai'
+- name: 'C - 🇳🇱 Netherlands 06 TG: @nodpai'
   network: ws
   port: 2053
-  server: shop.app
+  server: 185.146.173.20
   servername: qyi.fqjd663.ggff.net
+  skip-cert-verify: true
   tls: true
   type: vless
   uuid: 8c4604ef-749c-4b56-adf1-7da405002a21
@@ -3664,51 +3658,29 @@ proxies:
     headers:
       Host: qyi.fqjd663.ggff.net
     path: /
-- alpn:
-  - h2
-  - http/1.1
-  client-fingerprint: randomized
-  name: 'B - 🇷🇺 Russia 01 TG: @nodpai'
+- client-fingerprint: randomized
+  encryption: none
+  name: 'C - 🇳🇱 Netherlands 07 TG: @nodpai'
   network: ws
-  password: 8r<[9'l6hAO#8ZQi
-  port: 8443
-  server: koma-yt.pages.dev
-  sni: Koma-YT.PAGeS.Dev
+  port: 2053
+  server: shop.app
+  servername: qyi.fqjd663.ggff.net
+  skip-cert-verify: false
   tls: true
-  type: trojan
+  type: vless
+  uuid: 8c4604ef-749c-4b56-adf1-7da405002a21
   ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
     headers:
-      Host: koma-yt.pages.dev
-    path: /tro8sFW1S91B6sZrM1
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 'C - 🇷🇺 Russia 02 TG: @nodpai'
-  port: 52000
-  reality-opts:
-    public-key: 4Fs4rORU_bK5Nwy9qvmVw3dAxS91bIG5cQYOmXl7zDA
-    short-id: 3d67b0666a5e09a0
-  server: tr-1.illusion-vpn.ru
-  servername: ozon.ru
-  tls: true
-  type: vless
-  uuid: fd2bfdd2-68eb-49b0-98ad-ed82f901edde
-- name: 'D - 🇷🇺 Russia 03 TG: @nodpai'
-  network: ws
-  port: 443
-  server: 94.242.51.174
-  type: vless
-  uuid: 3ddce082-7e03-429c-8af8-9a873d23f0ba
-  ws-opts:
+      Host: qyi.fqjd663.ggff.net
+    max-early-data: 2048
     path: /
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 'B - 🇹🇷 Turkey 01 TG: @nodpai'
+- name: 'B - 🇹🇷 Turkey 01 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: LaGTRJ1CJnnYV7FnyqQnU28I0xFTPFKI8xmUFwig5ic
     short-id: c410508e9721512b
   server: mouse2.1lil1.de
-  servername: www.stackoverflow.com
   tls: true
   type: vless
   uuid: bcc094e4-1a85-8a25-f8e1-5b08b9af841c
@@ -3748,10 +3720,13 @@ proxies:
   port: 443
   server: mangu1.zqjsqapi.com
   servername: mangu1.zqjsqapi.com
+  skip-cert-verify: false
   tls: true
   type: vless
   uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19
   ws-opts:
+    headers:
+      host: mangu1.zqjsqapi.com
     path: /proxy
 - client-fingerprint: chrome
   name: 'B - 🇲🇾 Malaysia 01 TG: @nodpai'
@@ -3782,7 +3757,6 @@ proxies:
     short-id: 0c1553316a645758
   server: 95.110.210.161
   servername: www.booking.com
-  skip-cert-verify: true
   tls: true
   type: vless
   uuid: 43488128-319e-f480-64ea-0acdc712e2a8
@@ -3796,26 +3770,22 @@ proxies:
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- name: 'C - 🇮🇹 Italy 04 TG: @nodpai'
+- name: 'C - 🇮🇹 Italy 03 TG: @nodpai'
   port: 1080
   server: 149.62.186.244
+  skip-cert-verify: true
   type: socks5
-- client-fingerprint: chrome
-  name: 'B - 🇨🇭 Switzerland 01 TG: @nodpai'
-  network: h2
+- name: 'B - 🇨🇭 Switzerland 01 TG: @nodpai'
   port: 22
   server: 172.65.111.43
   type: vless
   uuid: monacoVPN
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 'B - 🇦🇹 Austria 01 TG: @nodpai'
+- name: 'B - 🇦🇹 Austria 01 TG: @nodpai'
   port: 7443
   reality-opts:
     public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI
     short-id: be0ce047
   server: 152.53.236.181
-  servername: chat.deepseek.com
   tls: true
   type: vless
   uuid: 4ab1088a-9f8a-4fcc-8805-8353a8b3cf44
@@ -3826,23 +3796,23 @@ proxies:
   server: 185.231.233.112
   type: ss
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
+  flow: xtls-rprx-vision-udp443
   name: 'B - 🇷🇴 Romania 01 TG: @nodpai'
   port: 443
-  reality-opts:
-    public-key: kkRsTNjRh_XrrTM6eZllllldzoL5Z9IqlBkDtmYLMhw
-    short-id: c906f73d3ba8211f
   server: 91.199.50.37
   servername: www.alibaba.com
   tls: true
   type: vless
   uuid: 43488128-319e-f480-64ea-0acdc712e2a8
-- name: 'C - 🇧🇬 Bulgaria 01 TG: @nodpai'
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 'C - 🇧🇬 Bulgaria 01 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: rhL4R8tBOs5UnuwptbdegPycyuxGn-wvurb4eRYNSgY
     short-id: 596e1781a03304
   server: 176.108.247.44
+  servername: dk21.strelkavpn.com
   tls: true
   type: vless
   uuid: 0fa13297-7784-48e1-9c19-308c8b440edb
@@ -3850,6 +3820,7 @@ proxies:
   - h3
   - h2
   - http/1.1
+  client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: 'C - 🇨🇾 Cyprus 01 TG: @nodpai'
   port: 443
@@ -3857,44 +3828,27 @@ proxies:
   tls: true
   type: vless
   uuid: 6d916d55-fead-4ff3-a3a9-83e175ea8ad7
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: 'B - 🇪🇪 Estonia 01 TG: @nodpai'
+- name: 'B - 🇪🇪 Estonia 01 TG: @nodpai'
   port: 7443
   reality-opts:
     public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI
     short-id: d82fb387
   server: 93.123.39.126
-  servername: chat.deepseek.com
   tls: true
   type: vless
   uuid: 4ab1088a-9f8a-4fcc-8805-8353a8b3cf44
-- name: 'C - 🇱🇻 Latvia 01 TG: @nodpai'
-  network: ws
-  port: 443
-  server: 5.34.211.103
-  servername: sni.111000.v6.navy
-  tls: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: sni.111000.v6.navy
-    path: /?Telegram🇨🇳 @WangCai2=
 - cipher: none
   name: 'B - 🇲🇩 Moldova 01 TG: @nodpai'
   password: 79960b0b-7d31-4263-8915-6511b0e137a8
-  plugin: v2ray-plugin
-  plugin-opts:
-    host: woshinidie-et3.pages.dev
-    mode: websocket
-    mux: false
-    path: /79960b0b-7d31-4263-8915-6511b0e137a8/?ed=2560
-    tls: true
   port: 443
-  server: 198.41.209.211
+  server: 104.17.150.140
   type: ss
-  udp: true
+- cipher: none
+  name: 'B - 🇲🇩 Moldova 02 TG: @nodpai'
+  password: 3e96ef7d-8637-42c2-ac73-75182196e755
+  port: 443
+  server: 188.166.247.45
+  type: ss
 - name: 'A - 🇲🇴 Macao 01 TG: @nodpai'
   password: 9e0f72bb-7ad6-4383-994a-497569a94d74
   port: 58
@@ -3902,8 +3856,7 @@ proxies:
   skip-cert-verify: true
   sni: moak.ccwink.cc
   type: hysteria2
-- client-fingerprint: chrome
-  name: 'A -  UN 01 TG: @nodpai'
+- name: 'A -  UN 01 TG: @nodpai'
   network: ws
   port: 443
   server: store.ubi.com
@@ -3914,7 +3867,7 @@ proxies:
   ws-opts:
     headers:
       Host: 3-2h8.pages.dev
-    path: /proxyip=ProxyIP.DE.owg.dpdns.org
+    path: /
 - client-fingerprint: qq
   grpc-opts:
     grpc-service-name: UpdateService
@@ -4015,7 +3968,7 @@ proxies:
       Host: jflsjlaf.pages.dev
     path: /
 - client-fingerprint: chrome
-  name: 'C -  UN 14 TG: @nodpai'
+  name: 'B -  UN 14 TG: @nodpai'
   network: ws
   password: trojan
   port: 8444
@@ -4041,17 +3994,12 @@ proxies:
       Host: jflsjlaf.pages.dev
     path: /
 - name: 'C -  UN 16 TG: @nodpai'
-  network: ws
   password: trojan
   port: 8444
   server: 152.53.60.198
   sni: jflsjlaf.pages.dev
   tls: true
   type: trojan
-  ws-opts:
-    headers:
-      Host: jflsjlaf.pages.dev
-    path: /
 - client-fingerprint: randomized
   name: 'C -  UN 19 TG: @nodpai'
   network: ws
@@ -4574,7 +4522,7 @@ proxies:
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.218.127.218
+  server: 8.218.124.84
   servername: wcs.adobe.com
   tls: true
   type: vless
@@ -4584,8 +4532,8 @@ proxies:
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.218.124.84
-  servername: wcs.adobe.com
+  server: 8.218.121.30
+  servername: sb.scorecardresearch.com
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
@@ -4594,8 +4542,8 @@ proxies:
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.218.121.30
-  servername: sb.scorecardresearch.com
+  server: 47.243.112.34
+  servername: api.company-target.com
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
@@ -4614,8 +4562,8 @@ proxies:
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 47.243.112.34
-  servername: api.company-target.com
+  server: 8.210.175.100
+  servername: www.ilovepdf.com
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
@@ -4624,33 +4572,13 @@ proxies:
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.210.67.227
-  servername: commerce.adobe.com
+  server: 8.218.127.218
+  servername: wcs.adobe.com
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
   name: 'A - 🇭🇰 HK 07 TG: @nodpai'
-  port: 443
-  reality-opts:
-    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.210.175.100
-  servername: www.ilovepdf.com
-  tls: true
-  type: vless
-  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- client-fingerprint: chrome
-  name: 'A - 🇭🇰 HK 08 TG: @nodpai'
-  port: 443
-  reality-opts:
-    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.218.126.79
-  servername: commerce.adobe.com
-  tls: true
-  type: vless
-  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- client-fingerprint: chrome
-  name: 'A - 🇭🇰 HK 09 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
@@ -4660,27 +4588,7 @@ proxies:
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 10 TG: @nodpai'
-  port: 443
-  reality-opts:
-    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.210.79.165
-  servername: cms.suse.net
-  tls: true
-  type: vless
-  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 11 TG: @nodpai'
-  port: 443
-  reality-opts:
-    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.218.87.255
-  servername: sb.scorecardresearch.com
-  tls: true
-  type: vless
-  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 12 TG: @nodpai'
+  name: 'B - 🇭🇰 HK 08 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
@@ -4690,17 +4598,17 @@ proxies:
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 13 TG: @nodpai'
+  name: 'B - 🇭🇰 HK 09 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 47.243.62.100
-  servername: get.adobe.com
+  server: 8.210.67.227
+  servername: commerce.adobe.com
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 14 TG: @nodpai'
+  name: 'B - 🇭🇰 HK 10 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
@@ -4710,28 +4618,17 @@ proxies:
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 15 TG: @nodpai'
+  name: 'B - 🇭🇰 HK 11 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.217.75.84
-  servername: sgtm.jetbrains.com
-  skip-cert-verify: true
+  server: 8.210.79.165
+  servername: cms.suse.net
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 16 TG: @nodpai'
-  port: 443
-  reality-opts:
-    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.218.86.3
-  servername: www.autodesk.com
-  tls: true
-  type: vless
-  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 17 TG: @nodpai'
+  name: 'B - 🇭🇰 HK 12 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
@@ -4740,8 +4637,36 @@ proxies:
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- name: 'B - 🇭🇰 HK 13 TG: @nodpai'
+  port: 443
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  server: 8.217.75.84
+  tls: true
+  type: vless
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 18 TG: @nodpai'
+  name: 'B - 🇭🇰 HK 14 TG: @nodpai'
+  port: 443
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  server: 8.218.87.255
+  servername: sb.scorecardresearch.com
+  tls: true
+  type: vless
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- client-fingerprint: chrome
+  name: 'B - 🇭🇰 HK 15 TG: @nodpai'
+  port: 443
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  server: 47.243.62.100
+  servername: get.adobe.com
+  tls: true
+  type: vless
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- client-fingerprint: chrome
+  name: 'B - 🇭🇰 HK 16 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
@@ -4751,27 +4676,17 @@ proxies:
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 19 TG: @nodpai'
+  name: 'B - 🇭🇰 HK 17 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.218.96.207
-  servername: api.digital-help-prd.autodesk.com
+  server: 8.218.126.79
+  servername: commerce.adobe.com
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 20 TG: @nodpai'
-  port: 443
-  reality-opts:
-    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.217.78.216
-  servername: dsum-sec.casalemedia.com
-  tls: true
-  type: vless
-  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 21 TG: @nodpai'
+  name: 'B - 🇭🇰 HK 18 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
@@ -4781,47 +4696,16 @@ proxies:
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 22 TG: @nodpai'
+  name: 'B - 🇭🇰 HK 19 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.218.98.173
-  servername: images-na.ssl-images-amazon.com
+  server: 8.218.86.3
+  servername: www.autodesk.com
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 23 TG: @nodpai'
-  port: 443
-  reality-opts:
-    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.217.48.26
-  servername: sb.scorecardresearch.com
-  tls: true
-  type: vless
-  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- name: 'B - 🇭🇰 HK 24 TG: @nodpai'
-  password: 9e0f72bb-7ad6-4383-994a-497569a94d74
-  port: 88
-  server: jpaws.ccwink.photos
-  skip-cert-verify: true
-  sni: hkak.ccwink.cc
-  type: hysteria2
-- client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 25 TG: @nodpai'
-  network: ws
-  port: 6235
-  server: 207.174.133.117
-  servername: baidu.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: f6ddddaf-dfd6-4134-9dae-03b93b03d142
-  ws-opts:
-    headers:
-      Host: baidu.com
-    path: /xxxxhttp
-- name: 'B - 🇭🇰 HK 26 TG: @nodpai'
+- name: 'B - 🇭🇰 HK 20 TG: @nodpai'
   network: ws
   port: 80
   server: cdn.tzpro.xyz
@@ -4832,12 +4716,74 @@ proxies:
       Host: germany.vipserver14.workers.dev
     path: /?ed=2048
 - client-fingerprint: chrome
+  name: 'B - 🇭🇰 HK 21 TG: @nodpai'
+  port: 443
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  server: 8.218.98.173
+  servername: images-na.ssl-images-amazon.com
+  tls: true
+  type: vless
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- client-fingerprint: chrome
+  name: 'B - 🇭🇰 HK 22 TG: @nodpai'
+  port: 443
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  server: 8.217.48.26
+  servername: sb.scorecardresearch.com
+  tls: true
+  type: vless
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- cipher: none
+  name: 'B - 🇭🇰 HK 23 TG: @nodpai'
+  password: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
+  plugin: v2ray-plugin
+  plugin-opts:
+    host: ylnhh.us.ci
+    mode: websocket
+    mux: false
+    path: /14b02e2a-8930-4afb-8412-ea4a4954ca5b/?ed=2560
+    tls: true
+  port: 12126
+  server: 116.44.53.251
+  type: ss
+  udp: true
+- name: 'B - 🇭🇰 HK 24 TG: @nodpai'
+  network: ws
+  port: 6235
+  server: 207.174.133.117
+  tls: true
+  type: vless
+  uuid: f6ddddaf-dfd6-4134-9dae-03b93b03d142
+  ws-opts:
+    headers:
+      Host: baidu.com
+    path: /xxxxhttp
+- name: 'B - 🇭🇰 HK 25 TG: @nodpai'
+  password: 9e0f72bb-7ad6-4383-994a-497569a94d74
+  port: 88
+  server: jpaws.ccwink.photos
+  skip-cert-verify: true
+  sni: hkak.ccwink.cc
+  type: hysteria2
+- client-fingerprint: chrome
+  name: 'B - 🇭🇰 HK 26 TG: @nodpai'
+  port: 443
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  server: 8.218.96.207
+  servername: api.digital-help-prd.autodesk.com
+  tls: true
+  type: vless
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- client-fingerprint: chrome
   name: 'B - 🇭🇰 HK 27 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 47.243.38.185
-  servername: cms.suse.net
+  server: 8.217.78.216
+  servername: dsum-sec.casalemedia.com
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
@@ -4846,8 +4792,8 @@ proxies:
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.218.118.237
-  servername: app.usercentrics.eu
+  server: 8.210.124.185
+  servername: www.primevideo.com
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
@@ -4856,8 +4802,8 @@ proxies:
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.210.124.185
-  servername: www.primevideo.com
+  server: 47.243.38.185
+  servername: cms.suse.net
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
@@ -4883,7 +4829,7 @@ proxies:
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.218.97.55
+  server: 8.218.118.237
   servername: app.usercentrics.eu
   tls: true
   type: vless
@@ -4893,33 +4839,13 @@ proxies:
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.210.49.48
-  servername: j.6sc.co
+  server: 8.218.97.55
+  servername: app.usercentrics.eu
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
   name: 'B - 🇭🇰 HK 34 TG: @nodpai'
-  port: 443
-  reality-opts:
-    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.218.97.17
-  servername: dsum-sec.casalemedia.com
-  tls: true
-  type: vless
-  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 35 TG: @nodpai'
-  port: 443
-  reality-opts:
-    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.218.125.74
-  servername: cdn-dynmedia-1.microsoft.com
-  tls: true
-  type: vless
-  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 36 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
@@ -4929,7 +4855,37 @@ proxies:
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
+  name: 'B - 🇭🇰 HK 35 TG: @nodpai'
+  port: 443
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  server: 8.210.49.48
+  servername: j.6sc.co
+  tls: true
+  type: vless
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- client-fingerprint: chrome
+  name: 'B - 🇭🇰 HK 36 TG: @nodpai'
+  port: 443
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  server: 8.218.125.74
+  servername: cdn-dynmedia-1.microsoft.com
+  tls: true
+  type: vless
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- client-fingerprint: chrome
   name: 'B - 🇭🇰 HK 37 TG: @nodpai'
+  port: 443
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  server: 8.218.97.17
+  servername: dsum-sec.casalemedia.com
+  tls: true
+  type: vless
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- client-fingerprint: chrome
+  name: 'B - 🇭🇰 HK 38 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
@@ -4939,27 +4895,28 @@ proxies:
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 38 TG: @nodpai'
-  port: 443
-  reality-opts:
-    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.218.139.7
-  servername: j.6sc.co
-  tls: true
-  type: vless
-  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- client-fingerprint: chrome
   name: 'B - 🇭🇰 HK 39 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 47.242.112.250
-  servername: dsum-sec.casalemedia.com
+  server: 47.243.29.18
+  servername: prod.adobeccstatic.com
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- client-fingerprint: chrome
+- cipher: none
   name: 'B - 🇭🇰 HK 40 TG: @nodpai'
+  password: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
+  plugin: v2ray-plugin
+  plugin-opts:
+    host: ylnhh.us.ci
+    mode: websocket
+    path: 14b02e2a-8930-4afb-8412-ea4a4954ca5b/?ed\=2560
+  port: 443
+  server: 140.238.51.35
+  type: ss
+- client-fingerprint: chrome
+  name: 'B - 🇭🇰 HK 41 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
@@ -4969,17 +4926,27 @@ proxies:
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 41 TG: @nodpai'
+  name: 'B - 🇭🇰 HK 42 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 47.243.29.18
-  servername: prod.adobeccstatic.com
+  server: 8.218.139.7
+  servername: j.6sc.co
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 42 TG: @nodpai'
+  name: 'B - 🇭🇰 HK 43 TG: @nodpai'
+  port: 443
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  server: 47.242.112.250
+  servername: dsum-sec.casalemedia.com
+  tls: true
+  type: vless
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- client-fingerprint: chrome
+  name: 'B - 🇭🇰 HK 44 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
@@ -4989,7 +4956,7 @@ proxies:
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 43 TG: @nodpai'
+  name: 'B - 🇭🇰 HK 45 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
@@ -4998,8 +4965,14 @@ proxies:
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- cipher: none
+  name: 'B - 🇭🇰 HK 46 TG: @nodpai'
+  password: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
+  port: 443
+  server: 139.162.174.148
+  type: ss
 - client-fingerprint: chrome
-  name: 'B - 🇭🇰 HK 44 TG: @nodpai'
+  name: 'B - 🇭🇰 HK 47 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
@@ -5008,17 +4981,7 @@ proxies:
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- client-fingerprint: chrome
-  name: 'C - 🇭🇰 HK 45 TG: @nodpai'
-  port: 443
-  reality-opts:
-    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.218.98.104
-  servername: sb.scorecardresearch.com
-  tls: true
-  type: vless
-  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- name: 'C - 🇭🇰 HK 46 TG: @nodpai'
+- name: 'C - 🇭🇰 HK 48 TG: @nodpai'
   network: ws
   port: 10201
   server: 223.16.138.113
@@ -5030,7 +4993,17 @@ proxies:
       Host: 2026.hhhhh.eu.org
     path: /223.16.138.113:10201
 - client-fingerprint: chrome
-  name: 'C - 🇭🇰 HK 47 TG: @nodpai'
+  name: 'C - 🇭🇰 HK 49 TG: @nodpai'
+  port: 443
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  server: 8.218.98.104
+  servername: sb.scorecardresearch.com
+  tls: true
+  type: vless
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- client-fingerprint: chrome
+  name: 'C - 🇭🇰 HK 50 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
@@ -5040,7 +5013,7 @@ proxies:
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
-  name: 'C - 🇭🇰 HK 48 TG: @nodpai'
+  name: 'C - 🇭🇰 HK 51 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
@@ -5050,7 +5023,7 @@ proxies:
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - cipher: chacha20-ietf-poly1305
-  name: 'C - 🇭🇰 HK 49 TG: @nodpai'
+  name: 'C - 🇭🇰 HK 52 TG: @nodpai'
   password: somebody
   plugin: obfs
   plugin-opts:
@@ -5059,14 +5032,14 @@ proxies:
   port: 30011
   server: 103.219.194.220
   type: ss
-- alterId: 64
+- alterId: 0
   cipher: auto
-  name: 'C - 🇭🇰 HK 50 TG: @nodpai'
+  name: 'C - 🇭🇰 HK 53 TG: @nodpai'
   port: 54022
   server: 103.181.164.145
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- name: 'D - 🇭🇰 HK 51 TG: @nodpai'
+- name: 'D - 🇭🇰 HK 54 TG: @nodpai'
   network: ws
   port: 443
   server: 172.64.145.15
@@ -5084,8 +5057,11 @@ proxies:
   server: twmoon1-cdn-route.couldflare-cdn.com
   tls: true
   type: http
+  udp: true
   username: mrwdfNTD8M79LCukCieldrqZWqs=
-- client-fingerprint: chrome
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
   name: 'B - 🇹🇼 TW 03 TG: @nodpai'
   network: ws
   port: 6235
@@ -5094,44 +5070,34 @@ proxies:
   skip-cert-verify: true
   tls: true
   type: vless
-  uuid: f6ddddaf-dfd6-4134-9dae-03b93b03d150
+  uuid: f6ddddaf-dfd6-4134-9dae-03b93b03d146
   ws-opts:
     headers:
       Host: baidu.com
     path: /xxxxhttp
-- name: 'A - 🇯🇵 JP 01 TG: @nodpai'
+- alpn:
+  - http/1.1
+  name: 'A - 🇯🇵 JP 02 TG: @nodpai'
   password: 48b36b6a-eaa6-4843-9231-0bb8b38b5da5
   port: 5443
   server: jp-hy2.onetaplink.app
+  skip-cert-verify: false
   sni: hy2-jp.onetaplink.app
   type: hysteria2
-- client-fingerprint: chrome
-  name: 'B - 🇯🇵 JP 02 TG: @nodpai'
-  port: 443
-  reality-opts:
-    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.209.204.212
-  servername: cms.suse.net
-  tls: true
-  type: vless
-  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- client-fingerprint: chrome
+  udp: true
+- cipher: none
   name: 'B - 🇯🇵 JP 03 TG: @nodpai'
+  password: 79960b0b-7d31-4263-8915-6511b0e137a8
   port: 443
-  reality-opts:
-    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 47.245.6.87
-  servername: j.6sc.co
-  tls: true
-  type: vless
-  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+  server: 198.41.209.211
+  type: ss
 - client-fingerprint: chrome
   name: 'B - 🇯🇵 JP 04 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
-  server: 8.211.148.93
-  servername: prod.adobeccstatic.com
+  server: 8.209.204.212
+  servername: cms.suse.net
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
@@ -5145,22 +5111,40 @@ proxies:
   tls: true
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-- cipher: none
+- client-fingerprint: chrome
   name: 'B - 🇯🇵 JP 06 TG: @nodpai'
+  port: 443
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  server: 8.211.148.93
+  servername: prod.adobeccstatic.com
+  tls: true
+  type: vless
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- client-fingerprint: chrome
+  name: 'B - 🇯🇵 JP 07 TG: @nodpai'
+  port: 443
+  reality-opts:
+    public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+  server: 47.245.6.87
+  servername: j.6sc.co
+  tls: true
+  type: vless
+  uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+- cipher: none
+  name: 'B - 🇯🇵 JP 08 TG: @nodpai'
   password: 79960b0b-7d31-4263-8915-6511b0e137a8
-  plugin: v2ray-plugin
-  plugin-opts:
-    host: woshinidie-et3.pages.dev
-    mode: websocket
-    mux: false
-    path: /79960b0b-7d31-4263-8915-6511b0e137a8/?ed=2560
-    tls: true
   port: 8443
   server: 185.193.159.13
   type: ss
-  udp: true
+- cipher: none
+  name: 'B - 🇯🇵 JP 09 TG: @nodpai'
+  password: 79960b0b-7d31-4263-8915-6511b0e137a8
+  port: 443
+  server: 5.35.46.168
+  type: ss
 - client-fingerprint: chrome
-  name: 'B - 🇯🇵 JP 08 TG: @nodpai'
+  name: 'B - 🇯🇵 JP 11 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
@@ -5170,7 +5154,7 @@ proxies:
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - client-fingerprint: chrome
-  name: 'B - 🇯🇵 JP 10 TG: @nodpai'
+  name: 'B - 🇯🇵 JP 12 TG: @nodpai'
   port: 443
   reality-opts:
     public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
@@ -5180,7 +5164,7 @@ proxies:
   type: vless
   uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
 - cipher: none
-  name: 'B - 🇯🇵 JP 11 TG: @nodpai'
+  name: 'B - 🇯🇵 JP 13 TG: @nodpai'
   password: 79960b0b-7d31-4263-8915-6511b0e137a8
   plugin: v2ray-plugin
   plugin-opts:
@@ -5194,35 +5178,13 @@ proxies:
   type: ss
   udp: true
 - cipher: none
-  name: 'B - 🇯🇵 JP 12 TG: @nodpai'
+  name: 'B - 🇯🇵 JP 14 TG: @nodpai'
   password: 79960b0b-7d31-4263-8915-6511b0e137a8
-  plugin: v2ray-plugin
-  plugin-opts:
-    host: woshinidie-et3.pages.dev
-    mode: websocket
-    mux: false
-    path: /79960b0b-7d31-4263-8915-6511b0e137a8/?ed=2560
-    tls: true
-  port: 443
-  server: 45.88.67.129
-  type: ss
-  udp: true
-- cipher: none
-  name: 'B - 🇯🇵 JP 13 TG: @nodpai'
-  password: 79960b0b-7d31-4263-8915-6511b0e137a8
-  plugin: v2ray-plugin
-  plugin-opts:
-    host: woshinidie-et3.pages.dev
-    mode: websocket
-    mux: false
-    path: /79960b0b-7d31-4263-8915-6511b0e137a8/?ed=2560
-    tls: true
   port: 443
   server: 185.121.235.251
   type: ss
-  udp: true
 - cipher: none
-  name: 'B - 🇯🇵 JP 14 TG: @nodpai'
+  name: 'B - 🇯🇵 JP 15 TG: @nodpai'
   password: 79960b0b-7d31-4263-8915-6511b0e137a8
   plugin: v2ray-plugin
   plugin-opts:
@@ -5235,41 +5197,58 @@ proxies:
   server: 178.208.66.185
   type: ss
   udp: true
+- cipher: none
+  name: 'B - 🇯🇵 JP 16 TG: @nodpai'
+  password: 79960b0b-7d31-4263-8915-6511b0e137a8
+  plugin: v2ray-plugin
+  plugin-opts:
+    host: woshinidie-et3.pages.dev
+    mode: websocket
+    mux: false
+    path: /79960b0b-7d31-4263-8915-6511b0e137a8/?ed=2560
+    tls: true
+  port: 443
+  server: 45.88.67.129
+  type: ss
+  udp: true
 - alpn:
   - h3
   client-fingerprint: randomized
-  name: 'C - 🇯🇵 JP 15 TG: @nodpai'
+  name: 'C - 🇯🇵 JP 17 TG: @nodpai'
   network: ws
   password: bpb-trojan
   port: 443
   server: russia.com
   sni: bpb.wdgg1979.nyc.mn
-  tls: true
   type: trojan
   ws-opts:
+    early-data-header-name: Sec-WebSocket-Protocol
     headers:
       Host: bpb.wdgg1979.nyc.mn
+    max-early-data: 2560
     path: /tr
-- name: 'A - 🇸🇬 SG 01 TG: @nodpai'
+- alpn:
+  - http/1.1
+  name: 'A - 🇸🇬 SG 01 TG: @nodpai'
   password: 48b36b6a-eaa6-4843-9231-0bb8b38b5da5
   port: 443
   server: sg-hy2.onetaplink.app
+  skip-cert-verify: false
   sni: hy2-sg.onetaplink.app
   type: hysteria2
-- name: 'B - 🇸🇬 SG 02 TG: @nodpai'
+  udp: true
+- client-fingerprint: chrome
+  name: 'B - 🇸🇬 SG 02 TG: @nodpai'
   network: ws
   port: 443
   server: 126.220.82.161
-  servername: 3-7gj.pages.dev
-  skip-cert-verify: true
-  tfo: false
+  servername: 2-1ng.pages.dev
   tls: true
   type: vless
   uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
   ws-opts:
     headers:
-      host: 3-7gj.pages.dev
-    path: /
+      Host: 2-1ng.pages.dev
 - client-fingerprint: chrome
   name: 'B - 🇸🇬 SG 03 TG: @nodpai'
   network: ws
@@ -5290,6 +5269,18 @@ proxies:
   server: v12.hdacd.com
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: 'C - 🇸🇬 SG 05 TG: @nodpai'
+  network: ws
+  port: 8443
+  server: ev.zoom.us
+  servername: darknet-free.alexid.org
+  tls: true
+  type: vless
+  uuid: 39eb8c33-ee7f-4980-b3e5-684aaf390f56
+  ws-opts:
+    headers:
+      Host: darknet-free.alexid.org
+    path: /
 - name: 'B - 🇺🇸 US 03 TG: @nodpai'
   network: ws
   port: 80
@@ -5299,7 +5290,6 @@ proxies:
   ws-opts:
     headers:
       Host: germany.vipserver14.workers.dev
-    path: /
 - name: 'B - 🇺🇸 US 04 TG: @nodpai'
   password: 9d364053-a9d6-ce87-12a2-82ef0339e93c
   port: 443
@@ -5307,7 +5297,7 @@ proxies:
   tls: true
   type: http
   username: 9d364053-a9d6-ce87-12a2-82ef0339e93c
-- name: 'B - 🇺🇸 US 06 TG: @nodpai'
+- name: 'B - 🇺🇸 US 05 TG: @nodpai'
   network: ws
   port: 80
   server: 172.67.173.17
@@ -5316,14 +5306,17 @@ proxies:
   ws-opts:
     headers:
       Host: germany.vipserver14.workers.dev
-    path: /
-- name: 'B - 🇺🇸 US 07 TG: @nodpai'
-  password: 9d364053-a9d6-ce87-12a2-82ef0339e93c
-  port: 443
-  server: ae190b94-td8hs0-tuy7yj-oyt.se.oshuawei.com
+- client-fingerprint: chrome
+  name: 'B - 🇺🇸 US 06 TG: @nodpai'
+  port: 34155
+  reality-opts:
+    public-key: cJEl6ku8HSxHdQwbpUColEVQNH7AhFLuPfhwA1_HV2E
+    short-id: 9a4148bf7497faca
+  server: dbp.qzz.io
+  servername: www.nvidia.com
   tls: true
-  type: http
-  username: 9d364053-a9d6-ce87-12a2-82ef0339e93c
+  type: vless
+  uuid: 39b4f628-3e78-40c3-ac6b-a25db7fd8884
 - name: 'B - 🇺🇸 US 08 TG: @nodpai'
   password: 9d364053-a9d6-ce87-12a2-82ef0339e93c
   port: 443
@@ -5332,6 +5325,14 @@ proxies:
   type: http
   username: 9d364053-a9d6-ce87-12a2-82ef0339e93c
 - name: 'B - 🇺🇸 US 09 TG: @nodpai'
+  password: 9d364053-a9d6-ce87-12a2-82ef0339e93c
+  port: 443
+  server: ae190b94-td8hs0-tuy7yj-oyt.se.oshuawei.com
+  tls: true
+  type: http
+  username: 9d364053-a9d6-ce87-12a2-82ef0339e93c
+- client-fingerprint: randomized
+  name: 'B - 🇺🇸 US 10 TG: @nodpai'
   network: ws
   port: 2095
   server: itarmy.com.ua
@@ -5341,13 +5342,6 @@ proxies:
     headers:
       Host: cnmfangbinxing.cnmfangbinxing-e.workers.dev
     path: /
-- alterId: 2
-  cipher: auto
-  name: 'C - 🇺🇸 US 11 TG: @nodpai'
-  port: 30804
-  server: v4.hdacd.com
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - alpn:
   - h2
   client-fingerprint: chrome
@@ -5363,19 +5357,48 @@ proxies:
     headers:
       Host: darknet-free.alexid.org
     path: /
-- name: 'D - 🇺🇸 US 13 TG: @nodpai'
+- encryption: none
+  name: 'C - 🇺🇸 US 13 TG: @nodpai'
+  network: ws
+  port: 8880
+  server: 104.18.13.229
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  udp: true
+  uuid: 78c5b6bd-1cb6-463c-bcba-9f17ef70c85b
+  ws-opts:
+    headers:
+      Host: square-frost-8d11.9660004.workers.dev
+    path: /
+  xudp: true
+- encryption: none
+  name: 'D - 🇺🇸 US 14 TG: @nodpai'
   network: ws
   port: 2053
   server: 104.19.173.68
   servername: hio-awx.pages.dev
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: true
   type: vless
   uuid: d37a75db-76b6-4db8-b213-0d5b044d138d
   ws-opts:
     headers:
       Host: hio-awx.pages.dev
-    path: /fast
+    path: /
+- encryption: none
+  name: 'D - 🇺🇸 US 15 TG: @nodpai'
+  network: ws
+  port: 80
+  server: 104.17.150.99
+  skip-cert-verify: false
+  tls: false
+  type: vless
+  uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da
+  ws-opts:
+    headers:
+      Host: vip.yaml7.ggff.net
+    path: /
 - name: CF优选1.1
   server: cf.090227.xyz
   port: 443
