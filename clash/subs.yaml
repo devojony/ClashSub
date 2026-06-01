@@ -841,50 +841,45 @@ proxies:
     path: /TG@proxyshareCN
     headers:
       Host: vn02.wxgqlfx.xyz
-- name: disney_netflix_GE |45.56Mb
-  server: 85.234.114.53
+- name: disney_netflix_US
+  server: 150.251.158.76
   type: vless
-  port: 22231
+  port: 443
   udp: true
-  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+  uuid: 10550754-cf62-3d3b-ba6a-50be27a275d7
   tls: true
   flow: xtls-rprx-vision
-  client-fingerprint: edge
-  servername: r1.mizulina.top
+  client-fingerprint: random
+  servername: s646.okgg.top
   packet-encoding: ''
-- name: netflix_DE |170.76Mb
-  server: 152.233.35.228
+- name: netflix_FR
+  server: kobe.ns.cloudflare.com
   type: vless
-  port: 8443
+  port: 443
   udp: true
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  uuid: e277ac9b-3225-4381-a9fb-3585419f7142
+  network: ws
   tls: true
-  servername: de1.fromblancwithlove.com
+  client-fingerprint: firefox
+  servername: 35cdnws.frnstatic.info
+  ws-opts:
+    path: /35cdnws
+    headers:
+      Host: 35cdnws.frnstatic.info
+  alpn:
+  - http/1.1
   packet-encoding: ''
-- name: disney_netflix_GE |51.29Mb
+- name: disney_netflix_GE |42.03Mb
   server: r1.mizulina.top
   type: vless
   port: 22231
   udp: true
   uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
-  network: tcp
   tls: true
   flow: xtls-rprx-vision
-  client-fingerprint: edge
-  servername: r1.mizulina.top
+  client-fingerprint: chrome
   packet-encoding: ''
-- name: disney_netflix_GE |43.81Mb
-  server: 85.234.114.53
-  type: vless
-  port: 443
-  udp: true
-  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: edge
-  servername: r1.mizulina.top
-  packet-encoding: ''
-- name: netflix_FR
+- name: netflix_FR_1
   server: cdg-1.fromblancwithlove.com
   type: vless
   port: 8443
@@ -894,7 +889,39 @@ proxies:
   alpn:
   - h2
   packet-encoding: ''
-- name: netflix_NL |423.78Mb
+- name: disney_netflix_GE |46.99Mb
+  server: 85.234.114.53
+  type: vless
+  port: 443
+  udp: true
+  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+  network: tcp
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: edge
+  servername: r1.mizulina.top
+  packet-encoding: ''
+- name: disney_netflix_GE |29.12Mb
+  server: 85.234.114.53
+  type: vless
+  port: 22231
+  udp: true
+  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+  tls: true
+  flow: xtls-rprx-vision-udp443
+  client-fingerprint: edge
+  servername: r1.mizulina.top
+  packet-encoding: ''
+- name: netflix_DE |146.08Mb
+  server: 152.233.35.228
+  type: vless
+  port: 8443
+  udp: true
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  servername: de1.fromblancwithlove.com
+  packet-encoding: ''
+- name: netflix_NL |187.25Mb
   server: 195.181.173.199
   type: vless
   port: 8443
@@ -920,79 +947,27 @@ proxies:
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: disney_netflix_DK |22.82Mb
-  server: 155.117.127.137
-  type: vless
-  port: 443
-  udp: true
-  uuid: 5a20b5d0-3a98-4792-9559-95f4e24277ec
-  packet-encoding: ''
-- name: disney_netflix_US
-  server: 150.251.158.76
-  type: vless
-  port: 443
-  udp: true
-  uuid: 10550754-cf62-3d3b-ba6a-50be27a275d7
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: random
-  servername: s646.okgg.top
-  packet-encoding: ''
-- name: netflix_FR_1
-  server: kobe.ns.cloudflare.com
-  type: vless
-  port: 443
-  udp: true
-  uuid: e277ac9b-3225-4381-a9fb-3585419f7142
-  network: ws
-  tls: true
-  client-fingerprint: firefox
-  servername: 35cdnws.frnstatic.info
-  ws-opts:
-    path: /35cdnws
-    headers:
-      Host: 35cdnws.frnstatic.info
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: _18 |19.40Mb
-  server: 217.30.10.70
-  type: ss
-  port: 9093
-  udp: true
-  password: wfLC2y7rzZyCmuyt
-  cipher: aes-256-cfb
-- name: disney_TW | 1.94Mb
+- name: Relay_ | 1.94Mb
   server: r3mrcg001286ek2.cybervena.com
   type: ss
   port: 50099
   udp: true
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: Pool_ |11.76Mb
-  server: 61.171.92.202
+- name: ' | 2.26Mb'
+  server: 216.105.168.18
   type: ss
-  port: 1001
-  password: '123'
-  cipher: aes-256-gcm
-- name: netflix_NL |26.59Mb
-  server: 82.38.31.210
-  type: ss
-  port: 8080
+  port: 443
   udp: true
-  password: k1dBOmOB4oqi7Ump37a1bQ
+  password: hCCWOcIsK5wrFz4OX70rWf
   cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW |12.39Mb
-  server: 59.125.62.188
+- name: ' |19.40Mb'
+  server: 217.30.10.70
   type: ss
-  port: 2377
+  port: 9093
   udp: true
-  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
-  cipher: chacha20-ietf-poly1305
-  plugin: obfs
-  plugin-opts:
-    host: (Telegram🇨🇳 @WangCai2)7eb777f:123571
-    mode: tls
+  password: wfLC2y7rzZyCmuyt
+  cipher: aes-256-cfb
 - name: Relay_ |41.50Mb
   server: 82.38.31.149
   type: ss
@@ -1000,52 +975,58 @@ proxies:
   udp: true
   password: oZIoA69Q8yhcQV8ka3Pa3A
   cipher: chacha20-ietf-poly1305
-- name: disney_netflix_TW
-  server: r3mrcg001269pz2.cybervena.com
+- name: Pool_ | 5.26Mb
+  server: 61.171.92.202
   type: ss
-  port: 50099
-  udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: Pool_ |260.76Mb
-  server: 108.181.126.122
-  type: ss
-  port: 8388
-  password: CJmTCCx7Ltud
-  cipher: chacha20-ietf-poly1305
-- name: Relay_ |47.50Mb
-  server: 82.38.31.35
+  port: 1001
+  password: '123'
+  cipher: aes-256-gcm
+- name: Relay_ |135.19Mb
+  server: 82.38.31.208
   type: ss
   port: 8080
   udp: true
-  password: oZIoA69Q8yhcQV8ka3Pa3A
+  password: k1dBOmOB4oqi7Ump37a1bQ
   cipher: chacha20-ietf-poly1305
-- name: Relay_ | 2.78Mb
-  server: 82.198.246.214
-  type: vmess
-  port: 180
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: aes-128-gcm
-  http-opts: {}
-  h2-opts: {}
-- name: disney_netflix_US |129.96Mb
-  server: 82.198.246.37
-  type: vmess
-  port: 180
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: aes-128-gcm
-  http-opts: {}
-  h2-opts: {}
 - name: Relay_ | 0.46Mb
   server: gtm-sg-cc54q7d1q01.365cloud0285.com
   type: vmess
   port: 6001
   udp: true
   uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_netflix_US | 5.16Mb
+  server: 82.198.246.250
+  type: vmess
+  port: 180
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_netflix_US |249.08Mb
+  server: 82.198.246.9
+  type: vmess
+  port: 180
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_netflix_US |41.84Mb
+  server: 82.198.246.97
+  type: vmess
+  port: 180
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   alterId: 0
   cipher: auto
   http-opts: {}
@@ -1067,33 +1048,7 @@ proxies:
     path: /api/v1/graphql
     headers:
       Host: cg1c05.waimaojd.com
-- name: disney_netflix_TW_1
-  server: world.t.51guangtaobao.com
-  type: vmess
-  port: 2510
-  udp: true
-  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-- name: Relay_-🇺🇸US_34
-  server: cg1c03.waimaojd.com
-  type: vmess
-  port: 443
-  uuid: a60f3900-bfc6-4e99-a221-239f9692d59e
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: cg1c03.waimaojd.com
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  ws-opts:
-    path: /api/v1/graphql
-    headers:
-      Host: cg1c03.waimaojd.com
-- name: disney_netflix_US |172.24Mb
+- name: disney_netflix_US |42.37Mb
   server: 82.198.246.233
   type: vmess
   port: 180
@@ -1102,8 +1057,8 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: disney_netflix_US |182.79Mb
-  server: 82.198.246.9
+- name: disney_netflix_US |40.70Mb
+  server: 82.198.246.37
   type: vmess
   port: 180
   udp: true
@@ -1112,61 +1067,7 @@ proxies:
   cipher: aes-128-gcm
   http-opts: {}
   h2-opts: {}
-- name: disney_netflix_US |180.48Mb
-  server: 82.198.246.97
-  type: vmess
-  port: 180
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: Relay_ |15.34Mb
-  server: 82.198.246.250
-  type: vmess
-  port: 180
-  udp: true
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: Relay_-🇺🇸US_43
-  server: cg1c02.waimaojd.com
-  type: vmess
-  port: 443
-  uuid: a60f3900-bfc6-4e99-a221-239f9692d59e
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: cg1c02.waimaojd.com
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  ws-opts:
-    path: /api/v1/graphql
-    headers:
-      Host: cg1c02.waimaojd.com
-- name: Relay_-🇺🇸US_44
-  server: cg1c06.waimaojd.com
-  type: vmess
-  port: 443
-  uuid: a60f3900-bfc6-4e99-a221-239f9692d59e
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: cg1c06.waimaojd.com
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  ws-opts:
-    path: /api/v1/graphql
-    headers:
-      Host: cg1c06.waimaojd.com
-- name: disney_netflix_HK | 2.20Mb
+- name: disney_netflix_HK | 2.27Mb
   server: 90081bb25c.node.tro.cac.cab
   type: trojan
   port: 48697
@@ -1174,7 +1075,7 @@ proxies:
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   sni: gh.01.naiun.bilibili.com
   skip-cert-verify: true
-- name: disney_netflix_HK | 4.96Mb
+- name: disney_netflix_HK | 5.59Mb
   server: 90081bb25c.node.tro.cac.cab
   type: trojan
   port: 45553
@@ -1190,7 +1091,7 @@ proxies:
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   sni: fr.01.naiun.bilibili.com
   skip-cert-verify: true
-- name: disney_netflix_HK | 2.84Mb
+- name: disney_netflix_HK | 4.74Mb
   server: 90081bb25c.node.tro.cac.cab
   type: trojan
   port: 47909
@@ -1198,18 +1099,7 @@ proxies:
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   sni: is.01.naiun.bilibili.com
   skip-cert-verify: true
-- name: disney_netflix_US |45.39Mb
-  server: 57.151.100.27
-  type: vmess
-  country: 🇧🇪BE
-  port: 10086
-  uuid: 550e8400-e29b-41d4-a716-446655440000
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: netflix_DE |55.80Mb
+- name: Relay_ |181.05Mb
   server: vpn-de-001.fastervpn.world
   type: hysteria2
   country: 🇩🇪DE
@@ -1218,46 +1108,25 @@ proxies:
   password: qQe1z5kU8kN6SlKnDt9Ru3Qp
   sni: vpn-de-001.fastervpn.world
   skip-cert-verify: true
-- name: 🇪🇸 ES_55 |15.44Mb
-  server: 5.188.181.201
-  type: ss
-  country: 🇪🇸 ES
-  port: 9014
-  password: KnJGad3FqTvjqbaX
-  cipher: aes-256-cfb
-- name: 🇪🇸ES_56 |14.29Mb
-  server: 5.188.181.201
-  type: ss
-  country: 🇪🇸ES
-  port: 9054
-  password: VcFuyXvND2yQWSFY
-  cipher: aes-256-cfb
-- name: netflix_SE |14.25Mb
+- name: disney_netflix_DK |25.59Mb
   server: 51.15.23.63
   type: ss
   country: 🇫🇷FR
   port: 989
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: disney_netflix_HK |12.91Mb
-  server: a.twodnwnpoe.xyz
-  type: trojan
+- name: Relay_🇬🇧GB-🇬🇧GB_47 |58.92Mb
+  server: v36.hdacd.com
+  type: vmess
   country: 🇬🇧GB
-  port: 52225
-  udp: true
-  password: da292191-b895-3264-b41c-200512b8f965
-  sni: i.comfortableyou.top
+  port: 30836
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
   skip-cert-verify: true
-- name: disney_HK | 2.28Mb
-  server: a.twodnwnpoe.xyz
-  type: trojan
-  country: 🇬🇧GB
-  port: 40015
-  udp: true
-  password: da292191-b895-3264-b41c-200512b8f965
-  sni: 1.lossyesterday.xyz
-  skip-cert-verify: true
-- name: disney_HK | 6.56Mb
+- name: disney_HK |16.87Mb
   server: a.twodnwnpoe.xyz
   type: trojan
   country: 🇬🇧GB
@@ -1266,47 +1135,70 @@ proxies:
   password: da292191-b895-3264-b41c-200512b8f965
   sni: water.waittomorrow.top
   skip-cert-verify: true
-- name: 🇭🇰HK_64 | 5.56Mb
-  server: 103.149.183.12
+- name: disney_netflix_HK |19.80Mb
+  server: a.twodnwnpoe.xyz
+  type: trojan
+  country: 🇬🇧GB
+  port: 52225
+  udp: true
+  password: da292191-b895-3264-b41c-200512b8f965
+  sni: i.comfortableyou.top
+  skip-cert-verify: true
+- name: disney_netflix_HK | 3.97Mb
+  server: a.twodnwnpoe.xyz
+  type: trojan
+  country: 🇬🇧GB
+  port: 40015
+  udp: true
+  password: da292191-b895-3264-b41c-200512b8f965
+  sni: 1.lossyesterday.xyz
+  skip-cert-verify: true
+- name: ' | 3.86Mb'
+  server: 103.149.182.79
   type: ss
   country: 🇭🇰HK
   port: 8388
   password: asd123456
   cipher: chacha20-ietf
-- name: Pool_🇭🇰HK_65 | 3.82Mb
-  server: 103.149.183.113
-  type: ss
-  country: 🇭🇰HK
-  port: 8388
-  password: asd123456
-  cipher: chacha20-ietf
-- name: disney_netflix_HK | 4.24Mb
+- name: ' | 9.24Mb'
   server: 112.213.102.188
   type: ss
   country: 🇭🇰HK
   port: 41632
   password: qwerREWQ@@
   cipher: aes-256-cfb
-- name: 🇯🇵JP_67
-  server: ss.026.node-for-bigairport.win
-  type: ss
-  country: 🇯🇵JP
-  port: 36099
-  password: 6c4bd474-ac23-47fc-8742-c8f990357836
-  cipher: aes-256-gcm
-- name: ' | 1.16Mb'
-  server: 217.30.10.70
-  type: ss
-  country: 🇵🇱PL
-  port: 9026
-  password: QWDDvVE9npNurQfA
-  cipher: aes-256-cfb
-- name: ' | 1.69Mb'
+- name: disney_netflix_TW |11.70Mb
+  server: world.t.51guangtaobao.com
+  type: vmess
+  country: 🇭🇰HK
+  port: 2512
+  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
+  alterId: 0
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: ' |205.08Mb'
   server: 217.30.10.70
   type: ss
   country: 🇵🇱PL
   port: 9031
   password: BwcAUZk8hUFAkDGN
+  cipher: aes-256-cfb
+- name: ' | 2.19Mb'
+  server: 217.30.10.70
+  type: ss
+  country: 🇵🇱PL
+  port: 9015
+  password: ZpNDDKRu9MagNvaf
+  cipher: aes-256-cfb
+- name: ' | 1.87Mb'
+  server: 217.30.10.70
+  type: ss
+  country: 🇵🇱PL
+  port: 9019
+  password: GA9KzeEgvfxNrgmM
   cipher: aes-256-cfb
 - name: ' | 1.93Mb'
   server: 217.30.10.70
@@ -1315,28 +1207,21 @@ proxies:
   port: 9041
   password: U6qnYRhfyDmn8sgn
   cipher: aes-256-cfb
-- name: ' | 1.63Mb'
+- name: ' |215.99Mb'
   server: 217.30.10.70
   type: ss
   country: 🇵🇱PL
-  port: 9015
-  password: ZpNDDKRu9MagNvaf
+  port: 9026
+  password: QWDDvVE9npNurQfA
   cipher: aes-256-cfb
-- name: ' | 1.60Mb'
+- name: ' |216.01Mb'
   server: 217.30.10.70
   type: ss
   country: 🇵🇱PL
   port: 9038
   password: gYCYXfkUQEs2TaJQ
   cipher: aes-256-cfb
-- name: ' | 1.61Mb'
-  server: 217.30.10.70
-  type: ss
-  country: 🇵🇱PL
-  port: 9019
-  password: GA9KzeEgvfxNrgmM
-  cipher: aes-256-cfb
-- name: 🇷🇺RU_74
+- name: 🇷🇺RU_62
   server: 195.133.53.33
   type: hysteria2
   country: 🇷🇺RU
@@ -1345,46 +1230,28 @@ proxies:
   password: 10550754-cf62-3d3b-ba6a-50be27a275d7
   sni: s516.okgfw.top
   skip-cert-verify: false
-- name: ' | 4.09Mb'
-  server: 109.107.182.229
-  type: ss
-  country: 🇷🇺RU
-  port: 51544
-  password: MZeSTvpl2uoey1R0frhPyJ
-  cipher: chacha20-ietf-poly1305
-- name: ' |51.47Mb'
+- name: ' | 5.80Mb'
   server: 195.133.2.2
   type: ss
   country: 🇷🇺RU
   port: 34898
   password: v2LIewZzNUsIrqODr22FVc
   cipher: chacha20-ietf-poly1305
-- name: Relay_🇷🇺RU-🇮🇪IE_77 | 0.09Mb
-  server: renderer-stream-1-411.mirra.now
-  type: vmess
-  country: 🇷🇺RU
-  port: 443
-  uuid: df9c9355-b02c-4c12-909d-0dbeb725d52b
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: renderer-stream-1-411.mirra.now
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /api/v1/gpu-stream/socket
-    headers:
-      HOST: renderer-stream-1-411.mirra.now
-- name: disney_netflix_TW | 2.21Mb
+- name: ' |17.76Mb'
+  server: 185.189.160.105
+  type: ss
+  country: 🇹🇼TW
+  port: 41632
+  password: qwerREWQ@@
+  cipher: aes-256-cfb
+- name: disney_netflix_TW | 8.82Mb
   server: r3mrcg001287h3p.cybervena.com
   type: ss
   country: 🇹🇼TW
   port: 50099
   password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: disney_netflix_US |70.08Mb
+- name: disney_netflix_US |86.21Mb
   server: hy2.123266.xyz
   type: hysteria2
   country: 🇺🇸US
@@ -1393,7 +1260,56 @@ proxies:
   password: bce6c821-200d-421f-bf3d-7159e5246ea0
   sni: hy2.123266.xyz
   skip-cert-verify: true
-- name: disney_netflix_US |12.78Mb
+- name: Relay_ |40.78Mb
+  server: bgroup.node5.s.nodelist-airport.com
+  type: ss
+  country: 🇺🇸US
+  port: 59167
+  password: 504cb0be-b285-4ec5-9561-bc289aea0d46
+  cipher: aes-256-gcm
+- name: disney_netflix_US | 9.13Mb
+  server: 84.17.41.2
+  type: vmess
+  country: 🇺🇸US
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_netflix_US |18.62Mb
+  server: 107.172.75.141
+  type: vmess
+  country: 🇺🇸US
+  port: 10086
+  uuid: e02c67a8-d769-4d73-833a-ab6acdb86e6e
+  alterId: 0
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: Relay_🇺🇸US-🇺🇸US_73
+  server: cg1c02.waimaojd.com
+  type: vmess
+  country: 🇺🇸US
+  port: 443
+  uuid: 332774e5-9371-48bb-b518-1fe56c7268da
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: cg1c02.waimaojd.com
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /api/v1/graphql
+    headers:
+      HOST: cg1c02.waimaojd.com
+- name: Relay_ |23.79Mb
   server: usaapp1.jisuyun.top
   type: vmess
   country: 🇺🇸US
@@ -1411,28 +1327,55 @@ proxies:
     path: /usavm
     headers:
       HOST: usaapp1.jisuyun.top
-- name: disney_netflix_US |42.23Mb
-  server: 84.17.41.2
+- name: Relay_ | 7.98Mb
+  server: v24.hdacd.com
   type: vmess
-  country: 🇺🇸US
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
+  country: 🏁 ZZ
+  port: 30824
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
   cipher: auto
   network: tcp
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: netflix_JP | 2.68Mb
-  server: 43.199.61.178
-  type: trojan
-  country: 🇺🇸US
-  port: 47655
-  udp: true
-  password: BxceQaOe
-  sni: t.me/ripaojiedian
+- name: Relay_ |16.16Mb
+  server: v9.hdacd.com
+  type: vmess
+  country: 🏁 ZZ
+  port: 30809
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
   skip-cert-verify: true
-- name: netflix_DE |45.30Mb
+- name: Relay_🏁 ZZ-🇺🇸US_77 |49.28Mb
+  server: v4.hdacd.com
+  type: vmess
+  country: 🏁 ZZ
+  port: 30804
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: Relay_🏁 ZZ-🇺🇸US_78
+  server: v35.hdacd.com
+  type: vmess
+  country: 🏁 ZZ
+  port: 30835
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: netflix_DE |98.72Mb
   server: speedtest.org
   type: vmess
   country: 🏁ZZ
@@ -1506,6 +1449,53 @@ proxies:
   password: 3ac6a6ca99f74941b1eaf892818e2ddb
   skip-cert-verify: true
   delay: 707
+- name: 美国 - 洛杉矶 - 2
+  server: cg1c06.waimaojd.com
+  type: vmess
+  port: 443
+  uuid: a60f3900-bfc6-4e99-a221-239f9692d59e
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: cg1c06.waimaojd.com
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  ws-opts:
+    path: /api/v1/graphql
+    headers:
+      Host: cg1c06.waimaojd.com
+  delay: 1033
+- name: 美国 - 洛杉矶 - 3
+  server: cg1c03.waimaojd.com
+  type: vmess
+  port: 443
+  uuid: a60f3900-bfc6-4e99-a221-239f9692d59e
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: cg1c03.waimaojd.com
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  ws-opts:
+    path: /api/v1/graphql
+    headers:
+      Host: cg1c03.waimaojd.com
+  delay: 1000
+- name: 美国 - 洛杉矶 - 7
+  server: 82.198.246.214
+  port: 180
+  type: vmess
+  country: 🇬🇧 GB
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  ws-path: /
+  skip-cert-verify: true
+  delay: 608
 - name: 美国 - 洛杉矶 - 8
   server: select-us.ddnskunlun.com
   type: vmess
@@ -1540,19 +1530,36 @@ proxies:
   ws-path: /
   skip-cert-verify: true
   delay: 2285
-- name: 中国 - 台湾 - 7
-  server: world.t.51guangtaobao.com
-  type: vmess
-  country: 🇭🇰HK
-  port: 2512
-  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
+- name: 日本 - 东京 - 1
+  server: 43.199.61.178
+  type: trojan
+  country: 🇺🇸US
+  port: 47655
+  password: BxceQaOe
+  sni: t.me/ripaojiedian
   skip-cert-verify: true
-  delay: 783
+  udp: true
+  delay: 960
+- name: 中国 - 台湾 - 4
+  server: r3mrcg001269pz2.cybervena.com
+  port: 50099
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  udp: true
+  delay: 1483
+- name: 中国 - 台湾 - 6
+  server: 59.125.62.188
+  type: ss
+  country: 🇹🇼TW
+  port: 2377
+  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+  cipher: chacha20-ietf-poly1305
+  plugin: obfs
+  plugin-opts:
+    host: (Telegram🇨🇳 @WangCai2)7eb777f:123571
+    mode: tls
+  delay: 1282
 - name: 中国 - 台湾 - 8
   server: yd3.ainivp.com
   type: vmess
@@ -1835,7 +1842,7 @@ proxies:
   server: 127.0.0.1
   port: 1080
 - name: 🇯🇵 免费-日本1-Ver.7
-  server: 1dl2vch-g04.jp01-nn-vm0.entry.fr0528.art
+  server: ndb5z03-g04.jp01-nn-vm0.entry.fr0528.art
   port: 21584
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -1845,7 +1852,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本2-Ver.8
-  server: sd924mh-g04.jp02-e3-vm0.entry.fr0528.art
+  server: 7dryvm3-g04.jp02-e3-vm0.entry.fr0528.art
   port: 11776
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -1855,7 +1862,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本3-Ver.7
-  server: nglyv23-g04.jp03-j7-vm0.entry.fr0528.art
+  server: 74b2z2h-g04.jp03-j7-vm0.entry.fr0528.art
   port: 21584
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -1865,7 +1872,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本4-Ver.8
-  server: 7dl2zcv-g04.jp04-1d-vm0.entry.fr0528.art
+  server: 74r5z03-g04.jp04-1d-vm0.entry.fr0528.art
   port: 447
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -1875,7 +1882,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本5-Ver.9
-  server: s4b24c0-g04.jp05-h6-vm0.entry.fr0528.art
+  server: 7gbyv03-g04.jp05-h6-vm0.entry.fr0528.art
   port: 46485
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -1885,7 +1892,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本6-Ver.8
-  server: ndl5v03-g04.jp06-jz-vm0.entry.fr0528.art
+  server: 7gby423-g04.jp06-jz-vm0.entry.fr0528.art
   port: 28786
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -1895,7 +1902,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本7-Ver.2
-  server: n4byz00-g04.jp07-sh-vm0.entry.fr0528.art
+  server: ngr2vch-g04.jp07-sh-vm0.entry.fr0528.art
   port: 28786
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -1904,7 +1911,7 @@ proxies:
   tls: false
   skip-cert-verify: false
   udp: true
-- name: 剩余流量：961.35 GB
+- name: 剩余流量：957.37 GB
   type: ss
   server: bgroup.node1.s.nodelist-airport.com
   port: 53431
@@ -1929,13 +1936,6 @@ proxies:
   type: ss
   server: bgroup.node4.s.nodelist-airport.com
   port: 51135
-  cipher: aes-256-gcm
-  password: 504cb0be-b285-4ec5-9561-bc289aea0d46
-  udp: true
-- name: California SS - B Group
-  type: ss
-  server: bgroup.node5.s.nodelist-airport.com
-  port: 59167
   cipher: aes-256-gcm
   password: 504cb0be-b285-4ec5-9561-bc289aea0d46
   udp: true
@@ -2016,7 +2016,7 @@ proxies:
   cipher: auto
   udp: true
 - name: 🇯🇵 免费-日本1-Ver.7_1
-  server: n76pdwd-g06.jp01-nn-vm0.entry.fr0528.art
+  server: 7b1aeff-g06.jp01-nn-vm0.entry.fr0528.art
   port: 21586
   type: vmess
   uuid: 807b9e31-4275-34a4-bd0f-17128cbc81a9
@@ -2026,7 +2026,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本2-Ver.8_1
-  server: 7c6adwd-g06.jp02-e3-vm0.entry.fr0528.art
+  server: sbcgeff-g06.jp02-e3-vm0.entry.fr0528.art
   port: 11778
   type: vmess
   uuid: 807b9e31-4275-34a4-bd0f-17128cbc81a9
@@ -2036,7 +2036,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本3-Ver.7_1
-  server: 12ygdwd-g06.jp03-j7-vm0.entry.fr0528.art
+  server: 7bcpeod-g06.jp03-j7-vm0.entry.fr0528.art
   port: 21586
   type: vmess
   uuid: 807b9e31-4275-34a4-bd0f-17128cbc81a9
@@ -2046,7 +2046,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本4-Ver.8_1
-  server: nccgrwd-g06.jp04-1d-vm0.entry.fr0528.art
+  server: 17ygdob-g06.jp04-1d-vm0.entry.fr0528.art
   port: 449
   type: vmess
   uuid: 807b9e31-4275-34a4-bd0f-17128cbc81a9
@@ -2056,7 +2056,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本5-Ver.9_1
-  server: 1c6aeof-g06.jp05-h6-vm0.entry.fr0528.art
+  server: 1bcpdof-g06.jp05-h6-vm0.entry.fr0528.art
   port: 46487
   type: vmess
   uuid: 807b9e31-4275-34a4-bd0f-17128cbc81a9
@@ -2066,7 +2066,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本6-Ver.8_1
-  server: sb6aeib-g06.jp06-jz-vm0.entry.fr0528.art
+  server: 1cyaefd-g06.jp06-jz-vm0.entry.fr0528.art
   port: 28788
   type: vmess
   uuid: 807b9e31-4275-34a4-bd0f-17128cbc81a9
@@ -2076,7 +2076,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本7-Ver.2_1
-  server: 7c1arid-g06.jp07-sh-vm0.entry.fr0528.art
+  server: 7bcaeid-g06.jp07-sh-vm0.entry.fr0528.art
   port: 28788
   type: vmess
   uuid: 807b9e31-4275-34a4-bd0f-17128cbc81a9
@@ -2086,7 +2086,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本1-Ver.7_2
-  server: f4bijiz-g03.jp01-nn-vm0.entry.fr0528.art
+  server: x4r66fi-g03.jp01-nn-vm0.entry.fr0528.art
   port: 21583
   type: vmess
   uuid: 606c418a-9efb-3e17-a555-4e082a5e50a4
@@ -2096,7 +2096,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本2-Ver.8_2
-  server: x4ll6fz-g03.jp02-e3-vm0.entry.fr0528.art
+  server: fgliiii-g03.jp02-e3-vm0.entry.fr0528.art
   port: 11775
   type: vmess
   uuid: 606c418a-9efb-3e17-a555-4e082a5e50a4
@@ -2106,7 +2106,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本3-Ver.7_2
-  server: xd9v6w9-g03.jp03-j7-vm0.entry.fr0528.art
+  server: wdri6wz-g03.jp03-j7-vm0.entry.fr0528.art
   port: 21583
   type: vmess
   uuid: 606c418a-9efb-3e17-a555-4e082a5e50a4
@@ -2116,7 +2116,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本4-Ver.8_2
-  server: fdr6io9-g03.jp04-1d-vm0.entry.fr0528.art
+  server: x4lllii-g03.jp04-1d-vm0.entry.fr0528.art
   port: 446
   type: vmess
   uuid: 606c418a-9efb-3e17-a555-4e082a5e50a4
@@ -2126,7 +2126,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本5-Ver.9_2
-  server: xdr6ifz-g03.jp05-h6-vm0.entry.fr0528.art
+  server: xg9i6f9-g03.jp05-h6-vm0.entry.fr0528.art
   port: 46484
   type: vmess
   uuid: 606c418a-9efb-3e17-a555-4e082a5e50a4
@@ -2136,7 +2136,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本6-Ver.8_2
-  server: fdlvii9-g03.jp06-jz-vm0.entry.fr0528.art
+  server: x4ll6wt-g03.jp06-jz-vm0.entry.fr0528.art
   port: 28785
   type: vmess
   uuid: 606c418a-9efb-3e17-a555-4e082a5e50a4
@@ -2146,7 +2146,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本7-Ver.2_2
-  server: wgriioz-g03.jp07-sh-vm0.entry.fr0528.art
+  server: xdb6lft-g03.jp07-sh-vm0.entry.fr0528.art
   port: 28785
   type: vmess
   uuid: 606c418a-9efb-3e17-a555-4e082a5e50a4
@@ -2163,7 +2163,7 @@ proxies:
   password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
   udp: true
 - name: 🇯🇵 免费-日本1-Ver.7_3
-  server: 374qztm-g04.jp01-nn-vm0.entry.fr0528.art
+  server: 3carzy1-g04.jp01-nn-vm0.entry.fr0528.art
   port: 21584
   type: vmess
   uuid: 27453cfd-bd7b-3eaa-a9b0-3efcbed6a822
@@ -2173,7 +2173,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本2-Ver.8_3
-  server: 3bztzyc-g04.jp02-e3-vm0.entry.fr0528.art
+  server: 327qvty-g04.jp02-e3-vm0.entry.fr0528.art
   port: 11776
   type: vmess
   uuid: 27453cfd-bd7b-3eaa-a9b0-3efcbed6a822
@@ -2183,7 +2183,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本3-Ver.7_3
-  server: 3car4um-g04.jp03-j7-vm0.entry.fr0528.art
+  server: 627qvty-g04.jp03-j7-vm0.entry.fr0528.art
   port: 21584
   type: vmess
   uuid: 27453cfd-bd7b-3eaa-a9b0-3efcbed6a822
@@ -2193,7 +2193,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本4-Ver.8_3
-  server: 3ca8vy1-g04.jp04-1d-vm0.entry.fr0528.art
+  server: gca8vtc-g04.jp04-1d-vm0.entry.fr0528.art
   port: 447
   type: vmess
   uuid: 27453cfd-bd7b-3eaa-a9b0-3efcbed6a822
@@ -2203,7 +2203,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本5-Ver.9_3
-  server: 32zqvum-g04.jp05-h6-vm0.entry.fr0528.art
+  server: g7z8ztm-g04.jp05-h6-vm0.entry.fr0528.art
   port: 46485
   type: vmess
   uuid: 27453cfd-bd7b-3eaa-a9b0-3efcbed6a822
@@ -2213,7 +2213,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本6-Ver.8_3
-  server: g2aqzu1-g04.jp06-jz-vm0.entry.fr0528.art
+  server: g2arvuc-g04.jp06-jz-vm0.entry.fr0528.art
   port: 28786
   type: vmess
   uuid: 27453cfd-bd7b-3eaa-a9b0-3efcbed6a822
@@ -2223,7 +2223,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本7-Ver.2_3
-  server: 374q4yc-g04.jp07-sh-vm0.entry.fr0528.art
+  server: g74rzum-g04.jp07-sh-vm0.entry.fr0528.art
   port: 28786
   type: vmess
   uuid: 27453cfd-bd7b-3eaa-a9b0-3efcbed6a822
@@ -2233,7 +2233,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本1-Ver.7_4
-  server: 7b1grfd-g06.jp01-nn-vm0.entry.fr0528.art
+  server: 1b1gdwd-g06.jp01-nn-vm0.entry.fr0528.art
   port: 21586
   type: vmess
   uuid: 807b9e31-4275-34a4-bd0f-17128cbc81a9
@@ -2243,7 +2243,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本2-Ver.8_4
-  server: sbyarod-g06.jp02-e3-vm0.entry.fr0528.art
+  server: 1bypdwb-g06.jp02-e3-vm0.entry.fr0528.art
   port: 11778
   type: vmess
   uuid: 807b9e31-4275-34a4-bd0f-17128cbc81a9
@@ -2253,7 +2253,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本3-Ver.7_4
-  server: sc6geof-g06.jp03-j7-vm0.entry.fr0528.art
+  server: 12cprwf-g06.jp03-j7-vm0.entry.fr0528.art
   port: 21586
   type: vmess
   uuid: 807b9e31-4275-34a4-bd0f-17128cbc81a9
@@ -2263,7 +2263,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本4-Ver.8_4
-  server: 7b6gdfd-g06.jp04-1d-vm0.entry.fr0528.art
+  server: 72ypdfb-g06.jp04-1d-vm0.entry.fr0528.art
   port: 449
   type: vmess
   uuid: 807b9e31-4275-34a4-bd0f-17128cbc81a9
@@ -2273,7 +2273,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本5-Ver.9_4
-  server: n2yadwd-g06.jp05-h6-vm0.entry.fr0528.art
+  server: nbyprid-g06.jp05-h6-vm0.entry.fr0528.art
   port: 46487
   type: vmess
   uuid: 807b9e31-4275-34a4-bd0f-17128cbc81a9
@@ -2283,7 +2283,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本6-Ver.8_4
-  server: sc6adff-g06.jp06-jz-vm0.entry.fr0528.art
+  server: 771pefb-g06.jp06-jz-vm0.entry.fr0528.art
   port: 28788
   type: vmess
   uuid: 807b9e31-4275-34a4-bd0f-17128cbc81a9
@@ -2293,7 +2293,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本7-Ver.2_4
-  server: 7b6peod-g06.jp07-sh-vm0.entry.fr0528.art
+  server: 171grfd-g06.jp07-sh-vm0.entry.fr0528.art
   port: 28788
   type: vmess
   uuid: 807b9e31-4275-34a4-bd0f-17128cbc81a9
@@ -2303,7 +2303,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本1-Ver.7_5
-  server: xdr66wt-g03.jp01-nn-vm0.entry.fr0528.art
+  server: fglijwt-g03.jp01-nn-vm0.entry.fr0528.art
   port: 21583
   type: vmess
   uuid: 606c418a-9efb-3e17-a555-4e082a5e50a4
@@ -2313,7 +2313,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本2-Ver.8_5
-  server: xdlljw9-g03.jp02-e3-vm0.entry.fr0528.art
+  server: fd96jfi-g03.jp02-e3-vm0.entry.fr0528.art
   port: 11775
   type: vmess
   uuid: 606c418a-9efb-3e17-a555-4e082a5e50a4
@@ -2323,7 +2323,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本3-Ver.7_5
-  server: w49v6wz-g03.jp03-j7-vm0.entry.fr0528.art
+  server: wgrlifz-g03.jp03-j7-vm0.entry.fr0528.art
   port: 21583
   type: vmess
   uuid: 606c418a-9efb-3e17-a555-4e082a5e50a4
@@ -2333,7 +2333,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本4-Ver.8_5
-  server: fdb66w9-g03.jp04-1d-vm0.entry.fr0528.art
+  server: xgbljwt-g03.jp04-1d-vm0.entry.fr0528.art
   port: 446
   type: vmess
   uuid: 606c418a-9efb-3e17-a555-4e082a5e50a4
@@ -2343,7 +2343,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本5-Ver.9_5
-  server: qdliift-g03.jp05-h6-vm0.entry.fr0528.art
+  server: xd9l6wi-g03.jp05-h6-vm0.entry.fr0528.art
   port: 46484
   type: vmess
   uuid: 606c418a-9efb-3e17-a555-4e082a5e50a4
@@ -2353,7 +2353,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本6-Ver.8_5
-  server: xdb6jf9-g03.jp06-jz-vm0.entry.fr0528.art
+  server: w4b6ji9-g03.jp06-jz-vm0.entry.fr0528.art
   port: 28785
   type: vmess
   uuid: 606c418a-9efb-3e17-a555-4e082a5e50a4
@@ -2363,7 +2363,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本7-Ver.2_5
-  server: fg9vlo9-g03.jp07-sh-vm0.entry.fr0528.art
+  server: q4blioz-g03.jp07-sh-vm0.entry.fr0528.art
   port: 28785
   type: vmess
   uuid: 606c418a-9efb-3e17-a555-4e082a5e50a4
@@ -2373,7 +2373,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本1-Ver.7_6
-  server: sgl5vch-g04.jp01-nn-vm0.entry.fr0528.art
+  server: 1g9yz0v-g04.jp01-nn-vm0.entry.fr0528.art
   port: 21584
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2383,7 +2383,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本2-Ver.8_6
-  server: sg95v20-g04.jp02-e3-vm0.entry.fr0528.art
+  server: 74ryvcv-g04.jp02-e3-vm0.entry.fr0528.art
   port: 11776
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2393,7 +2393,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本3-Ver.7_6
-  server: s4r54mv-g04.jp03-j7-vm0.entry.fr0528.art
+  server: 74r2v20-g04.jp03-j7-vm0.entry.fr0528.art
   port: 21584
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2403,7 +2403,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本4-Ver.8_6
-  server: n492vcv-g04.jp04-1d-vm0.entry.fr0528.art
+  server: sglyv00-g04.jp04-1d-vm0.entry.fr0528.art
   port: 447
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2413,7 +2413,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本5-Ver.9_6
-  server: sdl5403-g04.jp05-h6-vm0.entry.fr0528.art
+  server: 1gl54ch-g04.jp05-h6-vm0.entry.fr0528.art
   port: 46485
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2423,7 +2423,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本6-Ver.8_6
-  server: 1db240v-g04.jp06-jz-vm0.entry.fr0528.art
+  server: sdb5v2h-g04.jp06-jz-vm0.entry.fr0528.art
   port: 28786
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2433,7 +2433,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本7-Ver.2_6
-  server: 1gl54c3-g04.jp07-sh-vm0.entry.fr0528.art
+  server: s4924c0-g04.jp07-sh-vm0.entry.fr0528.art
   port: 28786
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2443,7 +2443,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本1-Ver.7_7
-  server: 3czqztm-g04.jp01-nn-vm0.entry.fr0528.art
+  server: 3catvtc-g04.jp01-nn-vm0.entry.fr0528.art
   port: 21584
   type: vmess
   uuid: 27453cfd-bd7b-3eaa-a9b0-3efcbed6a822
@@ -2453,7 +2453,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本2-Ver.8_7
-  server: 6b7rzuc-g04.jp02-e3-vm0.entry.fr0528.art
+  server: 3c4tzym-g04.jp02-e3-vm0.entry.fr0528.art
   port: 11776
   type: vmess
   uuid: 27453cfd-bd7b-3eaa-a9b0-3efcbed6a822
@@ -2463,7 +2463,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本3-Ver.7_7
-  server: gczrvtm-g04.jp03-j7-vm0.entry.fr0528.art
+  server: 3catzyc-g04.jp03-j7-vm0.entry.fr0528.art
   port: 21584
   type: vmess
   uuid: 27453cfd-bd7b-3eaa-a9b0-3efcbed6a822
@@ -2473,7 +2473,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本4-Ver.8_7
-  server: 6b4rvyy-g04.jp04-1d-vm0.entry.fr0528.art
+  server: 6czqzty-g04.jp04-1d-vm0.entry.fr0528.art
   port: 447
   type: vmess
   uuid: 27453cfd-bd7b-3eaa-a9b0-3efcbed6a822
@@ -2483,7 +2483,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本5-Ver.9_7
-  server: 6carzyc-g04.jp05-h6-vm0.entry.fr0528.art
+  server: 6278ztc-g04.jp05-h6-vm0.entry.fr0528.art
   port: 46485
   type: vmess
   uuid: 27453cfd-bd7b-3eaa-a9b0-3efcbed6a822
@@ -2493,7 +2493,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本6-Ver.8_7
-  server: gca8zyc-g04.jp06-jz-vm0.entry.fr0528.art
+  server: g2zq4ty-g04.jp06-jz-vm0.entry.fr0528.art
   port: 28786
   type: vmess
   uuid: 27453cfd-bd7b-3eaa-a9b0-3efcbed6a822
@@ -2503,7 +2503,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本7-Ver.2_7
-  server: g7484um-g04.jp07-sh-vm0.entry.fr0528.art
+  server: 374tvuc-g04.jp07-sh-vm0.entry.fr0528.art
   port: 28786
   type: vmess
   uuid: 27453cfd-bd7b-3eaa-a9b0-3efcbed6a822
