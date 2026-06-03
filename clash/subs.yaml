@@ -466,114 +466,40 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
-- name: disney_netflix_GE |43.17Mb
-  server: 85.234.114.53
-  type: vless
-  port: 443
-  udp: true
-  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
-  tls: true
-  flow: xtls-rprx-vision-udp443
-  client-fingerprint: edge
-  servername: r1.mizulina.top
-  packet-encoding: ''
-- name: disney_netflix_GE |45.56Mb
-  server: 85.234.114.53
-  type: vless
-  port: 22231
-  udp: true
-  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: edge
-  servername: r1.mizulina.top
-  packet-encoding: ''
-- name: disney_netflix_GE |49.51Mb
+- name: disney_netflix_GE |51.29Mb
   server: r1.mizulina.top
   type: vless
   port: 22231
   udp: true
   uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+  network: tcp
   tls: true
-  flow: xtls-rprx-vision-udp443
+  flow: xtls-rprx-vision
   client-fingerprint: edge
   servername: r1.mizulina.top
   packet-encoding: ''
-- name: netflix_FR
-  server: cdg-1.fromblancwithlove.com
+- name: disney_netflix_US
+  server: 150.251.158.76
   type: vless
-  port: 8443
+  port: 443
   udp: true
-  uuid: 55f7d143-a594-4a91-b030-f227039f85ef
+  uuid: 10550754-cf62-3d3b-ba6a-50be27a275d7
+  network: tcp
   tls: true
-  alpn:
-  - h2
+  flow: xtls-rprx-vision
+  client-fingerprint: random
+  servername: s646.okgg.top
   packet-encoding: ''
-- name: netflix_NL |423.78Mb
-  server: 195.181.173.199
+- name: netflix_DE |170.76Mb
+  server: 152.233.35.228
   type: vless
   port: 8443
   udp: true
   uuid: 394f6981-a782-4779-9a85-e6cf22935d93
   tls: true
-  servername: ams1.fromblancwithlove.com
+  servername: de1.fromblancwithlove.com
   packet-encoding: ''
-- name: disney_netflix_DE
-  server: 83.147.254.4
-  type: vless
-  port: 36089
-  udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
-  network: ws
-  tls: true
-  servername: sas0dpjv2rmyx842.makuyo.dpdns.org
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: sas0dpjv2rmyx842.makuyo.dpdns.org
-  packet-encoding: ''
-- name: disney_netflix_US
-  server: 154.17.237.73
-  type: vless
-  port: 37811
-  udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
-  network: ws
-  tls: true
-  servername: sas0dpjv2rmyx842.makuyo.dpdns.org
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: sas0dpjv2rmyx842.makuyo.dpdns.org
-  packet-encoding: ''
-- name: disney_netflix_AT |45.93Mb
-  server: 130.49.219.126
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 2ee2b77f-e4cd-4e5d-af22-f9d919eeadd5
-  tls: true
-  client-fingerprint: chrome
-  servername: at16.fastlanehosting.ru
-  alpn:
-  - h2
-  - http/1.1
-  packet-encoding: ''
-- name: disney_netflix_KR
-  server: 165.246.171.218
-  type: vless
-  port: 10891
-  udp: true
-  uuid: 00000000-0000-4000-8000-000000000000
-  network: ws
-  tls: true
-  servername: sas0dpjv2rmyx842.makuyo.dpdns.org
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: sas0dpjv2rmyx842.makuyo.dpdns.org
-  packet-encoding: ''
-- name: netflix_FR_1
+- name: netflix_FR
   server: kobe.ns.cloudflare.com
   type: vless
   port: 443
@@ -590,25 +516,16 @@ proxies:
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: disney_netflix_DE |243.93Mb
-  server: 152.233.35.228
+- name: disney_netflix_GE |52.48Mb
+  server: 85.234.114.53
   type: vless
-  port: 8443
+  port: 22231
   udp: true
-  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
   tls: true
-  servername: de1.fromblancwithlove.com
-  packet-encoding: ''
-- name: disney_netflix_US_1
-  server: 150.251.158.76
-  type: vless
-  port: 443
-  udp: true
-  uuid: 10550754-cf62-3d3b-ba6a-50be27a275d7
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: random
-  servername: s646.okgg.top
+  flow: xtls-rprx-vision-udp443
+  client-fingerprint: edge
+  servername: r1.mizulina.top
   packet-encoding: ''
 - name: disney_netflix_DK |22.82Mb
   server: 155.117.127.137
@@ -617,7 +534,7 @@ proxies:
   udp: true
   uuid: 5a20b5d0-3a98-4792-9559-95f4e24277ec
   packet-encoding: ''
-- name: netflix_GB
+- name: disney_netflix_GB
   server: 202.37.33.81
   type: vless
   port: 443
@@ -634,25 +551,62 @@ proxies:
   alpn:
   - http/1.1
   packet-encoding: ''
-- name: Pool_ |211.96Mb
-  server: 108.181.126.122
+- name: disney_netflix_AT |45.93Mb
+  server: 130.49.219.126
+  type: vless
+  port: 8443
+  udp: true
+  uuid: 2ee2b77f-e4cd-4e5d-af22-f9d919eeadd5
+  tls: true
+  client-fingerprint: chrome
+  servername: at16.fastlanehosting.ru
+  alpn:
+  - h2
+  - http/1.1
+  packet-encoding: ''
+- name: disney_netflix_GE |43.17Mb
+  server: 85.234.114.53
+  type: vless
+  port: 443
+  udp: true
+  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+  tls: true
+  flow: xtls-rprx-vision-udp443
+  client-fingerprint: edge
+  servername: r1.mizulina.top
+  packet-encoding: ''
+- name: netflix_NL |423.78Mb
+  server: 195.181.173.199
+  type: vless
+  port: 8443
+  udp: true
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  servername: ams1.fromblancwithlove.com
+  packet-encoding: ''
+- name: netflix_FR_1
+  server: cdg-1.fromblancwithlove.com
+  type: vless
+  port: 8443
+  udp: true
+  uuid: 55f7d143-a594-4a91-b030-f227039f85ef
+  tls: true
+  alpn:
+  - h2
+  packet-encoding: ''
+- name: disney_netflix_TW |10.34Mb
+  server: r3mrcg001269pz2.cybervena.com
   type: ss
-  port: 8388
-  password: CJmTCCx7Ltud
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
   cipher: chacha20-ietf-poly1305
-- name: ' |10.63Mb'
-  server: 82.38.31.205
+- name: netflix_NL |115.84Mb
+  server: 82.38.31.149
   type: ss
   port: 8080
   udp: true
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  cipher: chacha20-ietf-poly1305
-- name: Relay_ |32.06Mb
-  server: 82.38.31.210
-  type: ss
-  port: 8080
-  udp: true
-  password: k1dBOmOB4oqi7Ump37a1bQ
+  password: oZIoA69Q8yhcQV8ka3Pa3A
   cipher: chacha20-ietf-poly1305
 - name: Pool_ |20.75Mb
   server: 61.171.92.202
@@ -660,36 +614,35 @@ proxies:
   port: 1001
   password: '123'
   cipher: aes-256-gcm
-- name: Relay_ |109.13Mb
-  server: 82.38.31.149
+- name: Relay_ |82.55Mb
+  server: 82.38.31.208
   type: ss
   port: 8080
   udp: true
-  password: oZIoA69Q8yhcQV8ka3Pa3A
+  password: k1dBOmOB4oqi7Ump37a1bQ
   cipher: chacha20-ietf-poly1305
-- name: netflix_TW | 3.74Mb
-  server: world.t.51guangtaobao.com
-  type: vmess
-  port: 2510
+- name: Relay_-🇳🇱NL_26 |32.06Mb
+  server: 82.38.31.210
+  type: ss
+  port: 8080
   udp: true
-  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-- name: Relay_-🇯🇵JP_31 |21.16Mb
-  server: v6.hdacd.com
-  type: vmess
-  port: 30806
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  cipher: chacha20-ietf-poly1305
+- name: netflix_NL |211.96Mb
+  server: 108.181.126.122
+  type: ss
+  port: 8388
+  password: CJmTCCx7Ltud
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_US | 2.33Mb
+  server: 216.105.168.18
+  type: ss
+  port: 443
   udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: Relay_ |185.52Mb
-  server: 82.198.246.233
+  password: hCCWOcIsK5wrFz4OX70rWf
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_US |39.16Mb
+  server: 82.198.246.9
   type: vmess
   port: 180
   udp: true
@@ -698,19 +651,17 @@ proxies:
   cipher: aes-128-gcm
   http-opts: {}
   h2-opts: {}
-- name: Relay_ |249.03Mb
-  server: 82.198.246.97
+- name: disney_netflix_US |41.85Mb
+  server: 82.198.246.233
   type: vmess
   port: 180
-  udp: true
   uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   alterId: 0
   cipher: auto
   http-opts: {}
   h2-opts: {}
-  skip-cert-verify: true
-- name: Relay_ |143.20Mb
-  server: 82.198.246.9
+- name: Relay_ | 4.22Mb
+  server: 82.198.246.214
   type: vmess
   port: 180
   udp: true
@@ -730,7 +681,39 @@ proxies:
   cipher: aes-128-gcm
   http-opts: {}
   h2-opts: {}
-- name: disney_netflix_US |178.89Mb
+- name: disney_netflix_US |37.12Mb
+  server: 82.198.246.97
+  type: vmess
+  port: 180
+  udp: true
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_TW | 3.54Mb
+  server: world.t.51guangtaobao.com
+  type: vmess
+  port: 2510
+  udp: true
+  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+- name: Relay_-🇯🇵JP_38 |37.17Mb
+  server: v6.hdacd.com
+  type: vmess
+  port: 30806
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: Relay_ |185.92Mb
   server: 82.198.246.250
   type: vmess
   port: 180
@@ -741,35 +724,71 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: Relay_ | 6.72Mb
-  server: 18.181.199.223
+- name: disney_netflix_HK
+  server: 90081bb25c.node.tro.cac.cab
   type: trojan
-  port: 8066
-  password: d84665c37878196ecf983cf6910e3b44
-  sni: www.nintendogames.net
+  port: 45619
+  udp: true
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: fr.01.naiun.bilibili.com
   skip-cert-verify: true
-- name: Relay_ | 0.51Mb
+- name: disney_netflix_HK | 1.69Mb
   server: 155.117.198.82
   type: trojan
   port: 46424
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   sni: de.01.naiun.bilibili.com
   skip-cert-verify: true
-- name: Relay_ | 4.30Mb
+- name: disney_netflix_SG | 9.59Mb
+  server: 18.181.199.223
+  type: trojan
+  port: 1180
+  password: d84665c37878196ecf983cf6910e3b44
+  sni: www.nintendogames.net
+  skip-cert-verify: true
+- name: disney_netflix_SG | 5.21Mb
   server: 18.181.199.223
   type: trojan
   port: 3842
   password: d84665c37878196ecf983cf6910e3b44
   sni: www.nintendogames.net
   skip-cert-verify: true
-- name: disney_HK |10.97Mb
-  server: 18.181.199.223
+- name: disney_netflix_HK | 2.97Mb
+  server: 155.117.198.87
   type: trojan
-  port: 53018
-  password: d84665c37878196ecf983cf6910e3b44
-  sni: www.nintendogames.net
+  port: 47909
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: is.01.naiun.bilibili.com
   skip-cert-verify: true
-- name: Relay_ |55.85Mb
+- name: disney_netflix_HK | 0.06Mb
+  server: 155.117.198.86
+  type: trojan
+  port: 46424
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: de.01.naiun.bilibili.com
+  skip-cert-verify: true
+- name: disney_netflix_HK_1
+  server: 155.117.198.86
+  type: trojan
+  port: 45619
+  udp: true
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: fr.01.naiun.bilibili.com
+  skip-cert-verify: true
+- name: Relay_-🇫🇷FR_47
+  server: 104.18.32.37
+  type: trojan
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.gossipglove.com
+  skip-cert-verify: true
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.gossipglove.com
+  network: ws
+- name: disney_netflix_US |22.28Mb
   server: 95.40.4.37
   type: trojan
   port: 2520
@@ -777,31 +796,21 @@ proxies:
   password: BxceQaOe
   sni: 95.40.4.37
   skip-cert-verify: true
-- name: Relay_ |10.12Mb
+- name: disney_netflix_HK | 2.59Mb
+  server: 155.117.198.83
+  type: trojan
+  port: 46424
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: de.01.naiun.bilibili.com
+  skip-cert-verify: true
+- name: disney_netflix_HK |15.61Mb
   server: 155.117.198.83
   type: trojan
   port: 45553
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   sni: ch.01.naiun.bilibili.com
   skip-cert-verify: true
-- name: Relay_ | 0.11Mb
-  server: 155.117.198.87
-  type: trojan
-  port: 45553
-  udp: true
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: ch.01.naiun.bilibili.com
-  skip-cert-verify: true
-- name: Relay_ | 3.40Mb
-  server: 155.117.198.83
-  type: trojan
-  port: 48697
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  alpn:
-  - http/1.1
-  sni: gh.01.naiun.bilibili.com
-  skip-cert-verify: true
-- name: Relay_ | 2.89Mb
+- name: disney_netflix_HK | 2.89Mb
   server: 155.117.198.82
   type: trojan
   port: 48697
@@ -809,30 +818,7 @@ proxies:
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   sni: gh.01.naiun.bilibili.com
   skip-cert-verify: true
-- name: Relay_ | 2.79Mb
-  server: 155.117.198.86
-  type: trojan
-  port: 48697
-  udp: true
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: gh.01.naiun.bilibili.com
-  skip-cert-verify: true
-- name: Relay_ | 2.86Mb
-  server: 155.117.198.87
-  type: trojan
-  port: 48697
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: gh.01.naiun.bilibili.com
-  skip-cert-verify: true
-- name: netflix_HK
-  server: 155.117.198.86
-  type: trojan
-  port: 45619
-  udp: true
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: fr.01.naiun.bilibili.com
-  skip-cert-verify: true
-- name: netflix_HK_1
+- name: disney_netflix_HK_2
   server: 155.117.198.83
   type: trojan
   port: 45619
@@ -841,31 +827,7 @@ proxies:
   - http/1.1
   sni: fr.01.naiun.bilibili.com
   skip-cert-verify: true
-- name: Relay_ | 3.40Mb_1
-  server: 90081bb25c.node.tro.cac.cab
-  type: trojan
-  port: 47909
-  udp: true
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: is.01.naiun.bilibili.com
-  skip-cert-verify: true
-- name: netflix_HK_2
-  server: 90081bb25c.node.tro.cac.cab
-  type: trojan
-  port: 45619
-  udp: true
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: fr.01.naiun.bilibili.com
-  skip-cert-verify: true
-- name: Relay_ | 2.64Mb
-  server: 90081bb25c.node.tro.cac.cab
-  type: trojan
-  port: 48697
-  udp: true
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: gh.01.naiun.bilibili.com
-  skip-cert-verify: true
-- name: Relay_ | 0.37Mb
+- name: disney_netflix_HK | 0.37Mb
   server: 90081bb25c.node.tro.cac.cab
   type: trojan
   port: 45553
@@ -873,7 +835,63 @@ proxies:
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   sni: ch.01.naiun.bilibili.com
   skip-cert-verify: true
-- name: netflix_HK_3
+- name: disney_netflix_HK | 0.11Mb
+  server: 155.117.198.87
+  type: trojan
+  port: 45553
+  udp: true
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: ch.01.naiun.bilibili.com
+  skip-cert-verify: true
+- name: Relay_ | 0.77Mb
+  server: 211.76.176.98
+  type: trojan
+  port: 19128
+  udp: true
+  password: gcuCpQfaiVeDBdWG
+  sni: yazhou10.dynu.net
+  skip-cert-verify: true
+- name: Relay_ | 0.34Mb
+  server: jpbgp.netvigor.cc
+  type: trojan
+  port: 19128
+  udp: true
+  password: gcuCpQfaiVeDBdWG
+  sni: yazhou10.dynu.net
+  skip-cert-verify: true
+- name: disney_netflix_HK | 2.79Mb
+  server: 155.117.198.86
+  type: trojan
+  port: 48697
+  udp: true
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: gh.01.naiun.bilibili.com
+  skip-cert-verify: true
+- name: disney_netflix_HK | 2.86Mb
+  server: 155.117.198.87
+  type: trojan
+  port: 48697
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: gh.01.naiun.bilibili.com
+  skip-cert-verify: true
+- name: disney_netflix_HK | 3.40Mb
+  server: 155.117.198.83
+  type: trojan
+  port: 48697
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  alpn:
+  - http/1.1
+  sni: gh.01.naiun.bilibili.com
+  skip-cert-verify: true
+- name: disney_netflix_HK | 3.40Mb_1
+  server: 90081bb25c.node.tro.cac.cab
+  type: trojan
+  port: 47909
+  udp: true
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: is.01.naiun.bilibili.com
+  skip-cert-verify: true
+- name: disney_netflix_HK_3
   server: 155.117.198.87
   type: trojan
   port: 45619
@@ -881,46 +899,30 @@ proxies:
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   sni: fr.01.naiun.bilibili.com
   skip-cert-verify: true
-- name: Relay_ | 0.06Mb
-  server: 155.117.198.86
+- name: disney_netflix_HK | 2.64Mb
+  server: 90081bb25c.node.tro.cac.cab
   type: trojan
-  port: 46424
+  port: 48697
+  udp: true
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: de.01.naiun.bilibili.com
+  sni: gh.01.naiun.bilibili.com
   skip-cert-verify: true
-- name: Relay_ | 2.82Mb
-  server: 155.117.198.83
-  type: trojan
-  port: 46424
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: de.01.naiun.bilibili.com
-  skip-cert-verify: true
-- name: Relay_ | 2.97Mb
-  server: 155.117.198.87
-  type: trojan
-  port: 47909
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: is.01.naiun.bilibili.com
-  skip-cert-verify: true
-- name: ' |65.16Mb'
+- name: netflix_DE |63.00Mb
   server: 57.129.121.230
   type: ss
   country: 🇧🇪BE
   port: 10443
   password: uROuEqsL8IUMMVb4wDwnGU
   cipher: chacha20-ietf-poly1305
-- name: ' |15.16Mb'
-  server: 57.151.100.27
-  type: vmess
-  country: 🇧🇪BE
-  port: 10086
-  uuid: 550e8400-e29b-41d4-a716-446655440000
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
+- name: netflix_CA |65.07Mb
+  server: 148.113.208.228
+  type: trojan
+  country: 🇨🇦CA
+  port: 443
+  udp: true
+  password: 3ac6a6ca99f74941b1eaf892818e2ddb
   skip-cert-verify: true
-- name: disney_TR |19.25Mb
+- name: disney_netflix_TR |38.75Mb
   server: tr-1.stunnel.cc
   type: trojan
   country: 🇨🇿CZ
@@ -929,7 +931,7 @@ proxies:
   password: tunnel-jdybi
   sni: creativecommons.org
   skip-cert-verify: true
-- name: disney_netflix_DE |247.72Mb
+- name: netflix_DE |55.80Mb
   server: vpn-de-001.fastervpn.world
   type: hysteria2
   country: 🇩🇪DE
@@ -938,14 +940,14 @@ proxies:
   password: qQe1z5kU8kN6SlKnDt9Ru3Qp
   sni: vpn-de-001.fastervpn.world
   skip-cert-verify: true
-- name: Relay_ |28.80Mb
+- name: netflix_DE |13.92Mb
   server: 51.15.23.63
   type: ss
   country: 🇫🇷FR
   port: 989
   password: f8f7aCzcPKbsF8p3
   cipher: aes-256-cfb
-- name: disney_netflix_DE_1
+- name: netflix_DE
   server: 51.195.91.135
   type: vmess
   country: 🇫🇷FR
@@ -959,75 +961,74 @@ proxies:
   skip-cert-verify: true
   ws-opts:
     path: /vpnjantit
-- name: Relay_🇬🇧GB-🇳🇱NL_69 | 2.65Mb
-  server: 82.38.31.189
-  type: ss
+- name: Relay_ | 2.27Mb
+  server: v33.hdacd.com
+  type: vmess
   country: 🇬🇧GB
-  port: 8080
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  cipher: chacha20-ietf-poly1305
-- name: disney_HK |10.33Mb
+  port: 30833
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_HK | 6.13Mb
   server: 112.213.102.188
   type: ss
   country: 🇭🇰HK
   port: 41632
   password: qwerREWQ@@
   cipher: aes-256-cfb
-- name: netflix_TW | 2.53Mb
-  server: world.t.51guangtaobao.com
-  type: vmess
+- name: disney_netflix_HK | 3.74Mb
+  server: 103.149.182.105
+  type: ss
   country: 🇭🇰HK
-  port: 2512
-  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: ' |211.25Mb'
-  server: 217.30.10.70
-  type: ss
-  country: 🇵🇱PL
-  port: 9019
-  password: GA9KzeEgvfxNrgmM
-  cipher: aes-256-cfb
-- name: ' |207.80Mb'
-  server: 217.30.10.70
-  type: ss
-  country: 🇵🇱PL
-  port: 9038
-  password: gYCYXfkUQEs2TaJQ
-  cipher: aes-256-cfb
-- name: ' | 2.02Mb'
-  server: 217.30.10.70
-  type: ss
-  country: 🇵🇱PL
-  port: 9041
-  password: U6qnYRhfyDmn8sgn
-  cipher: aes-256-cfb
-- name: ' | 1.06Mb'
-  server: 217.30.10.70
-  type: ss
-  country: 🇵🇱PL
-  port: 9026
-  password: QWDDvVE9npNurQfA
-  cipher: aes-256-cfb
-- name: ' |208.61Mb'
+  port: 8388
+  password: asd123456
+  cipher: chacha20-ietf
+- name: ' |213.26Mb'
   server: 217.30.10.70
   type: ss
   country: 🇵🇱PL
   port: 9015
   password: ZpNDDKRu9MagNvaf
   cipher: aes-256-cfb
-- name: ' |207.85Mb'
+- name: ' |219.31Mb'
+  server: 217.30.10.70
+  type: ss
+  country: 🇵🇱PL
+  port: 9038
+  password: gYCYXfkUQEs2TaJQ
+  cipher: aes-256-cfb
+- name: ' |210.60Mb'
+  server: 217.30.10.70
+  type: ss
+  country: 🇵🇱PL
+  port: 9019
+  password: GA9KzeEgvfxNrgmM
+  cipher: aes-256-cfb
+- name: ' |218.91Mb'
+  server: 217.30.10.70
+  type: ss
+  country: 🇵🇱PL
+  port: 9041
+  password: U6qnYRhfyDmn8sgn
+  cipher: aes-256-cfb
+- name: ' | 2.08Mb'
   server: 217.30.10.70
   type: ss
   country: 🇵🇱PL
   port: 9031
   password: BwcAUZk8hUFAkDGN
   cipher: aes-256-cfb
-- name: 🇷🇺RU_80
+- name: ' |219.25Mb'
+  server: 217.30.10.70
+  type: ss
+  country: 🇵🇱PL
+  port: 9026
+  password: QWDDvVE9npNurQfA
+  cipher: aes-256-cfb
+- name: 🇷🇺RU_81
   server: 195.133.53.33
   type: hysteria2
   country: 🇷🇺RU
@@ -1036,14 +1037,39 @@ proxies:
   password: 10550754-cf62-3d3b-ba6a-50be27a275d7
   sni: s516.okgfw.top
   skip-cert-verify: false
-- name: ' | 5.57Mb'
+- name: netflix_FI | 2.20Mb
   server: 109.107.182.229
   type: ss
   country: 🇷🇺RU
   port: 51544
   password: NMao3laQtxBnEgzbuJ0khb
   cipher: chacha20-ietf-poly1305
-- name: ' | 5.18Mb'
+- name: Relay_🇷🇺RU-🇮🇪IE_83 | 3.07Mb
+  server: renderer-stream-1-411.mirra.now
+  type: vmess
+  country: 🇷🇺RU
+  port: 443
+  uuid: df9c9355-b02c-4c12-909d-0dbeb725d52b
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: renderer-stream-1-411.mirra.now
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /api/v1/gpu-stream/socket
+    headers:
+      HOST: renderer-stream-1-411.mirra.now
+- name: Relay_ |10.16Mb
+  server: r3mrcg001287h3p.cybervena.com
+  type: ss
+  country: 🇹🇼TW
+  port: 50099
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_TW | 4.01Mb
   server: 185.189.160.105
   type: ss
   country: 🇹🇼TW
@@ -1059,14 +1085,22 @@ proxies:
   password: bce6c821-200d-421f-bf3d-7159e5246ea0
   sni: hy2.123266.xyz
   skip-cert-verify: true
-- name: netflix_FR_2
-  server: 45.92.218.56
-  type: ss
+- name: disney_netflix_US |45.97Mb
+  server: 107.175.91.118
+  type: vmess
   country: 🇺🇸US
-  port: 1080
-  password: RjG_Pd534ZVJRMdODjCNMA
-  cipher: chacha20-ietf-poly1305
-- name: ' |41.87Mb'
+  port: 443
+  uuid: 1bb1f95f-7425-4442-93f7-8fc1bd1a2001
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /v2ray-wisp
+- name: disney_netflix_US |42.50Mb
   server: 84.17.41.2
   type: vmess
   country: 🇺🇸US
@@ -1078,6 +1112,24 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
+- name: Relay_🇺🇸US-🇭🇰HK_91 |27.97Mb
+  server: cf.scpnb.top
+  type: vmess
+  country: 🇺🇸US
+  port: 443
+  uuid: 7fd8d1db-96ec-4e46-80a8-74ad9472384e
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: graph-keep-beds-catalog.trycloudflare.com
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /7fd8d1db-96ec-4e46-80a8-74ad9472384e-vm
+    headers:
+      HOST: graph-keep-beds-catalog.trycloudflare.com
 - name: Relay_ | 8.63Mb
   server: usaapp1.jisuyun.top
   type: vmess
@@ -1096,7 +1148,7 @@ proxies:
     path: /usavm
     headers:
       HOST: usaapp1.jisuyun.top
-- name: ' |56.14Mb'
+- name: disney_netflix_US |62.27Mb
   server: 107.172.75.141
   type: vmess
   country: 🇺🇸US
@@ -1108,22 +1160,27 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: ' |45.81Mb'
-  server: 107.175.91.118
-  type: vmess
-  country: 🇺🇸US
+- name: disney_netflix_SC |31.69Mb
+  server: 169.239.128.39
+  type: trojan
+  country: 🇿🇦ZA
   port: 443
-  uuid: 1bb1f95f-7425-4442-93f7-8fc1bd1a2001
-  alterId: 0
+  udp: true
+  password: 3ac6a6ca99f74941b1eaf892818e2ddb
+  skip-cert-verify: true
+- name: Relay_🏁 ZZ-🇺🇸US_97
+  server: v35.hdacd.com
+  type: vmess
+  country: 🏁 ZZ
+  port: 30835
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
   cipher: auto
-  network: ws
+  network: tcp
   http-opts: {}
   h2-opts: {}
-  tls: true
   skip-cert-verify: true
-  ws-opts:
-    path: /v2ray-wisp
-- name: Relay_ |161.31Mb
+- name: netflix_DE |51.15Mb
   server: speedtest.org
   type: vmess
   country: 🏁ZZ
@@ -1140,6 +1197,14 @@ proxies:
     path: /IOebhLMhl1CTbFHbL95myfRX2
     headers:
       HOST: de2.ping-game.ir
+- name: netflix_LI |42.82Mb
+  server: 45.15.167.20
+  type: trojan
+  country: 🏁ZZ
+  port: 443
+  udp: true
+  password: 3ac6a6ca99f74941b1eaf892818e2ddb
+  skip-cert-verify: true
 - name: 🇩🇪 免费机场TG:@proxyshareCN | DE@proxyshareCN
   server: 159.69.162.184
   port: 43200
@@ -1428,26 +1493,26 @@ proxies:
   type: ss
 - alterId: 2
   cipher: auto
-  name: Hong Kong_Central_vmess_102
+  name: Hong Kong_Yuen Long San Hui_vmess_102
   port: 30807
   server: v10.hdacd.com
   skip-cert-verify: false
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: Hong Kong_None_trojan_103
+- name: Japan_Tokyo_trojan_103
   network: tcp
   password: d84665c37878196ecf983cf6910e3b44
   port: 53018
-  server: 18.163.33.60
+  server: 18.181.199.223
   skip-cert-verify: true
   sni: www.nintendogames.net
   type: trojan
-- name: Hong Kong_None_trojan_104
+- name: Poland_None_trojan_104
   network: tcp
   password: BxceQaOe
-  port: 11541
-  server: 43.198.204.47
+  port: 11031
+  server: 95.40.4.37
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
@@ -1462,47 +1527,68 @@ proxies:
 - name: Japan_Tokyo_trojan_106
   network: tcp
   password: BxceQaOe
-  port: 4099
-  server: 18.183.163.141
+  port: 30022
+  server: 43.207.209.201
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
-  udp: true
-- name: Japan_Tokyo_trojan_109
+- name: Hong Kong_None_trojan_107
   network: tcp
   password: d84665c37878196ecf983cf6910e3b44
-  port: 1180
+  port: 11541
+  server: 43.198.204.47
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  type: trojan
+- name: Japan_Tokyo_trojan_108
+  network: tcp
+  password: d84665c37878196ecf983cf6910e3b44
+  port: 8066
   server: 18.181.199.223
   skip-cert-verify: true
   sni: www.nintendogames.net
   type: trojan
-  udp: true
-- name: Hong Kong_None_trojan_1010
+- name: Hong Kong_None_trojan_109
   network: tcp
   password: d84665c37878196ecf983cf6910e3b44
-  port: 3842
-  server: 18.163.33.60
+  port: 2511
+  server: 18.162.232.155
   skip-cert-verify: true
   sni: www.nintendogames.net
   type: trojan
-- name: Japan_Tokyo_trojan_1011
+- name: Hong Kong_None_trojan_1011
   network: tcp
   password: BxceQaOe
   port: 10478
-  server: 43.206.130.64
+  server: 43.199.217.71
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
 - name: Hong Kong_None_trojan_1012
   network: tcp
   password: d84665c37878196ecf983cf6910e3b44
-  port: 5224
-  server: 18.163.33.60
+  port: 6604
+  server: 18.162.232.155
   skip-cert-verify: true
   sni: www.nintendogames.net
   type: trojan
 - name: Poland_None_trojan_1013
   network: tcp
+  password: BxceQaOe
+  port: 2702
+  server: 95.40.68.150
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: Japan_Tokyo_trojan_1018
+  password: BxceQaOe
+  port: 4099
+  server: 18.183.163.141
+  skip-cert-verify: true
+  sni: t.me%252Fripaojiedian
+  type: trojan
+  udp: true
+- name: Poland_None_trojan_1021
   password: BxceQaOe
   port: 17801
   server: 95.40.68.192
@@ -1600,54 +1686,6 @@ proxies:
   tls: false
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
-- name: Poland_None_trojan_1114
-  network: tcp
-  password: BxceQaOe
-  port: 11031
-  server: 95.40.4.37
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-- name: Japan_Tokyo_trojan_1116
-  network: tcp
-  password: BxceQaOe
-  port: 30022
-  server: 43.207.209.201
-  skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-  type: trojan
-- name: Hong Kong_None_trojan_1119
-  network: tcp
-  password: d84665c37878196ecf983cf6910e3b44
-  port: 2511
-  server: 18.162.232.155
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Hong Kong_None_trojan_1121
-  network: tcp
-  password: BxceQaOe
-  port: 10478
-  server: 43.199.217.71
-  skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-  type: trojan
-- name: Hong Kong_None_trojan_1122
-  network: tcp
-  password: d84665c37878196ecf983cf6910e3b44
-  port: 6604
-  server: 18.162.232.155
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Poland_None_trojan_1123
-  network: tcp
-  password: BxceQaOe
-  port: 2702
-  server: 95.40.68.150
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
 - alpn:
   - http/1.1
   name: France_Paris_trojan_1129
@@ -1686,6 +1724,14 @@ proxies:
   password: telegram-id-directvpn
   skip-cert-verify: true
   delay: 805
+- name: 法国 - 巴黎 - 6
+  server: 45.92.218.56
+  type: ss
+  country: 🇺🇸US
+  port: 1080
+  password: RjG_Pd534ZVJRMdODjCNMA
+  cipher: chacha20-ietf-poly1305
+  delay: 2845
 - name: 美国 - 洛杉矶 - 5
   server: select-us.ddnskunlun.com
   type: vmess
@@ -1718,7 +1764,7 @@ proxies:
   type: socks5
   server: 127.0.0.1
   port: 1080
-- name: 剩余流量：908.94 GB
+- name: 剩余流量：905.83 GB
   type: ss
   server: bgroup.node1.s.nodelist-airport.com
   port: 53431
@@ -1836,7 +1882,7 @@ proxies:
   cipher: aes-128-gcm
   password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
   udp: true
-- name: 剩余流量：3998.07 GB
+- name: 剩余流量：3997.24 GB
   type: ss
   server: ss.001.node-for-bigairport.win
   port: 21888
@@ -2118,7 +2164,7 @@ proxies:
   cipher: auto
   udp: true
 - name: 🇯🇵 免费-日本1-Ver.7
-  server: ngry4mv-g04.jp01-nn-vm0.entry.fr0528.art
+  server: 749yvm0-g04.jp01-nn-vm0.entry.fr0528.art
   port: 21584
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2128,7 +2174,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本2-Ver.8
-  server: 7gl54c3-g04.jp02-e3-vm0.entry.fr0528.art
+  server: sdryv0v-g04.jp02-e3-vm0.entry.fr0528.art
   port: 11776
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2138,7 +2184,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本3-Ver.7
-  server: s495v2h-g04.jp03-j7-vm0.entry.fr0528.art
+  server: 7glyzc3-g04.jp03-j7-vm0.entry.fr0528.art
   port: 21584
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2148,7 +2194,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本4-Ver.8
-  server: ngb5v0h-g04.jp04-1d-vm0.entry.fr0528.art
+  server: nd954mh-g04.jp04-1d-vm0.entry.fr0528.art
   port: 447
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2158,7 +2204,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本5-Ver.9
-  server: 7d95z0h-g04.jp05-h6-vm0.entry.fr0528.art
+  server: sdr2vmv-g04.jp05-h6-vm0.entry.fr0528.art
   port: 46485
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2168,7 +2214,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本6-Ver.8
-  server: s4ly40h-g04.jp06-jz-vm0.entry.fr0528.art
+  server: s4b2vm0-g04.jp06-jz-vm0.entry.fr0528.art
   port: 28786
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2178,7 +2224,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本7-Ver.2
-  server: n4b2vmh-g04.jp07-sh-vm0.entry.fr0528.art
+  server: 1gr540h-g04.jp07-sh-vm0.entry.fr0528.art
   port: 28786
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2188,7 +2234,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本1-Ver.7_1
-  server: 7d9yz2v-g04.jp01-nn-vm0.entry.fr0528.art
+  server: 7dl5zm3-g04.jp01-nn-vm0.entry.fr0528.art
   port: 21584
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2198,7 +2244,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本2-Ver.8_1
-  server: sd95z20-g04.jp02-e3-vm0.entry.fr0528.art
+  server: n492z23-g04.jp02-e3-vm0.entry.fr0528.art
   port: 11776
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2208,7 +2254,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本3-Ver.7_1
-  server: 149yvmh-g04.jp03-j7-vm0.entry.fr0528.art
+  server: s4r5zcv-g04.jp03-j7-vm0.entry.fr0528.art
   port: 21584
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2218,7 +2264,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本4-Ver.8_1
-  server: sgryz2v-g04.jp04-1d-vm0.entry.fr0528.art
+  server: sgby400-g04.jp04-1d-vm0.entry.fr0528.art
   port: 447
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2228,7 +2274,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本5-Ver.9_1
-  server: 7g95v0h-g04.jp05-h6-vm0.entry.fr0528.art
+  server: ngl5zm0-g04.jp05-h6-vm0.entry.fr0528.art
   port: 46485
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2238,7 +2284,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本6-Ver.8_1
-  server: 1gb2zcv-g04.jp06-jz-vm0.entry.fr0528.art
+  server: sgr54ch-g04.jp06-jz-vm0.entry.fr0528.art
   port: 28786
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2248,7 +2294,7 @@ proxies:
   skip-cert-verify: false
   udp: true
 - name: 🇯🇵 免费-日本7-Ver.2_1
-  server: 7db24ch-g04.jp07-sh-vm0.entry.fr0528.art
+  server: 749yvcv-g04.jp07-sh-vm0.entry.fr0528.art
   port: 28786
   type: vmess
   uuid: c2c30cdc-e150-36b4-b611-020e6b2f2cb2
@@ -2320,13 +2366,6 @@ proxies:
   password: VPTFm%3DoZ%2B%2BSuNT%2BjMRqGZqrAnWq-r8KJyY
   sni: 172.104.237.100
   skip-cert-verify: true
-- name: '%F0%9F%87%A8%F0%9F%87%B3%20%E5%8F%B0%E6%B9%BE%E7%9C%81%20V2CROSS.COM'
-  type: trojan
-  server: jpbgp.netvigor.cc
-  port: 19128
-  password: gcuCpQfaiVeDBdWG
-  sni: yazhou10.dynu.net
-  skip-cert-verify: true
 - name: '%F0%9F%87%BA%F0%9F%87%B8%20%E7%BE%8E%E5%9B%BD%20V2CROSS.COM'
   type: trojan
   server: 65.20.90.225
@@ -2341,12 +2380,33 @@ proxies:
   password: E_hUHrn0+6VeZO=v9=fLgoPDXZWGfcrejg
   sni: 172.238.19.11
   skip-cert-verify: true
-- name: '%E8%87%BA%E7%81%A3%E7%9C%81%E4%B8%A8yoyapai.com%5Cr'
+- name: '%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF3%7C%40ripaojiedian'
   type: trojan
-  server: 211.76.176.98
-  port: 19128
-  password: gcuCpQfaiVeDBdWG
-  sni: yazhou10.dynu.net
+  server: 18.163.33.60
+  port: 53018
+  password: d84665c37878196ecf983cf6910e3b44
+  sni: www.nintendogames.net
+  skip-cert-verify: true
+- name: '%F0%9F%87%B8%F0%9F%87%AC%20%E6%96%B0%E5%8A%A0%E5%9D%A12%7C%40ripaojiedian'
+  type: trojan
+  server: 18.163.33.60
+  port: 3842
+  password: d84665c37878196ecf983cf6910e3b44
+  sni: www.nintendogames.net
+  skip-cert-verify: true
+- name: '%F0%9F%87%B8%F0%9F%87%AC%20%E6%96%B0%E5%8A%A0%E5%9D%A13%7C%40ripaojiedian'
+  type: trojan
+  server: 43.206.130.64
+  port: 10478
+  password: BxceQaOe
+  sni: t.me%2Fripaojiedian
+  skip-cert-verify: true
+- name: '%F0%9F%87%BA%F0%9F%87%B8%20%E7%BE%8E%E5%9B%BD%7C%40ripaojiedian'
+  type: trojan
+  server: 18.163.33.60
+  port: 5224
+  password: d84665c37878196ecf983cf6910e3b44
+  sni: www.nintendogames.net
   skip-cert-verify: true
 - name: '%E4%BA%9E%E5%A4%AA%E5%9C%B0%E5%8D%80%E4%B8%A8yoyapai.com%5Cr'
   type: trojan
@@ -3379,13 +3439,6 @@ proxies:
   port: 443
   password: humanity
   sni: www.multiplydose.com
-  skip-cert-verify: true
-- name: '%3E%3E%40v2line%3A%3AFR'
-  type: trojan
-  server: 104.18.32.37
-  port: 443
-  password: humanity
-  sni: www.gossipglove.com
   skip-cert-verify: true
 - name: '%3E%3E%40freeland8%3A%3AFR'
   type: trojan
@@ -5168,12 +5221,6 @@ proxies:
   port: 35361
   cipher: chacha20-ietf-poly1305
   password: g0UgfsdXOhn8McpdHpWcmo
-- name: 4Sarina-630
-  type: ss
-  server: 216.105.168.18
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: hCCWOcIsK5wrFz4OX70rWf
 - name: 4Sarina-631
   type: ss
   server: 147.90.234.133
@@ -5252,6 +5299,12 @@ proxies:
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 4Sarina-646
+  type: ss
+  server: 82.38.31.189
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
 - name: 4Sarina-647
   type: ss
   server: 82.38.31.190
@@ -5282,9 +5335,9 @@ proxies:
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 4Sarina-653
+- name: 4Sarina-652
   type: ss
-  server: 82.38.31.208
+  server: 82.38.31.205
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
@@ -64237,6 +64290,16 @@ proxies:
   network: ws
   tls: true
   skip-cert-verify: true
+- name: 4Sarina-12303
+  type: vmess
+  server: 57.151.100.27
+  port: 10086
+  uuid: 550e8400-e29b-41d4-a716-446655440000
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  skip-cert-verify: true
 - name: 4Sarina-12304
   type: vmess
   server: 5e0yC.c6tu5uwk9.buzz
@@ -65687,16 +65750,6 @@ proxies:
   network: tcp
   tls: false
   skip-cert-verify: true
-- name: 4Sarina-12575
-  type: vmess
-  server: 82.198.246.214
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: aes-128-gcm
-  network: tcp
-  tls: false
-  skip-cert-verify: true
 - name: 4Sarina-12746
   type: vmess
   server: 82.29.132.9
@@ -66632,16 +66685,6 @@ proxies:
   server: cf.naixii.top
   port: 443
   uuid: 3fad3b4c-8691-42f2-a46d-9875cacaeeb2
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  skip-cert-verify: true
-- name: 4Sarina-12880
-  type: vmess
-  server: cf.scpnb.top
-  port: 443
-  uuid: 7fd8d1db-96ec-4e46-80a8-74ad9472384e
   alterId: 0
   cipher: auto
   network: ws
@@ -69767,16 +69810,6 @@ proxies:
   network: ws
   tls: true
   skip-cert-verify: true
-- name: 4Sarina-13351
-  type: vmess
-  server: renderer-stream-1-411.mirra.now
-  port: 443
-  uuid: df9c9355-b02c-4c12-909d-0dbeb725d52b
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  skip-cert-verify: true
 - name: 4Sarina-13358
   type: vmess
   server: rk59.moonfree.top
@@ -70747,30 +70780,10 @@ proxies:
   network: ws
   tls: true
   skip-cert-verify: true
-- name: 4Sarina-13519
-  type: vmess
-  server: v35.hdacd.com
-  port: 30835
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  network: tcp
-  tls: false
-  skip-cert-verify: true
 - name: 4Sarina-13521
   type: vmess
   server: v36.hdacd.com
   port: 30836
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  network: tcp
-  tls: false
-  skip-cert-verify: true
-- name: 4Sarina-13523
-  type: vmess
-  server: v33.hdacd.com
-  port: 30833
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
   cipher: auto
@@ -71798,6 +71811,16 @@ proxies:
   password: bpb-trojan
   sni: wing2452.nyc.mn
   skip-cert-verify: true
+- name: 🇭🇰 香港 166
+  type: vmess
+  server: world.t.51guangtaobao.com
+  port: 2512
+  uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  skip-cert-verify: true
 - name: '%E8%AF%B7%E4%BD%BF%E7%94%A8%E6%94%AF%E6%8C%81Clash.Meta%E5%86%85%E6%A0%B8%E7%9A%84%E8%BD%AF%E4%BB%B6%E8%AE%A2%E9%98%85%E6%88%96Shadowrocket%EF%BC%8C%E7%9B%B8%E5%85%B3%E8%BD%AF%E4%BB%B6%E5%8F%AF%E5%9C%A8%E7%9F%A5%E8%AF%86%E5%BA%93%E8%8E%B7%E5%8F%96'
   type: ss
   server: 127.0.0.1
@@ -71807,6 +71830,13 @@ proxies:
 - name: '%E7%BE%8E%E5%9B%BD+CloudFlare%E8%8A%82%E7%82%B9'
   type: trojan
   server: cf.wdqgn.eu.org
+  port: 443
+  password: 8b6fa5e7-2583-4dcf-a589-f3924c685dbb
+  sni: HKNTT1.nauk.eu.cc
+  skip-cert-verify: true
+- name: '%E7%BE%8E%E5%9B%BD+CloudFlare%E8%8A%82%E7%82%B9_1'
+  type: trojan
+  server: 198.41.209.228
   port: 443
   password: 8b6fa5e7-2583-4dcf-a589-f3924c685dbb
   sni: HKNTT1.nauk.eu.cc
@@ -71868,11 +71898,4 @@ proxies:
   uuid: ff86b71f-b99b-402d-b9ee-36760c340bba
   network: tcp
   tls: false
-  skip-cert-verify: true
-- name: '%E7%BE%8E%E5%9B%BD+CloudFlare%E8%8A%82%E7%82%B9_1'
-  type: trojan
-  server: 104.17.126.186
-  port: 443
-  password: 8b6fa5e7-2583-4dcf-a589-f3924c685dbb
-  sni: HKNTT1.nauk.eu.cc
   skip-cert-verify: true
