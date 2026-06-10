@@ -466,87 +466,29 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
-- name: netflix_GE | 5.46Mb
-  server: r1.mizulina.top
-  type: vless
-  port: 22231
-  udp: true
-  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
-  network: tcp
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: edge
-  servername: r1.mizulina.top
-  packet-encoding: ''
-- name: Pool__02
+- name: Pool_ | 7.07Mb
   server: 61.171.92.202
   type: ss
   port: 1001
   password: '123'
   cipher: aes-256-gcm
-- name: disney_netflix_TW | 4.95Mb
-  server: namrcg001640lrm.cybervena.com
-  type: ss
-  port: 50099
-  udp: true
-  password: a9a0d092-6f0e-4701-81ee-454643d6d506
-  cipher: chacha20-ietf-poly1305
-- name: netflix_US | 8.15Mb
-  server: 82.198.246.250
-  type: vmess
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-- name: disney_netflix_SG |93.10Mb
-  server: 43.198.203.3
-  type: trojan
-  port: 29642
-  password: d02e3bb7e6b3333e818d36866d40de6e
-  sni: www.nintendogames.net
-  skip-cert-verify: true
-- name: netflix_US |57.83Mb
-  server: 18.166.223.23
-  type: trojan
-  port: 17005
-  password: d02e3bb7e6b3333e818d36866d40de6e
-  sni: www.nintendogames.net
-  skip-cert-verify: true
-- name: netflix_US |58.95Mb
-  server: 43.198.203.3
-  type: trojan
-  port: 49277
-  password: d02e3bb7e6b3333e818d36866d40de6e
-  sni: www.nintendogames.net
-  skip-cert-verify: true
-- name: 🇨🇿CZ_08
-  server: 195.58.49.162
-  type: ss
-  country: 🇨🇿CZ
-  port: 8012
-  password: 9f3d1a6d31468599
-  cipher: aes-256-gcm
-- name: netflix_US |40.83Mb
-  server: 82.198.246.97
-  type: vmess
-  country: 🇬🇧GB
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: 🇷🇺RU_10 |40.16Mb
+- name: 🇷🇺RU |48.73Mb
   server: 45.140.169.244
   type: ss
   country: 🇷🇺RU
   port: 50129
   password: cfe685726eea2c4b
   cipher: aes-256-gcm
+- name: 'NULL'
+  server: 'NULL'
+  port: 11708
+  type: ssr
+  country: 'NULL'
+  password: sEscPBiAD9K$&@79
+  cipher: aes-256-cfb
+  protocol: origin
+  protocol_param: 'NULL'
+  obfs: http_simple
 - name: Shadowsocks
   type: socks5
   server: 127.0.0.1
@@ -564,6 +506,14 @@ proxies:
   ws-path: /
   skip-cert-verify: true
   delay: 1265
+- name: 俄罗斯 - 圣彼得堡 - 1
+  server: 195.58.49.162
+  type: ss
+  country: 🇨🇿CZ
+  port: 8012
+  password: 9f3d1a6d31468599
+  cipher: aes-256-gcm
+  delay: 604
 - name: 法国 - 巴黎 - 1
   server: 13.37.141.219
   type: trojan
@@ -794,7 +744,53 @@ proxies:
   skip-cert-verify: true
   udp: true
   delay: 1849
-- name: 剩余流量：763.03 GB
+- name: 中国 - 台湾 - 2
+  server: namrcg001640lrm.cybervena.com
+  type: ss
+  country: 🇹🇼TW
+  port: 50099
+  password: 7b56aeaa-8e2d-4bdf-b1d7-233ecca15f56
+  cipher: chacha20-ietf-poly1305
+  delay: 1585
+- name: netflix_GE | 5.46Mb
+  server: r1.mizulina.top
+  type: vless
+  port: 22231
+  udp: true
+  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+  network: tcp
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: edge
+  servername: r1.mizulina.top
+  packet-encoding: ''
+- name: netflix_US |33.09Mb
+  server: 18.166.223.23
+  type: trojan
+  port: 17005
+  password: d02e3bb7e6b3333e818d36866d40de6e
+  sni: www.nintendogames.net
+  skip-cert-verify: true
+- name: netflix_US |33.38Mb
+  server: 43.198.203.3
+  type: trojan
+  port: 49277
+  password: d02e3bb7e6b3333e818d36866d40de6e
+  sni: www.nintendogames.net
+  skip-cert-verify: true
+- name: netflix_US |13.69Mb
+  server: 82.198.246.97
+  type: vmess
+  country: 🇬🇧GB
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: 剩余流量：724.93 GB
   type: vmess
   server: jd.103672.xyz
   port: 8080
@@ -813,13 +809,6 @@ proxies:
   port: 7800
   cipher: aes-128-gcm
   password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
-  udp: true
-- name: 您的账号已被封禁
-  type: ss
-  server: 127.0.0.1
-  port: 6666
-  cipher: aes-128-gcm
-  password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
   udp: true
 - name: 剩余流量：0
   server: hk01.jgpy.help
@@ -901,12 +890,13 @@ proxies:
   sni: apple.com
   type: hysteria2
   password: 573402b7-156e-4141-8c3b-f01b6ebedf05
-- name: '%E8%AF%B7%E4%BD%BF%E7%94%A8%E6%94%AF%E6%8C%81Clash.Meta%E5%86%85%E6%A0%B8%E7%9A%84%E8%BD%AF%E4%BB%B6%E8%AE%A2%E9%98%85%E6%88%96Shadowrocket%EF%BC%8C%E7%9B%B8%E5%85%B3%E8%BD%AF%E4%BB%B6%E5%8F%AF%E5%9C%A8%E7%9F%A5%E8%AF%86%E5%BA%93%E8%8E%B7%E5%8F%96'
+- name: 您的账号已被封禁
   type: ss
   server: 127.0.0.1
-  port: 1
+  port: 6666
   cipher: aes-128-gcm
-  password: unsupported-client
+  password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
+  udp: true
 - name: SCP|US
   type: vmess
   server: cf.scpnb.top
@@ -917,3 +907,9 @@ proxies:
   network: ws
   tls: true
   skip-cert-verify: true
+- name: '%E8%AF%B7%E4%BD%BF%E7%94%A8%E6%94%AF%E6%8C%81Clash.Meta%E5%86%85%E6%A0%B8%E7%9A%84%E8%BD%AF%E4%BB%B6%E8%AE%A2%E9%98%85%E6%88%96Shadowrocket%EF%BC%8C%E7%9B%B8%E5%85%B3%E8%BD%AF%E4%BB%B6%E5%8F%AF%E5%9C%A8%E7%9F%A5%E8%AF%86%E5%BA%93%E8%8E%B7%E5%8F%96'
+  type: ss
+  server: 127.0.0.1
+  port: 1
+  cipher: aes-128-gcm
+  password: unsupported-client
