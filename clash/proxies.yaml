@@ -1,74 +1,12 @@
 proxies:
-- name: netflix_DE |126.46Mb
-  server: speedtest.net
-  type: vless
-  port: 80
-  udp: true
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  network: ws
-  client-fingerprint: chrome
-  servername: max-gb1.global.ssl.fastly.net
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-  packet-encoding: ''
-- name: netflix_DE |69.72Mb
+- name: netflix_DE |124.92Mb
   server: 151.101.0.1
-  type: vless
-  port: 80
-  udp: true
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  network: ws
-  servername: max-gb1.global.ssl.fastly.net
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-  packet-encoding: ''
-- name: netflix_DE |99.13Mb
-  server: 151.101.2.219
   type: vless
   port: 80
   udp: true
   uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa
   network: ws
-  servername: max-gb1.global.ssl.fastly.net
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-  packet-encoding: ''
-- name: disney_netflix_GE |37.78Mb
-  server: r1.mizulina.top
-  type: vless
-  port: 22231
-  udp: true
-  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
-  tls: true
-  flow: xtls-rprx-vision-udp443
-  client-fingerprint: chrome
-  packet-encoding: ''
-- name: netflix_DE |111.38Mb
-  server: 199.232.197.131
-  type: vless
-  port: 80
-  udp: true
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  network: ws
-  servername: max-gb1.global.ssl.fastly.net
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-  packet-encoding: ''
-- name: netflix_DE |84.50Mb
-  server: 151.101.194.219
-  type: vless
-  port: 80
-  udp: true
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  network: ws
+  skip-cert-verify: true
   servername: max-gb1.global.ssl.fastly.net
   ws-opts:
     path: /
@@ -88,13 +26,77 @@ proxies:
     headers:
       Host: max-gb1.global.ssl.fastly.net
   packet-encoding: ''
-- name: Pool_ |39.51Mb
+- name: disney_netflix_GE |21.10Mb
+  server: r1.mizulina.top
+  type: vless
+  port: 22231
+  udp: true
+  uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8
+  network: tcp
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: edge
+  servername: r1.mizulina.top
+  packet-encoding: ''
+- name: Relay_-🇬🇧GB_07
+  server: speedtest.net
+  type: vless
+  port: 80
+  udp: true
+  uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa
+  network: ws
+  servername: max-gb1.global.ssl.fastly.net
+  ws-opts:
+    path: /
+    headers:
+      Host: max-gb1.global.ssl.fastly.net
+  packet-encoding: ''
+- name: Relay_-🇩🇪DE_08 |83.43Mb
+  server: 151.101.2.219
+  type: vless
+  port: 80
+  udp: true
+  uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa
+  network: ws
+  servername: max-gb1.global.ssl.fastly.net
+  ws-opts:
+    path: /
+    headers:
+      Host: max-gb1.global.ssl.fastly.net
+  packet-encoding: ''
+- name: Relay_-🇩🇪DE_09 |54.65Mb
+  server: 151.101.194.219
+  type: vless
+  port: 80
+  udp: true
+  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
+  network: ws
+  servername: max-gb1.global.ssl.fastly.net
+  ws-opts:
+    path: /
+    headers:
+      Host: max-gb1.global.ssl.fastly.net
+  packet-encoding: ''
+- name: netflix_DE |111.38Mb
+  server: 199.232.197.131
+  type: vless
+  port: 80
+  udp: true
+  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
+  network: ws
+  servername: max-gb1.global.ssl.fastly.net
+  ws-opts:
+    path: /
+    headers:
+      Host: max-gb1.global.ssl.fastly.net
+  packet-encoding: ''
+- name: Pool_ |135.16Mb
   server: 61.171.92.202
   type: ss
   port: 1001
   password: '123'
   cipher: aes-256-gcm
-- name: Relay_ |176.00Mb
+- name: netflix_US |177.00Mb
   server: 82.198.246.250
   type: vmess
   port: 180
@@ -103,7 +105,7 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: disney_HK |99.68Mb
+- name: disney_HK |108.52Mb
   server: 154.37.223.19
   type: vmess
   port: 56972
@@ -117,35 +119,42 @@ proxies:
     path:
     - /
   h2-opts: {}
-- name: disney_SG |92.10Mb
+- name: disney_netflix_SG |92.10Mb
   server: 43.198.203.3
   type: trojan
   port: 29642
   password: d02e3bb7e6b3333e818d36866d40de6e
   sni: www.nintendogames.net
   skip-cert-verify: true
-- name: Relay_-🏁ZZ_15 |21.35Mb
-  server: 18.166.223.23
-  type: trojan
-  port: 17005
-  password: d02e3bb7e6b3333e818d36866d40de6e
-  sni: www.nintendogames.net
-  skip-cert-verify: true
-- name: Relay_-🏁ZZ_16 |21.88Mb
+- name: netflix_US |18.42Mb
   server: 43.198.203.3
   type: trojan
   port: 49277
   password: d02e3bb7e6b3333e818d36866d40de6e
   sni: www.nintendogames.net
   skip-cert-verify: true
-- name: Relay_ |352.80Mb
+- name: Relay_ |98.82Mb
+  server: mn.qwer-cn.org
+  type: ss
+  country: 🇫🇷FR
+  port: 10933
+  password: ac17e2c4-2c92-4aa6-8baf-2705a8549ec6
+  cipher: aes-128-gcm
+- name: Relay_ |170.17Mb
+  server: mn.qwer-cn.org
+  type: ss
+  country: 🇫🇷FR
+  port: 10920
+  password: ac17e2c4-2c92-4aa6-8baf-2705a8549ec6
+  cipher: aes-128-gcm
+- name: netflix_NL |10.55Mb
   server: 82.38.31.7
   type: ss
   country: 🇬🇧GB
   port: 8080
   password: oZIoA69Q8yhcQV8ka3Pa3A
   cipher: chacha20-ietf-poly1305
-- name: Relay_ |238.74Mb
+- name: netflix_US |177.82Mb
   server: 82.198.246.97
   type: vmess
   country: 🇬🇧GB
@@ -157,6 +166,20 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
+- name: Relay_ |121.71Mb
+  server: mn.qwer-cn.org
+  type: ss
+  country: 🇭🇰HK
+  port: 10931
+  password: ac17e2c4-2c92-4aa6-8baf-2705a8549ec6
+  cipher: aes-128-gcm
+- name: Relay_ |28.66Mb
+  server: mn.qwer-cn.org
+  type: ss
+  country: 🇭🇰HK
+  port: 10934
+  password: ac17e2c4-2c92-4aa6-8baf-2705a8549ec6
+  cipher: aes-128-gcm
 - name: netflix_IN |237.63Mb
   server: 139.59.94.41
   type: hysteria2
@@ -168,14 +191,21 @@ proxies:
   - h3
   sni: 139.59.94.41
   skip-cert-verify: false
-- name: ' |307.81Mb'
+- name: 🇰🇷 KR_23
+  server: 211.201.169.70
+  type: ss
+  country: 🇰🇷 KR
+  port: 8314
+  password: qwerREWQ@@
+  cipher: aes-256-cfb
+- name: netflix_US |308.24Mb
   server: 198.71.54.21
   type: ss
   country: 🇺🇸US
   port: 1080
   password: 097H_-eSMWbWFtuktVuT8wWjANSN9tmh
   cipher: chacha20-ietf-poly1305
-- name: disney_HK |15.13Mb
+- name: disney_netflix_HK |15.13Mb
   server: 155.117.198.85
   type: trojan
   country: 🇺🇸US
@@ -184,7 +214,7 @@ proxies:
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   sni: de.01.naiun.bilibili.com
   skip-cert-verify: true
-- name: disney_US |84.56Mb
+- name: netflix_US |92.96Mb
   server: cf.scpnb.top
   type: vmess
   country: 🏁ZZ
@@ -277,14 +307,6 @@ proxies:
   password: tndCP2Df9-PTx_J0sZeoHmTdvkg0w4Kv
   cipher: chacha20-ietf-poly1305
   delay: 971
-- name: 韩国 - Yongin-si - 1
-  server: 211.201.169.70
-  port: 8314
-  type: ss
-  country: 🇰🇷 KR
-  password: qwerREWQ@@
-  cipher: aes-256-cfb
-  delay: 264
 - name: 美国 - 圣路易斯 - 2
   server: 104.17.77.77
   type: vmess
@@ -394,6 +416,14 @@ proxies:
   server: 18.163.120.29
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
+  type: trojan
+- name: Hong Kong_None_trojan_1013
+  network: tcp
+  password: d02e3bb7e6b3333e818d36866d40de6e
+  port: 17005
+  server: 18.166.223.23
+  skip-cert-verify: true
+  sni: www.nintendogames.net
   type: trojan
 - name: Hong Kong_None_trojan_1014
   network: tcp
@@ -697,7 +727,7 @@ proxies:
   udp: true
   protocol-param: 849:22d05bac-eed0-4ee7-b5e8-a66c691cdb27
   obfs-param: sajhsahj.microsoft.com
-- name: 剩余流量：429.74 GB
+- name: 剩余流量：395.96 GB
   type: vmess
   server: jd.103672.xyz
   port: 8080
