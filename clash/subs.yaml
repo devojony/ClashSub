@@ -4049,12 +4049,20 @@ proxies:
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   sni: de.01.naiun.bilibili.com
   skip-cert-verify: true
-- name: Pool_ | 2.80Mb
-  server: 61.171.92.202
-  type: ss
-  port: 1001
-  password: '123'
-  cipher: aes-256-gcm
+- name: _04 |59.12Mb
+  server: 154.37.223.19
+  type: vmess
+  port: 56972
+  udp: true
+  uuid: ae225455-5e8c-491d-d931-c06ac56f4aee
+  alterId: 0
+  cipher: auto
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+  h2-opts: {}
 - name: disney_netflix_GE |21.10Mb
   server: r1.mizulina.top
   type: vless
@@ -4067,24 +4075,41 @@ proxies:
   client-fingerprint: edge
   servername: r1.mizulina.top
   packet-encoding: ''
-- name: netflix_US |37.59Mb
-  server: cf.scpnb.top
+- name: netflix_US |145.68Mb
+  server: 82.198.246.250
   type: vmess
-  country: 🏁ZZ
-  port: 443
-  uuid: 7c84ae69-f0b3-47dc-83c5-e7b5f00f5bed
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   alterId: 0
   cipher: auto
-  network: ws
-  servername: vienna-bread-threats-amendment.trycloudflare.com
   http-opts: {}
   h2-opts: {}
-  tls: true
+- name: netflix_DE |569.66Mb
+  server: de-1.hysteria.ltd
+  type: trojan
+  port: 9443
+  udp: true
+  password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
+  sni: de-1.hysteria.ltd
+- name: netflix_NL |26.31Mb
+  server: 82.38.31.7
+  type: ss
+  country: 🇬🇧GB
+  port: 8080
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  cipher: chacha20-ietf-poly1305
+- name: netflix_US |144.40Mb
+  server: 82.198.246.97
+  type: vmess
+  country: 🇬🇧GB
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
   skip-cert-verify: true
-  ws-opts:
-    path: /7c84ae69-f0b3-47dc-83c5-e7b5f00f5bed-vm
-    headers:
-      HOST: vienna-bread-threats-amendment.trycloudflare.com
 - name: ♥哄哄TG交流群组@honghongtg♥
   server: youxuan.cf.090227.xyz
   port: 443
@@ -7080,23 +7105,6 @@ proxies:
   type: trojan
 - alterId: 0
   cipher: auto
-  name: United Kingdom_None_vmess_1014
-  port: 180
-  server: 82.198.246.250
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-- name: Germany_None_trojan_1017
-  password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
-  port: 9443
-  server: de-1.hysteria.ltd
-  skip-cert-verify: false
-  sni: de-1.hysteria.ltd
-  type: trojan
-  udp: true
-- alterId: 0
-  cipher: auto
   name: Unknown_vmess_111
   network: tcp
   port: '80'
@@ -7328,14 +7336,6 @@ proxies:
   password: qwerREWQ@@
   cipher: aes-256-cfb
   delay: 264
-- name: 荷兰 - 阿姆斯特丹 - 1
-  server: 82.38.31.7
-  type: ss
-  country: 🇬🇧GB
-  port: 8080
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  cipher: chacha20-ietf-poly1305
-  delay: 500
 - name: 美国 - 圣路易斯 - 2
   server: 104.17.77.77
   type: vmess
@@ -7371,22 +7371,6 @@ proxies:
   password: RfWVCFk2XrG2zYk2e5RVud
   cipher: chacha20-ietf-poly1305
   delay: 2477
-- name: 中国 - 香港 - 1
-  server: 154.37.223.19
-  type: vmess
-  country: 🇺🇸US
-  port: 56972
-  uuid: ae225455-5e8c-491d-d931-c06ac56f4aee
-  alterId: 0
-  cipher: auto
-  network: http
-  http-opts:
-    method: GET
-    path:
-    - /
-  h2-opts: {}
-  skip-cert-verify: true
-  delay: 1529
 - name: 重要通知：如果只显示当前节点
   type: ss
   server: efan8998.efan-dns78655.com
@@ -7567,6 +7551,16 @@ proxies:
   cipher: aes-128-gcm
   password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
   udp: true
+- name: SCP|US
+  type: vmess
+  server: cf.scpnb.top
+  port: 443
+  uuid: 7c84ae69-f0b3-47dc-83c5-e7b5f00f5bed
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  skip-cert-verify: true
 - name: '%E8%AF%B7%E4%BD%BF%E7%94%A8%E6%94%AF%E6%8C%81Clash.Meta%E5%86%85%E6%A0%B8%E7%9A%84%E8%BD%AF%E4%BB%B6%E8%AE%A2%E9%98%85%E6%88%96Shadowrocket%EF%BC%8C%E7%9B%B8%E5%85%B3%E8%BD%AF%E4%BB%B6%E5%8F%AF%E5%9C%A8%E7%9F%A5%E8%AF%86%E5%BA%93%E8%8E%B7%E5%8F%96'
   type: ss
   server: 127.0.0.1
