@@ -3582,26 +3582,12 @@ proxies:
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   sni: de.01.naiun.bilibili.com
   skip-cert-verify: true
-- name: Pool__03 | 2.80Mb
+- name: Pool_ | 2.80Mb
   server: 61.171.92.202
   type: ss
   port: 1001
   password: '123'
   cipher: aes-256-gcm
-- name: _05 | 5.37Mb
-  server: 103.127.243.54
-  type: vmess
-  port: 53229
-  udp: true
-  uuid: 2f50f5ef-1a3a-4585-a3c9-3a860d37b134
-  alterId: 0
-  cipher: auto
-  network: http
-  http-opts:
-    method: GET
-    path:
-    - /ABCDE
-  h2-opts: {}
 - name: disney_netflix_GE |21.10Mb
   server: r1.mizulina.top
   type: vless
@@ -3614,41 +3600,24 @@ proxies:
   client-fingerprint: edge
   servername: r1.mizulina.top
   packet-encoding: ''
-- name: netflix_US |249.82Mb
-  server: 82.198.246.250
+- name: netflix_US |37.59Mb
+  server: cf.scpnb.top
   type: vmess
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  country: 🏁ZZ
+  port: 443
+  uuid: 7c84ae69-f0b3-47dc-83c5-e7b5f00f5bed
   alterId: 0
   cipher: auto
+  network: ws
+  servername: vienna-bread-threats-amendment.trycloudflare.com
   http-opts: {}
   h2-opts: {}
-- name: netflix_DE |135.55Mb
-  server: de-1.hysteria.ltd
-  type: trojan
-  port: 9443
-  udp: true
-  password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
-  sni: de-1.hysteria.ltd
-- name: netflix_NL |482.70Mb
-  server: 82.38.31.7
-  type: ss
-  country: 🇬🇧GB
-  port: 8080
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  cipher: chacha20-ietf-poly1305
-- name: netflix_US |236.20Mb
-  server: 82.198.246.97
-  type: vmess
-  country: 🇬🇧GB
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
+  tls: true
   skip-cert-verify: true
+  ws-opts:
+    path: /7c84ae69-f0b3-47dc-83c5-e7b5f00f5bed-vm
+    headers:
+      HOST: vienna-bread-threats-amendment.trycloudflare.com
 - name: ♥哄哄TG交流群组@honghongtg♥
   server: youxuan.cf.090227.xyz
   port: 443
@@ -6644,6 +6613,23 @@ proxies:
   type: trojan
 - alterId: 0
   cipher: auto
+  name: United Kingdom_None_vmess_1014
+  port: 180
+  server: 82.198.246.250
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- name: Germany_None_trojan_1017
+  password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
+  port: 9443
+  server: de-1.hysteria.ltd
+  skip-cert-verify: false
+  sni: de-1.hysteria.ltd
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
   name: Unknown_vmess_111
   network: tcp
   port: '80'
@@ -6732,18 +6718,66 @@ proxies:
   tls: false
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 2
-  cipher: auto
-  name: United States_None_vmess_1127
+- name: Hong Kong_None_trojan_1127
   network: tcp
-  port: 30845
-  server: 103.182.97.12
-  skip-cert-verify: false
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: 45619
+  server: 103.177.136.45
+  skip-cert-verify: true
+  sni: fr.01.naiun.bilibili.com
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: None_None_vmess_1128
+  network: ws
+  port: 8080
+  server: jd.103672.xyz
   tls: false
   type: vmess
+  uuid: c14a83db-f333-452e-acff-93b8f7160b10
+  ws-opts:
+    headers:
+      Host: dedasabo.103466.xyz
+    path: /
+- alpn:
+  - h2
+  - http/1.1
+  name: None_None_trojan_1129
+  network: ws
+  password: 0cb2739d-98b8-45ce-b52c-4305c40975a6
+  port: '443'
+  server: h2.bnm.uw.to
+  skip-cert-verify: false
+  sni: h2.bnm.uw.to
+  type: trojan
   udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  xudp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/60.0.3112.90 Safari/537.36
+    path: /0cb2739d-98b8-45ce-b52c-4305c40975a6-tr
+- name: United States_None_trojan_1130
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  port: '45619'
+  server: 155.117.198.85
+  skip-cert-verify: true
+  sni: fr.01.naiun.bilibili.com
+  type: trojan
+  udp: true
+- name: None_None_trojan_1131
+  network: ws
+  password: humanity
+  port: '443'
+  server: 104.16.147.104
+  skip-cert-verify: false
+  sni: www.creationlong.org
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 5.1; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/46.0.2490.80 Safari/537.36
+    path: /assignment
 - name: 德国 - Frankfurt am Main - 2
   server: 3.127.163.98
   type: trojan
@@ -6827,6 +6861,14 @@ proxies:
   password: qwerREWQ@@
   cipher: aes-256-cfb
   delay: 264
+- name: 荷兰 - 阿姆斯特丹 - 1
+  server: 82.38.31.7
+  type: ss
+  country: 🇬🇧GB
+  port: 8080
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  cipher: chacha20-ietf-poly1305
+  delay: 500
 - name: 美国 - 圣路易斯 - 2
   server: 104.17.77.77
   type: vmess
@@ -7051,19 +7093,6 @@ proxies:
   udp: true
   protocol-param: 847:456cb195-93f4-4891-a897-212906c1a77b
   obfs-param: sajhsahj.microsoft.com
-- name: 剩余流量：0
-  type: vmess
-  server: jd.103672.xyz
-  port: 8080
-  uuid: c14a83db-f333-452e-acff-93b8f7160b10
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: hkak.103466.xyz
 - name: 您的账号已被封禁
   type: ss
   server: 127.0.0.1
@@ -7071,16 +7100,6 @@ proxies:
   cipher: aes-128-gcm
   password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
   udp: true
-- name: SCP|US
-  type: vmess
-  server: cf.scpnb.top
-  port: 443
-  uuid: 7c84ae69-f0b3-47dc-83c5-e7b5f00f5bed
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  skip-cert-verify: true
 - name: '%E8%AF%B7%E4%BD%BF%E7%94%A8%E6%94%AF%E6%8C%81Clash.Meta%E5%86%85%E6%A0%B8%E7%9A%84%E8%BD%AF%E4%BB%B6%E8%AE%A2%E9%98%85%E6%88%96Shadowrocket%EF%BC%8C%E7%9B%B8%E5%85%B3%E8%BD%AF%E4%BB%B6%E5%8F%AF%E5%9C%A8%E7%9F%A5%E8%AF%86%E5%BA%93%E8%8E%B7%E5%8F%96'
   type: ss
   server: 127.0.0.1
