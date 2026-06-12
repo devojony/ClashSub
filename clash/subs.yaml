@@ -466,20 +466,13 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
-- name: Pool_ | 2.80Mb
+- name: Pool__11 | 2.80Mb
   server: 61.171.92.202
   type: ss
   port: 1001
   password: '123'
   cipher: aes-256-gcm
-- name: _12
-  server: 103.149.183.113
-  type: ss
-  port: 8388
-  udp: true
-  password: asd123456
-  cipher: chacha20-ietf
-- name: _15 |122.79Mb
+- name: _13 |119.93Mb
   server: 154.37.223.19
   type: vmess
   port: 56972
@@ -493,28 +486,43 @@ proxies:
     path:
     - /
   h2-opts: {}
-- name: ' |115.84Mb'
+- name: 🇪🇸ES_16 |164.92Mb
   server: 212.192.15.177
   type: ss
   country: 🇪🇸ES
   port: 12091
   password: 7e1dd4c55bf85da5
   cipher: aes-256-gcm
-- name: ' |63.52Mb'
+- name: 🇭🇰HK_20 |17.28Mb
+  server: 103.143.238.196
+  type: vmess
+  country: 🇭🇰HK
+  port: 21879
+  uuid: 1e1a6b3b-14b2-4ae4-9aa9-880ba5dff6fa
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vmesswss
+- name: 🇷🇺RU_21 |91.50Mb
   server: 185.22.154.46
   type: ss
   country: 🇷🇺RU
   port: 20129
   password: 32c0ea6e823341a2
   cipher: aes-256-gcm
-- name: ' |55.06Mb'
+- name: 🇷🇺RU_22 |23.49Mb
   server: 185.22.154.212
   type: ss
   country: 🇷🇺RU
   port: 50129
   password: cfe685726eea2c4b
   cipher: aes-256-gcm
-- name: Relay_🏁 ZZ-🇩🇪DE_26 | 8.09Mb
+- name: Relay_🏁 ZZ-🇩🇪DE_25 |19.76Mb
   server: v33.hdacd.com
   type: vmess
   country: 🏁 ZZ
@@ -3295,22 +3303,6 @@ proxies:
   tls: true
   skip-cert-verify: true
   delay: 2372
-- name: 中国 - 香港 - 3
-  server: 103.143.238.196
-  type: vmess
-  country: 🇭🇰HK
-  port: 21879
-  uuid: 1e1a6b3b-14b2-4ae4-9aa9-880ba5dff6fa
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /vmesswss
-  delay: 877
 - name: ♥哄哄TG交流群组@honghongtg♥_1
   server: youxuan.cf.090227.xyz
   port: 443
@@ -6201,7 +6193,7 @@ proxies:
   ech-opts:
     enable: true
     query-server-name: cloudflare-ech.com
-- name: disney_netflix_SG |59.91Mb
+- name: disney_netflix_SG |61.76Mb
   server: 696969696969.duckdns.org
   type: hysteria2
   country: 🇸🇬SG
@@ -6212,7 +6204,7 @@ proxies:
   - h3
   sni: 104.248.149.145
   skip-cert-verify: false
-- name: disney_netflix_HK | 3.20Mb
+- name: disney_netflix_HK |11.34Mb
   server: 155.117.198.85
   type: trojan
   country: 🇺🇸US
@@ -6229,7 +6221,7 @@ proxies:
   type: ss
 - alterId: 2
   cipher: auto
-  name: Hong Kong_Central_vmess_102
+  name: Hong Kong_Yuen Long San Hui_vmess_102
   port: 30807
   server: v10.hdacd.com
   skip-cert-verify: false
@@ -6431,66 +6423,6 @@ proxies:
   tls: false
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
-- name: Hong Kong_None_trojan_1127
-  network: tcp
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: 45619
-  server: 103.177.136.45
-  skip-cert-verify: true
-  sni: fr.01.naiun.bilibili.com
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: None_None_vmess_1128
-  network: ws
-  port: 8080
-  server: jd.103672.xyz
-  tls: false
-  type: vmess
-  uuid: c14a83db-f333-452e-acff-93b8f7160b10
-  ws-opts:
-    headers:
-      Host: dedasabo.103466.xyz
-    path: /
-- alpn:
-  - h2
-  - http/1.1
-  name: United States_None_trojan_1129
-  network: ws
-  password: 0cb2739d-98b8-45ce-b52c-4305c40975a6
-  port: '443'
-  server: h2.bnm.uw.to
-  skip-cert-verify: false
-  sni: h2.bnm.uw.to
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/60.0.3112.90 Safari/537.36
-    path: /0cb2739d-98b8-45ce-b52c-4305c40975a6-tr
-- name: United States_None_trojan_1130
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  port: '45619'
-  server: 155.117.198.85
-  skip-cert-verify: true
-  sni: fr.01.naiun.bilibili.com
-  type: trojan
-  udp: true
-- name: None_None_trojan_1131
-  network: ws
-  password: humanity
-  port: '443'
-  server: 104.16.147.104
-  skip-cert-verify: false
-  sni: www.creationlong.org
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 5.1; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/46.0.2490.80 Safari/537.36
-    path: /assignment
 - name: netflix_DE |66.89Mb
   server: 151.101.0.1
   type: vless
@@ -6529,6 +6461,19 @@ proxies:
   client-fingerprint: edge
   servername: r1.mizulina.top
   packet-encoding: ''
+- name: netflix_DE | 6.86Mb
+  server: 167.82.0.1
+  type: vless
+  port: 80
+  udp: true
+  uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa
+  network: ws
+  servername: max-gb1.global.ssl.fastly.net
+  ws-opts:
+    path: /
+    headers:
+      Host: max-gb1.global.ssl.fastly.net
+  packet-encoding: ''
 - name: netflix_DE |111.38Mb
   server: 199.232.197.131
   type: vless
@@ -6542,8 +6487,8 @@ proxies:
     headers:
       Host: max-gb1.global.ssl.fastly.net
   packet-encoding: ''
-- name: netflix_DE |85.21Mb
-  server: speedtest.net
+- name: netflix_DE |99.13Mb
+  server: 151.101.2.219
   type: vless
   port: 80
   udp: true
@@ -6555,14 +6500,28 @@ proxies:
     headers:
       Host: max-gb1.global.ssl.fastly.net
   packet-encoding: ''
-- name: netflix_NL |36.82Mb
+- name: netflix_DE |126.46Mb
+  server: speedtest.net
+  type: vless
+  port: 80
+  udp: true
+  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
+  network: ws
+  client-fingerprint: chrome
+  servername: max-gb1.global.ssl.fastly.net
+  ws-opts:
+    path: /
+    headers:
+      Host: max-gb1.global.ssl.fastly.net
+  packet-encoding: ''
+- name: netflix_NL |665.06Mb
   server: 82.38.31.7
   type: ss
   country: 🇬🇧GB
   port: 8080
   password: oZIoA69Q8yhcQV8ka3Pa3A
   cipher: chacha20-ietf-poly1305
-- name: netflix_US |186.82Mb
+- name: netflix_US |244.58Mb
   server: 82.198.246.97
   type: vmess
   country: 🇬🇧GB
@@ -6684,6 +6643,19 @@ proxies:
   udp: true
   protocol-param: 546:c9522c6f-f794-4db5-9e22-c06f4e53f513
   obfs-param: sajhsahj.microsoft.com
+- name: 剩余流量：0
+  type: vmess
+  server: jd.103672.xyz
+  port: 8080
+  uuid: c14a83db-f333-452e-acff-93b8f7160b10
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hkak.103466.xyz
 - name: SCP|US
   type: vmess
   server: cf.scpnb.top
