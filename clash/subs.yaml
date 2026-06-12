@@ -466,7 +466,7 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
-- name: disney_HK |122.44Mb
+- name: disney_HK |105.64Mb
   server: 154.37.223.19
   type: vmess
   port: 56972
@@ -480,35 +480,7 @@ proxies:
     path:
     - /
   h2-opts: {}
-- name: disney_netflix_SG |26.44Mb
-  server: 16.162.163.189
-  type: trojan
-  port: 48738
-  password: d02e3bb7e6b3333e818d36866d40de6e
-  sni: www.nintendogames.net
-  skip-cert-verify: true
-- name: disney_netflix_SG |25.11Mb
-  server: 18.162.244.255
-  type: trojan
-  port: 48738
-  password: d02e3bb7e6b3333e818d36866d40de6e
-  sni: www.nintendogames.net
-  skip-cert-verify: true
-- name: disney_netflix_JP |20.33Mb
-  server: 18.162.244.255
-  type: trojan
-  port: 5701
-  password: d02e3bb7e6b3333e818d36866d40de6e
-  sni: www.nintendogames.net
-  skip-cert-verify: true
-- name: disney_netflix_HK |72.41Mb
-  server: 18.183.58.98
-  type: trojan
-  port: 53018
-  password: d02e3bb7e6b3333e818d36866d40de6e
-  sni: www.nintendogames.net
-  skip-cert-verify: true
-- name: disney_netflix_HK |17.33Mb
+- name: disney_netflix_HK | 6.86Mb
   server: 155.117.198.85
   type: trojan
   country: 🇺🇸US
@@ -517,12 +489,12 @@ proxies:
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   sni: de.01.naiun.bilibili.com
   skip-cert-verify: true
-- name: netflix_DE |37.47Mb
-  server: 199.232.197.131
+- name: netflix_DE |84.50Mb
+  server: 151.101.194.219
   type: vless
   port: 80
   udp: true
-  uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa
+  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
   network: ws
   servername: max-gb1.global.ssl.fastly.net
   ws-opts:
@@ -530,12 +502,26 @@ proxies:
     headers:
       Host: max-gb1.global.ssl.fastly.net
   packet-encoding: ''
-- name: netflix_DE | 6.86Mb
-  server: 167.82.0.1
+- name: netflix_DE |124.92Mb
+  server: 151.101.0.1
   type: vless
   port: 80
   udp: true
   uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa
+  network: ws
+  skip-cert-verify: true
+  servername: max-gb1.global.ssl.fastly.net
+  ws-opts:
+    path: /
+    headers:
+      Host: max-gb1.global.ssl.fastly.net
+  packet-encoding: ''
+- name: netflix_DE |111.38Mb
+  server: 199.232.197.131
+  type: vless
+  port: 80
+  udp: true
+  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
   network: ws
   servername: max-gb1.global.ssl.fastly.net
   ws-opts:
@@ -566,12 +552,12 @@ proxies:
   flow: xtls-rprx-vision-udp443
   client-fingerprint: chrome
   packet-encoding: ''
-- name: netflix_DE |69.72Mb
-  server: 151.101.0.1
+- name: netflix_DE | 6.86Mb
+  server: 167.82.0.1
   type: vless
   port: 80
   udp: true
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
+  uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa
   network: ws
   servername: max-gb1.global.ssl.fastly.net
   ws-opts:
@@ -592,26 +578,13 @@ proxies:
     headers:
       Host: max-gb1.global.ssl.fastly.net
   packet-encoding: ''
-- name: netflix_DE |84.50Mb
-  server: 151.101.194.219
-  type: vless
-  port: 80
-  udp: true
-  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
-  network: ws
-  servername: max-gb1.global.ssl.fastly.net
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-  packet-encoding: ''
-- name: Pool__13 | 4.39Mb
+- name: Pool__13 | 2.80Mb
   server: 61.171.92.202
   type: ss
   port: 1001
   password: '123'
   cipher: aes-256-gcm
-- name: netflix_US |43.89Mb
+- name: disney_netflix_US |43.89Mb
   server: 82.198.246.250
   type: vmess
   port: 180
@@ -620,21 +593,35 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: netflix_US |58.53Mb
-  server: 16.162.163.189
+- name: _16 | 2.02Mb
+  server: 103.127.243.54
+  type: vmess
+  port: 53229
+  udp: true
+  uuid: 2f50f5ef-1a3a-4585-a3c9-3a860d37b134
+  alterId: 0
+  cipher: auto
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /ABCDE
+  h2-opts: {}
+- name: netflix_DE |161.80Mb
+  server: de-1.hysteria.ltd
   type: trojan
-  port: 17005
-  password: d02e3bb7e6b3333e818d36866d40de6e
-  sni: www.nintendogames.net
-  skip-cert-verify: true
-- name: netflix_NL |30.15Mb
+  port: 9443
+  udp: true
+  password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
+  sni: de-1.hysteria.ltd
+- name: netflix_NL |32.42Mb
   server: 82.38.31.7
   type: ss
   country: 🇬🇧GB
   port: 8080
   password: oZIoA69Q8yhcQV8ka3Pa3A
   cipher: chacha20-ietf-poly1305
-- name: netflix_US |15.49Mb
+- name: disney_netflix_US | 8.45Mb
   server: 82.198.246.97
   type: vmess
   country: 🇬🇧GB
@@ -646,6 +633,24 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
+- name: disney_netflix_US |37.59Mb
+  server: cf.scpnb.top
+  type: vmess
+  country: 🏁ZZ
+  port: 443
+  uuid: 7c84ae69-f0b3-47dc-83c5-e7b5f00f5bed
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: vienna-bread-threats-amendment.trycloudflare.com
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /7c84ae69-f0b3-47dc-83c5-e7b5f00f5bed-vm
+    headers:
+      HOST: vienna-bread-threats-amendment.trycloudflare.com
 - cipher: aes-256-cfb
   name: United States_None_ss_101
   password: amazonskr05
@@ -661,6 +666,14 @@ proxies:
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: Japan_Tokyo_trojan_103
+  network: tcp
+  password: d02e3bb7e6b3333e818d36866d40de6e
+  port: 53018
+  server: 18.183.58.98
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  type: trojan
 - name: Hong Kong_None_trojan_104
   network: tcp
   password: BxceQaOe
@@ -685,6 +698,30 @@ proxies:
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
+- name: Hong Kong_None_trojan_107
+  network: tcp
+  password: d02e3bb7e6b3333e818d36866d40de6e
+  port: 5701
+  server: 18.162.244.255
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  type: trojan
+- name: Hong Kong_None_trojan_108
+  network: tcp
+  password: d02e3bb7e6b3333e818d36866d40de6e
+  port: 48738
+  server: 18.162.244.255
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  type: trojan
+- name: Hong Kong_None_trojan_109
+  network: tcp
+  password: d02e3bb7e6b3333e818d36866d40de6e
+  port: 48738
+  server: 16.162.163.189
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  type: trojan
 - name: Hong Kong_None_trojan_1010
   network: tcp
   password: BxceQaOe
@@ -701,6 +738,14 @@ proxies:
   skip-cert-verify: true
   sni: www.nintendogames.net
   type: trojan
+- name: Hong Kong_None_trojan_1012
+  network: tcp
+  password: d02e3bb7e6b3333e818d36866d40de6e
+  port: 17005
+  server: 16.162.163.189
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  type: trojan
 - name: Hong Kong_None_trojan_1013
   network: tcp
   password: BxceQaOe
@@ -709,14 +754,6 @@ proxies:
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
-- name: Germany_None_trojan_1017
-  password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
-  port: 9443
-  server: de-1.hysteria.ltd
-  skip-cert-verify: false
-  sni: de-1.hysteria.ltd
-  type: trojan
-  udp: true
 - alterId: 0
   cipher: auto
   name: Unknown_vmess_111
@@ -1114,7 +1151,7 @@ proxies:
   cipher: aes-128-gcm
   password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
   udp: true
-- name: 剩余流量：176.33 GB
+- name: 剩余流量：99.24 GB
   type: vmess
   server: jd.103672.xyz
   port: 8080
@@ -1140,13 +1177,3 @@ proxies:
   port: 1
   cipher: aes-128-gcm
   password: unsupported-client
-- name: SCP|US
-  type: vmess
-  server: cf.scpnb.top
-  port: 443
-  uuid: 7c84ae69-f0b3-47dc-83c5-e7b5f00f5bed
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  skip-cert-verify: true
