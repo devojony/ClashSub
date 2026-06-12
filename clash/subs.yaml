@@ -466,7 +466,7 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
-- name: disney_HK |57.03Mb
+- name: disney_HK |122.44Mb
   server: 154.37.223.19
   type: vmess
   port: 56972
@@ -480,13 +480,34 @@ proxies:
     path:
     - /
   h2-opts: {}
-- name: disney_netflix_KR
-  server: 211.201.169.70
-  type: ss
-  country: 🇰🇷 KR
-  port: 8314
-  password: qwerREWQ@@
-  cipher: aes-256-cfb
+- name: disney_netflix_SG |26.44Mb
+  server: 16.162.163.189
+  type: trojan
+  port: 48738
+  password: d02e3bb7e6b3333e818d36866d40de6e
+  sni: www.nintendogames.net
+  skip-cert-verify: true
+- name: disney_netflix_SG |25.11Mb
+  server: 18.162.244.255
+  type: trojan
+  port: 48738
+  password: d02e3bb7e6b3333e818d36866d40de6e
+  sni: www.nintendogames.net
+  skip-cert-verify: true
+- name: disney_netflix_JP |20.33Mb
+  server: 18.162.244.255
+  type: trojan
+  port: 5701
+  password: d02e3bb7e6b3333e818d36866d40de6e
+  sni: www.nintendogames.net
+  skip-cert-verify: true
+- name: disney_netflix_HK |72.41Mb
+  server: 18.183.58.98
+  type: trojan
+  port: 53018
+  password: d02e3bb7e6b3333e818d36866d40de6e
+  sni: www.nintendogames.net
+  skip-cert-verify: true
 - name: disney_netflix_HK |17.33Mb
   server: 155.117.198.85
   type: trojan
@@ -496,204 +517,45 @@ proxies:
   password: 4f4d1167-ef14-4304-9bce-0740472503ef
   sni: de.01.naiun.bilibili.com
   skip-cert-verify: true
-- name: Pool__04 | 5.71Mb
-  server: 61.171.92.202
-  type: ss
-  port: 1001
-  password: '123'
-  cipher: aes-256-gcm
-- name: 德国 - Frankfurt am Main - 2
-  server: 3.127.163.98
-  type: trojan
-  country: 🇩🇪DE
-  port: 22222
-  password: telegram-id-privatevpns
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
+- name: netflix_DE |37.47Mb
+  server: 199.232.197.131
+  type: vless
+  port: 80
   udp: true
-  delay: 746
-- name: 德国 - Frankfurt am Main - 3
-  server: 3.76.90.234
-  type: trojan
-  country: 🇩🇪DE
-  port: 22223
-  password: telegram-id-directvpn
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-  delay: 1027
-- name: 德国 - Frankfurt am Main - 4
-  server: 3.76.90.234
-  type: trojan
-  country: 🇩🇪DE
-  port: 22222
-  password: telegram-id-privatevpns
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-  delay: 1025
-- name: 德国 - Frankfurt am Main - 5
-  server: 3.127.163.98
-  type: trojan
-  country: 🇩🇪DE
-  port: 22223
-  password: telegram-id-directvpn
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-  delay: 1708
-- name: 俄罗斯 - 新西伯利亚 - 1
-  server: 193.233.18.234
-  type: ss
-  country: 🇷🇺RU
-  port: 443
-  password: YvNtVuLvHpZVAr8RMVRWRb
-  cipher: chacha20-ietf-poly1305
-  delay: 1202
-- name: 法国 - 巴黎 - 1
-  server: 52.47.70.99
-  type: trojan
-  country: 🇫🇷FR
-  port: 22223
-  password: telegram-id-directvpn
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-  delay: 738
-- name: 法国 - 巴黎 - 2
-  server: 13.37.43.57
-  type: trojan
-  country: 🇫🇷FR
-  port: 22222
-  password: telegram-id-privatevpns
-  sni: trojan.burgerip.co.uk
-  skip-cert-verify: true
-  udp: true
-  delay: 730
-- name: 芬兰 - 赫尔辛基 - 1
-  server: 144.31.7.129
-  type: ss
-  port: 51523
-  password: tndCP2Df9-PTx_J0sZeoHmTdvkg0w4Kv
-  cipher: chacha20-ietf-poly1305
-  delay: 971
-- name: 荷兰 - 阿姆斯特丹 - 1
-  server: 82.38.31.7
-  type: ss
-  country: 🇬🇧GB
-  port: 8080
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  cipher: chacha20-ietf-poly1305
-  delay: 500
-- name: 美国 - 圣路易斯 - 2
-  server: 104.17.77.77
-  type: vmess
-  country: 🏁ZZ
-  port: 8443
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: auto
+  uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa
   network: ws
-  servername: v2ray1.dozapp.xyz
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
+  servername: max-gb1.global.ssl.fastly.net
   ws-opts:
-    path: /lMnsZUN4/
+    path: /
     headers:
-      HOST: v2ray1.dozapp.xyz
-  delay: 2223
-- name: 美国 - Sulphur Springs - 1
-  server: 198.71.54.21
-  type: ss
-  country: 🇺🇸US
-  port: 1080
-  password: 097H_-eSMWbWFtuktVuT8wWjANSN9tmh
-  cipher: chacha20-ietf-poly1305
-  delay: 1476
-- name: 瑞士 - 苏黎世 - 1
-  server: 83.172.136.117
-  type: ss
-  country: 🇳🇱NL
-  port: 443
-  password: RfWVCFk2XrG2zYk2e5RVud
-  cipher: chacha20-ietf-poly1305
-  delay: 2477
-- name: 重要通知：如果只显示当前节点
-  type: ss
-  server: efan8998.efan-dns78655.com
-  port: 8714
-  cipher: rc4-md5
-  password: efanccyun
-  plugin: obfs
-  plugin-opts:
-    mode: http
-    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
-- name: 请更新更换客户端，帮助中心有教程。
-  type: ss
-  server: efan8998.efan-dns78655.com
-  port: 8715
-  cipher: rc4-md5
-  password: efanccyun
-  plugin: obfs
-  plugin-opts:
-    mode: http
-    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
-- name: Windows-Clash Verge Rev
-  type: ss
-  server: efan8998.efan-dns78655.com
-  port: 8716
-  cipher: rc4-md5
-  password: efanccyun
-  plugin: obfs
-  plugin-opts:
-    mode: http
-    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
-- name: MAC-Clash Verge Rev
-  type: ss
-  server: efan8998.efan-dns78655.com
-  port: 8717
-  cipher: rc4-md5
-  password: efanccyun
-  plugin: obfs
-  plugin-opts:
-    mode: http
-    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
-- name: Android-Clash Meta
-  type: ss
-  server: efan8998.efan-dns78655.com
-  port: 8718
-  cipher: rc4-md5
-  password: efanccyun
-  plugin: obfs
-  plugin-opts:
-    mode: http
-    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
-- name: ios-shadowrocket最新版本
-  type: ss
-  server: efan8998.efan-dns78655.com
-  port: 8719
-  cipher: rc4-md5
-  password: efanccyun
-  plugin: obfs
-  plugin-opts:
-    mode: http
-    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
-- name: 旧节点已经停止使用请更新客户端
-  type: ss
-  server: efan8998.efan-dns78655.com
-  port: 8720
-  cipher: rc4-md5
-  password: efanccyun
-  plugin: obfs
-  plugin-opts:
-    mode: http
-    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
-- name: Shadowsocks
-  type: socks5
-  server: 127.0.0.1
-  port: 1080
+      Host: max-gb1.global.ssl.fastly.net
+  packet-encoding: ''
+- name: netflix_DE | 6.86Mb
+  server: 167.82.0.1
+  type: vless
+  port: 80
+  udp: true
+  uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa
+  network: ws
+  servername: max-gb1.global.ssl.fastly.net
+  ws-opts:
+    path: /
+    headers:
+      Host: max-gb1.global.ssl.fastly.net
+  packet-encoding: ''
+- name: netflix_DE |85.21Mb
+  server: speedtest.net
+  type: vless
+  port: 80
+  udp: true
+  uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa
+  network: ws
+  servername: max-gb1.global.ssl.fastly.net
+  ws-opts:
+    path: /
+    headers:
+      Host: max-gb1.global.ssl.fastly.net
+  packet-encoding: ''
 - name: disney_netflix_GE |37.78Mb
   server: r1.mizulina.top
   type: vless
@@ -704,7 +566,52 @@ proxies:
   flow: xtls-rprx-vision-udp443
   client-fingerprint: chrome
   packet-encoding: ''
-- name: disney_netflix_US |43.92Mb
+- name: netflix_DE |69.72Mb
+  server: 151.101.0.1
+  type: vless
+  port: 80
+  udp: true
+  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
+  network: ws
+  servername: max-gb1.global.ssl.fastly.net
+  ws-opts:
+    path: /
+    headers:
+      Host: max-gb1.global.ssl.fastly.net
+  packet-encoding: ''
+- name: netflix_DE |99.13Mb
+  server: 151.101.2.219
+  type: vless
+  port: 80
+  udp: true
+  uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa
+  network: ws
+  servername: max-gb1.global.ssl.fastly.net
+  ws-opts:
+    path: /
+    headers:
+      Host: max-gb1.global.ssl.fastly.net
+  packet-encoding: ''
+- name: netflix_DE |84.50Mb
+  server: 151.101.194.219
+  type: vless
+  port: 80
+  udp: true
+  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
+  network: ws
+  servername: max-gb1.global.ssl.fastly.net
+  ws-opts:
+    path: /
+    headers:
+      Host: max-gb1.global.ssl.fastly.net
+  packet-encoding: ''
+- name: Pool__13 | 4.39Mb
+  server: 61.171.92.202
+  type: ss
+  port: 1001
+  password: '123'
+  cipher: aes-256-gcm
+- name: netflix_US |43.89Mb
   server: 82.198.246.250
   type: vmess
   port: 180
@@ -713,14 +620,21 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: netflix_DE |765.86Mb
-  server: de-1.hysteria.ltd
+- name: netflix_US |58.53Mb
+  server: 16.162.163.189
   type: trojan
-  port: 9443
-  udp: true
-  password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
-  sni: de-1.hysteria.ltd
-- name: disney_netflix_US | 9.37Mb
+  port: 17005
+  password: d02e3bb7e6b3333e818d36866d40de6e
+  sni: www.nintendogames.net
+  skip-cert-verify: true
+- name: netflix_NL |30.15Mb
+  server: 82.38.31.7
+  type: ss
+  country: 🇬🇧GB
+  port: 8080
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  cipher: chacha20-ietf-poly1305
+- name: netflix_US |15.49Mb
   server: 82.198.246.97
   type: vmess
   country: 🇬🇧GB
@@ -732,24 +646,6 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_netflix_US |40.75Mb
-  server: cf.scpnb.top
-  type: vmess
-  country: 🏁ZZ
-  port: 443
-  uuid: 7c84ae69-f0b3-47dc-83c5-e7b5f00f5bed
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: vienna-bread-threats-amendment.trycloudflare.com
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /7c84ae69-f0b3-47dc-83c5-e7b5f00f5bed-vm
-    headers:
-      HOST: vienna-bread-threats-amendment.trycloudflare.com
 - cipher: aes-256-cfb
   name: United States_None_ss_101
   password: amazonskr05
@@ -765,102 +661,62 @@ proxies:
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: Hong Kong_None_trojan_103
-  network: tcp
-  password: d02e3bb7e6b3333e818d36866d40de6e
-  port: 2008
-  server: 43.198.151.48
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Poland_None_trojan_104
+- name: Hong Kong_None_trojan_104
   network: tcp
   password: BxceQaOe
-  port: 43747
-  server: 95.40.47.95
+  port: 1123
+  server: 18.166.62.24
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
 - name: Poland_None_trojan_105
   network: tcp
   password: BxceQaOe
-  port: 50116
-  server: 95.40.47.95
+  port: 1123
+  server: 95.40.19.84
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
 - name: Japan_Tokyo_trojan_106
   network: tcp
   password: BxceQaOe
-  port: 53307
-  server: 52.195.147.173
+  port: 47655
+  server: 18.183.150.2
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
-- name: Poland_None_trojan_107
-  network: tcp
-  password: d02e3bb7e6b3333e818d36866d40de6e
-  port: 5701
-  server: 95.40.109.247
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Japan_Tokyo_trojan_108
-  network: tcp
-  password: d02e3bb7e6b3333e818d36866d40de6e
-  port: 3743
-  server: 35.79.220.32
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Japan_Tokyo_trojan_109
-  network: tcp
-  password: d02e3bb7e6b3333e818d36866d40de6e
-  port: 6357
-  server: 35.79.220.32
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Poland_None_trojan_1010
-  network: tcp
-  password: d02e3bb7e6b3333e818d36866d40de6e
-  port: 48738
-  server: 95.40.109.247
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Poland_None_trojan_1011
+- name: Hong Kong_None_trojan_1010
   network: tcp
   password: BxceQaOe
-  port: 45744
-  server: 95.40.47.95
+  port: 32434
+  server: 43.199.36.58
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
-- name: Hong Kong_None_trojan_1012
+- name: Hong Kong_None_trojan_1011
   network: tcp
   password: d02e3bb7e6b3333e818d36866d40de6e
-  port: 17005
-  server: 43.199.62.44
+  port: 48277
+  server: 18.162.244.255
   skip-cert-verify: true
   sni: www.nintendogames.net
   type: trojan
-- name: Poland_None_trojan_1013
-  network: tcp
-  password: d02e3bb7e6b3333e818d36866d40de6e
-  port: 49277
-  server: 95.40.109.247
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Hong Kong_None_trojan_1014
+- name: Hong Kong_None_trojan_1013
   network: tcp
   password: BxceQaOe
-  port: 54240
-  server: 16.162.220.245
+  port: 17801
+  server: 18.166.30.83
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
+- name: Germany_None_trojan_1017
+  password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
+  port: 9443
+  server: de-1.hysteria.ltd
+  skip-cert-verify: false
+  sni: de-1.hysteria.ltd
+  type: trojan
+  udp: true
 - alterId: 0
   cipher: auto
   name: Unknown_vmess_111
@@ -951,18 +807,215 @@ proxies:
   tls: false
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
-- name: 您的账号已被封禁！
-  type: ss
-  server: 127.0.0.1
-  port: 7800
-  cipher: aes-128-gcm
-  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
+- alterId: 2
+  cipher: auto
+  name: United States_None_vmess_1127
+  network: tcp
+  port: 30845
+  server: 103.182.97.12
+  skip-cert-verify: false
+  tls: false
+  type: vmess
   udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  xudp: true
+- name: Shadowsocks
+  type: socks5
+  server: 127.0.0.1
+  port: 1080
+- name: 重要通知：如果只显示当前节点
+  type: ss
+  server: efan8998.efan-dns78655.com
+  port: 8714
+  cipher: rc4-md5
+  password: efanccyun
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
+- name: 请更新更换客户端，帮助中心有教程。
+  type: ss
+  server: efan8998.efan-dns78655.com
+  port: 8715
+  cipher: rc4-md5
+  password: efanccyun
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
+- name: Windows-Clash Verge Rev
+  type: ss
+  server: efan8998.efan-dns78655.com
+  port: 8716
+  cipher: rc4-md5
+  password: efanccyun
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
+- name: MAC-Clash Verge Rev
+  type: ss
+  server: efan8998.efan-dns78655.com
+  port: 8717
+  cipher: rc4-md5
+  password: efanccyun
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
+- name: Android-Clash Meta
+  type: ss
+  server: efan8998.efan-dns78655.com
+  port: 8718
+  cipher: rc4-md5
+  password: efanccyun
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
+- name: ios-shadowrocket最新版本
+  type: ss
+  server: efan8998.efan-dns78655.com
+  port: 8719
+  cipher: rc4-md5
+  password: efanccyun
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
+- name: 旧节点已经停止使用请更新客户端
+  type: ss
+  server: efan8998.efan-dns78655.com
+  port: 8720
+  cipher: rc4-md5
+  password: efanccyun
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
+- name: 德国 - Frankfurt am Main - 2
+  server: 3.127.163.98
+  type: trojan
+  country: 🇩🇪DE
+  port: 22222
+  password: telegram-id-privatevpns
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+  delay: 746
+- name: 德国 - Frankfurt am Main - 3
+  server: 3.76.90.234
+  type: trojan
+  country: 🇩🇪DE
+  port: 22223
+  password: telegram-id-directvpn
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+  delay: 1027
+- name: 德国 - Frankfurt am Main - 4
+  server: 3.76.90.234
+  type: trojan
+  country: 🇩🇪DE
+  port: 22222
+  password: telegram-id-privatevpns
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+  delay: 1025
+- name: 德国 - Frankfurt am Main - 5
+  server: 3.127.163.98
+  type: trojan
+  country: 🇩🇪DE
+  port: 22223
+  password: telegram-id-directvpn
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+  delay: 1708
+- name: 俄罗斯 - 新西伯利亚 - 1
+  server: 193.233.18.234
+  type: ss
+  country: 🇷🇺RU
+  port: 443
+  password: YvNtVuLvHpZVAr8RMVRWRb
+  cipher: chacha20-ietf-poly1305
+  delay: 1202
+- name: 法国 - 巴黎 - 1
+  server: 52.47.70.99
+  type: trojan
+  country: 🇫🇷FR
+  port: 22223
+  password: telegram-id-directvpn
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+  delay: 738
+- name: 法国 - 巴黎 - 2
+  server: 13.37.43.57
+  type: trojan
+  country: 🇫🇷FR
+  port: 22222
+  password: telegram-id-privatevpns
+  sni: trojan.burgerip.co.uk
+  skip-cert-verify: true
+  udp: true
+  delay: 730
+- name: 芬兰 - 赫尔辛基 - 1
+  server: 144.31.7.129
+  type: ss
+  port: 51523
+  password: tndCP2Df9-PTx_J0sZeoHmTdvkg0w4Kv
+  cipher: chacha20-ietf-poly1305
+  delay: 971
+- name: 韩国 - Yongin-si - 1
+  server: 211.201.169.70
+  port: 8314
+  type: ss
+  country: 🇰🇷 KR
+  password: qwerREWQ@@
+  cipher: aes-256-cfb
+  delay: 264
+- name: 美国 - 圣路易斯 - 2
+  server: 104.17.77.77
+  type: vmess
+  country: 🏁ZZ
+  port: 8443
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: v2ray1.dozapp.xyz
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /lMnsZUN4/
+    headers:
+      HOST: v2ray1.dozapp.xyz
+  delay: 2223
+- name: 美国 - Sulphur Springs - 1
+  server: 198.71.54.21
+  type: ss
+  country: 🇺🇸US
+  port: 1080
+  password: 097H_-eSMWbWFtuktVuT8wWjANSN9tmh
+  cipher: chacha20-ietf-poly1305
+  delay: 1476
+- name: 瑞士 - 苏黎世 - 1
+  server: 83.172.136.117
+  type: ss
+  country: 🇳🇱NL
+  port: 443
+  password: RfWVCFk2XrG2zYk2e5RVud
+  cipher: chacha20-ietf-poly1305
+  delay: 2477
 - name: 日本1-CFN
   type: vless
   server: 162.159.4.183
   port: 443
-  uuid: 22d05bac-eed0-4ee7-b5e8-a66c691cdb27
+  uuid: c60a4b5b-63fc-42fe-b8df-8ddb2ce6f835
   udp: true
   tls: true
   skip-cert-verify: false
@@ -980,7 +1033,7 @@ proxies:
   skip-cert-verify: false
   sni: sg2.yuntong.click
   type: hysteria2
-  password: 22d05bac-eed0-4ee7-b5e8-a66c691cdb27
+  password: c60a4b5b-63fc-42fe-b8df-8ddb2ce6f835
   obfs: salamander
   obfs-password: eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo=
 - name: 法兰克福2
@@ -990,7 +1043,7 @@ proxies:
   skip-cert-verify: false
   sni: ff2.yuntong.click
   type: hysteria2
-  password: 22d05bac-eed0-4ee7-b5e8-a66c691cdb27
+  password: c60a4b5b-63fc-42fe-b8df-8ddb2ce6f835
   obfs: salamander
   obfs-password: eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo=
 - name: 柬埔寨2
@@ -1000,7 +1053,7 @@ proxies:
   skip-cert-verify: false
   sni: kh2.yuntong.click
   type: hysteria2
-  password: 22d05bac-eed0-4ee7-b5e8-a66c691cdb27
+  password: c60a4b5b-63fc-42fe-b8df-8ddb2ce6f835
   obfs: salamander
   obfs-password: eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo=
 - name: 越南2
@@ -1010,7 +1063,7 @@ proxies:
   skip-cert-verify: false
   sni: vn2.yuntong.click
   type: hysteria2
-  password: 22d05bac-eed0-4ee7-b5e8-a66c691cdb27
+  password: c60a4b5b-63fc-42fe-b8df-8ddb2ce6f835
   obfs: salamander
   obfs-password: eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo=
 - name: 南非2
@@ -1020,7 +1073,7 @@ proxies:
   skip-cert-verify: false
   sni: za2.yuntong.click
   type: hysteria2
-  password: 22d05bac-eed0-4ee7-b5e8-a66c691cdb27
+  password: c60a4b5b-63fc-42fe-b8df-8ddb2ce6f835
   obfs: salamander
   obfs-password: eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo=
 - name: 泰国2
@@ -1030,7 +1083,7 @@ proxies:
   skip-cert-verify: false
   sni: th2.yuntong.click
   type: hysteria2
-  password: 22d05bac-eed0-4ee7-b5e8-a66c691cdb27
+  password: c60a4b5b-63fc-42fe-b8df-8ddb2ce6f835
   obfs: salamander
   obfs-password: eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo=
 - name: 菲律宾2
@@ -1040,7 +1093,7 @@ proxies:
   skip-cert-verify: false
   sni: ph2.yuntong.click
   type: hysteria2
-  password: 22d05bac-eed0-4ee7-b5e8-a66c691cdb27
+  password: c60a4b5b-63fc-42fe-b8df-8ddb2ce6f835
   obfs: salamander
   obfs-password: eNM/NfxTsBqQIKcN0ezARS1z0f5mIxRd9GSwhVsyJlo=
 - name: 香港2
@@ -1052,9 +1105,16 @@ proxies:
   obfs: tls1.2_ticket_auth
   protocol: auth_chain_a
   udp: true
-  protocol-param: 849:22d05bac-eed0-4ee7-b5e8-a66c691cdb27
+  protocol-param: 845:c60a4b5b-63fc-42fe-b8df-8ddb2ce6f835
   obfs-param: sajhsahj.microsoft.com
-- name: 剩余流量：199.8 GB
+- name: 您的账号已被封禁！
+  type: ss
+  server: 127.0.0.1
+  port: 7800
+  cipher: aes-128-gcm
+  password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
+  udp: true
+- name: 剩余流量：176.33 GB
   type: vmess
   server: jd.103672.xyz
   port: 8080
@@ -1080,3 +1140,13 @@ proxies:
   port: 1
   cipher: aes-128-gcm
   password: unsupported-client
+- name: SCP|US
+  type: vmess
+  server: cf.scpnb.top
+  port: 443
+  uuid: 7c84ae69-f0b3-47dc-83c5-e7b5f00f5bed
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  skip-cert-verify: true
