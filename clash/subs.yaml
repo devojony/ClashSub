@@ -466,12 +466,12 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
-- name: Relay_-🇬🇧GB_01 | 5.83Mb
+- name: Relay_-🇬🇧GB_02
   server: 199.232.197.131
   type: vless
   port: 80
   udp: true
-  uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa
+  uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846
   network: ws
   servername: max-gb1.global.ssl.fastly.net
   ws-opts:
@@ -479,55 +479,26 @@ proxies:
     headers:
       Host: max-gb1.global.ssl.fastly.net
   packet-encoding: ''
-- name: Relay_-🇬🇧GB_03 |14.27Mb
-  server: 151.101.0.1
-  type: vless
-  port: 80
-  udp: true
-  uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa
-  network: ws
-  skip-cert-verify: true
-  servername: max-gb1.global.ssl.fastly.net
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-  packet-encoding: ''
-- name: Pool__05 |129.18Mb
+- name: Pool__04 | 4.74Mb
   server: 61.171.92.202
   type: ss
   port: 1001
   password: '123'
   cipher: aes-256-gcm
-- name: _07 |48.47Mb
-  server: 103.143.238.196
+- name: _07 |11.05Mb
+  server: 103.127.243.54
   type: vmess
-  port: 28384
+  port: 53229
   udp: true
-  uuid: 1e1a6b3b-14b2-4ae4-9aa9-880ba5dff6fa
+  uuid: 2f50f5ef-1a3a-4585-a3c9-3a860d37b134
   alterId: 0
   cipher: auto
-  network: tcp
-  servername: 103.143.238.196
-  http-opts: {}
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /ABCDE
   h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-- name: 🇭🇰HK_11 |68.38Mb
-  server: 103.143.238.196
-  type: vmess
-  country: 🇭🇰HK
-  port: 21879
-  uuid: 1e1a6b3b-14b2-4ae4-9aa9-880ba5dff6fa
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /vmesswss
 - name: Shadowsocks
   type: socks5
   server: 127.0.0.1
@@ -691,6 +662,37 @@ proxies:
   password: Rt2YkW
   cipher: aes-256-gcm
   delay: 506
+- name: 中国 - 香港 - 2
+  server: 103.143.238.196
+  type: vmess
+  port: 28384
+  udp: true
+  uuid: 1e1a6b3b-14b2-4ae4-9aa9-880ba5dff6fa
+  alterId: 0
+  cipher: auto
+  network: tcp
+  servername: 103.143.238.196
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  delay: 2372
+- name: 中国 - 香港 - 3
+  server: 103.143.238.196
+  type: vmess
+  country: 🇭🇰HK
+  port: 21879
+  uuid: 1e1a6b3b-14b2-4ae4-9aa9-880ba5dff6fa
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vmesswss
+  delay: 877
 - name: 中国 - 香港 - 4
   server: 212.192.15.177
   type: ss
@@ -699,7 +701,7 @@ proxies:
   password: 7e1dd4c55bf85da5
   cipher: aes-256-gcm
   delay: 1750
-- name: disney_netflix_SG |60.00Mb
+- name: disney_netflix_SG |79.47Mb
   server: 696969696969.duckdns.org
   type: hysteria2
   country: 🇸🇬SG
@@ -710,20 +712,7 @@ proxies:
   - h3
   sni: 104.248.149.145
   skip-cert-verify: false
-- name: netflix_DE
-  server: 151.101.2.219
-  type: vless
-  port: 80
-  udp: true
-  uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa
-  network: ws
-  servername: max-gb1.global.ssl.fastly.net
-  ws-opts:
-    path: /
-    headers:
-      Host: max-gb1.global.ssl.fastly.net
-  packet-encoding: ''
-- name: disney_netflix_US |44.03Mb
+- name: netflix_US |170.02Mb
   server: 82.198.246.250
   type: vmess
   port: 180
@@ -732,14 +721,14 @@ proxies:
   cipher: auto
   http-opts: {}
   h2-opts: {}
-- name: netflix_DE |785.56Mb
+- name: netflix_DE |234.35Mb
   server: de-1.hysteria.ltd
   type: trojan
   port: 9443
   udp: true
   password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
   sni: de-1.hysteria.ltd
-- name: disney_netflix_US |26.16Mb
+- name: netflix_US |159.37Mb
   server: 82.198.246.97
   type: vmess
   country: 🇬🇧GB
@@ -751,24 +740,6 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_netflix_US |71.31Mb
-  server: cf.scpnb.top
-  type: vmess
-  country: 🏁ZZ
-  port: 443
-  uuid: 7c84ae69-f0b3-47dc-83c5-e7b5f00f5bed
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: vienna-bread-threats-amendment.trycloudflare.com
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /7c84ae69-f0b3-47dc-83c5-e7b5f00f5bed-vm
-    headers:
-      HOST: vienna-bread-threats-amendment.trycloudflare.com
 - cipher: aes-256-cfb
   name: United States_None_ss_101
   password: amazonskr05
@@ -7637,3 +7608,13 @@ proxies:
   port: 1
   cipher: aes-128-gcm
   password: unsupported-client
+- name: SCP|US
+  type: vmess
+  server: cf.scpnb.top
+  port: 443
+  uuid: 7c84ae69-f0b3-47dc-83c5-e7b5f00f5bed
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  skip-cert-verify: true
