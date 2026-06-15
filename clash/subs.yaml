@@ -466,33 +466,133 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
-- name: Pool__02 |70.65Mb
+- name: Pool__01 |70.65Mb
   server: 61.171.92.202
   type: ss
   port: 1001
   password: '123'
   cipher: aes-256-gcm
-- name: _04 |27.57Mb
-  server: 103.127.243.54
-  type: vmess
-  port: 53229
+- name: _02 |69.92Mb
+  server: 35.183.126.173
+  type: ss
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: netflix_CA |47.98Mb
+  server: 15.223.5.86
+  type: ss
+  port: 443
   udp: true
-  uuid: 2f50f5ef-1a3a-4585-a3c9-3a860d37b134
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: netflix_US |137.37Mb
+  server: 82.198.246.250
+  type: vmess
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   alterId: 0
   cipher: auto
-  network: http
-  http-opts:
-    method: GET
-    path:
-    - /ABCDE
+  http-opts: {}
   h2-opts: {}
-- name: 🇺🇸US_13 | 2.44Mb
+- name: disney_netflix_HK |92.06Mb
+  server: 103.143.238.196
+  type: vmess
+  port: 28384
+  udp: true
+  uuid: 1e1a6b3b-14b2-4ae4-9aa9-880ba5dff6fa
+  alterId: 0
+  cipher: auto
+  network: tcp
+  servername: 103.143.238.196
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+- name: netflix_DE |516.00Mb
+  server: de-1.hysteria.ltd
+  type: trojan
+  port: 9443
+  udp: true
+  password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
+  sni: de-1.hysteria.ltd
+- name: netflix_CA |69.16Mb
+  server: 35.182.251.131
+  type: ss
+  country: 🇨🇦CA
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: netflix_NL |142.81Mb
+  server: 82.38.31.11
+  type: ss
+  country: 🇬🇧GB
+  port: 8080
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  cipher: chacha20-ietf-poly1305
+- name: netflix_NL |104.42Mb
+  server: 82.38.31.16
+  type: ss
+  country: 🇬🇧GB
+  port: 8080
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  cipher: chacha20-ietf-poly1305
+- name: netflix_US |135.90Mb
+  server: 82.198.246.97
+  type: vmess
+  country: 🇬🇧GB
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+- name: disney_netflix_HK |73.33Mb
+  server: 103.143.238.196
+  type: vmess
+  country: 🇭🇰HK
+  port: 21879
+  uuid: 1e1a6b3b-14b2-4ae4-9aa9-880ba5dff6fa
+  alterId: 0
+  cipher: auto
+  network: ws
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /vmesswss
+- name: disney_netflix_SG |308.47Mb
+  server: 696969696969.duckdns.org
+  type: hysteria2
+  country: 🇸🇬SG
+  port: 443
+  udp: true
+  password: dd4xmofilrdbpqwx
+  alpn:
+  - h3
+  sni: 104.248.149.145
+  skip-cert-verify: false
+- name: 🇺🇸US_13 |152.90Mb
   server: 198.98.53.130
   type: ss
   country: 🇺🇸US
   port: 443
   password: eDfN7SODQceIOmIAbtJJtK
   cipher: chacha20-ietf-poly1305
+- name: Relay_🇺🇸US-🇩🇪DE_14 |74.63Mb
+  server: v33.hdacd.com
+  type: vmess
+  country: 🇺🇸US
+  port: 30833
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
 - name: ♥哄哄TG交流群组@honghongtg♥
   server: youxuan.cf.090227.xyz
   port: 443
@@ -3043,120 +3143,240 @@ proxies:
   ech-opts:
     enable: true
     query-server-name: cloudflare-ech.com
-- name: 重要通知：如果只显示当前节点
-  type: ss
-  server: efan8998.efan-dns78655.com
-  port: 8714
-  cipher: rc4-md5
-  password: efanccyun
-  plugin: obfs
-  plugin-opts:
-    mode: http
-    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
-- name: 请更新更换客户端，帮助中心有教程。
-  type: ss
-  server: efan8998.efan-dns78655.com
-  port: 8715
-  cipher: rc4-md5
-  password: efanccyun
-  plugin: obfs
-  plugin-opts:
-    mode: http
-    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
-- name: Windows-Clash Verge Rev
-  type: ss
-  server: efan8998.efan-dns78655.com
-  port: 8716
-  cipher: rc4-md5
-  password: efanccyun
-  plugin: obfs
-  plugin-opts:
-    mode: http
-    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
-- name: MAC-Clash Verge Rev
-  type: ss
-  server: efan8998.efan-dns78655.com
-  port: 8717
-  cipher: rc4-md5
-  password: efanccyun
-  plugin: obfs
-  plugin-opts:
-    mode: http
-    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
-- name: Android-Clash Meta
-  type: ss
-  server: efan8998.efan-dns78655.com
-  port: 8718
-  cipher: rc4-md5
-  password: efanccyun
-  plugin: obfs
-  plugin-opts:
-    mode: http
-    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
-- name: ios-shadowrocket最新版本
-  type: ss
-  server: efan8998.efan-dns78655.com
-  port: 8719
-  cipher: rc4-md5
-  password: efanccyun
-  plugin: obfs
-  plugin-opts:
-    mode: http
-    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
-- name: 旧节点已经停止使用请更新客户端
-  type: ss
-  server: efan8998.efan-dns78655.com
-  port: 8720
-  cipher: rc4-md5
-  password: efanccyun
-  plugin: obfs
-  plugin-opts:
-    mode: http
-    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
 - name: Shadowsocks
   type: socks5
   server: 127.0.0.1
   port: 1080
-- name: disney_netflix_HK |87.56Mb
-  server: 103.143.238.196
-  type: vmess
-  port: 28384
-  udp: true
-  uuid: 1e1a6b3b-14b2-4ae4-9aa9-880ba5dff6fa
-  alterId: 0
-  cipher: auto
-  network: tcp
-  servername: 103.143.238.196
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-- name: disney_netflix_HK |70.38Mb
-  server: 103.143.238.196
-  type: vmess
-  country: 🇭🇰HK
-  port: 21879
-  uuid: 1e1a6b3b-14b2-4ae4-9aa9-880ba5dff6fa
-  alterId: 0
-  cipher: auto
-  network: ws
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /vmesswss
-- name: disney_netflix_SG |341.50Mb
-  server: 696969696969.duckdns.org
-  type: hysteria2
-  country: 🇸🇬SG
+- cipher: aes-256-cfb
+  name: United States_None_ss_101
+  password: amazonskr05
   port: 443
-  udp: true
-  password: dd4xmofilrdbpqwx
-  alpn:
-  - h3
-  sni: 104.248.149.145
+  server: 63.180.254.10
+  type: ss
+- alterId: 2
+  cipher: auto
+  name: Hong Kong_Tuen Mun_vmess_102
+  port: 30807
+  server: v10.hdacd.com
   skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: Japan_Tokyo_trojan_103
+  network: tcp
+  password: e0195c73018d597b1c2f0ea89d8676ae
+  port: 2008
+  server: 18.183.118.126
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  type: trojan
+- name: Hong Kong_None_trojan_104
+  network: tcp
+  password: BxceQaOe
+  port: 11035
+  server: 16.162.33.127
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: Hong Kong_None_trojan_105
+  network: tcp
+  password: BxceQaOe
+  port: 11035
+  server: 16.162.190.109
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: Japan_Tokyo_trojan_106
+  network: tcp
+  password: BxceQaOe
+  port: 19706
+  server: 18.183.247.142
+  skip-cert-verify: true
+  sni: t.me%252Fripaojiedian
+  type: trojan
+- name: Japan_Tokyo_trojan_107
+  network: tcp
+  password: e0195c73018d597b1c2f0ea89d8676ae
+  port: 55973
+  server: 18.183.118.126
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  type: trojan
+- name: Hong Kong_None_trojan_108
+  network: tcp
+  password: e0195c73018d597b1c2f0ea89d8676ae
+  port: 37973
+  server: 16.162.19.220
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  type: trojan
+- name: Hong Kong_None_trojan_109
+  network: tcp
+  password: e0195c73018d597b1c2f0ea89d8676ae
+  port: 6357
+  server: 18.162.187.25
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  type: trojan
+- name: Japan_Tokyo_trojan_1010
+  network: tcp
+  password: e0195c73018d597b1c2f0ea89d8676ae
+  port: 29642
+  server: 18.183.118.126
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  type: trojan
+- name: Hong Kong_None_trojan_1011
+  network: tcp
+  password: BxceQaOe
+  port: 22459
+  server: 18.166.62.207
+  skip-cert-verify: true
+  sni: t.me%252Fripaojiedian
+  type: trojan
+- name: Hong Kong_None_trojan_1012
+  network: tcp
+  password: e0195c73018d597b1c2f0ea89d8676ae
+  port: 17005
+  server: 18.162.187.25
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  type: trojan
+- name: Japan_Tokyo_trojan_1013
+  network: tcp
+  password: e0195c73018d597b1c2f0ea89d8676ae
+  port: 49277
+  server: 18.183.118.126
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  type: trojan
+- name: Hong Kong_None_trojan_1014
+  network: tcp
+  password: BxceQaOe
+  port: 22057
+  server: 18.166.228.198
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_111
+  network: tcp
+  port: '80'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_112
+  network: tcp
+  port: '81'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_113
+  network: tcp
+  port: '82'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_114
+  network: tcp
+  port: '83'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_115
+  network: tcp
+  port: '84'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_116
+  network: tcp
+  port: '85'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_117
+  network: tcp
+  port: '86'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_118
+  network: tcp
+  port: '87'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_119
+  network: tcp
+  port: '88'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_1110
+  network: tcp
+  port: '89'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- cipher: aes-256-cfb
+  name: United States_None_ss_1128
+  password: amazonskr05
+  port: 443
+  server: 63.183.200.172
+  skip-cert-verify: false
+  type: ss
+  udp: false
+- cipher: aes-256-gcm
+  name: United States_None_ss_1129
+  password: dada1203
+  port: '80'
+  server: 13.135.172.147
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: Australia_Sydney_ss_1130
+  password: dada1203
+  port: '80'
+  server: 3.27.212.11
+  type: ss
+  udp: true
+- cipher: aes-256-gcm
+  name: United Kingdom_London_ss_1131
+  password: dada1203
+  port: '80'
+  server: 35.176.239.59
+  type: ss
+  udp: true
 - name: ♥哄哄TG交流群组@honghongtg♥_1
   server: youxuan.cf.090227.xyz
   port: 443
@@ -6055,37 +6275,6 @@ proxies:
   skip-cert-verify: true
   udp: true
   delay: 761
-- name: 荷兰 - 阿姆斯特丹 - 1
-  server: 82.38.31.16
-  type: ss
-  country: 🇬🇧GB
-  port: 8080
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  cipher: chacha20-ietf-poly1305
-  delay: 1666
-- name: 加拿大 - 多伦多 - 1
-  server: 35.182.251.131
-  type: ss
-  country: 🇨🇦CA
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 549
-- name: 加拿大 - 多伦多 - 2
-  server: 35.183.126.173
-  type: ss
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 547
-- name: 加拿大 - 多伦多 - 3
-  server: 15.223.5.86
-  port: 443
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-  udp: true
-  delay: 541
 - name: 罗马尼亚 - 布加勒斯特 - 1
   server: 193.176.84.40
   port: 9002
@@ -6294,278 +6483,76 @@ proxies:
   skip-cert-verify: true
   udp: true
   delay: 2271
-- name: netflix_US |177.91Mb
-  server: 82.198.246.250
-  type: vmess
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-- name: netflix_DE |73.00Mb
-  server: de-1.hysteria.ltd
-  type: trojan
-  port: 9443
-  udp: true
-  password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
-  sni: de-1.hysteria.ltd
-- name: netflix_NL |585.31Mb
-  server: 82.38.31.11
+- name: 重要通知：如果只显示当前节点
   type: ss
-  country: 🇬🇧GB
-  port: 8080
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  cipher: chacha20-ietf-poly1305
-- name: netflix_US |41.64Mb
-  server: 82.198.246.97
-  type: vmess
-  country: 🇬🇧GB
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- cipher: aes-256-cfb
-  name: United States_None_ss_101
-  password: amazonskr05
-  port: 443
-  server: 63.180.254.10
+  server: efan8998.efan-dns78655.com
+  port: 8714
+  cipher: rc4-md5
+  password: efanccyun
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
+- name: 请更新更换客户端，帮助中心有教程。
   type: ss
-- alterId: 2
-  cipher: auto
-  name: Hong Kong_Tuen Mun_vmess_102
-  port: 30807
-  server: v10.hdacd.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: Japan_Tokyo_trojan_103
-  network: tcp
-  password: e0195c73018d597b1c2f0ea89d8676ae
-  port: 2008
-  server: 18.183.118.126
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Hong Kong_None_trojan_104
-  network: tcp
-  password: BxceQaOe
-  port: 11035
-  server: 16.162.33.127
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-- name: Hong Kong_None_trojan_105
-  network: tcp
-  password: BxceQaOe
-  port: 11035
-  server: 16.162.190.109
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-- name: Japan_Tokyo_trojan_106
-  network: tcp
-  password: BxceQaOe
-  port: 19706
-  server: 18.183.247.142
-  skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-  type: trojan
-- name: Japan_Tokyo_trojan_107
-  network: tcp
-  password: e0195c73018d597b1c2f0ea89d8676ae
-  port: 55973
-  server: 18.183.118.126
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Hong Kong_None_trojan_108
-  network: tcp
-  password: e0195c73018d597b1c2f0ea89d8676ae
-  port: 37973
-  server: 16.162.19.220
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Hong Kong_None_trojan_109
-  network: tcp
-  password: e0195c73018d597b1c2f0ea89d8676ae
-  port: 6357
-  server: 18.162.187.25
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Japan_Tokyo_trojan_1010
-  network: tcp
-  password: e0195c73018d597b1c2f0ea89d8676ae
-  port: 29642
-  server: 18.183.118.126
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Hong Kong_None_trojan_1011
-  network: tcp
-  password: BxceQaOe
-  port: 22459
-  server: 18.166.62.207
-  skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-  type: trojan
-- name: Hong Kong_None_trojan_1012
-  network: tcp
-  password: e0195c73018d597b1c2f0ea89d8676ae
-  port: 17005
-  server: 18.162.187.25
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Japan_Tokyo_trojan_1013
-  network: tcp
-  password: e0195c73018d597b1c2f0ea89d8676ae
-  port: 49277
-  server: 18.183.118.126
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Hong Kong_None_trojan_1014
-  network: tcp
-  password: BxceQaOe
-  port: 22057
-  server: 18.166.228.198
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_111
-  network: tcp
-  port: '80'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_112
-  network: tcp
-  port: '81'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_113
-  network: tcp
-  port: '82'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_114
-  network: tcp
-  port: '83'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_115
-  network: tcp
-  port: '84'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_116
-  network: tcp
-  port: '85'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_117
-  network: tcp
-  port: '86'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_118
-  network: tcp
-  port: '87'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_119
-  network: tcp
-  port: '88'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_1110
-  network: tcp
-  port: '89'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- cipher: aes-256-cfb
-  name: United States_None_ss_1128
-  password: amazonskr05
-  port: 443
-  server: 63.183.200.172
-  skip-cert-verify: false
+  server: efan8998.efan-dns78655.com
+  port: 8715
+  cipher: rc4-md5
+  password: efanccyun
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
+- name: Windows-Clash Verge Rev
   type: ss
-  udp: false
-- cipher: aes-256-gcm
-  name: United States_None_ss_1129
-  password: dada1203
-  port: '80'
-  server: 13.135.172.147
+  server: efan8998.efan-dns78655.com
+  port: 8716
+  cipher: rc4-md5
+  password: efanccyun
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
+- name: MAC-Clash Verge Rev
   type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: Australia_Sydney_ss_1130
-  password: dada1203
-  port: '80'
-  server: 3.27.212.11
+  server: efan8998.efan-dns78655.com
+  port: 8717
+  cipher: rc4-md5
+  password: efanccyun
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
+- name: Android-Clash Meta
   type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: United Kingdom_London_ss_1131
-  password: dada1203
-  port: '80'
-  server: 35.176.239.59
+  server: efan8998.efan-dns78655.com
+  port: 8718
+  cipher: rc4-md5
+  password: efanccyun
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
+- name: ios-shadowrocket最新版本
   type: ss
-  udp: true
-- name: 您的账号已被封禁
+  server: efan8998.efan-dns78655.com
+  port: 8719
+  cipher: rc4-md5
+  password: efanccyun
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
+- name: 旧节点已经停止使用请更新客户端
   type: ss
-  server: 127.0.0.1
-  port: 6666
-  cipher: aes-128-gcm
-  password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
-  udp: true
+  server: efan8998.efan-dns78655.com
+  port: 8720
+  cipher: rc4-md5
+  password: efanccyun
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 202507191828289-hYuuWXQOZO.download.microsoft.com
 - name: 您的账号已被封禁！
   type: ss
   server: 127.0.0.1
@@ -6669,6 +6656,19 @@ proxies:
   udp: true
   protocol-param: 849:22d05bac-eed0-4ee7-b5e8-a66c691cdb27
   obfs-param: sajhsahj.microsoft.com
+- name: 您的账号已被封禁
+  type: ss
+  server: 127.0.0.1
+  port: 6666
+  cipher: aes-128-gcm
+  password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
+  udp: true
+- name: '%E8%AF%B7%E4%BD%BF%E7%94%A8%E6%94%AF%E6%8C%81Clash.Meta%E5%86%85%E6%A0%B8%E7%9A%84%E8%BD%AF%E4%BB%B6%E8%AE%A2%E9%98%85%E6%88%96Shadowrocket%EF%BC%8C%E7%9B%B8%E5%85%B3%E8%BD%AF%E4%BB%B6%E5%8F%AF%E5%9C%A8%E7%9F%A5%E8%AF%86%E5%BA%93%E8%8E%B7%E5%8F%96'
+  type: ss
+  server: 127.0.0.1
+  port: 1
+  cipher: aes-128-gcm
+  password: unsupported-client
 - name: SCP|US
   type: vmess
   server: cf.scpnb.top
@@ -6679,9 +6679,3 @@ proxies:
   network: ws
   tls: true
   skip-cert-verify: true
-- name: '%E8%AF%B7%E4%BD%BF%E7%94%A8%E6%94%AF%E6%8C%81Clash.Meta%E5%86%85%E6%A0%B8%E7%9A%84%E8%BD%AF%E4%BB%B6%E8%AE%A2%E9%98%85%E6%88%96Shadowrocket%EF%BC%8C%E7%9B%B8%E5%85%B3%E8%BD%AF%E4%BB%B6%E5%8F%AF%E5%9C%A8%E7%9F%A5%E8%AF%86%E5%BA%93%E8%8E%B7%E5%8F%96'
-  type: ss
-  server: 127.0.0.1
-  port: 1
-  cipher: aes-128-gcm
-  password: unsupported-client
