@@ -466,81 +466,22 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
-- name: _01 |390.12Mb
-  server: 15.223.5.86
+- name: Pool__02 |74.08Mb
+  server: 61.171.92.202
   type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: _02 |25.72Mb
-  server: 103.127.243.54
-  type: vmess
-  port: 53229
-  udp: true
-  uuid: 2f50f5ef-1a3a-4585-a3c9-3a860d37b134
-  alterId: 0
-  cipher: auto
-  network: http
-  http-opts:
-    method: GET
-    path:
-    - /ABCDE
-  h2-opts: {}
-- name: Relay_-🇺🇸US_03 |43.30Mb
-  server: 82.198.246.250
-  type: vmess
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-- name: 🇬🇧GB_07 |117.89Mb
-  server: 82.38.31.16
-  type: ss
-  country: 🇬🇧GB
-  port: 8080
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  cipher: chacha20-ietf-poly1305
-- name: 🇬🇧GB_08 |93.82Mb
-  server: 82.38.31.11
-  type: ss
-  country: 🇬🇧GB
-  port: 8080
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  cipher: chacha20-ietf-poly1305
-- name: Relay_🇬🇧GB-🇺🇸US_09 |31.57Mb
-  server: 82.198.246.97
-  type: vmess
-  country: 🇬🇧GB
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-- name: Relay_🇰🇷KR-🇰🇷KR_23
-  server: x-hg.xueshan168.cc
+  port: 1001
+  password: '123'
+  cipher: aes-256-gcm
+- name: Relay_🇯🇵JP-🇯🇵JP_19 |72.74Mb
+  server: x-rb2.xueshan168.cc
   type: hysteria2
-  country: 🇰🇷KR
+  country: 🇯🇵JP
   port: 20201
   udp: true
   password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  sni: x-hg.xueshan168.cc
+  sni: x-rb2.xueshan168.cc
   skip-cert-verify: true
-- name: Relay_🇲🇺MU-🇲🇺MU_25 |78.91Mb
-  server: x-am.xueshan168.cc
-  type: hysteria2
-  country: 🇲🇺MU
-  port: 20201
-  udp: true
-  password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  sni: x-am.xueshan168.cc
-  skip-cert-verify: true
-- name: Relay_🇷🇺RU-🇷🇺RU_26 |162.88Mb
+- name: Relay_🇷🇺RU-🇷🇺RU_25 |12.51Mb
   server: x-els.xueshan168.cc
   type: hysteria2
   country: 🇷🇺RU
@@ -549,43 +490,13 @@ proxies:
   password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
   sni: x-els.xueshan168.cc
   skip-cert-verify: true
-- name: 🇺🇸US_35 | 7.57Mb
+- name: ' |178.45Mb'
   server: 198.98.53.130
   type: ss
   country: 🇺🇸US
   port: 443
   password: eDfN7SODQceIOmIAbtJJtK
   cipher: chacha20-ietf-poly1305
-- name: Relay_🇺🇸US-🇺🇸US_36 |105.50Mb
-  server: cf.scpnb.top
-  type: vmess
-  country: 🇺🇸US
-  port: 443
-  uuid: 7c84ae69-f0b3-47dc-83c5-e7b5f00f5bed
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: vienna-bread-threats-amendment.trycloudflare.com
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  skip-cert-verify: true
-  ws-opts:
-    path: /7c84ae69-f0b3-47dc-83c5-e7b5f00f5bed-vm
-    headers:
-      HOST: vienna-bread-threats-amendment.trycloudflare.com
-- name: Relay_🇺🇸US-🇩🇪DE_37 |74.63Mb
-  server: v33.hdacd.com
-  type: vmess
-  country: 🇺🇸US
-  port: 30833
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  network: tcp
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
 - name: Shadowsocks
   type: socks5
   server: 127.0.0.1
@@ -766,13 +677,6 @@ proxies:
     host: (Telegram🇨🇳 @WangCai2)f6e348d:70852
   udp: true
   delay: 404
-- name: 中国 - 上海 - 1
-  server: 61.171.92.202
-  type: ss
-  port: 1001
-  password: '123'
-  cipher: aes-256-gcm
-  delay: 201
 - name: 🌍 优选域名-01
   type: trojan
   server: youxuan.cf.090227.xyz
@@ -7321,8 +7225,8 @@ proxies:
 - name: Japan_Tokyo_trojan_103
   network: tcp
   password: e0195c73018d597b1c2f0ea89d8676ae
-  port: 2008
-  server: 18.183.118.126
+  port: 53018
+  server: 43.207.198.215
   skip-cert-verify: true
   sni: www.nintendogames.net
   type: trojan
@@ -7330,7 +7234,7 @@ proxies:
   network: tcp
   password: BxceQaOe
   port: 11035
-  server: 16.162.33.127
+  server: 18.163.84.233
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
@@ -7338,55 +7242,55 @@ proxies:
   network: tcp
   password: BxceQaOe
   port: 11035
-  server: 16.162.190.109
+  server: 16.163.107.220
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
 - name: Japan_Tokyo_trojan_106
   network: tcp
   password: BxceQaOe
-  port: 19706
-  server: 18.183.247.142
+  port: 4099
+  server: 18.181.78.148
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
 - name: Japan_Tokyo_trojan_107
   network: tcp
   password: e0195c73018d597b1c2f0ea89d8676ae
-  port: 55973
-  server: 18.183.118.126
+  port: 37973
+  server: 35.75.4.144
   skip-cert-verify: true
   sni: www.nintendogames.net
   type: trojan
-- name: Hong Kong_None_trojan_108
+- name: Poland_None_trojan_108
   network: tcp
   password: e0195c73018d597b1c2f0ea89d8676ae
-  port: 37973
-  server: 16.162.19.220
+  port: 5701
+  server: 95.40.125.63
   skip-cert-verify: true
   sni: www.nintendogames.net
   type: trojan
-- name: Hong Kong_None_trojan_109
+- name: Poland_None_trojan_109
   network: tcp
   password: e0195c73018d597b1c2f0ea89d8676ae
   port: 6357
-  server: 18.162.187.25
+  server: 95.40.125.63
   skip-cert-verify: true
   sni: www.nintendogames.net
   type: trojan
-- name: Japan_Tokyo_trojan_1010
+- name: Poland_None_trojan_1010
   network: tcp
   password: e0195c73018d597b1c2f0ea89d8676ae
   port: 29642
-  server: 18.183.118.126
+  server: 95.40.125.63
   skip-cert-verify: true
   sni: www.nintendogames.net
   type: trojan
 - name: Hong Kong_None_trojan_1011
   network: tcp
   password: BxceQaOe
-  port: 22459
-  server: 18.166.62.207
+  port: 9149
+  server: 18.163.84.233
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
@@ -7394,7 +7298,7 @@ proxies:
   network: tcp
   password: e0195c73018d597b1c2f0ea89d8676ae
   port: 17005
-  server: 18.162.187.25
+  server: 43.198.107.157
   skip-cert-verify: true
   sni: www.nintendogames.net
   type: trojan
@@ -7402,18 +7306,27 @@ proxies:
   network: tcp
   password: e0195c73018d597b1c2f0ea89d8676ae
   port: 49277
-  server: 18.183.118.126
+  server: 43.207.198.215
   skip-cert-verify: true
   sni: www.nintendogames.net
   type: trojan
 - name: Hong Kong_None_trojan_1014
   network: tcp
   password: BxceQaOe
-  port: 22057
-  server: 18.166.228.198
+  port: 41889
+  server: 18.162.213.254
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
+- alterId: 0
+  cipher: auto
+  name: United Kingdom_None_vmess_1015
+  port: 180
+  server: 82.198.246.250
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
 - name: Germany_None_trojan_1018
   password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
   port: 9443
@@ -7512,132 +7425,31 @@ proxies:
   tls: false
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
-- name: Japan_Tokyo_trojan_1113
-  network: tcp
-  password: e0195c73018d597b1c2f0ea89d8676ae
-  port: 53018
-  server: 43.207.198.215
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Hong Kong_None_trojan_1114
-  network: tcp
-  password: BxceQaOe
-  port: 11035
-  server: 18.163.84.233
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-- name: Hong Kong_None_trojan_1115
-  network: tcp
-  password: BxceQaOe
-  port: 11035
-  server: 16.163.107.220
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-- name: Japan_Tokyo_trojan_1116
-  network: tcp
-  password: BxceQaOe
-  port: 4099
-  server: 18.181.78.148
-  skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-  type: trojan
-- name: Japan_Tokyo_trojan_1117
-  network: tcp
-  password: e0195c73018d597b1c2f0ea89d8676ae
-  port: 37973
-  server: 35.75.4.144
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Poland_None_trojan_1118
-  network: tcp
-  password: e0195c73018d597b1c2f0ea89d8676ae
-  port: 5701
-  server: 95.40.125.63
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Poland_None_trojan_1119
-  network: tcp
-  password: e0195c73018d597b1c2f0ea89d8676ae
-  port: 6357
-  server: 95.40.125.63
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Poland_None_trojan_1120
-  network: tcp
-  password: e0195c73018d597b1c2f0ea89d8676ae
-  port: 29642
-  server: 95.40.125.63
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Hong Kong_None_trojan_1121
-  network: tcp
-  password: BxceQaOe
-  port: 9149
-  server: 18.163.84.233
-  skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-  type: trojan
-- name: Hong Kong_None_trojan_1122
-  network: tcp
-  password: e0195c73018d597b1c2f0ea89d8676ae
-  port: 17005
-  server: 43.198.107.157
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Japan_Tokyo_trojan_1123
-  network: tcp
-  password: e0195c73018d597b1c2f0ea89d8676ae
-  port: 49277
-  server: 43.207.198.215
-  skip-cert-verify: true
-  sni: www.nintendogames.net
-  type: trojan
-- name: Hong Kong_None_trojan_1124
-  network: tcp
-  password: BxceQaOe
-  port: 41889
-  server: 18.162.213.254
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
 - cipher: aes-256-cfb
-  name: United States_None_ss_1128
+  name: Canada_Montreal_ss_1128
   password: amazonskr05
   port: 443
-  server: 63.183.200.172
+  server: 3.97.8.224
   skip-cert-verify: false
   type: ss
   udp: false
-- cipher: aes-256-gcm
-  name: United States_None_ss_1129
-  password: dada1203
-  port: '80'
-  server: 13.135.172.147
+- cipher: aes-256-cfb
+  name: Canada_Montreal_ss_1129
+  password: amazonskr05
+  port: 443
+  server: 35.183.126.173
+  skip-cert-verify: false
   type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: Australia_Sydney_ss_1130
-  password: dada1203
-  port: '80'
-  server: 3.27.212.11
+  udp: false
+- cipher: chacha20-ietf-poly1305
+  name: United Kingdom_Enfield_ss_1130
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  port: 8080
+  server: 82.38.31.17
+  skip-cert-verify: false
   type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: United Kingdom_London_ss_1131
-  password: dada1203
-  port: '80'
-  server: 35.176.239.59
-  type: ss
-  udp: true
-- name: disney_HK |10.66Mb
+  udp: false
+- name: disney_netflix_HK |65.34Mb
   server: 103.143.238.196
   type: vmess
   port: 28384
@@ -7651,7 +7463,7 @@ proxies:
   h2-opts: {}
   tls: true
   skip-cert-verify: true
-- name: disney_netflix_TW |40.30Mb
+- name: disney_TW |19.49Mb
   server: x-xg4.xueshan168.cc
   type: hysteria2
   country: 🇭🇰HK
@@ -7660,7 +7472,7 @@ proxies:
   password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
   sni: x-xg4.xueshan168.cc
   skip-cert-verify: true
-- name: disney_HK |54.71Mb
+- name: disney_netflix_HK |22.21Mb
   server: 103.143.238.196
   type: vmess
   country: 🇭🇰HK
@@ -7675,7 +7487,7 @@ proxies:
   skip-cert-verify: true
   ws-opts:
     path: /vmesswss
-- name: disney_netflix_JP |201.19Mb
+- name: disney_netflix_JP |13.80Mb
   server: x-rb8.xueshan168.cc
   type: hysteria2
   country: 🇯🇵JP
@@ -7684,7 +7496,7 @@ proxies:
   password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
   sni: x-rb8.xueshan168.cc
   skip-cert-verify: true
-- name: disney_netflix_JP | 8.09Mb
+- name: disney_JP |265.70Mb
   server: x-rb5.xueshan168.cc
   type: hysteria2
   country: 🇯🇵JP
@@ -7693,7 +7505,7 @@ proxies:
   password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
   sni: x-rb5.xueshan168.cc
   skip-cert-verify: true
-- name: disney_netflix_JP |199.51Mb
+- name: disney_netflix_JP |21.03Mb
   server: x-rb3.xueshan168.cc
   type: hysteria2
   country: 🇯🇵JP
@@ -7701,15 +7513,6 @@ proxies:
   udp: true
   password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
   sni: x-rb3.xueshan168.cc
-  skip-cert-verify: true
-- name: disney_JP |49.69Mb
-  server: x-rb2.xueshan168.cc
-  type: hysteria2
-  country: 🇯🇵JP
-  port: 20201
-  udp: true
-  password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  sni: x-rb2.xueshan168.cc
   skip-cert-verify: true
 - name: disney_netflix_KR
   server: x-hg3.xueshan168.cc
@@ -7729,6 +7532,24 @@ proxies:
   password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
   sni: x-hg2.xueshan168.cc
   skip-cert-verify: true
+- name: disney_HK | 3.98Mb
+  server: x-am.xueshan168.cc
+  type: hysteria2
+  country: 🇲🇺MU
+  port: 20201
+  udp: true
+  password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
+  sni: x-am.xueshan168.cc
+  skip-cert-verify: true
+- name: netflix_SG |65.48Mb
+  server: x-xjp.xueshan168.cc
+  type: hysteria2
+  country: 🇸🇬SG
+  port: 20201
+  udp: true
+  password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
+  sni: x-xjp.xueshan168.cc
+  skip-cert-verify: true
 - name: disney_TW |18.87Mb
   server: tw.xueshan168.cc
   type: hysteria2
@@ -7738,41 +7559,38 @@ proxies:
   password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
   sni: tw.xueshan168.cc
   skip-cert-verify: true
-- name: disney_VN |24.83Mb
-  server: tw02.xueshan168.cc
-  type: hysteria2
-  country: 🇹🇼TW
-  port: 20201
+- name: netflix_CA |340.98Mb
+  server: 15.223.5.86
+  type: ss
+  port: 443
   udp: true
-  password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  sni: tw02.xueshan168.cc
-  skip-cert-verify: true
-- name: disney_VN | 9.35Mb
-  server: x-yn.xueshan168.cc
-  type: hysteria2
-  country: 🏁ZZ
-  port: 20201
-  udp: true
-  password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  sni: x-yn.xueshan168.cc
-  skip-cert-verify: true
-- name: netflix_GB |111.29Mb
-  server: x-yg.xueshan168.cc
-  type: hysteria2
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: netflix_NL |155.33Mb
+  server: 82.38.31.11
+  type: ss
   country: 🇬🇧GB
-  port: 20201
-  udp: true
-  password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  sni: x-yg.xueshan168.cc
-  skip-cert-verify: true
-- name: disney_netflix_US |13.74Mb
-  server: x-xg1.xueshan168.cc
-  type: hysteria2
-  country: 🇭🇰HK
-  port: 20201
-  udp: true
-  password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  sni: x-xg1.xueshan168.cc
+  port: 8080
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  cipher: chacha20-ietf-poly1305
+- name: netflix_NL |116.97Mb
+  server: 82.38.31.16
+  type: ss
+  country: 🇬🇧GB
+  port: 8080
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_US |180.43Mb
+  server: 82.198.246.97
+  type: vmess
+  country: 🇬🇧GB
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  network: tcp
+  http-opts: {}
+  h2-opts: {}
   skip-cert-verify: true
 - name: disney_netflix_US |12.32Mb
   server: x-xg0.xueshan168.cc
@@ -7782,15 +7600,6 @@ proxies:
   udp: true
   password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
   sni: x-xg0.xueshan168.cc
-  skip-cert-verify: true
-- name: disney_netflix_US |11.48Mb
-  server: x-xg2.xueshan168.cc
-  type: hysteria2
-  country: 🇭🇰HK
-  port: 20201
-  udp: true
-  password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  sni: x-xg2.xueshan168.cc
   skip-cert-verify: true
 - name: disney_netflix_US |13.21Mb
   server: x-rb6.xueshan168.cc
@@ -7809,6 +7618,24 @@ proxies:
   udp: true
   password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
   sni: x-rb7.xueshan168.cc
+  skip-cert-verify: true
+- name: disney_netflix_US |11.48Mb
+  server: x-xg2.xueshan168.cc
+  type: hysteria2
+  country: 🇭🇰HK
+  port: 20201
+  udp: true
+  password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
+  sni: x-xg2.xueshan168.cc
+  skip-cert-verify: true
+- name: disney_netflix_US |13.74Mb
+  server: x-xg1.xueshan168.cc
+  type: hysteria2
+  country: 🇭🇰HK
+  port: 20201
+  udp: true
+  password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
+  sni: x-xg1.xueshan168.cc
   skip-cert-verify: true
 - name: netflix_DE |294.89Mb
   server: x-dg.xueshan168.cc
@@ -7837,15 +7664,6 @@ proxies:
   password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
   sni: x-fg.xueshan168.cc
   skip-cert-verify: true
-- name: disney_netflix_US |402.59Mb
-  server: x-mg.xueshan168.cc
-  type: hysteria2
-  country: 🇺🇸US
-  port: 20201
-  udp: true
-  password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  sni: x-mg.xueshan168.cc
-  skip-cert-verify: true
 - name: disney_netflix_US |58.93Mb
   server: x-mg3.xueshan168.cc
   type: hysteria2
@@ -7863,6 +7681,15 @@ proxies:
   udp: true
   password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
   sni: x-mg1.xueshan168.cc
+  skip-cert-verify: true
+- name: disney_netflix_US |402.59Mb
+  server: x-mg.xueshan168.cc
+  type: hysteria2
+  country: 🇺🇸US
+  port: 20201
+  udp: true
+  password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
+  sni: x-mg.xueshan168.cc
   skip-cert-verify: true
 - name: disney_netflix_US |353.09Mb
   server: x-mg0.xueshan168.cc
@@ -7889,488 +7716,13 @@ proxies:
   cipher: aes-128-gcm
   password: 89e176b5-df29-4b1e-bc46-9d727a8ab7bd
   udp: true
-- name: 🛠️有超时请重启网络
-  type: vless
-  server: x-mg.xueshan168.cc
-  port: 20200
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
+- name: 剩余流量：765.07 GB
+  type: ss
+  server: 0.0.0.0
+  port: 0
+  cipher: aes-256-gcm
+  password: 1b254d6b-0c43-46d1-83e8-58cf7629fbf9
   udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: 5UyrbL7pqfhh7vgpyk5beDFZUK2uQWLqdvfgJBzu7Gg
-    short-id: null
-  client-fingerprint: edge
-- name: 🇰🇷韩国SK·三网|家宽2
-  type: vless
-  server: x-hg3.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: iv3BAoFjlsPSSjOn1cyXVZ3H31KqX65PoJusBEfU0lM
-    short-id: null
-  client-fingerprint: chrome
-- name: 🇰🇷韩国SK·三网|家宽4
-  type: vless
-  server: x-hg.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: wTDp8GLmm9-e84raeixo46WniotkQIsPBqcYoa-Tqy4
-    short-id: null
-  client-fingerprint: safari
-- name: 🇰🇷韩国SK·三网|家宽6
-  type: vless
-  server: x-hg2.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: wTDp8GLmm9-e84raeixo46WniotkQIsPBqcYoa-Tqy4
-    short-id: null
-  client-fingerprint: safari
-- name: 🇯🇵日本·三网|SAK-2
-  type: vless
-  server: x-rb1.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: CuqzBeQR_1VIdOGOgn5v8-t-X-YzURF9b3wtKVVyKQ8
-    short-id: null
-  client-fingerprint: qq
-- name: 🇯🇵日本·三网|SAK-3
-  server: x-rb.xueshan168.cc
-  port: 20201
-  sni: x-rb1.xueshan168.cc
-  up: 1000
-  down: 1000
-  skip-cert-verify: true
-  type: hysteria2
-  password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-- name: 🇯🇵日本·三网|SAK-4
-  type: vless
-  server: x-rb.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: iv3BAoFjlsPSSjOn1cyXVZ3H31KqX65PoJusBEfU0lM
-    short-id: null
-  client-fingerprint: safari
-- name: 🇭🇰香港HKT动态|商宽1
-  type: vless
-  server: x-xg.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: iv3BAoFjlsPSSjOn1cyXVZ3H31KqX65PoJusBEfU0lM
-    short-id: null
-  client-fingerprint: chrome
-- name: 🇭🇰香港HKT三网|商宽2
-  type: vless
-  server: x-xg1.xueshan168.cc
-  port: 21000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: bxu_fj69tCOtW1R_Kc3NFy1L9PJ0I1wBzOVKZwEW8VA
-    short-id: null
-  client-fingerprint: ios
-- name: 🇭🇰香港HKT三网|商宽4
-  type: vless
-  server: x-xg2.xueshan168.cc
-  port: 21000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: bxu_fj69tCOtW1R_Kc3NFy1L9PJ0I1wBzOVKZwEW8VA
-    short-id: null
-  client-fingerprint: ios
-- name: 🇭🇰香港HKT三网|商宽6
-  type: vless
-  server: x-xg0.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: bxu_fj69tCOtW1R_Kc3NFy1L9PJ0I1wBzOVKZwEW8VA
-    short-id: null
-  client-fingerprint: ios
-- name: 🇭🇰香港·移动|国际2
-  type: vless
-  server: x-xg4.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: iv3BAoFjlsPSSjOn1cyXVZ3H31KqX65PoJusBEfU0lM
-    short-id: null
-  client-fingerprint: ios
-- name: 🇹🇼台湾静态三网|家宽2
-  type: vless
-  server: tw.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: CuqzBeQR_1VIdOGOgn5v8-t-X-YzURF9b3wtKVVyKQ8
-    short-id: null
-  client-fingerprint: chrome
-- name: 🇹🇼台湾动态三网|家宽1
-  type: vless
-  server: x-tw01.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: CuqzBeQR_1VIdOGOgn5v8-t-X-YzURF9b3wtKVVyKQ8
-    short-id: null
-  client-fingerprint: safari
-- name: 🇹🇼台湾静态|家宽2
-  type: vless
-  server: tw02.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: CuqzBeQR_1VIdOGOgn5v8-t-X-YzURF9b3wtKVVyKQ8
-    short-id: null
-  client-fingerprint: safari
-- name: 🇹🇼台湾动态|家宽1
-  type: vless
-  server: tw1.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: CuqzBeQR_1VIdOGOgn5v8-t-X-YzURF9b3wtKVVyKQ8
-    short-id: null
-  client-fingerprint: qq
-- name: 🇸🇬 新加坡 | GCP-1
-  server: x-xjp.xueshan168.cc
-  port: 20201
-  sni: x-xjp.xueshan168.cc
-  up: 1000
-  down: 1000
-  skip-cert-verify: true
-  type: hysteria2
-  password: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-- name: 🇸🇬 新加坡 | GCP-2
-  type: vless
-  server: x-xjp.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: dzSZgKH3Da66x3Z_Btbw0vsLLGZ-GfgGMGMCGkKTbBY
-    short-id: null
-  client-fingerprint: edge
-- name: 🇯🇵日本·三网|软银2
-  type: vless
-  server: x-rb6.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: 5UyrbL7pqfhh7vgpyk5beDFZUK2uQWLqdvfgJBzu7Gg
-    short-id: null
-  client-fingerprint: edge
-- name: 🇯🇵日本·三网|软银4
-  type: vless
-  server: x-rb7.xueshan168.cc
-  port: 26000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: 5UyrbL7pqfhh7vgpyk5beDFZUK2uQWLqdvfgJBzu7Gg
-    short-id: null
-  client-fingerprint: ios
-- name: 🇺🇸美国·洛杉矶|DC2-2
-  type: vless
-  server: x-mg1.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: 5UyrbL7pqfhh7vgpyk5beDFZUK2uQWLqdvfgJBzu7Gg
-    short-id: null
-  client-fingerprint: edge
-- name: 🇺🇸美国·0.1倍率| -2
-  type: vless
-  server: x-mg0.xueshan168.cc
-  port: 18000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: AKgKoK7kZCYcME_By_coqjGk-eWn6c4awdaqHYRak1o
-    short-id: null
-  client-fingerprint: chrome
-- name: 🇺🇸美国·洛杉矶|原生-2
-  type: vless
-  server: x-mg6.xueshan168.cc
-  port: 20200
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: fZcXo8yrvptUh9AxH9rtfQrSoStqTmYM0eAQq39JN2U
-    short-id: null
-  client-fingerprint: firefox
-- name: 🇺🇸美国·洛杉矶|原生-3
-  type: vless
-  server: x-mg4.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: 5UyrbL7pqfhh7vgpyk5beDFZUK2uQWLqdvfgJBzu7Gg
-    short-id: null
-  client-fingerprint: safari
-- name: 🇺🇸美国·洛杉矶|原生-4
-  type: vless
-  server: x-mg5.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: 5UyrbL7pqfhh7vgpyk5beDFZUK2uQWLqdvfgJBzu7Gg
-    short-id: null
-  client-fingerprint: edge
-- name: 🇲🇴澳门|特别行政区2
-  type: vless
-  server: x-am.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: CuqzBeQR_1VIdOGOgn5v8-t-X-YzURF9b3wtKVVyKQ8
-    short-id: null
-  client-fingerprint: edge
-- name: 🇹🇭泰国·曼谷|原生-2
-  type: vless
-  server: x-tg.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: ioAxuQJyUMKN1kx8ThkL_-4NEaFYN6TB5XhHqSEYXEM
-    short-id: null
-  client-fingerprint: chrome
-- name: 🇬🇧英国·商宽|原生-2
-  type: vless
-  server: x-yg.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: cMB0tAmD6scVvjRbLVm1IjryKtXM6SDtceLiz_qF6iw
-    short-id: null
-  client-fingerprint: qq
-- name: 🇻🇳越南·河内|原生-2
-  type: vless
-  server: x-yn.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: cMB0tAmD6scVvjRbLVm1IjryKtXM6SDtceLiz_qF6iw
-    short-id: null
-  client-fingerprint: firefox
-- name: 🇩🇪德国|法兰克福-2
-  type: vless
-  server: x-dg.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: cMB0tAmD6scVvjRbLVm1IjryKtXM6SDtceLiz_qF6iw
-    short-id: null
-  client-fingerprint: ios
-- name: 🇫🇷法国|巴黎世家-2
-  type: vless
-  server: x-fg.xueshan168.cc
-  port: 16000
-  uuid: 957ebad1-73e2-4b69-9aa7-0c5070ca11cf
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  tls: true
-  skip-cert-verify: false
-  servername: s0.awsstatic.com
-  reality-opts:
-    public-key: cMB0tAmD6scVvjRbLVm1IjryKtXM6SDtceLiz_qF6iw
-    short-id: null
-  client-fingerprint: firefox
 - name: 您的账号已被封禁
   type: ss
   server: 127.0.0.1
@@ -8384,3 +7736,13 @@ proxies:
   port: 1
   cipher: aes-128-gcm
   password: unsupported-client
+- name: SCP|US
+  type: vmess
+  server: cf.scpnb.top
+  port: 443
+  uuid: 7c84ae69-f0b3-47dc-83c5-e7b5f00f5bed
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  skip-cert-verify: true
