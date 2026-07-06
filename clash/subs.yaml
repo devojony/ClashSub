@@ -466,37 +466,28 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
-- name: _10 |83.82Mb
-  server: 82.38.31.35
-  type: ss
-  port: 443
-  udp: true
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  cipher: chacha20-ietf-poly1305
-- name: Relay_-🇬🇧GB_11 |11.15Mb
+- name: Relay_ |11.15Mb
   server: mail2.thirdpaull.monster
   type: ss
   port: 57327
   udp: true
   password: 2KAu9eMmGwShWTWcuyynmLE81PVkoKDvQ3fb29dPScc1bMUW5y6hpprXqVWqSqjTi234hFGdDf3ArCuWtBw5FA6zV5wBgWTP
   cipher: chacha20-ietf-poly1305
-- name: Relay_-🇬🇧GB_13 |33.27Mb
-  server: 104.17.124.179
+- name: _13
+  server: 217.142.138.61
   type: vmess
   port: 80
   udp: true
-  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
+  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
   alterId: 0
   cipher: auto
-  network: ws
-  http-opts: {}
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
   h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: Relay_ |86.16Mb
+- name: Relay_ |86.97Mb
   server: tight-possum.rooster465.autos
   type: trojan
   country: 🇦🇺AU
@@ -504,15 +495,42 @@ proxies:
   udp: true
   password: PI36027154
   skip-cert-verify: true
-- name: Relay_🇬🇧GB-🇳🇱NL_24 |579.45Mb
-  server: 82.38.31.216
-  type: ss
-  country: 🇬🇧GB
-  port: 8080
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  cipher: chacha20-ietf-poly1305
-- name: Relay_ |62.83Mb
-  server: bestcf.030101.xyz
+- name: Relay_ |151.24Mb
+  server: ct.877774.xyz
+  type: vmess
+  country: 🇺🇸US
+  port: 80
+  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+- name: Relay_ |159.76Mb
+  server: cf.tencentapp.cn
+  type: vmess
+  country: 🇺🇸US
+  port: 80
+  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+- name: Relay_ |133.79Mb
+  server: cf.090227.xyz
   type: vmess
   country: 🏁ZZ
   port: 80
@@ -528,8 +546,8 @@ proxies:
     path: /
     headers:
       HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: Relay_ |62.77Mb
-  server: cf.0sm.com
+- name: Relay_ |235.86Mb
+  server: cf.877774.xyz
   type: vmess
   country: 🏁ZZ
   port: 80
@@ -1049,6 +1067,21 @@ proxies:
     short-id: 0963b9822ae8b87e
   skip-cert-verify: true
   udp: true
+- name: Unknown_🏳️_@wbnet_ZZ_14
+  type: vmess
+  server: 104.17.124.179
+  port: 80
+  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+  udp: true
 - name: Italy_🇮🇹_@wbnet_IT_15
   type: vmess
   server: 57.131.35.243
@@ -1232,6 +1265,14 @@ proxies:
   reality-opts:
     public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
     short-id: 2715592069f36fe7
+  skip-cert-verify: true
+  udp: true
+- name: United Kingdom_🇬🇧_@wbnet_GB_39
+  type: ss
+  server: 82.38.31.216
+  port: 8080
+  cipher: chacha20-ietf-poly13
+  password: chacha20-ietf-poly130
   skip-cert-verify: true
   udp: true
 - name: United Kingdom_🇬🇧_@wbnet_GB_40
@@ -1664,16 +1705,19 @@ proxies:
   skip-cert-verify: true
   udp: true
 - name: disney_netflix_GB
-  server: log.bpminecraft.com
+  server: support.zoom.us
   type: vless
-  port: 8880
+  port: 443
   udp: true
-  uuid: 9b7d9618-29a6-45e9-9eca-dcc7ad42f974
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
   network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: support.zoom.us.yxls.eu.cc
   ws-opts:
-    path: /pyip=ProxyIP.US.CMLiussss.net
+    path: /sg-melbi
     headers:
-      Host: shrill-frost-6da5.155-dec.workers.dev
+      Host: support.zoom.us.yxls.eu.cc
   packet-encoding: ''
 - name: disney_netflix_GB_1
   server: 104.16.106.213
@@ -1688,18 +1732,6 @@ proxies:
       Host: autumn-snow-735a.175-9d9.workers.dev
   packet-encoding: ''
 - name: disney_netflix_GB_2
-  server: 162.159.48.193
-  type: vless
-  port: 8880
-  udp: true
-  uuid: 1bc8fb2a-3bee-4ae0-aa12-957885e63e18
-  network: ws
-  ws-opts:
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-    headers:
-      Host: super-mud-8b38.114-a90.workers.dev
-  packet-encoding: ''
-- name: disney_netflix_GB_3
   server: 162.159.156.214
   type: vless
   port: 8880
@@ -1711,21 +1743,14 @@ proxies:
     headers:
       Host: jolly-glitter-123c.196-2b3.workers.dev
   packet-encoding: ''
-- name: disney_netflix_GB_4
-  server: support.zoom.us
-  type: vless
+- name: netflix_SG |313.59Mb
+  server: vpn-sg-003.fastervpn.world
+  type: hysteria2
   port: 443
   udp: true
-  uuid: 6680846a-8a57-4dfd-9a0e-63209cfc8535
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: support.zoom.us.yxls.eu.cc
-  ws-opts:
-    path: /sg-amz
-    headers:
-      Host: support.zoom.us.yxls.eu.cc
-  packet-encoding: ''
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  auth: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  skip-cert-verify: true
 - name: disney_netflix_DE
   server: 89.22.232.39
   type: vless
@@ -1741,6 +1766,30 @@ proxies:
     headers:
       Host: vpn47.cc.cd
   packet-encoding: ''
+- name: disney_netflix_GB_3
+  server: 162.159.48.193
+  type: vless
+  port: 8880
+  udp: true
+  uuid: 1bc8fb2a-3bee-4ae0-aa12-957885e63e18
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: super-mud-8b38.114-a90.workers.dev
+  packet-encoding: ''
+- name: disney_netflix_GB_4
+  server: log.bpminecraft.com
+  type: vless
+  port: 8880
+  udp: true
+  uuid: 999c9769-28db-425a-84d8-ccd7a3321406
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: jolly-glitter-123c.196-2b3.workers.dev
+  packet-encoding: ''
 - name: disney_netflix_GB_5
   server: www.gov.ua
   type: vless
@@ -1753,14 +1802,21 @@ proxies:
     headers:
       Host: long-smoke-b6cb.290-cd1.workers.dev
   packet-encoding: ''
-- name: disney_netflix_US |153.98Mb
+- name: netflix_NL |354.70Mb
+  server: 82.38.31.35
+  type: ss
+  port: 443
+  udp: true
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_US |42.96Mb
   server: tinkered-pennies-puppies.freesocks.work
   type: ss
   port: 443
   udp: true
   password: hbGrpfvNrJsUmKmPbR3iY2
   cipher: chacha20-ietf-poly1305
-- name: disney_HK |122.92Mb
+- name: disney_HK |89.71Mb
   server: 154.37.223.56
   type: vmess
   port: 35115
@@ -1773,21 +1829,51 @@ proxies:
     path:
     - /
   h2-opts: {}
-- name: disney_netflix_KR
-  server: 217.142.138.61
-  type: vmess
-  port: 80
+- name: disney_netflix_FR
+  server: 45.130.125.126
+  type: trojan
+  port: 443
   udp: true
-  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
-  alterId: 0
-  cipher: auto
-  network: http
-  http-opts:
-    method: GET
-    path:
-    - /
-  h2-opts: {}
-- name: disney_netflix_US |25.56Mb
+  password: humanity
+  sni: www.calmlunch.com
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+  network: ws
+- name: netflix_JP |63.01Mb
+  server: 103.106.228.187
+  type: trojan
+  port: 54603
+  udp: true
+  password: u2sVknrSIFjDojeqAUjgYkCnh9szHcMQ
+  sni: 103.106.228.187
+  skip-cert-verify: true
+- name: disney_netflix_FR_1
+  server: 188.114.96.3
+  type: trojan
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.calmlunch.com
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+  network: ws
+- name: disney_netflix_FR_2
+  server: 212.183.88.136
+  type: trojan
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.calmlunch.com
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+  network: ws
+- name: disney_netflix_US |23.97Mb
   server: hk-007.pg13900.com
   type: trojan
   port: 443
@@ -1800,15 +1886,7 @@ proxies:
     headers:
       Host: hk-007.pg13900.com
   network: ws
-- name: netflix_JP |50.49Mb
-  server: 103.106.228.187
-  type: trojan
-  port: 54603
-  udp: true
-  password: u2sVknrSIFjDojeqAUjgYkCnh9szHcMQ
-  sni: 103.106.228.187
-  skip-cert-verify: true
-- name: netflix_FR
+- name: disney_netflix_FR_3
   server: pumped-eft.rooster465.autos
   type: trojan
   country: 🇫🇷FR
@@ -1816,7 +1894,7 @@ proxies:
   udp: true
   password: PI36027154
   skip-cert-verify: true
-- name: disney_netflix_US |183.17Mb
+- name: disney_netflix_US |41.23Mb
   server: 82.198.246.37
   type: vmess
   country: 🇬🇧 GB
@@ -1828,7 +1906,7 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-- name: disney_netflix_US |25.52Mb
+- name: disney_netflix_US |169.61Mb
   server: 82.198.246.97
   type: vmess
   country: 🇬🇧GB
@@ -1848,7 +1926,7 @@ proxies:
   udp: true
   password: 45dae7e6-4573-4e6b-a1f3-57b3bbaf990d
   skip-cert-verify: true
-- name: disney_netflix_HK |109.34Mb
+- name: disney_netflix_HK |116.65Mb
   server: moved-osprey.rooster465.autos
   type: trojan
   country: 🇭🇰HK
@@ -1856,7 +1934,7 @@ proxies:
   udp: true
   password: PI36027154
   skip-cert-verify: true
-- name: netflix_JP |88.17Mb
+- name: netflix_JP | 4.74Mb
   server: large-baboon.rooster465.autos
   type: trojan
   country: 🇯🇵JP
@@ -1864,7 +1942,7 @@ proxies:
   udp: true
   password: PI36027154
   skip-cert-verify: true
-- name: disney_netflix_KR_1
+- name: disney_netflix_KR
   server: ethical-raccoon.rooster465.autos
   type: trojan
   country: 🇰🇷KR
@@ -1872,14 +1950,7 @@ proxies:
   udp: true
   password: PI36027154
   skip-cert-verify: true
-- name: disney_netflix_FI |10.73Mb
-  server: 109.107.182.229
-  type: ss
-  country: 🇷🇺RU
-  port: 51544
-  password: x3ZJXCnqxaoaAIrrkfoaNB
-  cipher: chacha20-ietf-poly1305
-- name: netflix_SG |73.70Mb
+- name: netflix_SG |75.03Mb
   server: rich-mule.rooster465.autos
   type: trojan
   country: 🇸🇬SG
@@ -1887,109 +1958,7 @@ proxies:
   udp: true
   password: PI36027154
   skip-cert-verify: true
-- name: disney_netflix_GB |51.67Mb
-  server: yg1.ygkkk.dpdns.org
-  type: vmess
-  country: 🇺🇸US
-  port: 80
-  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: disney_netflix_GB |54.44Mb
-  server: cf.877771.xyz
-  type: vmess
-  country: 🇺🇸US
-  port: 80
-  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: disney_netflix_GB |59.10Mb
-  server: cf.tencentapp.cn
-  type: vmess
-  country: 🇺🇸US
-  port: 80
-  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: disney_netflix_GB |63.28Mb
-  server: freeyx.cloudflare88.eu.org
-  type: vmess
-  country: 🇺🇸US
-  port: 80
-  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: disney_netflix_GB |57.84Mb
-  server: ct.877774.xyz
-  type: vmess
-  country: 🇺🇸US
-  port: 80
-  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: disney_netflix_GB |61.97Mb
-  server: yg2.ygkkk.dpdns.org
-  type: vmess
-  country: 🇺🇸US
-  port: 80
-  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: disney_netflix_GB |56.32Mb
+- name: disney_netflix_GB |159.57Mb
   server: 69.84.182.49
   type: vmess
   country: 🇺🇸US
@@ -2006,7 +1975,7 @@ proxies:
     path: /
     headers:
       HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: disney_netflix_GB |63.62Mb
+- name: disney_netflix_GB |140.17Mb
   server: cdns.doon.eu.org
   type: vmess
   country: 🇺🇸US
@@ -2023,7 +1992,58 @@ proxies:
     path: /
     headers:
       HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: disney_netflix_GB |49.47Mb
+- name: disney_netflix_GB |183.39Mb
+  server: freeyx.cloudflare88.eu.org
+  type: vmess
+  country: 🇺🇸US
+  port: 80
+  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+- name: disney_netflix_GB |133.36Mb
+  server: cf.877771.xyz
+  type: vmess
+  country: 🇺🇸US
+  port: 80
+  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+- name: disney_netflix_GB |153.13Mb
+  server: yg1.ygkkk.dpdns.org
+  type: vmess
+  country: 🇺🇸US
+  port: 80
+  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+- name: disney_netflix_GB |97.75Mb
   server: xn--b6gac.eu.org
   type: vmess
   country: 🇺🇸US
@@ -2040,7 +2060,24 @@ proxies:
     path: /
     headers:
       HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: disney_netflix_US |40.45Mb
+- name: disney_netflix_GB |207.44Mb
+  server: yg2.ygkkk.dpdns.org
+  type: vmess
+  country: 🇺🇸US
+  port: 80
+  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+- name: disney_netflix_US |39.90Mb
   server: pro-tortoise.rooster465.autos
   type: trojan
   country: 🇺🇸US
@@ -2048,8 +2085,8 @@ proxies:
   udp: true
   password: PI36027154
   skip-cert-verify: true
-- name: disney_netflix_GB |36.03Mb
-  server: cf.090227.xyz
+- name: disney_netflix_GB |195.68Mb
+  server: bestcf.030101.xyz
   type: vmess
   country: 🏁ZZ
   port: 80
@@ -2065,8 +2102,8 @@ proxies:
     path: /
     headers:
       HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: disney_netflix_GB |38.31Mb
-  server: jp.111000.cc.cd
+- name: disney_netflix_GB |47.76Mb
+  server: cf.cloudflare.182682.xyz
   type: vmess
   country: 🏁ZZ
   port: 80
@@ -2082,41 +2119,7 @@ proxies:
     path: /
     headers:
       HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: disney_netflix_GB |45.40Mb
-  server: yg8.ygkkk.dpdns.org
-  type: vmess
-  country: 🏁ZZ
-  port: 80
-  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: disney_netflix_GB |80.68Mb
-  server: cf.877774.xyz
-  type: vmess
-  country: 🏁ZZ
-  port: 80
-  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  ws-opts:
-    path: /
-    headers:
-      HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: disney_netflix_GB |37.16Mb
+- name: disney_netflix_GB |80.27Mb
   server: nrt.xxxxxxxx.nyc.mn
   type: vmess
   country: 🏁ZZ
@@ -2135,6 +2138,40 @@ proxies:
       HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
 - name: disney_netflix_GB |30.54Mb
   server: nrtcfdns.zone.id
+  type: vmess
+  country: 🏁ZZ
+  port: 80
+  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+- name: disney_netflix_GB |64.39Mb
+  server: fn.130519.xyz
+  type: vmess
+  country: 🏁ZZ
+  port: 80
+  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  ws-opts:
+    path: /
+    headers:
+      HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+- name: disney_netflix_GB |135.51Mb
+  server: jp.111000.cc.cd
   type: vmess
   country: 🏁ZZ
   port: 80
@@ -2184,8 +2221,8 @@ proxies:
     path: /
     headers:
       HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: disney_netflix_GB |47.76Mb
-  server: cf.cloudflare.182682.xyz
+- name: disney_netflix_GB |129.08Mb
+  server: yg8.ygkkk.dpdns.org
   type: vmess
   country: 🏁ZZ
   port: 80
@@ -2201,7 +2238,7 @@ proxies:
     path: /
     headers:
       HOST: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-- name: netflix_JP |17.97Mb
+- name: netflix_JP |13.90Mb
   server: jp01.scpnb.top
   type: vmess
   country: 🏁ZZ
@@ -2219,8 +2256,8 @@ proxies:
     path: /537a036f-a4ad-4051-80c4-011a46c62bb0-vm
     headers:
       HOST: jp01.scpnb.top
-- name: disney_netflix_GB |64.39Mb
-  server: fn.130519.xyz
+- name: disney_netflix_GB |123.93Mb
+  server: cf.0sm.com
   type: vmess
   country: 🏁ZZ
   port: 80
@@ -2251,6 +2288,14 @@ proxies:
   password: mdp65g6lfwphz2w6
   cipher: chacha20-ietf-poly1305
   delay: 2838
+- name: 芬兰 - 赫尔辛基 - 1
+  server: 109.107.182.229
+  type: ss
+  country: 🇷🇺RU
+  port: 51544
+  password: x3ZJXCnqxaoaAIrrkfoaNB
+  cipher: chacha20-ietf-poly1305
+  delay: 1398
 - name: 罗马尼亚 - 布加勒斯特 - 1
   server: 193.176.84.32
   port: 9002
@@ -3323,244 +3368,6 @@ proxies:
   skip-cert-verify: true
   type: hysteria2
   password: 69bd5fa4-5b82-4360-8492-17211bdb86c8
-- name: 下面ECH配置请不要开启dns覆写
-  server: cf.tencentapp.cn
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: tptpss.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /https://128.84.46.176:443
-    headers:
-      Host: tptpss.pages.dev
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: FR-AS15401 Orange Business Services SA
-  server: time.is
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: https.kmj.qzz.io
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /https://178.237.108.214:443
-    headers:
-      Host: https.kmj.qzz.io
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: 如遇节点不通更新订阅即可
-  server: da.mfa.gov.ua
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: 1-bhn.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 1-bhn.pages.dev
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: 不要大批量测试ping值
-  server: dnew.cc
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: czvjaheuiweghruiwegfbldsafsdgaryreygnxvbhsfgretgreyhthsfgj.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: czvjaheuiweghruiwegfbldsafsdgaryreygnxvbhsfgretgreyhthsfgj.pages.dev
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: 选中需要的节点在测ping
-  server: ip.sb
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: 2-c6p.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 2-c6p.pages.dev
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: free
-  server: openai.com
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: 2-1ng.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 2-1ng.pages.dev
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: free 2
-  server: cu.877774.xyz
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: 177-e06.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 177-e06.pages.dev
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: free 3
-  server: 01-qq.com
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: 3-93f.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 3-93f.pages.dev
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: free 4
-  server: cdn.7zz.cn
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: gogo2.kmj.qzz.io
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: gogo2.kmj.qzz.io
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: free 5
-  server: www.mc.js.cool
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: gsgsdgreyrehjsrteargsfhtrhsrwrhtruiekghmg.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: gsgsdgreyrehjsrteargsfhtrhsrwrhtruiekghmg.pages.dev
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: Free v 2
-  server: cf.090227.xyz
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: 3-7gj.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 3-7gj.pages.dev
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: Free v 3
-  server: store.ubi.com
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: 1-axj.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 1-axj.pages.dev
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: Free v 4
-  server: mfa.gov.ua
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: btc.kmj.qzz.io
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: btc.kmj.qzz.io
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: Free v 5
-  server: tajikistan.mfa.gov.ua
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: 3-c6l.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 3-c6l.pages.dev
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
 - name: 您的账号已被封禁
   type: ss
   server: 127.0.0.1
@@ -3703,8 +3510,8 @@ proxies:
   uuid: 0c03eb08-c00a-4a4a-8754-aae1cd9470af
   udp: true
   tls: true
-  servername: mms-static-7jffif-e.oppocdn.sbs
-  client-fingerprint: firefox
+  servername: mms-static-v2ol80-e.oppocdn.sbs
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -3721,7 +3528,7 @@ proxies:
   uuid: 0c03eb08-c00a-4a4a-8754-aae1cd9470af
   udp: true
   tls: true
-  servername: mms-statlc-4fgb12z-f.codeu.men
+  servername: mms-statlc-m22kkdz-f.codeu.men
   client-fingerprint: firefox
   network: ws
   ws-opts:
@@ -3740,7 +3547,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-statlc-version-g.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -3775,8 +3582,8 @@ proxies:
   uuid: 0c03eb08-c00a-4a4a-8754-aae1cd9470af
   udp: true
   tls: true
-  servername: mms-statlc-ck3pl2-e.hzedu.men
-  client-fingerprint: edge
+  servername: mms-statlc-8s1346-e.hzedu.men
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -3793,8 +3600,8 @@ proxies:
   uuid: 0c03eb08-c00a-4a4a-8754-aae1cd9470af
   udp: true
   tls: true
-  servername: mms-statlc-n21eza-f.hzedu.men
-  client-fingerprint: firefox
+  servername: mms-statlc-ixkbji-f.hzedu.men
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -3812,7 +3619,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-statlc-origin-g.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -3830,7 +3637,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-statlc-origin-h.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -3847,8 +3654,8 @@ proxies:
   uuid: 0c03eb08-c00a-4a4a-8754-aae1cd9470af
   udp: true
   tls: true
-  servername: mms-statlc-l9ki-e.tedu.men
-  client-fingerprint: edge
+  servername: mms-statlc-kxzn-e.tedu.men
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -3865,8 +3672,8 @@ proxies:
   uuid: 0c03eb08-c00a-4a4a-8754-aae1cd9470af
   udp: true
   tls: true
-  servername: mms-statlc-4b8k-f.tedu.men
-  client-fingerprint: edge
+  servername: mms-statlc-2d3g-f.tedu.men
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -3884,7 +3691,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-statlc-edit-g.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -3902,7 +3709,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-statlc-edit-h.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -3912,6 +3719,40 @@ proxies:
         like Gecko) Chrome/120.0.0.0 Safari/537.36
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
+- name: 下面ECH配置请不要开启dns覆写
+  server: cf.tencentapp.cn
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: tptpss.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /https://128.84.46.176:443
+    headers:
+      Host: tptpss.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: FR-AS15401 Orange Business Services SA
+  server: time.is
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: https.kmj.qzz.io
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /https://178.237.108.214:443
+    headers:
+      Host: https.kmj.qzz.io
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
 - name: 'sub.xinyitang.dpdns.org优选订阅生成器异常:'
   server: 127.0.0.1
   port: 1234
@@ -3919,13 +3760,217 @@ proxies:
   uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
   tls: true
   skip-cert-verify: false
-  servername: gogo.qzzio.dpdns.org
+  servername: gogo6.kmj.qzz.io
   client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: gogo.qzzio.dpdns.org
+      Host: gogo6.kmj.qzz.io
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: 如遇节点不通更新订阅即可
+  server: da.mfa.gov.ua
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 3-vud.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 3-vud.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: 不要大批量测试ping值
+  server: dnew.cc
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 3-abf.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 3-abf.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: 选中需要的节点在测ping
+  server: ip.sb
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 1-axj.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1-axj.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: free
+  server: openai.com
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: uytu8789ty7ut98yu.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: uytu8789ty7ut98yu.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: free 2
+  server: cu.877774.xyz
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 1-7gs.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1-7gs.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: free 3
+  server: 01-qq.com
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 3-7bf.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 3-7bf.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: free 4
+  server: cdn.7zz.cn
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 2-c6p.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 2-c6p.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: free 5
+  server: www.mc.js.cool
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 3-8gy.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 3-8gy.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: Free v 2
+  server: cf.090227.xyz
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 1-jk1.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1-jk1.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: Free v 3
+  server: store.ubi.com
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 3-7ny.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 3-7ny.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: Free v 4
+  server: mfa.gov.ua
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 1-bhn.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1-bhn.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: Free v 5
+  server: tajikistan.mfa.gov.ua
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 2-7fc.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 2-7fc.pages.dev
   ech-opts:
     enable: true
     query-server-name: cloudflare-ech.com
