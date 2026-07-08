@@ -466,28 +466,6 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
-- name: disney_JP |10.46Mb
-  server: 95.40.44.165
-  type: trojan
-  port: 55973
-  password: d6788cf74e6844c45538204efd24b00f
-  sni: www.nintendogames.net
-  skip-cert-verify: true
-- name: disney_JP |10.59Mb
-  server: 95.40.44.165
-  type: trojan
-  port: 3743
-  password: d6788cf74e6844c45538204efd24b00f
-  sni: www.nintendogames.net
-  skip-cert-verify: true
-- name: disney_netflix_HK |344.49Mb
-  server: hk02.xn--9kq85xcu6b.com
-  type: hysteria2
-  country: 🇭🇰HK
-  port: 65534
-  udp: true
-  password: 45dae7e6-4573-4e6b-a1f3-57b3bbaf990d
-  skip-cert-verify: true
 - cipher: aes-256-cfb
   name: United States_None_ss_101
   password: amazonskr05
@@ -534,6 +512,22 @@ proxies:
   server: 16.162.24.7
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
+  type: trojan
+- name: Poland_None_trojan_107
+  network: tcp
+  password: d6788cf74e6844c45538204efd24b00f
+  port: 3743
+  server: 95.40.44.165
+  skip-cert-verify: true
+  sni: www.nintendogames.net
+  type: trojan
+- name: Poland_None_trojan_108
+  network: tcp
+  password: d6788cf74e6844c45538204efd24b00f
+  port: 55973
+  server: 95.40.44.165
+  skip-cert-verify: true
+  sni: www.nintendogames.net
   type: trojan
 - name: Poland_None_trojan_109
   network: tcp
@@ -698,6 +692,48 @@ proxies:
       User-Agent: Mozilla/5.0 (Linux; Android 5.1.1; SM-J120M Build/LMY47X) AppleWebKit/537.36
         (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
     path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=usa
+- name: disney_FI |498.37Mb
+  server: 109.107.182.229
+  type: ss
+  port: 51544
+  udp: true
+  password: 72FligLnSYd0rNQ4WE1y7x
+  cipher: chacha20-ietf-poly1305
+- name: disney_US |426.66Mb
+  server: tinkered-pennies-puppies.freesocks.work
+  type: ss
+  port: 443
+  udp: true
+  password: hbGrpfvNrJsUmKmPbR3iY2
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_FR
+  server: 188.114.96.3
+  type: trojan
+  port: 443
+  udp: true
+  password: humanity
+  sni: www.calmlunch.com
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+  network: ws
+- name: Relay_🇦🇺AU-🇦🇺AU_07 |62.87Mb
+  server: tight-possum.rooster465.autos
+  type: trojan
+  country: 🇦🇺AU
+  port: 443
+  udp: true
+  password: PI36027154
+  skip-cert-verify: true
+- name: disney_netflix_HK | 8.51Mb
+  server: hk02.xn--9kq85xcu6b.com
+  type: hysteria2
+  country: 🇭🇰HK
+  port: 65534
+  udp: true
+  password: 45dae7e6-4573-4e6b-a1f3-57b3bbaf990d
+  skip-cert-verify: true
 - name: Shadowsocks
   type: socks5
   server: 127.0.0.1
@@ -914,40 +950,261 @@ proxies:
   password: 792e0bdb-01db-450c-94c4-925151eb396e
   cipher: chacha20-ietf-poly1305
   delay: 488
-- name: disney_netflix_FI |852.23Mb
-  server: 109.107.182.229
-  type: ss
-  port: 51544
-  udp: true
-  password: 72FligLnSYd0rNQ4WE1y7x
-  cipher: chacha20-ietf-poly1305
-- name: disney_US |142.99Mb
-  server: tinkered-pennies-puppies.freesocks.work
-  type: ss
+- name: 下面ECH配置请不要开启dns覆写
+  server: cf.tencentapp.cn
   port: 443
-  udp: true
-  password: hbGrpfvNrJsUmKmPbR3iY2
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_FR
-  server: 188.114.96.3
-  type: trojan
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: tptpss.pages.dev
+  client-fingerprint: chrome
   network: ws
-- name: Relay_🇦🇺AU-🇦🇺AU_07 |11.40Mb
-  server: tight-possum.rooster465.autos
-  type: trojan
-  country: 🇦🇺AU
+  ws-opts:
+    path: /https://128.84.46.176:443
+    headers:
+      Host: tptpss.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: FR-AS15401 Orange Business Services SA
+  server: time.is
   port: 443
-  udp: true
-  password: PI36027154
-  skip-cert-verify: true
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: https.kmj.qzz.io
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /https://178.237.108.214:443
+    headers:
+      Host: https.kmj.qzz.io
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: 'sub.xinyitang.dpdns.org优选订阅生成器异常:'
+  server: 127.0.0.1
+  port: 1234
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: gogo.wknm.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: gogo.wknm.dpdns.org
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: 如遇节点不通更新订阅即可
+  server: da.mfa.gov.ua
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 1-5js.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1-5js.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: 不要大批量测试ping值
+  server: dnew.cc
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 1-axj.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1-axj.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: 选中需要的节点在测ping
+  server: ip.sb
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 3-deu.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 3-deu.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: free
+  server: openai.com
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: gogo.vks.qzz.io
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: gogo.vks.qzz.io
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: free 2
+  server: cu.877774.xyz
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 3-85q.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 3-85q.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: free 3
+  server: 01-qq.com
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 2-ayr.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 2-ayr.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: free 4
+  server: cdn.7zz.cn
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 3-7ts.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 3-7ts.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: free 5
+  server: www.mc.js.cool
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: p-6fa.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: p-6fa.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: Free v 2
+  server: cf.090227.xyz
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: czvjaheuiweghruiwegfbldsafsdgaryreygnxvbhsfgretgreyhthsfgj.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: czvjaheuiweghruiwegfbldsafsdgaryreygnxvbhsfgretgreyhthsfgj.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: Free v 3
+  server: store.ubi.com
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 3-93f.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 3-93f.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: Free v 4
+  server: mfa.gov.ua
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 1-7gs.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1-7gs.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: Free v 5
+  server: tajikistan.mfa.gov.ua
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 1-cw6.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1-cw6.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
 - name: 您的账号已被封禁
   type: ss
   server: 127.0.0.1
