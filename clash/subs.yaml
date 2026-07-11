@@ -466,6 +466,91 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
+- name: disney_netflix_SG
+  server: 82.21.84.97
+  type: vless
+  port: 443
+  udp: true
+  uuid: e258977b-e413-4718-a3af-02d75492c349
+  network: ws
+  tls: true
+  client-fingerprint: chrome
+  servername: ww1.aniuge.qzz.io
+  ws-opts:
+    path: /
+    headers:
+      Host: ww1.aniuge.qzz.io
+  alpn:
+  - http%2F1.1
+  packet-encoding: ''
+- name: disney_netflix_SG |182.95Mb
+  server: 192.124.176.109
+  type: ss
+  port: 8388
+  udp: true
+  password: bOiM9sqXNoZT
+  cipher: aes-256-gcm
+- name: netflix_TW | 7.21Mb
+  server: r3mrcg00129437x.cybervena.com
+  type: ss
+  port: 50099
+  udp: true
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_SG |90.89Mb
+  server: 167.150.100.133
+  type: trojan
+  port: 450
+  udp: true
+  password: 0_Oms89nH82l_Ki813_Nxmw81_Rbt_Jq190Kl_m
+  sni: grape-power-sg.roxa.org
+- name: netflix_JP |67.23Mb
+  server: rich-mule.rooster465.autos
+  type: trojan
+  country: 🇯🇵JP
+  port: 443
+  udp: true
+  password: PI36027154
+  skip-cert-verify: true
+- name: netflix_JP |67.24Mb
+  server: large-baboon.rooster465.autos
+  type: trojan
+  country: 🇯🇵JP
+  port: 443
+  udp: true
+  password: PI36027154
+  skip-cert-verify: true
+- name: netflix_JP |67.30Mb
+  server: happy-monkfish.rooster465.autos
+  type: trojan
+  country: 🇯🇵JP
+  port: 443
+  udp: true
+  password: HW85960347
+  skip-cert-verify: true
+- name: netflix_JP |67.25Mb
+  server: ethical-raccoon.rooster465.autos
+  type: trojan
+  country: 🇯🇵JP
+  port: 443
+  udp: true
+  password: PI36027154
+  skip-cert-verify: true
+- name: disney_netflix_SG |114.09Mb
+  server: perfect-emu.rooster465.autos
+  type: trojan
+  country: 🇸🇬SG
+  port: 443
+  udp: true
+  password: HW85960347
+  skip-cert-verify: true
+- name: netflix_JP |100.91Mb
+  server: 13.192.184.199
+  type: ss
+  country: 🇺🇸US
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
 - cipher: aes-256-cfb
   name: United States_None_ss_101
   password: amazonskr05
@@ -639,321 +724,17 @@ proxies:
   tls: true
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888880
-- alterId: 2
-  cipher: auto
-  name: China_None_vmess_1126
-  network: tcp
-  port: 30845
-  server: v45.hdacd.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  xudp: true
 - cipher: aes-256-cfb
-  name: France_Paris_ss_1128
-  password: amazonskr05
-  port: '443'
-  server: 13.37.239.23
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: France_Paris_ss_1129
+  name: France_Paris_ss_1126
   password: amazonskr05
   port: '443'
   server: 15.188.74.101
   type: ss
   udp: true
-- name: 澳大利亚 - 悉尼 - 1
-  server: concise-buck.rooster465.autos
-  type: trojan
-  country: 🇺🇦UA
-  port: 443
-  password: XG59623478
-  sni: concise-buck.rooster465.autos
-  skip-cert-verify: true
-  udp: true
-  delay: 1073
-- name: 澳大利亚 - 悉尼 - 2
-  server: stirring-dane.rooster465.autos
-  type: trojan
-  country: 🇺🇦UA
-  port: 443
-  password: XG59623478
-  sni: stirring-dane.rooster465.autos
-  skip-cert-verify: true
-  udp: true
-  delay: 1034
-- name: 法国 - 巴黎 - 1
-  server: 35.180.199.237
-  type: ss
-  country: 🇫🇷FR
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 480
-- name: 法国 - 巴黎 - 2
-  server: 51.44.170.232
-  type: ss
-  country: 🇺🇸US
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 468
-- name: 法国 - 巴黎 - 3
-  server: 45.130.125.69
-  port: 443
-  type: trojan
-  password: humanity
-  sni: www.calmloud.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmloud.com
-  udp: true
-  delay: 2038
-- name: 韩国 - 仁川广域市 - 1
-  server: 8mc0z4qk-7n2r-5t9x-0r6p-3a4w8k1d9e2.edge.ccdn3.work
-  type: trojan
-  country: 🇺🇸US
-  port: 20159
-  password: 9a092af0-2e66-11f1-aa57-8f36e190ad40
-  sni: mmbiz.qpic.cn
-  skip-cert-verify: true
-  udp: true
-  delay: 1620
-- name: 荷兰 - 阿姆斯特丹 - 1
-  server: 114.80.8.128
-  port: 39001
-  type: trojan
-  password: 1df3ece1218bedba28c6c6ac726a07bb
-  sni: www.yrtok.com
-  skip-cert-verify: true
-  udp: true
-  delay: 845
-- name: 罗马尼亚 - 布加勒斯特 - 1
-  server: 193.176.84.31
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 1090
-- name: 罗马尼亚 - 布加勒斯特 - 2
-  server: 193.176.84.37
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 1848
-- name: 罗马尼亚 - 布加勒斯特 - 3
-  server: 193.176.84.32
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 1395
-- name: 罗马尼亚 - Voluntari - 10
-  server: 84.239.49.247
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 2529
-- name: 罗马尼亚 - Voluntari - 11
-  server: 84.239.49.219
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 1166
-- name: 罗马尼亚 - Voluntari - 12
-  server: 84.239.49.202
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 1112
-- name: 罗马尼亚 - Voluntari - 13
-  server: 84.239.49.211
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 1122
-- name: 罗马尼亚 - Voluntari - 14
-  server: 84.239.14.160
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 1750
-- name: 罗马尼亚 - Voluntari - 15
-  server: 84.239.49.209
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 1866
-- name: 罗马尼亚 - Voluntari - 16
-  server: 84.239.49.235
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 1149
-- name: 罗马尼亚 - Voluntari - 4
-  server: 84.239.49.187
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 1075
-- name: 罗马尼亚 - Voluntari - 5
-  server: 84.239.49.196
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 1844
-- name: 罗马尼亚 - Voluntari - 6
-  server: 84.239.49.204
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 1129
-- name: 罗马尼亚 - Voluntari - 7
-  server: 84.239.49.57
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 1869
-- name: 罗马尼亚 - Voluntari - 8
-  server: 84.239.49.185
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 1104
-- name: 罗马尼亚 - Voluntari - 9
-  server: 84.239.49.159
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 2236
-- name: 美国 - 洛杉矶 - 3
-  server: select-us.ddnskunlun.com
-  type: vmess
-  country: 🏁ZZ
-  port: 9027
-  uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
-  alterId: 0
-  cipher: auto
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  delay: 486
-- name: 美国 - 圣克拉拉 - 2
-  server: v4.hdacd.com
-  type: vmess
-  country: 🇭🇰HK
-  port: 30804
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  network: tcp
-  ws-path: /
-  http-opts: {}
-  h2-opts: {}
-  skip-cert-verify: true
-  delay: 1335
-- name: 美国 - Dublin - 1
-  server: 13.58.60.229
-  type: ss
-  country: 🇺🇸US
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 533
-- name: 日本 - 东京 - 1
-  server: happy-monkfish.rooster465.autos
-  type: trojan
-  country: 🇯🇵JP
-  port: 443
-  password: HW85960347
-  skip-cert-verify: true
-  udp: true
-  delay: 271
-- name: 日本 - 东京 - 2
-  server: 13.192.184.199
-  type: ss
-  country: 🇺🇸US
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 228
-- name: 日本 - 东京 - 3
-  server: 13.193.101.147
-  type: ss
-  country: 🇺🇸US
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 343
-- name: 中国 - 香港 - 1
-  server: n1747624260.4u9ma.icu
-  type: vmess
-  port: 443
-  uuid: eee8cb72-7eab-4034-a308-ed06cb07e003
-  alterId: 0
-  cipher: auto
-  network: ws
-  servername: n1747624260.4u9ma.icu
-  http-opts: {}
-  h2-opts: {}
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: n1747624260.4u9ma.icu
-  delay: 1480
-- name: 中国 - 香港 - 2
-  server: 103.149.183.80
-  type: ss
-  country: 🇭🇰HK
-  port: 8388
-  password: asd123456
-  cipher: chacha20-ietf
-  delay: 182
-- name: 中国 - 香港 - 3
-  server: 103.149.182.79
-  port: 8388
-  type: ss
-  cipher: chacha20-ietf
-  password: asd123456
-  udp: true
-  delay: 484
+- name: Shadowsocks
+  type: socks5
+  server: 127.0.0.1
+  port: 1080
 - name: '@DeltaKroneckerGithub_Clash_1'
   type: vless
   server: 104.24.38.86
@@ -30462,21 +30243,6 @@ proxies:
     path: /rdfgtws
     headers:
       Host: vangoghhh.info
-- name: '@DeltaKroneckerGithub_Clash_5623'
-  type: vless
-  server: 82.21.84.97
-  port: 443
-  uuid: e258977b-e413-4718-a3af-02d75492c349
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ww1.aniuge.qzz.io
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ww1.aniuge.qzz.io
 - name: '@DeltaKroneckerGithub_Clash_5627'
   type: vless
   server: 94.247.128.245
@@ -39944,154 +39710,362 @@ proxies:
     path: /In_Panel_Rayeghan_Ast_Va_Gheyre_Ghabele_Foroosh
     headers:
       Host: zeus-panel-dd32wu.zeus-9cbf8g.workers.dev
-- name: _20 |197.93Mb
-  server: 192.124.176.109
+- name: 澳大利亚 - 悉尼 - 1
+  server: concise-buck.rooster465.autos
+  type: trojan
+  country: 🇺🇦UA
+  port: 443
+  password: XG59623478
+  sni: concise-buck.rooster465.autos
+  skip-cert-verify: true
+  udp: true
+  delay: 1073
+- name: 澳大利亚 - 悉尼 - 2
+  server: stirring-dane.rooster465.autos
+  type: trojan
+  country: 🇺🇦UA
+  port: 443
+  password: XG59623478
+  sni: stirring-dane.rooster465.autos
+  skip-cert-verify: true
+  udp: true
+  delay: 1034
+- name: 法国 - 巴黎 - 1
+  server: 35.180.199.237
   type: ss
+  country: 🇫🇷FR
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 480
+- name: 法国 - 巴黎 - 2
+  server: 51.44.170.232
+  type: ss
+  country: 🇺🇸US
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 468
+- name: 法国 - 巴黎 - 3
+  server: 45.130.125.69
+  port: 443
+  type: trojan
+  password: humanity
+  sni: www.calmloud.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmloud.com
+  udp: true
+  delay: 2038
+- name: 韩国 - 仁川广域市 - 1
+  server: 8mc0z4qk-7n2r-5t9x-0r6p-3a4w8k1d9e2.edge.ccdn3.work
+  type: trojan
+  country: 🇺🇸US
+  port: 20159
+  password: 9a092af0-2e66-11f1-aa57-8f36e190ad40
+  sni: mmbiz.qpic.cn
+  skip-cert-verify: true
+  udp: true
+  delay: 1620
+- name: 荷兰 - 阿姆斯特丹 - 1
+  server: 114.80.8.128
+  port: 39001
+  type: trojan
+  password: 1df3ece1218bedba28c6c6ac726a07bb
+  sni: www.yrtok.com
+  skip-cert-verify: true
+  udp: true
+  delay: 845
+- name: 罗马尼亚 - 布加勒斯特 - 1
+  server: 193.176.84.31
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1090
+- name: 罗马尼亚 - 布加勒斯特 - 2
+  server: 193.176.84.37
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1848
+- name: 罗马尼亚 - 布加勒斯特 - 3
+  server: 193.176.84.32
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1395
+- name: 罗马尼亚 - Voluntari - 10
+  server: 84.239.49.247
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 2529
+- name: 罗马尼亚 - Voluntari - 11
+  server: 84.239.49.219
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1166
+- name: 罗马尼亚 - Voluntari - 12
+  server: 84.239.49.202
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1112
+- name: 罗马尼亚 - Voluntari - 13
+  server: 84.239.49.211
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1122
+- name: 罗马尼亚 - Voluntari - 14
+  server: 84.239.14.160
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1750
+- name: 罗马尼亚 - Voluntari - 15
+  server: 84.239.49.209
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1866
+- name: 罗马尼亚 - Voluntari - 16
+  server: 84.239.49.235
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1149
+- name: 罗马尼亚 - Voluntari - 4
+  server: 84.239.49.187
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1075
+- name: 罗马尼亚 - Voluntari - 5
+  server: 84.239.49.196
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1844
+- name: 罗马尼亚 - Voluntari - 6
+  server: 84.239.49.204
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1129
+- name: 罗马尼亚 - Voluntari - 7
+  server: 84.239.49.57
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1869
+- name: 罗马尼亚 - Voluntari - 8
+  server: 84.239.49.185
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1104
+- name: 罗马尼亚 - Voluntari - 9
+  server: 84.239.49.159
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 2236
+- name: 美国 - 洛杉矶 - 3
+  server: select-us.ddnskunlun.com
+  type: vmess
+  country: 🏁ZZ
+  port: 9027
+  uuid: a8bcce43-abda-315b-8e81-e3e65bcb3d07
+  alterId: 0
+  cipher: auto
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  delay: 486
+- name: 美国 - 圣克拉拉 - 2
+  server: v4.hdacd.com
+  type: vmess
+  country: 🇭🇰HK
+  port: 30804
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  network: tcp
+  ws-path: /
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  delay: 1335
+- name: 美国 - Dublin - 1
+  server: 13.58.60.229
+  type: ss
+  country: 🇺🇸US
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 533
+- name: 日本 - 东京 - 3
+  server: 13.193.101.147
+  type: ss
+  country: 🇺🇸US
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 343
+- name: 中国 - 香港 - 1
+  server: n1747624260.4u9ma.icu
+  type: vmess
+  port: 443
+  uuid: eee8cb72-7eab-4034-a308-ed06cb07e003
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: n1747624260.4u9ma.icu
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: n1747624260.4u9ma.icu
+  delay: 1480
+- name: 中国 - 香港 - 2
+  server: 103.149.183.80
+  type: ss
+  country: 🇭🇰HK
   port: 8388
-  udp: true
-  password: bOiM9sqXNoZT
-  cipher: aes-256-gcm
-- name: Relay_🇦🇺AU-🇦🇺AU_35 |87.62Mb
-  server: tight-possum.rooster465.autos
-  type: trojan
-  country: 🇦🇺AU
-  port: 443
-  udp: true
-  password: PI36027154
-  skip-cert-verify: true
-- name: disney_netflix_TW | 9.30Mb
-  server: r3mrcg00129437x.cybervena.com
+  password: asd123456
+  cipher: chacha20-ietf
+  delay: 182
+- name: 中国 - 香港 - 3
+  server: 103.149.182.79
+  port: 8388
   type: ss
-  port: 50099
+  cipher: chacha20-ietf
+  password: asd123456
   udp: true
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  cipher: chacha20-ietf-poly1305
-- name: netflix_JP
-  server: 35.77.98.65
-  type: ss
-  port: 443
+  delay: 484
+- name: _04
+  server: 3.73.181.118
+  type: vless
+  port: 22222
   udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: disney_netflix_SG |93.11Mb
-  server: 167.150.100.133
-  type: trojan
-  port: 450
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  network: tcp
+  packet-encoding: ''
+- name: _07
+  server: 3.73.181.118
+  type: vless
+  port: 22223
   udp: true
-  password: 0_Oms89nH82l_Ki813_Nxmw81_Rbt_Jq190Kl_m
-  sni: grape-power-sg.roxa.org
-- name: netflix_JP |12.02Mb
-  server: rich-mule.rooster465.autos
-  type: trojan
-  country: 🇯🇵JP
-  port: 443
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  network: tcp
+  packet-encoding: ''
+- name: _17
+  server: 151.101.3.8
+  type: vless
+  port: 80
   udp: true
-  password: PI36027154
-  skip-cert-verify: true
-- name: netflix_JP |12.11Mb
-  server: ethical-raccoon.rooster465.autos
-  type: trojan
-  country: 🇯🇵JP
-  port: 443
-  udp: true
-  password: PI36027154
-  skip-cert-verify: true
-- name: netflix_JP |11.67Mb
-  server: large-baboon.rooster465.autos
-  type: trojan
-  country: 🇯🇵JP
-  port: 443
-  udp: true
-  password: PI36027154
-  skip-cert-verify: true
-- name: disney_netflix_SG |128.31Mb
-  server: perfect-emu.rooster465.autos
-  type: trojan
-  country: 🇸🇬SG
-  port: 443
-  udp: true
-  password: HW85960347
-  skip-cert-verify: true
-- name: disney_netflix_US |344.32Mb
-  server: 3.14.255.108
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: disney_netflix_FR
-  server: 15.237.218.22
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: disney_US |440.94Mb
-  server: tinkered-pennies-puppies.freesocks.work
-  type: ss
-  port: 443
-  udp: true
-  password: ebEfGowZtV1BEFXZOtgAXi
-  cipher: chacha20-ietf-poly1305
-- name: disney_netflix_US |364.12Mb
+  uuid: 3b940e86-7b0d-40da-acf1-12d334e41023
+  network: ws
+  ws-opts:
+    path: /?ed=1024
+    headers:
+      Host: Fastapi.Org
+  packet-encoding: ''
+- name: disney_netflix_US |50.30Mb
   server: 3.14.249.239
   type: ss
   port: 443
   udp: true
   password: amazonskr05
   cipher: aes-256-cfb
-- name: disney_netflix_US |50.76Mb
+- name: netflix_FI |734.94Mb
+  server: bot.sobhanpor.ir
+  type: ss
+  port: 1080
+  udp: true
+  password: gx25_1k5uB68a1VpJ6EQ749G
+  cipher: chacha20-ietf-poly1305
+- name: disney_US | 2.06Mb
+  server: tinkered-pennies-puppies.freesocks.work
+  type: ss
+  port: 443
+  udp: true
+  password: hbGrpfvNrJsUmKmPbR3iY2
+  cipher: chacha20-ietf-poly1305
+- name: ' |38.82Mb'
   server: 3.16.130.237
   type: ss
   port: 443
   udp: true
   password: amazonskr05
   cipher: aes-256-cfb
-- name: disney_netflix_FR_1
-  server: 35.180.210.199
+- name: disney_netflix_US |48.09Mb
+  server: 3.14.255.108
   type: ss
   port: 443
   udp: true
   password: amazonskr05
   cipher: aes-256-cfb
-- name: disney_netflix_FR_2
+- name: disney_netflix_US |54.71Mb
+  server: 18.191.132.3
+  type: ss
+  port: 443
+  udp: true
+  password: amazonskr05
+  cipher: aes-256-cfb
+- name: disney_netflix_NL |17.29Mb
+  server: 82.38.31.57
+  type: ss
+  port: 443
+  udp: true
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_FR
   server: intense-basilisk.rooster465.autos
   type: trojan
   port: 443
   udp: true
   password: XG59623478
   sni: intense-basilisk.rooster465.autos
-- name: disney_netflix_NL |331.27Mb
-  server: renewed-chigger.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: XG59623478
-  skip-cert-verify: true
-- name: disney_netflix_FR_3
-  server: 188.114.96.3
-  type: trojan
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  network: ws
-- name: disney_netflix_FR_4
-  server: 45.130.125.126
-  type: trojan
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  network: ws
 - name: disney_netflix_TR | 5.81Mb
   server: 78.135.73.38
   type: trojan
@@ -40099,7 +40073,7 @@ proxies:
   udp: true
   password: 0ds_NIm933rf_Nxio294_nbZi3
   sni: grape-ataturk-tr.yyuyy.com
-- name: disney_netflix_FR_5
+- name: disney_netflix_FR_1
   server: 212.183.88.136
   type: trojan
   port: 443
@@ -40111,10 +40085,35 @@ proxies:
     headers:
       Host: www.calmlunch.com
   network: ws
-- name: Shadowsocks
-  type: socks5
-  server: 127.0.0.1
-  port: 1080
+- name: disney_netflix_NL |273.91Mb
+  server: renewed-chigger.rooster465.autos
+  type: trojan
+  port: 443
+  udp: true
+  password: XG59623478
+  skip-cert-verify: true
+- name: Relay_🇦🇺AU |87.63Mb
+  server: tight-possum.rooster465.autos
+  type: trojan
+  country: 🇦🇺AU
+  port: 443
+  udp: true
+  password: PI36027154
+  skip-cert-verify: true
+- name: Relay_🇵🇱PL-🇵🇱PL_55
+  server: ss.046.node-for-bigairport.win
+  type: ss
+  country: 🇵🇱PL
+  port: 19000
+  password: 792e0bdb-01db-450c-94c4-925151eb396e
+  cipher: chacha20-ietf-poly1305
+- name: disney_netflix_US |355.19Mb
+  server: 3.147.78.9
+  type: ss
+  country: 🇺🇸US
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
 - name: 您的账号已被封禁
   type: ss
   server: 127.0.0.1
@@ -40146,93 +40145,25 @@ proxies:
   ech-opts:
     enable: true
     query-server-name: cloudflare-ech.com
+- name: 'sub.xinyitang.dpdns.org优选订阅生成器异常:'
+  server: 127.0.0.1
+  port: 1234
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: gogo.vks.qzz.io
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: gogo.vks.qzz.io
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
 - name: 不要大批量测试ping值
   server: dnew.cc
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: 1-cw6.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 1-cw6.pages.dev
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: 选中需要的节点在测ping
-  server: ip.sb
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: 3-8gy.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 3-8gy.pages.dev
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: free
-  server: openai.com
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: 1-2cd.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 1-2cd.pages.dev
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: free 2
-  server: cu.877774.xyz
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: 1-dfd.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 1-dfd.pages.dev
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: free 3
-  server: 01-qq.com
-  port: 443
-  type: vless
-  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
-  tls: true
-  skip-cert-verify: false
-  servername: 3-7bf.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 3-7bf.pages.dev
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-- name: free 5
-  server: www.mc.js.cool
   port: 443
   type: vless
   uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
@@ -40248,6 +40179,91 @@ proxies:
   ech-opts:
     enable: true
     query-server-name: cloudflare-ech.com
+- name: 选中需要的节点在测ping
+  server: ip.sb
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 2-ayr.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 2-ayr.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: free
+  server: openai.com
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: btc.kmj.qzz.io
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: btc.kmj.qzz.io
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: free 2
+  server: cu.877774.xyz
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 3-7v4.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 3-7v4.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: free 3
+  server: 01-qq.com
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: gsgsdgreyrehjsrteargsfhtrhsrwrhtruiekghmg.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: gsgsdgreyrehjsrteargsfhtrhsrwrhtruiekghmg.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+- name: free 5
+  server: www.mc.js.cool
+  port: 443
+  type: vless
+  uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
+  tls: true
+  skip-cert-verify: false
+  servername: 1-bhn.pages.dev
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 1-bhn.pages.dev
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
 - name: Free v 5
   server: tajikistan.mfa.gov.ua
   port: 443
@@ -40255,13 +40271,13 @@ proxies:
   uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9
   tls: true
   skip-cert-verify: false
-  servername: 1-7gs.pages.dev
+  servername: gogo.vks.qzz.io
   client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: 1-7gs.pages.dev
+      Host: gogo.vks.qzz.io
   ech-opts:
     enable: true
     query-server-name: cloudflare-ech.com
