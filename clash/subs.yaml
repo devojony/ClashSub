@@ -604,10 +604,6 @@ proxies:
   h2-opts: {}
   skip-cert-verify: true
   delay: 854
-- name: Shadowsocks
-  type: socks5
-  server: 127.0.0.1
-  port: 1080
 - cipher: aes-256-cfb
   name: United States_None_ss_101
   password: amazonskr05
@@ -936,11 +932,22 @@ proxies:
   skip-cert-verify: false
   type: trojan
   udp: true
-- name: 剩余流量：901.8 GB
+- name: Shadowsocks
+  type: socks5
+  server: 127.0.0.1
+  port: 1080
+- name: 账号已被封禁
+  type: ss
+  server: 127.0.0.1
+  port: 520
+  cipher: aes-128-gcm
+  password: 46333b03-6e66-4962-8316-d88a57bbb0f8
+  udp: true
+- name: 剩余流量：897.08 GB
   type: vless
   server: cfyes.ziyoufly.xyz
   port: 443
-  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
+  uuid: 4de520cf-ccee-4a18-ab5a-e66d969c7872
   udp: true
   tls: true
   skip-cert-verify: false
@@ -955,7 +962,7 @@ proxies:
   type: vless
   server: aws-jp01.ziyoufly.xyz
   port: 55555
-  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
+  uuid: 4de520cf-ccee-4a18-ab5a-e66d969c7872
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -969,7 +976,7 @@ proxies:
   type: vless
   server: aws-jp02.ziyoufly.xyz
   port: 55555
-  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
+  uuid: 4de520cf-ccee-4a18-ab5a-e66d969c7872
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -983,7 +990,7 @@ proxies:
   type: vless
   server: ak-jp01.ziyoufly.xyz
   port: 55555
-  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
+  uuid: 4de520cf-ccee-4a18-ab5a-e66d969c7872
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -997,7 +1004,7 @@ proxies:
   type: vless
   server: uh-jp01.ziyoufly.xyz
   port: 55555
-  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
+  uuid: 4de520cf-ccee-4a18-ab5a-e66d969c7872
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -1011,7 +1018,7 @@ proxies:
   type: vless
   server: uh-sg01.ziyoufly.xyz
   port: 55555
-  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
+  uuid: 4de520cf-ccee-4a18-ab5a-e66d969c7872
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -1025,7 +1032,7 @@ proxies:
   type: vless
   server: ak-tw01.ziyoufly.xyz
   port: 55555
-  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
+  uuid: 4de520cf-ccee-4a18-ab5a-e66d969c7872
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -1039,7 +1046,7 @@ proxies:
   type: vless
   server: ak-hk01.ziyoufly.xyz
   port: 55555
-  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
+  uuid: 4de520cf-ccee-4a18-ab5a-e66d969c7872
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -1053,7 +1060,7 @@ proxies:
   type: vless
   server: ak-us01.ziyoufly.xyz
   port: 55555
-  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
+  uuid: 4de520cf-ccee-4a18-ab5a-e66d969c7872
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -1067,7 +1074,7 @@ proxies:
   type: vless
   server: uh-us01.ziyoufly.xyz
   port: 55555
-  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
+  uuid: 4de520cf-ccee-4a18-ab5a-e66d969c7872
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -1081,7 +1088,7 @@ proxies:
   type: vless
   server: uh-tr01.ziyoufly.xyz
   port: 55555
-  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
+  uuid: 4de520cf-ccee-4a18-ab5a-e66d969c7872
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -1109,13 +1116,6 @@ proxies:
     short-id: 98f250c88f
   client-fingerprint: chrome
   network: tcp
-- name: 账号已被封禁
-  type: ss
-  server: 127.0.0.1
-  port: 520
-  cipher: aes-128-gcm
-  password: 46333b03-6e66-4962-8316-d88a57bbb0f8
-  udp: true
 - name: 您的账号已被封禁
   type: ss
   server: 127.0.0.1
@@ -2664,6 +2664,114 @@ proxies:
   sni: www.cloudflare.com
   skip-cert-verify: true
   udp: true
+- name: 🇺🇦 UA
+  type: hysteria2
+  server: ua.143259.xyz
+  port: 24032
+  password: 5ff4455a-e408-4d24-84e3-43515b3194b6
+  udp: true
+  skip-cert-verify: true
+  sni: ua.143259.xyz
+  tls-fingerprint: cfd300ecbdad5a47ddf8e09f5c992583bcc907626a132bf17be2657f7024b558
+- name: 🇹🇼 TW
+  type: hysteria2
+  server: tw.143259.xyz
+  port: 45672
+  password: 375f8445-3178-467a-b478-e1509435ff38
+  udp: true
+  sni: tw.143259.xyz
+  tls-fingerprint: bde846d58d33b7a338cbbde260fb8b22ef0b5e9be6d27bed821ae056fbf492cc
+- name: 🇯🇵 JP
+  type: hysteria2
+  server: jp.143259.xyz
+  port: 64707
+  password: e78f0d09-ea74-4832-9b48-6ff4e9d57ff4
+  udp: true
+  sni: jp.143259.xyz
+  tls-fingerprint: 4417a7ca4d7443320959934110f2fff72fbd88a73fb282aec33d18f7dfe21feb
+- name: 🇺🇸 US
+  type: hysteria2
+  server: us.143259.xyz
+  port: 15885
+  password: 8f6c766c-51c6-4ea8-9cd0-20fc36336e0d
+  udp: true
+  sni: us.143259.xyz
+  tls-fingerprint: edd56d80d8ab29e3a16f58008d4e98f25b493861eaf4dcc66e8344a55863adcf
+- name: 🇭🇰 HK
+  type: hysteria2
+  server: hk.143259.xyz
+  port: 18967
+  password: 1dfe0fc5-9bf2-4a00-bfc7-6403c3919e04
+  udp: true
+  sni: hk.143259.xyz
+  tls-fingerprint: 60134ee0ee2fed6e65ba5015193a58711f29d310a012ce8d29cf9bbeeeea7168
+- name: 🇩🇪 DE
+  type: hysteria2
+  server: 91.238.105.190
+  port: 24032
+  password: c115ae9c-1e1f-4957-89d2-93ea1ebf543e
+  udp: true
+  sni: de.143259.xyz
+  tls-fingerprint: f04b60a1f8ce5261e59b62a9615dc77e4df5b82ff4b62f18a907c3a600af1095
+- name: 🇩🇪 DE4837
+  type: hysteria2
+  server: 85.121.52.123
+  port: 12929
+  password: e9d24f02-9da4-4cec-b02b-30810ca23424
+  udp: true
+  skip-cert-verify: true
+  sni: 4837.143259.xyz
+  tls-fingerprint: 95e6f30c201a05ac73e2248aa3ac36f5b1fc1f37e2c267d0d6341b99f99ad56c
+- name: 🇹🇼 台湾
+  type: vless
+  server: tw.143259.xyz
+  port: 46818
+  uuid: cfb322d2-3759-4484-8ec6-51adc073672f
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  servername: tw.143259.xyz
+  network: tcp
+  tls-fingerprint: bde846d58d33b7a338cbbde260fb8b22ef0b5e9be6d27bed821ae056fbf492cc
+- name: 🇭🇰 香港
+  type: vless
+  server: hk.143259.xyz
+  port: 36283
+  uuid: b233604b-79df-461c-9306-fa30e26e1c05
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  servername: hk.143259.xyz
+  network: tcp
+  tls-fingerprint: 60134ee0ee2fed6e65ba5015193a58711f29d310a012ce8d29cf9bbeeeea7168
+- name: 🇯🇵 日本
+  type: vless
+  server: jp.143259.xyz
+  port: 60373
+  uuid: 8207f1df-ab75-4bd3-8dab-71809f0f8e24
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  servername: jp.143259.xyz
+  network: tcp
+  tls-fingerprint: 4417a7ca4d7443320959934110f2fff72fbd88a73fb282aec33d18f7dfe21feb
+- name: 🇺🇸 美国
+  type: vless
+  server: us.143259.xyz
+  port: 58915
+  uuid: ce7f931c-01ac-47fb-bbac-6e7575b3b806
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  servername: us.143259.xyz
+  network: tcp
+  tls-fingerprint: edd56d80d8ab29e3a16f58008d4e98f25b493861eaf4dcc66e8344a55863adcf
+- name: '%E8%AF%B7%E4%BD%BF%E7%94%A8%E6%94%AF%E6%8C%81Clash.Meta%E5%86%85%E6%A0%B8%E7%9A%84%E8%BD%AF%E4%BB%B6%E8%AE%A2%E9%98%85%E6%88%96Shadowrocket%EF%BC%8C%E7%9B%B8%E5%85%B3%E8%BD%AF%E4%BB%B6%E5%8F%AF%E5%9C%A8%E7%9F%A5%E8%AF%86%E5%BA%93%E8%8E%B7%E5%8F%96'
+  type: ss
+  server: 127.0.0.1
+  port: 1
+  cipher: aes-128-gcm
+  password: unsupported-client
 - name: vless
   type: vless
   server: 144.34.170.18
@@ -2762,9 +2870,3 @@ proxies:
   network: tcp
   tls: false
   skip-cert-verify: true
-- name: '%E8%AF%B7%E4%BD%BF%E7%94%A8%E6%94%AF%E6%8C%81Clash.Meta%E5%86%85%E6%A0%B8%E7%9A%84%E8%BD%AF%E4%BB%B6%E8%AE%A2%E9%98%85%E6%88%96Shadowrocket%EF%BC%8C%E7%9B%B8%E5%85%B3%E8%BD%AF%E4%BB%B6%E5%8F%AF%E5%9C%A8%E7%9F%A5%E8%AF%86%E5%BA%93%E8%8E%B7%E5%8F%96'
-  type: ss
-  server: 127.0.0.1
-  port: 1
-  cipher: aes-128-gcm
-  password: unsupported-client
