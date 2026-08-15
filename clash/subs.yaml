@@ -604,6 +604,10 @@ proxies:
   h2-opts: {}
   skip-cert-verify: true
   delay: 854
+- name: Shadowsocks
+  type: socks5
+  server: 127.0.0.1
+  port: 1080
 - cipher: aes-256-cfb
   name: United States_None_ss_101
   password: amazonskr05
@@ -612,7 +616,7 @@ proxies:
   type: ss
 - alterId: 2
   cipher: auto
-  name: Hong Kong_Kowloon_vmess_102
+  name: Hong Kong_Central_vmess_102
   port: 30807
   server: v10.hdacd.com
   skip-cert-verify: false
@@ -821,54 +825,46 @@ proxies:
   tls: false
   type: vmess
   uuid: 88888888-8888-8888-8888-888888888888
-- name: Japan_Tokyo_trojan_1126
-  password: FH72359861
-  port: 443
-  server: closing-falcon.rooster465.autos
-  skip-cert-verify: true
-  type: trojan
-- name: Singapore_Singapore_trojan_1127
-  password: FH72359861
-  port: 443
-  server: topical-shark.rooster465.autos
-  skip-cert-verify: true
-  type: trojan
-- name: Hong Kong_Ha Kwai Chung_trojan_1128
-  network: tcp
-  password: 0010996f-3eab-4804-9b3a-3a889d6767fc
-  port: 20095
-  server: krhtybay.catcat321.com
-  skip-cert-verify: true
-  sni: iepl.ush2.cat.bilibili.com
-  type: trojan
+- cipher: aes-256-gcm
+  name: Canada_None_ss_1126
+  password: zDNVedRFPQexG9v
+  port: 445
+  server: 51.222.12.127
+  type: ss
   udp: true
-- client-fingerprint: chrome
-  name: South Korea_Incheon_trojan_1129
-  network: tcp
+- name: France_Paris_trojan_1127
   password: FH72359861
-  port: '443'
-  server: massive-ocelot.rooster465.autos
+  port: 443
+  server: correct-pony.rooster465.autos
+  skip-cert-verify: true
+  type: trojan
+- alterId: '0'
+  cipher: auto
+  name: China_None_vmess_1128
+  network: ws
+  port: '10000'
+  server: 117.27.228.29
   skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 2c90af15-bac7-f850-4c7c-120c5a420636
+  ws-opts:
+    headers: {}
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: Hong Kong_None_trojan_1129
+  network: raw
+  password: 6ec301428255a78a1d826988d86cc87e
+  port: '50887'
+  server: 2c.fast9988.com
+  skip-cert-verify: false
+  sni: www.nintendogames.net
   type: trojan
   udp: true
 - client-fingerprint: chrome
   name: South Korea_Incheon_trojan_1130
-  network: tcp
-  password: FH72359861
-  port: '443'
-  server: apt-whippet.rooster465.autos
-  skip-cert-verify: false
-  type: trojan
-  udp: true
-- cipher: aes-256-cfb
-  name: France_Paris_ss_1131
-  password: amazonskr05
-  port: 443
-  server: 15.237.184.221
-  type: ss
-  udp: true
-- client-fingerprint: chrome
-  name: South Korea_Incheon_trojan_1132
   network: tcp
   password: FH72359861
   port: '443'
@@ -877,7 +873,7 @@ proxies:
   type: trojan
   udp: true
 - client-fingerprint: chrome
-  name: South Korea_Incheon_trojan_1133
+  name: South Korea_Incheon_trojan_1131
   network: tcp
   password: FH72359861
   port: '443'
@@ -886,25 +882,7 @@ proxies:
   type: trojan
   udp: true
 - client-fingerprint: chrome
-  name: South Korea_None_trojan_1134
-  network: tcp
-  password: FH72359861
-  port: '443'
-  server: absolute-bobcat.rooster465.autos
-  skip-cert-verify: false
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: Japan_Tokyo_trojan_1135
-  network: tcp
-  password: FH72359861
-  port: '443'
-  server: great-wasp.rooster465.autos
-  skip-cert-verify: false
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: South Korea_Incheon_trojan_1136
+  name: South Korea_Incheon_trojan_1132
   network: tcp
   password: FH72359861
   port: '443'
@@ -913,2982 +891,56 @@ proxies:
   type: trojan
   udp: true
 - client-fingerprint: chrome
-  name: Singapore_Singapore_trojan_1137
+  name: South Korea_None_trojan_1133
   network: tcp
   password: FH72359861
   port: '443'
-  server: fond-chipmunk.rooster465.autos
+  server: kind-grizzly.rooster465.autos
+  skip-cert-verify: false
+  type: trojan
+  udp: true
+- cipher: aes-256-cfb
+  name: United States_Columbus_ss_1134
+  password: amazonskr05
+  port: 443
+  server: 18.189.171.163
+  type: ss
+  udp: true
+- alterId: '0'
+  cipher: auto
+  name: United States_None_vmess_1135
+  network: ws
+  port: 443
+  server: 157.254.227.87
+  servername: xc162.meiziba5566.com
+  tls: true
+  type: vmess
+  uuid: 5b411308-d796-4694-b58d-d252e35bb475
+  ws-opts:
+    path: /d252e35bb475
+- client-fingerprint: chrome
+  name: Japan_Tokyo_trojan_1136
+  network: tcp
+  password: FH72359861
+  port: '443'
+  server: great-wasp.rooster465.autos
   skip-cert-verify: false
   type: trojan
   udp: true
 - client-fingerprint: chrome
-  name: Japan_Tokyo_trojan_1138
+  name: Germany_Frankfurt am Main_trojan_1137
   network: tcp
   password: FH72359861
   port: '443'
-  server: square-tortoise.rooster465.autos
+  server: renewed-porpoise.rooster465.autos
   skip-cert-verify: false
   type: trojan
   udp: true
-- name: disney_GB |139.53Mb
-  server: yg3.mangshe.xyz
-  type: hysteria2
-  port: 2056
-  password: 22d891f5-ad85-4824-b0b8-e30cf3d37eb5
-  auth: 22d891f5-ad85-4824-b0b8-e30cf3d37eb5
-  sni: yg3.mangshe.xyz
-  skip-cert-verify: true
-- name: _02
-  server: 212.193.26.170
-  type: vless
-  port: 4100
-  udp: true
-  uuid: d3984ebd-b876-4a38-be7d-90299feafc81
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: live.ok.ru
-  packet-encoding: ''
-- name: disney_netflix_GB
-  server: 103.21.244.253
-  type: vless
-  port: 443
-  udp: true
-  uuid: 67f18a9b-f0c3-418b-92dc-19e242fe1ee8
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: zhrcmvpn.pages.dev
-  ws-opts:
-    path: /?ed=2560fp=random
-    headers:
-      Host: zhrcmvpn.pages.dev
-  packet-encoding: ''
-- name: disney_netflix_US |38.78Mb
-  server: 104.16.72.41
-  type: vless
-  port: 2095
-  udp: true
-  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fuckfangbinxing.pusytroller.gq
-  packet-encoding: xudp
-- name: Relay_-🇺🇸US_05 |137.00Mb
-  server: www.fbi.gov
-  type: vless
-  port: 2095
-  udp: true
-  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fuckingfangbinxing.pusytroller.cf
-  packet-encoding: ''
-- name: disney_netflix_GB_1
-  server: 104.17.22.240
-  type: vless
-  port: 443
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: hhlfy.twiladaphne.ndjp.net
-  ws-opts:
-    path: /
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-  packet-encoding: ''
-- name: Relay_-🇺🇸US_07 |13.72Mb
-  server: 104.18.38.47
-  type: vless
-  port: 2095
-  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fangbinxingnmsl.pusytroller.gq
-  packet-encoding: ''
-- name: Relay_-🇺🇸US_08 |12.83Mb
-  server: www.wto.org
-  type: vless
-  port: 2095
-  udp: true
-  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fuckingfangbinxing.pusytroller.cf
-  packet-encoding: ''
-- name: Relay_-🇺🇸US_09 |109.80Mb
-  server: 91.196.32.163
-  type: hysteria2
-  port: 443
-  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
-  auth: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
-  alpn:
-  - h3
-  sni: germany3.h2corp.local
-  skip-cert-verify: true
-- name: _10 |27.86Mb
-  server: 5.255.102.165
-  type: hysteria2
-  port: 443
-  password: LzMWgm6LaNWCm11bFTbynDPq2TqQj03t
-  auth: LzMWgm6LaNWCm11bFTbynDPq2TqQj03t
-  sni: www.microsoft.com
-  skip-cert-verify: true
-- name: Relay_-🇭🇰HK_11 | 7.26Mb
-  server: 180.178.60.252
-  type: vless
-  port: 10000
-  udp: true
-  uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
-  network: tcp
-  packet-encoding: xudp
-- name: disney_DE |51.42Mb
-  server: 5.83.129.143
-  type: hysteria
-  port: 26691
-  auth_str: dongtaiwang.com
-  auth-str: dongtaiwang.com
-  alpn:
-  - h3
-  sni: apple.com
-  skip-cert-verify: true
-  up: 11 Mbps
-  down: 55 Mbps
-  protocol: udp
-- name: Relay_-🇬🇧GB_13 |60.91Mb
-  server: 104.165.205.226
-  type: hysteria2
-  port: 9443
-  password: b8f1b61e-d5c4-4765-866d-ece1fc8e590b
-  auth: b8f1b61e-d5c4-4765-866d-ece1fc8e590b
-  sni: onecloudstream.com
-  skip-cert-verify: true
-- name: _15
-  server: 185.185.142.79
-  type: vless
-  port: 2200
-  udp: true
-  uuid: 0c4f46c2-afb7-4a80-8f6e-10258d80333e
-  network: ws
-  ws-opts:
-    path: /v1
-  packet-encoding: ''
-- name: Relay_-🇮🇹IT_16 |62.29Mb
-  server: 199.232.78.159
-  type: vless
-  port: 443
-  udp: true
-  uuid: be42674a-296a-43d8-bf04-b8314d65ff63
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: ssl.fastly.com
-  ws-opts:
-    path: /TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER
-    headers:
-      Host: pane2.global.ssl.fastly.net
-  packet-encoding: ''
-- name: Relay_-🇫🇷FR_17
-  server: vpn-fr-002.fastervpn.world
-  type: hysteria2
-  port: 443
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  auth: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-fr-002.fastervpn.world
-  skip-cert-verify: true
-- name: disney_netflix_DE |462.63Mb
-  server: 5hsytrdbbvcrxokk.localip.ir
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 03707fb7-0990-440f-88f6-b0e0f7242a38
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: d21kxk4wisidbjifybg3.redjilas.ir
-  ws-opts:
-    path: /
-    headers:
-      Host: d21kxk4wisidbjifybg3.redjilas.ir
-  packet-encoding: ''
-- name: Relay_-🇺🇸US_19 |56.91Mb
-  server: 139.28.168.54
-  type: hysteria2
-  port: 8080
-  password: 0wdsa_nJXEWRj9jz9J9xMgtx_n7gzfK_m8
-  auth: 0wdsa_nJXEWRj9jz9J9xMgtx_n7gzfK_m8
-  sni: grape-honk.yyuyy.com
-  skip-cert-verify: true
-- name: Pool__20 |427.02Mb
-  server: 205.237.109.213
-  type: hysteria2
-  port: 8443
-  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  auth: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  sni: grape-turbo-fr.roxa.org
-  skip-cert-verify: true
-- name: disney_netflix_GB_2
-  server: 172.67.149.60
-  type: vless
-  port: 443
-  udp: true
-  uuid: 5aafc2be-9348-4dec-b896-f4a91253bbca
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: support.zoom.us.yxls.eu.cc
-  ws-opts:
-    path: /id-tksi?ed=2048
-    headers:
-      Host: support.zoom.us.yxls.eu.cc
-  packet-encoding: ''
-- name: disney_US |15.86Mb
-  server: fast.nanniang.top
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 916e3030-6eac-418b-9402-7508ca7d6280
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: us-akile.nanniang.top
-  ws-opts:
-    path: /
-    headers:
-      Host: us-akile.nanniang.top
-  packet-encoding: ''
-- name: Relay_-🇬🇧GB_23 |59.99Mb
-  server: srvhy1.ezcon24.online
-  type: hysteria2
-  port: 8443
-  password: 553e3253-c454-431d-a7e6-42bc06ea5e14
-  auth: 553e3253-c454-431d-a7e6-42bc06ea5e14
-  sni: srvhy1.ezcon24.online
-  skip-cert-verify: true
-- name: Relay_-🇹🇭TH_24
-  server: 18.238.109.17
-  type: vless
-  port: 443
-  udp: true
-  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
-  network: ws
-  tls: true
-  client-fingerprint: firefox
-  servername: d1yxsk0zprgivr.cloudfront.net
-  ws-opts:
-    path: /
-    headers:
-      Host: d1yxsk0zprgivr.cloudfront.net
-  packet-encoding: ''
-- name: Pool__25
-  server: 62.210.7.139
-  type: hysteria2
-  port: 60111
-  password: github.com/Alvin9999-newpac/fanqiang
-  auth: github.com/Alvin9999-newpac/fanqiang
-  sni: bing.com
-  skip-cert-verify: true
-- name: disney_netflix_DE |230.70Mb
-  server: 104.16.75.68
-  type: vless
-  port: 443
-  udp: true
-  uuid: 03707fb7-0990-440f-88f6-b0e0f7242a38
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: germany-2.ariyuz.org
-  ws-opts:
-    path: /
-    headers:
-      Host: germany-2.ariyuz.org
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: netflix_NL |288.42Mb
-  server: neth.lckdwn.ru
-  type: vless
-  port: 443
-  udp: true
-  uuid: 0db4a87c-c280-4a5f-ae97-903768c5ef4c
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: neth.lckdwn.ru
-  packet-encoding: ''
-- name: disney_netflix_GB_3
-  server: 162.159.60.231
-  type: vless
-  port: 443
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: hhlfy.twiladaphne.ndjp.net
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-  packet-encoding: ''
-- name: _31
-  server: 103.161.237.54
-  type: vless
-  port: 443
-  udp: true
-  uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: vod.ensf.top
-  ws-opts:
-    path: /api/v1/irc
-    headers:
-      Host: vod.ensf.top
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: _32
-  server: 45.88.43.116
-  type: hysteria2
-  port: 52454
-  password: 6c077487-06af-4fb1-9e46-d485d98f0a31
-  auth: 6c077487-06af-4fb1-9e46-d485d98f0a31
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: _33 |56.87Mb
-  server: 89.208.113.16
-  type: vless
-  port: 443
-  udp: true
-  uuid: adce7c2a-3191-49ae-b61c-9b8258ea1b0e
-  network: tcp
-  packet-encoding: ''
-- name: disney_netflix_US |153.56Mb
-  server: 172.64.152.241
-  type: vless
-  port: 2095
-  udp: true
-  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fuckingfangbinxing.pusytroller.cf
-  packet-encoding: ''
-- name: Relay_-🇺🇸US_36
-  server: 18.239.134.69
-  type: vless
-  port: 80
-  udp: true
-  uuid: de27291c-15a9-4256-9ba7-ad517569877e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: d2e1v87ko56lyw.cloudfront.net:assets.opensignal.com
-  packet-encoding: ''
-- name: _37 |24.49Mb
-  server: 139.28.168.54
-  type: hysteria2
-  port: 8443
-  password: 0wdsa_nJXEWRj9jz9J9xMgtx_n7gzfK_m8
-  auth: 0wdsa_nJXEWRj9jz9J9xMgtx_n7gzfK_m8
-  sni: grape-honk.yyuyy.com
-  skip-cert-verify: true
-- name: disney_netflix_US |31.25Mb
-  server: mgxui.peng.mom
-  type: vless
-  port: 26602
-  uuid: b0979c88-5a95-45c7-a46b-16b213b3e841
-  network: tcp
-  tls: true
-  client-fingerprint: chrome
-  servername: mgxui.peng.mom
-  packet-encoding: ''
-- name: disney_netflix_GB |131.77Mb
-  server: 104.17.28.89
-  type: vless
-  port: 443
-  udp: true
-  uuid: 1078d418-b4e0-4668-9018-dc90c2042d61
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: workspace.evan00.dpdns.org
-  ws-opts:
-    path: /fp=randomized
-    headers:
-      Host: workspace.evan00.dpdns.org
-  packet-encoding: ''
-- name: Relay_-🇫🇷FR_40 |319.70Mb
-  server: 104.21.66.61
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 05cf7b0e-ad1a-42bb-80e7-73ae45b1019a
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: france.io-com-de-dev.org
-  ws-opts:
-    path: /api/voip/updates/static/x9i2
-    headers:
-      Host: france.io-com-de-dev.org
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: disney_netflix_GB_4
-  server: one-for-all.levikogjgfdd.ir
-  type: vless
-  port: 443
-  udp: true
-  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: josni.hoyes.cloudns.ch
-  ws-opts:
-    path: /sg-melbi
-    headers:
-      Host: josni.hoyes.cloudns.ch
-  packet-encoding: ''
-- name: disney_DE |50.42Mb
-  server: de2.vpn.legendaah.xyz
-  type: hysteria2
-  port: 36723
-  password: Krab9Hyst2_Rk7pQ2xL
-  auth: Krab9Hyst2_Rk7pQ2xL
-  sni: www.cloudflare.com
-  skip-cert-verify: true
-- name: Relay_-🇰🇷KR_44
-  server: vpn-kr-003.fastervpn.world
-  type: hysteria2
-  port: 443
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  auth: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-kr-003.fastervpn.world
-  skip-cert-verify: true
-- name: Pool__45 |302.80Mb
-  server: 205.237.109.212
-  type: hysteria2
-  port: 8443
-  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  auth: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  sni: grape-turbo-fr.roxa.org
-  skip-cert-verify: true
-- name: disney_netflix_GB_5
-  server: 104.18.42.54
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  packet-encoding: ''
-- name: Relay_-🇺🇸US_47 | 1.89Mb
-  server: starlink-ft.251313.xyz
-  type: hysteria2
-  port: 443
-  password: https://xship.2fa.cat
-  auth: https://xship.2fa.cat
-  sni: www.cloudflare.com
-  skip-cert-verify: true
-- name: disney_netflix_US |126.93Mb
-  server: 172.64.146.153
-  type: vless
-  port: 2095
-  udp: true
-  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fangbinxingnmsl.pusytroller.gq
-  packet-encoding: ''
-- name: Relay_-🇩🇪DE_49 |26.17Mb
-  server: p01.parsi.sbs
-  type: vless
-  port: 2086
-  udp: true
-  uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: parsi.parsi.sbs
-  packet-encoding: ''
-- name: _50 |351.61Mb
-  server: 201.51.0.38
-  type: vless
-  port: 4100
-  udp: true
-  uuid: e7299042-7d8f-440f-8368-2516b0e69341
-  network: ws
-  ws-opts:
-    path: /v1
-  packet-encoding: ''
-- name: disney_netflix_GB_6
-  server: 172.64.146.211
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  packet-encoding: ''
-- name: disney_US |569.91Mb
-  server: 138.124.68.188
-  type: hysteria2
-  port: 443
-  password: 76713d07-5a6b-49c2-abd8-bc450a2fa7fc
-  auth: 76713d07-5a6b-49c2-abd8-bc450a2fa7fc
-  sni: usa1.spectrumproxy.shop
-  skip-cert-verify: true
-- name: disney_US |524.35Mb
-  server: usa1.spectrumproxy.shop
-  type: hysteria2
-  port: 443
-  password: 76713d07-5a6b-49c2-abd8-bc450a2fa7fc
-  auth: 76713d07-5a6b-49c2-abd8-bc450a2fa7fc
-  sni: usa1.spectrumproxy.shop
-  skip-cert-verify: true
-- name: disney_US |292.52Mb
-  server: 38.99.248.120
-  type: hysteria2
-  port: 50160
-  password: 2c1611f83747dd3694e0e90cbf7d4e29
-  auth: 2c1611f83747dd3694e0e90cbf7d4e29
-  sni: 38-99-248-120.liao.kdns.fr
-  skip-cert-verify: true
-- name: Relay_-🇮🇩ID_56 |27.11Mb
-  server: us54.mechvpn.online
-  type: hysteria2
-  port: 443
-  password: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-  auth: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-  alpn:
-  - h3
-  sni: us54.mechvpn.online
-  skip-cert-verify: true
-- name: _57 |345.45Mb
-  server: 72.56.7.195
-  type: vless
-  port: 2200
-  udp: true
-  uuid: 31c2a8e8-0ab2-4f3f-8767-11f3a35d4228
-  network: ws
-  ws-opts:
-    path: /v1
-  packet-encoding: ''
-- name: disney_netflix_GB_7
-  server: 104.16.150.130
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  packet-encoding: ''
-- name: _59 |38.44Mb
-  server: 38.246.226.240
-  type: vless
-  port: 57878
-  uuid: 535f0e03-24d4-4268-ac40-5af829e8e59b
-  network: ws
-  ws-opts:
-    path: /535f0e03
-  packet-encoding: ''
-- name: disney_HK |22.26Mb
-  server: 202.146.222.29
-  type: hysteria2
-  port: 443
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  auth: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 202.146.222.29
-  skip-cert-verify: true
-- name: disney_GB
-  server: 172.66.44.97
-  type: vless
-  port: 443
-  udp: true
-  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: josni.hoyes.cloudns.ch
-  ws-opts:
-    path: /sg-melbi
-    headers:
-      Host: josni.hoyes.cloudns.ch
-  packet-encoding: ''
-- name: netflix_PL |162.80Mb
-  server: 104.21.35.235
-  type: vless
-  port: 2053
-  udp: true
-  uuid: da4747a6-be0d-4c1b-90f4-d82ec3012be2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: music1000.melobitmusic1.ir
-  ws-opts:
-    path: /
-    headers:
-      Host: music1000.melobitmusic1.ir
-  alpn:
-  - h2
-  - http/1.1
-  packet-encoding: ''
-- name: _63
-  server: 86.107.197.239
-  type: vless
-  port: 443
-  udp: true
-  uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: vod.ensf.top
-  ws-opts:
-    path: /api/v1/irc
-    headers:
-      Host: vod.ensf.top
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: disney_netflix_GB_8
-  server: 104.16.72.251
-  type: vless
-  port: 443
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: hhlfy.twiladaphne.ndjp.net
-  ws-opts:
-    path: /
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-  packet-encoding: ''
-- name: netflix_PT |432.02Mb
-  server: 93.119.168.215
-  type: vless
-  port: 60771
-  udp: true
-  uuid: 060a5db6-7ff9-4a64-87c1-8a27be4f11ab
-  network: tcp
-  packet-encoding: ''
-- name: netflix_AT
-  server: 109.176.207.168
-  type: vless
-  port: 443
-  udp: true
-  uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: vod.ensf.top
-  ws-opts:
-    path: /api/v1/irc
-    headers:
-      Host: vod.ensf.top
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: Relay_-🇳🇱NL_67 |174.59Mb
-  server: 185.109.48.13
-  type: vless
-  port: 2053
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: forfreeuse.rtqa.ru
-  ws-opts:
-    path: /
-    headers:
-      Host: forfreeuse.rtqa.ru
-  packet-encoding: ''
-- name: disney_netflix_TR |288.16Mb
-  server: 185.39.204.155
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 7e8f7489-e65f-4be6-93ed-867a74ec6759
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc
-  packet-encoding: ''
-- name: netflix_AT_1
-  server: 193.124.15.11
-  type: vless
-  port: 443
-  udp: true
-  uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: vod.ensf.top
-  ws-opts:
-    path: /api/v1/irc
-    headers:
-      Host: vod.ensf.top
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: netflix_AT_2
-  server: 217.154.53.220
-  type: vless
-  port: 443
-  udp: true
-  uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: vod.ensf.top
-  ws-opts:
-    path: /api/v1/irc
-    headers:
-      Host: vod.ensf.top
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: _71
-  server: 88.198.82.153
-  type: vless
-  port: 443
-  udp: true
-  uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: vod.ensf.top
-  ws-opts:
-    path: /api/v1/irc
-    headers:
-      Host: vod.ensf.top
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: disney_netflix_US |155.62Mb
-  server: www.wto.org
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 65c56e1f-5c41-40bc-b0b5-9346772476ca
-  network: ws
-  tls: true
-  client-fingerprint: edge
-  servername: usa.105794.xyz
-  ws-opts:
-    path: /download/v3/installer-x64.bin
-    headers:
-      Host: usa.105794.xyz
-  packet-encoding: ''
-- name: netflix_AT_3
-  server: 57.128.181.125
-  type: vless
-  port: 443
-  udp: true
-  uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: vod.ensf.top
-  ws-opts:
-    path: /api/v1/irc
-    headers:
-      Host: vod.ensf.top
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: Relay_-🇸🇬SG_75 |181.91Mb
-  server: 104.17.70.206
-  type: vless
-  port: 2096
-  udp: true
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: free-server.techsonic.dev
-  ws-opts:
-    path: /free-server.techsonic.dev
-    headers:
-      Host: free-server.techsonic.dev
-  alpn:
-  - h2
-  - http/1.1
-  packet-encoding: ''
-- name: _78 |306.74Mb
-  server: 194.26.229.217
-  type: vless
-  port: 4100
-  udp: true
-  uuid: e58a0802-443e-4ba3-992b-73687bb5b9f0
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: live.ok.ru
-  packet-encoding: ''
-- name: disney_NL |87.97Mb
-  server: 5.129.235.85
-  type: hysteria2
-  port: 443
-  password: gf1:gfhysteria2024
-  auth: gf1:gfhysteria2024
-  sni: www.linux.com
-  skip-cert-verify: true
-- name: _80 |31.39Mb
-  server: 157.137.224.189
-  type: vless
-  port: 62145
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
-  network: tcp
-  packet-encoding: ''
-- name: _81
-  server: 45.143.200.245
-  type: vless
-  port: 443
-  udp: true
-  uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: vod.ensf.top
-  ws-opts:
-    path: /api/v1/irc
-    headers:
-      Host: vod.ensf.top
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: _82 |255.31Mb
-  server: 194.26.229.220
-  type: vless
-  port: 4100
-  udp: true
-  uuid: aef0e934-09d7-4b8f-b3bc-de78d2eec928
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: live.ok.ru
-  packet-encoding: ''
-- name: _83 |344.03Mb
-  server: 109.73.196.160
-  type: vless
-  port: 2200
-  udp: true
-  uuid: 5d0206d9-fb42-4c8b-a84b-3d95ab0f42c7
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: rzd.ru
-  packet-encoding: ''
-- name: _84
-  server: 104.171.132.185
-  type: vless
-  port: 4100
-  udp: true
-  uuid: 112912a9-cedf-485d-b8ed-d8f8d4774437
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: live.ok.ru
-  packet-encoding: ''
-- name: disney_GB_1
-  server: 172.64.144.66
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  packet-encoding: ''
-- name: disney_GB_2
-  server: 172.64.53.194
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  packet-encoding: xudp
-- name: Relay_-🇺🇸US_87 |30.77Mb
-  server: 104.16.106.217
-  type: vless
-  port: 443
-  udp: true
-  uuid: 95470b1b-2164-4243-b977-ab6784f468e6
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: dr.evanjson.sbs
-  ws-opts:
-    path: /uhznws
-    headers:
-      Host: dr.evanjson.sbs
-  packet-encoding: ''
-- name: _88
-  server: 77.222.37.89
-  type: vless
-  port: 4100
-  udp: true
-  uuid: b79c54f3-68e9-4e9d-8b57-22cbbe978730
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: live.ok.ru
-  packet-encoding: ''
-- name: Relay_-🇹🇭TH_89
-  server: www.true.th
-  type: vless
-  port: 443
-  udp: true
-  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: d1yxsk0zprgivr.cloudfront.net
-  ws-opts:
-    path: /
-    headers:
-      Host: d1yxsk0zprgivr.cloudfront.net
-  packet-encoding: ''
-- name: disney_netflix_US |109.05Mb
-  server: 104.18.42.98
-  type: vless
-  port: 2095
-  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fuckingfangbinxing.pusytroller.cf
-  packet-encoding: ''
-- name: _91 |29.45Mb
-  server: 85.120.228.208
-  type: hysteria2
-  port: 47257
-  password: 35415e5e-3666-4454-8c45-903af0fcddf4
-  auth: 35415e5e-3666-4454-8c45-903af0fcddf4
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: _92 |11.57Mb
-  server: 194.26.229.214
-  type: vless
-  port: 2200
-  udp: true
-  uuid: a9f07ec1-bd8a-4c95-a281-3de7f0b76853
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: rzd.ru
-  packet-encoding: ''
-- name: _93 |198.97Mb
-  server: 86.107.178.66
-  type: hysteria2
-  port: 8443
-  password: Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s
-  auth: Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s
-  sni: grape-zet-turbo-nl.yyuyy.com
-  skip-cert-verify: true
-- name: disney_netflix_GB_9
-  server: 172.64.53.74
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  packet-encoding: ''
-- name: disney_netflix_GB_10
-  server: 172.64.150.28
-  type: vless
-  port: 443
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: hhlfy.twiladaphne.ndjp.net
-  ws-opts:
-    path: /fp
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-  packet-encoding: ''
-- name: _96 |332.74Mb
-  server: 104.171.135.186
-  type: vless
-  port: 4100
-  udp: true
-  uuid: 2c66d559-9889-45c5-a712-d8b7a31fa04d
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: live.ok.ru
-  packet-encoding: ''
-- name: _97
-  server: 72.56.246.91
-  type: vless
-  port: 4100
-  udp: true
-  uuid: a484645e-59df-4980-b649-92b71250ec60
-  network: ws
-  ws-opts:
-    path: /v1
-  packet-encoding: ''
-- name: _98
-  server: 5.129.252.140
-  type: vless
-  port: 4100
-  udp: true
-  uuid: eb135f2b-4b9e-4abb-9a89-78242613da61
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: live.ok.ru
-  packet-encoding: ''
-- name: _101 |247.56Mb
-  server: 194.26.229.220
-  type: vless
-  port: 2200
-  udp: true
-  uuid: 47947923-49ac-49f8-86ed-2912bcbf2d18
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: rzd.ru
-  packet-encoding: ''
-- name: disney_netflix_GB_11
-  server: 104.16.248.48
-  type: vless
-  port: 443
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: hhlfy.twiladaphne.ndjp.net
-  ws-opts:
-    path: /
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-  packet-encoding: ''
-- name: disney_netflix_US |104.08Mb
-  server: 104.18.43.174
-  type: vless
-  port: 2095
-  udp: true
-  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fuckingfangbinxing.pusytroller.cf
-  packet-encoding: ''
-- name: Relay_-🇸🇬SG_106 |90.36Mb
-  server: 91.193.58.231
-  type: vless
-  port: 2096
-  udp: true
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: free-server.techsonic.dev
-  ws-opts:
-    path: /free-server.techsonic.dev
-    headers:
-      Host: free-server.techsonic.dev
-  packet-encoding: ''
-- name: Relay_-🇺🇸US_107 |82.36Mb
-  server: 85.198.103.253
-  type: vless
-  port: 21018
-  udp: true
-  uuid: f5a0d1e9-a6da-49dc-86ed-afefa39ce3ed
-  network: tcp
-  packet-encoding: ''
-- name: Relay_-🇮🇷IR_108 |466.05Mb
-  server: pl4.lckdwn.ru
-  type: vless
-  port: 443
-  udp: true
-  uuid: 5e7ecc47-e424-4653-876e-c7515a2c82b4
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: pl4.lckdwn.ru
-  packet-encoding: ''
-- name: Pool__110 |222.46Mb
-  server: 205.237.109.216
-  type: hysteria2
-  port: 8443
-  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  auth: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  sni: grape-turbo-fr.roxa.org
-  skip-cert-verify: true
-- name: Relay_-🇸🇬SG_111 |90.25Mb
-  server: 91.193.58.250
-  type: vless
-  port: 2096
-  udp: true
-  uuid: 6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: free-server.techsonic.dev
-  ws-opts:
-    path: /free-server.techsonic.dev
-    headers:
-      Host: free-server.techsonic.dev
-  packet-encoding: ''
-- name: disney_GB_3
-  server: 104.18.40.152
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  packet-encoding: ''
-- name: _113 |250.42Mb
-  server: 194.26.229.218
-  type: vless
-  port: 2200
-  udp: true
-  uuid: af325624-e28d-44fd-a8a7-058a439d128f
-  network: ws
-  ws-opts:
-    path: /v1
-  packet-encoding: ''
-- name: disney_GB_4
-  server: 172.64.53.60
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  packet-encoding: ''
-- name: disney_GB_5
-  server: 172.64.53.240
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  packet-encoding: ''
-- name: _116 |237.70Mb
-  server: 194.26.229.207
-  type: vless
-  port: 2200
-  udp: true
-  uuid: f2d2907c-1d74-43eb-8fd2-fc55dfd92427
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: rzd.ru
-  packet-encoding: ''
-- name: disney_netflix_GB_12
-  server: 104.19.215.97
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  packet-encoding: ''
-- name: disney_TW
-  server: 220.130.75.247
-  type: vless
-  port: 10000
-  udp: true
-  uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
-  network: tcp
-  packet-encoding: ''
-- name: disney_netflix_GB_13
-  server: 172.64.53.42
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  packet-encoding: ''
-- name: Relay_-🇺🇸US_120 |206.90Mb
-  server: nl1.noesissite.ru
-  type: hysteria2
-  port: 443
-  password: 042a1881-44e4-4781-bd40-bf75164faf4f
-  auth: 042a1881-44e4-4781-bd40-bf75164faf4f
-  sni: nl1.noesissite.ru
-  skip-cert-verify: true
-- name: _121
-  server: 109.73.193.169
-  type: vless
-  port: 4100
-  udp: true
-  uuid: e1e26ef7-3291-45ac-b821-a11dcdbfdb4d
-  network: ws
-  ws-opts:
-    path: /v1
-  packet-encoding: ''
-- name: Relay_-🇩🇪DE_122 |190.23Mb
-  server: 64.188.82.152
-  type: vless
-  port: 443
-  udp: true
-  uuid: 7836b28e-8451-4596-ad3e-e3601b2335ba
-  network: ws
-  tls: true
-  client-fingerprint: safari
-  servername: cloudflare.vhub.pro
-  ws-opts:
-    path: /websocket?ed=2560
-    headers:
-      Host: cloudflare.vhub.pro
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: disney_netflix_GB_14
-  server: 172.64.52.68
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  packet-encoding: ''
-- name: Relay_-🇬🇧GB_124 |48.31Mb
-  server: 87.242.85.201
-  type: vless
-  port: 13561
-  udp: true
-  uuid: 22a0751d-4db7-4a51-ba80-d8ddf24e0b77
-  network: tcp
-  packet-encoding: ''
-- name: disney_NL |61.93Mb
-  server: 89.144.35.232
-  type: tuic
-  port: 17306
-  password: 3ebac90b-6977-47c0-bef5-b2e37554432c
-  uuid: 3ebac90b-6977-47c0-bef5-b2e37554432c
-  alpn:
-  - h3
-  sni: www.microsoft.com
-  skip-cert-verify: true
-  udp-relay-mode: native
-  congestion-controller: bbr
-- name: Relay_-🇧🇪BE_126 |26.76Mb
-  server: freedom.chenlan.top
-  type: hysteria2
-  port: 12765
-  password: STYyftThFn
-  auth: STYyftThFn
-  sni: freedom.chenlan.top
-  skip-cert-verify: true
-- name: _128
-  server: 201.24.120.68
-  type: vless
-  port: 4100
-  udp: true
-  uuid: 59525c39-e731-4c27-bc9e-6d8cef67572c
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: live.ok.ru
-  packet-encoding: ''
-- name: _129 |342.14Mb
-  server: 201.24.118.145
-  type: vless
-  port: 4100
-  udp: true
-  uuid: bee21918-0933-430c-904b-c941b92256ba
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: live.ok.ru
-  packet-encoding: ''
-- name: disney_netflix_GB_15
-  server: 172.64.147.104
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  packet-encoding: ''
-- name: disney_US |196.21Mb
-  server: 70.39.197.9
-  type: vless
-  port: 59216
-  udp: true
-  uuid: 0bcec952-a452-43ed-9468-4547b9f5dfc4
-  network: tcp
-  packet-encoding: ''
-- name: disney_GB_6
-  server: 172.64.53.215
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  packet-encoding: ''
-- name: disney_HK | 2.26Mb
-  server: 202.146.222.89
-  type: hysteria2
-  port: 443
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  auth: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/clashv8🇨🇳
-  skip-cert-verify: true
-- name: Relay_-🇫🇷FR_134 |203.96Mb
-  server: 172.67.180.173
-  type: vless
-  port: 2053
-  udp: true
-  uuid: da4747a6-be0d-4c1b-90f4-d82ec3012be2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: music1000.melobitmusic1.ir
-  ws-opts:
-    path: /
-    headers:
-      Host: music1000.melobitmusic1.ir
-  alpn:
-  - h2
-  - http/1.1
-  packet-encoding: ''
-- name: Relay_-🇺🇸US_135 | 3.53Mb
-  server: 172.67.202.17
-  type: vless
-  port: 2095
-  udp: true
-  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: nmslfangbinxing.pusytroller.gq
-  packet-encoding: ''
-- name: disney_netflix_GB_16
-  server: 104.16.72.70
-  type: vless
-  port: 443
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: hhlfy.twiladaphne.ndjp.net
-  ws-opts:
-    path: /
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-  packet-encoding: ''
-- name: Relay_-🇩🇪DE_137 |622.01Mb
-  server: 173.212.201.85
-  type: hysteria2
-  port: 443
-  password: gf1:gfhysteria2024
-  auth: gf1:gfhysteria2024
-  sni: www.docker.com
-  skip-cert-verify: true
-- name: disney_GB_7
-  server: 172.64.53.227
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  packet-encoding: ''
-- name: Pool__139 |194.13Mb
-  server: 205.237.109.219
-  type: hysteria2
-  port: 8443
-  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  auth: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  sni: grape-turbo-fr.roxa.org
-  skip-cert-verify: true
-- name: _140 |320.93Mb
-  server: 104.171.137.141
-  type: vless
-  port: 4100
-  udp: true
-  uuid: d5d72f0a-42b0-4f43-b568-9cf7fbff073d
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: live.ok.ru
-  packet-encoding: ''
-- name: disney_US |48.21Mb
-  server: 172.64.145.158
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 916e3030-6eac-418b-9402-7508ca7d6280
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: us-akile.nanniang.top
-  ws-opts:
-    path: /
-    headers:
-      Host: us-akile.nanniang.top
-  packet-encoding: ''
-- name: disney_US
-  server: 162.159.44.195
-  type: vless
-  port: 443
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: hhlfy.twiladaphne.ndjp.net
-  ws-opts:
-    path: /fp=random
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-  packet-encoding: ''
-- name: disney_netflix_GB_17
-  server: 104.19.214.97
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  packet-encoding: ''
-- name: _144 |312.59Mb
-  server: 201.51.2.6
-  type: vless
-  port: 2200
-  udp: true
-  uuid: eb135f2b-4b9e-4abb-9a89-78242613da61
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: rzd.ru
-  packet-encoding: ''
-- name: disney_netflix_FR |237.14Mb
-  server: uwu.dianawpaw36.dpdns.org
-  type: vless
-  port: 2053
-  udp: true
-  uuid: 79dafc6f-e61b-46cf-8a3c-74f6304d230c
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: uwu.dianawpaw36.dpdns.org
-  ws-opts:
-    path: /@blueKnight_net
-    headers:
-      Host: uwu.dianawpaw36.dpdns.org
-  alpn:
-  - h2
-  packet-encoding: ''
-- name: disney_netflix_US |110.59Mb
-  server: 104.18.185.26
-  type: vless
-  port: 2095
-  udp: true
-  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fangbinxingnmsl.pusytroller.gq
-  packet-encoding: ''
-- name: _149 |318.26Mb
-  server: 217.149.23.169
-  type: vless
-  port: 2200
-  udp: true
-  uuid: 4cbdaf4f-ca34-4a00-9a96-49eaa6564b42
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: rzd.ru
-  packet-encoding: ''
-- name: disney_netflix_US | 7.01Mb
-  server: 180.178.60.253
-  type: vless
-  port: 10000
-  udp: true
-  uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625
-  network: tcp
-  packet-encoding: ''
-- name: disney_netflix_GB_18
-  server: 104.18.37.228
-  type: vless
-  port: 443
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: hhlfy.twiladaphne.ndjp.net
-  ws-opts:
-    path: /fp
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-  alpn:
-  - h3
-  - h2
-  - http/1.1
-  packet-encoding: ''
-- name: Relay_-🇬🇧GB_152 |286.07Mb
-  server: 159.194.226.13
-  type: vless
-  port: 2053
-  udp: true
-  uuid: b6c29ae7-4748-4049-b642-b695c0d2c776
-  network: ws
-  ws-opts:
-    path: /
-  packet-encoding: ''
-- name: _153 |340.38Mb
-  server: 83.217.200.217
-  type: vless
-  port: 4100
-  udp: true
-  uuid: 5ab425b0-d54d-45ed-a7ae-0a5788112258
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: live.ok.ru
-  packet-encoding: ''
-- name: Pool__154 |276.68Mb
-  server: 86.107.178.71
-  type: hysteria2
-  port: 8443
-  password: Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s
-  auth: Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s
-  sni: grape-zet-turbo-nl.yyuyy.com
-  skip-cert-verify: true
-- name: Relay_-🇩🇪DE_155 |134.35Mb
-  server: fr186.mechvpn.online
-  type: vless
-  port: 443
-  udp: true
-  uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-  network: tcp
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  packet-encoding: ''
-- name: Relay_-🇺🇸US_156 |59.89Mb
-  server: de48.mechvpn.online
-  type: hysteria2
-  port: 443
-  password: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-  auth: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-  alpn:
-  - h3
-  sni: de48.mechvpn.online
-  skip-cert-verify: true
-- name: Relay_-🇫🇷FR_157 |176.64Mb
-  server: fr15.mechvpn.online
-  type: vless
-  port: 443
-  udp: true
-  uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-  network: tcp
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  packet-encoding: ''
-- name: disney_netflix_FR |212.27Mb
-  server: fr199.mechvpn.online
-  type: vless
-  port: 443
-  udp: true
-  uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-  network: tcp
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  packet-encoding: ''
-- name: _159 |506.45Mb
-  server: 159.223.157.129
-  type: hysteria2
-  port: 8443
-  password: suAmQS9LlInNq4Wumh-FUF4GGlpgmG_g
-  auth: suAmQS9LlInNq4Wumh-FUF4GGlpgmG_g
-  skip-cert-verify: true
-- name: disney_netflix_US |169.64Mb
-  server: 8.47.69.0
-  type: vless
-  port: 2095
-  udp: true
-  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fuckingfangbinxing.pusytroller.cf
-  packet-encoding: ''
-- name: disney_netflix_GB_19
-  server: 104.19.214.98
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-  packet-encoding: ''
-- name: Relay_-🇩🇪DE_164 |59.10Mb
-  server: de151.mechvpn.online
-  type: vless
-  port: 443
-  udp: true
-  uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-  network: tcp
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  packet-encoding: ''
-- name: _165
-  server: 194.26.229.209
-  type: vless
-  port: 4100
-  udp: true
-  uuid: 9b4ba157-f60b-4a5b-b326-4d561eb826d4
-  network: ws
-  ws-opts:
-    path: /v1
-  packet-encoding: ''
-- name: _166 |180.24Mb
-  server: 62.113.103.10
-  type: vless
-  port: 4100
-  udp: true
-  uuid: ea535a23-447f-4501-918c-de8a8b376bec
-  network: ws
-  ws-opts:
-    path: /v1
-  packet-encoding: ''
-- name: disney_netflix_DE |439.47Mb
-  server: tsarlive.dpdns.org
-  type: vless
-  port: 443
-  udp: true
-  uuid: e4dc8a93-ddfc-4f70-b97f-bbc04b0b6c7b
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: tsarlive.dpdns.org
-  ws-opts:
-    path: /tsar-tun
-    headers:
-      Host: tsarlive.dpdns.org
-  alpn:
-  - h2
-  - http/1.1
-  packet-encoding: ''
-- name: Relay_-🇰🇼KW_168 |74.61Mb
-  server: 172.67.69.106
-  type: vless
-  port: 443
-  udp: true
-  uuid: 1bc380b1-cff7-446f-b13f-5c0ad29fc75a
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: zero.csmaster.ggff.net
-  ws-opts:
-    path: /
-    headers:
-      Host: zero.csmaster.ggff.net
-  packet-encoding: xudp
-- name: disney_netflix_RO |12.68Mb
-  server: ytryurdj64bbb.localip.ir
-  type: vless
-  port: 443
-  udp: true
-  uuid: 03707fb7-0990-440f-88f6-b0e0f7242a38
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: ro-3.ariyuz.org
-  ws-opts:
-    path: /
-    headers:
-      Host: ro-3.ariyuz.org
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: disney_netflix_FR |858.43Mb
-  server: fr213.mechvpn.online
-  type: vless
-  port: 443
-  udp: true
-  uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-  network: tcp
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: qq
-  packet-encoding: ''
-- name: disney_BG |59.10Mb
-  server: 194.48.250.10
-  type: hysteria2
-  port: 9443
-  password: b8f1b61e-d5c4-4765-866d-ece1fc8e590b
-  auth: b8f1b61e-d5c4-4765-866d-ece1fc8e590b
-  sni: onecloudstream.com
-  skip-cert-verify: true
-- name: Relay_-🇮🇷IR_172 |151.98Mb
-  server: fr.vpn.legendaah.xyz
-  type: hysteria2
-  port: 36723
-  password: Krab9Hyst2_Rk7pQ2xL
-  auth: Krab9Hyst2_Rk7pQ2xL
-  sni: www.cloudflare.com
-  skip-cert-verify: true
-- name: Relay_-🇬🇧GB_173 |60.98Mb
-  server: 104.165.205.77
-  type: hysteria2
-  port: 8443
-  password: b8f1b61e-d5c4-4765-866d-ece1fc8e590b
-  auth: b8f1b61e-d5c4-4765-866d-ece1fc8e590b
-  sni: speedtestmark.com
-  skip-cert-verify: true
-- name: Relay_-🇺🇸US_176
-  server: vpn-us-006.fastervpn.world
-  type: hysteria2
-  port: 443
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  auth: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-us-006.fastervpn.world
-  skip-cert-verify: true
-- name: Relay_-🇸🇬SG_177 |383.56Mb
-  server: sg1.xiaoliyu.cyou
-  type: hysteria2
-  port: 1935
-  password: 1427eb10-7529-4d38-a6a2-01b337868b37
-  auth: 1427eb10-7529-4d38-a6a2-01b337868b37
-  sni: sg1.xiaoliyu.cyou
-  skip-cert-verify: true
-- name: Relay_-🇸🇬SG_178 |347.43Mb
-  server: sg3.xiaoliyu.cyou
-  type: hysteria2
-  port: 4466
-  password: 6a3fe9d0-0d68-4f29-ae99-5771d4217a45
-  auth: 6a3fe9d0-0d68-4f29-ae99-5771d4217a45
-  sni: sg3.xiaoliyu.cyou
-  skip-cert-verify: true
-- name: _181 |290.87Mb
-  server: 200.165.228.47
-  type: vless
-  port: 4100
-  udp: true
-  uuid: 6620ef58-9c62-43fe-9596-ff862b200958
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: live.ok.ru
-  packet-encoding: ''
-- name: _182 |44.85Mb
-  server: 2.27.23.44
-  type: hysteria2
-  port: 43327
-  password: bQzzrPgfj971MZcmKJNQCBC2p3TytvUV
-  auth: bQzzrPgfj971MZcmKJNQCBC2p3TytvUV
-  sni: gate-v1.not-a-projects.xyz
-  skip-cert-verify: true
-- name: disney_DE |877.41Mb
-  server: mg2.mangshe.xyz
-  type: hysteria2
-  port: 2056
-  password: 22d891f5-ad85-4824-b0b8-e30cf3d37eb5
-  auth: 22d891f5-ad85-4824-b0b8-e30cf3d37eb5
-  sni: mg2.mangshe.xyz
-  skip-cert-verify: true
-- name: Relay_-🇷🇺RU_185
-  server: els1.mangshe.xyz
-  type: hysteria2
-  port: 2056
-  password: 22d891f5-ad85-4824-b0b8-e30cf3d37eb5
-  auth: 22d891f5-ad85-4824-b0b8-e30cf3d37eb5
-  sni: els1.mangshe.xyz
-  skip-cert-verify: true
-- name: _186
-  server: 194.26.229.210
-  type: vless
-  port: 4100
-  udp: true
-  uuid: 20124617-eba7-4b34-87ad-fcf700ea7dff
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: live.ok.ru
-  packet-encoding: ''
-- name: Relay_-🇰🇼KW_187 |39.63Mb
-  server: 16.176.42.97
-  type: vless
-  port: 443
-  uuid: 1bc380b1-cff7-446f-b13f-5c0ad29fc75a
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: zero.csmaster.ggff.net
-  ws-opts:
-    path: /
-    headers:
-      Host: zero.csmaster.ggff.net
-  packet-encoding: ''
-- name: Relay_-🇬🇧GB_188 |65.42Mb
-  server: neth.lckdwn.ru
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 0db4a87c-c280-4a5f-ae97-903768c5ef4c
-  network: tcp
-  tls: true
-  client-fingerprint: chrome
-  servername: neth.lckdwn.ru
-  packet-encoding: ''
-- name: Pool__189 |474.70Mb
-  server: 85.204.107.164
-  type: hysteria2
-  port: 8443
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-  auth: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-  sni: grape-zet-ro-turbo.bumbleshrimp.com
-  skip-cert-verify: true
-- name: _190 |357.33Mb
-  server: 168.222.140.236
-  type: vless
-  port: 4100
-  udp: true
-  uuid: 155e8dd4-a559-407a-9ea8-13a5e829f066
-  network: ws
-  ws-opts:
-    path: /v1
-  packet-encoding: ''
-- name: Relay_-🇫🇷FR_192 | 2.02Mb
-  server: 172.64.80.1
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 05cf7b0e-ad1a-42bb-80e7-73ae45b1019a
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: france.io-com-de-dev.org
-  ws-opts:
-    path: /api/voip/updates/static/x9i2
-    headers:
-      Host: france.io-com-de-dev.org
-  alpn:
-  - http/1.1
-  packet-encoding: ''
-- name: disney_netflix_GB |338.41Mb
-  server: www.speedtest.net
-  type: vless
-  port: 8443
-  udp: true
-  uuid: b1e6a8df-effc-4b70-9132-4dca98085420
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: free-irancell.warzonmob.ir
-  ws-opts:
-    path: /
-    headers:
-      Host: free-irancell.warzonmob.ir
-  packet-encoding: ''
-- name: Relay_-🇹🇭TH_195
-  server: 108.138.26.70
-  type: vless
-  port: 443
-  udp: true
-  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
-  network: ws
-  tls: true
-  client-fingerprint: firefox
-  servername: d1yxsk0zprgivr.cloudfront.net
-  ws-opts:
-    path: /
-    headers:
-      Host: d1yxsk0zprgivr.cloudfront.net
-  packet-encoding: ''
-- name: Relay_-🇹🇭TH_196
-  server: 18.239.83.52
-  type: vless
-  port: 443
-  udp: true
-  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: d1yxsk0zprgivr.cloudfront.net
-  ws-opts:
-    path: /
-    headers:
-      Host: d1yxsk0zprgivr.cloudfront.net
-  packet-encoding: ''
-- name: Pool__197 |357.09Mb
-  server: 205.237.109.218
-  type: hysteria2
-  port: 8443
-  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  auth: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  sni: grape-turbo-fr.roxa.org
-  skip-cert-verify: true
-- name: _198 |339.74Mb
-  server: 209.74.81.28
-  type: hysteria2
-  port: 8443
-  password: b7c9e2f1-4d83-42a1-9e5f-sg2026proxy
-  auth: b7c9e2f1-4d83-42a1-9e5f-sg2026proxy
-  sni: 209.74.81.28
-  skip-cert-verify: true
-- name: Relay_-🇺🇸US_199 |62.72Mb
-  server: us4.xiaoliyu.cyou
-  type: hysteria2
-  port: 4433
-  password: 1427eb10-7529-4d38-a6a2-01b337868b37
-  auth: 1427eb10-7529-4d38-a6a2-01b337868b37
-  sni: us4.xiaoliyu.cyou
-  skip-cert-verify: true
-- name: Relay_-🇬🇧GB_200 |325.09Mb
-  server: gorbachev-new-th.kvnfreetest.uk
-  type: hysteria2
-  port: 55443
-  password: 083417772bc618cd61f0cca23dd91680
-  auth: 083417772bc618cd61f0cca23dd91680
-  sni: gorbachev-new-th.kvnfreetest.uk
-  skip-cert-verify: true
-- name: _201 |307.16Mb
-  server: 194.26.229.211
-  type: vless
-  port: 4100
-  udp: true
-  uuid: 1a2f7607-b36a-4996-b7a2-72359123c446
-  network: ws
-  ws-opts:
-    path: /v1
-    headers:
-      Host: live.ok.ru
-  packet-encoding: ''
-- name: disney_GB_8
-  server: 172.64.145.93
-  type: vless
-  port: 2087
-  udp: true
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: fx3h2kf8xn.fx6hsv0.ccwu.cc
-  ws-opts:
-    path: /
-    headers:
-      Host: fx3h2kf8xn.fx6hsv0.ccwu.cc
-  packet-encoding: ''
-- name: Relay_-🇫🇷FR_203 | 2.00Mb
-  server: cf.130209.xyz
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 65c56e1f-5c41-40bc-b0b5-9346772476ca
-  network: ws
-  tls: true
-  client-fingerprint: edge
-  servername: hongkong.11459178.xyz
-  ws-opts:
-    path: /cdn/packages/runtime-core.tar.gz
-    headers:
-      Host: hongkong.11459178.xyz
-  packet-encoding: ''
-- name: _204 |233.73Mb
-  server: 86.53.105.117
-  type: tuic
-  port: 33014
-  password: dbab9df7-5c0a-4726-8574-11e34972b67d
-  uuid: dbab9df7-5c0a-4726-8574-11e34972b67d
-  alpn:
-  - h3
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp-relay-mode: native
-  congestion-controller: bbr
-- name: _205 |349.18Mb
-  server: 104.171.136.172
-  type: vless
-  port: 4100
-  udp: true
-  uuid: 106b0505-da24-4ae4-b22c-302ab814f6f4
-  network: ws
-  ws-opts:
-    path: /v1
-  packet-encoding: ''
-- name: _207 |32.00Mb
-  server: 92.4.68.18
-  type: hysteria2
-  port: 12694
-  password: 4e756809
-  auth: 4e756809
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: disney_GB_9
-  server: 104.18.34.124
-  type: vless
-  port: 443
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: hhlfy.twiladaphne.ndjp.net
-  ws-opts:
-    path: /
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-  packet-encoding: ''
-- name: disney_DK |799.39Mb
-  server: dk86.mechvpn.online
-  type: hysteria2
-  port: 443
-  password: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-  auth: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-  alpn:
-  - h3
-  sni: dk86.mechvpn.online
-  skip-cert-verify: true
-- name: Relay_-🇬🇧GB_210 |59.72Mb
-  server: 104.165.205.239
-  type: hysteria2
-  port: 9443
-  password: b8f1b61e-d5c4-4765-866d-ece1fc8e590b
-  auth: b8f1b61e-d5c4-4765-866d-ece1fc8e590b
-  sni: onecloudstream.com
-  skip-cert-verify: true
-- name: Relay_-🇱🇻LV_211 |61.02Mb
-  server: 104.165.205.64
-  type: hysteria2
-  port: 8443
-  password: b8f1b61e-d5c4-4765-866d-ece1fc8e590b
-  auth: b8f1b61e-d5c4-4765-866d-ece1fc8e590b
-  sni: speedtestmark.com
-  skip-cert-verify: true
-- name: Relay_-🇬🇧GB_212 |60.92Mb
-  server: 104.165.205.65
-  type: hysteria2
-  port: 8443
-  password: b8f1b61e-d5c4-4765-866d-ece1fc8e590b
-  auth: b8f1b61e-d5c4-4765-866d-ece1fc8e590b
-  sni: speedtestmark.com
-  skip-cert-verify: true
-- name: Relay_-🇬🇧GB_215 |60.92Mb
-  server: 104.165.205.226
-  type: hysteria2
-  port: 8443
-  password: b8f1b61e-d5c4-4765-866d-ece1fc8e590b
-  auth: b8f1b61e-d5c4-4765-866d-ece1fc8e590b
-  sni: speedtestmark.com
-  skip-cert-verify: true
-- name: Relay_-🇫🇷FR_216 |11.04Mb
-  server: xmm5.130209.xyz
-  type: vless
-  port: 8443
-  udp: true
-  uuid: 65c56e1f-5c41-40bc-b0b5-9346772476ca
-  network: ws
-  tls: true
-  client-fingerprint: edge
-  servername: hongkong.11459178.xyz
-  ws-opts:
-    path: /cdn/packages/runtime-core.tar.gz
-    headers:
-      Host: hongkong.11459178.xyz
-  packet-encoding: ''
-- name: disney_netflix_GB_20
-  server: 159.112.235.52
-  type: vless
-  port: 443
-  udp: true
-  uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: josni.hoyes.cloudns.ch
-  ws-opts:
-    path: musiclovers85?ed=512
-    headers:
-      Host: josni.hoyes.cloudns.ch
-  packet-encoding: ''
-- name: Relay_-🇹🇭TH_218
-  server: 18.244.214.36
-  type: vless
-  port: 443
-  udp: true
-  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: d1yxsk0zprgivr.cloudfront.net
-  ws-opts:
-    path: /
-    headers:
-      Host: d1yxsk0zprgivr.cloudfront.net
-  packet-encoding: ''
-- name: _219 |246.83Mb
-  server: 86.53.105.117
-  type: hysteria2
-  port: 33015
-  password: dbab9df7-5c0a-4726-8574-11e34972b67d
-  auth: dbab9df7-5c0a-4726-8574-11e34972b67d
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: disney_GB_10
-  server: 104.16.251.148
-  type: vless
-  port: 443
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  network: ws
-  tls: true
-  client-fingerprint: random
-  servername: hhlfy.twiladaphne.ndjp.net
-  ws-opts:
-    path: /
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-  packet-encoding: ''
-- name: Relay_-🇹🇭TH_221
-  server: 3.170.185.91
-  type: vless
-  port: 443
-  udp: true
-  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
-  network: ws
-  tls: true
-  client-fingerprint: chrome
-  servername: d1yxsk0zprgivr.cloudfront.net
-  ws-opts:
-    path: /
-    headers:
-      Host: d1yxsk0zprgivr.cloudfront.net
-  packet-encoding: ''
-- name: Relay_-🇺🇸US_223 |259.87Mb
-  server: autodiscover.fuzzyaytor.cyou
-  type: ss
-  port: 42982
-  udp: true
-  password: yTEXWB6XBHyv9SfQJzCSRWCnRYutFdUXg1wbcbutxPwZE6Uxcurka3GkoatgEdX483XZSHeJp3jXcTShLCRM8rPgMF3vYNfS
-  cipher: chacha20-ietf-poly1305
-- name: netflix_PL |333.03Mb
-  server: 54.36.174.140
-  type: ss
-  port: 443
-  udp: true
-  password: ytw2awn
-  cipher: chacha20-ietf-poly1305
-- name: _225 |314.47Mb
-  server: 51.222.12.127
-  type: ss
-  port: 445
-  udp: true
-  password: zDNVedRFPQexG9v
-  cipher: aes-256-gcm
-- name: disney_netflix_US |318.12Mb
-  server: 18.219.164.184
-  type: ss
-  port: 443
-  udp: true
-  password: amazonskr05
-  cipher: aes-256-cfb
-- name: netflix_CA |260.59Mb
-  server: 142.4.216.225
-  type: ss
-  port: 443
-  udp: true
-  password: ytw2awn
-  cipher: chacha20-ietf-poly1305
-- name: netflix_PL |617.49Mb
-  server: 64.176.73.160
-  type: ss
-  port: 8388
-  udp: true
-  password: VJtsgllDDJfNmaTe
-  cipher: chacha20-ietf-poly1305
-- name: _229 |34.11Mb
-  server: 139.84.247.164
-  type: ss
-  port: 8388
-  udp: true
-  password: tfAcRikawhNoZAhu
-  cipher: chacha20-ietf-poly1305
-- name: netflix_NL |80.74Mb
-  server: 82.38.31.218
-  type: ss
-  port: 8080
-  udp: true
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  cipher: chacha20-ietf-poly1305
-- name: _231 |12.03Mb
-  server: 45.32.16.53
-  type: ss
-  port: 8388
-  udp: true
-  password: uTBjZhDmOMwBVAJI
-  cipher: chacha20-ietf-poly1305
-- name: disney_KR
-  server: 27.255.82.134
-  type: ss
-  port: 2078
-  password: qwerREWQ@@
-  cipher: aes-256-cfb
-- name: _233 |135.49Mb
-  server: 82.38.31.36
-  type: ss
-  port: 443
-  udp: true
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  cipher: chacha20-ietf-poly1305
-- name: netflix_NL |196.88Mb
-  server: 193.29.139.223
-  type: ss
-  port: 8080
-  udp: true
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  cipher: chacha20-ietf-poly1305
-- name: netflix_NL |222.13Mb
-  server: 193.29.139.147
-  type: ss
-  port: 8080
-  udp: true
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  cipher: chacha20-ietf-poly1305
-- name: disney_KR_1
-  server: moved-meerkat.rooster465.autos
-  type: trojan
-  port: 443
-  password: ND91608427
-  sni: moved-meerkat.rooster465.autos
-  skip-cert-verify: true
-- name: disney_FR |42.34Mb
-  server: 84.21.172.81
-  type: trojan
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  network: ws
-- name: Relay_-🇯🇵JP_238 |13.17Mb
-  server: awaited-lark.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: awaited-lark.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇯🇵JP_239 | 9.54Mb
-  server: eager-camel.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: eager-camel.rooster465.autos
-  skip-cert-verify: true
-- name: disney_FR |120.19Mb
-  server: 104.17.121.43
-  type: trojan
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  network: ws
-- name: disney_netflix_FR |200.81Mb
-  server: 45.130.125.126
-  type: trojan
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  network: ws
-- name: disney_netflix_FR |208.91Mb
-  server: 45.80.111.7
-  type: trojan
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  network: ws
-- name: Relay_-🇯🇵JP_243 |12.36Mb
-  server: maximum-elk.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: maximum-elk.rooster465.autos
-  skip-cert-verify: true
-- name: disney_KR_2
-  server: glorious-lark.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: glorious-lark.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇯🇵JP_245 | 8.31Mb
-  server: grateful-crawdad.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: grateful-crawdad.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇯🇵JP_246 |11.08Mb
-  server: climbing-frog.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: climbing-frog.rooster465.autos
-  skip-cert-verify: true
-- name: disney_KR_3
-  server: saved-ghoul.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: saved-ghoul.rooster465.autos
-  skip-cert-verify: true
-- name: disney_KR_4
-  server: gorgeous-hookworm.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: gorgeous-hookworm.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇯🇵JP_250 | 6.66Mb
-  server: on-roughy.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: on-roughy.rooster465.autos
-  skip-cert-verify: true
-- name: disney_KR_5
-  server: eager-platypus.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: eager-platypus.rooster465.autos
-  skip-cert-verify: true
-- name: disney_KR_6
-  server: oriented-pegasus.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: oriented-pegasus.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇯🇵JP_253 |12.27Mb
-  server: harmless-imp.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: harmless-imp.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇯🇵JP_254 |10.90Mb
-  server: relevant-cicada.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: relevant-cicada.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇯🇵JP_255 | 9.83Mb
-  server: whole-grub.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: whole-grub.rooster465.autos
-  skip-cert-verify: true
-- name: disney_FR |278.93Mb
-  server: 104.18.32.47
-  type: trojan
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  network: ws
-- name: Relay_-🇺🇸US_257 |36.74Mb
-  server: liked-serval.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: liked-serval.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇺🇸US_258 | 7.39Mb
-  server: intimate-koi.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: intimate-koi.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇯🇵JP_259 |21.59Mb
-  server: charmed-fly.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: charmed-fly.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇯🇵JP_260 |12.53Mb
-  server: new-antelope.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: new-antelope.rooster465.autos
-  skip-cert-verify: true
-- name: netflix_NL |347.32Mb
-  server: emerging-weevil.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  skip-cert-verify: true
-- name: Relay_-🇺🇸US_262 |37.76Mb
-  server: dear-hermit.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: dear-hermit.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇯🇵JP_267 |21.04Mb
-  server: glowing-iguana.rooster465.autos
-  type: trojan
-  port: 443
-  password: AE62539071
-  skip-cert-verify: true
-- name: Relay_-🇯🇵JP_268 |21.40Mb
-  server: helpful-possum.rooster465.autos
-  type: trojan
-  port: 443
-  password: AE62539071
-  skip-cert-verify: true
-- name: Relay_-🇯🇵JP_270 |20.38Mb
-  server: current-barnacle.rooster465.autos
-  type: trojan
-  port: 443
-  password: AE62539071
-  skip-cert-verify: true
-- name: netflix_PL |348.43Mb
-  server: game-firefly.rooster465.autos
-  type: trojan
-  port: 443
-  password: AE62539071
-  skip-cert-verify: true
-- name: _272 | 5.61Mb
-  server: 13.208.169.24
-  type: trojan
-  port: 12308
-  udp: true
-  password: a703fe02-9bdf-4124-a812-0284d0acdf36
-  sni: jp03.ulifeai.com
-  skip-cert-verify: true
-- name: netflix_IE |87.12Mb
-  server: kind-stork.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: kind-stork.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇮🇪IE_274 |86.01Mb
-  server: funny-hen.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: funny-hen.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇩🇪DE_275 |732.53Mb
-  server: moved-bluegill.rooster465.autos
-  type: trojan
-  port: 443
-  password: AE62539071
-  sni: moved-bluegill.rooster465.autos
-  skip-cert-verify: true
-- name: disney_netflix_FR |288.00Mb
-  server: correct-pony.rooster465.autos
-  type: trojan
-  port: 443
-  password: FH72359861
-  skip-cert-verify: true
-- name: disney_FR |276.33Mb
-  server: 104.16.71.213
-  type: trojan
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  network: ws
-- name: Relay_-🇯🇵JP_278 |12.13Mb
-  server: inviting-burro.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: inviting-burro.rooster465.autos
-  skip-cert-verify: true
-- name: disney_NL |212.71Mb
-  server: pro-crane.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: FH72359861
-  skip-cert-verify: true
-- name: disney_KR_7
-  server: 52.78.13.238
-  type: trojan
-  port: 443
-  udp: true
-  password: ND91608427
-  sni: upward-puma.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇯🇵JP_281 | 7.01Mb
-  server: engaged-ram.rooster465.autos
-  type: trojan
-  port: 443
-  password: AE62539071
-  skip-cert-verify: true
-- name: Relay_-🇭🇰HK_282 |21.40Mb
-  server: strong-haddock.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: AE62539071
-  sni: strong-haddock.rooster465.autos
-  skip-cert-verify: true
-- name: disney_FR |34.37Mb
-  server: 168.100.9.178
-  type: trojan
-  port: 2053
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  network: ws
-- name: disney_HK |24.29Mb
-  server: 2c.fast9988.com
-  type: trojan
-  port: 50887
-  password: 6ec301428255a78a1d826988d86cc87e
-  sni: www.nintendogames.net
-  skip-cert-verify: true
-- name: disney_FR |619.07Mb
-  server: 104.17.121.9
-  type: trojan
-  port: 443
-  udp: true
-  password: humanity
-  alpn:
-  - http/1.1
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  network: ws
-- name: disney_netflix_FR |388.86Mb
-  server: 185.18.250.245
-  type: trojan
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  network: ws
-- name: disney_netflix_FR |244.69Mb
-  server: 45.130.125.112
-  type: trojan
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  network: ws
-- name: Relay_-🇭🇰HK_288 |23.44Mb
-  server: ace-starling.rooster465.autos
-  type: trojan
-  port: 443
-  password: ND91608427
-  sni: ace-starling.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇺🇸US_289 |37.21Mb
-  server: fleet-bonefish.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: ND91608427
-  sni: fleet-bonefish.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇺🇸US_290 |22.24Mb
-  server: pet-ghost.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: ND91608427
-  sni: pet-ghost.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇭🇰HK_291 |24.00Mb
-  server: upright-hamster.rooster465.autos
-  type: trojan
-  port: 443
-  password: ND91608427
-  sni: upright-hamster.rooster465.autos
-  skip-cert-verify: true
-- name: disney_KR_8
-  server: chief-bluegill.rooster465.autos
-  type: trojan
-  port: 443
-  password: ND91608427
-  sni: chief-bluegill.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇯🇵JP_293 |17.90Mb
-  server: tough-robin.rooster465.autos
-  type: trojan
-  port: 443
-  password: ND91608427
-  sni: tough-robin.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇯🇵JP_294 |10.79Mb
-  server: casual-bee.rooster465.autos
-  type: trojan
-  port: 443
-  password: ND91608427
-  sni: casual-bee.rooster465.autos
-  skip-cert-verify: true
-- name: _295 |58.66Mb
-  server: 139.59.238.97
-  type: trojan
-  port: 50573
-  udp: true
-  password: pvZE3UfT0ziK1omVLlsjINBqeqqwab1M
-  skip-cert-verify: true
-- name: disney_KR_9
-  server: saving-octopus.rooster465.autos
-  type: trojan
-  port: 443
-  password: ND91608427
-  sni: saving-octopus.rooster465.autos
-  skip-cert-verify: true
-- name: disney_KR_10
-  server: definite-malamute.rooster465.autos
-  type: trojan
-  port: 443
-  password: ND91608427
-  sni: definite-malamute.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇯🇵JP_299 |12.04Mb
-  server: upright-impala.rooster465.autos
-  type: trojan
-  port: 443
-  password: ND91608427
-  sni: upright-impala.rooster465.autos
-  skip-cert-verify: true
-- name: disney_netflix_FR |135.05Mb
-  server: fancy-skink.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: ND91608427
-  sni: fancy-skink.rooster465.autos
-  skip-cert-verify: true
-- name: Relay_-🇸🇬SG_301 |95.42Mb
-  server: eminent-panther.rooster465.autos
-  type: trojan
-  port: 443
-  password: FH72359861
-  skip-cert-verify: true
-- name: Relay_-🇸🇬SG_302 |98.55Mb
-  server: bold-eagle.rooster465.autos
-  type: trojan
-  port: 443
-  udp: true
-  password: FH72359861
-  skip-cert-verify: true
-- name: disney_FR |192.70Mb
-  server: 212.183.88.136
-  type: trojan
-  port: 443
-  udp: true
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  network: ws
-- name: Relay_-🇬🇧GB_305 |345.87Mb
-  server: relaxed-gull.rooster465.autos
-  type: trojan
-  port: 443
-  password: ND91608427
-  sni: relaxed-gull.rooster465.autos
-  skip-cert-verify: true
-- name: netflix_PL |349.35Mb
-  server: discrete-basilisk.rooster465.autos
-  type: trojan
-  port: 443
-  password: ND91608427
-  sni: discrete-basilisk.rooster465.autos
-  skip-cert-verify: true
-- name: disney_DE | 3.85Mb
-  server: 5.83.129.90
-  type: hysteria
-  country: 🇩🇪DE
-  port: 54177
-  udp: true
-  auth_str: dongtaiwang.com
-  auth-str: dongtaiwang.com
-  alpn:
-  - h3
-  sni: apple.com
-  skip-cert-verify: true
-  up: '500'
-  down: '1000'
-  protocol: udp
-- name: 🇩🇪DE_308
-  server: 5.83.129.153
-  type: hysteria
-  country: 🇩🇪DE
-  port: 20088
-  udp: true
-  auth_str: dongtaiwang.com
-  auth-str: dongtaiwang.com
-  alpn:
-  - h3
-  sni: apple.com
-  skip-cert-verify: true
-  up: '500'
-  down: '1000'
-  protocol: udp
-- name: netflix_NL |174.59Mb
-  server: 82.38.31.36
-  type: ss
-  country: 🇬🇧GB
-  port: 8080
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  cipher: chacha20-ietf-poly1305
-- name: disney_KR_11
-  server: upward-puma.rooster465.autos
-  type: trojan
-  country: 🇰🇷KR
-  port: 443
-  udp: true
-  password: ND91608427
-  sni: upward-puma.rooster465.autos
-  skip-cert-verify: true
-- name: Shadowsocks
-  type: socks5
-  server: 127.0.0.1
-  port: 1080
-- name: 剩余流量：799.57 GB
+- name: 剩余流量：903.17 GB
   type: vless
   server: cfyes.ziyoufly.xyz
   port: 443
-  uuid: 5fce1c98-0192-4d03-a8b4-9ba8a8eef474
+  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
   udp: true
   tls: true
   skip-cert-verify: false
@@ -3903,7 +955,7 @@ proxies:
   type: vless
   server: aws-jp01.ziyoufly.xyz
   port: 55555
-  uuid: 5fce1c98-0192-4d03-a8b4-9ba8a8eef474
+  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -3917,7 +969,7 @@ proxies:
   type: vless
   server: aws-jp02.ziyoufly.xyz
   port: 55555
-  uuid: 5fce1c98-0192-4d03-a8b4-9ba8a8eef474
+  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -3931,7 +983,7 @@ proxies:
   type: vless
   server: ak-jp01.ziyoufly.xyz
   port: 55555
-  uuid: 5fce1c98-0192-4d03-a8b4-9ba8a8eef474
+  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -3945,7 +997,7 @@ proxies:
   type: vless
   server: uh-jp01.ziyoufly.xyz
   port: 55555
-  uuid: 5fce1c98-0192-4d03-a8b4-9ba8a8eef474
+  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -3959,7 +1011,7 @@ proxies:
   type: vless
   server: uh-sg01.ziyoufly.xyz
   port: 55555
-  uuid: 5fce1c98-0192-4d03-a8b4-9ba8a8eef474
+  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -3973,7 +1025,7 @@ proxies:
   type: vless
   server: ak-tw01.ziyoufly.xyz
   port: 55555
-  uuid: 5fce1c98-0192-4d03-a8b4-9ba8a8eef474
+  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -3987,7 +1039,7 @@ proxies:
   type: vless
   server: ak-hk01.ziyoufly.xyz
   port: 55555
-  uuid: 5fce1c98-0192-4d03-a8b4-9ba8a8eef474
+  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -4001,7 +1053,7 @@ proxies:
   type: vless
   server: ak-us01.ziyoufly.xyz
   port: 55555
-  uuid: 5fce1c98-0192-4d03-a8b4-9ba8a8eef474
+  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -4015,7 +1067,7 @@ proxies:
   type: vless
   server: uh-us01.ziyoufly.xyz
   port: 55555
-  uuid: 5fce1c98-0192-4d03-a8b4-9ba8a8eef474
+  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -4029,7 +1081,7 @@ proxies:
   type: vless
   server: uh-tr01.ziyoufly.xyz
   port: 55555
-  uuid: 5fce1c98-0192-4d03-a8b4-9ba8a8eef474
+  uuid: fae482df-d9f1-491f-9f9e-1ee522d4560c
   udp: true
   flow: xtls-rprx-vision
   tls: true
@@ -4039,103 +1091,2206 @@ proxies:
   reality-opts:
     public-key: 1XQ60qYOfBZJpcilNV9Fu7OSpuO5_6-zrNZIYhB_YU4
     short-id: af317506
-- name: 🇺🇦 UA
-  type: hysteria2
-  server: ua.143259.xyz
-  port: 24032
-  password: 5ff4455a-e408-4d24-84e3-43515b3194b6
+- name: 剩余流量：129.85 GB
+  type: vless
+  server: 108.162.198.165
+  port: 443
+  uuid: df2b3522-86fe-4d9e-bcb6-06e91514aae8
+  alterId: 0
+  cipher: auto
   udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: www.apple.com
+  reality-opts:
+    public-key: hMJwKWfRFhROd7JeY2K9_WZga2kwJaZ6FNN7wwEe0Uw
+    short-id: 98f250c88f
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇸🇬 SG 官方优选 63ms
+  server: 162.159.0.103
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
   skip-cert-verify: true
-  sni: ua.143259.xyz
-  tls-fingerprint: cfd300ecbdad5a47ddf8e09f5c992583bcc907626a132bf17be2657f7024b558
-- name: 🇹🇼 TW
-  type: hysteria2
-  server: tw.143259.xyz
-  port: 45672
-  password: 375f8445-3178-467a-b478-e1509435ff38
-  udp: true
-  sni: tw.143259.xyz
-  tls-fingerprint: bde846d58d33b7a338cbbde260fb8b22ef0b5e9be6d27bed821ae056fbf492cc
-- name: 🇯🇵 JP
-  type: hysteria2
-  server: jp.143259.xyz
-  port: 64707
-  password: e78f0d09-ea74-4832-9b48-6ff4e9d57ff4
-  udp: true
-  sni: jp.143259.xyz
-  tls-fingerprint: 4417a7ca4d7443320959934110f2fff72fbd88a73fb282aec33d18f7dfe21feb
-- name: 🇺🇸 US
-  type: hysteria2
-  server: us.143259.xyz
-  port: 15885
-  password: 8f6c766c-51c6-4ea8-9cd0-20fc36336e0d
-  udp: true
-  sni: us.143259.xyz
-  tls-fingerprint: edd56d80d8ab29e3a16f58008d4e98f25b493861eaf4dcc66e8344a55863adcf
-- name: 🇭🇰 HK
-  type: hysteria2
-  server: hk.143259.xyz
-  port: 18967
-  password: 1dfe0fc5-9bf2-4a00-bfc7-6403c3919e04
-  udp: true
-  sni: hk.143259.xyz
-  tls-fingerprint: 60134ee0ee2fed6e65ba5015193a58711f29d310a012ce8d29cf9bbeeeea7168
-- name: 🇩🇪 DE
-  type: hysteria2
-  server: 91.238.105.190
-  port: 24032
-  password: c115ae9c-1e1f-4957-89d2-93ea1ebf543e
-  udp: true
-  sni: de.143259.xyz
-  tls-fingerprint: f04b60a1f8ce5261e59b62a9615dc77e4df5b82ff4b62f18a907c3a600af1095
-- name: 🇩🇪 DE4837
-  type: hysteria2
-  server: 85.121.52.123
-  port: 12929
-  password: e9d24f02-9da4-4cec-b02b-30810ca23424
-  udp: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 67ms
+  server: 172.64.228.154
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
   skip-cert-verify: true
-  sni: 4837.143259.xyz
-- name: 🇹🇼 台湾
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 68ms
+  server: 198.41.223.30
+  port: 8443
   type: vless
-  server: tw.143259.xyz
-  port: 46818
-  uuid: cfb322d2-3759-4484-8ec6-51adc073672f
-  udp: true
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
   tls: true
-  skip-cert-verify: false
-  servername: tw.143259.xyz
-  network: tcp
-- name: 🇭🇰 香港
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 69ms
+  server: 173.245.59.180
+  port: 8443
   type: vless
-  server: hk.143259.xyz
-  port: 36283
-  uuid: b233604b-79df-461c-9306-fa30e26e1c05
-  udp: true
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
   tls: true
-  skip-cert-verify: false
-  servername: hk.143259.xyz
-  network: tcp
-- name: 🇯🇵 日本
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 70ms
+  server: 172.64.40.117
+  port: 8443
   type: vless
-  server: jp.143259.xyz
-  port: 60373
-  uuid: 8207f1df-ab75-4bd3-8dab-71809f0f8e24
-  udp: true
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
   tls: true
-  skip-cert-verify: false
-  servername: jp.143259.xyz
-  network: tcp
-- name: 🇺🇸 美国
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 70ms 2
+  server: 173.245.58.250
+  port: 8443
   type: vless
-  server: us.143259.xyz
-  port: 58915
-  uuid: ce7f931c-01ac-47fb-bbac-6e7575b3b806
-  udp: true
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
   tls: true
-  skip-cert-verify: false
-  servername: us.143259.xyz
-  network: tcp
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 71ms
+  server: 162.159.60.195
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 72ms
+  server: 172.64.40.213
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 74ms
+  server: 172.64.148.8
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 79ms
+  server: 162.159.48.85
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 79ms 2
+  server: 173.245.59.172
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 81ms
+  server: 198.41.223.157
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 82ms
+  server: 173.245.58.152
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 92ms
+  server: 162.159.32.190
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 97ms
+  server: 162.159.61.128
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 159ms
+  server: 104.16.26.39
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 150ms
+  server: 104.19.35.119
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 158ms
+  server: 104.19.57.139
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 159ms 2
+  server: 104.19.36.231
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 160ms
+  server: 104.19.62.174
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 161ms
+  server: 104.19.40.95
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 161ms 2
+  server: 104.19.60.226
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 161ms 3
+  server: 104.19.61.184
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 164ms
+  server: 104.19.38.139
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 165ms
+  server: 104.19.45.254
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 165ms 2
+  server: 104.19.53.92
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 166ms
+  server: 104.19.50.228
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 166ms 2
+  server: 104.19.58.61
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 166ms 3
+  server: 104.19.42.228
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 166ms 4
+  server: 104.19.45.142
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 167ms
+  server: 104.19.32.128
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 168ms
+  server: 104.19.52.205
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 61ms
+  server: 172.64.147.156
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 61ms 2
+  server: 104.18.35.73
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 62ms
+  server: 162.159.43.174
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 62ms 2
+  server: 173.245.59.162
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 63ms 2
+  server: 198.41.223.120
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 63ms 3
+  server: 172.64.228.195
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 63ms 4
+  server: 104.18.45.102
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 63ms 5
+  server: 162.159.42.62
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 64ms
+  server: 172.64.144.93
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 64ms 2
+  server: 8.35.211.79
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 64ms 3
+  server: 104.18.38.137
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 64ms 4
+  server: 172.64.144.243
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 65ms
+  server: 8.39.125.184
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 65ms 2
+  server: 172.64.147.115
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 65ms 3
+  server: 104.18.43.62
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 65ms 4
+  server: 173.245.58.222
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 49ms
+  server: 108.162.198.227
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 53ms
+  server: 172.64.229.216
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 53ms 2
+  server: 172.64.229.50
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 53ms 3
+  server: 108.162.198.102
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 53ms 4
+  server: 108.162.198.113
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 54ms
+  server: 108.162.198.216
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 57ms
+  server: 108.162.198.237
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 57ms 2
+  server: 108.162.198.58
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 58ms
+  server: 172.64.229.66
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 60ms
+  server: 172.64.229.148
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 60ms 2
+  server: 108.162.198.91
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 61ms
+  server: 108.162.198.116
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 61ms 2
+  server: 108.162.198.240
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 62ms
+  server: 108.162.198.128
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 62ms 2
+  server: 108.162.198.217
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 62ms 3
+  server: 108.162.198.37
+  port: 8443
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 154ms
+  server: 104.19.54.178
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 156ms
+  server: 104.19.38.117
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 160ms 2
+  server: 104.19.33.204
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 160ms 3
+  server: 104.19.38.142
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 160ms 4
+  server: 104.19.41.220
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 162ms
+  server: 104.19.34.234
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 163ms
+  server: 104.19.32.30
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 163ms 2
+  server: 104.19.39.74
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 164ms 2
+  server: 104.19.48.156
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 164ms 3
+  server: 104.19.32.167
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 165ms 3
+  server: 104.19.36.234
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 167ms 2
+  server: 104.19.56.50
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 169ms
+  server: 104.19.50.50
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 170ms
+  server: 104.19.50.55
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 170ms 2
+  server: 104.19.54.65
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 172ms
+  server: 104.19.39.56
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 51ms
+  server: 108.162.198.233
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 53ms 5
+  server: 108.162.198.204
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 54ms 2
+  server: 108.162.198.12
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 55ms
+  server: 172.64.229.107
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 57ms 3
+  server: 108.162.198.143
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 61ms 3
+  server: 108.162.198.26
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 61ms 4
+  server: 108.162.198.63
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 61ms 5
+  server: 108.162.198.127
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 62ms 4
+  server: 162.159.45.70
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 62ms 5
+  server: 108.162.198.181
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 63ms
+  server: 108.162.198.24
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 63ms 2
+  server: 108.162.198.131
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 63ms 3
+  server: 172.64.229.116
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 63ms 4
+  server: 172.64.229.3
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 64ms
+  server: 172.64.229.239
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇯🇵 JP 官方优选 64ms 2
+  server: 108.162.198.95
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 60ms
+  server: 198.41.223.88
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 61ms 3
+  server: 104.18.37.207
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 62ms 3
+  server: 104.18.40.224
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 62ms 4
+  server: 198.41.223.72
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 62ms 5
+  server: 8.39.125.132
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 62ms 6
+  server: 162.159.43.7
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 62ms 7
+  server: 173.245.59.244
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 62ms 8
+  server: 104.18.33.68
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 63ms 6
+  server: 162.159.41.84
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 63ms 7
+  server: 198.41.223.137
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 63ms 8
+  server: 8.39.125.203
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 63ms 9
+  server: 104.18.41.143
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 64ms 5
+  server: 8.35.211.213
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 64ms 6
+  server: 173.245.59.128
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 64ms 7
+  server: 104.18.41.30
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇸🇬 SG 官方优选 64ms 8
+  server: 162.159.43.141
+  port: 2053
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 147ms
+  server: 108.162.198.185
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 148ms
+  server: 108.162.198.154
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 149ms
+  server: 108.162.198.152
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 150ms 2
+  server: 108.162.198.17
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 151ms
+  server: 108.162.198.150
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 152ms
+  server: 108.162.198.184
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 153ms
+  server: 108.162.198.158
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 153ms 2
+  server: 108.162.198.239
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 153ms 3
+  server: 108.162.198.117
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 153ms 4
+  server: 108.162.198.33
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 154ms 2
+  server: 108.162.198.62
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 154ms 3
+  server: 108.162.198.74
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 154ms 4
+  server: 108.162.198.233
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 155ms
+  server: 108.162.198.231
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 155ms 2
+  server: 108.162.198.101
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇺🇸 US 官方优选 157ms
+  server: 108.162.198.199
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇭🇰 HK 官方优选 118ms
+  server: 104.26.3.214
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇭🇰 HK 官方优选 119ms
+  server: 104.26.14.42
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇭🇰 HK 官方优选 119ms 2
+  server: 172.67.78.150
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇭🇰 HK 官方优选 121ms
+  server: 172.67.65.198
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇭🇰 HK 官方优选 121ms 2
+  server: 172.67.67.182
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇭🇰 HK 官方优选 121ms 3
+  server: 172.67.72.50
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇭🇰 HK 官方优选 121ms 4
+  server: 104.26.9.71
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇭🇰 HK 官方优选 121ms 5
+  server: 104.26.14.199
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇭🇰 HK 官方优选 122ms
+  server: 172.67.69.144
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇭🇰 HK 官方优选 122ms 2
+  server: 104.26.4.167
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇭🇰 HK 官方优选 123ms
+  server: 172.67.76.205
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇭🇰 HK 官方优选 123ms 2
+  server: 104.26.3.245
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇭🇰 HK 官方优选 123ms 3
+  server: 172.67.72.114
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇭🇰 HK 官方优选 123ms 4
+  server: 172.67.72.20
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇭🇰 HK 官方优选 123ms 5
+  server: 104.26.13.68
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 🇭🇰 HK 官方优选 124ms
+  server: 172.67.67.118
+  port: 2083
+  type: vless
+  uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
+  tls: true
+  tfo: false
+  skip-cert-verify: true
+  servername: kv.074167.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kv.074167.xyz
+- name: 账号已被封禁
+  type: ss
+  server: 127.0.0.1
+  port: 520
+  cipher: aes-128-gcm
+  password: 46333b03-6e66-4962-8316-d88a57bbb0f8
+  udp: true
+- name: 您的账号已被封禁
+  type: ss
+  server: 127.0.0.1
+  port: 6666
+  cipher: aes-128-gcm
+  password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
+  udp: true
+- name: 🌐 官网： xship.top
+  type: hysteria2
+  server: starlink-ft.251313.xyz
+  password: https://xship.top
+  port: 443
+  sni: xship.top
+  skip-cert-verify: true
+  udp: true
 - name: ⚠️  持续防控刷流和抢占带宽
   type: trojan
   server: xship.2fa.cat
@@ -5669,44 +4824,6 @@ proxies:
   sni: www.cloudflare.com
   skip-cert-verify: true
   udp: true
-- name: 您的账号已被封禁
-  type: ss
-  server: 127.0.0.1
-  port: 6666
-  cipher: aes-128-gcm
-  password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
-  udp: true
-- name: 账号已被封禁
-  type: ss
-  server: 127.0.0.1
-  port: 520
-  cipher: aes-128-gcm
-  password: 46333b03-6e66-4962-8316-d88a57bbb0f8
-  udp: true
-- name: 剩余流量：129.85 GB
-  type: vless
-  server: 108.162.198.165
-  port: 443
-  uuid: df2b3522-86fe-4d9e-bcb6-06e91514aae8
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: false
-  servername: www.apple.com
-  reality-opts:
-    public-key: hMJwKWfRFhROd7JeY2K9_WZga2kwJaZ6FNN7wwEe0Uw
-    short-id: 98f250c88f
-  client-fingerprint: chrome
-  network: tcp
-- name: '%E8%AF%B7%E4%BD%BF%E7%94%A8%E6%94%AF%E6%8C%81Clash.Meta%E5%86%85%E6%A0%B8%E7%9A%84%E8%BD%AF%E4%BB%B6%E8%AE%A2%E9%98%85%E6%88%96Shadowrocket%EF%BC%8C%E7%9B%B8%E5%85%B3%E8%BD%AF%E4%BB%B6%E5%8F%AF%E5%9C%A8%E7%9F%A5%E8%AF%86%E5%BA%93%E8%8E%B7%E5%8F%96'
-  type: ss
-  server: 127.0.0.1
-  port: 1
-  cipher: aes-128-gcm
-  password: unsupported-client
 - name: vless
   type: vless
   server: 144.34.170.18
@@ -5805,3 +4922,9 @@ proxies:
   network: tcp
   tls: false
   skip-cert-verify: true
+- name: '%E8%AF%B7%E4%BD%BF%E7%94%A8%E6%94%AF%E6%8C%81Clash.Meta%E5%86%85%E6%A0%B8%E7%9A%84%E8%BD%AF%E4%BB%B6%E8%AE%A2%E9%98%85%E6%88%96Shadowrocket%EF%BC%8C%E7%9B%B8%E5%85%B3%E8%BD%AF%E4%BB%B6%E5%8F%AF%E5%9C%A8%E7%9F%A5%E8%AF%86%E5%BA%93%E8%8E%B7%E5%8F%96'
+  type: ss
+  server: 127.0.0.1
+  port: 1
+  cipher: aes-128-gcm
+  password: unsupported-client
