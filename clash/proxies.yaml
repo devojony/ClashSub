@@ -1,116 +1,8 @@
 proxies:
-- name: 加拿大 - Montréal - 1
-  server: 16.52.44.93
-  type: ss
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 509
-- name: 美国 - Los Angeles - 1
-  server: 103.236.66.4
-  port: 50003
-  type: ss
-  cipher: aes-256-gcm
-  password: Butterfly123@qwe9527
-  udp: true
-  delay: 1476
-- name: 美国 - Los Angeles - 2
-  server: 103.236.66.4
-  port: 50001
-  type: ss
-  cipher: aes-256-gcm
-  password: Butterfly123@qwe9527
-  udp: true
-  delay: 2139
-- name: 日本 - Tokyo - 1
-  server: 54.95.233.51
-  type: ss
-  country: 🇯🇵JP
-  port: 8319
-  password: ljqdalu13..
-  cipher: chacha20-ietf-poly1305
-  delay: 434
-- name: 日本 - Tokyo - 2
-  server: 103.236.66.4
-  port: 40001
-  type: ss
-  cipher: aes-256-gcm
-  password: Butterfly123@qwe9527
-  udp: true
-  delay: 837
-- name: 日本 - Tokyo - 3
-  server: 103.236.66.4
-  port: 40002
-  type: ss
-  cipher: aes-256-gcm
-  password: Butterfly123@qwe9527
-  udp: true
-  delay: 846
-- name: 英国 - London - 1
-  server: 18.175.227.220
-  type: ss
-  country: 🇬🇧GB
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 505
-- name: 英国 - London - 2
-  server: 35.178.212.194
-  type: ss
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 506
-- name: 英国 - London - 3
-  server: 3.8.123.237
-  port: 443
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-  udp: true
-  delay: 1998
-- name: 英国 - London - 4
-  server: 13.135.73.3
-  type: ss
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 1491
-- name: 英国 - London - 5
-  server: 13.135.252.176
-  type: ss
-  country: 🇺🇸US
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 501
-- name: 中国 - Hefei - 1
-  server: 112.132.215.108
-  port: 50002
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-  delay: 2176
-- name: 中国 - Hong Kong - 2
-  server: 103.236.66.4
-  port: 10001
-  type: ss
-  cipher: aes-256-gcm
-  password: Butterfly123@qwe9527
-  udp: true
-  delay: 960
-- name: 中国 - Taichung - 3
-  server: 36.33.35.105
-  port: 30001
-  type: ss
-  cipher: aes-256-gcm
-  password: Butterfly123@qwe9527
-  udp: true
-  delay: 240
+- name: Shadowsocks
+  type: socks5
+  server: 127.0.0.1
+  port: 1080
 - cipher: aes-256-cfb
   name: United States_None_ss_101
   password: amazonskr05
@@ -126,6 +18,12 @@ proxies:
   tls: false
   type: vmess
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- cipher: aes-256-gcm
+  name: China_None_ss_103
+  password: Butterfly123@qwe9527
+  port: 10001
+  server: 103.236.66.4
+  type: ss
 - cipher: aes-256-gcm
   name: China_None_ss_104
   password: Butterfly123@qwe9527
@@ -156,6 +54,18 @@ proxies:
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
+- cipher: aes-256-gcm
+  name: China_None_ss_108
+  password: Butterfly123@qwe9527
+  port: 40001
+  server: 103.236.66.4
+  type: ss
+- cipher: aes-256-gcm
+  name: China_None_ss_109
+  password: Butterfly123@qwe9527
+  port: 40002
+  server: 103.236.66.4
+  type: ss
 - name: Japan_Tokyo_trojan_1010
   network: tcp
   password: BxceQaOe
@@ -164,6 +74,18 @@ proxies:
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
   type: trojan
+- cipher: aes-256-gcm
+  name: China_None_ss_1011
+  password: Butterfly123@qwe9527
+  port: 50003
+  server: 103.236.66.4
+  type: ss
+- cipher: aes-256-gcm
+  name: China_None_ss_1012
+  password: Butterfly123@qwe9527
+  port: 50001
+  server: 103.236.66.4
+  type: ss
 - name: Singapore_Singapore_trojan_1013
   network: tcp
   password: BxceQaOe
@@ -172,6 +94,12 @@ proxies:
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
   type: trojan
+- cipher: aes-256-gcm
+  name: China_None_ss_1014
+  password: Butterfly123@qwe9527
+  port: 30001
+  server: 36.33.35.105
+  type: ss
 - alterId: 0
   cipher: auto
   name: Unknown_vmess_111
@@ -265,22 +193,36 @@ proxies:
 - cipher: aes-256-cfb
   name: China_None_ss_1126
   password: 7eadc6dbe2ae
-  port: 65443
+  port: '65443'
   server: 121.46.230.138
   type: ss
   udp: true
-- client-fingerprint: chrome
-  name: United States_None_trojan_1127
-  network: tcp
-  password: a126f35c-e832-4115-8593-b723ade3f7be
-  port: 20085
-  server: kkvlvvq-a.catcat321.com
-  skip-cert-verify: true
-  sni: hk.catxstar.com
-  type: trojan
+- cipher: aes-256-cfb
+  name: United States_None_ss_1127
+  password: amazonskr05
+  port: '443'
+  server: 13.135.252.176
+  type: ss
   udp: true
+- cipher: aes-256-cfb
+  name: United Kingdom_London_ss_1128
+  password: amazonskr05
+  port: '443'
+  server: 35.178.212.194
+  type: ss
+  udp: true
+- alterId: 2
+  cipher: auto
+  name: China_Shanghai_vmess_1129
+  port: 30829
+  server: v29.hdacd.com
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
 - client-fingerprint: chrome
-  name: United States_None_trojan_1128
+  name: United States_None_trojan_1130
   network: tcp
   password: a126f35c-e832-4115-8593-b723ade3f7be
   port: '20066'
@@ -289,6 +231,94 @@ proxies:
   sni: hk.catxstar.com
   type: trojan
   udp: true
+- client-fingerprint: chrome
+  name: United States_None_trojan_1131
+  network: tcp
+  password: a126f35c-e832-4115-8593-b723ade3f7be
+  port: 20085
+  server: kkvlvvq-a.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  http-opts:
+    method: GET
+    path:
+    - /
+  name: United States_San Gabriel_vmess_1132
+  network: http
+  port: 50269
+  server: 103.179.142.158
+  tls: false
+  type: vmess
+  uuid: 84f238f6-28eb-48df-a7bc-a9bd9cf4abba
+- alterId: 0
+  cipher: auto
+  name: United States_Buffalo_vmess_1133
+  network: none
+  port: 15311
+  server: 107.173.254.27
+  tls: false
+  type: vmess
+  uuid: ad78d02b-873f-4cff-8d4a-673f53d6ce0f
+- cipher: aes-256-gcm
+  name: Singapore_Singapore_ss_1134
+  password: rjV4WyP9ts5eEGsr
+  port: '33308'
+  server: general-live-13877.holphappyeveryday.com
+  type: ss
+  udp: true
+- name: 加拿大 - Montréal - 1
+  server: 16.52.44.93
+  type: ss
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 509
+- name: 日本 - Tokyo - 1
+  server: 54.95.233.51
+  type: ss
+  country: 🇯🇵JP
+  port: 8319
+  password: ljqdalu13..
+  cipher: chacha20-ietf-poly1305
+  delay: 434
+- name: 英国 - London - 1
+  server: 18.175.227.220
+  type: ss
+  country: 🇬🇧GB
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 505
+- name: 英国 - London - 3
+  server: 3.8.123.237
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+  udp: true
+  delay: 1998
+- name: 英国 - London - 4
+  server: 13.135.73.3
+  type: ss
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 1491
+- name: 中国 - Hefei - 1
+  server: 112.132.215.108
+  port: 50002
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
+  delay: 2176
 - name: 🇨🇳 無碼河北彩花 - AVToday.io - 🇱🇺LU_8|104KB/s|C002-260622
   server: primary-leech.rooster465.autos
   port: 443
@@ -699,15 +729,11 @@ proxies:
   password: AE62539071
   sni: darling-mutt.rooster465.autos
   skip-cert-verify: true
-- name: Shadowsocks
-  type: socks5
-  server: 127.0.0.1
-  port: 1080
 - name: Free-HK-IN-TH
   type: vless
   server: f-hk-th.mtnode.top
   port: 443
-  uuid: daa36eb9-43b9-47f2-a72c-3b4387a186c2
+  uuid: b48d6741-2ca7-4933-addf-2bf8b76fd8f4
   alterId: 0
   cipher: auto
   udp: true
@@ -728,7 +754,7 @@ proxies:
   cipher: aes-128-gcm
   password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
   udp: true
-- name: 剩余流量：614.16 GB
+- name: 剩余流量：611.73 GB
   type: vless
   server: cfyes.ziyoufly.xyz
   port: 443
