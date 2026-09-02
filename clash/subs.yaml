@@ -466,6 +466,10 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
+- name: Shadowsocks
+  type: socks5
+  server: 127.0.0.1
+  port: 1080
 - alterId: 0
   cipher: auto
   name: Unknown_vmess_101
@@ -653,86 +657,32 @@ proxies:
   port: 30001
   server: 36.33.35.105
   type: ss
-- alterId: 0
+- cipher: aes-256-cfb
+  name: China_None_ss_1026
+  password: 7eadc6dbe2ae
+  port: '65443'
+  server: 121.46.230.232
+  type: ss
+  udp: true
+- alterId: '0'
   cipher: auto
-  name: France_None_vmess_1026
+  name: France_None_vmess_1027
   network: ws
-  port: 16632
+  port: '16632'
   server: planb.mojcn.com.linuxlh.xin
-  skip-cert-verify: true
+  skip-cert-verify: false
   tls: false
   type: vmess
-  uuid: 56a511bd-f207-48f4-be5b-4652afe178a4
+  udp: true
+  uuid: cefbe234-bcc6-4558-ab7b-1030e331e6a5
   ws-opts:
     headers:
-      Host: 686a7558df571afb1408b0e77ae4f687.mobgslb.tbcache.com
+      Host: d052c66d50dcf7c3cfab75ed7f8e8322.mobgslb.tbcache.com
     path: /
-- cipher: aes-256-cfb
-  name: China_None_ss_1027
-  password: 7eadc6dbe2ae
-  port: '65443'
-  server: 121.46.230.138
-  type: ss
-  udp: true
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: None_None_trojan_1028
-  network: ws
-  password: humanity
-  port: '443'
-  server: www.ignitelimit.com
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/52.0.2743.116 Safari/537.36
-    path: /assignment
-- cipher: aes-256-cfb
-  name: Thailand_Bangkok_ss_1029
-  password: 7eadc6dbe2ae
-  port: '65443'
-  server: 103.169.67.34
-  type: ss
-  udp: true
-- client-fingerprint: chrome
-  name: None_None_trojan_1030
-  network: ws
-  password: humanity
-  port: '443'
-  server: 104.18.152.219
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/58.0.3029.81 Safari/537.36
-    path: /assignment
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: United States_None_trojan_1031
-  network: ws
-  password: humanity
-  port: '443'
-  server: 216.24.57.7
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/49.0.2623.87 Safari/537.36
-    path: /assignment
+  xudp: true
 - alterId: 0
   cipher: auto
-  name: France_None_vmess_1032
+  name: France_None_vmess_1028
   network: ws
   port: 16632
   server: t.cnmjcn.cyou
@@ -746,6 +696,44 @@ proxies:
       Host: 686a7558df571afb1408b0e77ae4f687.mobgslb.tbcache.com
     path: /
   xudp: true
+- alterId: 0
+  cipher: auto
+  name: Singapore_Singapore_vmess_1029
+  network: tcp
+  port: '21016'
+  server: dog-jp.kunlun01dns.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  xudp: true
+- cipher: aes-256-cfb
+  name: Canada_Montreal_ss_1030
+  password: amazonskr05
+  port: '443'
+  server: 35.182.226.121
+  type: ss
+  udp: true
+- alpn:
+  - http/1.1
+  - h2
+  - h3
+  client-fingerprint: chrome
+  name: None_None_trojan_1032
+  network: ws
+  password: humanity
+  port: '443'
+  server: 198.41.223.96
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/70.0.3538.102 Safari/537.36
+    path: /assignment
 - cipher: aes-256-cfb
   name: Canada_Montreal_ss_1033
   password: amazonskr05
@@ -753,63 +741,14 @@ proxies:
   server: 3.97.16.160
   type: ss
   udp: true
-- cipher: aes-256-cfb
-  name: China_None_ss_1034
-  password: 7eadc6dbe2ae
+- name: 法国 - Paris - 1
+  server: 95.170.13.47
   port: 65443
-  server: 121.46.230.137
   type: ss
-- alpn:
-  - h3
-  - ' h2'
-  - ' http/1.1'
-  client-fingerprint: chrome
-  name: United Kingdom_High Wycombe_trojan_1035
-  network: ws
-  password: humanity
-  port: '443'
-  server: 185.75.243.102
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
+  cipher: aes-256-cfb
+  password: 7eadc6dbe2ae
   udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/533.2 (KHTML,
-        like Gecko) Chrome/5.0.342.1 Safari/533.2
-    path: /assignment
-- cipher: chacha20-ietf-poly1305
-  name: Poland_None_ss_1129
-  password: 86bf33ea-62d9-49a1-9bd0-73e45f6e1403
-  port: '40013'
-  server: us1002.lunartrace.io
-  type: ss
-  udp: true
-- alterId: 2
-  cipher: auto
-  name: China_Chengdu_vmess_1131
-  port: 30829
-  server: v29.hdacd.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  xudp: true
-- client-fingerprint: chrome
-  name: United States_None_trojan_1132
-  network: tcp
-  password: 5b5b69cd-c9f6-3117-8f4f-0e9bff3811b7
-  port: '14492'
-  server: adakv1-u03.sonofthewinds.com
-  skip-cert-verify: false
-  sni: un5.sonofthewinds.com
-  type: trojan
-  udp: true
-- name: Shadowsocks
-  type: socks5
-  server: 127.0.0.1
-  port: 1080
+  delay: 1318
 - name: 荷兰 - Amsterdam - 1
   server: 84.17.47.125
   port: 9002
@@ -817,55 +756,31 @@ proxies:
   tls: true
   skip-cert-verify: true
   udp: true
-  delay: 955
-- name: 荷兰 - Amsterdam - 3
+  delay: 2163
+- name: 荷兰 - Amsterdam - 2
   server: 84.17.47.150
   port: 9002
   type: http
   tls: true
   skip-cert-verify: true
   udp: true
-  delay: 934
-- name: 荷兰 - Amsterdam - 4
+  delay: 2053
+- name: 荷兰 - Amsterdam - 3
   server: 84.17.47.148
   port: 9002
   type: http
   tls: true
   skip-cert-verify: true
   udp: true
-  delay: 1051
-- name: 荷兰 - Amsterdam - 6
+  delay: 2154
+- name: 荷兰 - Amsterdam - 5
   server: 84.17.47.146
   port: 9002
   type: http
   tls: true
   skip-cert-verify: true
   udp: true
-  delay: 1003
-- name: 荷兰 - Amsterdam - 7
-  server: 84.17.47.149
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 1007
-- name: 加拿大 - Montréal - 1
-  server: 35.182.226.121
-  type: ss
-  country: 🇨🇦CA
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 1540
-- name: 加拿大 - Montréal - 2
-  server: 35.182.129.250
-  type: ss
-  country: 🇨🇦CA
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 635
+  delay: 2112
 - name: 罗马尼亚 - Bucharest - 1
   server: 193.176.84.33
   port: 9002
@@ -873,24 +788,64 @@ proxies:
   tls: true
   skip-cert-verify: true
   udp: true
-  delay: 1480
+  delay: 2590
+- name: 罗马尼亚 - Bucharest - 10
+  server: 193.176.84.32
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1116
+- name: 罗马尼亚 - Bucharest - 11
+  server: 193.176.84.39
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1848
 - name: 罗马尼亚 - Bucharest - 2
+  server: 193.176.84.30
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 2677
+- name: 罗马尼亚 - Bucharest - 3
+  server: 193.176.84.35
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1049
+- name: 罗马尼亚 - Bucharest - 4
+  server: 193.176.84.17
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1749
+- name: 罗马尼亚 - Bucharest - 5
   server: 193.176.84.24
   port: 9002
   type: http
   tls: true
   skip-cert-verify: true
   udp: true
-  delay: 1201
-- name: 罗马尼亚 - Bucharest - 3
+  delay: 2431
+- name: 罗马尼亚 - Bucharest - 6
   server: 193.176.84.25
   port: 9002
   type: http
   tls: true
   skip-cert-verify: true
   udp: true
-  delay: 2762
-- name: 罗马尼亚 - Bucharest - 4
+  delay: 1753
+- name: 罗马尼亚 - Bucharest - 7
   server: 193.176.84.31
   port: 9002
   type: http
@@ -898,31 +853,24 @@ proxies:
   tls: true
   skip-cert-verify: true
   udp: true
-  delay: 1897
-- name: 罗马尼亚 - Bucharest - 5
+  delay: 2568
+- name: 罗马尼亚 - Bucharest - 8
+  server: 193.176.84.23
+  port: 9002
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 1758
+- name: 罗马尼亚 - Bucharest - 9
   server: 193.176.84.27
   port: 9002
   type: http
   tls: true
   skip-cert-verify: true
   udp: true
-  delay: 1159
-- name: 罗马尼亚 - Bucharest - 6
-  server: 193.176.84.32
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 1891
-- name: 罗马尼亚 - Bucharest - 7
-  server: 193.176.84.39
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 1460
+  delay: 1234
 - name: 马来西亚 - Cyberjaya - 1
   server: 118.107.222.231
   port: 65443
@@ -930,24 +878,29 @@ proxies:
   cipher: aes-256-cfb
   password: 7eadc6dbe2ae
   udp: true
-  delay: 401
-- name: 美国 - Fremont - 4
+  delay: 1048
+- name: 美国 - Buffalo - 2
+  server: v4.hdacd.com
+  type: vmess
+  country: 🇨🇳CN
+  port: 30804
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  network: tcp
+  servername: v4.hdacd.com
+  http-opts: {}
+  h2-opts: {}
+  skip-cert-verify: true
+  delay: 1031
+- name: 美国 - Fremont - 5
   server: voteshirleysew.club
   port: 443
   type: http
   tls: true
   skip-cert-verify: true
   udp: true
-  delay: 1660
-- name: 美国 - Fremont - 5
-  server: purposebydesig.club
-  port: 443
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 1075
+  delay: 900
 - name: 美国 - Los Angeles - 1
   server: 121.46.230.233
   port: 65443
@@ -955,8 +908,27 @@ proxies:
   cipher: aes-256-cfb
   password: 7eadc6dbe2ae
   udp: true
-  delay: 2748
-- name: 美国 - Los Angeles - 2
+  delay: 353
+- name: 美国 - Los Angeles - 3
+  server: www.361371.xyz
+  type: vmess
+  country: 🇺🇸US
+  port: 443
+  uuid: da77c564-3815-468c-8867-0aea0b397027
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: www.361371.xyz
+  http-opts: {}
+  h2-opts: {}
+  tls: true
+  skip-cert-verify: true
+  ws-opts:
+    path: /ws-6rm27y
+    headers:
+      HOST: www.361371.xyz
+  delay: 1797
+- name: 美国 - Los Angeles - 4
   server: 138.199.35.216
   port: 9002
   type: http
@@ -965,15 +937,7 @@ proxies:
   tls: true
   skip-cert-verify: true
   udp: true
-  delay: 862
-- name: 美国 - Los Angeles - 3
-  server: fan.365747.xyz
-  port: 443
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 859
+  delay: 1699
 - name: 美国 - Los Angeles - 6
   server: 38.28.193.188
   port: 443
@@ -981,15 +945,7 @@ proxies:
   tls: true
   skip-cert-verify: true
   udp: true
-  delay: 835
-- name: 美国 - Los Angeles - 7
-  server: 138.199.35.198
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 873
+  delay: 857
 - name: 中国 - Hefei - 1
   server: 112.132.215.108
   type: vmess
@@ -1003,8 +959,26 @@ proxies:
   http-opts: {}
   h2-opts: {}
   skip-cert-verify: true
-  delay: 172
-- name: 剩余流量：495.61 GB
+  delay: 150
+- name: Free-HK-IN-TH
+  type: vless
+  server: f-hk-th.mtnode.top
+  port: 443
+  uuid: daa36eb9-43b9-47f2-a72c-3b4387a186c2
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: J7UWzNxuI6XRzTWTIU1h8Gw-ReNKqTXcXVOhJNsEji8
+    short-id: 67c8cb79
+  client-fingerprint: chrome
+  network: tcp
+- name: 剩余流量：495.17 GB
   type: vless
   server: uh-jp01.ziyoufly.xyz
   port: 55555
@@ -1061,146 +1035,6 @@ proxies:
   reality-opts:
     public-key: 1XQ60qYOfBZJpcilNV9Fu7OSpuO5_6-zrNZIYhB_YU4
     short-id: af317506
-- name: Free-HK-IN-TH
-  type: vless
-  server: f-hk-th.mtnode.top
-  port: 443
-  uuid: fd5a8fbc-08f4-4302-ac4c-5f7cfb50132c
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: false
-  servername: www.cloudflare.com
-  reality-opts:
-    public-key: J7UWzNxuI6XRzTWTIU1h8Gw-ReNKqTXcXVOhJNsEji8
-    short-id: 67c8cb79
-  client-fingerprint: chrome
-  network: tcp
-- name: 剩余流量：9997275.1 GB
-  type: vless
-  server: cdn.8211992.xyz
-  port: 443
-  uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
-  udp: true
-  tls: true
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  servername: mao.kipfel.kdns.fr
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-  network: ws
-  ws-opts:
-    path: /glasspanel/guest000_0_5de14443985f/
-    headers:
-      Host: mao.kipfel.kdns.fr
-- name: 🐾 [公益]🇺🇸美国随缘喵 2 [1X]
-  type: vless
-  server: cf.130519.xyz
-  port: 443
-  uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
-  udp: true
-  tls: true
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  servername: mao.kipfel.kdns.fr
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-  network: ws
-  ws-opts:
-    path: /glasspanel/guest000_0_5de14443985f/
-    headers:
-      Host: mao.kipfel.kdns.fr
-- name: 🐾 [公益]🇺🇸美国随缘喵 3 [1X]
-  type: vless
-  server: nexusmods.com
-  port: 443
-  uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
-  udp: true
-  tls: true
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  servername: mao.kipfel.kdns.fr
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-  network: ws
-  ws-opts:
-    path: /glasspanel/guest000_0_5de14443985f/
-    headers:
-      Host: mao.kipfel.kdns.fr
-- name: 🐾 [公益]🇺🇸美国随缘喵 4 [1X]
-  type: vless
-  server: www.cnae.top
-  port: 443
-  uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
-  udp: true
-  tls: true
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  servername: mao.kipfel.kdns.fr
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-  network: ws
-  ws-opts:
-    path: /glasspanel/guest000_0_5de14443985f/
-    headers:
-      Host: mao.kipfel.kdns.fr
-- name: 🐾 公益不保可用请购买更多节点喵
-  type: vless
-  server: mfa.gov.ua
-  port: 443
-  uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
-  udp: true
-  tls: true
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  servername: mao.kipfel.kdns.fr
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-  network: ws
-  ws-opts:
-    path: /glasspanel/guest000_0_5de14443985f/
-    headers:
-      Host: mao.kipfel.kdns.fr
-- name: 🐾 拆盲盒👉www.youzilite.help👈
-  type: vless
-  server: cdns.doon.eu.org
-  port: 443
-  uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
-  udp: true
-  tls: true
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  servername: mao.kipfel.kdns.fr
-  ech-opts:
-    enable: true
-    query-server-name: cloudflare-ech.com
-  network: ws
-  ws-opts:
-    path: /glasspanel/guest000_0_5de14443985f/
-    headers:
-      Host: mao.kipfel.kdns.fr
-- name: 越南1区移动用户专享
-  server: vn.mggl.wang
-  port: 35789
-  udp: true
-  skip-cert-verify: false
-  type: hysteria2
-  password: 9e98496a-0036-4cc6-8302-3929c29ba772
-- name: 您的账号已被封禁
-  type: ss
-  server: 127.0.0.1
-  port: 6666
-  cipher: aes-128-gcm
-  password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
-  udp: true
 - name: 🌐 官网： xship.2fa.cat
   type: hysteria2
   server: starlink-ft.251313.xyz
@@ -2797,3 +2631,991 @@ proxies:
   sni: www.cloudflare.com
   skip-cert-verify: true
   udp: true
+- name: 您的账号已被封禁
+  type: ss
+  server: 127.0.0.1
+  port: 6666
+  cipher: aes-128-gcm
+  password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
+  udp: true
+- name: 剩余流量：1416.51 GB
+  server: x-mg.xueshan168.cc
+  port: 20201
+  sni: x-mg.xueshan168.cc
+  up: 5000
+  down: 5000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🛠️有超时请重启网络
+  type: vless
+  server: x-mg.xueshan168.cc
+  port: 20200
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: 5UyrbL7pqfhh7vgpyk5beDFZUK2uQWLqdvfgJBzu7Gg
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇺🇸美·盐湖城|专线-DS1
+  server: mg1.xueshan168.cc
+  port: 20201
+  sni: mg1.xueshan168.cc
+  up: 5000
+  down: 5000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇺🇸美·盐湖城|专线-DS2
+  type: vless
+  server: mg1.xueshan168.cc
+  port: 19000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: 5UyrbL7pqfhh7vgpyk5beDFZUK2uQWLqdvfgJBzu7Gg
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇺🇸美·凤凰城|0.5专线1
+  server: mg00.xueshan168.cc
+  port: 20201
+  sni: mg00.xueshan168.cc
+  up: 10000
+  down: 10000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇺🇸美·凤凰城|0.5专线2
+  type: vless
+  server: mg00.xueshan168.cc
+  port: 18000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: AKgKoK7kZCYcME_By_coqjGk-eWn6c4awdaqHYRak1o
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇺🇸美·凤凰城|0.5专线3
+  server: mg2.xueshan168.cc
+  port: 20201
+  sni: mg2.xueshan168.cc
+  up: 10000
+  down: 10000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇺🇸美·凤凰城|0.5专线4
+  type: vless
+  server: mg2.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: iv3BAoFjlsPSSjOn1cyXVZ3H31KqX65PoJusBEfU0lM
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇺🇸美·凤凰城|0.5专线5
+  server: mg.xueshan168.cc
+  port: 20201
+  sni: mg.xueshan168.cc
+  up: 10000
+  down: 10000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇺🇸美·凤凰城|0.5专线6
+  type: vless
+  server: mg.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: iv3BAoFjlsPSSjOn1cyXVZ3H31KqX65PoJusBEfU0lM
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇰🇷韩国SK·三网|家宽1
+  server: x-hg3.xueshan168.cc
+  port: 20201
+  sni: x-xg3.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇰🇷韩国SK·三网|家宽2
+  type: vless
+  server: x-hg3.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: iv3BAoFjlsPSSjOn1cyXVZ3H31KqX65PoJusBEfU0lM
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇰🇷韩国SK·三网|家宽3
+  server: x-hg.xueshan168.cc
+  port: 20201
+  sni: x-hg.xueshan168.cc
+  up: 2500
+  down: 2500
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇰🇷韩国SK·三网|家宽4
+  type: vless
+  server: x-hg.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: wTDp8GLmm9-e84raeixo46WniotkQIsPBqcYoa-Tqy4
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇰🇷韩国SK·三网|家宽5
+  server: x-hg2.xueshan168.cc
+  port: 20201
+  sni: x-hg2.xueshan168.cc
+  up: 2500
+  down: 2500
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇰🇷韩国SK·三网|家宽6
+  type: vless
+  server: x-hg2.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: wTDp8GLmm9-e84raeixo46WniotkQIsPBqcYoa-Tqy4
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇯🇵日本·三网|SAK-1
+  server: rb.xueshan168.cc
+  port: 20201
+  sni: rb.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇯🇵日本·三网|SAK-2
+  type: vless
+  server: rb.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: cMB0tAmD6scVvjRbLVm1IjryKtXM6SDtceLiz_qF6iw
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇯🇵日本·三网|SAK-3
+  server: x-rb1.xueshan168.cc
+  port: 20201
+  sni: x-rb1.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇯🇵日本·三网|SAK-4
+  type: vless
+  server: x-rb1.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: CuqzBeQR_1VIdOGOgn5v8-t-X-YzURF9b3wtKVVyKQ8
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇯🇵日本·三网|SAK-5
+  server: x-rb.xueshan168.cc
+  port: 20201
+  sni: x-rb1.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇯🇵日本·三网|SAK-6
+  type: vless
+  server: x-rb.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: iv3BAoFjlsPSSjOn1cyXVZ3H31KqX65PoJusBEfU0lM
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇭🇰香港HKT|动态家宽1
+  server: xg1.xueshan168.cc
+  port: 20201
+  sni: xg1.xueshan168.cc
+  up: 10000
+  down: 10000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇭🇰香港HKT动态|家宽3
+  type: vless
+  server: hkt.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: iv3BAoFjlsPSSjOn1cyXVZ3H31KqX65PoJusBEfU0lM
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇭🇰香港HKT三网|家宽1
+  type: vless
+  server: xg2.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: iv3BAoFjlsPSSjOn1cyXVZ3H31KqX65PoJusBEfU0lM
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇭🇰香港HKT三网|商宽1
+  server: x-xg1.xueshan168.cc
+  port: 20201
+  sni: x-xg1.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇭🇰香港HKT三网|商宽2
+  type: vless
+  server: x-xg1.xueshan168.cc
+  port: 21000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: bxu_fj69tCOtW1R_Kc3NFy1L9PJ0I1wBzOVKZwEW8VA
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇭🇰香港HKT三网|商宽3
+  server: x-xg2.xueshan168.cc
+  port: 20201
+  sni: x-xg2.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇭🇰香港HKT三网|商宽4
+  type: vless
+  server: x-xg2.xueshan168.cc
+  port: 21000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: bxu_fj69tCOtW1R_Kc3NFy1L9PJ0I1wBzOVKZwEW8VA
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇭🇰香港HKT三网|商宽5
+  server: x-xg0.xueshan168.cc
+  port: 20201
+  sni: x-xg0.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇭🇰香港HKT三网|商宽6
+  type: vless
+  server: x-xg0.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: bxu_fj69tCOtW1R_Kc3NFy1L9PJ0I1wBzOVKZwEW8VA
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇹🇼台湾静态三网|家宽3
+  server: tw.xueshan168.cc
+  port: 20201
+  sni: tw.xueshan168.cc
+  up: 2000
+  down: 2000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇹🇼台湾静态三网|家宽4
+  type: vless
+  server: tw.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: CuqzBeQR_1VIdOGOgn5v8-t-X-YzURF9b3wtKVVyKQ8
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇹🇼台湾动态三网|家宽1
+  type: vless
+  server: x-tw01.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: CuqzBeQR_1VIdOGOgn5v8-t-X-YzURF9b3wtKVVyKQ8
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇸🇬 新加坡 | GCP-1
+  server: xjp.xueshan168.cc
+  port: 20201
+  sni: x-xjp.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇸🇬 新加坡 | GCP-2
+  type: vless
+  server: xjp.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: dzSZgKH3Da66x3Z_Btbw0vsLLGZ-GfgGMGMCGkKTbBY
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇸🇬 新加坡 | GCP-3
+  server: x-xjp.xueshan168.cc
+  port: 20201
+  sni: x-xjp.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇸🇬 新加坡 | GCP-4
+  type: vless
+  server: x-xjp.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: dzSZgKH3Da66x3Z_Btbw0vsLLGZ-GfgGMGMCGkKTbBY
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇯🇵樱花✿·三网|原生1
+  server: x-rb2.xueshan168.cc
+  port: 20201
+  sni: x-rb2.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇯🇵樱花✿·三网|原生2
+  server: x-rb5.xueshan168.cc
+  port: 20201
+  sni: x-rb5.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇯🇵日本·京都|原生
+  server: x-rb3.xueshan168.cc
+  port: 20201
+  sni: x-rb3.xueshan168.cc
+  up: 500
+  down: 500
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇯🇵日本·大阪|原生
+  server: x-rb8.xueshan168.cc
+  port: 20201
+  sni: x-rb8.xueshan168.cc
+  up: 500
+  down: 500
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇯🇵日本·三网|软银1
+  server: x-rb6.xueshan168.cc
+  port: 20201
+  sni: x-rb6.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇯🇵日本·三网|软银2
+  type: vless
+  server: x-rb6.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: 5UyrbL7pqfhh7vgpyk5beDFZUK2uQWLqdvfgJBzu7Gg
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇯🇵日本·三网|软银3
+  server: x-rb7.xueshan168.cc
+  port: 20201
+  sni: x-rb7.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇯🇵日本·三网|软银4
+  type: vless
+  server: x-rb7.xueshan168.cc
+  port: 26000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: 5UyrbL7pqfhh7vgpyk5beDFZUK2uQWLqdvfgJBzu7Gg
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇺🇸美国·0.1倍率| -1
+  server: x-mg0.xueshan168.cc
+  port: 20201
+  sni: x-mg0.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇺🇸美国·0.1倍率| -2
+  type: vless
+  server: x-mg0.xueshan168.cc
+  port: 18000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: AKgKoK7kZCYcME_By_coqjGk-eWn6c4awdaqHYRak1o
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇺🇸美国·0.1倍率| -3
+  server: mg0.xueshan168.cc
+  port: 20201
+  sni: mg0.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇺🇸美国·0.1倍率| -4
+  type: vless
+  server: mg0.xueshan168.cc
+  port: 18000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: AKgKoK7kZCYcME_By_coqjGk-eWn6c4awdaqHYRak1o
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇺🇸美国·洛杉矶|原生-1
+  server: x-mg3.xueshan168.cc
+  port: 20201
+  sni: x-mg3.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇺🇸美国·洛杉矶|原生-2
+  type: vless
+  server: x-mg6.xueshan168.cc
+  port: 20200
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: fZcXo8yrvptUh9AxH9rtfQrSoStqTmYM0eAQq39JN2U
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇺🇸美国·洛杉矶|原生-3
+  type: vless
+  server: x-mg4.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: 5UyrbL7pqfhh7vgpyk5beDFZUK2uQWLqdvfgJBzu7Gg
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇲🇴澳门|特别行政区1
+  server: x-am.xueshan168.cc
+  port: 20201
+  sni: x-am.xueshan168.cc
+  up: 10000
+  down: 10000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇲🇴澳门|特别行政区2
+  type: vless
+  server: x-am.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: CuqzBeQR_1VIdOGOgn5v8-t-X-YzURF9b3wtKVVyKQ8
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇹🇭泰国·曼谷|原生-1
+  server: x-tg.xueshan168.cc
+  port: 20201
+  sni: x-tg.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇹🇭泰国·曼谷|原生-2
+  type: vless
+  server: x-tg.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: ioAxuQJyUMKN1kx8ThkL_-4NEaFYN6TB5XhHqSEYXEM
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇬🇧英国·商宽|原生-1
+  server: x-yg.xueshan168.cc
+  port: 20201
+  sni: x-yg.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇬🇧英国·商宽|原生-2
+  type: vless
+  server: x-yg.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: cMB0tAmD6scVvjRbLVm1IjryKtXM6SDtceLiz_qF6iw
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇻🇳越南·河内|原生-1
+  server: x-yn.xueshan168.cc
+  port: 20201
+  sni: x-yn.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇻🇳越南·河内|原生-2
+  type: vless
+  server: x-yn.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: cMB0tAmD6scVvjRbLVm1IjryKtXM6SDtceLiz_qF6iw
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇩🇪德国|法兰克福-1
+  server: x-dg.xueshan168.cc
+  port: 20201
+  sni: x-dg.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇩🇪德国|法兰克福-2
+  type: vless
+  server: x-dg.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: cMB0tAmD6scVvjRbLVm1IjryKtXM6SDtceLiz_qF6iw
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇫🇷法国|巴黎世家-1
+  server: x-fg.xueshan168.cc
+  port: 20201
+  sni: x-fg.xueshan168.cc
+  up: 1000
+  down: 1000
+  skip-cert-verify: true
+  type: hysteria2
+  password: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+- name: 🇫🇷法国|巴黎世家-2
+  type: vless
+  server: x-fg.xueshan168.cc
+  port: 16000
+  uuid: 954f9a43-b779-46a7-8a3e-8f951ad51a2e
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: cMB0tAmD6scVvjRbLVm1IjryKtXM6SDtceLiz_qF6iw
+    short-id: null
+  client-fingerprint: chrome
+  network: tcp
+- name: 剩余流量：9997089.75 GB
+  type: vless
+  server: cdn.8211992.xyz
+  port: 443
+  uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  servername: mao.kipfel.kdns.fr
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+  network: ws
+  ws-opts:
+    path: /glasspanel/guest000_0_5de14443985f/
+    headers:
+      Host: mao.kipfel.kdns.fr
+- name: 🐾 [公益]🇺🇸美国随缘喵 2 [1X]
+  type: vless
+  server: cf.130519.xyz
+  port: 443
+  uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  servername: mao.kipfel.kdns.fr
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+  network: ws
+  ws-opts:
+    path: /glasspanel/guest000_0_5de14443985f/
+    headers:
+      Host: mao.kipfel.kdns.fr
+- name: 🐾 [公益]🇺🇸美国随缘喵 3 [1X]
+  type: vless
+  server: nexusmods.com
+  port: 443
+  uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  servername: mao.kipfel.kdns.fr
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+  network: ws
+  ws-opts:
+    path: /glasspanel/guest000_0_5de14443985f/
+    headers:
+      Host: mao.kipfel.kdns.fr
+- name: 🐾 [公益]🇺🇸美国随缘喵 4 [1X]
+  type: vless
+  server: www.cnae.top
+  port: 443
+  uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  servername: mao.kipfel.kdns.fr
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+  network: ws
+  ws-opts:
+    path: /glasspanel/guest000_0_5de14443985f/
+    headers:
+      Host: mao.kipfel.kdns.fr
+- name: 🐾 公益不保可用请购买更多节点喵
+  type: vless
+  server: mfa.gov.ua
+  port: 443
+  uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  servername: mao.kipfel.kdns.fr
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+  network: ws
+  ws-opts:
+    path: /glasspanel/guest000_0_5de14443985f/
+    headers:
+      Host: mao.kipfel.kdns.fr
+- name: 🐾 拆盲盒👉www.youzilite.help👈
+  type: vless
+  server: cdns.doon.eu.org
+  port: 443
+  uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  servername: mao.kipfel.kdns.fr
+  ech-opts:
+    enable: true
+    query-server-name: cloudflare-ech.com
+  network: ws
+  ws-opts:
+    path: /glasspanel/guest000_0_5de14443985f/
+    headers:
+      Host: mao.kipfel.kdns.fr
