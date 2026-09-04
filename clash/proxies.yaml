@@ -101,7 +101,7 @@ proxies:
   type: ss
 - alterId: 2
   cipher: auto
-  name: Hong Kong_Yuen Long San Hui_vmess_1012
+  name: Hong Kong_Central_vmess_1012
   port: 30807
   server: v10.hdacd.com
   skip-cert-verify: false
@@ -190,9 +190,47 @@ proxies:
   port: 30001
   server: 36.33.35.105
   type: ss
+- cipher: aes-256-cfb
+  name: France_None_ss_1026
+  password: 7eadc6dbe2ae
+  port: 65443
+  server: 95.170.13.47
+  type: ss
+  udp: true
+- alterId: '0'
+  cipher: auto
+  name: France_None_vmess_1027
+  network: ws
+  port: '16632'
+  server: planb.mojcn.com.linuxlh.xin
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: cefbe234-bcc6-4558-ab7b-1030e331e6a5
+  ws-opts:
+    headers:
+      Host: d052c66d50dcf7c3cfab75ed7f8e8322.mobgslb.tbcache.com
+    path: /
+  xudp: true
+- client-fingerprint: chrome
+  name: United States_None_trojan_1028
+  network: ws
+  password: humanity
+  port: '443'
+  server: 130.250.137.171
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/58.0.3029.110 Safari/537.36
+    path: /assignment
 - alterId: 0
   cipher: auto
-  name: France_None_vmess_1026
+  name: France_None_vmess_1029
   network: ws
   port: 16626
   server: planb.mojcn.com.linuxlh.xin
@@ -206,63 +244,83 @@ proxies:
       Host: d052c66d50dcf7c3cfab75ed7f8e8322.mobgslb.tbcache.com
     path: /
   xudp: true
-- cipher: chacha20-ietf-poly1305
-  name: India_New Delhi_ss_1027
-  password: 3hSrBrmKmrgNGsD97RSGOS5p+XIFqEVk6Zo4AHbsRhg=
-  port: '29367'
-  server: 85.209.157.209
-  type: ss
-  udp: true
 - cipher: aes-256-cfb
-  name: China_None_ss_1028
+  name: China_None_ss_1030
   password: 7eadc6dbe2ae
   port: '65443'
   server: 121.46.230.138
   type: ss
   udp: true
-- cipher: aes-256-cfb
-  name: United Kingdom_London_ss_1029
-  password: amazonskr05
-  port: 443
-  server: 35.178.132.176
-  type: ss
-  udp: true
 - alpn:
+  - h3
   - h2
   - http/1.1
-  client-fingerprint: chrome
-  name: Türkiye_Istanbul_trojan_1030
+  client-fingerprint: ios
+  name: Seychelles_None_trojan_1031
   network: ws
-  password: ysbdg3l5iqbvo26u
-  port: '2097'
-  server: 185.204.170.130
+  password: humanity
+  port: '443'
+  server: 45.130.125.158
   skip-cert-verify: false
+  sni: www.ignitelimit.com
   type: trojan
   udp: true
   ws-opts:
     headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/66.0.3359.117 Safari/537.36
+      User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.7
+        (KHTML, like Gecko) Chrome/7.0.517.44 Safari/534.7
+    path: /assignment
+- client-fingerprint: chrome
+  name: None_None_trojan_1032
+  network: ws
+  password: humanity
+  port: '443'
+  server: 104.18.152.230
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like
+        Gecko) Chrome/41.0.2272.76 Safari/537.36
+    path: /assignment
+- client-fingerprint: chrome
+  name: United States_None_trojan_1033
+  network: ws
+  password: humanity
+  port: '443'
+  server: 172.67.188.109
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Linux; Android 6.0; MYA-L22 Build/HUAWEIMYA-L22) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36
+    path: /assignment
+- alterId: '0'
+  cipher: auto
+  name: France_None_vmess_1034
+  network: ws
+  port: '16648'
+  server: planb.mojcn.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 24e37e6e-7e01-4f68-afea-28fb14a47aef
+  ws-opts:
+    headers:
+      Host: 08071ec6f38bfb263ee89b1bb0c3ca1b.mobgslb.tbcache.com
     path: /
-- cipher: aes-256-gcm
-  name: United States_None_ss_1031
-  password: fbcec76953a2d173
-  port: '8011'
-  server: 166.88.130.218
-  type: ss
-  udp: true
+  xudp: true
 - cipher: aes-256-cfb
-  name: Canada_Montreal_ss_1032
+  name: Canada_Montreal_ss_1035
   password: amazonskr05
   port: '443'
-  server: 35.183.81.172
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: Ireland_Dublin_ss_1033
-  password: amazonskr05
-  port: '443'
-  server: 54.246.193.66
+  server: 15.223.182.66
   type: ss
   udp: true
 - name: 🇭🇰 香港-00-HKBN
@@ -844,14 +902,6 @@ proxies:
   type: socks5
   server: 127.0.0.1
   port: 1
-- name: 法国 - Paris - 1
-  server: 95.170.13.47
-  port: 65443
-  type: ss
-  cipher: aes-256-cfb
-  password: 7eadc6dbe2ae
-  udp: true
-  delay: 1318
 - name: 荷兰 - Amsterdam - 1
   server: 84.17.47.125
   port: 9002
@@ -2038,21 +2088,6 @@ proxies:
         Gecko) Chrome/47.0.2526.111 Safari/537.36
     path: /assignment
 - client-fingerprint: chrome
-  name: 🇫🇷 机场推荐:dafei.de 法国 13
-  network: ws
-  password: humanity
-  port: 443
-  server: 130.250.137.171
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; WAS-LX3 Build/HUAWEIWAS-LX3)
-        AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
-    path: /assignment
-- client-fingerprint: chrome
   name: 🇫🇷 机场推荐:dafei.de 法国 14
   network: ws
   password: humanity
@@ -2493,7 +2528,7 @@ proxies:
   cipher: aes-128-gcm
   password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
   udp: true
-- name: 剩余流量：482.63 GB
+- name: 剩余流量：481.34 GB
   type: vless
   server: uh-jp01.ziyoufly.xyz
   port: 55555
@@ -2550,7 +2585,7 @@ proxies:
   reality-opts:
     public-key: 1XQ60qYOfBZJpcilNV9Fu7OSpuO5_6-zrNZIYhB_YU4
     short-id: af317506
-- name: 剩余流量：94422.78 GB
+- name: 剩余流量：94009.18 GB
   type: vless
   server: cdn.8211992.xyz
   port: 443
