@@ -653,48 +653,49 @@ proxies:
   port: 30001
   server: 36.33.35.105
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: United Kingdom_Enfield_ss_1026
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  port: 8080
-  server: 82.38.31.66
-  type: ss
-  udp: true
-- alterId: '0'
+- alterId: 0
+  cipher: auto
+  name: France_None_vmess_1026
+  network: ws
+  port: 16632
+  server: m.cnmjin.net
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 21af4a11-cf99-4370-bdd7-8a50cd0c6c49
+  ws-opts:
+    headers:
+      Host: e176d51869ea80390a96391ec8361f3f.mobgslb.tbcache.com
+    path: /
+- alterId: 0
   cipher: auto
   name: France_None_vmess_1027
   network: ws
-  port: '16648'
-  server: planb.mojcn.com.linuxlh.xin
-  skip-cert-verify: false
+  port: 16648
+  server: planb.mojcn.com
+  skip-cert-verify: true
   tls: false
   type: vmess
-  udp: true
-  uuid: b5f7ad86-9e40-4684-98f9-83f8136a1054
+  uuid: 21af4a11-cf99-4370-bdd7-8a50cd0c6c49
   ws-opts:
     headers:
-      Host: eeee7339c9f412913069ff64b12fb71f.mobgslb.tbcache.com
+      Host: e176d51869ea80390a96391ec8361f3f.mobgslb.tbcache.com
     path: /
-  xudp: true
-- cipher: aes-256-cfb
-  name: United Kingdom_London_ss_1028
-  password: amazonskr05
-  port: 443
-  server: 13.40.17.62
-  type: ss
-- cipher: aes-256-cfb
-  name: Ireland_Dublin_ss_1029
-  password: amazonskr05
-  port: 443
-  server: 3.250.40.89
-  type: ss
-- cipher: aes-256-cfb
-  name: United Kingdom_London_ss_1030
-  password: amazonskr05
+- client-fingerprint: chrome
+  name: United States_None_trojan_1028
+  network: ws
+  password: humanity
   port: '443'
-  server: 35.178.200.252
-  type: ss
+  server: 165.215.250.14
+  skip-cert-verify: true
+  sni: www.ignitelimit.com
+  type: trojan
   udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Linux; Android 7.0; SM-G610M Build/NRD90M) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
+    path: /assignment
 - name: Shadowsocks
   type: socks5
   server: 127.0.0.1
@@ -1805,6 +1806,14 @@ proxies:
   password: amazonskr05
   cipher: aes-256-cfb
   delay: 494
+- name: 爱尔兰 - Dublin - 2
+  server: 3.250.40.89
+  port: 443
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+  udp: true
+  delay: 482
 - name: 爱尔兰 - Dublin - 3
   server: 52.210.185.41
   type: ss
@@ -1955,6 +1964,22 @@ proxies:
   h2-opts: {}
   skip-cert-verify: true
   delay: 2934
+- name: 英国 - London - 2
+  server: 35.178.200.252
+  type: ss
+  country: 🇬🇧GB
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 485
+- name: 英国 - London - 3
+  server: 13.40.17.62
+  port: 443
+  type: ss
+  country: 🇺🇸 US
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 465
 - name: 中国 - Hefei - 1
   server: 112.132.215.108
   type: vmess
@@ -3106,7 +3131,7 @@ proxies:
   servername: yahoo.com
   client-fingerprint: chrome
   network: tcp
-- name: 剩余流量：438.23 GB
+- name: 剩余流量：437.34 GB
   type: vless
   server: uh-jp01.ziyoufly.xyz
   port: 55555
@@ -5257,7 +5282,7 @@ proxies:
   sni: www.cloudflare.com
   skip-cert-verify: true
   udp: true
-- name: 剩余流量：93058.87 GB
+- name: 剩余流量：93011.27 GB
   type: vless
   server: cdn.8211992.xyz
   port: 443
