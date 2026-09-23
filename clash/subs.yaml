@@ -466,10 +466,6 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
-- name: Shadowsocks
-  type: socks5
-  server: 127.0.0.1
-  port: 1080
 - alterId: 0
   cipher: auto
   name: Unknown_vmess_111
@@ -657,6 +653,10 @@ proxies:
   port: 30001
   server: 36.33.35.105
   type: ss
+- name: Shadowsocks
+  type: socks5
+  server: 127.0.0.1
+  port: 1080
 - name: 荷兰 - 阿姆斯特丹 - 1
   server: 84.17.47.125
   port: 9002
@@ -2627,13 +2627,6 @@ proxies:
   sni: www.cloudflare.com
   skip-cert-verify: true
   udp: true
-- name: 您的账号已被封禁
-  type: ss
-  server: 127.0.0.1
-  port: 6666
-  cipher: aes-128-gcm
-  password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
-  udp: true
 - name: 防失联 dogfabu.com
   type: vmess
   server: 127.0.0.1
@@ -2849,6 +2842,13 @@ proxies:
   uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
   alterId: 0
   cipher: auto
+  udp: true
+- name: 您的账号已被封禁
+  type: ss
+  server: 127.0.0.1
+  port: 6666
+  cipher: aes-128-gcm
+  password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
   udp: true
 - name: vless
   type: vless
