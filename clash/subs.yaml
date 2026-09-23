@@ -466,6 +466,130 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
+- name: 荷兰 - 阿姆斯特丹 - 1
+  server: 84.17.47.125
+  port: 9002
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+  delay: 1930
+- name: 荷兰 - 阿姆斯特丹 - 2
+  server: 84.17.47.150
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  delay: 1927
+- name: 荷兰 - 阿姆斯特丹 - 3
+  server: 84.17.47.148
+  port: 9002
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+  delay: 1977
+- name: 罗马尼亚 - 布加勒斯特 - 1
+  server: 193.176.84.20
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  delay: 1981
+- name: 罗马尼亚 - 布加勒斯特 - 10
+  server: 193.176.84.39
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  delay: 1165
+- name: 罗马尼亚 - 布加勒斯特 - 2
+  server: 193.176.84.36
+  port: 9002
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+  delay: 1977
+- name: 罗马尼亚 - 布加勒斯特 - 3
+  server: 193.176.84.35
+  port: 9002
+  type: http
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+  delay: 1977
+- name: 罗马尼亚 - 布加勒斯特 - 4
+  server: 193.176.84.34
+  port: 9002
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+  delay: 1977
+- name: 罗马尼亚 - 布加勒斯特 - 5
+  server: 193.176.84.25
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  delay: 1275
+- name: 罗马尼亚 - 布加勒斯特 - 6
+  server: 193.176.84.31
+  port: 9002
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+  delay: 1332
+- name: 罗马尼亚 - 布加勒斯特 - 7
+  server: 193.176.84.23
+  port: 9002
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+  delay: 1293
+- name: 罗马尼亚 - 布加勒斯特 - 8
+  server: 193.176.84.27
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  delay: 2380
+- name: 罗马尼亚 - 布加勒斯特 - 9
+  server: 193.176.84.32
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  delay: 1189
+- name: 美国 - 洛杉矶 - 1
+  server: fan.365747.xyz
+  port: 443
+  type: http
+  tls: true
+  skip-cert-verify: true
+  delay: 1348
+- name: 美国 - 洛杉矶 - 3
+  server: 38.28.193.188
+  port: 443
+  type: http
+  tls: true
+  skip-cert-verify: true
+  delay: 1137
+- name: 美国 - 西文多弗 - 2
+  server: purposebydesig.club
+  port: 443
+  type: http
+  password: None
+  tls: true
+  delay: 2246
+- name: Shadowsocks
+  type: socks5
+  server: 127.0.0.1
+  port: 1080
 - alterId: 0
   cipher: auto
   name: Unknown_vmess_101
@@ -653,165 +777,39 @@ proxies:
   port: 30001
   server: 36.33.35.105
   type: ss
+- client-fingerprint: chrome
+  name: United States_None_trojan_1026
+  network: ws
+  password: humanity
+  port: '443'
+  server: 172.67.188.109
+  skip-cert-verify: false
+  sni: www.ignitelimit.com
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      User-Agent: Mozilla/5.0 (Linux; Android 7.1.1; CPH1723 Build/N6F26Q) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36
+    path: /assignment
 - cipher: aes-256-cfb
-  name: Sweden_Stockholm_ss_1026
+  name: Sweden_Stockholm_ss_1027
   password: amazonskr05
   port: 443
   server: 16.170.221.224
   type: ss
   udp: true
-- cipher: aes-256-cfb
-  name: Sweden_Stockholm_ss_1027
-  password: amazonskr05
-  port: 443
-  server: 13.61.0.108
-  type: ss
+- alterId: 2
+  cipher: auto
+  name: Hong Kong_Central_vmess_1028
+  network: ws
+  port: 60852
+  server: hkgb707.ifastcdncache.com
+  skip-cert-verify: true
+  tls: false
+  type: vmess
   udp: true
-- cipher: aes-256-cfb
-  name: Sweden_Stockholm_ss_1028
-  password: amazonskr05
-  port: 443
-  server: 16.170.163.124
-  type: ss
-  udp: true
-- cipher: aes-256-cfb
-  name: United States_Ashburn_ss_1126
-  password: amazonskr05
-  port: 443
-  server: 18.213.0.46
-  type: ss
-  udp: true
-- name: 荷兰 - 阿姆斯特丹 - 1
-  server: 84.17.47.125
-  port: 9002
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-  delay: 1930
-- name: 荷兰 - 阿姆斯特丹 - 2
-  server: 84.17.47.150
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1927
-- name: 荷兰 - 阿姆斯特丹 - 3
-  server: 84.17.47.148
-  port: 9002
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-  delay: 1977
-- name: 罗马尼亚 - 布加勒斯特 - 1
-  server: 193.176.84.20
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1981
-- name: 罗马尼亚 - 布加勒斯特 - 10
-  server: 193.176.84.39
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1165
-- name: 罗马尼亚 - 布加勒斯特 - 2
-  server: 193.176.84.36
-  port: 9002
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-  delay: 1977
-- name: 罗马尼亚 - 布加勒斯特 - 3
-  server: 193.176.84.35
-  port: 9002
-  type: http
-  username: 'null'
-  password: 'null'
-  tls: true
-  skip-cert-verify: true
-  delay: 1977
-- name: 罗马尼亚 - 布加勒斯特 - 4
-  server: 193.176.84.34
-  port: 9002
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-  delay: 1977
-- name: 罗马尼亚 - 布加勒斯特 - 5
-  server: 193.176.84.25
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1275
-- name: 罗马尼亚 - 布加勒斯特 - 6
-  server: 193.176.84.31
-  port: 9002
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-  delay: 1332
-- name: 罗马尼亚 - 布加勒斯特 - 7
-  server: 193.176.84.23
-  port: 9002
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-  delay: 1293
-- name: 罗马尼亚 - 布加勒斯特 - 8
-  server: 193.176.84.27
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 2380
-- name: 罗马尼亚 - 布加勒斯特 - 9
-  server: 193.176.84.32
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1189
-- name: 美国 - 洛杉矶 - 1
-  server: fan.365747.xyz
-  port: 443
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1348
-- name: 美国 - 洛杉矶 - 3
-  server: 38.28.193.188
-  port: 443
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1137
-- name: 美国 - 西文多弗 - 2
-  server: purposebydesig.club
-  port: 443
-  type: http
-  password: None
-  tls: true
-  delay: 2246
-- name: Shadowsocks
-  type: socks5
-  server: 127.0.0.1
-  port: 1080
-- name: 您的账号已被封禁
-  type: ss
-  server: 127.0.0.1
-  port: 6666
-  cipher: aes-128-gcm
-  password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
-  udp: true
+  uuid: f8eca8df-a1a5-4918-a194-d34112a3673f
 - name: 🌐 官网： xship.2fa.cat
   type: hysteria2
   server: starlink-ft.251313.xyz
@@ -2877,6 +2875,13 @@ proxies:
   uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
   alterId: 0
   cipher: auto
+  udp: true
+- name: 您的账号已被封禁
+  type: ss
+  server: 127.0.0.1
+  port: 6666
+  cipher: aes-128-gcm
+  password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
   udp: true
 - name: vless
   type: vless
