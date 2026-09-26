@@ -466,291 +466,6 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
-- name: Vultr-东京
-  type: vless
-  server: 108.160.128.46
-  port: 443
-  uuid: de241e4e-226e-46d5-aa79-602e11ef94d8
-  network: tcp
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: www.bing.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: cZ9MxrT-CYtdhBdbGeqzcQEvWvAuKw7fEfRbR8QrOlM
-    short-id: 37bb73b5
-- name: hy2-salamander-main
-  type: hysteria2
-  server: 192.255.151.112
-  port: 443
-  password: C5P6a9looJMNDl9FBD13KVpNrHIWyTwe
-  obfs: salamander
-  obfs-password: 7x7KPWdWPFm/QWmsjfPwy4qNgTOjG3wv
-  sni: www.microsoft.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  up: 50 Mbps
-  down: 200 Mbps
-- name: ss-chacha20-main
-  type: ss
-  server: 192.255.151.112
-  port: 8443
-  cipher: chacha20-ietf-poly1305
-  password: cAK9LrY6rGdCk3vSqN8ZpM
-  udp: true
-- name: IPRoyal-US-California via hy2
-  type: http
-  dialer-proxy: WPP-CHAIN-DIALER
-  server: geo.iproyal.com
-  port: 12321
-  username: f1kuP3wdGB7fhfhQ
-  password: YW9npEMmE1J5tJyO_country-us_state-california_session-wppca002_lifetime-7d
-- name: VLESS-Reality-443
-  type: vless
-  server: 141.11.138.132
-  port: 443
-  uuid: b47cc98c-54f4-4ab2-acb9-b493a04ccc6b
-  network: tcp
-  udp: true
-  tls: true
-  encryption: none
-  flow: xtls-rprx-vision
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: Kb511WMVMJe1nImN8kCi9PdPQSGu3aZCrffMOvzv43A
-    short-id: f9ca9286d0ff8920
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_111
-  network: tcp
-  port: '80'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_112
-  network: tcp
-  port: '81'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_113
-  network: tcp
-  port: '82'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_114
-  network: tcp
-  port: '83'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_115
-  network: tcp
-  port: '84'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_116
-  network: tcp
-  port: '85'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_117
-  network: tcp
-  port: '86'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_118
-  network: tcp
-  port: '87'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_119
-  network: tcp
-  port: '88'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- alterId: 0
-  cipher: auto
-  name: Unknown_vmess_1110
-  network: tcp
-  port: '89'
-  server: 127.0.0.53
-  tls: false
-  type: vmess
-  uuid: 88888888-8888-8888-8888-888888888888
-- cipher: aes-256-cfb
-  name: United States_None_ss_1111
-  password: amazonskr05
-  port: 443
-  server: 63.180.254.10
-  type: ss
-- alterId: 2
-  cipher: auto
-  name: Hong Kong_Wong Tai Sin_vmess_1112
-  port: 30807
-  server: v10.hdacd.com
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: United States_None_trojan_1113
-  network: tcp
-  password: BxceQaOe
-  port: 443
-  server: 100.42.228.109
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-  type: trojan
-- alterId: 0
-  cipher: auto
-  name: Taiwan_Chang-hua_vmess_1114
-  network: ws
-  port: '443'
-  server: 24864168545164.oylfmxz.cn
-  servername: 24864168545164.oylfmxz.cn
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  ws-opts:
-    headers:
-      Host: 24864168545164.oylfmxz.cn
-    path: /
-- cipher: aes-128-gcm
-  name: Hong Kong_Hong Kong_ss_1115
-  password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
-  plugin: obfs
-  plugin-opts:
-    host: 3c183f1f4eae079d708e817ae656417a.baidu.com
-    mode: http
-  port: 36602
-  server: gd.bjnet2.com
-  type: ss
-- cipher: aes-128-gcm
-  name: Hong Kong_Hong Kong_ss_1116
-  password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
-  plugin: obfs
-  plugin-opts:
-    host: 3c183f1f4eae079d708e817ae656417a.baidu.com
-    mode: http
-  port: 36602
-  server: gd2.bjnet2.com
-  type: ss
-- cipher: aes-128-gcm
-  name: France_None_ss_1117
-  password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
-  plugin: obfs
-  plugin-opts:
-    host: 3c183f1f4eae079d708e817ae656417a.baidu.com
-    mode: http
-  port: 36603
-  server: gd.bjnet2.com
-  type: ss
-- cipher: aes-128-gcm
-  name: France_None_ss_1118
-  password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
-  plugin: obfs
-  plugin-opts:
-    host: 3c183f1f4eae079d708e817ae656417a.baidu.com
-    mode: http
-  port: 36604
-  server: gd.bjnet2.com
-  type: ss
-- cipher: aes-128-gcm
-  name: Hong Kong_Hong Kong_ss_1119
-  password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
-  plugin: obfs
-  plugin-opts:
-    host: 3c183f1f4eae079d708e817ae656417a.baidu.com
-    mode: http
-  port: 36609
-  server: gd.bjnet2.com
-  type: ss
-- cipher: aes-128-gcm
-  name: Hong Kong_Hong Kong_ss_1120
-  password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
-  plugin: obfs
-  plugin-opts:
-    host: 3c183f1f4eae079d708e817ae656417a.baidu.com
-    mode: http
-  port: 36608
-  server: gd2.bjnet2.com
-  type: ss
-- cipher: aes-128-gcm
-  name: France_None_ss_1121
-  password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
-  plugin: obfs
-  plugin-opts:
-    host: 3c183f1f4eae079d708e817ae656417a.baidu.com
-    mode: http
-  port: 36608
-  server: gd.bjnet2.com
-  type: ss
-- name: Shadowsocks
-  type: socks5
-  server: 127.0.0.1
-  port: 1080
-- name: tokyo-reality
-  type: vless
-  server: 74.82.196.74
-  port: 443
-  uuid: fc28e5b6-3d80-4184-b3e0-24e1fd4707c8
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 55wTBYlzgZfSoWPpzf0g9IM8godBt9-HQiIt_ScVJT4
-    short-id: 7c2e0933514beb4f
-- name: Tokyo-VLESS
-  type: vless
-  server: 124.156.230.31
-  port: 48795
-  uuid: 44557727-e197-45c5-9637-d8455491fa9a
-  network: tcp
-  tls: true
-  flow: xtls-rprx-vision
-  servername: aws.amazon.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: CXaG2QJnsoxAplVbaof9bDKbsFqLJ3W2zfZ8LzNBdgg
-  udp: true
 - name: 荷兰 - 阿姆斯特丹 - 1
   server: 84.17.47.125
   port: 9002
@@ -871,6 +586,293 @@ proxies:
   password: None
   tls: true
   delay: 2246
+- name: VLESS-Reality-443
+  type: vless
+  server: 141.11.138.132
+  port: 443
+  uuid: b47cc98c-54f4-4ab2-acb9-b493a04ccc6b
+  network: tcp
+  udp: true
+  tls: true
+  encryption: none
+  flow: xtls-rprx-vision
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: Kb511WMVMJe1nImN8kCi9PdPQSGu3aZCrffMOvzv43A
+    short-id: f9ca9286d0ff8920
+- name: Tokyo-VLESS
+  type: vless
+  server: 124.156.230.31
+  port: 48795
+  uuid: 44557727-e197-45c5-9637-d8455491fa9a
+  network: tcp
+  tls: true
+  flow: xtls-rprx-vision
+  servername: aws.amazon.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: CXaG2QJnsoxAplVbaof9bDKbsFqLJ3W2zfZ8LzNBdgg
+  udp: true
+- name: hy2-salamander-main
+  type: hysteria2
+  server: 192.255.151.112
+  port: 443
+  password: C5P6a9looJMNDl9FBD13KVpNrHIWyTwe
+  obfs: salamander
+  obfs-password: 7x7KPWdWPFm/QWmsjfPwy4qNgTOjG3wv
+  sni: www.microsoft.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  up: 50 Mbps
+  down: 200 Mbps
+- name: ss-chacha20-main
+  type: ss
+  server: 192.255.151.112
+  port: 8443
+  cipher: chacha20-ietf-poly1305
+  password: cAK9LrY6rGdCk3vSqN8ZpM
+  udp: true
+- name: IPRoyal-US-California via hy2
+  type: http
+  dialer-proxy: WPP-CHAIN-DIALER
+  server: geo.iproyal.com
+  port: 12321
+  username: f1kuP3wdGB7fhfhQ
+  password: YW9npEMmE1J5tJyO_country-us_state-california_session-wppca002_lifetime-7d
+- name: Shadowsocks
+  type: socks5
+  server: 127.0.0.1
+  port: 1080
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_101
+  network: tcp
+  port: '80'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_102
+  network: tcp
+  port: '81'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_103
+  network: tcp
+  port: '82'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_104
+  network: tcp
+  port: '83'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_105
+  network: tcp
+  port: '84'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_106
+  network: tcp
+  port: '85'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_107
+  network: tcp
+  port: '86'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_108
+  network: tcp
+  port: '87'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_109
+  network: tcp
+  port: '88'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: Unknown_vmess_1010
+  network: tcp
+  port: '89'
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- cipher: aes-256-cfb
+  name: United States_None_ss_1011
+  password: amazonskr05
+  port: 443
+  server: 63.180.254.10
+  type: ss
+- alterId: 2
+  cipher: auto
+  name: Hong Kong_Wong Tai Sin_vmess_1012
+  port: 30807
+  server: v10.hdacd.com
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: United States_None_trojan_1013
+  network: tcp
+  password: BxceQaOe
+  port: 443
+  server: 100.42.228.109
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: Taiwan_Chang-hua_vmess_1014
+  network: ws
+  port: '443'
+  server: 24864168545164.oylfmxz.cn
+  servername: 24864168545164.oylfmxz.cn
+  skip-cert-verify: false
+  tls: true
+  type: vmess
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  ws-opts:
+    headers:
+      Host: 24864168545164.oylfmxz.cn
+    path: /
+- cipher: aes-128-gcm
+  name: Hong Kong_Hong Kong_ss_1015
+  password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
+  plugin: obfs
+  plugin-opts:
+    host: 3c183f1f4eae079d708e817ae656417a.baidu.com
+    mode: http
+  port: 36602
+  server: gd.bjnet2.com
+  type: ss
+- cipher: aes-128-gcm
+  name: Hong Kong_Hong Kong_ss_1016
+  password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
+  plugin: obfs
+  plugin-opts:
+    host: 3c183f1f4eae079d708e817ae656417a.baidu.com
+    mode: http
+  port: 36602
+  server: gd2.bjnet2.com
+  type: ss
+- cipher: aes-128-gcm
+  name: France_None_ss_1017
+  password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
+  plugin: obfs
+  plugin-opts:
+    host: 3c183f1f4eae079d708e817ae656417a.baidu.com
+    mode: http
+  port: 36603
+  server: gd.bjnet2.com
+  type: ss
+- cipher: aes-128-gcm
+  name: France_None_ss_1018
+  password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
+  plugin: obfs
+  plugin-opts:
+    host: 3c183f1f4eae079d708e817ae656417a.baidu.com
+    mode: http
+  port: 36604
+  server: gd.bjnet2.com
+  type: ss
+- cipher: aes-128-gcm
+  name: Hong Kong_Hong Kong_ss_1019
+  password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
+  plugin: obfs
+  plugin-opts:
+    host: 3c183f1f4eae079d708e817ae656417a.baidu.com
+    mode: http
+  port: 36609
+  server: gd.bjnet2.com
+  type: ss
+- cipher: aes-128-gcm
+  name: Hong Kong_Hong Kong_ss_1020
+  password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
+  plugin: obfs
+  plugin-opts:
+    host: 3c183f1f4eae079d708e817ae656417a.baidu.com
+    mode: http
+  port: 36608
+  server: gd2.bjnet2.com
+  type: ss
+- cipher: aes-128-gcm
+  name: Hong Kong_Hong Kong_ss_1021
+  password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
+  plugin: obfs
+  plugin-opts:
+    host: 3c183f1f4eae079d708e817ae656417a.baidu.com
+    mode: http
+  port: 36608
+  server: gd.bjnet2.com
+  type: ss
+- cipher: aes-256-cfb
+  name: United States_Ashburn_ss_1023
+  password: amazonskr05
+  port: 443
+  server: 54.227.186.25
+  type: ss
+- alterId: '0'
+  cipher: auto
+  name: Japan_Tokyo_vmess_1024
+  network: ws
+  port: 81
+  server: 147.78.242.19
+  type: vmess
+  uuid: 357b37cc-d0d2-47ef-aa1a-0a668447999e
+  ws-opts:
+    path: /
+- name: Vultr-东京
+  type: vless
+  server: 108.160.128.46
+  port: 443
+  uuid: de241e4e-226e-46d5-aa79-602e11ef94d8
+  network: tcp
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.bing.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: cZ9MxrT-CYtdhBdbGeqzcQEvWvAuKw7fEfRbR8QrOlM
+    short-id: 37bb73b5
 - name: JP-Tokyo-Reality-01
   type: vless
   server: 47.74.25.186
@@ -885,6 +887,27 @@ proxies:
   reality-opts:
     public-key: UV7__YdzfWp-3GchdNfcEYBT4__lSrV1lTm4fas_EnQ
     short-id: 4160be8d5de9b80f
+- name: tokyo-reality
+  type: vless
+  server: 74.82.196.74
+  port: 443
+  uuid: fc28e5b6-3d80-4184-b3e0-24e1fd4707c8
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 55wTBYlzgZfSoWPpzf0g9IM8godBt9-HQiIt_ScVJT4
+    short-id: 7c2e0933514beb4f
+- name: 账号已被封禁
+  type: ss
+  server: 127.0.0.1
+  port: 65535
+  cipher: aes-128-gcm
+  password: f0add91a-c8fd-4b19-9acb-7b61c2ff4ad3
+  udp: true
 - name: 防失联 dogfabu.com
   type: vmess
   server: 127.0.0.1
@@ -1101,389 +1124,173 @@ proxies:
   alterId: 0
   cipher: auto
   udp: true
-- name: 🟢 域名直连-8443
-  type: vless
-  server: vl.cocopon.top
-  port: 8443
-  uuid: 44f06ad1-982c-4e03-849f-899c1c8dc14f
-  network: ws
-  tls: true
-  udp: false
-  servername: vl.cocopon.top
-  client-fingerprint: random
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vl.cocopon.top
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
-- name: 🟢 域名直连-2053
-  type: vless
-  server: vl.cocopon.top
-  port: 2053
-  uuid: 44f06ad1-982c-4e03-849f-899c1c8dc14f
-  network: ws
-  tls: true
-  udp: false
-  servername: vl.cocopon.top
-  client-fingerprint: random
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vl.cocopon.top
-- name: 🟢 域名直连-2083
-  type: vless
-  server: vl.cocopon.top
-  port: 2083
-  uuid: 44f06ad1-982c-4e03-849f-899c1c8dc14f
-  network: ws
-  tls: true
-  udp: false
-  servername: vl.cocopon.top
-  client-fingerprint: random
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vl.cocopon.top
-- name: 🟢 域名直连-2096
-  type: vless
-  server: vl.cocopon.top
-  port: 2096
-  uuid: 44f06ad1-982c-4e03-849f-899c1c8dc14f
-  network: ws
-  tls: true
-  udp: false
-  servername: vl.cocopon.top
-  client-fingerprint: random
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vl.cocopon.top
-- name: 🌏 亚洲-172.66
-  type: vless
-  server: 172.66.0.1
-  port: 8443
-  uuid: 44f06ad1-982c-4e03-849f-899c1c8dc14f
-  network: ws
-  tls: true
-  udp: false
-  servername: vl.cocopon.top
-  client-fingerprint: random
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vl.cocopon.top
-- name: 🌏 亚洲-104.25
-  type: vless
-  server: 104.25.0.1
-  port: 8443
-  uuid: 44f06ad1-982c-4e03-849f-899c1c8dc14f
-  network: ws
-  tls: true
-  udp: false
-  servername: vl.cocopon.top
-  client-fingerprint: random
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vl.cocopon.top
-- name: 🌏 亚洲-104.16
-  type: vless
-  server: 104.16.0.1
-  port: 8443
-  uuid: 44f06ad1-982c-4e03-849f-899c1c8dc14f
-  network: ws
-  tls: true
-  udp: false
-  servername: vl.cocopon.top
-  client-fingerprint: random
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vl.cocopon.top
-- name: 🌏 亚洲-104.17
-  type: vless
-  server: 104.17.0.1
-  port: 8443
-  uuid: 44f06ad1-982c-4e03-849f-899c1c8dc14f
-  network: ws
-  tls: true
-  udp: false
-  servername: vl.cocopon.top
-  client-fingerprint: random
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vl.cocopon.top
-- name: 🌏 亚洲-104.20
-  type: vless
-  server: 104.20.0.1
-  port: 8443
-  uuid: 44f06ad1-982c-4e03-849f-899c1c8dc14f
-  network: ws
-  tls: true
-  udp: false
-  servername: vl.cocopon.top
-  client-fingerprint: random
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vl.cocopon.top
-- name: 🌏 亚洲-188.114.97
-  type: vless
-  server: 188.114.97.1
-  port: 8443
-  uuid: 44f06ad1-982c-4e03-849f-899c1c8dc14f
-  network: ws
-  tls: true
-  udp: false
-  servername: vl.cocopon.top
-  client-fingerprint: random
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vl.cocopon.top
-- name: 🌏 亚洲-188.114.99
-  type: vless
-  server: 188.114.99.1
-  port: 8443
-  uuid: 44f06ad1-982c-4e03-849f-899c1c8dc14f
-  network: ws
-  tls: true
-  udp: false
-  servername: vl.cocopon.top
-  client-fingerprint: random
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vl.cocopon.top
-- name: 🔵 Visa-SG伪装
-  type: vless
-  server: www.visa.com.sg
-  port: 8443
-  uuid: 44f06ad1-982c-4e03-849f-899c1c8dc14f
-  network: ws
-  tls: true
-  udp: false
-  servername: vl.cocopon.top
-  client-fingerprint: random
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vl.cocopon.top
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
-- name: 🔵 Shopify伪装
-  type: vless
-  server: www.shopify.com
-  port: 8443
-  uuid: 44f06ad1-982c-4e03-849f-899c1c8dc14f
-  network: ws
-  tls: true
-  udp: false
-  servername: vl.cocopon.top
-  client-fingerprint: random
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vl.cocopon.top
-- name: 🔵 iCloud伪装
-  type: vless
-  server: www.icloud.com
-  port: 8443
-  uuid: 44f06ad1-982c-4e03-849f-899c1c8dc14f
-  network: ws
-  tls: true
-  udp: false
-  servername: vl.cocopon.top
-  client-fingerprint: random
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vl.cocopon.top
-- name: 🖥️ PVE-172.64.145-443
-  type: vless
-  server: 172.64.145.87
+- name: 日本-旧机(Skyline)
+  type: hysteria2
+  server: hy2.lefamn.top
   port: 443
-  uuid: 23534c77-b6e7-453e-b1d8-0cc419ed38db
-  network: ws
-  tls: true
-  udp: false
-  servername: vless.cocopon.top
-  client-fingerprint: chrome
-  ws-opts:
-    path: /660af19a80fca5b5d3bdc0cd5754bfe0?ed=2560
-    headers:
-      Host: vless.cocopon.top
-- name: 🖥️ PVE-162.159.18-2053
+  ports: 20000-40000
+  hop-interval: 30
+  mtu: 1380
+  password: '123456'
+  sni: hy2.lefamn.top
+  skip-cert-verify: false
+  up: 30 Mbps
+  down: 150 Mbps
+- name: 🇺🇸 美国洛杉矶 | VLESS-Reality (TCP 稳定防封主力)
   type: vless
-  server: 162.159.18.16
-  port: 2053
-  uuid: 23534c77-b6e7-453e-b1d8-0cc419ed38db
-  network: ws
-  tls: true
-  udp: false
-  servername: vless.cocopon.top
-  client-fingerprint: chrome
-  ws-opts:
-    path: /660af19a80fca5b5d3bdc0cd5754bfe0?ed=2560
-    headers:
-      Host: vless.cocopon.top
-- name: 🖥️ PVE-162.159.8-8443
-  type: vless
-  server: 162.159.8.24
+  server: 192.255.128.123
   port: 8443
-  uuid: 23534c77-b6e7-453e-b1d8-0cc419ed38db
-  network: ws
+  uuid: d82b4a56-8e12-4279-87a4-8f85f38a9d12
+  network: tcp
   tls: true
-  udp: false
-  servername: vless.cocopon.top
+  udp: true
+  flow: xtls-rprx-vision
+  servername: www.apple.com
+  reality-opts:
+    public-key: -PkHH58OYIBOj3jR1Wz9WedCRlKpO0NSPhR7eCApRVQ
+    short-id: 6a7b8c9d0e1f2a3b
   client-fingerprint: chrome
-  ws-opts:
-    path: /660af19a80fca5b5d3bdc0cd5754bfe0?ed=2560
-    headers:
-      Host: vless.cocopon.top
-- name: 🖥️ PVE-198.41.208-8443
-  type: vless
-  server: 198.41.208.120
-  port: 8443
-  uuid: 23534c77-b6e7-453e-b1d8-0cc419ed38db
-  network: ws
-  tls: true
-  udp: false
-  servername: vless.cocopon.top
-  client-fingerprint: chrome
-  ws-opts:
-    path: /660af19a80fca5b5d3bdc0cd5754bfe0?ed=2560
-    headers:
-      Host: vless.cocopon.top
-- name: 🖥️ PVE-162.159.38-2096
-  type: vless
-  server: 162.159.38.247
-  port: 2096
-  uuid: 23534c77-b6e7-453e-b1d8-0cc419ed38db
-  network: ws
-  tls: true
-  udp: false
-  servername: vless.cocopon.top
-  client-fingerprint: chrome
-  ws-opts:
-    path: /660af19a80fca5b5d3bdc0cd5754bfe0?ed=2560
-    headers:
-      Host: vless.cocopon.top
-- name: 🖥️ PVE-108.162.198-2053
-  type: vless
-  server: 108.162.198.167
-  port: 2053
-  uuid: 23534c77-b6e7-453e-b1d8-0cc419ed38db
-  network: ws
-  tls: true
-  udp: false
-  servername: vless.cocopon.top
-  client-fingerprint: chrome
-  ws-opts:
-    path: /660af19a80fca5b5d3bdc0cd5754bfe0?ed=2560
-    headers:
-      Host: vless.cocopon.top
-- name: 🖥️ PVE-104.16.148-443
-  type: vless
-  server: 104.16.148.172
+- name: 🇺🇸 美国洛杉矶 | Hysteria2 (UDP 极速抗丢包主力)
+  type: hysteria2
+  server: 192.255.128.123
   port: 443
-  uuid: 23534c77-b6e7-453e-b1d8-0cc419ed38db
-  network: ws
-  tls: true
-  udp: false
-  servername: vless.cocopon.top
-  client-fingerprint: chrome
-  ws-opts:
-    path: /660af19a80fca5b5d3bdc0cd5754bfe0?ed=2560
-    headers:
-      Host: vless.cocopon.top
-- name: 🖥️ PVE-172.64.52-8443
+  password: RN_3f80eeb4bbd0f13f
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: VPS-LA
   type: vless
-  server: 172.64.52.34
-  port: 8443
-  uuid: 23534c77-b6e7-453e-b1d8-0cc419ed38db
-  network: ws
-  tls: true
-  udp: false
-  servername: vless.cocopon.top
-  client-fingerprint: chrome
-  ws-opts:
-    path: /660af19a80fca5b5d3bdc0cd5754bfe0?ed=2560
-    headers:
-      Host: vless.cocopon.top
-- name: 🖥️ PVE-104.16.255-2053
-  type: vless
-  server: 104.16.255.237
-  port: 2053
-  uuid: 23534c77-b6e7-453e-b1d8-0cc419ed38db
-  network: ws
-  tls: true
-  udp: false
-  servername: vless.cocopon.top
-  client-fingerprint: chrome
-  ws-opts:
-    path: /660af19a80fca5b5d3bdc0cd5754bfe0?ed=2560
-    headers:
-      Host: vless.cocopon.top
-- name: 🖥️ PVE-域名-443
-  type: vless
-  server: vless.cocopon.top
+  server: 38.209.71.101
   port: 443
-  uuid: 23534c77-b6e7-453e-b1d8-0cc419ed38db
-  network: ws
+  uuid: 765478b5-b20a-453f-8359-35f226a40527
+  network: tcp
+  udp: true
   tls: true
-  udp: false
-  servername: vless.cocopon.top
+  servername: www.apple.com
   client-fingerprint: chrome
-  ws-opts:
-    path: /660af19a80fca5b5d3bdc0cd5754bfe0?ed=2560
-    headers:
-      Host: vless.cocopon.top
-- name: 🖥️ VpsQuan-HK-VMess
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 8UypK4Fj56G90NZGHlEPsSL6G9T5DkbdxONrqhh58n8
+    short-id: e8d0de6daa4cf2d9
+- name: Hoe节点1
   type: vmess
-  server: 198.44.182.248
-  port: 10285
-  uuid: ae3ce4e4-21bc-4c67-bdf3-ccc4dbbcb609
+  server: node1.liudonghoe.com
+  port: 443
+  uuid: 40ad80bf-eff3-4f2a-a9c2-d69b61e80d97
   alterId: 0
   cipher: auto
-  udp: false
-  network: tcp
-  tls: false
-- name: 🖥️ Hysteria2-IPv6
-  type: hysteria2
-  server: hy2.cocopon.top
-  port: 8443
-  password: Hy2@2026!Maolei
-  sni: bing.com
-  skip-cert-verify: true
-- name: ⚡ 2096-104.16
-  type: vless
-  server: 104.16.0.1
-  port: 2096
-  uuid: 44f06ad1-982c-4e03-849f-899c1c8dc14f
-  network: ws
+  udp: true
   tls: true
-  udp: false
-  servername: vl.cocopon.top
-  client-fingerprint: random
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: vl.cocopon.top
-- name: ⚡ 2096-172.66
-  type: vless
-  server: 172.66.0.1
-  port: 2096
-  uuid: 44f06ad1-982c-4e03-849f-899c1c8dc14f
+  servername: node1.liudonghoe.com
   network: ws
-  tls: true
-  udp: false
-  servername: vl.cocopon.top
-  client-fingerprint: random
   ws-opts:
-    path: /?ed=2560
+    path: /hoe1
     headers:
-      Host: vl.cocopon.top
+      Host: node1.liudonghoe.com
+- name: Hoe节点2
+  type: vmess
+  server: node2.liudonghoe.com
+  port: 443
+  uuid: 91ec0f7b-54ad-4e40-93cd-70206cc1e060
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: node2.liudonghoe.com
+  network: ws
+  ws-opts:
+    path: /hoe2
+    headers:
+      Host: node2.liudonghoe.com
+- name: Hoe节点3
+  type: vmess
+  server: node3.liudonghoe.com
+  port: 443
+  uuid: 3425986d-7dbf-4a63-9ea3-5b3ca5026ba2
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: node3.liudonghoe.com
+  network: ws
+  ws-opts:
+    path: /hoe3
+    headers:
+      Host: node3.liudonghoe.com
+- name: Hoe节点4
+  type: vmess
+  server: node4.liudonghoe.com
+  port: 443
+  uuid: b9fc4672-e4c9-469d-afc4-892713d05001
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: node4.liudonghoe.com
+  network: ws
+  ws-opts:
+    path: /hoe4
+    headers:
+      Host: node4.liudonghoe.com
+- name: Hoe节点5
+  type: vmess
+  server: node5.liudonghoe.com
+  port: 443
+  uuid: 7880bb48-1830-48d8-84fd-29c911e38870
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: node5.liudonghoe.com
+  network: ws
+  ws-opts:
+    path: /hoe5
+    headers:
+      Host: node5.liudonghoe.com
+- name: Hoe节点6
+  type: vmess
+  server: node6.liudonghoe.com
+  port: 443
+  uuid: 505d91b6-610a-426d-b524-a38668e0d602
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: node6.liudonghoe.com
+  network: ws
+  ws-opts:
+    path: /hoe6
+    headers:
+      Host: node6.liudonghoe.com
+- name: Hoe节点7
+  type: vmess
+  server: node7.liudonghoe.com
+  port: 443
+  uuid: 79fb5b79-479d-4586-969f-4c97436d1e74
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: node7.liudonghoe.com
+  network: ws
+  ws-opts:
+    path: /hoe7
+    headers:
+      Host: node7.liudonghoe.com
+- name: Hoe节点8
+  type: vmess
+  server: node8.liudonghoe.com
+  port: 443
+  uuid: 47050e4e-965d-41ca-976d-73c1f11e6905
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: node8.liudonghoe.com
+  network: ws
+  ws-opts:
+    path: /hoe8
+    headers:
+      Host: node8.liudonghoe.com
 - name: 🌐 官网： xship.2fa.cat
   type: hysteria2
   server: starlink-ft.251313.xyz
@@ -3180,6 +2987,20 @@ proxies:
   sni: www.cloudflare.com
   skip-cert-verify: true
   udp: true
+- name: 您的账号已被封禁
+  type: ss
+  server: 127.0.0.1
+  port: 6666
+  cipher: aes-128-gcm
+  password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
+  udp: true
+- name: 您的账号已被封禁！
+  type: ss
+  server: 127.0.0.1
+  port: 7800
+  cipher: aes-128-gcm
+  password: 8c3400f6-2c29-4192-b097-8bf23a045b76
+  udp: true
 - name: JMS-25345@c10s1.portablesubmarines.com:21107
   type: ss
   server: c10s1.portablesubmarines.com
@@ -3257,194 +3078,6 @@ proxies:
   reality-opts:
     public-key: BlSccfT5tvDIOS7v9VaPd0ulUNhUdvlMjGiNzDNDUHE
     short-id: 051f20c2344a2dfd
-- name: 您的账号已被封禁！
-  type: ss
-  server: 127.0.0.1
-  port: 7800
-  cipher: aes-128-gcm
-  password: 8c3400f6-2c29-4192-b097-8bf23a045b76
-  udp: true
-- name: Hoe节点1
-  type: vmess
-  server: node1.liudonghoe.com
-  port: 443
-  uuid: 40ad80bf-eff3-4f2a-a9c2-d69b61e80d97
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  servername: node1.liudonghoe.com
-  network: ws
-  ws-opts:
-    path: /hoe1
-    headers:
-      Host: node1.liudonghoe.com
-- name: Hoe节点2
-  type: vmess
-  server: node2.liudonghoe.com
-  port: 443
-  uuid: 91ec0f7b-54ad-4e40-93cd-70206cc1e060
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  servername: node2.liudonghoe.com
-  network: ws
-  ws-opts:
-    path: /hoe2
-    headers:
-      Host: node2.liudonghoe.com
-- name: Hoe节点3
-  type: vmess
-  server: node3.liudonghoe.com
-  port: 443
-  uuid: 3425986d-7dbf-4a63-9ea3-5b3ca5026ba2
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  servername: node3.liudonghoe.com
-  network: ws
-  ws-opts:
-    path: /hoe3
-    headers:
-      Host: node3.liudonghoe.com
-- name: Hoe节点4
-  type: vmess
-  server: node4.liudonghoe.com
-  port: 443
-  uuid: b9fc4672-e4c9-469d-afc4-892713d05001
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  servername: node4.liudonghoe.com
-  network: ws
-  ws-opts:
-    path: /hoe4
-    headers:
-      Host: node4.liudonghoe.com
-- name: Hoe节点5
-  type: vmess
-  server: node5.liudonghoe.com
-  port: 443
-  uuid: 7880bb48-1830-48d8-84fd-29c911e38870
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  servername: node5.liudonghoe.com
-  network: ws
-  ws-opts:
-    path: /hoe5
-    headers:
-      Host: node5.liudonghoe.com
-- name: Hoe节点6
-  type: vmess
-  server: node6.liudonghoe.com
-  port: 443
-  uuid: 505d91b6-610a-426d-b524-a38668e0d602
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  servername: node6.liudonghoe.com
-  network: ws
-  ws-opts:
-    path: /hoe6
-    headers:
-      Host: node6.liudonghoe.com
-- name: Hoe节点7
-  type: vmess
-  server: node7.liudonghoe.com
-  port: 443
-  uuid: 79fb5b79-479d-4586-969f-4c97436d1e74
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  servername: node7.liudonghoe.com
-  network: ws
-  ws-opts:
-    path: /hoe7
-    headers:
-      Host: node7.liudonghoe.com
-- name: Hoe节点8
-  type: vmess
-  server: node8.liudonghoe.com
-  port: 443
-  uuid: 47050e4e-965d-41ca-976d-73c1f11e6905
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  servername: node8.liudonghoe.com
-  network: ws
-  ws-opts:
-    path: /hoe8
-    headers:
-      Host: node8.liudonghoe.com
-- name: 日本-旧机(Skyline)
-  type: hysteria2
-  server: hy2.lefamn.top
-  port: 443
-  ports: 20000-40000
-  hop-interval: 30
-  mtu: 1380
-  password: '123456'
-  sni: hy2.lefamn.top
-  skip-cert-verify: false
-  up: 30 Mbps
-  down: 150 Mbps
-- name: 账号已被封禁
-  type: ss
-  server: 127.0.0.1
-  port: 65535
-  cipher: aes-128-gcm
-  password: f0add91a-c8fd-4b19-9acb-7b61c2ff4ad3
-  udp: true
-- name: 您的账号已被封禁
-  type: ss
-  server: 127.0.0.1
-  port: 6666
-  cipher: aes-128-gcm
-  password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
-  udp: true
-- name: 🇺🇸 美国洛杉矶 | VLESS-Reality (TCP 稳定防封主力)
-  type: vless
-  server: 192.255.128.123
-  port: 8443
-  uuid: d82b4a56-8e12-4279-87a4-8f85f38a9d12
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  servername: www.apple.com
-  reality-opts:
-    public-key: -PkHH58OYIBOj3jR1Wz9WedCRlKpO0NSPhR7eCApRVQ
-    short-id: 6a7b8c9d0e1f2a3b
-  client-fingerprint: chrome
-- name: 🇺🇸 美国洛杉矶 | Hysteria2 (UDP 极速抗丢包主力)
-  type: hysteria2
-  server: 192.255.128.123
-  port: 443
-  password: RN_3f80eeb4bbd0f13f
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: VPS-LA
-  type: vless
-  server: 216.167.67.61
-  port: 443
-  uuid: 9690371d-be77-4918-97b0-f587f10473d0
-  network: tcp
-  udp: true
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: IaUPkZ9fjO_zqyTnJHG9C8cfFnCuhh0zabZK52c6-iQ
-    short-id: 824d6d15ff341618
 - name: vless
   type: vless
   server: 95.169.9.188
