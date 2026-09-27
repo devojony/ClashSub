@@ -466,20 +466,6 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
-- name: Vultr-东京
-  type: vless
-  server: 108.160.128.46
-  port: 443
-  uuid: de241e4e-226e-46d5-aa79-602e11ef94d8
-  network: tcp
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: www.bing.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: cZ9MxrT-CYtdhBdbGeqzcQEvWvAuKw7fEfRbR8QrOlM
-    short-id: 37bb73b5
 - alterId: 0
   cipher: auto
   name: Unknown_vmess_101
@@ -578,7 +564,7 @@ proxies:
   type: ss
 - alterId: 2
   cipher: auto
-  name: Hong Kong_Tuen Mun_vmess_1012
+  name: Hong Kong_Central_vmess_1012
   port: 30807
   server: v10.hdacd.com
   skip-cert-verify: false
@@ -609,7 +595,7 @@ proxies:
       Host: 24864168545164.oylfmxz.cn
     path: /
 - cipher: aes-128-gcm
-  name: Hong Kong_Hong Kong_ss_1015
+  name: France_None_ss_1015
   password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
   plugin: obfs
   plugin-opts:
@@ -639,7 +625,7 @@ proxies:
   server: gd.bjnet2.com
   type: ss
 - cipher: aes-128-gcm
-  name: France_None_ss_1018
+  name: Hong Kong_Hong Kong_ss_1018
   password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
   plugin: obfs
   plugin-opts:
@@ -669,7 +655,7 @@ proxies:
   server: gd2.bjnet2.com
   type: ss
 - cipher: aes-128-gcm
-  name: France_None_ss_1021
+  name: Hong Kong_Hong Kong_ss_1021
   password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
   plugin: obfs
   plugin-opts:
@@ -678,141 +664,124 @@ proxies:
   port: 36608
   server: gd.bjnet2.com
   type: ss
-- client-fingerprint: chrome
-  name: United States_None_trojan_1023
+- cipher: aes-256-cfb
+  name: United States_Ashburn_ss_1023
+  password: amazonskr05
+  port: 443
+  server: 3.85.21.125
+  type: ss
+  udp: true
+- client-fingerprint: safari
+  name: Taiwan_Chang-hua_trojan_1024
   network: ws
-  password: humanity
+  password: f15900b5-f86b-432d-a67c-45325dc66a2d
   port: '443'
-  server: www.speedtest.org
+  server: zhilegelian1.bpca2026.top
   skip-cert-verify: false
-  sni: www.ignitelimit.com
+  sni: zhilegelian1.bpca2026.top
   type: trojan
   udp: true
   ws-opts:
     headers:
-      User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36
-        (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36
-    path: /assignment
-- name: 荷兰 - 阿姆斯特丹 - 1
-  server: 84.17.47.125
-  port: 9002
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-  delay: 1930
-- name: 荷兰 - 阿姆斯特丹 - 2
-  server: 84.17.47.150
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1927
-- name: 荷兰 - 阿姆斯特丹 - 3
-  server: 84.17.47.148
-  port: 9002
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-  delay: 1977
-- name: 罗马尼亚 - 布加勒斯特 - 1
-  server: 193.176.84.20
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1981
-- name: 罗马尼亚 - 布加勒斯特 - 10
-  server: 193.176.84.39
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1165
-- name: 罗马尼亚 - 布加勒斯特 - 2
-  server: 193.176.84.36
-  port: 9002
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-  delay: 1977
-- name: 罗马尼亚 - 布加勒斯特 - 3
-  server: 193.176.84.35
-  port: 9002
-  type: http
-  username: 'null'
-  password: 'null'
-  tls: true
-  skip-cert-verify: true
-  delay: 1977
-- name: 罗马尼亚 - 布加勒斯特 - 4
-  server: 193.176.84.34
-  port: 9002
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-  delay: 1977
-- name: 罗马尼亚 - 布加勒斯特 - 5
-  server: 193.176.84.25
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1275
-- name: 罗马尼亚 - 布加勒斯特 - 6
-  server: 193.176.84.31
-  port: 9002
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-  delay: 1332
-- name: 罗马尼亚 - 布加勒斯特 - 7
-  server: 193.176.84.23
-  port: 9002
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-  delay: 1293
-- name: 罗马尼亚 - 布加勒斯特 - 8
-  server: 193.176.84.27
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 2380
-- name: 罗马尼亚 - 布加勒斯特 - 9
-  server: 193.176.84.32
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1189
-- name: 美国 - 洛杉矶 - 1
-  server: fan.365747.xyz
+      User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
+        Chrome/70.0.3538.77 Safari/537.36
+    path: /images
+- cipher: aes-256-cfb
+  name: 美国 - Ashburn - 1
+  password: amazonskr05
   port: 443
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1348
-- name: 美国 - 洛杉矶 - 3
-  server: 38.28.193.188
+  server: 54.90.169.61
+  type: ss
+  udp: true
+  delay: 498
+- name: 日本 - 東京都 - 1
+  server: 18.181.145.202
   port: 443
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1137
-- name: 美国 - 西文多弗 - 2
-  server: purposebydesig.club
+  type: ss
+  country: 🇯🇵 JP
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 524
+- name: 日本 - 東京都 - 2
+  server: 54.95.40.17
+  type: ss
+  country: 🇯🇵JP
   port: 443
-  type: http
-  password: None
-  tls: true
-  delay: 2246
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 457
+- cipher: aes-256-cfb
+  name: 日本 - 東京都 - 3
+  password: amazonskr05
+  port: 443
+  server: 13.115.71.198
+  type: ss
+  udp: true
+  delay: 435
+- name: 日本 - 東京都 - 4
+  server: 13.230.223.121
+  type: ss
+  country: 🇯🇵JP
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 1051
+- name: 日本 - 東京都 - 5
+  server: 54.199.248.166
+  type: ss
+  country: 🇯🇵JP
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 1432
+- cipher: aes-256-cfb
+  name: 日本 - 東京都 - 6
+  password: amazonskr05
+  port: 443
+  server: 13.113.166.191
+  type: ss
+  udp: true
+  delay: 421
+- cipher: aes-256-cfb
+  name: 瑞典 - 斯德哥尔摩 - 1
+  password: amazonskr05
+  port: 443
+  server: 13.48.104.64
+  type: ss
+  udp: true
+  delay: 533
+- name: 瑞典 - 斯德哥尔摩 - 2
+  server: 51.20.72.15
+  type: ss
+  country: 🇺🇸US
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 1528
+- cipher: aes-256-cfb
+  name: 瑞典 - 斯德哥尔摩 - 3
+  password: amazonskr05
+  port: 443
+  server: 13.62.228.76
+  type: ss
+  udp: true
+  delay: 1217
+- name: 瑞典 - 斯德哥尔摩 - 4
+  server: 13.60.213.145
+  type: ss
+  country: 🇺🇸US
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 531
+- name: 瑞典 - 斯德哥尔摩 - 5
+  server: 51.20.122.188
+  port: 443
+  type: ss
+  country: 🇺🇸 US
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 1898
 - name: hy2-salamander-main
   type: hysteria2
   server: 192.255.151.112
@@ -844,6 +813,20 @@ proxies:
   type: socks5
   server: 127.0.0.1
   port: 1080
+- name: JP-Tokyo-Reality-01
+  type: vless
+  server: 47.74.25.186
+  port: 443
+  uuid: cbd9b987-5c4e-4e1e-98a7-c536a2ef9b4c
+  network: tcp
+  udp: true
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.microsoft.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: UV7__YdzfWp-3GchdNfcEYBT4__lSrV1lTm4fas_EnQ
+    short-id: 4160be8d5de9b80f
 - name: 防失联 dogfabu.com
   type: vmess
   server: 127.0.0.1
