@@ -466,102 +466,6 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
-- cipher: aes-256-cfb
-  name: 美国 - Ashburn - 1
-  password: amazonskr05
-  port: 443
-  server: 54.90.169.61
-  type: ss
-  udp: true
-  delay: 498
-- name: 日本 - 東京都 - 1
-  server: 18.181.145.202
-  port: 443
-  type: ss
-  country: 🇯🇵 JP
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 524
-- name: 日本 - 東京都 - 2
-  server: 54.95.40.17
-  type: ss
-  country: 🇯🇵JP
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 457
-- cipher: aes-256-cfb
-  name: 日本 - 東京都 - 3
-  password: amazonskr05
-  port: 443
-  server: 13.115.71.198
-  type: ss
-  udp: true
-  delay: 435
-- name: 日本 - 東京都 - 4
-  server: 13.230.223.121
-  type: ss
-  country: 🇯🇵JP
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 1051
-- name: 日本 - 東京都 - 5
-  server: 54.199.248.166
-  type: ss
-  country: 🇯🇵JP
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 1432
-- cipher: aes-256-cfb
-  name: 日本 - 東京都 - 6
-  password: amazonskr05
-  port: 443
-  server: 13.113.166.191
-  type: ss
-  udp: true
-  delay: 421
-- cipher: aes-256-cfb
-  name: 瑞典 - 斯德哥尔摩 - 1
-  password: amazonskr05
-  port: 443
-  server: 13.48.104.64
-  type: ss
-  udp: true
-  delay: 533
-- name: 瑞典 - 斯德哥尔摩 - 2
-  server: 51.20.72.15
-  type: ss
-  country: 🇺🇸US
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 1528
-- cipher: aes-256-cfb
-  name: 瑞典 - 斯德哥尔摩 - 3
-  password: amazonskr05
-  port: 443
-  server: 13.62.228.76
-  type: ss
-  udp: true
-  delay: 1217
-- name: 瑞典 - 斯德哥尔摩 - 4
-  server: 13.60.213.145
-  type: ss
-  country: 🇺🇸US
-  port: 443
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 531
-- name: 瑞典 - 斯德哥尔摩 - 5
-  server: 51.20.122.188
-  port: 443
-  type: ss
-  country: 🇺🇸 US
-  password: amazonskr05
-  cipher: aes-256-cfb
-  delay: 1898
 - alterId: 0
   cipher: auto
   name: Unknown_vmess_101
@@ -660,7 +564,7 @@ proxies:
   type: ss
 - alterId: 2
   cipher: auto
-  name: Hong Kong_Tuen Mun_vmess_1012
+  name: Hong Kong_Central_vmess_1012
   port: 30807
   server: v10.hdacd.com
   skip-cert-verify: false
@@ -806,7 +710,7 @@ proxies:
   cipher: auto
   name: Singapore_None_vmess_1022
   network: ws
-  port: 443
+  port: '443'
   server: 8nTzyR5KNivfabaT.v.3dns.vip
   servername: 8nTzyR5KNivfabaT.v.3dns.vip
   skip-cert-verify: false
@@ -847,127 +751,349 @@ proxies:
     headers:
       Host: bJ1Aa2ZyJxYamYuK.v.3dns.vip
     path: /ws-vmess
-- client-fingerprint: chrome
-  name: United States_None_trojan_1026
+- alterId: 0
+  cipher: auto
+  name: None_None_vmess_1026
   network: ws
-  password: humanity
-  port: '443'
-  server: 172.67.149.60
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  udp: true
+  port: 2083
+  server: cdn.sfacg.uk
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: ac251237-576f-40c8-a543-554960c958b1
   ws-opts:
     headers:
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/52.0.2743.116 Safari/537.36
-    path: /assignment
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: None_None_trojan_1027
-  network: ws
-  password: humanity
-  port: '443'
-  server: 104.21.46.3
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Linux; Android 5.1.1; SM-J120M Build/LMY47X) AppleWebKit/537.36
-        (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
-    path: /assignment
-- client-fingerprint: chrome
-  name: None_None_trojan_1029
-  network: ws
-  password: humanity
-  port: '443'
-  server: 104.21.8.107
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.17
-        (KHTML, like Gecko) Chrome/10.0.649.0 Safari/534.17
-    path: /assignment
-- client-fingerprint: chrome
-  name: None_None_trojan_1030
-  network: ws
-  password: humanity
-  port: '443'
-  server: 104.26.15.137
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; SM-G532M Build/MMB29T) AppleWebKit/537.36
-        (KHTML, like Gecko) Chrome/55.0.2883.91 Mobile Safari/537.36
-    path: /assignment
-- alpn:
-  - h3
-  - h2
-  - http/1.1
-  client-fingerprint: chrome
-  name: None_None_trojan_1031
-  network: ws
-  password: humanity
-  port: '443'
-  server: join-telegram-channel.tirexnet.kdns.fr
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/57.0.2987.133 Safari/537.36
-    path: /assignment
-- client-fingerprint: chrome
-  name: None_None_trojan_1032
-  network: ws
-  password: humanity
-  port: '443'
-  server: 104.20.6.134
-  skip-cert-verify: false
-  sni: www.ignitelimit.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like
-        Gecko) Chrome/43.0.2357.65 Safari/537.36
-    path: /assignment
+      Host: or3.sfacg.uk
+    path: /or3
 - cipher: aes-256-cfb
-  name: Japan_Tokyo_ss_1033
+  name: United States_Ashburn_ss_1027
   password: amazonskr05
   port: 443
-  server: 18.179.37.17
-  type: ss
-- cipher: aes-256-cfb
-  name: Sweden_Stockholm_ss_1034
-  password: amazonskr05
-  port: 443
-  server: 51.20.143.248
+  server: 54.234.217.115
   type: ss
   udp: true
+- cipher: aes-256-cfb
+  name: 美国 - Ashburn - 1
+  password: amazonskr05
+  port: 443
+  server: 54.90.169.61
+  type: ss
+  udp: true
+  delay: 498
+- name: 日本 - 東京都 - 1
+  server: 18.181.145.202
+  port: 443
+  type: ss
+  country: 🇯🇵 JP
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 524
+- name: 日本 - 東京都 - 2
+  server: 54.95.40.17
+  type: ss
+  country: 🇯🇵JP
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 457
+- cipher: aes-256-cfb
+  name: 日本 - 東京都 - 3
+  password: amazonskr05
+  port: 443
+  server: 13.115.71.198
+  type: ss
+  udp: true
+  delay: 435
+- name: 日本 - 東京都 - 4
+  server: 13.230.223.121
+  type: ss
+  country: 🇯🇵JP
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 1051
+- name: 日本 - 東京都 - 5
+  server: 54.199.248.166
+  type: ss
+  country: 🇯🇵JP
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 1432
+- cipher: aes-256-cfb
+  name: 日本 - 東京都 - 6
+  password: amazonskr05
+  port: 443
+  server: 13.113.166.191
+  type: ss
+  udp: true
+  delay: 421
+- cipher: aes-256-cfb
+  name: 瑞典 - 斯德哥尔摩 - 1
+  password: amazonskr05
+  port: 443
+  server: 13.48.104.64
+  type: ss
+  udp: true
+  delay: 533
+- name: 瑞典 - 斯德哥尔摩 - 2
+  server: 51.20.72.15
+  type: ss
+  country: 🇺🇸US
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 1528
+- cipher: aes-256-cfb
+  name: 瑞典 - 斯德哥尔摩 - 3
+  password: amazonskr05
+  port: 443
+  server: 13.62.228.76
+  type: ss
+  udp: true
+  delay: 1217
+- name: 瑞典 - 斯德哥尔摩 - 4
+  server: 13.60.213.145
+  type: ss
+  country: 🇺🇸US
+  port: 443
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 531
+- name: 瑞典 - 斯德哥尔摩 - 5
+  server: 51.20.122.188
+  port: 443
+  type: ss
+  country: 🇺🇸 US
+  password: amazonskr05
+  cipher: aes-256-cfb
+  delay: 1898
 - name: Shadowsocks
   type: socks5
   server: 127.0.0.1
   port: 1080
-- name: 您的账号已被封禁
+- name: 防失联 dogfabu.com
+  type: vmess
+  server: 127.0.0.1
+  port: 80
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 香港 01
+  type: vmess
+  server: dog-hk.kunlun01dns.com
+  port: 21018
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 香港 02
+  type: vmess
+  server: dog-hk.kunlun01dns.com
+  port: 21019
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 香港 03
+  type: vmess
+  server: dog-hk.kunlun01dns.com
+  port: 21020
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 香港 04
+  type: vmess
+  server: dog-hk.kunlun01dns.com
+  port: 21021
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 香港 05
+  type: vmess
+  server: dog-hk.kunlun01dns.com
+  port: 21022
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 香港 06
+  type: vmess
+  server: dog-hk.kunlun01dns.com
+  port: 21041
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 日本 01
+  type: vmess
+  server: dog-jp.kunlun01dns.com
+  port: 21014
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 日本 02
+  type: vmess
+  server: dog-jp.kunlun01dns.com
+  port: 21015
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 日本 03
+  type: vmess
+  server: dog-jp.kunlun01dns.com
+  port: 21016
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 日本 04
+  type: vmess
+  server: dog-jp.kunlun01dns.com
+  port: 21017
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 美国 01
+  type: vmess
+  server: dog-us.kunlun01dns.com
+  port: 21009
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 美国 02
+  type: vmess
+  server: dog-us.kunlun01dns.com
+  port: 21010
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 美国 03
+  type: vmess
+  server: dog-us.kunlun01dns.com
+  port: 21011
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 美国 04
+  type: vmess
+  server: dog-us.kunlun01dns.com
+  port: 21012
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 台湾 01
+  type: vmess
+  server: dog-tw.kunlun01dns.com
+  port: 21034
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 台湾 02
+  type: vmess
+  server: dog-tw.kunlun01dns.com
+  port: 21035
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 台湾 03
+  type: vmess
+  server: dog-tw.kunlun01dns.com
+  port: 21036
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 台湾 04
+  type: vmess
+  server: dog-tw.kunlun01dns.com
+  port: 21037
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 韩国 01
+  type: vmess
+  server: dog-kr.kunlun01dns.com
+  port: 21003
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 韩国 02
+  type: vmess
+  server: dog-kr.kunlun01dns.com
+  port: 21004
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 韩国 03
+  type: vmess
+  server: dog-kr.kunlun01dns.com
+  port: 21005
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 韩国 04
+  type: vmess
+  server: dog-kr.kunlun01dns.com
+  port: 21006
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 新加坡 01
+  type: vmess
+  server: dog-sg.kunlun01dns.com
+  port: 21026
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 新加坡 02
+  type: vmess
+  server: dog-sg.kunlun01dns.com
+  port: 21027
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 新加坡 03
+  type: vmess
+  server: dog-sg.kunlun01dns.com
+  port: 21028
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 新加坡 04
+  type: vmess
+  server: dog-sg.kunlun01dns.com
+  port: 21029
+  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 账号已被封禁
   type: ss
   server: 127.0.0.1
-  port: 6666
+  port: 65535
   cipher: aes-128-gcm
-  password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
+  password: f0add91a-c8fd-4b19-9acb-7b61c2ff4ad3
   udp: true
 - name: 🌐 官网： xship.2fa.cat
   type: hysteria2
@@ -2665,222 +2791,6 @@ proxies:
   sni: www.cloudflare.com
   skip-cert-verify: true
   udp: true
-- name: 防失联 dogfabu.com
-  type: vmess
-  server: 127.0.0.1
-  port: 80
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 香港 01
-  type: vmess
-  server: dog-hk.kunlun01dns.com
-  port: 21018
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 香港 02
-  type: vmess
-  server: dog-hk.kunlun01dns.com
-  port: 21019
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 香港 03
-  type: vmess
-  server: dog-hk.kunlun01dns.com
-  port: 21020
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 香港 04
-  type: vmess
-  server: dog-hk.kunlun01dns.com
-  port: 21021
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 香港 05
-  type: vmess
-  server: dog-hk.kunlun01dns.com
-  port: 21022
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 香港 06
-  type: vmess
-  server: dog-hk.kunlun01dns.com
-  port: 21041
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 日本 01
-  type: vmess
-  server: dog-jp.kunlun01dns.com
-  port: 21014
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 日本 02
-  type: vmess
-  server: dog-jp.kunlun01dns.com
-  port: 21015
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 日本 03
-  type: vmess
-  server: dog-jp.kunlun01dns.com
-  port: 21016
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 日本 04
-  type: vmess
-  server: dog-jp.kunlun01dns.com
-  port: 21017
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 美国 01
-  type: vmess
-  server: dog-us.kunlun01dns.com
-  port: 21009
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 美国 02
-  type: vmess
-  server: dog-us.kunlun01dns.com
-  port: 21010
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 美国 03
-  type: vmess
-  server: dog-us.kunlun01dns.com
-  port: 21011
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 美国 04
-  type: vmess
-  server: dog-us.kunlun01dns.com
-  port: 21012
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 台湾 01
-  type: vmess
-  server: dog-tw.kunlun01dns.com
-  port: 21034
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 台湾 02
-  type: vmess
-  server: dog-tw.kunlun01dns.com
-  port: 21035
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 台湾 03
-  type: vmess
-  server: dog-tw.kunlun01dns.com
-  port: 21036
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 台湾 04
-  type: vmess
-  server: dog-tw.kunlun01dns.com
-  port: 21037
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 韩国 01
-  type: vmess
-  server: dog-kr.kunlun01dns.com
-  port: 21003
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 韩国 02
-  type: vmess
-  server: dog-kr.kunlun01dns.com
-  port: 21004
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 韩国 03
-  type: vmess
-  server: dog-kr.kunlun01dns.com
-  port: 21005
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 韩国 04
-  type: vmess
-  server: dog-kr.kunlun01dns.com
-  port: 21006
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 新加坡 01
-  type: vmess
-  server: dog-sg.kunlun01dns.com
-  port: 21026
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 新加坡 02
-  type: vmess
-  server: dog-sg.kunlun01dns.com
-  port: 21027
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 新加坡 03
-  type: vmess
-  server: dog-sg.kunlun01dns.com
-  port: 21028
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: 新加坡 04
-  type: vmess
-  server: dog-sg.kunlun01dns.com
-  port: 21029
-  uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-  alterId: 0
-  cipher: auto
-  udp: true
 - name: 您的账号已被封禁！
   type: ss
   server: 127.0.0.1
@@ -2888,10 +2798,28 @@ proxies:
   cipher: aes-128-gcm
   password: 8c3400f6-2c29-4192-b097-8bf23a045b76
   udp: true
-- name: 账号已被封禁
+- name: 剩余流量：1024 MB
+  type: vless
+  server: 108.162.198.165
+  port: 443
+  uuid: df2b3522-86fe-4d9e-bcb6-06e91514aae8
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
+  tls: true
+  skip-cert-verify: false
+  servername: www.apple.com
+  reality-opts:
+    public-key: hMJwKWfRFhROd7JeY2K9_WZga2kwJaZ6FNN7wwEe0Uw
+    short-id: 98f250c88f
+  client-fingerprint: chrome
+  network: tcp
+- name: 您的账号已被封禁
   type: ss
   server: 127.0.0.1
-  port: 65535
+  port: 6666
   cipher: aes-128-gcm
-  password: f0add91a-c8fd-4b19-9acb-7b61c2ff4ad3
+  password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
   udp: true
