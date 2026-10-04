@@ -466,6 +466,122 @@ rules:
 - GEOIP,CN,全局直连,no-resolve
 - MATCH,漏网之鱼
 proxies:
+- name: Shadowsocks
+  type: socks5
+  server: 127.0.0.1
+  port: 1080
+- cipher: aes-256-cfb
+  name: 法国 - 巴黎 - 1
+  password: amazonskr05
+  port: 443
+  server: 15.237.255.137
+  type: ss
+  udp: true
+  delay: 830
+- name: 荷兰 - 阿姆斯特丹 - 1
+  server: 84.17.47.148
+  port: 9002
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+  delay: 2208
+- name: 荷兰 - 阿姆斯特丹 - 2
+  server: 84.17.47.146
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  delay: 1712
+- name: 罗马尼亚 - 布加勒斯特 - 1
+  server: 193.176.84.17
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  delay: 1800
+- name: 罗马尼亚 - 布加勒斯特 - 2
+  server: 193.176.84.20
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  delay: 1720
+- name: 罗马尼亚 - 布加勒斯特 - 3
+  server: 193.176.84.31
+  port: 9002
+  type: http
+  password: None
+  tls: true
+  skip-cert-verify: true
+  delay: 1324
+- name: 罗马尼亚 - 布加勒斯特 - 4
+  server: 193.176.84.27
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  delay: 2161
+- name: 罗马尼亚 - 布加勒斯特 - 5
+  server: 193.176.84.39
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  delay: 2455
+- name: 美国 - 洛杉矶 - 2
+  server: 138.199.35.216
+  port: 9002
+  type: http
+  username: 'null'
+  password: 'null'
+  tls: true
+  skip-cert-verify: true
+  delay: 2937
+- name: 美国 - 洛杉矶 - 5
+  server: 38.28.193.188
+  port: 443
+  type: http
+  tls: true
+  skip-cert-verify: true
+  delay: 1113
+- name: 美国 - 聖荷西 - 3
+  server: fan.365747.xyz
+  port: 443
+  type: http
+  tls: true
+  skip-cert-verify: true
+  delay: 1192
+- name: 美国 - 聖荷西 - 4
+  server: voteshirleysew.club
+  port: 443
+  type: http
+  tls: true
+  delay: 1979
+- cipher: aes-256-cfb
+  name: 美国 - Ashburn - 1
+  password: amazonskr05
+  port: 443
+  server: 98.89.22.134
+  type: ss
+  udp: true
+  delay: 701
+- cipher: aes-256-cfb
+  name: 美国 - Ashburn - 6
+  password: amazonskr05
+  port: 443
+  server: 98.88.75.157
+  type: ss
+  udp: true
+  delay: 1094
+- name: 新加坡 - 新加坡 - 1
+  network: ws
+  port: 80
+  server: 5.223.19.211
+  type: vless
+  udp: true
+  uuid: 4b8a0930-1c36-4efe-b4fe-21f9ad97905c
+  delay: 1214
 - alterId: 0
   cipher: auto
   name: Unknown_vmess_101
@@ -1441,161 +1557,6 @@ proxies:
   skip-cert-verify: true
   sni: guided-ferret.rooster465.autos
   type: trojan
-  udp: true
-- name: Shadowsocks
-  type: socks5
-  server: 127.0.0.1
-  port: 1080
-- cipher: aes-256-cfb
-  name: 法国 - 巴黎 - 1
-  password: amazonskr05
-  port: 443
-  server: 15.237.255.137
-  type: ss
-  udp: true
-  delay: 830
-- name: 荷兰 - 阿姆斯特丹 - 1
-  server: 84.17.47.148
-  port: 9002
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-  delay: 2208
-- name: 荷兰 - 阿姆斯特丹 - 2
-  server: 84.17.47.146
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1712
-- name: 罗马尼亚 - 布加勒斯特 - 1
-  server: 193.176.84.17
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1800
-- name: 罗马尼亚 - 布加勒斯特 - 2
-  server: 193.176.84.20
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1720
-- name: 罗马尼亚 - 布加勒斯特 - 3
-  server: 193.176.84.31
-  port: 9002
-  type: http
-  password: None
-  tls: true
-  skip-cert-verify: true
-  delay: 1324
-- name: 罗马尼亚 - 布加勒斯特 - 4
-  server: 193.176.84.27
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 2161
-- name: 罗马尼亚 - 布加勒斯特 - 5
-  server: 193.176.84.39
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 2455
-- name: 美国 - 洛杉矶 - 2
-  server: 138.199.35.216
-  port: 9002
-  type: http
-  username: 'null'
-  password: 'null'
-  tls: true
-  skip-cert-verify: true
-  delay: 2937
-- name: 美国 - 洛杉矶 - 5
-  server: 38.28.193.188
-  port: 443
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1113
-- name: 美国 - 聖荷西 - 3
-  server: fan.365747.xyz
-  port: 443
-  type: http
-  tls: true
-  skip-cert-verify: true
-  delay: 1192
-- name: 美国 - 聖荷西 - 4
-  server: voteshirleysew.club
-  port: 443
-  type: http
-  tls: true
-  delay: 1979
-- cipher: aes-256-cfb
-  name: 美国 - Ashburn - 1
-  password: amazonskr05
-  port: 443
-  server: 98.89.22.134
-  type: ss
-  udp: true
-  delay: 701
-- cipher: aes-256-cfb
-  name: 美国 - Ashburn - 6
-  password: amazonskr05
-  port: 443
-  server: 98.88.75.157
-  type: ss
-  udp: true
-  delay: 1094
-- name: 新加坡 - 新加坡 - 1
-  network: ws
-  port: 80
-  server: 5.223.19.211
-  type: vless
-  udp: true
-  uuid: 4b8a0930-1c36-4efe-b4fe-21f9ad97905c
-  delay: 1214
-- name: 您的账号已被封禁！
-  type: ss
-  server: 127.0.0.1
-  port: 7800
-  cipher: aes-128-gcm
-  password: 8c3400f6-2c29-4192-b097-8bf23a045b76
-  udp: true
-- name: 您的账号已被封禁
-  type: ss
-  server: 127.0.0.1
-  port: 6666
-  cipher: aes-128-gcm
-  password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
-  udp: true
-- name: 剩余流量：63.1 GB
-  type: vless
-  server: 108.162.198.165
-  port: 443
-  uuid: ae7091a2-6350-4fef-96ad-dac31c31fae9
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: false
-  servername: www.apple.com
-  reality-opts:
-    public-key: hMJwKWfRFhROd7JeY2K9_WZga2kwJaZ6FNN7wwEe0Uw
-    short-id: 98f250c88f
-  client-fingerprint: chrome
-  network: tcp
-- name: 套餐流量已用完！
-  type: ss
-  server: 127.0.0.1
-  port: 13133
-  cipher: aes-128-gcm
-  password: 752b4f26-c7f2-4a0c-9986-a5da81a4d682
   udp: true
 - name: 🌐 官网： xship.2fa.cat
   type: hysteria2
@@ -3451,76 +3412,116 @@ proxies:
   sni: www.cloudflare.com
   skip-cert-verify: true
   udp: true
-- name: 🇯🇵 免费-日本1-Ver.7
-  server: 0yayuf2-g05.jp01-nn-vm0.entry.fr0528.art
-  port: 21585
-  type: vmess
-  uuid: ef4bb54a-b9c1-3034-993b-2325ef168b13
-  alterId: 1
-  cipher: auto
+- name: 您的账号已被封禁
+  type: ss
+  server: 127.0.0.1
+  port: 6666
+  cipher: aes-128-gcm
+  password: ad547213-8e05-46b1-aff5-0f7a9814a4aa
+  udp: true
+- name: 您的账号已被封禁！
+  type: ss
+  server: 127.0.0.1
+  port: 7800
+  cipher: aes-128-gcm
+  password: 8c3400f6-2c29-4192-b097-8bf23a045b76
+  udp: true
+- name: 🇬🇪 Грузия Speed-1 (188.114.97.1)
+  type: vless
+  server: 188.114.97.1
+  port: 443
+  uuid: 76ac91c5-ea82-4046-8ee7-2ffbb563ac94
+  network: ws
   tls: true
-  skip-cert-verify: false
   udp: true
-- name: 🇯🇵 免费-日本2-Ver.8
-  server: 0y4yyw6-g05.jp02-e3-vm0.entry.fr0528.art
-  port: 11777
-  type: vmess
-  uuid: ef4bb54a-b9c1-3034-993b-2325ef168b13
-  alterId: 1
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇯🇵 免费-日本3-Ver.7
-  server: 4yz59o2-g05.jp03-j7-vm0.entry.fr0528.art
-  port: 21585
-  type: vmess
-  uuid: ef4bb54a-b9c1-3034-993b-2325ef168b13
-  alterId: 1
-  cipher: auto
+  servername: geo.shkola112.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /api-vless
+    headers:
+      Host: geo.shkola112.site
+- name: 🇬🇪 Грузия Speed-2 (104.16.132.229)
+  type: vless
+  server: 104.16.132.229
+  port: 443
+  uuid: 76ac91c5-ea82-4046-8ee7-2ffbb563ac94
+  network: ws
   tls: true
-  skip-cert-verify: false
   udp: true
-- name: 🇯🇵 免费-日本4-Ver.8
-  server: ey42ufn-g05.jp04-1d-vm0.entry.fr0528.art
-  port: 448
-  type: vmess
-  uuid: ef4bb54a-b9c1-3034-993b-2325ef168b13
-  alterId: 1
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇯🇵 免费-日本5-Ver.9
-  server: 4ya29w6-g05.jp05-h6-vm0.entry.fr0528.art
-  port: 46486
-  type: vmess
-  uuid: ef4bb54a-b9c1-3034-993b-2325ef168b13
-  alterId: 1
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  udp: true
-- name: 🇯🇵 免费-日本6-Ver.8
-  server: py459f2-g05.jp06-jz-vm0.entry.fr0528.art
-  port: 28787
-  type: vmess
-  uuid: ef4bb54a-b9c1-3034-993b-2325ef168b13
-  alterId: 1
-  cipher: auto
+  servername: geo.shkola112.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /api-vless
+    headers:
+      Host: geo.shkola112.site
+- name: 🇬🇪 Грузия Speed-3 (162.159.192.1)
+  type: vless
+  server: 162.159.192.1
+  port: 443
+  uuid: 76ac91c5-ea82-4046-8ee7-2ffbb563ac94
+  network: ws
   tls: true
-  skip-cert-verify: false
   udp: true
-- name: 🇯🇵 免费-日本7-Ver.2
-  server: 0q7ymin-g05.jp07-sh-vm0.entry.fr0528.art
-  port: 28787
-  type: vmess
-  uuid: ef4bb54a-b9c1-3034-993b-2325ef168b13
-  alterId: 1
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
+  servername: geo.shkola112.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /api-vless
+    headers:
+      Host: geo.shkola112.site
+- name: 🇬🇪 Грузия Cloudflare-Auto
+  type: vless
+  server: geo.shkola112.site
+  port: 443
+  uuid: 76ac91c5-ea82-4046-8ee7-2ffbb563ac94
+  network: ws
+  tls: true
   udp: true
+  servername: geo.shkola112.site
+  client-fingerprint: chrome
+  ws-opts:
+    path: /api-vless
+    headers:
+      Host: geo.shkola112.site
+- name: 🇺🇸 США (IPv4) - 45.152.201.50
+  type: socks5
+  server: 45.152.201.50
+  port: 8000
+  username: vXjZsn
+  password: rCbek7
+  udp: true
+  dialer-proxy: 🇬🇪 Грузия Speed-1 (188.114.97.1)
+- name: 🇩🇪 Германия (IPv6) - 85.195.81.156
+  type: socks5
+  server: 85.195.81.156
+  port: 10539
+  username: 38KRoY
+  password: udvrsT
+  udp: true
+  dialer-proxy: 🇬🇪 Грузия Speed-1 (188.114.97.1)
+- name: 🇫🇷 Франция (IPv6) - 104.238.190.248
+  type: socks5
+  server: 104.238.190.248
+  port: 11024
+  username: baFwqZ
+  password: Sq51aK
+  udp: true
+  dialer-proxy: 🇬🇪 Грузия Speed-1 (188.114.97.1)
+- name: 🇳🇱 Нидерланды (IPv6) - 45.91.209.134
+  type: socks5
+  server: 45.91.209.134
+  port: 11522
+  username: gXBPPa
+  password: bR5bpP
+  udp: true
+  dialer-proxy: 🇬🇪 Грузия Speed-1 (188.114.97.1)
+- name: 🇺🇸 США (IPv6) - 45.145.57.233
+  type: socks5
+  server: 45.145.57.233
+  port: 11319
+  username: PG7pvX
+  password: 8xqvbu
+  udp: true
+  dialer-proxy: 🇬🇪 Грузия Speed-1 (188.114.97.1)
 - name: 防失联 dogfabu.com
   type: vmess
   server: 127.0.0.1
@@ -3737,102 +3738,24 @@ proxies:
   alterId: 0
   cipher: auto
   udp: true
-- name: 🇬🇪 Грузия Speed-1 (188.114.97.1)
+- name: 剩余流量：63.1 GB
   type: vless
-  server: 188.114.97.1
+  server: 108.162.198.165
   port: 443
-  uuid: 76ac91c5-ea82-4046-8ee7-2ffbb563ac94
-  network: ws
+  uuid: ae7091a2-6350-4fef-96ad-dac31c31fae9
+  alterId: 0
+  cipher: auto
+  udp: true
+  flow: xtls-rprx-vision
+  encryption: none
   tls: true
-  udp: true
-  servername: geo.shkola112.site
+  skip-cert-verify: false
+  servername: www.apple.com
+  reality-opts:
+    public-key: hMJwKWfRFhROd7JeY2K9_WZga2kwJaZ6FNN7wwEe0Uw
+    short-id: 98f250c88f
   client-fingerprint: chrome
-  ws-opts:
-    path: /api-vless
-    headers:
-      Host: geo.shkola112.site
-- name: 🇬🇪 Грузия Speed-2 (104.16.132.229)
-  type: vless
-  server: 104.16.132.229
-  port: 443
-  uuid: 76ac91c5-ea82-4046-8ee7-2ffbb563ac94
-  network: ws
-  tls: true
-  udp: true
-  servername: geo.shkola112.site
-  client-fingerprint: chrome
-  ws-opts:
-    path: /api-vless
-    headers:
-      Host: geo.shkola112.site
-- name: 🇬🇪 Грузия Speed-3 (162.159.192.1)
-  type: vless
-  server: 162.159.192.1
-  port: 443
-  uuid: 76ac91c5-ea82-4046-8ee7-2ffbb563ac94
-  network: ws
-  tls: true
-  udp: true
-  servername: geo.shkola112.site
-  client-fingerprint: chrome
-  ws-opts:
-    path: /api-vless
-    headers:
-      Host: geo.shkola112.site
-- name: 🇬🇪 Грузия Cloudflare-Auto
-  type: vless
-  server: geo.shkola112.site
-  port: 443
-  uuid: 76ac91c5-ea82-4046-8ee7-2ffbb563ac94
-  network: ws
-  tls: true
-  udp: true
-  servername: geo.shkola112.site
-  client-fingerprint: chrome
-  ws-opts:
-    path: /api-vless
-    headers:
-      Host: geo.shkola112.site
-- name: 🇺🇸 США (IPv4) - 45.152.201.50
-  type: socks5
-  server: 45.152.201.50
-  port: 8000
-  username: vXjZsn
-  password: rCbek7
-  udp: true
-  dialer-proxy: 🇬🇪 Грузия Speed-1 (188.114.97.1)
-- name: 🇩🇪 Германия (IPv6) - 85.195.81.156
-  type: socks5
-  server: 85.195.81.156
-  port: 10539
-  username: 38KRoY
-  password: udvrsT
-  udp: true
-  dialer-proxy: 🇬🇪 Грузия Speed-1 (188.114.97.1)
-- name: 🇫🇷 Франция (IPv6) - 104.238.190.248
-  type: socks5
-  server: 104.238.190.248
-  port: 11024
-  username: baFwqZ
-  password: Sq51aK
-  udp: true
-  dialer-proxy: 🇬🇪 Грузия Speed-1 (188.114.97.1)
-- name: 🇳🇱 Нидерланды (IPv6) - 45.91.209.134
-  type: socks5
-  server: 45.91.209.134
-  port: 11522
-  username: gXBPPa
-  password: bR5bpP
-  udp: true
-  dialer-proxy: 🇬🇪 Грузия Speed-1 (188.114.97.1)
-- name: 🇺🇸 США (IPv6) - 45.145.57.233
-  type: socks5
-  server: 45.145.57.233
-  port: 11319
-  username: PG7pvX
-  password: 8xqvbu
-  udp: true
-  dialer-proxy: 🇬🇪 Грузия Speed-1 (188.114.97.1)
+  network: tcp
 - name: 账号已被封禁
   type: ss
   server: 127.0.0.1
